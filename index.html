@@ -105,7 +105,7 @@
     /* Omslag */
     .cover{ padding:64px 0 40px; position:relative; }
     .cover-inner{
-      position:relative; z-index:2; /* håller bilden och texten över bakgrunden */
+      position:relative; z-index:2; /* håll över bakgrundsord */
       display:flex; align-items:center; justify-content:space-between;
       gap:clamp(32px, 6vw, 96px); min-height:72vh;
       background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,0));
@@ -252,10 +252,9 @@
         </div>
       </div>
 
-      <!-- Din 
-       bild från images/avafarg.(webp|png|jpg|jpeg) -->
+      <!-- Din profilbild -->
       <div class="circle">
-        <img id="Ava" alt="Images/avafarg" loading="eager" decoding="async" />
+        <img src="Images/avafarg.JPG" alt="Bild på Ava Urdén" loading="eager" />
       </div>
     </div>
     <div class="soft-spot" aria-hidden="true"></div>
@@ -276,7 +275,7 @@
       <div class="projects">
         <article class="card" tabindex="0">
           <div class="thumb">
-            <img class="fit" src="images/subway.png" alt="Alla är fotografer – subway installation" loading="lazy">
+            <img class="fit" src="Images/subway.png" alt="Alla är fotografer – subway installation" loading="lazy">
           </div>
           <div class="card-body">
             <h3>Fotografiska: ”Alla är fotografer”</h3>
@@ -286,7 +285,8 @@
 
         <article class="card" tabindex="0">
           <div class="thumb">
-            <img class="fit" src="images/projekt2.jpg" alt="Projekt 2" loading="lazy">
+            <!-- tillfällig bild – byt gärna när du har projektbild -->
+            <img class="fit" src="Images/ava.JPG" alt="Projekt 2" loading="lazy">
           </div>
           <div class="card-body">
             <h3>SEO → CRO: från trafik till resultat</h3>
@@ -319,7 +319,7 @@
   <section id="contact" class="signup reveal">
     <div class="container">
       <h2 class="section-title">Kontakt</h2>
-    <p class="section-desc">Maila mig direkt: <a href="mailto:ava@example.com">ava@example.com</a></p>
+      <p class="section-desc">Maila mig direkt: <a href="mailto:ava@example.com">ava@example.com</a></p>
       <div class="wrap">
         <input type="email" placeholder="din@mail.com" aria-label="E-post">
         <button type="button" onclick="alert('Tack! Jag hör av mig. (demo)')">Skicka</button>
@@ -401,26 +401,6 @@
       requestAnimationFrame(revealWords);
     }
     requestAnimationFrame(revealWords);
-
-    /* ===== Ladda profilbild från images/avafarg.(webp|png|jpg|jpeg) ===== */
-    (function(){
-      const exts = ['.webp', '.png', '.jpg', '.jpeg'];
-      const base = 'images/avafarg';
-      const img  = document.getElementById('ava-img');
-      let i = 0;
-      function tryNext(){
-        if(i >= exts.length){
-          img.src = base; // sista utväg om du verkligen döpt filen utan ändelse
-          return;
-        }
-        const test = base + exts[i++];
-        const probe = new Image();
-        probe.onload  = () => { img.src = test; };
-        probe.onerror = tryNext;
-        probe.src = test;
-      }
-      tryNext();
-    })();
   </script>
 </body>
 </html>
