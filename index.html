@@ -6,414 +6,8 @@
   <title>Ava Urdén – Portfolio</title>
   <meta name="description" content="Ava Urdén – Growth Marketing student. Portfolio med projekt, färdigheter, CV och kontakt." />
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6RB051SBTS"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-6RB051SBTS');
-  </script>
-
-  <style>
-    :root{
-      --bg:#0f1011;
-      --panel:#1a1b1d;
-      --panel-2:#1e2023;
-      --ink:#F3F3F1;
-      --ink-soft:#cfcfcb;
-      --line:rgba(255,255,255,.12);
-      --accent:#A5C3A4;
-      --radius:18px;
-      --shadow:0 10px 30px rgba(0,0,0,.35);
-      --maxw:1200px;
-    }
-
-    *,*::before,*::after{ box-sizing:border-box; }
-    html,body{ height:100%; scroll-behavior:smooth; }
-    body{
-      margin:0; background:var(--bg); color:var(--ink);
-      font-family:"Poppins",system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
-      line-height:1.55; overflow-x:hidden;
-      background-image:
-        radial-gradient(900px 600px at 85% -10%, rgba(165,195,164,.06), transparent 60%),
-        radial-gradient(800px 600px at -10% 90%, rgba(165,195,164,.05), transparent 60%);
-    }
-    img{ max-width:100%; display:block; }
-    a{ color:inherit; text-decoration:none; }
-    .container{ width:100%; max-width:var(--maxw); margin-inline:auto; padding-inline:24px; }
-
-    /* ===== Diskreta scroll-ord: GROWTHMARKETING ===== */
-    .bg-words{ position:fixed; inset:0; z-index:-3; pointer-events:none; }
-    .bg-word{
-      position:fixed; left:50%; top:50%;
-      transform:translate(-50%, -50%) scale(1);
-      font-family:"Montserrat", sans-serif;
-      font-weight:700; text-transform:uppercase;
-      letter-spacing:.14em;
-      font-size:min(19vw, 240px);
-      color:rgba(255,255,255,.016); /* väldigt svagt */
-      filter:blur(1.6px);
-      opacity:0;                    /* styrs via JS */
-      transition:opacity .3s linear, transform .3s linear;
-      user-select:none;
-    }
-    .bg-word.secondary{
-      font-size:min(17vw, 210px);
-      letter-spacing:.16em;
-    }
-
-    /* Ljus textur i bakgrunden */
-    .grain{
-      position:fixed; inset:-50px; z-index:-2; pointer-events:none; opacity:.05;
-      background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="140" height="140"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency=".8" numOctaves="4"/></filter><rect width="100%" height="100%" filter="url(%23n)" opacity=".8"/></svg>');
-      animation: gr 18s linear infinite;
-      mix-blend-mode:soft-light;
-    }
-    @keyframes gr{ to{ transform:translate3d(-140px,-140px,0);} }
-
-    /* Ljusare spot-highlights */
-    .soft-spot{
-      position:absolute; inset:auto auto -140px -140px; width:360px; height:360px; z-index:-1;
-      background:radial-gradient(circle at 40% 40%, rgba(255,255,255,.06), transparent 60%);
-      filter:blur(30px);
-    }
-
-    /* Scroll progress */
-    .progress{
-      position:fixed; inset:0 0 auto 0; height:3px;
-      background:linear-gradient(90deg, var(--accent), #ffffff);
-      transform-origin:left; transform:scaleX(0); z-index:60; opacity:.6;
-    }
-
-    /* Header */
-    header{
-      position:sticky; top:0; z-index:50; backdrop-filter:saturate(120%) blur(8px);
-      background:rgba(20,22,24,.65); border-bottom:1px solid var(--line);
-    }
-    .nav{ display:flex; align-items:center; justify-content:space-between; height:68px; }
-    .brand{ font-weight:600; letter-spacing:.06em; }
-    nav ul{ list-style:none; display:flex; gap:22px; margin:0; padding:0; }
-    nav a{ padding:10px 4px; position:relative; font-weight:400; }
-    nav a::after{ content:""; position:absolute; left:0; right:0; bottom:6px; height:2px;
-      background:var(--accent); transform:scaleX(0); transform-origin:left; transition:.25s; }
-    nav a:hover::after, nav a.active::after{ transform:scaleX(1); }
-
-    /* Omslag */
-    .cover{ padding:64px 0 40px; position:relative; }
-    .cover-inner{
-      position:relative; z-index:2; /* håll över bakgrundsord */
-      display:flex; align-items:center; justify-content:space-between;
-      gap:clamp(32px, 6vw, 96px); min-height:72vh;
-      background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,0));
-      border:1px solid var(--line); border-radius:var(--radius);
-      padding:clamp(18px,3vw,28px);
-      box-shadow:0 12px 40px rgba(0,0,0,.25);
-    }
-    .title{
-      font-family:"Montserrat", sans-serif;
-      font-size:clamp(34px, 5.5vw, 72px);
-      font-weight:700; line-height:1.05; margin:0; max-width:12ch;
-    }
-    .subtitle{ margin-top:18px; font-size:18px; color:var(--ink-soft); }
-
-    .chips{ display:flex; flex-wrap:wrap; gap:10px; margin-top:16px;}
-    .chip{
-      padding:8px 12px; border-radius:999px; font-size:14px;
-      border:1px solid var(--line);
-      background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.00));
-      transition:.25s;
-    }
-    .chip:hover{ border-color:rgba(165,195,164,.55); box-shadow:0 6px 18px rgba(165,195,164,.15); }
-
-    .btn{ display:inline-flex; align-items:center; padding:12px 16px;
-      border:1px solid var(--line); border-radius:12px; background:var(--panel-2); font-weight:600; transition:.25s; }
-    .btn:hover{ border-color:rgba(255,255,255,.25); transform:translateY(-2px); }
-
-    .circle{
-      width:260px; height:260px; border-radius:50%; overflow:hidden;
-      border:2px solid var(--ink); box-shadow:var(--shadow); flex-shrink:0; position:relative;
-      background:linear-gradient(180deg, rgba(255,255,255,.06), transparent 70%);
-    }
-    .circle::after{
-      content:""; position:absolute; inset:-40% -60%;
-      background:conic-gradient(from 180deg, transparent 0 70%, rgba(255,255,255,.15) 85%, transparent 100%);
-      animation: spin 8s linear infinite; mix-blend-mode:soft-light; pointer-events:none;
-    }
-    @keyframes spin{ to{ transform:rotate(1turn); } }
-    .circle img{ width:100%; height:100%; object-fit:cover; }
-
-    .scroll-hint{ position:absolute; left:50%; bottom:18px; transform:translateX(-50%); font-size:12px; color:var(--ink-soft); opacity:.85; }
-    .scroll-hint svg{ display:block; margin-inline:auto; animation:bob 1.6s ease-in-out infinite; }
-    @keyframes bob{ 0%,100%{ transform:translateY(0);} 50%{ transform:translateY(6px);} }
-
-    /* Sektioner */
-    section{ padding:84px 0; position:relative; }
-    .section-title{ font-family:"Montserrat",sans-serif; font-size:clamp(22px,3vw,32px); margin:0 0 12px; font-weight:700; }
-    .section-desc{ color:var(--ink-soft); margin:0 0 24px; }
-
-    /* Reveal */
-    .reveal{ opacity:0; transform:translateY(18px); transition:opacity .6s ease, transform .6s ease; }
-    .reveal.in{ opacity:1; transform:none; }
-
-    /* Projekt */
-    .projects{ display:grid; grid-template-columns:repeat(12,1fr); gap:18px; }
-    .card{ grid-column:span 6; background:var(--panel);
-      border:1px solid var(--line); border-radius:var(--radius); overflow:hidden;
-      transition:transform .25s ease, box-shadow .25s ease; display:flex; flex-direction:column; will-change:transform;
-      box-shadow:0 8px 30px rgba(0,0,0,.25);
-    }
-    .card:hover{ transform:translateY(-6px); box-shadow:var(--shadow); }
-    .thumb{ aspect-ratio:16/9; position:relative; background:#141517; overflow:hidden; }
-    .thumb .fit{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; transition:transform .6s ease, filter .6s ease; filter:brightness(1.02); }
-    .card:hover .thumb .fit{ transform:scale(1.04); }
-    .thumb::after{
-      content:""; position:absolute; inset:-40% -60%;
-      background:linear-gradient(75deg, transparent 30%, rgba(255,255,255,.18), transparent 70%);
-      transform:translateX(-120%) rotate(8deg); transition:transform .8s ease;
-    }
-    .card:hover .thumb::after{ transform:translateX(120%) rotate(8deg); }
-    .card-body{ padding:clamp(14px,2vw,20px); display:flex; flex-direction:column; gap:8px; background:linear-gradient(180deg, rgba(255,255,255,.03), transparent); }
-    .card h3{ font-weight:600; margin:0; }
-    .meta{ color:var(--ink-soft); font-size:14px; line-height:1.4; }
-
-    /* CV */
-    .cv{ display:flex; align-items:center; justify-content:space-between; gap:16px;
-      background:var(--panel-2); border:1px solid var(--line); border-radius:var(--radius); padding:18px;
-      box-shadow:0 8px 30px rgba(0,0,0,.25);
-    }
-
-    /* Kontakt */
-    .signup{ padding:36px 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line); background:rgba(255,255,255,.02); }
-    .signup .wrap{ display:flex; gap:12px; flex-wrap:wrap; align-items:center; }
-    .signup input{ flex:1 1 280px; padding:14px 16px; border:1px solid var(--line); border-radius:12px; background:#15171a; color:var(--ink); }
-    .signup button{ padding:14px 18px; border-radius:12px; border:1px solid var(--line); background:var(--ink); color:#0f1112; font-weight:700; letter-spacing:.02em; }
-
-    footer{ color:var(--ink-soft); padding:22px 0 60px; border-top:1px solid var(--line); text-align:center; }
-
-    /* Reduced motion */
-    @media (prefers-reduced-motion: reduce){
-      .grain,.circle::after,.thumb::after{ animation:none; }
-      .card:hover{ transform:none; }
-      .thumb .fit{ transition:none; }
-    }
-
-    @media (max-width:800px){
-      .cover-inner{ flex-direction:column; align-items:flex-start; }
-      .circle{ width:220px; height:220px; }
-      .card{ grid-column:span 12; }
-    }
-  </style>
-</head>
-<body>
-  <!-- Bakgrundsord: superdiskret GROWTHMARKETING -->
-  <div class="bg-words" aria-hidden="true">
-    <div class="bg-word" id="w0">GROWTHMARKETING</div>
-    <div class="bg-word secondary" id="w1">GROWTHMARKETING</div>
-    <div class="bg-word" id="w2">GROWTHMARKETING</div>
-    <div class="bg-word secondary" id="w3">GROWTHMARKETING</div>
-  </div>
-  <div class="grain" aria-hidden="true"></div>
-  <div class="progress" id="progress" aria-hidden="true"></div>
-
-  <header>
-    <div class="container nav">
-      <div class="brand">Ava Urdén</div>
-      <nav aria-label="Huvudmeny">
-        <ul>
-          <li><a href="#work" class="navlink">Projekt</a></li>
-          <li><a href="#cv" class="navlink">CV</a></li>
-          <li><a href="#contact" class="navlink">Kontakt</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <!-- Omslag -->
-  <section class="cover">
-    <div class="container cover-inner">
-      <div>
-        <h1 class="title">Ava Urdén<br/>Portfolio</h1>
-        <p class="subtitle">Growth marketing student @ Berghs School of Communication</p>
-
-        <div class="chips" aria-label="Fokusområden">
-          <span class="chip">Brand & Story</span>
-          <span class="chip">UGC & Aktivering</span>
-          <span class="chip">SEO → CRO</span>
-          <span class="chip">Pitch & Decks</span>
-        </div>
-
-        <div style="margin-top:20px; display:flex; gap:10px; flex-wrap:wrap">
-          <a class="btn" href="#work">Se projekt ↓</a>
-          <a class="btn" href="https://www.linkedin.com/in/ava-urd%C3%A9n-3014a821b" target="_blank" rel="noopener">LinkedIn</a>
-        </div>
-      </div>
-
-      <!-- Din profilbild -->
-      <div class="circle">
-        <img src="Images/avafarg.JPG" alt="Bild på Ava Urdén" loading="eager" />
-      </div>
-    </div>
-    <div class="soft-spot" aria-hidden="true"></div>
-    <div class="scroll-hint" aria-hidden="true">
-      Scrolla
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-        <path d="M12 4v16M12 20l-6-6M12 20l6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-    </div>
-  </section>
-
-  <!-- Projekt -->
-  <section id="work" class="reveal">
-    <div class="container">
-      <h2 class="section-title">Projekt</h2>
-      <p class="section-desc">Ett urval av arbeten och skolcase.</p>
-
-      <div class="projects">
-        <article class="card" tabindex="0">
-          <div class="thumb">
-            <img class="fit" src="Images/subway.png" alt="Alla är fotografer – subway installation" loading="lazy">
-          </div>
-          <div class="card-body">
-            <h3>Fotografiska: ”Alla är fotografer”</h3>
-            <p class="meta">UGC-aktivering och spegelinstallationer i stadsmiljö.</p>
-          </div>
-        </article>
-
-        <article class="card" tabindex="0">
-          <div class="thumb">
-            <!-- tillfällig bild – byt gärna när du har projektbild -->
-            <img class="fit" src="Images/ava.JPG" alt="Projekt 2" loading="lazy">
-          </div>
-          <div class="card-body">
-            <h3>SEO → CRO: från trafik till resultat</h3>
-            <p class="meta">Research, teknisk grund och A/B-tester på landningssidor.</p>
-          </div>
-        </article>
-      </div>
-    </div>
-    <div class="soft-spot" aria-hidden="true" style="left:auto; right:-160px; bottom:-120px;"></div>
-  </section>
-
-  <!-- CV -->
-  <section id="cv" class="reveal">
-    <div class="container">
-      <div class="cv">
-        <div>
-          <h3 class="section-title">CV & Meriter</h3>
-          <p class="section-desc">Ladda ner mitt uppdaterade CV som PDF.</p>
-        </div>
-        <div style="display:flex; gap:12px; flex-wrap:wrap">
-          <a class="btn" href="cv.pdf" download>Hämta CV (PDF)</a>
-          <a class="btn" href="https://www.linkedin.com/in/ava-urd%C3%A9n-3014a821b" target="_blank" rel="noopener">LinkedIn-profil</a>
-        </div>
-      </div>
-    </div>
-    <div class="soft-spot" aria-hidden="true" style="left:-160px; bottom:-100px;"></div>
-  </section>
-
-  <!-- Kontakt -->
-  <section id="contact" class="signup reveal">
-    <div class="container">
-      <h2 class="section-title">Kontakt</h2>
-      <p class="section-desc">Maila mig direkt: <a href="mailto:ava@example.com">ava@example.com</a></p>
-      <div class="wrap">
-        <input type="email" placeholder="din@mail.com" aria-label="E-post">
-        <button type="button" onclick="alert('Tack! Jag hör av mig. (demo)')">Skicka</button>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <div class="container">
-      © <span id="y"></span> Ava Urdén
-    </div>
-  </footer>
-
-  <script>
-    // År
-    document.getElementById('y').textContent = new Date().getFullYear();
-
-    // Scroll progress
-    const progress = document.getElementById('progress');
-    function setProgress(){
-      const h = document.documentElement;
-      const sc = h.scrollTop || document.body.scrollTop;
-      const max = h.scrollHeight - h.clientHeight;
-      progress.style.transform = `scaleX(${max? sc/max : 0})`;
-    }
-    setProgress();
-    addEventListener('scroll', setProgress, { passive:true });
-    addEventListener('resize', setProgress);
-
-    // Reveal on scroll
-    const revealEls = document.querySelectorAll('.reveal');
-    const io = new IntersectionObserver((entries)=>{
-      entries.forEach(e=>{
-        if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
-      });
-    },{ threshold:0.18 });
-    revealEls.forEach(el=>io.observe(el));
-
-    // Aktiv meny-länk
-    const navlinks = document.querySelectorAll('.navlink');
-    const sections = [...navlinks].map(a => document.querySelector(a.getAttribute('href')));
-    const io2 = new IntersectionObserver((entries)=>{
-      entries.forEach(entry=>{
-        if(entry.isIntersecting){
-          navlinks.forEach(a=>a.classList.toggle('active', a.getAttribute('href') === `#${entry.target.id}`));
-        }
-      });
-    },{ rootMargin:'-45% 0px -50% 0px', threshold:0 });
-    sections.forEach(s=> io2.observe(s));
-
-    /* ===== Bakgrundsord (extremt diskret) ===== */
-    const words = [
-      { el: document.getElementById('w0'), factor: 0.00 },
-      { el: document.getElementById('w1'), factor: 0.95 },
-      { el: document.getElementById('w2'), factor: 1.90 },
-      { el: document.getElementById('w3'), factor: 2.85 }
-    ];
-    let anchors = [];
-    function computeAnchors(){
-      const vh = window.innerHeight;
-      anchors = words.map(w => w.factor * vh);
-    }
-    computeAnchors();
-    addEventListener('resize', computeAnchors);
-
-    let lastY = window.scrollY;
-    addEventListener('scroll', ()=> lastY = window.scrollY, { passive:true });
-
-    function revealWords(){
-      const center = lastY + window.innerHeight * 0.5;
-      const range  = window.innerHeight * 0.75; // hur snabbt de tonar in/ut
-      for(let i=0;i<words.length;i++){
-        const d = Math.abs(center - anchors[i]);
-        const t = Math.max(0, 1 - d/range);  // 0..1
-        const alpha = 0.015 + t * 0.08;      // MAX ~0.095 -> anonymt
-        words[i].el.style.opacity = alpha.toFixed(3);
-        words[i].el.style.transform = `translate(-50%, -50%) scale(${1 + t*0.05})`;
-      }
-      requestAnimationFrame(revealWords);
-    }
-    requestAnimationFrame(revealWords);
-  </script>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="sv">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ava Urdén – Portfolio</title>
-  <meta name="description" content="Ava Urdén – Growth Marketing student. Portfolio med projekt, färdigheter, CV och kontakt." />
-
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-6RB051SBTS"></script>
@@ -426,15 +20,15 @@
 
   <style>
     :root{
-      /* Ljus, editoriell palett */
-      --bg:#F5F2EA;           /* papper */
+      /* Grönare, editorial palett */
+      --bg:#F1F5F1;           /* papper m. grön ton */
       --ink:#1E201D;          /* text */
-      --ink-soft:#61665E;     /* sekundär text */
+      --ink-soft:#5B625A;     /* sekundär text */
       --panel:#FFFFFF;        /* kort/bas */
-      --panel-2:#ECE7DC;      /* svagt beige band */
-      --sage:#676F61;         /* salviagrön */
-      --sage-2:#737B6E;       /* mörkare */
-      --line:rgba(0,0,0,.08);
+      --panel-2:#EAF1EA;      /* ljust grönt band */
+      --sage:#4F6B57;         /* salviagrön */
+      --sage-2:#3D5E4A;       /* mörkare */
+      --line:rgba(17,35,25,.10);
       --radius:18px;
       --shadow:0 14px 40px rgba(30,32,29,.08);
       --maxw:1200px;
@@ -447,8 +41,8 @@
       font-family:"Poppins", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
       line-height:1.6; overflow-x:hidden;
       background-image:
-        radial-gradient(700px 420px at 90% -10%, rgba(115,123,110,.08), transparent 60%),
-        radial-gradient(700px 480px at -15% 90%, rgba(236,231,220,.45), transparent 60%);
+        radial-gradient(700px 420px at 90% -10%, rgba(79,107,87,.10), transparent 60%),
+        radial-gradient(760px 520px at -15% 90%, rgba(234,241,234,.55), transparent 60%);
     }
     img{ max-width:100%; display:block; }
     a{ color:inherit; text-decoration:none; }
@@ -459,13 +53,13 @@
     .bg-word{
       position:fixed; left:50%; top:50%;
       transform:translate(-50%, -50%) scale(1);
-      font-family:"Playfair Display", serif;
+      font-family:"Cormorant Garamond", serif;
       font-weight:600; text-transform:uppercase;
       letter-spacing:.12em;
       font-size:min(18vw, 220px);
-      color:rgba(0,0,0,.03);  /* väldigt svagt i ljus stil */
+      color:rgba(79,107,87,.04);  /* svagt grönt */
       filter:blur(1px);
-      opacity:0;              /* styrs via JS */
+      opacity:0;                  /* styrs via JS */
       transition:opacity .3s linear, transform .3s linear;
       user-select:none;
     }
@@ -474,7 +68,7 @@
       letter-spacing:.14em;
     }
 
-    /* Lätt textur */
+    /* Lätt papperstextur */
     .grain{
       position:fixed; inset:-50px; z-index:-2; pointer-events:none; opacity:.06;
       background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="140" height="140"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency=".8" numOctaves="3"/></filter><rect width="100%" height="100%" filter="url(%23n)" opacity=".8"/></svg>');
@@ -483,13 +77,13 @@
     }
     @keyframes gr{ to{ transform:translate3d(-140px,-140px,0);} }
 
-    /* Header (ljus, elegant) */
+    /* Header */
     header{
       position:sticky; top:0; z-index:50; backdrop-filter:saturate(120%) blur(8px);
-      background:rgba(255,255,255,.7); border-bottom:1px solid var(--line);
+      background:rgba(255,255,255,.75); border-bottom:1px solid var(--line);
     }
     .nav{ display:flex; align-items:center; justify-content:space-between; height:72px; }
-    .brand{ font-family:"Playfair Display", serif; font-weight:600; letter-spacing:.02em; }
+    .brand{ font-family:"Cormorant Garamond", serif; font-weight:600; letter-spacing:.02em; }
     nav ul{ list-style:none; display:flex; gap:22px; margin:0; padding:0; }
     nav a{ padding:10px 4px; position:relative; font-variant:all-small-caps; letter-spacing:.12em; color:var(--ink-soft); }
     nav a::after{
@@ -507,11 +101,11 @@
       gap:clamp(32px, 6vw, 96px); min-height:68vh;
       border:1px solid var(--line); border-radius:var(--radius);
       padding:clamp(20px,3vw,28px);
-      background:linear-gradient(180deg, rgba(255,255,255,.75), rgba(255,255,255,.5));
+      background:linear-gradient(180deg, rgba(255,255,255,.85), rgba(255,255,255,.6));
       box-shadow:var(--shadow);
     }
     .title{
-      font-family:"Playfair Display", serif;
+      font-family:"Cormorant Garamond", serif;
       font-size:clamp(40px, 6vw, 78px);
       font-weight:600; line-height:1.05; margin:0; letter-spacing:.01em;
     }
@@ -521,20 +115,20 @@
     .chip{
       padding:8px 12px; border-radius:999px; font-size:13.5px;
       border:1px solid var(--line);
-      background:linear-gradient(180deg, #fff, #faf8f2);
-      color:#4b5048;
+      background:linear-gradient(180deg, #fff, #f7fbf7);
+      color:#455248;
       box-shadow:0 6px 16px rgba(30,32,29,.06);
     }
 
     .btn{ display:inline-flex; align-items:center; padding:12px 18px;
-      border:1px solid var(--sage); border-radius:999px; background:#fff; font-weight:600; color:var(--sage);
+      border:1px solid var(--sage); border-radius:999px; background:var(--sage); font-weight:600; color:#fff;
       transition:.25s; letter-spacing:.02em;
     }
-    .btn:hover{ background:var(--sage); color:#fff; transform:translateY(-1px); }
+    .btn:hover{ background:var(--sage-2); border-color:var(--sage-2); transform:translateY(-1px); }
 
     .circle{
       width:280px; height:280px; border-radius:50%; overflow:hidden; flex-shrink:0; position:relative;
-      border:1px solid rgba(0,0,0,.08); background:#fff;
+      border:1px solid rgba(17,35,25,.15); background:#fff;
       box-shadow:0 16px 40px rgba(30,32,29,.10);
     }
     .circle img{ width:100%; height:100%; object-fit:cover; object-position:center 20%; }
@@ -542,16 +136,17 @@
     /* Sektioner */
     section{ padding:100px 0; position:relative; }
     .section-title{
-      font-family:"Playfair Display", serif; font-size:clamp(26px,3.2vw,38px); margin:0 0 12px; font-weight:600; letter-spacing:.02em;
+      font-family:"Cormorant Garamond", serif; font-size:clamp(26px,3.2vw,38px); margin:0 0 12px; font-weight:600; letter-spacing:.02em;
     }
     .section-desc{ color:var(--ink-soft); margin:0 0 24px; }
 
-    /* Salviagrönt band (för CV-sektionen) */
-    .band{ background:linear-gradient(180deg, #6F7A6B, #657060); color:#F5F2EA; }
+    /* Grönt band (CV) */
+    .band{ background:linear-gradient(180deg, #6E8674, #587460); color:#F5F2EA; }
     .band .section-title{ color:#fff; }
     .band .section-desc{ color:#E9E5DC; }
+    .band .cv{ background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.38); }
 
-    /* Projektkort – “polaroid” känsla */
+    /* Projektkort */
     .projects{ display:grid; grid-template-columns:repeat(12,1fr); gap:22px; }
     .card{
       grid-column:span 6; background:var(--panel);
@@ -559,27 +154,27 @@
       box-shadow:var(--shadow); transition:transform .25s ease, box-shadow .25s ease;
     }
     .card:hover{ transform:translateY(-4px); box-shadow:0 16px 44px rgba(30,32,29,.12); }
-    .thumb{ aspect-ratio:16/9; background:#f1efe9; border-bottom:1px solid var(--line); }
+    .thumb{ aspect-ratio:16/9; background:#eef3ee; border-bottom:1px solid var(--line); }
     .thumb .fit{ width:100%; height:100%; object-fit:cover; }
     .card-body{ padding:clamp(16px,2vw,22px); }
-    .card h3{ font-family:"Playfair Display", serif; font-weight:600; margin:0 0 6px; }
+    .card h3{ font-family:"Cormorant Garamond", serif; font-weight:600; margin:0 0 6px; }
     .meta{ color:var(--ink-soft); font-size:14px; line-height:1.5; }
 
     /* CV-kort */
     .cv{
       display:flex; align-items:center; justify-content:space-between; gap:16px;
-      background:rgba(255,255,255,.1); border:1px solid rgba(255,255,255,.35);
-      border-radius:16px; padding:20px; box-shadow:0 10px 32px rgba(0,0,0,.12);
+      background:rgba(255,255,255,.6); border:1px solid rgba(17,35,25,.18);
+      border-radius:16px; padding:20px; box-shadow:0 10px 32px rgba(0,0,0,.08);
     }
-    .cv .btn{ background:transparent; color:#fff; border-color:#fff; }
-    .cv .btn:hover{ background:#fff; color:var(--sage-2); }
+    .cv .btn{ background:#fff; color:var(--sage-2); border-color:var(--sage-2); }
+    .cv .btn:hover{ background:var(--sage-2); color:#fff; }
 
     /* Kontakt */
-    .signup{ padding:48px 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line); background:rgba(255,255,255,.6); }
+    .signup{ padding:48px 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line); background:rgba(255,255,255,.7); }
     .signup .wrap{ display:flex; gap:12px; flex-wrap:wrap; align-items:center; }
     .signup input{ flex:1 1 280px; padding:14px 16px; border:1px solid var(--line); border-radius:12px; background:#fff; color:var(--ink); }
     .signup button{ padding:14px 18px; border-radius:999px; border:1px solid var(--sage); background:var(--sage); color:#fff; font-weight:700; letter-spacing:.02em; }
-    .signup button:hover{ background:#7B8576; }
+    .signup button:hover{ background:var(--sage-2); border-color:var(--sage-2); }
 
     footer{ color:var(--ink-soft); padding:22px 0 60px; border-top:1px solid var(--line); text-align:center; }
 
@@ -651,6 +246,7 @@
       <p class="section-desc">Ett urval av arbeten och skolcase.</p>
 
       <div class="projects">
+        <!-- Projekt 1 med bild -->
         <article class="card" tabindex="0">
           <div class="thumb">
             <img class="fit" src="Images/subway.png" alt="Alla är fotografer – subway installation" loading="lazy">
@@ -661,10 +257,8 @@
           </div>
         </article>
 
+        <!-- Projekt 2 utan bild (bilddel borttagen) -->
         <article class="card" tabindex="0">
-          <div class="thumb">
-            <img class="fit" src="Images/ava.JPG" alt="Projekt 2" loading="lazy">
-          </div>
           <div class="card-body">
             <h3>SEO → CRO: från trafik till resultat</h3>
             <p class="meta">Research, teknisk grund och A/B-tester på landningssidor.</p>
@@ -674,7 +268,7 @@
     </div>
   </section>
 
-  <!-- CV (grönt band) -->
+  <!-- CV – grönt band -->
   <section id="cv" class="band reveal">
     <div class="container">
       <div class="cv">
@@ -733,7 +327,7 @@
     },{ rootMargin:'-45% 0px -50% 0px', threshold:0 });
     sections.forEach(s=> io2.observe(s));
 
-    /* ===== Bakgrundsord (diskret, ljus) ===== */
+    /* ===== Bakgrundsord (grön, superdiskret) ===== */
     const words = [
       { el: document.getElementById('w0'), factor: 0.00 },
       { el: document.getElementById('w1'), factor: 0.95 },
@@ -757,7 +351,7 @@
       for(let i=0;i<words.length;i++){
         const d = Math.abs(center - anchors[i]);
         const t = Math.max(0, 1 - d/range);  // 0..1
-        const alpha = 0.02 + t * 0.10;       // ljus version
+        const alpha = 0.02 + t * 0.10;       // mycket diskret
         words[i].el.style.opacity = alpha.toFixed(3);
         words[i].el.style.transform = `translate(-50%, -50%) scale(${1 + t*0.05})`;
       }
