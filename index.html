@@ -4,12 +4,12 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Ava Urdén – Portfolio</title>
-  <meta name="description" content="Ava Urdén – Growth Marketing student. Portfolio med projekt, färdigheter, CV och kontakt." />
+  <meta name="description" content="Ava Urdén – Growth Marketing student. Portfolio med projekt, meriter och kontakt." />
 
-  <!-- Fonts -->
+  <!-- Typsnitt -->
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-  <!-- Google tag (gtag.js) -->
+  <!-- Google tag (om du använder den) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-6RB051SBTS"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -20,161 +20,163 @@
 
   <style>
     :root{
-      /* Grönare, editorial palett */
-      --bg:#F1F5F1;           /* papper m. grön ton */
-      --ink:#1E201D;          /* text */
-      --ink-soft:#5B625A;     /* sekundär text */
-      --panel:#FFFFFF;        /* kort/bas */
-      --panel-2:#EAF1EA;      /* ljust grönt band */
-      --sage:#4F6B57;         /* salviagrön */
-      --sage-2:#3D5E4A;       /* mörkare */
-      --line:rgba(17,35,25,.10);
+      /* Palett i linje med referensen */
+      --paper:#F6F3EE;
+      --ink:#161813;
+      --ink-soft:#5B5F57;
+      --panel:#FFFFFF;
+      --line:rgba(0,0,0,.10);
+      --accent:#E57E25;      /* orange för hero */
+      --accent-dark:#C46314;
+      --sage:#6F8576;        /* grönt band till CV */
       --radius:18px;
-      --shadow:0 14px 40px rgba(30,32,29,.08);
+      --shadow:0 16px 48px rgba(0,0,0,.12);
       --maxw:1200px;
     }
 
     *,*::before,*::after{ box-sizing:border-box; }
     html,body{ height:100%; scroll-behavior:smooth; }
     body{
-      margin:0; background:var(--bg); color:var(--ink);
+      margin:0; background:var(--paper); color:var(--ink);
       font-family:"Poppins", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
       line-height:1.6; overflow-x:hidden;
-      background-image:
-        radial-gradient(700px 420px at 90% -10%, rgba(79,107,87,.10), transparent 60%),
-        radial-gradient(760px 520px at -15% 90%, rgba(234,241,234,.55), transparent 60%);
     }
     img{ max-width:100%; display:block; }
     a{ color:inherit; text-decoration:none; }
     .container{ width:100%; max-width:var(--maxw); margin-inline:auto; padding-inline:24px; }
 
-    /* ===== Diskreta scroll-ord: GROWTHMARKETING ===== */
-    .bg-words{ position:fixed; inset:0; z-index:-3; pointer-events:none; }
-    .bg-word{
-      position:fixed; left:50%; top:50%;
-      transform:translate(-50%, -50%) scale(1);
-      font-family:"Cormorant Garamond", serif;
-      font-weight:600; text-transform:uppercase;
-      letter-spacing:.12em;
-      font-size:min(18vw, 220px);
-      color:rgba(79,107,87,.04);  /* svagt grönt */
-      filter:blur(1px);
-      opacity:0;                  /* styrs via JS */
-      transition:opacity .3s linear, transform .3s linear;
-      user-select:none;
-    }
-    .bg-word.secondary{
-      font-size:min(16vw, 200px);
-      letter-spacing:.14em;
-    }
-
-    /* Lätt papperstextur */
-    .grain{
-      position:fixed; inset:-50px; z-index:-2; pointer-events:none; opacity:.06;
-      background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="140" height="140"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency=".8" numOctaves="3"/></filter><rect width="100%" height="100%" filter="url(%23n)" opacity=".8"/></svg>');
-      animation: gr 22s linear infinite;
-      mix-blend-mode:multiply;
-    }
-    @keyframes gr{ to{ transform:translate3d(-140px,-140px,0);} }
-
     /* Header */
     header{
-      position:sticky; top:0; z-index:50; backdrop-filter:saturate(120%) blur(8px);
-      background:rgba(255,255,255,.75); border-bottom:1px solid var(--line);
+      position:sticky; top:0; z-index:40; backdrop-filter:saturate(120%) blur(8px);
+      background:rgba(255,255,255,.65); border-bottom:1px solid var(--line);
     }
-    .nav{ display:flex; align-items:center; justify-content:space-between; height:72px; }
+    .nav{ display:flex; align-items:center; justify-content:space-between; height:68px; }
     .brand{ font-family:"Cormorant Garamond", serif; font-weight:600; letter-spacing:.02em; }
     nav ul{ list-style:none; display:flex; gap:22px; margin:0; padding:0; }
-    nav a{ padding:10px 4px; position:relative; font-variant:all-small-caps; letter-spacing:.12em; color:var(--ink-soft); }
-    nav a::after{
-      content:""; position:absolute; left:0; right:0; bottom:6px; height:1.5px;
-      background:var(--sage); transform:scaleX(0); transform-origin:left; transition:.25s;
-    }
+    nav a{ padding:10px 4px; position:relative; font-variant:all-small-caps; letter-spacing:.14em; color:var(--ink-soft); }
+    nav a::after{ content:""; position:absolute; left:0; right:0; bottom:6px; height:2px;
+      background:var(--accent); transform:scaleX(0); transform-origin:left; transition:.25s; }
     nav a:hover{ color:var(--ink); }
     nav a:hover::after, nav a.active::after{ transform:scaleX(1); }
 
-    /* Omslag */
-    .cover{ padding:72px 0 48px; }
-    .cover-inner{
-      position:relative; z-index:2;
-      display:flex; align-items:center; justify-content:space-between;
-      gap:clamp(32px, 6vw, 96px); min-height:68vh;
-      border:1px solid var(--line); border-radius:var(--radius);
-      padding:clamp(20px,3vw,28px);
+    /* ===== HERO med rullande bakgrundstext ===== */
+    .hero{
+      position:relative; padding:86px 0 56px; overflow:hidden;
+      border-bottom:1px solid var(--line);
       background:linear-gradient(180deg, rgba(255,255,255,.85), rgba(255,255,255,.6));
-      box-shadow:var(--shadow);
     }
-    .title{
+    .hero-inner{
+      position:relative; z-index:2;
+      display:grid; gap:16px; justify-items:center; text-align:center;
+    }
+    .overline{ font-variant:all-small-caps; letter-spacing:.22em; color:var(--ink-soft); }
+    .hero h1{
+      margin:0;
       font-family:"Cormorant Garamond", serif;
-      font-size:clamp(40px, 6vw, 78px);
-      font-weight:600; line-height:1.05; margin:0; letter-spacing:.01em;
+      font-weight:700; line-height:1.02;
+      font-size:clamp(42px, 7vw, 92px);
+      letter-spacing:.01em;
     }
-    .subtitle{ margin-top:14px; font-size:18px; color:var(--ink-soft); }
+    .hero p{ margin:.4rem 0 1rem; color:var(--ink-soft); max-width:55ch; }
+    .cta{
+      display:inline-flex; align-items:center; gap:10px;
+      padding:12px 18px; border-radius:999px;
+      border:1px solid var(--accent);
+      background:var(--accent); color:#fff; font-weight:600; letter-spacing:.02em;
+      box-shadow:0 10px 28px rgba(229,126,37,.25);
+      transition:.25s;
+    }
+    .cta:hover{ background:var(--accent-dark); border-color:var(--accent-dark); transform:translateY(-1px); }
 
-    .chips{ display:flex; flex-wrap:wrap; gap:10px; margin-top:16px;}
-    .chip{
-      padding:8px 12px; border-radius:999px; font-size:13.5px;
-      border:1px solid var(--line);
-      background:linear-gradient(180deg, #fff, #f7fbf7);
-      color:#455248;
-      box-shadow:0 6px 16px rgba(30,32,29,.06);
+    /* Själva tickern (diskret) */
+    .ticker{
+      position:absolute; inset:0; z-index:1; pointer-events:none; opacity:.08;
+      -webkit-mask-image:linear-gradient(90deg, transparent 0%, #000 12%, #000 88%, transparent 100%);
+              mask-image:linear-gradient(90deg, transparent 0%, #000 12%, #000 88%, transparent 100%);
+    }
+    .ticker-row{
+      position:absolute; top:20%; left:0;
+      white-space:nowrap; will-change:transform;
+      animation: marquee 36s linear infinite;
+    }
+    .ticker-row.second{ top:auto; bottom:14%; animation-duration:46s; animation-direction:reverse; opacity:.9; }
+    .ticker-word{
+      font-family:"Cormorant Garamond", serif;
+      font-weight:600; text-transform:uppercase; letter-spacing:.10em;
+      font-size:clamp(84px, 14vw, 220px); line-height:1;
+      color:var(--accent);
+      margin-right:2rem;
+    }
+    @keyframes marquee{
+      0%   { transform:translateX(0); }
+      100% { transform:translateX(-50%); }
+    }
+    @media (prefers-reduced-motion:reduce){
+      .ticker-row{ animation:none; opacity:.06; }
     }
 
-    .btn{ display:inline-flex; align-items:center; padding:12px 18px;
-      border:1px solid var(--sage); border-radius:999px; background:var(--sage); font-weight:600; color:#fff;
-      transition:.25s; letter-spacing:.02em;
+    /* ===== MINI-ABOUT (liten bild efter hero) ===== */
+    .mini{
+      padding:30px 0 10px;
     }
-    .btn:hover{ background:var(--sage-2); border-color:var(--sage-2); transform:translateY(-1px); }
-
-    .circle{
-      width:280px; height:280px; border-radius:50%; overflow:hidden; flex-shrink:0; position:relative;
-      border:1px solid rgba(17,35,25,.15); background:#fff;
-      box-shadow:0 16px 40px rgba(30,32,29,.10);
+    .mini .card{
+      width:min(680px, 92vw);
+      margin:0 auto;
+      display:grid; grid-template-columns:auto 1fr; gap:16px; align-items:center;
+      background:var(--panel); border:1px solid var(--line); border-radius:16px;
+      box-shadow:var(--shadow); padding:14px 16px;
     }
-    .circle img{ width:100%; height:100%; object-fit:cover; object-position:center 20%; }
+    .mini .avatar{
+      width:92px; height:92px; border-radius:50%; overflow:hidden;
+      border:1px solid rgba(0,0,0,.1); background:#fff;
+      box-shadow:0 10px 28px rgba(0,0,0,.10);
+      flex-shrink:0;
+    }
+    .mini .avatar img{ width:100%; height:100%; object-fit:cover; object-position:center 20%; }
+    .mini h2{
+      font-family:"Cormorant Garamond", serif; font-size:24px; margin:0 0 4px; font-weight:600;
+    }
+    .mini p{ margin:0; color:var(--ink-soft); }
 
-    /* Sektioner */
-    section{ padding:100px 0; position:relative; }
+    /* ===== Sektioner nedan ===== */
+    .section{ padding:90px 0; }
     .section-title{
-      font-family:"Cormorant Garamond", serif; font-size:clamp(26px,3.2vw,38px); margin:0 0 12px; font-weight:600; letter-spacing:.02em;
+      font-family:"Cormorant Garamond", serif; font-size:clamp(26px,3vw,38px); margin:0 0 12px; font-weight:600;
     }
     .section-desc{ color:var(--ink-soft); margin:0 0 24px; }
 
-    /* Grönt band (CV) */
-    .band{ background:linear-gradient(180deg, #6E8674, #587460); color:#F5F2EA; }
-    .band .section-title{ color:#fff; }
-    .band .section-desc{ color:#E9E5DC; }
-    .band .cv{ background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.38); }
-
     /* Projektkort */
     .projects{ display:grid; grid-template-columns:repeat(12,1fr); gap:22px; }
-    .card{
-      grid-column:span 6; background:var(--panel);
-      border:1px solid var(--line); border-radius:16px; overflow:hidden;
-      box-shadow:var(--shadow); transition:transform .25s ease, box-shadow .25s ease;
+    .card-p{
+      grid-column:span 6; background:var(--panel); border:1px solid var(--line);
+      border-radius:16px; overflow:hidden; box-shadow:var(--shadow);
+      transition:transform .25s ease, box-shadow .25s ease;
     }
-    .card:hover{ transform:translateY(-4px); box-shadow:0 16px 44px rgba(30,32,29,.12); }
-    .thumb{ aspect-ratio:16/9; background:#eef3ee; border-bottom:1px solid var(--line); }
+    .card-p:hover{ transform:translateY(-4px); box-shadow:0 16px 44px rgba(0,0,0,.12); }
+    .thumb{ aspect-ratio:16/9; background:#f0eee9; border-bottom:1px solid var(--line); }
     .thumb .fit{ width:100%; height:100%; object-fit:cover; }
     .card-body{ padding:clamp(16px,2vw,22px); }
-    .card h3{ font-family:"Cormorant Garamond", serif; font-weight:600; margin:0 0 6px; }
+    .card-body h3{ font-family:"Cormorant Garamond", serif; font-weight:600; margin:0 0 6px; }
     .meta{ color:var(--ink-soft); font-size:14px; line-height:1.5; }
 
-    /* CV-kort */
+    /* CV – grönt band */
+    .band{ background:linear-gradient(180deg, #6F8576, #5C7868); color:#F4F0E7; }
+    .band .section-title{ color:#fff; }
+    .band .section-desc{ color:#EAE4DA; }
     .cv{
       display:flex; align-items:center; justify-content:space-between; gap:16px;
-      background:rgba(255,255,255,.6); border:1px solid rgba(17,35,25,.18);
-      border-radius:16px; padding:20px; box-shadow:0 10px 32px rgba(0,0,0,.08);
+      background:rgba(255,255,255,.10); border:1px solid rgba(255,255,255,.35);
+      border-radius:16px; padding:20px; box-shadow:0 10px 32px rgba(0,0,0,.12);
     }
-    .cv .btn{ background:#fff; color:var(--sage-2); border-color:var(--sage-2); }
-    .cv .btn:hover{ background:var(--sage-2); color:#fff; }
+    .cv .cta{ background:#fff; color:#365845; border-color:#fff; box-shadow:none; }
+    .cv .cta:hover{ background:#E6EFE9; color:#2e4e3d; }
 
     /* Kontakt */
     .signup{ padding:48px 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line); background:rgba(255,255,255,.7); }
     .signup .wrap{ display:flex; gap:12px; flex-wrap:wrap; align-items:center; }
     .signup input{ flex:1 1 280px; padding:14px 16px; border:1px solid var(--line); border-radius:12px; background:#fff; color:var(--ink); }
-    .signup button{ padding:14px 18px; border-radius:999px; border:1px solid var(--sage); background:var(--sage); color:#fff; font-weight:700; letter-spacing:.02em; }
-    .signup button:hover{ background:var(--sage-2); border-color:var(--sage-2); }
+    .signup button{ padding:14px 18px; border-radius:999px; border:1px solid var(--accent); background:var(--accent); color:#fff; font-weight:700; letter-spacing:.02em; }
+    .signup button:hover{ background:var(--accent-dark); border-color:var(--accent-dark); }
 
     footer{ color:var(--ink-soft); padding:22px 0 60px; border-top:1px solid var(--line); text-align:center; }
 
@@ -183,22 +185,11 @@
     .reveal.in{ opacity:1; transform:none; }
 
     @media (max-width:800px){
-      .cover-inner{ flex-direction:column; align-items:flex-start; }
-      .circle{ width:240px; height:240px; }
-      .card{ grid-column:span 12; }
+      .card-p{ grid-column:span 12; }
     }
   </style>
 </head>
 <body>
-  <!-- Bakgrundsord: superdiskret GROWTHMARKETING -->
-  <div class="bg-words" aria-hidden="true">
-    <div class="bg-word" id="w0">GROWTHMARKETING</div>
-    <div class="bg-word secondary" id="w1">GROWTHMARKETING</div>
-    <div class="bg-word" id="w2">GROWTHMARKETING</div>
-    <div class="bg-word secondary" id="w3">GROWTHMARKETING</div>
-  </div>
-  <div class="grain" aria-hidden="true"></div>
-
   <header>
     <div class="container nav">
       <div class="brand">Ava Urdén</div>
@@ -212,42 +203,60 @@
     </div>
   </header>
 
-  <!-- Omslag -->
-  <section class="cover">
-    <div class="container cover-inner">
-      <div>
-        <h1 class="title">Ava Urdén<br/>Portfolio</h1>
-        <p class="subtitle">Growth marketing student @ Berghs School of Communication</p>
-
-        <div class="chips" aria-label="Fokusområden">
-          <span class="chip">Brand & Story</span>
-          <span class="chip">UGC & Aktivering</span>
-          <span class="chip">SEO → CRO</span>
-          <span class="chip">Pitch & Decks</span>
-        </div>
-
-        <div style="margin-top:20px; display:flex; gap:10px; flex-wrap:wrap">
-          <a class="btn" href="#work">Se projekt ↓</a>
-          <a class="btn" href="https://www.linkedin.com/in/ava-urd%C3%A9n-3014a821b" target="_blank" rel="noopener">LinkedIn</a>
-        </div>
+  <!-- HERO: diskret rullande GROWTHMARKETING -->
+  <section class="hero">
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-row">
+        <span class="ticker-word">GROWTHMARKETING</span>
+        <span class="ticker-word">GROWTHMARKETING</span>
+        <span class="ticker-word">GROWTHMARKETING</span>
+        <span class="ticker-word">GROWTHMARKETING</span>
+        <span class="ticker-word">GROWTHMARKETING</span>
+        <span class="ticker-word">GROWTHMARKETING</span>
+        <span class="ticker-word">GROWTHMARKETING</span>
+        <span class="ticker-word">GROWTHMARKETING</span>
       </div>
+      <div class="ticker-row second">
+        <span class="ticker-word">GROWTHMARKETING</span>
+        <span class="ticker-word">GROWTHMARKETING</span>
+        <span class="ticker-word">GROWTHMARKETING</span>
+        <span class="ticker-word">GROWTHMARKETING</span>
+        <span class="ticker-word">GROWTHMARKETING</span>
+        <span class="ticker-word">GROWTHMARKETING</span>
+        <span class="ticker-word">GROWTHMARKETING</span>
+        <span class="ticker-word">GROWTHMARKETING</span>
+      </div>
+    </div>
 
-      <!-- Din profilbild -->
-      <div class="circle">
-        <img src="Images/avafarg.JPG" alt="Bild på Ava Urdén" loading="eager" />
+    <div class="container hero-inner">
+      <div class="overline">PORTFOLIO</div>
+      <h1>Ava Urdén</h1>
+      <p>lalalla – Growth marketing student @ Berghs School of Communication</p>
+      <a class="cta" href="#work">Se projekt ↓</a>
+    </div>
+  </section>
+
+  <!-- MINI-ABOUT: liten bild direkt efter hero -->
+  <section class="mini">
+    <div class="card">
+      <div class="avatar">
+        <img src="Images/avafarg.JPG" alt="Ava Urdén" loading="eager">
+      </div>
+      <div>
+        <h2>Hej! Jag är Ava</h2>
+        <p>Jag gillar att kombinera storytelling, UGC och data för att skapa growth som märks. Här är några case + hur du når mig.</p>
       </div>
     </div>
   </section>
 
-  <!-- Projekt -->
-  <section id="work" class="reveal">
-    <div class="container">
+  <!-- PROJEKT -->
+  <section id="work" class="section">
+    <div class="container reveal">
       <h2 class="section-title">Projekt</h2>
       <p class="section-desc">Ett urval av arbeten och skolcase.</p>
 
       <div class="projects">
-        <!-- Projekt 1 med bild -->
-        <article class="card" tabindex="0">
+        <article class="card-p" tabindex="0">
           <div class="thumb">
             <img class="fit" src="Images/subway.png" alt="Alla är fotografer – subway installation" loading="lazy">
           </div>
@@ -257,8 +266,8 @@
           </div>
         </article>
 
-        <!-- Projekt 2 utan bild (bilddel borttagen) -->
-        <article class="card" tabindex="0">
+        <!-- Projekt 2 utan bild (som önskat tidigare) -->
+        <article class="card-p" tabindex="0">
           <div class="card-body">
             <h3>SEO → CRO: från trafik till resultat</h3>
             <p class="meta">Research, teknisk grund och A/B-tester på landningssidor.</p>
@@ -269,24 +278,24 @@
   </section>
 
   <!-- CV – grönt band -->
-  <section id="cv" class="band reveal">
-    <div class="container">
+  <section id="cv" class="band section">
+    <div class="container reveal">
       <div class="cv">
         <div>
           <h3 class="section-title">CV & Meriter</h3>
           <p class="section-desc">Ladda ner mitt uppdaterade CV som PDF.</p>
         </div>
         <div style="display:flex; gap:12px; flex-wrap:wrap">
-          <a class="btn" href="cv.pdf" download>Hämta CV (PDF)</a>
-          <a class="btn" href="https://www.linkedin.com/in/ava-urd%C3%A9n-3014a821b" target="_blank" rel="noopener">LinkedIn-profil</a>
+          <a class="cta" href="cv.pdf" download style="background:#fff; color:#365845; border-color:#fff; box-shadow:none">Hämta CV (PDF)</a>
+          <a class="cta" href="https://www.linkedin.com/in/ava-urd%C3%A9n-3014a821b" target="_blank" rel="noopener" style="background:#fff; color:#365845; border-color:#fff; box-shadow:none">LinkedIn</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Kontakt -->
-  <section id="contact" class="signup reveal">
-    <div class="container">
+  <!-- KONTAKT -->
+  <section id="contact" class="signup">
+    <div class="container reveal">
       <h2 class="section-title">Kontakt</h2>
       <p class="section-desc">Maila mig direkt: <a href="mailto:ava@example.com">ava@example.com</a></p>
       <div class="wrap">
@@ -297,9 +306,7 @@
   </section>
 
   <footer>
-    <div class="container">
-      © <span id="y"></span> Ava Urdén
-    </div>
+    <div class="container">© <span id="y"></span> Ava Urdén</div>
   </footer>
 
   <script>
@@ -312,7 +319,7 @@
       entries.forEach(e=>{
         if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
       });
-    },{ threshold:0.18 });
+    },{ threshold:0.15 });
     revealEls.forEach(el=>io.observe(el));
 
     // Aktiv meny-länk
@@ -326,38 +333,6 @@
       });
     },{ rootMargin:'-45% 0px -50% 0px', threshold:0 });
     sections.forEach(s=> io2.observe(s));
-
-    /* ===== Bakgrundsord (grön, superdiskret) ===== */
-    const words = [
-      { el: document.getElementById('w0'), factor: 0.00 },
-      { el: document.getElementById('w1'), factor: 0.95 },
-      { el: document.getElementById('w2'), factor: 1.90 },
-      { el: document.getElementById('w3'), factor: 2.85 }
-    ];
-    let anchors = [];
-    function computeAnchors(){
-      const vh = window.innerHeight;
-      anchors = words.map(w => w.factor * vh);
-    }
-    computeAnchors();
-    addEventListener('resize', computeAnchors);
-
-    let lastY = window.scrollY;
-    addEventListener('scroll', ()=> lastY = window.scrollY, { passive:true });
-
-    function revealWords(){
-      const center = lastY + window.innerHeight * 0.5;
-      const range  = window.innerHeight * 0.75;
-      for(let i=0;i<words.length;i++){
-        const d = Math.abs(center - anchors[i]);
-        const t = Math.max(0, 1 - d/range);  // 0..1
-        const alpha = 0.02 + t * 0.10;       // mycket diskret
-        words[i].el.style.opacity = alpha.toFixed(3);
-        words[i].el.style.transform = `translate(-50%, -50%) scale(${1 + t*0.05})`;
-      }
-      requestAnimationFrame(revealWords);
-    }
-    requestAnimationFrame(revealWords);
   </script>
 </body>
 </html>
