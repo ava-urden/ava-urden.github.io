@@ -1,430 +1,264 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ava Urdén — Portfolio</title>
-  <meta name="description" content="Ava Urdén — Growth Marketing student at Berghs. Portfolio, toolbox, case och kontakt." />
-  <meta name="theme-color" content="#0f1a14" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Ava Urdén — Portfolio</title>
+<meta name="description" content="Ava Urdén — Growth Marketing Student @ Berghs School of Communication." />
+<meta name="theme-color" content="#514138" />
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<!-- Google Fonts: Montserrat -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-  <!-- Icons (Feather) -->
-  <script defer src="https://unpkg.com/feather-icons"></script>
+<!-- Google Tag Manager -->
+<script>
+ (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+ 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+ })(window,document,'script','dataLayer','GTM-5JMB8KM3');
+</script>
+<!-- End Google Tag Manager -->
 
-  <!-- Google Tag Manager -->
-  <script>
-    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-5JMB8KM3');
-  </script>
-  <!-- End Google Tag Manager -->
+<style>
+  :root{
+    --brown-900:#1e1a18; --brown-700:#3a2f29; --brown-600:#514138; --brown-400:#7a6e67;
+    --paper:#fff; --ink:#121212; --muted:#6b6b6b;
+    --line-dark:rgba(255,255,255,.12); --line-light:rgba(0,0,0,.08);
+    --radius:16px; --shadow:0 12px 30px rgba(0,0,0,.16);
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    margin:0; font-family:"Montserrat", system-ui, -apple-system, Segoe UI, Roboto, Arial;
+    color:var(--ink); background:var(--paper);
+    -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+    scroll-behavior:smooth; font-size:16px;
+  }
+  a{color:inherit; text-decoration:none}
+  img{display:block; width:100%; height:auto}
+  .container{width:min(1160px,92%); margin-inline:auto}
 
-  <style>
-    :root{
-      --bg:#0f1a14;        /* djup grönsvart */
-      --panel:#151e19;     /* mörk panel */
-      --ink:#E9E7E4;       /* ljus text */
-      --muted:#a8b3ad;     /* sekundär text */
-      --brand:#98c1a2;     /* mjuk grön accent */
-      --line:rgba(233,231,228,.08);
-      --ring:rgba(152,193,162,.35);
-      --shadow: 0 10px 30px rgba(0,0,0,.25);
-      --radius:18px;
-    }
+  /* Topbar (brun) */
+  .topbar{
+    position:sticky; top:0; z-index:50; backdrop-filter:saturate(120%) blur(6px);
+    background:linear-gradient(180deg, var(--brown-400), var(--brown-600));
+    color:#fff; border-bottom:1px solid rgba(255,255,255,.15);
+  }
+  .topbar-inner{display:flex; align-items:center; justify-content:space-between; gap:16px; padding:14px 0}
+  .brand{font-weight:800; letter-spacing:.1em; font-size:13px; text-transform:uppercase; opacity:.95}
+  .nav{display:flex; gap:10px; flex-wrap:wrap}
+  .nav a{
+    padding:10px 14px; border-radius:12px; background:rgba(255,255,255,.10);
+    color:#fff; font-weight:700; letter-spacing:.04em; text-transform:uppercase; font-size:12.5px;
+    border:1px solid rgba(255,255,255,.22); box-shadow:0 6px 14px rgba(0,0,0,.18);
+    transition:transform .15s ease, box-shadow .15s ease, background .15s ease;
+  }
+  .nav a:hover{ transform:translateY(-2px); background:rgba(255,255,255,.18); box-shadow:0 10px 22px rgba(0,0,0,.25) }
 
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial;
-      color:var(--ink);
-      background: radial-gradient(1200px 600px at 10% 0%, #19241f 0%, var(--bg) 60%) fixed,
-                  radial-gradient(900px 500px at 100% 20%, #1c2a23 0%, transparent 70%) fixed,
-                  var(--bg);
-      overflow-x:hidden;
-      scroll-behavior:smooth;
-    }
+  /* Bakgrundsblobs (dynamik) */
+  .blob{
+    position:fixed; inset:auto; z-index:-1; pointer-events:none; opacity:.22; filter:blur(40px);
+    background:radial-gradient(35% 35% at 50% 50%, #7a6e67, transparent 60%);
+    animation:float 22s ease-in-out infinite alternate;
+  }
+  .blob.b1{ width:38vw; height:38vw; top:-8vw; left:-6vw; }
+  .blob.b2{ width:28vw; height:28vw; right:-6vw; top:12vh; animation-duration:26s; }
+  .blob.b3{ width:32vw; height:32vw; bottom:-10vw; left:20vw; animation-duration:30s; }
+  @keyframes float{ to{ transform:translate3d(0,-16px,0) rotate(2deg)} }
 
-    /* Global helpers */
-    .container{width:min(1100px, 92%); margin-inline:auto}
-    h1,h2,h3{line-height:1.1; letter-spacing:.2px}
-    h1{font-family:"Playfair Display",serif; font-weight:700; font-size:clamp(38px,6vw,80px); margin:0 0 .25rem}
-    h2{font-size:clamp(22px,2.4vw,32px); margin:.2rem 0 1rem}
-    p{color:var(--ink); opacity:.92}
-    .muted{color:var(--muted)}
-    a{color:var(--ink); text-decoration:none}
-    img{display:block; width:100%; height:auto; border-radius:14px}
+  /* Hero */
+  .hero{ min-height:calc(100vh - 56px); display:flex; align-items:center; background:var(--paper) }
+  .kicker{ font-size:12px; color:#9a9a9a; letter-spacing:.32em; text-transform:uppercase; }
+  h1{
+    font-size:clamp(64px,9vw,120px);
+    font-weight:300;   /* tunn */
+    letter-spacing:.02em;
+    margin:14px 0 12px;
+  }
+  .subtitle{
+    color:#222; font-weight:600; letter-spacing:.01em; line-height:1.3;
+    margin-bottom:20px; font-size:clamp(16px,2vw,20px);
+  }
+  .intro{ max-width:780px; color:#333; line-height:1.78; font-weight:400; font-size:clamp(16.5px,1.7vw,18.5px) }
 
-    /* Sticky right menu (buttons) */
-    .side-nav{
-      position:fixed; top:70px; right:22px; z-index:20;
-      display:flex; flex-direction:column; gap:16px;
-    }
-    .side-nav a{
-      backdrop-filter:saturate(120%) blur(6px);
-      background:linear-gradient(180deg, #2a3a33, #1b2621);
-      border:1px solid var(--line);
-      border-radius:14px;
-      padding:14px 18px;
-      width:180px;
-      display:flex; align-items:center; gap:10px; justify-content:center;
-      color:#f3f4f2; font-weight:600; letter-spacing:.3px;
-      box-shadow: var(--shadow);
-      transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
-    }
-    .side-nav a:hover{ transform:translateY(-2px); border-color:var(--ring); box-shadow:0 14px 40px rgba(0,0,0,.35)}
-    .side-nav svg{ width:18px; height:18px; stroke-width:2.2}
+  /* Sektioner */
+  section{scroll-margin-top:82px}
+  .about{ background:linear-gradient(180deg, var(--brown-700), var(--brown-900)); color:#efeae7; padding:86px 0 }
+  .toolbox{ background:var(--paper); padding:100px 0 }
+  .cases{ background:linear-gradient(180deg, var(--brown-700), var(--brown-900)); color:#efeae7; padding:96px 0 }
+  footer{ background:var(--paper); padding:58px 0 96px }
 
-    /* Hero */
-    header{
-      padding:54px 0 24px;
-    }
-    .kicker{font-size:12px; letter-spacing:.3em; text-transform:uppercase; color:var(--muted)}
-    .sub{font-weight:600; letter-spacing:.25px}
-    .hero-grid{
-      display:grid; grid-template-columns: 1.1fr .9fr; gap:36px; align-items:center;
-      margin-top:36px; padding:28px;
-      border-radius:var(--radius);
-      background:
-        linear-gradient(135deg, rgba(152,193,162,.08), rgba(92,140,110,.05) 25%, rgba(0,0,0,.0) 70%),
-        linear-gradient(180deg, #1a251f, #121a16);
-      border:1px solid var(--line);
-      box-shadow: var(--shadow);
-      overflow:hidden;
-      position:relative;
-      isolation:isolate;
-    }
-    .hero-art{
-      aspect-ratio: 4/3;
-      position:relative;
-      overflow:hidden;
-      border-radius:14px;
-      background:
-        radial-gradient(120px 80px at 15% 30%, rgba(152,193,162,.35), transparent 60%),
-        linear-gradient(160deg, #233329, #151e19 55%);
-    }
-    /* Parallax floating shapes */
-    .float{
-      position:absolute; inset:auto; border-radius:18px; opacity:.45;
-      animation: drift var(--t,12s) ease-in-out infinite alternate;
-      filter: drop-shadow(0 8px 20px rgba(0,0,0,.3));
-    }
-    .f1{ width:140px; height:100px; left:18px; top:16px; background:linear-gradient(120deg,#a8d1b3,#7aac8f)}
-    .f2{ width:220px; height:130px; right:12px; bottom:18px; background:linear-gradient(180deg,#2a3f35,#1b2822); --t:14s}
-    .f3{ width:90px; height:90px; right:120px; top:40px; background:linear-gradient(140deg,#cfe7d7,#9dc6ab); --t:10s}
+  /* About */
+  .about-grid{display:grid; grid-template-columns: 5fr 7fr; gap:36px; align-items:stretch}
+  .about-illu{border-radius:14px; border:1px solid var(--line-dark); overflow:hidden; background:#2b241f; min-height:400px}
+  .about-illu img{width:100%; height:100%; object-fit:cover; aspect-ratio:4/3}
+  .about-card{border-radius:14px; border:1px solid var(--line-dark); background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.05)); padding:28px; display:flex; flex-direction:column; justify-content:center}
+  .about h2{font-size:18px; text-transform:uppercase; letter-spacing:.18em; margin:0 0 12px; font-weight:800; color:#fff}
+  .about p{margin:0; line-height:1.78; color:#f4efec; font-weight:400; font-size:clamp(15.5px,1.4vw,17px)}
 
-    @keyframes drift{
-      to{ transform: translate3d(0,-8px,0) rotate(2.5deg) }
-    }
+  /* Toolbox */
+  .tool-head{max-width:660px}
+  .tool-head h3{font-size:18px; text-transform:uppercase; letter-spacing:.18em; font-weight:800; margin:0 0 16px}
+  .tool-head p{color:#333; line-height:1.8; font-size:clamp(16px,1.6vw,18px)}
+  .tool-badges{
+    margin-top:18px;
+    display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px 18px;
+  }
+  @media (max-width:980px){ .tool-badges{ grid-template-columns:repeat(2,minmax(0,1fr)) } }
+  @media (max-width:560px){ .tool-badges{ grid-template-columns:1fr } }
+  .badge{
+    display:flex; align-items:center; gap:12px; padding:13px 14px; border-radius:12px;
+    border:1px solid var(--line-light); background:linear-gradient(180deg,#faf7f5,#f1ece8);
+    box-shadow:0 4px 10px rgba(0,0,0,.04); font-weight:700; letter-spacing:.02em; font-size:15.5px;
+    transition:transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+  }
+  .badge:hover{ transform:translateY(-2px); box-shadow:0 10px 18px rgba(0,0,0,.08); border-color:#d8cec7 }
+  .i{ width:28px; height:28px; display:grid; place-items:center; border-radius:8px; background:#fff; border:1px solid #e6ddd7; box-shadow:0 2px 6px rgba(0,0,0,.06) }
 
-    /* Sections */
-    section{padding:64px 0}
-    .panel{
-      background:linear-gradient(180deg, #1a241f, #121914);
-      border:1px solid var(--line);
-      border-radius:var(--radius);
-      box-shadow: var(--shadow);
-      padding:28px;
-    }
+  /* Cases */
+  .cases h3{font-size:18px; text-transform:uppercase; letter-spacing:.18em; font-weight:800; margin:0 0 10px}
+  .cases p{max-width:900px; line-height:1.78; color:#f0ece9; font-size:clamp(15.5px,1.5vw,17px)}
+  .case-grid{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:24px; margin-top:22px}
+  .case{border:1px solid var(--line-dark); border-radius:12px; overflow:hidden; background:linear-gradient(180deg,#f1ece8 0% ,#f1ece8 62%, #7c6e67 62%, #7c6e67 100%); transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease}
+  .case:hover{transform:translateY(-3px); box-shadow:0 14px 30px rgba(0,0,0,.35); border-color:#cdbfb7}
+  .case img{aspect-ratio:16/11; object-fit:cover}
+  .cap{padding:10px 12px; font-weight:800; letter-spacing:.14em; text-transform:uppercase; font-size:12.5px; color:#fff}
 
-    /* About text */
-    .lead{font-size:15.5px; line-height:1.7; color:var(--ink); opacity:.95}
+  /* Footer */
+  .foot-grid{display:grid; grid-template-columns:1fr 1fr; gap:40px}
+  .foot h4{font-size:16px; text-transform:uppercase; letter-spacing:.18em; font-weight:800; margin:0 0 10px}
+  .cv-link{display:inline-block; margin-top:6px; text-decoration:underline; font-weight:700}
 
-    /* Toolbox */
-    .tool-wrap{display:grid; grid-template-columns: 1fr 1fr; gap:28px; align-items:start}
-    .tool-intro{font-size:15px; line-height:1.75}
-    .tool-box{
-      position:relative; overflow:hidden;
-      background:
-        radial-gradient(200px 160px at 15% 20%, rgba(152,193,162,.22), transparent 60%),
-        linear-gradient(180deg,#1a241f,#121914);
-      border:1px solid var(--line); border-radius:16px; padding:22px 22px 18px;
-    }
-    .tool-grid{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px 18px; margin-top:8px}
-    .tag{
-      display:flex; align-items:center; gap:8px;
-      padding:10px 12px; border-radius:12px; border:1px solid var(--line);
-      background:linear-gradient(180deg,#1e2a24,#111813);
-      font-weight:600; letter-spacing:.2px; font-size:13px;
-      transition: transform .18s ease, border-color .2s ease, box-shadow .2s ease;
-      will-change: transform;
-    }
-    .tag:hover{ transform:translateY(-2px) rotate(-.2deg); border-color:var(--ring); box-shadow:0 10px 22px rgba(0,0,0,.28)}
-    .tag svg{width:16px;height:16px; stroke-width:2.2; opacity:.9}
-
-    /* Cases */
-    .cases-grid{
-      margin-top:18px;
-      display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:22px;
-    }
-    .case{
-      border:1px solid var(--line); border-radius:16px; overflow:hidden;
-      background:linear-gradient(180deg,#1a221d,#0f1612);
-      position:relative;
-      transform: perspective(1000px) translateZ(0);
-      transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
-      will-change: transform;
-    }
-    .case:hover{ transform: perspective(1000px) translateY(-4px) rotateX(.8deg) rotateY(-.6deg); box-shadow:0 18px 50px rgba(0,0,0,.4); border-color:var(--ring)}
-    .case img{ aspect-ratio: 16/11; object-fit:cover }
-    .case .meta{ padding:14px 14px 16px; display:flex; align-items:center; justify-content:space-between}
-    .pill{
-      font-size:12px; letter-spacing:.25px; padding:6px 10px; border-radius:999px;
-      border:1px solid var(--line); background:linear-gradient(180deg,#1e2a24,#121914)
-    }
-
-    /* Contact */
-    .contact-grid{display:grid; grid-template-columns:1fr .8fr; gap:28px}
-    .contact-card{display:flex; gap:14px; align-items:center; padding:14px; border-radius:14px; border:1px dashed var(--line)}
-    .contact-card svg{width:18px; height:18px}
-
-    /* CV row */
-    .cv{
-      display:flex; align-items:center; gap:12px;
-      border:1px solid var(--line); border-radius:14px; padding:14px 16px;
-      background:linear-gradient(180deg,#1e2a24,#121914)
-    }
-    .btn{
-      border:1px solid var(--line); padding:10px 14px; border-radius:12px;
-      background:linear-gradient(180deg,#26342d,#16201b); font-weight:700;
-      transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
-      display:inline-flex; align-items:center; gap:8px;
-    }
-    .btn:hover{ transform:translateY(-2px); border-color:var(--ring); box-shadow:0 10px 24px rgba(0,0,0,.35)}
-    .btn svg{width:18px; height:18px}
-
-    /* Scroll reveal */
-    .reveal{opacity:0; transform:translateY(18px); transition:opacity .6s ease, transform .6s ease}
-    .reveal.on{opacity:1; transform:none}
-
-    /* Responsive */
-    @media (max-width: 1024px){
-      .side-nav{display:none}
-      .hero-grid{grid-template-columns:1fr; gap:22px}
-      .tool-wrap{grid-template-columns:1fr}
-      .cases-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-      .contact-grid{grid-template-columns:1fr}
-    }
-    @media (max-width:640px){
-      .cases-grid{grid-template-columns:1fr}
-    }
-  </style>
+  /* Reveal */
+  .reveal{opacity:0; transform:translateY(16px)}
+  .reveal.in{opacity:1; transform:none; transition:opacity .6s cubic-bezier(.2,.65,.2,1), transform .6s cubic-bezier(.2,.65,.2,1)}
+  .d1{transition-delay:.06s} .d2{transition-delay:.12s} .d3{transition-delay:.18s}
+</style>
 </head>
 <body>
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5JMB8KM3"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5JMB8KM3" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
-  <!-- Right sticky menu -->
-  <nav class="side-nav" aria-label="Snabbmeny">
-    <a href="#about"><i data-feather="user"></i> About me</a>
-    <a href="#toolbox"><i data-feather="tool"></i> My toolbox</a>
-    <a href="#cases"><i data-feather="grid"></i> Previous work</a>
-    <a href="#contact"><i data-feather="mail"></i> Contact, CV</a>
-  </nav>
+<!-- Blobs -->
+<div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
 
-  <header class="container">
-    <div class="kicker">PORTFOLIO</div>
-    <h1>AVA URDÉN</h1>
-    <div class="muted sub">Growth Marketing Student — @ Berghs School of Communication</div>
+<!-- Topbar -->
+<div class="topbar">
+  <div class="container topbar-inner">
+    <div class="brand">PORTFOLIO</div>
+    <nav class="nav">
+      <a href="#about">About me</a>
+      <a href="#toolbox">My toolbox</a>
+      <a href="#cases">Previous work & cases</a>
+      <a href="#contact">Contact, my CV</a>
+    </nav>
+  </div>
+</div>
 
-    <div class="hero-grid reveal">
-      <div class="hero-art" aria-hidden="true">
-        <img src="images/ava-hero.jpg" alt="Ava — hero" style="mix-blend:screen; opacity:.28; position:absolute; inset:0; width:100%; height:100%; object-fit:cover">
-        <div class="float f1"></div>
-        <div class="float f2"></div>
-        <div class="float f3"></div>
-      </div>
-
-      <div id="about">
-        <h2>I’m Ava, currently studying Growth Marketing</h2>
-        <p class="lead">
-          With a background in communication, marketing, and business development, I thrive at the intersection of strategy and creativity —
-          translating insights into concepts that strengthen brand identity and drive measurable growth. I’m curious about digital tools,
-          data-driven methods and user experience, combined with a strong interest in storytelling and design. My goal is to build innovative
-          and practical solutions that create long-term value for brands and their audiences.
-        </p>
-      </div>
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="reveal d1">
+      <div class="kicker">PORTFOLIO</div>
+      <h1>AVA URDÉN</h1>
+      <div class="subtitle">Growth Marketing Student — @ Berghs School of Communication</div>
+      <p class="intro">
+        I thrive at the intersection of strategy and creativity — translating insights into concepts that strengthen brand identity
+        and drive measurable growth. Curious about digital tools, data-driven methods and user experience, with a strong interest
+        in storytelling and design.
+      </p>
     </div>
-  </header>
+  </div>
+</section>
 
-  <main>
-    <!-- Toolbox -->
-    <section id="toolbox" class="container">
-      <div class="tool-wrap">
-        <div class="panel reveal">
-          <h2>My toolbox</h2>
-          <p class="tool-intro">
-            I use this toolbox to bridge creativity and strategy — from shaping visual concepts to analyzing performance and optimizing
-            campaigns. The goal is to combine data-driven insights with creative storytelling to deliver solutions that strengthen brand identity
-            and drive growth.
-          </p>
-        </div>
+<!-- ABOUT -->
+<section id="about" class="about">
+  <div class="container about-grid">
+    <div class="about-illu reveal d1">
+      <img src="images/ava.JPG" alt="Illustration/portrait of Ava">
+    </div>
+    <div class="about-card reveal d2">
+      <h2>I’m Ava, currently studying Growth Marketing</h2>
+      <p>
+        With a background in communication, marketing, and business development, I translate insights into concepts that strengthen
+        brand identity and drive measurable growth. My work is fueled by curiosity for digital tools, data-driven methods, and user
+        experience — combined with a strong interest in storytelling and design.
+      </p>
+    </div>
+  </div>
+</section>
 
-        <div class="tool-box reveal" aria-label="Verktygslista">
-          <div class="tool-grid">
-            <div class="tag"><i data-feather="layout"></i> Canva</div>
-            <div class="tag"><i data-feather="figma"></i> Figma</div>
-            <div class="tag"><i data-feather="image"></i> Adobe Creative Suite</div>
-            <div class="tag"><i data-feather="bar-chart-2"></i> Google Analytics 4 (GA4)</div>
-            <div class="tag"><i data-feather="sliders"></i> Google Tag Manager</div>
-            <div class="tag"><i data-feather="target"></i> SEO & CRO tools</div>
-            <div class="tag"><i data-feather="zap"></i> AI-driven marketing tools</div>
-            <div class="tag"><i data-feather="book-open"></i> Digital ad platforms</div>
-            <div class="tag"><i data-feather="check-square"></i> Notion</div>
-            <div class="tag"><i data-feather="table"></i> Excel / Google Sheets</div>
-            <div class="tag"><i data-feather="github"></i> GitHub</div>
-            <div class="tag"><i data-feather="code"></i> Visual Studio Code</div>
-          </div>
-        </div>
-      </div>
-    </section>
+<!-- TOOLBOX -->
+<section id="toolbox" class="toolbox">
+  <div class="container">
+    <div class="tool-head reveal d1">
+      <h3>My toolbox</h3>
+      <p>I bridge creativity and strategy from visual concepts to performance analysis and optimization. Below are the tools I use most.</p>
+    </div>
 
-    <!-- Cases -->
-    <section id="cases" class="container">
-      <div class="panel reveal">
-        <h2>Previous work & cases</h2>
-        <p class="muted">A selection that highlights strategy, creative execution and data-driven results.</p>
+    <div class="tool-badges reveal d2">
+      <div class="badge"><span class="i">📐</span> Canva</div>
+      <div class="badge"><span class="i">🎨</span> Figma</div>
+      <div class="badge"><span class="i">🖌️</span> Adobe Creative Suite</div>
+      <div class="badge"><span class="i">📊</span> Google Analytics 4</div>
+      <div class="badge"><span class="i">🔗</span> Google Tag Manager</div>
+      <div class="badge"><span class="i">⚡</span> SEO & CRO</div>
+      <div class="badge"><span class="i">📢</span> Ads platforms</div>
+      <div class="badge"><span class="i">🤖</span> AI tools</div>
+      <div class="badge"><span class="i">📝</span> Notion</div>
+      <div class="badge"><span class="i">📑</span> Excel / Google Sheets</div>
+      <div class="badge"><span class="i">💻</span> GitHub</div>
+      <div class="badge"><span class="i">🖥️</span> Visual Studio Code</div>
+    </div>
+  </div>
+</section>
 
-        <div class="cases-grid">
-          <!-- CASE CARD -->
-          <article class="case reveal">
-            <img src="images/case-fotografiska.jpg" alt="Case — Fotografiska">
-            <div class="meta">
-              <strong>Case: Fotografiska — “Alla är fotografer”</strong>
-              <span class="pill">Concept • Growth</span>
-            </div>
-          </article>
+<!-- CASES -->
+<section id="cases" class="cases">
+  <div class="container">
+    <h3 class="reveal d1">Previous work & cases</h3>
+    <p class="reveal d2">A selection that highlights strategy, creative execution and data-driven results.</p>
+    <div class="case-grid">
+      <article class="case reveal d1"><img src="images/case-1.jpg" alt=""><div class="cap">CASE XXXXX</div></article>
+      <article class="case reveal d2"><img src="images/case-2.jpg" alt=""><div class="cap">CASE XXXXX</div></article>
+      <article class="case reveal d3"><img src="images/case-3.jpg" alt=""><div class="cap">CASE XXXXX</div></article>
+      <article class="case reveal d1"><img src="images/case-4.jpg" alt=""><div class="cap">CASE XXXXX</div></article>
+      <article class="case reveal d2"><img src="images/case-5.jpg" alt=""><div class="cap">CASE XXXXX</div></article>
+      <article class="case reveal d3"><img src="images/case-6.jpg" alt=""><div class="cap">CASE XXXXX</div></article>
+    </div>
+  </div>
+</section>
 
-          <article class="case reveal">
-            <img src="images/case-ecom.jpg" alt="Case — E-commerce growth">
-            <div class="meta">
-              <strong>Case: E-commerce growth sprint</strong>
-              <span class="pill">CRO • SEO</span>
-            </div>
-          </article>
+<!-- FOOTER -->
+<footer id="contact">
+  <div class="container foot-grid">
+    <div class="foot reveal d1">
+      <h4>Contact</h4>
+      <p>Send me a email: <a href="mailto:ava.urden@gmail.com">ava.urden@gmail.com</a></p>
+      <p>Add me on LinkedIn</p>
+    </div>
+    <div class="foot reveal d2">
+      <h4>CV</h4>
+      <a class="cv-link" href="files/Ava-Urden-CV.pdf" download>Download here</a>
+    </div>
+  </div>
+</footer>
 
-          <article class="case reveal">
-            <img src="images/case-social.jpg" alt="Case — Social content system">
-            <div class="meta">
-              <strong>Case: Social content system</strong>
-              <span class="pill">Content • Ops</span>
-            </div>
-          </article>
-
-          <article class="case reveal">
-            <img src="images/case-brand.jpg" alt="Case — Brand identity">
-            <div class="meta">
-              <strong>Case: Brand identity refresh</strong>
-              <span class="pill">Design</span>
-            </div>
-          </article>
-
-          <article class="case reveal">
-            <img src="images/case-ads.jpg" alt="Case — Ads & analytics">
-            <div class="meta">
-              <strong>Case: Full-funnel ads & GA4</strong>
-              <span class="pill">Media • Data</span>
-            </div>
-          </article>
-
-          <article class="case reveal">
-            <img src="images/case-ux.jpg" alt="Case — UX experiment">
-            <div class="meta">
-              <strong>Case: UX experiment & test</strong>
-              <span class="pill">UX • Research</span>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact & CV -->
-    <section id="contact" class="container">
-      <div class="contact-grid">
-        <div class="panel reveal">
-          <h2>Contact</h2>
-          <div class="contact-card">
-            <i data-feather="mail"></i>
-            <div>
-              <div><strong>Email</strong></div>
-              <a href="mailto:ava.urden@gmail.com" class="muted">ava.urden@gmail.com</a>
-            </div>
-          </div>
-          <div class="contact-card" style="margin-top:10px">
-            <i data-feather="linkedin"></i>
-            <div>
-              <div><strong>LinkedIn</strong></div>
-              <a href="https://www.linkedin.com/in/avaurden" target="_blank" class="muted" rel="noreferrer">Add me on LinkedIn</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="panel reveal">
-          <h2>CV</h2>
-          <p class="muted">Download my resume.</p>
-          <a class="btn" href="files/Ava-Urden-CV.pdf" download>
-            <i data-feather="download"></i> Download here
-          </a>
-          <div class="cv" style="margin-top:14px">
-            <i data-feather="file-text"></i>
-            <div class="muted">PDF • Updated 2025</div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="container" style="padding:40px 0 70px; color:var(--muted)">
-    © <span id="yr"></span> Ava Urdén — Portfolio
-  </footer>
-
-  <script>
-    // Replace icons
-    feather.replace();
-
-    // Year
-    document.getElementById('yr').textContent = new Date().getFullYear();
-
-    // Scroll reveal
-    const io = new IntersectionObserver(entries => {
-      entries.forEach(e=>{
-        if(e.isIntersecting){ e.target.classList.add('on'); io.unobserve(e.target); }
-      });
-    }, {threshold:.12, rootMargin:"0px 0px -40px 0px"});
-    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-
-    // Subtle 3D tilt on case cards (pointer-based)
-    const cards = document.querySelectorAll('.case');
-    cards.forEach(card=>{
-      card.addEventListener('pointermove', (e)=>{
-        const rect = card.getBoundingClientRect();
-        const x = (e.clientX - rect.left)/rect.width;
-        const y = (e.clientY - rect.top)/rect.height;
-        const rx = (y - 0.5) * -6; // tilt x
-        const ry = (x - 0.5) * 6;  // tilt y
-        card.style.transform = `perspective(900px) translateY(-4px) rotateX(${rx}deg) rotateY(${ry}deg)`;
-      });
-      card.addEventListener('pointerleave', ()=>{
-        card.style.transform = '';
-      });
+<script>
+  // Reveal on scroll
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
     });
+  }, {threshold:.12, rootMargin:"0px 0px -10% 0px"});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 
-    // Focus ring for keyboard users
-    document.addEventListener('keydown', e=>{
-      if(e.key === 'Tab'){ document.body.classList.add('show-focus') }
-    });
-  </script>
-
-  <style>
-    /* Only show outlines for keyboard users */
-    :focus{ outline:none }
-    .show-focus :focus{ outline:2px solid var(--brand); outline-offset:3px }
-  </style>
+  // Visa hero omedelbart
+  document.querySelectorAll('.hero .reveal').forEach(el=>{
+    requestAnimationFrame(()=>el.classList.add('in'));
+  });
+</script>
 </body>
 </html>
