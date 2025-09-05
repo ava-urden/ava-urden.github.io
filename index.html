@@ -5,120 +5,155 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Ava Urdén — Portfolio</title>
   <meta name="description" content="Ava Urdén — Growth Marketing Student @ Berghs School of Communication." />
-  <meta name="theme-color" content="#FFFBF5" />
-
-  <!-- Google Fonts -->
+  <meta name="theme-color" content="#FFFFFF" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <!-- Styles -->
   <link rel="stylesheet" href="style.css" />
-
-  <!-- Google Tag Manager -->
-  <script>
-    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-5JMB8KM3');
-  </script>
-  <!-- End Google Tag Manager -->
 </head>
 <body>
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5JMB8KM3" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
-
   <!-- Topbar -->
   <div class="topbar">
     <div class="container topbar-inner">
-      <div class="brand"><span class="dot" aria-hidden="true"></span><span>AVA URDÉN</span></div>
+      <div class="brand"><span>AVA URDÉN</span></div>
       <nav class="nav" id="nav">
-        <a href="#about">About me</a>
-        <a href="#toolbox">My toolbox</a>
-        <a href="#cases">Previous work & cases</a>
-        <a href="#contact">Contact & CV</a>
+        <a href="#about">About</a>
+        <a href="#toolbox">Toolbox</a>
+        <a href="#cases">Cases</a>
+        <a href="#contact">Contact</a>
       </nav>
     </div>
   </div>
 
   <!-- HERO -->
-  <header class="hero">
-    <div class="hero-inner">
-      <div class="tagline">PORTFOLIO</div>
-      <h1 class="title">AVA URDÉN</h1>
-      <div class="subtitle">Growth Marketing student — Berghs School of Communication</div>
+  <header class="section" id="home">
+    <div class="container">
+      <div class="card hero-card reveal">
+        <div class="tagline">PORTFOLIO</div>
+        <h1 id="flip-title" class="title">AVA URDÉN</h1>
+        <p class="subtitle">Growth Marketing student — Berghs School of Communication</p>
+
+        <!-- HERO CTAS -->
+        <div class="cta-buttons hero-ctas">
+          <a href="files/Ava-Urden-CV.pdf" class="btn btn-primary ripple" download>Download CV</a>
+          <a href="mailto:ava.urden@gmail.com" class="btn btn-secondary ripple">Email</a>
+          <a href="https://www.linkedin.com/in/avaurden" target="_blank" rel="noopener" class="btn btn-secondary ripple">LinkedIn</a>
+        </div>
+      </div>
     </div>
   </header>
 
-  <!-- ABOUT (beige block) -->
-  <section id="about" class="about">
-    <div class="container about-grid">
-      <div class="about-illu">
-        <img src="images/ava.JPG" alt="Portrait of Ava Urdén">
-      </div>
-      <div class="about-card">
-        <h2>I’m Ava, currently studying Growth Marketing</h2>
-        <p>
-          With a background in communication, marketing, and business development, I translate insights into concepts that strengthen
-          brand identity and drive measurable growth. My work is fueled by curiosity for digital tools, data-driven methods, and user
-          experience — combined with a strong interest in storytelling and design.
-        </p>
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="card about-combo reveal">
+        <div class="about-text">
+          <h2>About me</h2>
+          <p>
+            With a background in communication, marketing and business development, I translate insights into concepts and
+            executions that move the needle — from first tests to scale. Curious about digital tools, data-driven methods and UX,
+            with a strong interest in storytelling and design.
+          </p>
+        </div>
+        <div class="about-photo">
+          <img src="images/ava.JPG" alt="Ava Urdén" />
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- TOOLBOX (blue) -->
-  <section id="toolbox" class="toolbox">
+  <!-- TOOLBOX -->
+  <section class="section" id="toolbox">
     <div class="container">
-      <div class="tool-head">
+      <div class="section-head reveal">
         <h3>My toolbox</h3>
-        <p>From visual concepts to performance analysis and optimization. Below are the tools I use most.</p>
+        <p>Visual concepts, analytics and optimization. These are the tools I use most.</p>
       </div>
-      <div class="tool-badges">
-        <div class="badge"><span class="i">📐</span> Canva</div>
-        <div class="badge"><span class="i">🎨</span> Figma</div>
-        <div class="badge"><span class="i">🖌️</span> Adobe Creative Suite</div>
-        <div class="badge"><span class="i">📊</span> Google Analytics 4</div>
-        <div class="badge"><span class="i">🔗</span> Google Tag Manager</div>
-        <div class="badge"><span class="i">⚡</span> SEO & CRO</div>
-        <div class="badge"><span class="i">📢</span> Digital ad platforms</div>
-        <div class="badge"><span class="i">🤖</span> AI tools</div>
-        <div class="badge"><span class="i">📝</span> Notion</div>
-        <div class="badge"><span class="i">📑</span> Excel / Google Sheets</div>
-        <div class="badge"><span class="i">💻</span> GitHub</div>
-        <div class="badge"><span class="i">🖥️</span> Visual Studio Code</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CASES (light) -->
-  <section id="cases" class="cases">
-    <div class="container">
-      <h3>Previous work & cases</h3>
-      <p>A selection that highlights strategy, creative execution and data-driven results.</p>
-      <div class="case-grid">
-        <article class="case"><img src="images/case-1.jpg" alt="Case 1"><div class="cap">CASE XXXXX</div></article>
-        <article class="case"><img src="images/case-2.jpg" alt="Case 2"><div class="cap">CASE XXXXX</div></article>
-        <article class="case"><img src="images/case-3.jpg" alt="Case 3"><div class="cap">CASE XXXXX</div></article>
-        <article class="case"><img src="images/case-4.jpg" alt="Case 4"><div class="cap">CASE XXXXX</div></article>
-        <article class="case"><img src="images/case-5.jpg" alt="Case 5"><div class="cap">CASE XXXXX</div></article>
-        <article class="case"><img src="images/case-6.jpg" alt="Case 6"><div class="cap">CASE XXXXX</div></article>
+      <div class="tools reveal">
+        <button class="tool ripple">📐 Canva</button>
+        <button class="tool ripple">🎨 Figma</button>
+        <button class="tool ripple">🖌️ Adobe Creative Suite</button>
+        <button class="tool ripple">📊 Google Analytics 4</button>
+        <button class="tool ripple">🔗 Google Tag Manager</button>
+        <button class="tool ripple">⚡ SEO & CRO</button>
+        <button class="tool ripple">📢 Digital ad platforms</button>
+        <button class="tool ripple">🤖 AI tools</button>
+        <button class="tool ripple">📝 Notion</button>
+        <button class="tool ripple">📑 Excel / Google Sheets</button>
+        <button class="tool ripple">💻 GitHub</button>
+        <button class="tool ripple">🖥️ Visual Studio Code</button>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER (beige med röd CTA) -->
-  <footer class="footer_component" id="contact">
+  <!-- CASES -->
+  <section class="section" id="cases">
     <div class="container">
-      <div class="footer_top">
+      <div class="section-head reveal">
+        <h3>Previous work & cases</h3>
+        <p>A selection that highlights strategy, creative execution and data-driven results.</p>
+      </div>
+
+      <div class="cases-grid cases-grid--cards">
+        <!-- Card 1 -->
+        <article class="case card lens-card ripple reveal">
+          <figure class="lens-figure" data-zoom="2" data-lens="150">
+            <img src="images/case-1.jpg" alt="Case 1" loading="lazy">
+            <span class="lens" aria-hidden="true"></span>
+          </figure>
+          <div class="case-body">
+            <h4 class="case-title">Your next camp</h4>
+            <p class="case-desc">See our latest and best destinations across the globe with creator-led content.</p>
+            <div class="case-actions">
+              <a href="#" class="btn btn-primary ripple">Read more</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="case card lens-card ripple reveal">
+          <figure class="lens-figure" data-zoom="2" data-lens="150">
+            <img src="images/case-2.jpg" alt="Case 2" loading="lazy">
+            <span class="lens" aria-hidden="true"></span>
+          </figure>
+          <div class="case-body">
+            <h4 class="case-title">Brand launch</h4>
+            <p class="case-desc">Strategy → concept → go-live. Paid + organic with measurable lift.</p>
+            <div class="case-actions">
+              <a href="#" class="btn btn-primary ripple">Read more</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="case card lens-card ripple reveal">
+          <figure class="lens-figure" data-zoom="2" data-lens="150">
+            <img src="images/case-3.jpg" alt="Case 3" loading="lazy">
+            <span class="lens" aria-hidden="true"></span>
+          </figure>
+          <div class="case-body">
+            <h4 class="case-title">CRO sprint</h4>
+            <p class="case-desc">Rapid experimentation and UX tweaks for conversion growth.</p>
+            <div class="case-actions">
+              <a href="#" class="btn btn-primary ripple">Read more</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="section" id="contact">
+    <div class="container">
+      <div class="footer_top reveal">
         <div class="tag">Let’s create measurable growth</div>
         <h2>Work with me</h2>
         <div class="cta-buttons">
-          <a href="mailto:ava.urden@gmail.com" class="btn alt">Contact</a>
-          <a href="files/Ava-Urden-CV.pdf" class="btn" download>Download CV</a>
+          <a href="files/Ava-Urden-CV.pdf" class="btn ripple" download>Download CV</a>
+          <a href="mailto:ava.urden@gmail.com" class="btn ripple">Email</a>
+          <a href="https://www.linkedin.com/in/avaurden" target="_blank" rel="noopener" class="btn ripple">LinkedIn</a>
         </div>
       </div>
-
-      <div class="footer_bottom">
+      <div class="footer_bottom reveal">
         <div class="footer_credit-text">© 2025 Ava Urdén — Stockholm, Sweden</div>
         <div class="footer_links">
           <a href="mailto:ava.urden@gmail.com">Email</a>
@@ -128,22 +163,103 @@
     </div>
   </footer>
 
+  <!-- Scripts -->
   <script>
-    // Aktivera meny-länk vid scroll
-    const sections = [...document.querySelectorAll('section, header.hero, footer#contact')];
+    // Reveal on scroll
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }});
+    }, {threshold:.15});
+    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+    // Ripple click
+    document.addEventListener('click', (e)=>{
+      const target = e.target.closest('.ripple');
+      if(!target) return;
+      const r = document.createElement('span');
+      const rect = target.getBoundingClientRect();
+      const size = Math.max(rect.width, rect.height);
+      r.style.width = r.style.height = size + 'px';
+      r.style.left = (e.clientX - rect.left - size/2) + 'px';
+      r.style.top  = (e.clientY - rect.top  - size/2) + 'px';
+      r.className = 'r';
+      target.appendChild(r);
+      setTimeout(()=>r.remove(), 600);
+    });
+
+    // Active nav
+    const sections = [...document.querySelectorAll('.section')];
     const navLinks = [...document.querySelectorAll('.nav a')];
     function setActive(){
-      let idx = -1, fromTop = window.scrollY + 120;
-      sections.forEach((s,i)=>{ if (s.offsetTop <= fromTop) idx = i; });
+      let idx=-1, top=window.scrollY + 140;
+      sections.forEach((s,i)=>{ if(s.offsetTop <= top) idx = i; });
       navLinks.forEach(a=>a.classList.remove('active'));
-      if(idx > 0){
-        const id = sections[idx].id;
-        const link = document.querySelector(`.nav a[href="#${id}"]`);
-        if(link) link.classList.add('active');
-      }
+      const id = sections[idx]?.id;
+      const link = document.querySelector(`.nav a[href="#${id}"]`);
+      if(link) link.classList.add('active');
     }
-    window.addEventListener('scroll', setActive, {passive:true});
-    window.addEventListener('load', setActive);
+    addEventListener('scroll', setActive);
+    addEventListener('load', setActive);
+
+    // FlipText for "AVA URDÉN"
+    (function () {
+      const el = document.getElementById('flip-title');
+      if (!el) return;
+      const txt = el.textContent.trim();
+      el.textContent = '';
+      [...txt].forEach((ch, i) => {
+        const s = document.createElement('span');
+        s.className = 'char';
+        s.textContent = ch;
+        s.style.animationDelay = (i * 0.06) + 's';
+        el.appendChild(s);
+      });
+      const replay = () => {
+        el.querySelectorAll('.char').forEach((c,i)=>{
+          c.style.animation='none'; void c.offsetWidth;
+          c.style.animation=`flipIn .6s both`;
+          c.style.animationDelay=(i*0.03)+'s';
+        });
+      };
+      el.addEventListener('mouseenter', replay);
+      el.addEventListener('click', replay);
+    })();
+
+    // Lens effect for case images
+    (function(){
+      const figs = document.querySelectorAll('.lens-figure');
+      figs.forEach(fig=>{
+        const img = fig.querySelector('img');
+        const lens = fig.querySelector('.lens');
+        const zoom = parseFloat(fig.dataset.zoom||'2');
+        const size = parseInt(fig.dataset.lens||'150',10);
+        lens.style.width=lens.style.height=size+'px';
+
+        function setBg(){
+          const src = img.currentSrc||img.src;
+          lens.style.backgroundImage=`url('${src}')`;
+          lens.style.backgroundSize=`${img.naturalWidth*zoom}px ${img.naturalHeight*zoom}px`;
+        }
+        if(img.complete) setBg(); else img.addEventListener('load', setBg);
+
+        function move(e){
+          const r=fig.getBoundingClientRect();
+          const x=(e.touches?e.touches[0].clientX:e.clientX)-r.left;
+          const y=(e.touches?e.touches[0].clientY:e.clientY)-r.top;
+          const lx=Math.max(0,Math.min(x-size/2,r.width-size));
+          const ly=Math.max(0,Math.min(y-size/2,r.height-size));
+          lens.style.left=lx+'px'; lens.style.top=ly+'px';
+          const bgX=((x/r.width)*img.naturalWidth*zoom-size/2)*-1;
+          const bgY=((y/r.height)*img.naturalHeight*zoom-size/2)*-1;
+          lens.style.backgroundPosition=`${bgX}px ${bgY}px`;
+        }
+        fig.addEventListener('mousemove',move);
+        fig.addEventListener('touchmove',move,{passive:true});
+        fig.addEventListener('mouseleave',()=>lens.style.opacity='0');
+        fig.addEventListener('mouseenter',()=>lens.style.opacity='1');
+        fig.addEventListener('touchstart',()=>lens.style.opacity='1',{passive:true});
+        fig.addEventListener('touchend',()=>lens.style.opacity='0');
+      });
+    })();
   </script>
 </body>
 </html>
