@@ -1,28 +1,24 @@
 /* ======================
-   Ava Urdén — Portfolio
+   Ava Urdén — Portfolio (Beige + Blue/Red)
    ====================== */
 
 /* --------- Theme tokens --------- */
 :root{
-  /* Base */
-  --ink:#111; --ink-inv:#f7f7f7; --muted:#7f8489;
-  --bg:#ffffff; --bg-soft:#f8f8f8; --bg-deep:#0f1011;
+  /* Base (beige/vit) */
+  --ink:#121212; --ink-inv:#ffffff; --muted:#6f6f6f;
+  --bg:#FFFBF5;          /* beige-vitt bas */
+  --bg-2:#F7F1E9;        /* svagare beige block */
+  --line:#e7e2da;
 
-  /* Lines & shadows */
-  --line:#e9e9e9;
+  /* Palette från referens (blått/rött) */
+  --red:#E74C2C;         /* varm röd */
+  --red-700:#D53C1E;
+  --blue-100:#EEF5FF;    /* mjuk blå bakgrund */
+  --blue-300:#CFE3FF;    /* chip/hover */
+
   --shadow-sm:0 6px 16px rgba(0,0,0,.06);
   --shadow-md:0 12px 30px rgba(0,0,0,.10);
-  --shadow-lg:0 22px 60px rgba(0,0,0,.14);
 
-  /* Palette (inspired) */
-  --terracotta:#E85A3C;
-  --terracotta-2:#F07A58;
-  --powder:#9FA9D6;
-  --sand:#EAD8C8;
-
-  --grad-terracotta: linear-gradient(90deg, var(--terracotta), var(--terracotta-2));
-
-  /* Radius */
   --r1:14px; --r2:22px;
 }
 
@@ -40,9 +36,9 @@ img{display:block; width:100%; height:auto}
 .container{width:min(1160px,92%); margin-inline:auto}
 section{scroll-margin-top:82px}
 
-/* Keyboard focus */
+/* Focus */
 a:focus-visible, button:focus-visible{
-  outline:2px solid color-mix(in oklab, var(--terracotta) 60%, white 40%);
+  outline:2px solid color-mix(in oklab, var(--red) 70%, white 30%);
   outline-offset:3px; border-radius:10px;
 }
 
@@ -54,7 +50,7 @@ a:focus-visible, button:focus-visible{
 }
 .topbar-inner{display:flex; align-items:center; justify-content:space-between; gap:16px; padding:14px 0}
 .brand{display:flex; align-items:center; gap:10px; color:#222}
-.brand .dot{width:10px;height:10px;border-radius:50%; background:var(--terracotta); box-shadow:0 0 0 4px rgba(232,90,60,.20)}
+.brand .dot{width:10px;height:10px;border-radius:50%; background:var(--red); box-shadow:0 0 0 4px rgba(231,76,44,.18)}
 .brand span{font-weight:300; letter-spacing:.14em; text-transform:uppercase; font-size:13px}
 .nav{display:flex; gap:8px; flex-wrap:wrap}
 .nav a{
@@ -63,35 +59,35 @@ a:focus-visible, button:focus-visible{
   transition:transform .15s ease, box-shadow .15s ease, background .15s ease, border .15s ease;
 }
 .nav a:hover{ transform:translateY(-2px); background:#fff; box-shadow:var(--shadow-md) }
-.nav a.active{ background:var(--terracotta); border-color:transparent }
+.nav a.active{ background:var(--blue-300); border-color:transparent }
 
 /* --------- Hero --------- */
 .hero{
   min-height:64vh; display:grid; place-items:center;
   background:
-    radial-gradient(60% 60% at 50% 8%, #ffffff 0%, #fafafa 60%, transparent 61%),
-    linear-gradient(180deg, #ffffff 0%, #f5f5f5 100%);
+    radial-gradient(60% 60% at 50% 8%, #ffffff 0%, #faf8f3 60%, transparent 61%),
+    linear-gradient(180deg, #ffffff 0%, var(--bg) 100%);
 }
 .hero-inner{width:min(1100px,92%); text-align:center; padding:80px 0}
 .tagline{font-size:12px; color:var(--muted); letter-spacing:.28em; text-transform:uppercase}
 h1.title{
   font-size:clamp(62px,10vw,120px); line-height:1.02; margin:10px 0 6px;
-  font-weight:200; letter-spacing:.02em; color:var(--terracotta);
+  font-weight:200; letter-spacing:.02em; color:var(--red);
 }
 .subtitle{font-size:clamp(17px,2vw,20px); color:#3a3a3a; font-weight:500; letter-spacing:.01em}
 
-/* --------- About (sand) --------- */
-.about{ background:var(--sand); color:#111; padding:96px 0 }
+/* --------- About (beige block) --------- */
+.about{ background:var(--bg-2); color:#111; padding:96px 0 }
 .about-grid{display:grid; grid-template-columns:5fr 7fr; gap:36px; align-items:stretch}
 @media (max-width:900px){ .about-grid{grid-template-columns:1fr} }
-.about-illu{border-radius:14px; border:1px solid rgba(0,0,0,.06); overflow:hidden; background:#ddd; min-height:420px; box-shadow:0 6px 18px rgba(0,0,0,.06)}
+.about-illu{border-radius:14px; border:1px solid var(--line); overflow:hidden; background:#ddd; min-height:420px; box-shadow:0 6px 18px rgba(0,0,0,.06)}
 .about-illu img{width:100%; height:100%; object-fit:cover; aspect-ratio:4/3}
-.about-card{border-radius:14px; border:1px solid rgba(0,0,0,.06); background:linear-gradient(180deg,#fff,#fbfbfb); padding:32px; display:flex; flex-direction:column; justify-content:center; box-shadow:0 6px 24px rgba(0,0,0,.05)}
+.about-card{border-radius:14px; border:1px solid var(--line); background:#fff; padding:32px; display:flex; flex-direction:column; justify-content:center; box-shadow:0 6px 24px rgba(0,0,0,.05)}
 .about h2{font-size:18px; text-transform:uppercase; letter-spacing:.18em; margin:0 0 12px; font-weight:800}
 .about p{margin:0; line-height:1.78; font-weight:400; font-size:clamp(15.5px,1.4vw,17px)}
 
-/* --------- Toolbox (puderblå ton) --------- */
-.toolbox{ background:color-mix(in oklab, var(--powder) 18%, white 82%); padding:110px 0 }
+/* --------- Toolbox (ljus blå) --------- */
+.toolbox{ background:var(--blue-100); padding:110px 0 }
 .tool-head{max-width:660px; margin-bottom:18px}
 .tool-head h3{font-size:18px; text-transform:uppercase; letter-spacing:.18em; font-weight:800; margin:0 0 16px}
 .tool-head p{color:#333; line-height:1.8; font-size:clamp(16px,1.6vw,18px)}
@@ -100,44 +96,51 @@ h1.title{
 @media (max-width:560px){ .tool-badges{ grid-template-columns:1fr } }
 .badge{
   display:flex; align-items:center; gap:12px; padding:13px 14px; border-radius:12px;
-  border:1px solid rgba(0,0,0,.06); background:linear-gradient(180deg,#ffffff,#f6f6f6);
+  border:1px solid var(--line); background:linear-gradient(180deg,#ffffff,#f7f7f7);
   box-shadow:0 4px 10px rgba(0,0,0,.04); font-weight:700; letter-spacing:.02em; font-size:15.5px; color:#1f1f1f;
   transition:transform .15s ease, box-shadow .15s ease, border-color .15s ease;
 }
 .badge:hover{ transform:translateY(-2px); box-shadow:0 12px 22px rgba(0,0,0,.08); border-color:#dcdcdc }
 .i{ width:28px; height:28px; display:grid; place-items:center; border-radius:8px; background:#fff; border:1px solid #e9e9e9 }
 
-/* --------- Cases (dark) --------- */
-.cases{ background:linear-gradient(180deg, var(--bg-deep), #0b0c0c); color:#f1f1f1; padding:104px 0 }
+/* --------- Cases (ljus, med röda etiketter) --------- */
+.cases{ background:#fff; color:#222; padding:104px 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line) }
 .cases h3{font-size:18px; text-transform:uppercase; letter-spacing:.18em; font-weight:800; margin:0 0 10px}
-.cases p{max-width:900px; line-height:1.78; color:#e9e9e9; font-size:clamp(15.5px,1.5vw,17px)}
+.cases p{max-width:900px; line-height:1.78; color:#444; font-size:clamp(15.5px,1.5vw,17px)}
 .case-grid{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:24px; margin-top:22px}
 @media (max-width:960px){ .case-grid{grid-template-columns:repeat(2,minmax(0,1fr))} }
 @media (max-width:600px){ .case-grid{grid-template-columns:1fr} }
 .case{
-  border:1px solid rgba(255,255,255,.16); border-radius:14px; overflow:hidden;
-  background:linear-gradient(180deg,#fcfcfc 0%, #fcfcfc 62%, #0f0f0f 62%, #0f0f0f 100%);
-  transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease, filter .18s ease;
+  border:1px solid var(--line); border-radius:14px; overflow:hidden; background:#fff;
+  transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease;
 }
-.case:hover{transform:translateY(-6px); box-shadow:0 22px 46px rgba(0,0,0,.55); border-color:#ffffff40; filter:saturate(1.02)}
+.case:hover{transform:translateY(-6px); box-shadow:0 18px 40px rgba(0,0,0,.12); border-color:#ddd}
 .case img{aspect-ratio:16/11; object-fit:cover}
-.cap{padding:10px 12px; font-weight:800; letter-spacing:.14em; text-transform:uppercase; font-size:12.5px; color:#fff; background:#101214}
+.cap{padding:10px 12px; font-weight:800; letter-spacing:.14em; text-transform:uppercase; font-size:12.5px; color:#fff; background:var(--red)}
 
-/* --------- Footer (terracotta block) --------- */
-footer.footer_component{ background:var(--grad-terracotta); color:#fff; padding:80px 0 }
+/* --------- Buttons --------- */
+.button, .btn{
+  display:inline-flex; align-items:center; justify-content:center; gap:8px;
+  padding:12px 18px; border-radius:12px; font-weight:800; letter-spacing:.06em;
+  text-transform:uppercase; font-size:12.5px; transition:transform .15s ease, box-shadow .15s ease, background .15s ease, color .15s ease;
+}
+.button{ border:1px solid var(--line); background:#fff; color:#111; box-shadow:var(--shadow-sm) }
+.button:hover{ transform:translateY(-2px); box-shadow:var(--shadow-md) }
+
+.btn.alt{ background:var(--red); color:#fff; border:1px solid var(--red-700) }
+.btn.alt:hover{ transform:translateY(-2px); box-shadow:var(--shadow-md); background:var(--red-700) }
+
+/* --------- Footer (beige med röd CTA) --------- */
+footer.footer_component{ background:var(--bg-2); color:#111; padding:80px 0 }
 .footer_top{ text-align:center; }
-.footer_top .tag{font-size:12px; letter-spacing:.24em; text-transform:uppercase; color:rgba(255,255,255,.8)}
+.footer_top .tag{font-size:12px; letter-spacing:.24em; text-transform:uppercase; color:#666}
 .footer_top h2{ margin:8px 0 0; font-weight:300; font-size:clamp(36px,6vw,64px); line-height:1.06 }
 .cta-buttons{display:flex; justify-content:center; gap:12px; margin-top:18px}
-.btn{display:inline-flex; align-items:center; justify-content:center; gap:8px; padding:12px 18px; border-radius:12px; font-weight:800; letter-spacing:.06em; text-transform:uppercase; font-size:12.5px}
-.footer_component .btn{ background:transparent; border:1px solid rgba(255,255,255,.55); color:#fff; box-shadow:var(--shadow-sm) }
-.footer_component .btn.alt{ background:#fff; color:#111; border-color:transparent }
-.btn:hover{ transform:translateY(-2px); box-shadow:var(--shadow-md) }
 
 .footer_bottom{
   display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px;
-  margin-top:28px; /* ingen border-top */
+  margin-top:28px;
 }
-.footer_credit-text{font-size:14px; color:rgba(255,255,255,.85)}
+.footer_credit-text{font-size:14px; color:#5b5f63}
 .footer_links{display:flex; gap:16px; flex-wrap:wrap}
-.footer_links a{font-size:14px; color:#fff; text-decoration:underline}
+.footer_links a{font-size:14px; color:#222; text-decoration:underline}
