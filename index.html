@@ -4,11 +4,12 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Ava Urdén — Portfolio</title>
-  <meta name="description" content="Ava Urdén — Growth Marketing Student @ Berghs School of Communication." />
-  <meta name="theme-color" content="#FFFBF5" />
+  <meta name="description" content="Ava Urdén — Growth marketing & creative strategy. Portfolio med case, verktyg och kontakt." />
+  <meta name="theme-color" content="#111111" />
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
   <!-- Styles -->
   <link rel="stylesheet" href="style.css" />
 
@@ -18,132 +19,175 @@
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-5JMB8KM3');
+    })(window,document,'script','dataLayer','GTM-5JMB8KM3'); // <-- byt ID vid behov
   </script>
   <!-- End Google Tag Manager -->
 </head>
 <body>
+
   <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5JMB8KM3" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5JMB8KM3"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
   <!-- End Google Tag Manager (noscript) -->
 
-  <!-- Topbar -->
-  <div class="topbar">
-    <div class="container topbar-inner">
-      <div class="brand"><span class="dot" aria-hidden="true"></span><span>AVA URDÉN</span></div>
-      <nav class="nav" id="nav">
-        <a href="#about">About me</a>
-        <a href="#toolbox">My toolbox</a>
-        <a href="#cases">Previous work & cases</a>
-        <a href="#contact">Contact & CV</a>
-      </nav>
-    </div>
-  </div>
+  <!-- Floating links -->
+  <nav class="nav">
+    <a href="#work">Work</a>
+    <a href="#about">About</a>
+    <a href="#tools">Toolbox</a>
+    <a href="#contact" class="pill">Contact</a>
+  </nav>
 
-  <!-- HERO -->
-  <header class="hero">
+  <!-- Hero -->
+  <header class="hero" data-parallax>
+    <div class="hero-media" role="img" aria-label="Hero image"></div>
+    <div class="hero-overlay"></div>
     <div class="hero-inner">
-      <div class="tagline">PORTFOLIO</div>
-      <h1 class="title">AVA URDÉN</h1>
-      <div class="subtitle">Growth Marketing student — Berghs School of Communication</div>
+      <h1 class="brand">
+        <span class="brand-line">Ava Urdén</span>
+        <span class="brand-sub">Growth Marketing & Creative Strategy</span>
+      </h1>
+
+      <p class="intro in-view">
+        I bridge strategy & creativity — turning insights into concepts that strengthen brand identity and drive measurable growth.
+      </p>
+
+      <div class="cta-row">
+        <a class="btn" href="#work">See projects</a>
+        <div class="socials">
+          <a aria-label="LinkedIn" href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+          <a aria-label="GitHub" href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+          <a aria-label="Instagram" href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a>
+          <a aria-label="Mail" href="mailto:ava@example.com">Email</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Subtle marquee background text -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>GROWTH MARKETING • BRAND STRATEGY • UX • DATA •</span>
+        <span>GROWTH MARKETING • BRAND STRATEGY • UX • DATA •</span>
+        <span>GROWTH MARKETING • BRAND STRATEGY • UX • DATA •</span>
+      </div>
     </div>
   </header>
 
-  <!-- ABOUT (beige block) -->
-  <section id="about" class="about">
-    <div class="container about-grid">
-      <div class="about-illu">
-        <img src="images/ava.JPG" alt="Portrait of Ava Urdén">
-      </div>
-      <div class="about-card">
-        <h2>I’m Ava, currently studying Growth Marketing</h2>
+  <!-- Work -->
+  <section id="work" class="section">
+    <div class="section-head">
+      <h2>Selected work</h2>
+      <p>Cases från strategi till koncept och design. Klicka för att öppna i helskärm.</p>
+    </div>
+
+    <div class="grid">
+      <!-- Kort 1 -->
+      <article class="card reveal" data-tilt>
+        <button class="card-media" data-lightbox="assets/project-1.jpg" aria-label="Öppna projektbild 1">
+          <img loading="lazy" src="assets/project-1.jpg" alt="Case 1 – mockup" />
+        </button>
+        <div class="card-body">
+          <h3>Alla är fotografer</h3>
+          <p>Koncept och aktivering som för samman digitalt scrollbeteende med fysiskt besök.</p>
+          <a class="link" href="#" target="_blank" rel="noopener">Öppna case</a>
+        </div>
+      </article>
+
+      <!-- Kort 2 -->
+      <article class="card reveal" data-tilt>
+        <button class="card-media" data-lightbox="assets/project-2.jpg" aria-label="Öppna projektbild 2">
+          <img loading="lazy" src="assets/project-2.jpg" alt="Case 2 – mockup" />
+        </button>
+        <div class="card-body">
+          <h3>Brand growth playbook</h3>
+          <p>Ramverk, KPI:er och experimentplan för mätbar tillväxt.</p>
+          <a class="link" href="#" target="_blank" rel="noopener">Öppna case</a>
+        </div>
+      </article>
+
+      <!-- Kort 3 -->
+      <article class="card reveal" data-tilt>
+        <button class="card-media" data-lightbox="assets/project-3.jpg" aria-label="Öppna projektbild 3">
+          <img loading="lazy" src="assets/project-3.jpg" alt="Case 3 – mockup" />
+        </button>
+        <div class="card-body">
+          <h3>UX + CRO sprint</h3>
+          <p>Snabb förbättring av flöde och konvertering genom hypotesdriven testning.</p>
+          <a class="link" href="#" target="_blank" rel="noopener">Öppna case</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section alt">
+    <div class="section-head">
+      <h2>About</h2>
+      <p>Strategi, koncept, design — med ett öga på varumärket och ett på datan.</p>
+    </div>
+
+    <div class="about">
+      <div class="about-text reveal">
         <p>
-          With a background in communication, marketing, and business development, I translate insights into concepts that strengthen
-          brand identity and drive measurable growth. My work is fueled by curiosity for digital tools, data-driven methods, and user
-          experience — combined with a strong interest in storytelling and design.
+          Jag trivs där strategi möter kreativitet. Arbetar gärna hypotesdrivet, med SPIN och Double Diamond som bas,
+          och rör mig mellan research, koncept och visuellt uttryck för att skapa effekt.
+        </p>
+        <p>
+          Fokus: varumärkespositionering, content & aktivering, UX/CRO och mätning i GA4/GTM.
         </p>
       </div>
-    </div>
-  </section>
-
-  <!-- TOOLBOX (blue) -->
-  <section id="toolbox" class="toolbox">
-    <div class="container">
-      <div class="tool-head">
-        <h3>My toolbox</h3>
-        <p>From visual concepts to performance analysis and optimization. Below are the tools I use most.</p>
-      </div>
-      <div class="tool-badges">
-        <div class="badge"><span class="i">📐</span> Canva</div>
-        <div class="badge"><span class="i">🎨</span> Figma</div>
-        <div class="badge"><span class="i">🖌️</span> Adobe Creative Suite</div>
-        <div class="badge"><span class="i">📊</span> Google Analytics 4</div>
-        <div class="badge"><span class="i">🔗</span> Google Tag Manager</div>
-        <div class="badge"><span class="i">⚡</span> SEO & CRO</div>
-        <div class="badge"><span class="i">📢</span> Digital ad platforms</div>
-        <div class="badge"><span class="i">🤖</span> AI tools</div>
-        <div class="badge"><span class="i">📝</span> Notion</div>
-        <div class="badge"><span class="i">📑</span> Excel / Google Sheets</div>
-        <div class="badge"><span class="i">💻</span> GitHub</div>
-        <div class="badge"><span class="i">🖥️</span> Visual Studio Code</div>
+      <div class="about-media reveal">
+        <img src="assets/hero.jpg" alt="Ava — porträtt/arbetsmiljö" loading="lazy" />
       </div>
     </div>
   </section>
 
-  <!-- CASES (light) -->
-  <section id="cases" class="cases">
-    <div class="container">
-      <h3>Previous work & cases</h3>
-      <p>A selection that highlights strategy, creative execution and data-driven results.</p>
-      <div class="case-grid">
-        <article class="case"><img src="images/case-1.jpg" alt="Case 1"><div class="cap">CASE XXXXX</div></article>
-        <article class="case"><img src="images/case-2.jpg" alt="Case 2"><div class="cap">CASE XXXXX</div></article>
-        <article class="case"><img src="images/case-3.jpg" alt="Case 3"><div class="cap">CASE XXXXX</div></article>
-        <article class="case"><img src="images/case-4.jpg" alt="Case 4"><div class="cap">CASE XXXXX</div></article>
-        <article class="case"><img src="images/case-5.jpg" alt="Case 5"><div class="cap">CASE XXXXX</div></article>
-        <article class="case"><img src="images/case-6.jpg" alt="Case 6"><div class="cap">CASE XXXXX</div></article>
+  <!-- Toolbox -->
+  <section id="tools" class="section">
+    <div class="section-head">
+      <h2>Toolbox</h2>
+      <p>Verktyg jag använder ofta i arbete och studier.</p>
+    </div>
+
+    <ul class="tools reveal">
+      <li>GA4 & Google Tag Manager</li>
+      <li>SEO & CRO-verktyg</li>
+      <li>Figma & Adobe Creative Suite</li>
+      <li>Notion & Excel</li>
+      <li>GitHub & VS Code</li>
+      <li>AI-drivna marknadsföringsverktyg</li>
+    </ul>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section alt">
+    <div class="section-head">
+      <h2>Let’s collaborate</h2>
+      <p>Öppen för frilans/exjobb/briefs. Hör gärna av dig!</p>
+    </div>
+
+    <div class="contact reveal">
+      <a class="btn" href="mailto:ava@example.com">Maila mig</a>
+      <div class="socials">
+        <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER (beige med röd CTA) -->
-  <footer class="footer_component" id="contact">
-    <div class="container">
-      <div class="footer_top">
-        <div class="tag">Let’s create measurable growth</div>
-        <h2>Work with me</h2>
-        <div class="cta-buttons">
-          <a href="mailto:ava.urden@gmail.com" class="btn alt">Contact</a>
-          <a href="files/Ava-Urden-CV.pdf" class="btn" download>Download CV</a>
-        </div>
-      </div>
+  <!-- Lightbox -->
+  <div class="lightbox" data-lightbox-modal aria-hidden="true">
+    <button class="lightbox-close" aria-label="Stäng bild">&times;</button>
+    <img class="lightbox-img" alt="Förstora bild" />
+  </div>
 
-      <div class="footer_bottom">
-        <div class="footer_credit-text">© 2025 Ava Urdén — Stockholm, Sweden</div>
-        <div class="footer_links">
-          <a href="mailto:ava.urden@gmail.com">Email</a>
-          <a href="https://www.linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
-        </div>
-      </div>
-    </div>
+  <footer class="footer">
+    <span>© <span id="year"></span> Ava Urdén</span>
   </footer>
 
-  <script>
-    // Aktivera meny-länk vid scroll
-    const sections = [...document.querySelectorAll('section, header.hero, footer#contact')];
-    const navLinks = [...document.querySelectorAll('.nav a')];
-    function setActive(){
-      let idx = -1, fromTop = window.scrollY + 120;
-      sections.forEach((s,i)=>{ if (s.offsetTop <= fromTop) idx = i; });
-      navLinks.forEach(a=>a.classList.remove('active'));
-      if(idx > 0){
-        const id = sections[idx].id;
-        const link = document.querySelector(`.nav a[href="#${id}"]`);
-        if(link) link.classList.add('active');
-      }
-    }
-    window.addEventListener('scroll', setActive, {passive:true});
-    window.addEventListener('load', setActive);
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
