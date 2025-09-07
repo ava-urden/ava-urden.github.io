@@ -3,35 +3,63 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Exercises – index</title>
+  <title>01a – dataLayer</title>
+
+  <script>window.dataLayer = window.dataLayer || [];</script>
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-5JMB8KM3');</script>
+
   <style>
-    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial; padding: 32px; line-height: 1.5; }
-    h1 { margin-bottom: 16px; }
-    ul { margin: 0; padding-left: 18px; }
-    li { margin: 8px 0; }
-    a { text-decoration: none; border-bottom: 1px solid; }
+    body { font-family: system-ui, Inter, Arial, sans-serif; padding: 24px; line-height: 1.5; }
+    button { padding: 10px 14px; border:1px solid #ddd; border-radius:10px; background:#fafafa; cursor:pointer; margin:6px 8px 6px 0; }
+    code { background:#f6f6f6; padding:2px 6px; border-radius:6px; }
   </style>
 </head>
 <body>
-  <h1>Exercises</h1>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5JMB8KM3"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-  <h2>01a – datalayer</h2>
+  <h1>01a – dataLayer</h1>
+
+  <p>Klicka knapparna och testa i Console:</p>
   <ul>
-    <li><a href="/exercises/01a-datalayer/">index.html</a></li>
+    <li><code>dataLayer</code></li>
+    <li><code>dataLayer.find(i => i.event === 'purchase').ecommerce.value</code></li>
+    <li><code>findDataLayerEvent('pageView').page.title</code></li>
+    <li><code>findDataLayerEvent('custom_event').user.id</code></li>
   </ul>
 
-  <h2>01b – gtm + js</h2>
-  <ul>
-    <li><a href="/exercises/01b-gtm-js/first-event.html">first-event.html</a></li>
-  </ul>
+  <div>
+    <button id="btnPage">Push: pageView</button>
+    <button id="btnPurchase">Push: purchase</button>
+    <button id="btnCustom">Push: custom_event</button>
+  </div>
 
-  <h2>01c – query params</h2>
-  <ul>
-    <li><a href="/exercises/01c-queryparams/exercise1-change-h1.html">exercise1-change-h1.html</a></li>
-    <li><a href="/exercises/01c-queryparams/exercise2-multi-params.html">exercise2-multi-params.html</a></li>
-    <li><a href="/exercises/01c-queryparams/exercise3-form.html">exercise3-form.html</a></li>
-    <li><a href="/exercises/01c-queryparams/exercise4-theme.html">exercise4-theme.html</a></li>
-    <li><a href="/exercises/01c-queryparams/exercise5-dynamic-content.html">exercise5-dynamic-content.html</a></li>
-  </ul>
+  <script src="./helper.js"></script>
+  <script>
+    document.getElementById('btnPage').addEventListener('click', () => {
+      window.dataLayer.push({
+        event: 'pageView',
+        page: { title: 'Övningssida', location: location.href }
+      });
+    });
+
+    document.getElementById('btnPurchase').addEventListener('click', () => {
+      window.dataLayer.push({
+        event: 'purchase',
+        ecommerce: { value: 599, tax: 120, transaction_id: 'T-12345' }
+      });
+    });
+
+    document.getElementById('btnCustom').addEventListener('click', () => {
+      window.dataLayer.push({
+        event: 'custom_event',
+        user: { id: 'abc123', role: 'student' }
+      });
+    });
+  </script>
 </body>
 </html>
