@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8" />
+  <title>Exercise 4: Page Customization</title>
+
+  <script>window.dataLayer = window.dataLayer || [];</script>
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+    var f=d.getElementsByTagName(s)[0], j=d.createElement(s), dl=l!='dataLayer'?'&l='+l:'';
+    j.async=true; j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+    f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5JMB8KM3');
+  </script>
+  <!-- End Google Tag Manager -->
+
+  <style>
+    body { margin: 24px; font-family: system-ui, Inter, Arial, sans-serif; }
+    .dark-theme { background-color: #333; color: #fff; }
+    .light-theme { background-color: #fff; color: #333; }
+    button { padding: 10px 14px; border:1px solid #ddd; border-radius:10px; background:#fafafa; cursor:pointer; }
+  </style>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const theme = (urlParams.get('theme') || 'light').toLowerCase();
+      const userName = urlParams.get('user') || 'Guest';
+
+      document.body.className = (theme === 'dark' ? 'dark-theme' : 'light-theme');
+      document.getElementById('welcome-heading').innerText = `Welcome, ${userName}!`;
+
+      window.dataLayer.push({ event: 'page_customization', theme: theme, user_name: userName });
+      console.log('DL:', window.dataLayer);
+
+      document.getElementById('theme-toggle').addEventListener('click', () => {
+        const newTheme = theme === 'light' ? 'dark' : 'light';
+        const newUrl = window.location.pathname + `?theme=${newTheme}&user=${encodeURIComponent(userName)}`;
+        window.location.href = newUrl;
+      });
+    });
+  </script>
+</head>
+<body class="light-theme">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5JMB8KM3"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <h1 id="welcome-heading">Welcome!</h1>
+  <button id="theme-toggle">Toggle Theme</button>
+  <p>Testa: <code>?theme=dark&user=Ava</code></p>
+</body>
+</html>
