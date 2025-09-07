@@ -57,6 +57,7 @@
         <p class="subtitle">Growth Marketing student — Berghs School of Communication</p>
 
         <div class="cta-buttons hero-ctas">
+          <!-- HERO CV-knapp -->
           <a id="cv-download" href="files/ava-urden-cv.pdf" class="btn btn-primary ripple" download>Download CV</a>
           <a href="mailto:ava.urden@gmail.com" class="btn btn-secondary ripple">Email</a>
           <a href="https://www.linkedin.com/in/avaurden" target="_blank" rel="noopener" class="btn btn-secondary ripple">LinkedIn</a>
@@ -84,7 +85,7 @@
     </div>
   </section>
 
-  <!-- TOOLBOX (accent-block) -->
+  <!-- TOOLBOX -->
   <section class="section section--accent" id="toolbox">
     <div class="container">
       <div class="section-head reveal">
@@ -162,7 +163,7 @@
     </div>
   </section>
 
-  <!-- CONTACT (egen sektion) -->
+  <!-- CONTACT -->
   <section class="section section--beige" id="contact">
     <div class="container">
       <div class="card contact-card reveal">
@@ -179,7 +180,8 @@
           </div>
           <div>
             <div class="contact-label">CV</div>
-            <a class="contact-link" href="files/ava-urden-cv.pdf" download>Download CV (PDF)</a>
+            <!-- Contact CV-länk med data-track -->
+            <a class="contact-link" href="files/ava-urden-cv.pdf" download data-track="cv">Download CV (PDF)</a>
           </div>
         </div>
       </div>
@@ -269,15 +271,46 @@
       });
     })();
 
-    // dataLayer push för CV-nedladdning
-    document.getElementById('cv-download')?.addEventListener('click', function() {
-      window.dataLayer.push({
-        event: 'download_cv',
-        file: 'ava-urden-cv.pdf',
-        page: window.location.pathname,
-        timestamp: new Date().toISOString()
+    // ===== Track all PDF downloads (incl. CV) =====
+    (function () {
+      window.dataLayer = window.dataLayer || [];
+
+      function pushDownloadEvent(anchor) {
+        try {
+          const url = new URL(anchor.href, window.location.origin);
+          window.dataLayer.push({
+            event: 'download_cv',
+            file: url.pathname.split('/').pop(),
+            file_path: url.pathname,
+            file_ext: (url.pathname.split('.').pop() || '').toLowerCase(),
+            link_text: anchor.textContent.trim(),
+            page: window.location.pathname,
+            timestamp: new Date().toISOString()
+          });
+          console.log('[GTM] download_cv pushed:', {
+            file: url.pathname.split('/').pop(),
+            file_path: url.pathname,
+            page: window.location.pathname
+          });
+        } catch (e) {
+          console.warn('download_cv push failed:', e);
+        }
+      }
+
+      const pdfLinks = Array.from(document.querySelectorAll('a[download]'))
+        .filter(a => (a.getAttribute('href') || '').toLowerCase().endsWith('.pdf'));
+
+      const explicitCvLinks = Array.from(document.querySelectorAll('a[data-track="cv"]'));
+
+      const allCvLinks = Array.from(new Set([...pdfLinks, ...explicitCvLinks]));
+
+      allCvLinks.forEach(a => {
+        a.addEventListener('click', function () { pushDownloadEvent(a); });
+        a.addEventListener('keydown', function (e) {
+          if (e.key === 'Enter') pushDownloadEvent(a);
+        });
       });
-    });
+    })();
   </script>
 </body>
 </html>
