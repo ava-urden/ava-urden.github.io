@@ -1,36 +1,38 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-  <script>
-  // Måste finnas innan GTM laddas
-  window.dataLayer = window.dataLayer || [];
-</script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-</script>
-<!-- Google Tag Manager -->
-<script>
-(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-5JMB8KM3');
-</script>
-<!-- End Google Tag Manager -->
-
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Ava Urdén — Portfolio</title>
   <meta name="description" content="Ava Urdén — Growth Marketing Student @ Berghs School of Communication." />
   <meta name="theme-color" content="#FFFFFF" />
+
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <script>
+    /* Måste finnas innan GTM laddas */
+    window.dataLayer = window.dataLayer || [];
+  </script>
+
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5JMB8KM3');
+  </script>
+  <!-- End Google Tag Manager -->
+
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
- <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5JMB8KM3"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5JMB8KM3" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+  <!-- End Google Tag Manager (noscript) -->
 
   <!-- Topbar -->
   <div class="topbar">
@@ -46,15 +48,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 
   <!-- HERO -->
-  <header class="section" id="home">
+  <header class="section section--beige" id="home">
     <div class="container">
       <div class="card hero-card reveal">
         <div class="tagline">PORTFOLIO</div>
-        <h1 id="flip-title" class="title">AVA URDÉN</h1>
+        <h1 class="title">AVA URDÉN</h1>
         <p class="subtitle">Growth Marketing student — Berghs School of Communication</p>
 
         <div class="cta-buttons hero-ctas">
-          <a href="files/Ava-Urden-CV.pdf" class="btn btn-primary ripple" download>Download CV</a>
+          <a id="cv-download" href="files/ava-urden-cv.pdf" class="btn btn-primary ripple" download>Download CV</a>
           <a href="mailto:ava.urden@gmail.com" class="btn btn-secondary ripple">Email</a>
           <a href="https://www.linkedin.com/in/avaurden" target="_blank" rel="noopener" class="btn btn-secondary ripple">LinkedIn</a>
         </div>
@@ -63,7 +65,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </header>
 
   <!-- ABOUT -->
-  <section class="section" id="about">
+  <section class="section section--white" id="about">
     <div class="container">
       <div class="card about-combo reveal">
         <div class="about-text">
@@ -75,14 +77,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </p>
         </div>
         <div class="about-photo">
-          <img src="images/ava.JPG" alt="Ava Urdén" />
+          <img src="Images/ava.JPG" alt="Ava Urdén" />
         </div>
       </div>
     </div>
   </section>
 
-  <!-- TOOLBOX -->
-  <section class="section" id="toolbox">
+  <!-- TOOLBOX (accent-block) -->
+  <section class="section section--accent" id="toolbox">
     <div class="container">
       <div class="section-head reveal">
         <h3>My toolbox</h3>
@@ -106,7 +108,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
 
   <!-- CASES -->
-  <section class="section" id="cases">
+  <section class="section section--white" id="cases">
     <div class="container">
       <div class="section-head reveal">
         <h3>Previous work & cases</h3>
@@ -159,23 +161,35 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer class="section" id="contact">
+  <!-- CONTACT (egen sektion) -->
+  <section class="section section--beige" id="contact">
     <div class="container">
-      <div class="footer_top reveal">
-        <div class="tag">Let’s create measurable growth</div>
-        <h2>Work with me</h2>
-        <div class="cta-buttons">
-          <a href="files/Ava-Urden-CV.pdf" class="btn ripple" download>Download CV</a>
-          <a href="mailto:ava.urden@gmail.com" class="btn ripple">Email</a>
-          <a href="https://www.linkedin.com/in/avaurden" target="_blank" rel="noopener" class="btn ripple">LinkedIn</a>
+      <div class="card contact-card reveal">
+        <h3>Contact</h3>
+        <p class="contact-lead">Based in Stockholm — open to freelance, collaborations and internships.</p>
+        <div class="contact-grid">
+          <div>
+            <div class="contact-label">Email</div>
+            <a class="contact-link" href="mailto:ava.urden@gmail.com">ava.urden@gmail.com</a>
+          </div>
+          <div>
+            <div class="contact-label">LinkedIn</div>
+            <a class="contact-link" href="https://www.linkedin.com/in/avaurden" target="_blank" rel="noopener">linkedin.com/in/avaurden</a>
+          </div>
+          <div>
+            <div class="contact-label">CV</div>
+            <a class="contact-link" href="files/ava-urden-cv.pdf" download>Download CV (PDF)</a>
+          </div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="section section--white" id="footer">
+    <div class="container">
       <div class="footer_bottom reveal">
         <div class="footer_credit-text">© 2025 Ava Urdén — Stockholm, Sweden</div>
-        <div class="footer_links">
-        
-        </div>
       </div>
     </div>
   </footer>
@@ -203,7 +217,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       setTimeout(()=>r.remove(), 600);
     });
 
-    // Active nav
+    // Aktiv länk i nav beroende på scroll
     const sections = [...document.querySelectorAll('.section')];
     const navLinks = [...document.querySelectorAll('.nav a')];
     function setActive(){
@@ -217,31 +231,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     addEventListener('scroll', setActive);
     addEventListener('load', setActive);
 
-    // FlipText
-    (function () {
-      const el = document.getElementById('flip-title');
-      if (!el) return;
-      const txt = el.textContent.trim();
-      el.textContent = '';
-      [...txt].forEach((ch, i) => {
-        const s = document.createElement('span');
-        s.className = 'char';
-        s.textContent = ch;
-        s.style.animationDelay = (i * 0.06) + 's';
-        el.appendChild(s);
-      });
-      const replay = () => {
-        el.querySelectorAll('.char').forEach((c,i)=>{
-          c.style.animation='none'; void c.offsetWidth;
-          c.style.animation=`flipIn .6s both`;
-          c.style.animationDelay=(i*0.03)+'s';
-        });
-      };
-      el.addEventListener('mouseenter', replay);
-      el.addEventListener('click', replay);
-    })();
-
-    // Lens
+    // Lens-zoomen för case-bilder
     (function(){
       const figs = document.querySelectorAll('.lens-figure');
       figs.forEach(fig=>{
@@ -277,16 +267,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         fig.addEventListener('touchend',()=>lens.style.opacity='0');
       });
     })();
-  </script>
-<script>
-  document.getElementById('cv-download').addEventListener('click', function() {
-    window.dataLayer.push({
-      event: 'download_cv',
-      file: 'CV_AvaUrden.pdf',
-      page: window.location.pathname,
-      timestamp: new Date().toISOString()
+
+    // dataLayer push för CV-nedladdning
+    document.getElementById('cv-download')?.addEventListener('click', function() {
+      window.dataLayer.push({
+        event: 'download_cv',
+        file: 'ava-urden-cv.pdf',
+        page: window.location.pathname,
+        timestamp: new Date().toISOString()
+      });
     });
-  });
-</script>
+  </script>
 </body>
 </html>
