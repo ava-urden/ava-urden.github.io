@@ -3,30 +3,35 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>01a – DataLayer Övning</title>
-
-  <!-- Måste finnas innan GTM laddas -->
-  <script>
-    window.dataLayer = window.dataLayer || [];
-  </script>
-
-  <!-- Google Tag Manager -->
-  <script>
-    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-5JMB8KM3');
-  </script>
-  <!-- End Google Tag Manager -->
+  <title>Exercises – index</title>
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial; padding: 32px; line-height: 1.5; }
+    h1 { margin-bottom: 16px; }
+    ul { margin: 0; padding-left: 18px; }
+    li { margin: 8px 0; }
+    a { text-decoration: none; border-bottom: 1px solid; }
+  </style>
 </head>
 <body>
-  <h1>01a – DataLayer</h1>
-  <p>Klicka på knappen nedan för att skicka ett event till dataLayer.</p>
+  <h1>Exercises</h1>
 
-  <button id="cvButton">Ladda ner CV</button>
+  <h2>01a – datalayer</h2>
+  <ul>
+    <li><a href="/exercises/01a-datalayer/">index.html</a></li>
+  </ul>
 
-  <!-- Koppla in helper.js -->
-  <script src="helper.js"></script>
+  <h2>01b – gtm + js</h2>
+  <ul>
+    <li><a href="/exercises/01b-gtm-js/first-event.html">first-event.html</a></li>
+  </ul>
+
+  <h2>01c – query params</h2>
+  <ul>
+    <li><a href="/exercises/01c-queryparams/exercise1-change-h1.html">exercise1-change-h1.html</a></li>
+    <li><a href="/exercises/01c-queryparams/exercise2-multi-params.html">exercise2-multi-params.html</a></li>
+    <li><a href="/exercises/01c-queryparams/exercise3-form.html">exercise3-form.html</a></li>
+    <li><a href="/exercises/01c-queryparams/exercise4-theme.html">exercise4-theme.html</a></li>
+    <li><a href="/exercises/01c-queryparams/exercise5-dynamic-content.html">exercise5-dynamic-content.html</a></li>
+  </ul>
 </body>
 </html>
