@@ -5,15 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Ava Urdén — Portfolio</title>
   <meta name="description" content="Ava Urdén — Growth Marketing Student @ Berghs School of Communication." />
-  <meta name="theme-color" content="#FFFFFF" />
+  <meta name="theme-color" content="#000000" />
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <!-- Måste finnas innan GTM laddas -->
-  <script>
-    window.dataLayer = window.dataLayer || [];
-  </script>
+  <script>window.dataLayer = window.dataLayer || [];</script>
 
   <!-- Google Tag Manager -->
   <script>
@@ -25,57 +23,48 @@
   </script>
   <!-- End Google Tag Manager -->
 
-  <!-- CSS (cache-busted) -->
-  <link rel="stylesheet" href="style.css?v=20250907" />
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css?v=20250907-bw-bubbles-tight" />
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->
   <noscript>
     <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5JMB8KM3" height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </noscript>
-  <!-- End Google Tag Manager (noscript) -->
 
   <!-- Topbar -->
-  <div class="topbar">
+  <header class="topbar" role="banner">
     <div class="container topbar-inner">
-      <div class="brand"><span>AVA URDÉN</span></div>
-      <nav class="nav" id="nav">
+      <a class="brand" href="#home">AVA URDÉN</a>
+      <nav class="nav" id="nav" aria-label="Huvudmeny">
         <a href="#about">About</a>
-        <a href="#toolbox">Toolbox</a>
-        <a href="#cases">Cases</a>
+        <a href="#learnings">Learnings</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
-  </div>
+  </header>
 
   <!-- HERO -->
-  <header class="section section--beige" id="home">
+  <section class="section hero" id="home" aria-label="Intro">
     <div class="container">
-      <div class="card hero-card reveal">
-        <div class="tagline">PORTFOLIO</div>
-        <h1 class="title">AVA URDÉN</h1>
+      <div class="bubble bubble--hero reveal">
+        <p class="eyebrow">PORTFOLIO</p>
+        <h1 class="title title--thin">AVA&nbsp;URDÉN</h1>
         <p class="subtitle">Growth Marketing student — Berghs School of Communication</p>
-
-        <div class="cta-buttons hero-ctas">
-          <!-- HERO CV-knapp -->
-          <a id="cv-download" href="files/ava-urden-cv.pdf" class="btn btn-primary ripple" download>Download CV</a>
-          <a href="mailto:ava.urden@gmail.com" class="btn btn-secondary ripple">Email</a>
-  <a href="https://www.linkedin.com/in/ava-urd%C3%A9n-3014a821b"
-   target="_blank"
-   rel="noopener"
-   class="btn btn-secondary ripple">
-  LinkedIn
-</a>
+        <div class="cta-row">
+          <a id="cv-download" href="files/ava-urden-cv.pdf" class="btn btn--fill ripple" download>Download CV</a>
+          <a href="mailto:ava.urden@gmail.com" class="btn btn--ghost ripple">Email</a>
+          <a href="https://www.linkedin.com/in/ava-urd%C3%A9n-3014a821b" target="_blank" rel="noopener" class="btn btn--ghost ripple">LinkedIn</a>
         </div>
       </div>
     </div>
-  </header>
+  </section>
 
   <!-- ABOUT -->
-  <section class="section section--white" id="about">
+  <section class="section" id="about" aria-label="About me">
     <div class="container">
-      <div class="card about-combo reveal">
-        <div class="about-text">
+      <div class="bubble bubble--about split reveal">
+        <div class="split-col">
           <h2>About me</h2>
           <p>
             With a background in communication, marketing and business development, I translate insights into concepts and
@@ -83,139 +72,76 @@
             with a strong interest in storytelling and design.
           </p>
         </div>
-        <div class="about-photo">
-          <img src="Images/ava.JPG" alt="Ava Urdén" />
+        <div class="split-col about-right">
+          <figure class="portrait">
+            <img src="images/avafarg.JPG" alt="Portrait of Ava Urdén" loading="lazy">
+          </figure>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- TOOLBOX -->
-  <section class="section section--accent" id="toolbox">
+  <!-- LEARNINGS (tomma rutor) -->
+  <section class="section" id="learnings" aria-label="Learnings">
     <div class="container">
-      <div class="section-head reveal">
-        <h3>My toolbox</h3>
-        <p>Visual concepts, analytics and optimization. These are the tools I use most.</p>
-      </div>
-      <div class="tools reveal">
-        <button class="tool ripple">📐 Canva</button>
-        <button class="tool ripple">🎨 Figma</button>
-        <button class="tool ripple">🖌️ Adobe Creative Suite</button>
-        <button class="tool ripple">📊 Google Analytics 4</button>
-        <button class="tool ripple">🔗 Google Tag Manager</button>
-        <button class="tool ripple">⚡ SEO & CRO</button>
-        <button class="tool ripple">📢 Digital ad platforms</button>
-        <button class="tool ripple">🤖 AI tools</button>
-        <button class="tool ripple">📝 Notion</button>
-        <button class="tool ripple">📑 Excel / Google Sheets</button>
-        <button class="tool ripple">💻 GitHub</button>
-        <button class="tool ripple">🖥️ Visual Studio Code</button>
+      <div class="bubble reveal">
+        <div class="section-head">
+          <h3>What I’ve learned</h3>
+          <p class="muted">Tomma rutor som du fyller på senare.</p>
+        </div>
+        <div class="grid learnings-grid">
+          <article class="card"><h4>Growth strategies</h4></article>
+          <article class="card"><h4>Git & GitHub (CLI)</h4></article>
+          <article class="card"><h4>GA4</h4></article>
+          <article class="card"><h4>Google Tag Manager</h4></article>
+          <article class="card"><h4>Scraping</h4></article>
+          <article class="card is-empty"><h4>—</h4></article>
+          <article class="card is-empty"><h4>—</h4></article>
+          <article class="card is-empty"><h4>—</h4></article>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- CASES -->
-  <section class="section section--white" id="cases">
+  <!-- CONTACT -->
+  <section class="section" id="contact" aria-label="Contact">
     <div class="container">
-      <div class="section-head reveal">
-        <h3>Previous work & cases</h3>
-        <p>A selection that highlights strategy, creative execution and data-driven results.</p>
-      </div>
-
-      <div class="cases-grid cases-grid--cards">
-        <article class="case card lens-card ripple reveal">
-          <figure class="lens-figure" data-zoom="2" data-lens="150">
-            <img src="images/case-1.jpg" alt="Case 1" loading="lazy">
-            <span class="lens" aria-hidden="true"></span>
-          </figure>
-          <div class="case-body">
-            <h4 class="case-title">Your next camp</h4>
-            <p class="case-desc">See our latest and best destinations across the globe with creator-led content.</p>
-            <div class="case-actions">
-              <a href="#" class="btn btn-primary ripple">Read more</a>
+      <div class="bubble reveal">
+        <div class="contact">
+          <h3>Contact</h3>
+          <div class="contact-grid">
+            <div>
+              <div class="label">Email</div>
+              <a class="link" href="mailto:ava.urden@gmail.com">ava.urden@gmail.com</a>
+            </div>
+            <div>
+              <div class="label">LinkedIn</div>
+              <a class="link" href="https://www.linkedin.com/in/ava-urd%C3%A9n-3014a821b" target="_blank" rel="noopener">Ava Urdén @LinkedIn</a>
+            </div>
+            <div>
+              <div class="label">CV</div>
+              <a class="link" href="files/ava-urden-cv.pdf" download data-track="cv">Download CV (PDF)</a>
             </div>
           </div>
-        </article>
-
-        <article class="case card lens-card ripple reveal">
-          <figure class="lens-figure" data-zoom="2" data-lens="150">
-            <img src="images/case-2.jpg" alt="Case 2" loading="lazy">
-            <span class="lens" aria-hidden="true"></span>
-          </figure>
-          <div class="case-body">
-            <h4 class="case-title">Brand launch</h4>
-            <p class="case-desc">Strategy → concept → go-live. Paid + organic with measurable lift.</p>
-            <div class="case-actions">
-              <a href="#" class="btn btn-primary ripple">Read more</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="case card lens-card ripple reveal">
-          <figure class="lens-figure" data-zoom="2" data-lens="150">
-            <img src="images/case-3.jpg" alt="Case 3" loading="lazy">
-            <span class="lens" aria-hidden="true"></span>
-          </figure>
-          <div class="case-body">
-            <h4 class="case-title">CRO sprint</h4>
-            <p class="case-desc">Rapid experimentation and UX tweaks for conversion growth.</p>
-            <div class="case-actions">
-              <a href="#" class="btn btn-primary ripple">Read more</a>
-            </div>
-          </div>
-        </article>
+        </div>
       </div>
     </div>
   </section>
-
-<!-- CONTACT -->
-<section class="section section--beige" id="contact">
-  <div class="container">
-    <div class="card contact-card reveal">
-      <h3>Contact</h3>
-      <p class="contact-lead">Based in Stockholm — open to freelance, collaborations and internships.</p>
-      <div class="contact-grid">
-        <div>
-          <div class="contact-label">Email</div>
-          <a class="contact-link" href="mailto:ava.urden@gmail.com">ava.urden@gmail.com</a>
-        </div>
-        <div>
-          <div class="contact-label">LinkedIn</div>
-          <!-- ✅ Fixad LinkedIn-länk -->
-          <a class="contact-link" 
-             href="https://www.linkedin.com/in/ava-urd%C3%A9n-3014a821b" 
-             target="_blank" 
-             rel="noopener">
-             Ava Urdén @LinkedIn
-          </a>
-        </div>
-        <div>
-          <div class="contact-label">CV</div>
-          <a class="contact-link" href="files/ava-urden-cv.pdf" download data-track="cv">Download CV (PDF)</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
   <!-- FOOTER -->
-  <footer class="section section--white" id="footer">
-    <div class="container">
-      <div class="footer_bottom reveal">
-        <div class="footer_credit-text">© 2025 Ava Urdén — Stockholm, Sweden</div>
-      </div>
+  <footer class="footer" role="contentinfo">
+    <div class="container footer-inner">
+      <small>© 2025 Ava Urdén — Stockholm, Sweden</small>
     </div>
   </footer>
 
   <!-- Scripts -->
   <script>
-    // Reveal on scroll
     const io = new IntersectionObserver((entries)=>{
       entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }});
     }, {threshold:.15});
     document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 
-    // Ripple click
     document.addEventListener('click', (e)=>{
       const target = e.target.closest('.ripple');
       if(!target) return;
@@ -230,11 +156,10 @@
       setTimeout(()=>r.remove(), 600);
     });
 
-    // Aktiv länk i nav beroende på scroll
-    const sections = [...document.querySelectorAll('.section')];
+    const sections = [...document.querySelectorAll('section.section, .hero')];
     const navLinks = [...document.querySelectorAll('.nav a')];
     function setActive(){
-      let idx=-1, top=window.scrollY + 140;
+      let idx=-1, top=window.scrollY + 110;
       sections.forEach((s,i)=>{ if(s.offsetTop <= top) idx = i; });
       navLinks.forEach(a=>a.classList.remove('active'));
       const id = sections[idx]?.id;
@@ -244,47 +169,7 @@
     addEventListener('scroll', setActive);
     addEventListener('load', setActive);
 
-    // Lens-zoomen för case-bilder
-    (function(){
-      const figs = document.querySelectorAll('.lens-figure');
-      figs.forEach(fig=>{
-        const img = fig.querySelector('img');
-        const lens = fig.querySelector('.lens');
-        const zoom = parseFloat(fig.dataset.zoom||'2');
-        const size = parseInt(fig.dataset.lens||'150',10);
-        lens.style.width=lens.style.height=size+'px';
-
-        function setBg(){
-          const src = img.currentSrc||img.src;
-          lens.style.backgroundImage=`url('${src}')`;
-          lens.style.backgroundSize=`${img.naturalWidth*zoom}px ${img.naturalHeight*zoom}px`;
-        }
-        if(img.complete) setBg(); else img.addEventListener('load', setBg);
-
-        function move(e){
-          const r=fig.getBoundingClientRect();
-          const x=(e.touches?e.touches[0].clientX:e.clientX)-r.left;
-          const y=(e.touches?e.touches[0].clientY:e.clientY)-r.top;
-          const lx=Math.max(0,Math.min(x-size/2,r.width-size));
-          const ly=Math.max(0,Math.min(y-size/2,r.height-size));
-          lens.style.left=lx+'px'; lens.style.top=ly+'px';
-          const bgX=((x/r.width)*img.naturalWidth*zoom-size/2)*-1;
-          const bgY=((y/r.height)*img.naturalHeight*zoom-size/2)*-1;
-          lens.style.backgroundPosition=`${bgX}px ${bgY}px`;
-        }
-        fig.addEventListener('mousemove',move);
-        fig.addEventListener('touchmove',move,{passive:true});
-        fig.addEventListener('mouseleave',()=>lens.style.opacity='0');
-        fig.addEventListener('mouseenter',()=>lens.style.opacity='1');
-        fig.addEventListener('touchstart',()=>lens.style.opacity='1',{passive:true});
-        fig.addEventListener('touchend',()=>lens.style.opacity='0');
-      });
-    })();
-
-    // ===== Track all PDF downloads (incl. CV) =====
     (function () {
-      window.dataLayer = window.dataLayer || [];
-
       function pushDownloadEvent(anchor) {
         try {
           const url = new URL(anchor.href, window.location.origin);
@@ -297,28 +182,18 @@
             page: window.location.pathname,
             timestamp: new Date().toISOString()
           });
-          console.log('[GTM] download_cv pushed:', {
-            file: url.pathname.split('/').pop(),
-            file_path: url.pathname,
-            page: window.location.pathname
-          });
+          console.log('[GTM] download_cv pushed:', { file: url.pathname.split('/').pop() });
         } catch (e) {
           console.warn('download_cv push failed:', e);
         }
       }
-
       const pdfLinks = Array.from(document.querySelectorAll('a[download]'))
         .filter(a => (a.getAttribute('href') || '').toLowerCase().endsWith('.pdf'));
-
       const explicitCvLinks = Array.from(document.querySelectorAll('a[data-track="cv"]'));
-
       const allCvLinks = Array.from(new Set([...pdfLinks, ...explicitCvLinks]));
-
       allCvLinks.forEach(a => {
-        a.addEventListener('click', function () { pushDownloadEvent(a); });
-        a.addEventListener('keydown', function (e) {
-          if (e.key === 'Enter') pushDownloadEvent(a);
-        });
+        a.addEventListener('click', () => pushDownloadEvent(a));
+        a.addEventListener('keydown', (e) => { if (e.key === 'Enter') pushDownloadEvent(a); });
       });
     })();
   </script>
