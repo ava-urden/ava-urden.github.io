@@ -74,7 +74,8 @@
         </div>
         <div class="split-col about-right">
           <figure class="portrait">
-<img src="images/IMG_4176.JPG" alt="Portrait of Ava Urdén" />
+            <!-- Byt endast denna rad om du vill ha annat filnamn -->
+            <img src="images/ava.jpg" alt="Portrait of Ava Urdén" loading="lazy" width="480" height="480" />
           </figure>
         </div>
       </div>
@@ -137,11 +138,13 @@
 
   <!-- Scripts -->
   <script>
+    // In-view reveal
     const io = new IntersectionObserver((entries)=>{
       entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }});
     }, {threshold:.15});
     document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 
+    // Ripple på knappar
     document.addEventListener('click', (e)=>{
       const target = e.target.closest('.ripple');
       if(!target) return;
@@ -156,6 +159,7 @@
       setTimeout(()=>r.remove(), 600);
     });
 
+    // Aktiv länk i nav
     const sections = [...document.querySelectorAll('section.section, .hero')];
     const navLinks = [...document.querySelectorAll('.nav a')];
     function setActive(){
@@ -169,6 +173,7 @@
     addEventListener('scroll', setActive);
     addEventListener('load', setActive);
 
+    // GA4: tracka CV-nedladdning
     (function () {
       function pushDownloadEvent(anchor) {
         try {
