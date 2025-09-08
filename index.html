@@ -14,7 +14,7 @@
   <!-- Måste finnas INNAN GTM laddas -->
   <script>window.dataLayer = window.dataLayer || [];</script>
 
-  <!-- Google Tag Manager (KORREKT) -->
+  <!-- Google Tag Manager -->
   <script>
     (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -26,52 +26,56 @@
 </head>
 
 <body>
-  <!-- Google Tag Manager (noscript) – direkt efter <body> -->
+  <!-- GTM noscript -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5JMB8KM3"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-  <!-- Top nav -->
-  <header class="site-header">
-    <div class="wrap">
-      <div class="brand" aria-label="Ava Urdén">AVA URDÉN</div>
+  <!-- Header -->
+  <header class="site-header" role="banner">
+    <div class="wrap header-inner">
+      <a href="#about" class="brand" aria-label="Ava Urdén">AVA URDÉN</a>
       <nav class="nav" aria-label="Huvudmeny">
         <a href="#about">Om mig</a>
         <a href="#learnings">Lärt mig</a>
+        <a href="#projects">Case & Projekt</a>
         <a href="#contact">Kontakt</a>
-        <button id="theme-toggle" class="btn ghost" aria-label="Växla tema">🌓</button>
+        <button id="theme-toggle" type="button" class="btn ghost" aria-label="Växla tema">🌓</button>
       </nav>
     </div>
   </header>
 
-  <main>
-    <!-- Hero -->
-    <section id="about" class="hero">
-      <div class="card hero-card">
-        <div class="hero-copy">
-          <p class="eyebrow">Portfolio</p>
-          <h1 class="display">Ava Urdén — Portfolio</h1>
-          <p class="lead">
-            22-årig Growth Marketing-student på Berghs School of Communication.
-            Med bakgrund inom kommunikation, marknadsföring och affärsutveckling
-            översätter jag insikter till koncept och lösningar som gör verklig
-            skillnad – från första test till fullskalig lansering.
-          </p>
-          <a class="btn primary" href="#learnings" id="cta-see-learnings">Se vad jag lärt mig</a>
-        </div>
-        <div class="hero-media">
-          <img src="images/ava.jpg" alt="Ava Urdén" class="avatar" loading="lazy" />
+  <main id="main" tabindex="-1">
+    <!-- Hero / About -->
+    <section id="about" class="section hero" aria-labelledby="hero-title">
+      <div class="wrap">
+        <div class="card hero-card">
+          <div class="hero-copy">
+            <p class="eyebrow">Portfolio</p>
+            <h1 id="hero-title" class="display">Ava Urdén — Portfolio</h1>
+            <p class="lead">
+              22-årig Growth Marketing-student på Berghs School of Communication.
+              Med bakgrund inom kommunikation, marknadsföring och affärsutveckling
+              översätter jag insikter till koncept och lösningar som gör verklig
+              skillnad – från första test till fullskalig lansering.
+            </p>
+            <div class="hero-ctas">
+              <a class="btn primary" href="#learnings" id="cta-see-learnings">Se vad jag lärt mig</a>
+              <a class="btn outline" href="#projects">Se case & projekt</a>
+            </div>
+          </div>
+          <div class="hero-media">
+            <img src="images/ava.jpg" alt="Porträtt av Ava Urdén" class="avatar" loading="lazy" />
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Learnings -->
-    <section id="learnings" class="section">
+    <!-- Learnings (ett block) -->
+    <section id="learnings" class="section" aria-labelledby="learn-title">
       <div class="wrap">
-        <h2 class="h2">Vad jag lärt mig</h2>
-
-        <div class="module">
-          <h3 class="subhead">Growth Toolbox</h3>
-          <ul class="tool-list">
+        <h2 id="learn-title" class="h2">Vad jag lärt mig</h2>
+        <div class="tile tile-block">
+          <ul class="tool-list compact">
             <li><strong>Tillväxtstrategier:</strong> Hypotes → test → mät. Funnel-analys, ICE-prioritering.</li>
             <li><strong>GitHub & Command Line:</strong> Initiera repo, brancher, commit/push, GitHub Pages.</li>
             <li><strong>Google Analytics 4:</strong> Realtime/DebugView, egna events via GTM.</li>
@@ -83,21 +87,67 @@
             <a class="btn secondary" href="/ex.list.html" target="_blank" rel="noopener" id="btn-examples">Se övningar</a>
           </div>
 
-          <div class="tile" style="margin-top:20px">
-            <h3>Reflektion</h3>
+          <div class="tile note">
+            <h3 class="h3">Reflektion</h3>
             <p>
-              För mig är growth marketing att kombinera analys och kreativitet. Jag vill arbeta där insikter möter idé —
-              testa snabbt, mäta noggrant och bygga upplevelser som både känns och ger effekt.
+              För mig är growth marketing att kombinera analys och kreativitet. Jag vill arbeta där insikter
+              möter idé — testa snabbt, mäta noggrant och bygga upplevelser som både känns och ger effekt.
             </p>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- Projects / Cases (större bilder, label på omslag, text på hover – inga knappar) -->
+    <section id="projects" class="section" aria-labelledby="proj-title">
+      <div class="wrap">
+        <h2 id="proj-title" class="h2">Case & Projekt</h2>
+        <p class="muted">Urval av arbeten. Label syns alltid; mer text visas vid hover.</p>
+
+        <div class="cards grid-projects">
+          <!-- Case 1: Fotografiska -->
+          <article class="card project image-card" data-project="fotografiska" data-type="concept">
+            <figure class="image-wrapper">
+              <img src="images/subway.png" alt="Case: Fotografiska – Alla är fotografer" loading="lazy">
+              <div class="label"><span>Koncept</span></div>
+              <figcaption class="overlay">
+                <h3 class="h3">Fotografiska — “Alla är fotografer”</h3>
+                <p>Flytta “Scrollern” från mobil till museum med AI-kurering, spegelkuber & UGC.</p>
+              </figcaption>
+            </figure>
+          </article>
+
+          <!-- Case 2: X YOU -->
+          <article class="card project image-card" data-project="x-you" data-type="growth">
+            <figure class="image-wrapper">
+              <img src="images/case-x-you.jpg" alt="Case: X YOU – Growth-projekt" loading="lazy">
+              <div class="label"><span>Growth Marketing</span></div>
+              <figcaption class="overlay">
+                <h3 class="h3">X YOU — Growth-projekt</h3>
+                <p>SPIN, Double Diamond, experiment, CRO/SEO & storytelling.</p>
+              </figcaption>
+            </figure>
+          </article>
+
+          <!-- Case 3: Scraping -->
+          <article class="card project image-card" data-project="scraping" data-type="tech">
+            <figure class="image-wrapper">
+              <img src="images/case-scraping.jpg" alt="Case: Scraping – Prisjakt/CSV" loading="lazy">
+              <div class="label"><span>Tech</span></div>
+              <figcaption class="overlay">
+                <h3 class="h3">Prisjakt — Scraping & CSV</h3>
+                <p>Playwright-script som hämtar produktdata och exporterar till CSV för prisanalys.</p>
+              </figcaption>
+            </figure>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <!-- Kontakt -->
-    <section id="contact" class="section">
+    <section id="contact" class="section" aria-labelledby="contact-title">
       <div class="wrap contact">
-        <h2 class="h2">Kontakt</h2>
+        <h2 id="contact-title" class="h2">Kontakt</h2>
         <div class="cta-row">
           <a class="btn secondary" href="mailto:ava.urden@gmail.com">Mejl</a>
           <a class="btn secondary" href="https://www.linkedin.com/in/ava-urd%C3%A9n-3014a821b/" target="_blank" rel="noopener">LinkedIn</a>
@@ -107,82 +157,23 @@
     </section>
   </main>
 
-  <!-- Dina events (enkla och trygga) -->
-  <script>
-    (function () {
-      // tema: query-param -> localStorage -> prefers-color-scheme
-      const qs = new URLSearchParams(location.search);
-      const paramTheme = (qs.get('theme') || '').toLowerCase();
-      const stored = localStorage.getItem('theme');
-      const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  <footer class="site-footer" role="contentinfo">
+    <div class="wrap">
+      <small>© <span id="year"></span> Ava Urdén. Portfolio & Growth Marketing.</small>
+    </div>
+  </footer>
 
-      const startTheme =
-        (paramTheme === 'dark' || paramTheme === 'light') ? paramTheme :
-        (stored === 'dark' || stored === 'light') ? stored :
-        (prefersDark ? 'dark' : 'light');
-
-      setTheme(startTheme, false);
-
-      // Toggle tema
-      const btn = document.getElementById('theme-toggle');
-      if (btn) {
-        btn.addEventListener('click', () => {
-          const current = document.documentElement.getAttribute('data-theme');
-          const next = current === 'dark' ? 'light' : 'dark';
-          const url = new URL(window.location.href);
-          url.searchParams.set('theme', next);
-          history.replaceState(null, '', url.toString());
-          setTheme(next, true);
-        });
-      }
-
-      // CTA: "Se vad jag lärt mig"
-      const cta = document.getElementById('cta-see-learnings');
-      if (cta) {
-        cta.addEventListener('click', () => {
-          window.dataLayer.push({ event: 'cta_click', cta: 'see_learnings', page: 'home' });
-        });
-      }
-
-      // CV-nedladdning
-      const cv = document.getElementById('btn-download-cv');
-      if (cv) {
-        cv.addEventListener('click', () => {
-          window.dataLayer.push({ event: 'download_cv', file: 'files/ava_cv.pdf', page: 'home' });
-        });
-      }
-
-      // Övningar-knapp
-      const exBtn = document.getElementById('btn-examples');
-      if (exBtn) {
-        exBtn.addEventListener('click', () => {
-          window.dataLayer.push({ event: 'open_examples', via: 'gtm_tile', page: 'home' });
-        });
-      }
-
-      function setTheme(theme, pushEvent){
-        document.documentElement.setAttribute('data-theme', theme);
-        localStorage.setItem('theme', theme);
-        if (pushEvent) window.dataLayer.push({ event:'theme_change', theme });
-      }
-    })();
-  </script>
+  <!-- Samlat script: tema + events -->
   <script>
   (function () {
-    // 0) dataLayer ska finnas
     window.dataLayer = window.dataLayer || [];
-
-    // 1) Sätt en sid-etikett (används som parameter i alla event)
     const PAGE = 'home';
-
-    // 2) Hjälpfunktion: pusha event med standardparametern "page"
     function pushEvent(name, params = {}) {
       const payload = { event: name, page: PAGE, ...params };
       window.dataLayer.push(payload);
-      console.log('Pushed:', payload);
     }
 
-    // 3) Tema-hantering (du har detta redan – behåll)
+    // Starttema (query → storage → prefers)
     const qs = new URLSearchParams(location.search);
     const paramTheme = (qs.get('theme') || '').toLowerCase();
     const stored = localStorage.getItem('theme');
@@ -195,6 +186,7 @@
 
     setTheme(startTheme, false);
 
+    // Toggle
     const themeBtn = document.getElementById('theme-toggle');
     if (themeBtn) {
       themeBtn.addEventListener('click', () => {
@@ -206,55 +198,36 @@
         setTheme(next, true);
       });
     }
-
     function setTheme(theme, push){
       document.documentElement.setAttribute('data-theme', theme);
       localStorage.setItem('theme', theme);
       if (push) pushEvent('theme_change', { theme });
     }
 
-    // 4) CTA: "Se vad jag lärt mig"
+    // CTA
     const cta = document.getElementById('cta-see-learnings');
-    if (cta) {
-      cta.addEventListener('click', () => {
-        pushEvent('cta_click', { cta: 'see_learnings' });
-      });
-    }
+    if (cta) cta.addEventListener('click', () => pushEvent('cta_click', { cta: 'see_learnings' }));
 
-    // 5) CV-nedladdning (id="btn-download-cv")
+    // CV
     const cv = document.getElementById('btn-download-cv');
-    if (cv) {
-      cv.addEventListener('click', () => {
-        pushEvent('download_cv', { file: 'files/ava_cv.pdf' });
-      });
-    }
+    if (cv) cv.addEventListener('click', () => pushEvent('download_cv', { file: 'files/ava_cv.pdf' }));
 
-    // 6) Övningar-knapp (id="btn-examples")
+    // Övningar
     const exBtn = document.getElementById('btn-examples');
-    if (exBtn) {
-      exBtn.addEventListener('click', () => {
-        pushEvent('open_examples', { via: 'gtm_tile' });
-      });
-    }
+    if (exBtn) exBtn.addEventListener('click', () => pushEvent('open_examples', { via: 'gtm_tile' }));
 
-    // 7) LinkedIn-länk (första länk som innehåller linkedin.com)
+    // LinkedIn
     const linkedIn = document.querySelector('a[href*="linkedin.com"]');
-    if (linkedIn) {
-      linkedIn.addEventListener('click', (e) => {
-        // Valfri säkerhetsdelay så hiten hinner skickas före navigation
-        pushEvent('linkedin_click', { link_url: linkedIn.href });
-      });
-    }
+    if (linkedIn) linkedIn.addEventListener('click', () => pushEvent('linkedin_click', { link_url: linkedIn.href }));
 
-    // 8) Mejl-länk (mailto:)
+    // Mejl
     const mail = document.querySelector('a[href^="mailto:"]');
-    if (mail) {
-      mail.addEventListener('click', () => {
-        pushEvent('email_click', { link_url: mail.href });
-      });
-    }
-  })();
-</script>
+    if (mail) mail.addEventListener('click', () => pushEvent('email_click', { link_url: mail.href }));
 
+    // År i footer
+    const y = document.getElementById('year');
+    if (y) y.textContent = new Date().getFullYear();
+  })();
+  </script>
 </body>
 </html>
