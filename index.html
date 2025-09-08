@@ -167,5 +167,94 @@
       }
     })();
   </script>
+  <script>
+  (function () {
+    // 0) dataLayer ska finnas
+    window.dataLayer = window.dataLayer || [];
+
+    // 1) Sätt en sid-etikett (används som parameter i alla event)
+    const PAGE = 'home';
+
+    // 2) Hjälpfunktion: pusha event med standardparametern "page"
+    function pushEvent(name, params = {}) {
+      const payload = { event: name, page: PAGE, ...params };
+      window.dataLayer.push(payload);
+      console.log('Pushed:', payload);
+    }
+
+    // 3) Tema-hantering (du har detta redan – behåll)
+    const qs = new URLSearchParams(location.search);
+    const paramTheme = (qs.get('theme') || '').toLowerCase();
+    const stored = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    const startTheme =
+      (paramTheme === 'dark' || paramTheme === 'light') ? paramTheme :
+      (stored === 'dark' || stored === 'light') ? stored :
+      (prefersDark ? 'dark' : 'light');
+
+    setTheme(startTheme, false);
+
+    const themeBtn = document.getElementById('theme-toggle');
+    if (themeBtn) {
+      themeBtn.addEventListener('click', () => {
+        const current = document.documentElement.getAttribute('data-theme');
+        const next = current === 'dark' ? 'light' : 'dark';
+        const url = new URL(window.location.href);
+        url.searchParams.set('theme', next);
+        history.replaceState(null, '', url.toString());
+        setTheme(next, true);
+      });
+    }
+
+    function setTheme(theme, push){
+      document.documentElement.setAttribute('data-theme', theme);
+      localStorage.setItem('theme', theme);
+      if (push) pushEvent('theme_change', { theme });
+    }
+
+    // 4) CTA: "Se vad jag lärt mig"
+    const cta = document.getElementById('cta-see-learnings');
+    if (cta) {
+      cta.addEventListener('click', () => {
+        pushEvent('cta_click', { cta: 'see_learnings' });
+      });
+    }
+
+    // 5) CV-nedladdning (id="btn-download-cv")
+    const cv = document.getElementById('btn-download-cv');
+    if (cv) {
+      cv.addEventListener('click', () => {
+        pushEvent('download_cv', { file: 'files/ava_cv.pdf' });
+      });
+    }
+
+    // 6) Övningar-knapp (id="btn-examples")
+    const exBtn = document.getElementById('btn-examples');
+    if (exBtn) {
+      exBtn.addEventListener('click', () => {
+        pushEvent('open_examples', { via: 'gtm_tile' });
+      });
+    }
+
+    // 7) LinkedIn-länk (första länk som innehåller linkedin.com)
+    const linkedIn = document.querySelector('a[href*="linkedin.com"]');
+    if (linkedIn) {
+      linkedIn.addEventListener('click', (e) => {
+        // Valfri säkerhetsdelay så hiten hinner skickas före navigation
+        pushEvent('linkedin_click', { link_url: linkedIn.href });
+      });
+    }
+
+    // 8) Mejl-länk (mailto:)
+    const mail = document.querySelector('a[href^="mailto:"]');
+    if (mail) {
+      mail.addEventListener('click', () => {
+        pushEvent('email_click', { link_url: mail.href });
+      });
+    }
+  })();
+</script>
+
 </body>
 </html>
