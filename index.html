@@ -27,16 +27,18 @@
 
 <body>
   <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5JMB8KM3" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5JMB8KM3" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
 
   <!-- Top nav -->
   <header class="site-header">
     <div class="wrap">
-      <div class="brand">AVA URDÉN</div>
-      <nav class="nav">
+      <div class="brand" aria-label="Ava Urdén">AVA URDÉN</div>
+      <nav class="nav" aria-label="Huvudmeny">
         <a href="#about">Om mig</a>
-        <a href="#learnings">Learnings</a>
-        <a href="exercises.html" >Se mina övningar</a>
+        <a href="#learnings">Lärt mig</a>
+        <a href="/examples/">Exempel</a><!-- valfri, ta bort om du inte vill ha -->
         <a href="#contact">Kontakt</a>
         <button id="theme-toggle" class="btn ghost" aria-label="Växla tema">🌓</button>
       </nav>
@@ -61,7 +63,7 @@
           <a class="btn primary" href="#learnings" id="cta-see-learnings">Se vad jag lärt mig</a>
         </div>
         <div class="hero-media">
-          <img src="images/ava.jpg" alt="Ava Urdén" class="avatar" />
+          <img src="images/ava.jpg" alt="Ava Urdén" class="avatar" loading="lazy" />
         </div>
       </div>
     </section>
@@ -70,48 +72,83 @@
     <section id="learnings" class="section">
       <div class="wrap">
         <h2 class="h2">Vad jag lärt mig</h2>
-        <div class="grid learnings-grid">
-          <div class="tile">
-            <h3>GitHub & Command Line</h3>
-            <p>text</p>
+
+        <!-- Underrubrik för denna kurs -->
+        <h3 class="subhead">Growth Toolbox</h3>
+
+        <!-- Kursblock: Growth Toolbox -->
+        <div class="module">
+          <div class="grid learnings-grid">
+            <div class="tile">
+              <h3>GitHub & Command Line</h3>
+              <p>Initiera repo, arbeta i brancher, commit/push via terminal och publicera med GitHub Pages. Grundläggande versionshantering och felsökning på plats.</p>
+            </div>
+
+            <div class="tile">
+              <h3>Google Analytics 4</h3>
+              <p>Satt upp GA4-property och använder Realtime/DebugView. Förstår <em>events</em> vs <em>sessions</em> och tar emot egna händelser via GTM (t.ex. <code>download_cv</code>, <code>cta_click</code>).</p>
+            </div>
+
+            <div class="tile">
+              <h3>Google Tag Manager</h3>
+              <p>Implementerat <code>dataLayer</code>, skapat triggers, tags och variabler som skickar händelser till GA4 utan kodändringar på sidan.</p>
+              <p><a id="btn-examples" class="btn secondary" href="/examples/">Öppna exempel-övningar</a></p>
+            </div>
+
+            <div class="tile">
+              <h3>Scraping</h3>
+              <p>Grunder i web scraping: välja selektorer, hämta HTML, parsa och strukturera data för vidare analys (med hänsyn till <code>robots.txt</code> och etik).</p>
+            </div>
+
+            <div class="tile">
+              <h3>Prompt Engineering</h3>
+              <p>Strukturerade prompts (mål, kontext, format, begränsningar), iterera och jämföra output, dokumentera vad som ger bäst resultat.</p>
+            </div>
+
+            <div class="tile">
+              <h3>Looker Studio / Chart.js</h3>
+              <p>Byggt en enkel Chart.js-visualisering och bäddat in en Looker Studio-rapport. Förstår skillnaden mellan dimensioner och mått samt hur datakällor kopplas.</p>
+            </div>
+
+            <div class="tile">
+              <h3>Tillväxtstrategier</h3>
+              <p>Hypotes → test → mät. Funnel-analys för att hitta flaskhalsar och prioritera insatser (t.ex. med en enkel ICE-bedömning) för snabbare lärande och effekt.</p>
+            </div>
           </div>
-          <div class="tile">
-            <h3>Google Analytics 4</h3>
-            <p>skapat triggers, tags och variabler som skickar händelser till GA4 utan kodändringar på sidan.</p>
+
+          <!-- Reflektion placeras efter ämnena -->
+          <div class="tile" style="margin-top:20px">
+            <h3>Reflektion</h3>
+            <p>För mig är growth marketing att kombinera analys och kreativitet. Jag vill arbeta där insikter möter idé — testa snabbt, mäta noggrant och bygga upplevelser som både känns och ger effekt. Jag trivs i team där data och design samspelar och ser mig i en roll som bryggar strategi, kommunikation och verktyg för att skapa långsiktigt värde.</p>
           </div>
-          <div class="tile">
-            <h3>Google Tag Manager</h3>
-            <p>Implementerat dataLayer, skapat triggers, tags och variabler för att spåra händelser.</p>
+        </div><!-- /module -->
+
+        <!-- === Mall för framtida kurser (valfri, låt ligga för återanvändning) === -->
+        <h3 class="subhead">[Framtida kurs/modul – Mall]</h3>
+        <div class="module">
+          <div class="grid learnings-grid">
+            <div class="tile">
+              <h3>[Ämne 1]</h3>
+              <p>[Kort beskrivning av vad du gjort/lärt dig inom ämnet]</p>
+            </div>
+            <div class="tile">
+              <h3>[Ämne 2]</h3>
+              <p>[Kort beskrivning]</p>
+            </div>
+            <div class="tile">
+              <h3>[Ämne 3]</h3>
+              <p>[Kort beskrivning]</p>
+            </div>
           </div>
-          <div class="tile">
-            <h3>Scraping</h3>
-            <p>Lärt mig grunderna i web scraping och att hämta data från webbsidor för analys.</p>
-          </div>
-          <div class="tile">
-            <h3>Prompt Engineering</h3>
-            <p>Utforskat tekniker för att skriva effektiva prompts och analysera output från AI-verktyg.</p>
-          </div>
-          <div class="tile">
-            <h3>Looker Studio / Chart.js</h3>
-            <p>x</p>
-          </div>
-          <div class="tile">
-            <h3>Tillväxtstrategier</h3>
-            <p>Introduktion till growth marketing och verktyg för att experimentera och optimera resultat.</p>
+          <div class="tile" style="margin-top:20px">
+            <h3>Reflektion</h3>
+            <p>[Din sammanfattning/reflektion för den här kursen]</p>
           </div>
         </div>
-      </div>
+        <!-- === Slut mall === -->
+
+      </div><!-- /wrap -->
     </section>
-<section id="reflection" class="section">
-  <div class="wrap">
-    <h2 class="h2">Growth & min roll i branschen</h2>
-    <div class="learnings-grid" style="grid-template-columns:1fr">
-      <div class="tile">
-        <p>För mig är growth marketing att kombinera analys och kreativitet. Jag vill arbeta där insikter möter idé — testa snabbt, mäta noggrant och bygga upplevelser som både känns och ger effekt. Jag trivs i team där data och design samspelar och ser mig i en roll som bryggar strategi, kommunikation och verktyg för att skapa långsiktigt värde.</p>
-      </div>
-    </div>
-  </div>
-</section>
 
     <!-- Kontakt -->
     <section id="contact" class="section">
@@ -120,6 +157,7 @@
         <div class="cta-row">
           <a class="btn secondary" href="mailto:ava.urden@gmail.com">Mejl</a>
           <a class="btn secondary" href="https://www.linkedin.com/in/ava-urd%C3%A9n-3014a821b/" target="_blank" rel="noopener">LinkedIn</a>
+          <!-- Se till att filnamnet nedan matchar din faktiska PDF i repots rot -->
           <a class="btn secondary" href="files/ava_cv.pdf" download id="btn-download-cv">Ladda ner CV</a>
         </div>
       </div>
@@ -128,6 +166,7 @@
 
   <script>
     (function () {
+      // --- Tema: query-param -> localStorage -> prefers-color-scheme
       const qs = new URLSearchParams(location.search);
       const paramTheme = (qs.get('theme') || '').toLowerCase();
       const stored = localStorage.getItem('theme');
@@ -140,6 +179,7 @@
 
       setTheme(startTheme, false);
 
+      // Toggle-knapp för tema
       const btn = document.getElementById('theme-toggle');
       btn.addEventListener('click', () => {
         const current = document.documentElement.getAttribute('data-theme');
@@ -150,14 +190,28 @@
         setTheme(next, true);
       });
 
-      document.getElementById('cta-see-learnings').addEventListener('click', () => {
-        window.dataLayer.push({event:'cta_click', cta:'see_learnings', page:'home'});
-      });
+      // CTA: "Se vad jag lärt mig"
+      const cta = document.getElementById('cta-see-learnings');
+      if (cta) {
+        cta.addEventListener('click', () => {
+          window.dataLayer.push({ event: 'cta_click', cta: 'see_learnings', page: 'home' });
+        });
+      }
 
+      // CV-nedladdning
       const cv = document.getElementById('btn-download-cv');
       if (cv) {
         cv.addEventListener('click', () => {
-          window.dataLayer.push({event:'download_cv', file:'cv.pdf', page:'home'});
+          // ÄNDRA 'file' nedan om du byter sökväg/namn (tex "files/ava-urden-cv.pdf")
+          window.dataLayer.push({ event: 'download_cv', file: 'cv.pdf', page: 'home' });
+        });
+      }
+
+      // Exempel-knappen i GTM-rutan
+      const exBtn = document.getElementById('btn-examples');
+      if (exBtn) {
+        exBtn.addEventListener('click', () => {
+          window.dataLayer.push({ event: 'open_examples', via: 'gtm_tile', page: 'home' });
         });
       }
 
