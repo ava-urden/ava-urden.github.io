@@ -1,200 +1,160 @@
 <!DOCTYPE html>
-<html lang="sv">
+<html lang="sv" data-theme="light">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Ava Urdén — Portfolio</title>
   <meta name="description" content="Ava Urdén — Growth Marketing Student @ Berghs School of Communication." />
-  <meta name="theme-color" content="#000000" />
+  <meta name="theme-color" content="#FFFFFF" />
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 
   <!-- Måste finnas innan GTM laddas -->
   <script>window.dataLayer = window.dataLayer || [];</script>
 
   <!-- Google Tag Manager -->
   <script>
-    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+      var f=d.getElementsByTagName(s)[0], j=d.createElement(s), dl=l!='dataLayer'?'&l='+l:'';
+      j.async=true; j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+      f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-5JMB8KM3');
   </script>
   <!-- End Google Tag Manager -->
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css?v=20250907-bw-bubbles-tight" />
 </head>
+
 <body>
   <!-- Google Tag Manager (noscript) -->
-  <noscript>
-    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5JMB8KM3" height="0" width="0" style="display:none;visibility:hidden"></iframe>
-  </noscript>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5JMB8KM3" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-  <!-- Topbar -->
-  <header class="topbar" role="banner">
-    <div class="container topbar-inner">
-      <a class="brand" href="#home">AVA URDÉN</a>
-      <nav class="nav" id="nav" aria-label="Huvudmeny">
-        <a href="#about">About</a>
+  <!-- Top nav -->
+  <header class="site-header">
+    <div class="wrap">
+      <div class="brand">AVA URDÉN</div>
+      <nav class="nav">
+        <a href="#about">Om mig</a>
         <a href="#learnings">Learnings</a>
-        <a href="#contact">Contact</a>
+        <a href="#contact">Kontakt</a>
+        <button id="theme-toggle" class="btn ghost" aria-label="Växla tema">🌓</button>
       </nav>
     </div>
   </header>
 
-  <!-- HERO -->
-  <section class="section hero" id="home" aria-label="Intro">
-    <div class="container">
-      <div class="bubble bubble--hero reveal">
-        <p class="eyebrow">PORTFOLIO</p>
-        <h1 class="title title--thin">AVA&nbsp;URDÉN</h1>
-        <p class="subtitle">Growth Marketing student — Berghs School of Communication</p>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section class="section" id="about" aria-label="About me">
-    <div class="container">
-      <div class="bubble bubble--about split reveal">
-        <div class="split-col">
-          <h2>About me</h2>
-          <p>
-            With a background in communication, marketing and business development, I translate insights into concepts and
-            executions that move the needle — from first tests to scale. Curious about digital tools, data-driven methods and UX,
-            with a strong interest in storytelling and design.
+  <main>
+    <!-- Hero -->
+    <section id="about" class="hero">
+      <div class="card hero-card">
+        <div class="hero-copy">
+          <p class="eyebrow">Portfolio</p>
+          <h1 class="display">Ava Urdén — Portfolio</h1>
+          <p class="lead">
+            22-årig Growth Marketing-student på Berghs School of Communication.
+            Med bakgrund inom kommunikation, marknadsföring och affärsutveckling
+            översätter jag insikter till koncept och lösningar som gör verklig
+            skillnad – från första test till fullskalig lansering. Nyfiken på
+            digitala verktyg, datadrivna metoder och användarupplevelser, med
+            särskilt intresse för storytelling och design.
           </p>
+          <a class="btn primary" href="#learnings" id="cta-see-learnings">Se vad jag lärt mig</a>
         </div>
-        <div class="split-col about-right">
-<figure class="portrait">
-  <img src="images/ava.jpg" alt="Portrait of Ava Urdén" loading="lazy" />
-</figure>
+        <div class="hero-media">
+          <img src="images/ava.jpg" alt="Ava Urdén" class="avatar" />
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- LEARNINGS (tomma rutor) -->
-  <section class="section" id="learnings" aria-label="Learnings">
-    <div class="container">
-      <div class="bubble reveal">
-        <div class="section-head">
-          <h3>What I’ve learned</h3>
-          <p class="muted">Tomma rutor som du fyller på senare.</p>
-        </div>
+    <!-- Learnings -->
+    <section id="learnings" class="section">
+      <div class="wrap">
+        <h2 class="h2">Vad jag lärt mig</h2>
         <div class="grid learnings-grid">
-          <article class="card"><h4>Growth strategies</h4></article>
-          <article class="card"><h4>Git & GitHub (CLI)</h4></article>
-          <article class="card"><h4>GA4</h4></article>
-          <article class="card"><h4>Google Tag Manager</h4></article>
-          <article class="card"><h4>Scraping</h4></article>
-          <article class="card is-empty"><h4>—</h4></article>
-          <article class="card is-empty"><h4>—</h4></article>
-          <article class="card is-empty"><h4>—</h4></article>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section class="section" id="contact" aria-label="Contact">
-    <div class="container">
-      <div class="bubble reveal">
-        <div class="contact">
-          <h3>Contact</h3>
-          <div class="contact-grid">
-            <div>
-              <div class="label">Email</div>
-              <a class="link" href="mailto:ava.urden@gmail.com">ava.urden@gmail.com</a>
-            </div>
-            <div>
-              <div class="label">LinkedIn</div>
-              <a class="link" href="https://www.linkedin.com/in/ava-urd%C3%A9n-3014a821b" target="_blank" rel="noopener">Ava Urdén @LinkedIn</a>
-            </div>
-            <div>
-              <div class="label">CV</div>
-              <a class="link" href="files/ava-urden-cv.pdf" download data-track="cv">Download CV (PDF)</a>
-            </div>
+          <div class="tile">
+            <h3>GitHub & Command Line</h3>
+            <p>text</p>
+          </div>
+          <div class="tile">
+            <h3>Google Analytics 4</h3>
+            <p>text</p>
+          </div>
+          <div class="tile">
+            <h3>Google Tag Manager</h3>
+            <p>Implementerat dataLayer, skapat triggers, tags och variabler för att spåra händelser.</p>
+          </div>
+          <div class="tile">
+            <h3>Scraping</h3>
+            <p>Lärt mig grunderna i web scraping och att hämta data från webbsidor för analys.</p>
+          </div>
+          <div class="tile">
+            <h3>Prompt Engineering</h3>
+            <p>Utforskat tekniker för att skriva effektiva prompts och analysera output från AI-verktyg.</p>
+          </div>
+          <div class="tile">
+            <h3>Looker Studio / Chart.js</h3>
+            <p>Visualiserat data och skapat dashboards som gör information lätt att förstå och agera på.</p>
+          </div>
+          <div class="tile">
+            <h3>Tillväxtstrategier</h3>
+            <p>Introduktion till growth marketing och verktyg för att experimentera och optimera resultat.</p>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- FOOTER -->
-  <footer class="footer" role="contentinfo">
-    <div class="container footer-inner">
-      <small>© 2025 Ava Urdén — Stockholm, Sweden</small>
-    </div>
-  </footer>
+    <!-- Kontakt -->
+    <section id="contact" class="section">
+      <div class="wrap contact">
+        <h2 class="h2">Kontakt</h2>
+        <div class="cta-row">
+          <a class="btn secondary" href="mailto:ava.urden@gmail.com">Mejl</a>
+          <a class="btn secondary" href="https://www.linkedin.com/in/ava-urd%C3%A9n-3014a821b/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn secondary" href="cv.pdf" download id="btn-download-cv">Ladda ner CV</a>
+        </div>
+      </div>
+    </section>
+  </main>
 
-  <!-- Scripts -->
   <script>
-    // In-view reveal
-    const io = new IntersectionObserver((entries)=>{
-      entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }});
-    }, {threshold:.15});
-    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-
-    // Ripple på knappar
-    document.addEventListener('click', (e)=>{
-      const target = e.target.closest('.ripple');
-      if(!target) return;
-      const r = document.createElement('span');
-      const rect = target.getBoundingClientRect();
-      const size = Math.max(rect.width, rect.height);
-      r.style.width = r.style.height = size + 'px';
-      r.style.left = (e.clientX - rect.left - size/2) + 'px';
-      r.style.top  = (e.clientY - rect.top  - size/2) + 'px';
-      r.className = 'r';
-      target.appendChild(r);
-      setTimeout(()=>r.remove(), 600);
-    });
-
-    // Aktiv länk i nav
-    const sections = [...document.querySelectorAll('section.section, .hero')];
-    const navLinks = [...document.querySelectorAll('.nav a')];
-    function setActive(){
-      let idx=-1, top=window.scrollY + 110;
-      sections.forEach((s,i)=>{ if(s.offsetTop <= top) idx = i; });
-      navLinks.forEach(a=>a.classList.remove('active'));
-      const id = sections[idx]?.id;
-      const link = document.querySelector(`.nav a[href="#${id}"]`);
-      if(link) link.classList.add('active');
-    }
-    addEventListener('scroll', setActive);
-    addEventListener('load', setActive);
-
-    // GA4: tracka CV-nedladdning
     (function () {
-      function pushDownloadEvent(anchor) {
-        try {
-          const url = new URL(anchor.href, window.location.origin);
-          window.dataLayer.push({
-            event: 'download_cv',
-            file: url.pathname.split('/').pop(),
-            file_path: url.pathname,
-            file_ext: (url.pathname.split('.').pop() || '').toLowerCase(),
-            link_text: anchor.textContent.trim(),
-            page: window.location.pathname,
-            timestamp: new Date().toISOString()
-          });
-          console.log('[GTM] download_cv pushed:', { file: url.pathname.split('/').pop() });
-        } catch (e) {
-          console.warn('download_cv push failed:', e);
-        }
-      }
-      const pdfLinks = Array.from(document.querySelectorAll('a[download]'))
-        .filter(a => (a.getAttribute('href') || '').toLowerCase().endsWith('.pdf'));
-      const explicitCvLinks = Array.from(document.querySelectorAll('a[data-track="cv"]'));
-      const allCvLinks = Array.from(new Set([...pdfLinks, ...explicitCvLinks]));
-      allCvLinks.forEach(a => {
-        a.addEventListener('click', () => pushDownloadEvent(a));
-        a.addEventListener('keydown', (e) => { if (e.key === 'Enter') pushDownloadEvent(a); });
+      const qs = new URLSearchParams(location.search);
+      const paramTheme = (qs.get('theme') || '').toLowerCase();
+      const stored = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+      const startTheme =
+        (paramTheme === 'dark' || paramTheme === 'light') ? paramTheme :
+        (stored === 'dark' || stored === 'light') ? stored :
+        (prefersDark ? 'dark' : 'light');
+
+      setTheme(startTheme, false);
+
+      const btn = document.getElementById('theme-toggle');
+      btn.addEventListener('click', () => {
+        const current = document.documentElement.getAttribute('data-theme');
+        const next = current === 'dark' ? 'light' : 'dark';
+        const url = new URL(window.location.href);
+        url.searchParams.set('theme', next);
+        history.replaceState(null, '', url.toString());
+        setTheme(next, true);
       });
+
+      document.getElementById('cta-see-learnings').addEventListener('click', () => {
+        window.dataLayer.push({event:'cta_click', cta:'see_learnings', page:'home'});
+      });
+
+      const cv = document.getElementById('btn-download-cv');
+      if (cv) {
+        cv.addEventListener('click', () => {
+          window.dataLayer.push({event:'download_cv', file:'cv.pdf', page:'home'});
+        });
+      }
+
+      function setTheme(theme, pushEvent){
+        document.documentElement.setAttribute('data-theme', theme);
+        localStorage.setItem('theme', theme);
+        if(pushEvent){ window.dataLayer.push({event:'theme_change', theme}); }
+      }
     })();
   </script>
 </body>
