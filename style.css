@@ -105,45 +105,58 @@ body{
 .contact{ display:flex; align-items:center; justify-content:space-between; gap:20px; }
 
 /* ===== Exercises page ===== */
-body.exercises{
+/* ===== Exercises Hero ===== */
+.exercises-hero {
+  background: url("images/city.jpg") no-repeat center center/cover;
+  padding: 100px 20px;
+  text-align: center;
+  color: #fff;
   position: relative;
-  background: url("images/city.jpg") no-repeat center center fixed;
-  background-size: cover;
 }
-body.exercises::before{
-  content:"";
-  position: fixed;
-  inset:0;
-  background: rgba(255,255,255,0.65);
-  z-index:-1;
+.exercises-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45); /* mörk overlay */
 }
-.header{
-  text-align:left;
-  margin:48px 0 16px;
+.exercises-hero .wrap {
+  position: relative;
+  z-index: 1;
 }
-.container{
-  display:grid;
+.exercises-hero h1 {
+  font-size: clamp(36px, 6vw, 64px);
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+.exercises-hero p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ===== Exercises List ===== */
+.exercises-list {
+  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
-  gap:1.5rem;
-  padding:0 0 4rem;
+  gap: 1.5rem;
+  padding: 60px 0;
 }
-.card{
+.exercises-list .card {
   background: var(--card);
-  border:1px solid var(--line);
+  border: 1px solid var(--line);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
-  padding:1.25rem 1.5rem;
-  text-align:center;
+  padding: 1.25rem 1.5rem;
+  text-align: center;
   transition: transform .2s ease, box-shadow .2s ease;
 }
-.card:hover{ transform: translateY(-3px); box-shadow: 0 4px 12px rgba(0,0,0,.12); }
-.card a{
-  text-decoration:none;
-  color: var(--fg);
-  font-weight:600;
+.exercises-list .card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
 }
-body.exercises .wrap a{
+.exercises-list .card a {
+  text-decoration: none;
   color: var(--fg);
-  text-decoration: underline;
-  text-underline-offset: 2px;
+  font-weight: 600;
 }
