@@ -24,7 +24,7 @@ body{
   font-family: Montserrat, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 }
 
-/* ===== Header ===== */
+/* ===== Header (gemensam) ===== */
 .wrap{ max-width:1100px; margin:0 auto; padding:0 20px; }
 .site-header{
   position:sticky; top:0; z-index:50;
@@ -33,12 +33,17 @@ body{
   border-bottom:1px solid var(--line);
 }
 .site-header .wrap{ display:flex; align-items:center; justify-content:space-between; height:64px; }
-.brand{ font-weight:800; letter-spacing:.04em; }
+.brand{
+  font-weight:800; letter-spacing:.04em;
+  text-decoration:none; color:var(--fg);
+}
+.brand:hover{ opacity:.9; }
 .nav{ display:flex; gap:18px; align-items:center; }
 .nav a{ text-decoration:none; color:var(--fg); opacity:.9; }
 .nav a:hover{ opacity:1; }
+.nav a.active{ text-decoration:underline; text-underline-offset:3px; }
 
-/* ===== Hero ===== */
+/* ===== Hero (start) ===== */
 .hero{
   display:grid; place-items:center;
   min-height:calc(100dvh - 64px);
@@ -63,7 +68,7 @@ body{
   border-radius:18px; border:1px solid var(--line); box-shadow:var(--shadow);
 }
 
-/* ===== Learnings ===== */
+/* ===== Learnings (start) ===== */
 .section{ padding:72px 0; border-top:1px solid var(--line); }
 .h2{ font-size:clamp(22px, 3.2vw, 32px); margin:0 0 20px; }
 .learnings-grid{
@@ -104,59 +109,32 @@ body{
 /* ===== Kontakt ===== */
 .contact{ display:flex; align-items:center; justify-content:space-between; gap:20px; }
 
-/* ===== Exercises page ===== */
 /* ===== Exercises Hero ===== */
-.exercises-hero {
-  background: url("images/city.jpg") no-repeat center center/cover;
-  padding: 100px 20px;
-  text-align: center;
-  color: #fff;
-  position: relative;
+.exercises-hero{
+  background:url("images/city.jpg") no-repeat center center/cover;
+  padding:100px 20px;
+  text-align:center;
+  color:#fff; position:relative;
 }
-.exercises-hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.45); /* mörk overlay */
+.exercises-hero::before{
+  content:""; position:absolute; inset:0; background:rgba(0,0,0,.45);
 }
-.exercises-hero .wrap {
-  position: relative;
-  z-index: 1;
-}
-.exercises-hero h1 {
-  font-size: clamp(36px, 6vw, 64px);
-  font-weight: 600;
-  margin-bottom: 12px;
-}
-.exercises-hero p {
-  font-size: 1.1rem;
-  opacity: 0.9;
-  max-width: 600px;
-  margin: 0 auto;
-}
+.exercises-hero .wrap{ position:relative; z-index:1; }
+.exercises-hero h1{ font-size:clamp(36px,6vw,64px); font-weight:600; margin-bottom:12px; }
+.exercises-hero p{ font-size:1.1rem; opacity:.9; max-width:600px; margin:0 auto; }
 
 /* ===== Exercises List ===== */
-.exercises-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
-  gap: 1.5rem;
-  padding: 60px 0;
+.exercises-list{
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:1.5rem; padding:60px 0;
 }
-.exercises-list .card {
-  background: var(--card);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  padding: 1.25rem 1.5rem;
-  text-align: center;
-  transition: transform .2s ease, box-shadow .2s ease;
+.exercises-list .card{
+  background:var(--card); border:1px solid var(--line);
+  border-radius:var(--radius); box-shadow:var(--shadow);
+  padding:1.25rem 1.5rem; text-align:center;
+  transition:transform .2s ease, box-shadow .2s ease;
 }
-.exercises-list .card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
-}
-.exercises-list .card a {
-  text-decoration: none;
-  color: var(--fg);
-  font-weight: 600;
+.exercises-list .card:hover{ transform:translateY(-3px); box-shadow:0 4px 12px rgba(0,0,0,.12); }
+.exercises-list .card a{
+  text-decoration:none; color:var(--fg); font-weight:600;
 }
