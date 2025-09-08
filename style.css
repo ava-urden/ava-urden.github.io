@@ -89,21 +89,36 @@ body{
 .tile h3{ font-size:1.2rem; font-weight:600; margin:0; color:var(--fg); }
 .tile p{ font-size:.95rem; line-height:1.6; color:var(--muted); margin:0; }
 
-/* ===== Buttons ===== */
-.btn{
-  display:inline-flex; align-items:center; justify-content:center;
-  padding:12px 18px; border-radius:999px; border:1px solid var(--line);
-  text-decoration:none; cursor:pointer;
-  transition:transform .04s ease, background .2s ease, border-color .2s ease;
+/* ===== Buttons (alla blå) ===== */
+.btn,
+button,
+input[type="button"],
+input[type="submit"] {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:12px 18px;
+  border-radius:999px;
+  border:none;
+  background:#2B5BFF;  /* blå färg */
+  color:#fff;
+  text-decoration:none;
+  cursor:pointer;
   font-weight:600;
+  transition:background .2s ease, transform .04s ease;
 }
-.btn:active{ transform:translateY(1px); }
-.btn.primary{ background:var(--fg); color:var(--bg); border-color:var(--fg); }
-.btn.primary:hover{ opacity:.95; }
-.btn.secondary{ background:var(--card); color:var(--fg); }
-.btn.secondary:hover{ background:color-mix(in oklab, var(--card) 85%, var(--fg)); }
-.btn.ghost{ background:transparent; color:var(--fg); }
-.btn.ghost:hover{ background:var(--card); }
+.btn:hover,
+button:hover,
+input[type="button"]:hover,
+input[type="submit"]:hover {
+  background:#1f46cc; /* mörkare blå */
+}
+.btn:active,
+button:active,
+input[type="button"]:active,
+input[type="submit"]:active {
+  transform:translateY(1px);
+}
 .cta-row{ display:flex; gap:12px; flex-wrap:wrap; }
 
 /* ===== Kontakt ===== */
@@ -149,21 +164,4 @@ body{
   display: flex;
   gap: 10px;
   margin-top: 1rem;
-}
-/* Alla knappar blåa över hela siten */
-.btn {
-  background: #2B5BFF;   /* blå färg */
-  color: #fff;
-  border: none;
-  border-radius: var(--radius);
-  padding: 0.6rem 1.2rem;
-  font-weight: 600;
-  cursor: pointer;
-  text-decoration: none;
-  display: inline-block;
-  transition: background 0.2s ease;
-}
-
-.btn:hover {
-  background: #1f46cc;   /* lite mörkare blå vid hover */
 }
