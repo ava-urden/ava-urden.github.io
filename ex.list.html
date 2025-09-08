@@ -1,39 +1,74 @@
 <!DOCTYPE html>
-<html lang="sv">
+<html lang="sv" data-theme="light">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Övningar — Ava Urdén</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title>Övningar – Ava Urdén</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Header -->
   <header class="site-header">
     <div class="wrap">
-      <a href="index.html" class="brand">Ava Urdén</a>
+      <div class="brand">AVA URDÉN</div>
       <nav class="nav">
-        <a href="index.html">Start</a>
-        <a href="exercises.html" class="active">Övningar</a>
+        <a href="index.html">Portfolio</a>
       </nav>
     </div>
   </header>
 
-  <!-- Hero -->
-  <section class="exercises-hero">
+  <main class="section">
     <div class="wrap">
-      <h1>Övningar</h1>
-      <p>Övningar som jag genomfört kopplat till Growth Marketing.</p>
-    </div>
-  </section>
+      <h1 class="h2">Övningar från Growth Toolbox</h1>
 
-  <!-- Innehåll -->
-  <main class="wrap exercises-list">
-    <div class="card"><a href="exercises/01a-datalayer/index.html">01a – DataLayer</a></div>
-    <div class="card"><a href="exercises/01b-gtm-js/first-event.html">01b – GTM & JavaScript</a></div>
-    <div class="card"><a href="exercises/01c-queryparams/exercise1-change-h1.html">01c – Query Params: Övning 1</a></div>
-    <div class="card"><a href="exercises/01c-queryparams/exercise2-multi-params.html">01c – Query Params: Övning 2</a></div>
-    <!-- fler kort här -->
+      <div class="grid learnings-grid">
+
+        <div class="tile">
+          <h3>01a – DataLayer</h3>
+          <p>Grunder i dataLayer, skicka händelser som objekt.</p>
+          <a class="btn secondary" href="exercises/01a-datalayer/index.html">Öppna</a>
+        </div>
+
+        <div class="tile">
+          <h3>01b – GTM & JavaScript (First Event)</h3>
+          <p>Skapa och trigga första eventet med GTM.</p>
+          <a class="btn secondary" href="exercises/01b-gtm-js/first-event.html">Öppna</a>
+        </div>
+
+        <div class="tile">
+          <h3>01c.1 – Query params: Change H1</h3>
+          <p>Ändra rubrik baserat på query parameter (?name=Ava).</p>
+          <a class="btn secondary" href="exercises/01c-queryparams/exercise1-change-h1.html">Öppna</a>
+        </div>
+
+        <div class="tile">
+          <h3>01c.2 – Query params: Multi params</h3>
+          <p>Kombinera flera query params i en rubrik.</p>
+          <a class="btn secondary" href="exercises/01c-queryparams/exercise2-multi-params.html">Öppna</a>
+        </div>
+
+        <div class="tile">
+          <h3>01c.3 – Query params: Form</h3>
+          <p>Ladda om sidan med data från formulärfält.</p>
+          <a class="btn secondary" href="exercises/01c-queryparams/exercise3-form.html">Öppna</a>
+        </div>
+
+        <div class="tile">
+          <h3>01c.4 – Query params: Theme</h3>
+          <p>Byt tema baserat på query params (?theme=dark).</p>
+          <a class="btn secondary" href="exercises/01c-queryparams/exercise4-theme.html">Öppna</a>
+        </div>
+
+        <div class="tile">
+          <h3>01c.5 – Query params: Dynamic content</h3>
+          <p>Ladda dynamiskt innehåll med query params.</p>
+          <a class="btn secondary" href="exercises/01c-queryparams/exercise5-dynamic-content.html">Öppna</a>
+        </div>
+
+      </div>
+
+      <p style="margin-top:2rem">
+        <a class="btn ghost" href="index.html">⬅ Tillbaka till start</a>
+      </p>
+    </div>
   </main>
 </body>
 </html>
