@@ -8,7 +8,7 @@
   <meta name="theme-color" content="#FFFFFF" />
 
   <!-- Fonts & CSS -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 
   <!-- Måste finnas INNAN GTM laddas -->
@@ -51,7 +51,9 @@
         <div class="card hero-card">
           <div class="hero-copy">
             <p class="eyebrow">Portfolio</p>
-            <h1 id="hero-title" class="display">Ava Urdén — Portfolio</h1>
+            <h1 id="hero-title" class="display">
+              <span class="name-upper">AVA URDÉN</span> — Portfolio
+            </h1>
             <p class="lead">
               22-årig Growth Marketing-student på Berghs School of Communication.
               Med bakgrund inom kommunikation, marknadsföring och affärsutveckling
@@ -64,23 +66,33 @@
             </div>
           </div>
           <div class="hero-media">
-            <img src="images/ava.jpg" alt="Porträtt av Ava Urdén" class="avatar" loading="lazy" />
+            <img src="images/ava.jpg" alt="Porträtt av Ava Urdén" class="avatar" loading="lazy"
+                 onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1600 900%22&gt;&lt;rect width=%22100%25%22 height=%22100%25%22 fill=%22%23e8ebf3%22 /&gt;&lt;/svg&gt;';" />
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Learnings (ett block) -->
+    <!-- Learnings -->
     <section id="learnings" class="section" aria-labelledby="learn-title">
       <div class="wrap">
-        <h2 id="learn-title" class="h2">Vad jag lärt mig</h2>
+        <h2 id="learn-title" class="h2">Lärt mig — Growth Toolbox</h2>
+
         <div class="tile tile-block">
-          <ul class="tool-list compact">
-            <li><strong>Tillväxtstrategier:</strong> Hypotes → test → mät. Funnel-analys, ICE-prioritering.</li>
-            <li><strong>GitHub & Command Line:</strong> Initiera repo, brancher, commit/push, GitHub Pages.</li>
-            <li><strong>Google Analytics 4:</strong> Realtime/DebugView, egna events via GTM.</li>
-            <li><strong>Google Tag Manager:</strong> dataLayer, triggers, variabler och tags för GA4.</li>
-            <li><strong>Scraping:</strong> Selektorer, hämta HTML, strukturera data, etik & robots.txt.</li>
+          <p class="learn-intro">
+            Tillväxtstrategier: Hypotes → test → mät. Funnel-analys, ICE-prioritering. <br>
+            GitHub & Command Line: Initiera repo, brancher, commit/push, GitHub Pages. <br>
+            Google Analytics 4: Realtime/DebugView, egna events via GTM. <br>
+            Google Tag Manager: dataLayer, triggers, variabler och tags för GA4. <br>
+            Scraping: Selektorer, hämta HTML, strukturera data, etik &amp; robots.txt.
+          </p>
+
+          <ul class="tool-list compact pill-list">
+            <li><strong>Tillväxtstrategier</strong></li>
+            <li><strong>GitHub &amp; Command Line</strong></li>
+            <li><strong>Google Analytics 4</strong></li>
+            <li><strong>Google Tag Manager</strong></li>
+            <li><strong>Scraping</strong></li>
           </ul>
 
           <div class="module-cta">
@@ -98,45 +110,54 @@
       </div>
     </section>
 
-    <!-- Projects / Cases (större bilder, label på omslag, text på hover – inga knappar) -->
+    <!-- Projects / Cases -->
     <section id="projects" class="section" aria-labelledby="proj-title">
       <div class="wrap">
         <h2 id="proj-title" class="h2">Case & Projekt</h2>
-        <p class="muted">Urval av arbeten. Label syns alltid; mer text visas vid hover.</p>
+        <p class="muted">Label syns alltid. Hovra för mer kontext. Inga knappar.</p>
 
         <div class="cards grid-projects">
-          <!-- Case 1: Fotografiska -->
+          <!-- Case 1 -->
           <article class="card project image-card" data-project="fotografiska" data-type="concept">
             <figure class="image-wrapper">
-              <img src="images/subway.png" alt="Case: Fotografiska – Alla är fotografer" loading="lazy">
+              <img src="images/case-fotografiska.jpg" alt="Fotografiska — Alla är fotografer" loading="lazy"
+                   onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1600 900%22&gt;&lt;rect width=%22100%25%22 height=%221100%25%22 fill=%22%23e8ebf3%22 /&gt;&lt;/svg&gt;';">
               <div class="label"><span>Koncept</span></div>
               <figcaption class="overlay">
-                <h3 class="h3">Fotografiska — “Alla är fotografer”</h3>
-                <p>Flytta “Scrollern” från mobil till museum med AI-kurering, spegelkuber & UGC.</p>
+                <div class="overlay-inner">
+                  <h3 class="h3">Fotografiska — “Alla är fotografer”</h3>
+                  <p>Flytta ”Scrollern” från mobil till museum med AI-kurering, spegelkuber & UGC.</p>
+                </div>
               </figcaption>
             </figure>
           </article>
 
-          <!-- Case 2: X YOU -->
+          <!-- Case 2 -->
           <article class="card project image-card" data-project="x-you" data-type="growth">
             <figure class="image-wrapper">
-              <img src="images/case-x-you.jpg" alt="Case: X YOU – Growth-projekt" loading="lazy">
+              <img src="images/case-x-you.jpg" alt="X YOU — Growth-projekt" loading="lazy"
+                   onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1600 900%22&gt;&lt;rect width=%22100%25%22 height=%22100%25%22 fill=%22%23e8ebf3%22 /&gt;&lt;/svg&gt;';">
               <div class="label"><span>Growth Marketing</span></div>
               <figcaption class="overlay">
-                <h3 class="h3">X YOU — Growth-projekt</h3>
-                <p>SPIN, Double Diamond, experiment, CRO/SEO & storytelling.</p>
+                <div class="overlay-inner">
+                  <h3 class="h3">X YOU — Growth-projekt</h3>
+                  <p>SPIN, Double Diamond, experiment, CRO/SEO & storytelling.</p>
+                </div>
               </figcaption>
             </figure>
           </article>
 
-          <!-- Case 3: Scraping -->
+          <!-- Case 3 -->
           <article class="card project image-card" data-project="scraping" data-type="tech">
             <figure class="image-wrapper">
-              <img src="images/case-scraping.jpg" alt="Case: Scraping – Prisjakt/CSV" loading="lazy">
+              <img src="images/case-scraping.jpg" alt="Prisjakt — Scraping & CSV" loading="lazy"
+                   onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1600 900%22&gt;&lt;rect width=%22100%25%22 height=%22100%25%22 fill=%22%23e8ebf3%22 /&gt;&lt;/svg&gt;';">
               <div class="label"><span>Tech</span></div>
               <figcaption class="overlay">
-                <h3 class="h3">Prisjakt — Scraping & CSV</h3>
-                <p>Playwright-script som hämtar produktdata och exporterar till CSV för prisanalys.</p>
+                <div class="overlay-inner">
+                  <h3 class="h3">Prisjakt — Scraping & CSV</h3>
+                  <p>Playwright-script som hämtar produktdata och exporterar till CSV för prisanalys.</p>
+                </div>
               </figcaption>
             </figure>
           </article>
@@ -163,14 +184,13 @@
     </div>
   </footer>
 
-  <!-- Samlat script: tema + events -->
+  <!-- Samlat script: tema + events (oförändrat) -->
   <script>
   (function () {
     window.dataLayer = window.dataLayer || [];
     const PAGE = 'home';
     function pushEvent(name, params = {}) {
-      const payload = { event: name, page: PAGE, ...params };
-      window.dataLayer.push(payload);
+      window.dataLayer.push({ event: name, page: PAGE, ...params });
     }
 
     // Starttema (query → storage → prefers)
@@ -178,12 +198,10 @@
     const paramTheme = (qs.get('theme') || '').toLowerCase();
     const stored = localStorage.getItem('theme');
     const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-
     const startTheme =
       (paramTheme === 'dark' || paramTheme === 'light') ? paramTheme :
       (stored === 'dark' || stored === 'light') ? stored :
       (prefersDark ? 'dark' : 'light');
-
     setTheme(startTheme, false);
 
     // Toggle
@@ -204,23 +222,15 @@
       if (push) pushEvent('theme_change', { theme });
     }
 
-    // CTA
+    // CTA/links
     const cta = document.getElementById('cta-see-learnings');
     if (cta) cta.addEventListener('click', () => pushEvent('cta_click', { cta: 'see_learnings' }));
-
-    // CV
     const cv = document.getElementById('btn-download-cv');
     if (cv) cv.addEventListener('click', () => pushEvent('download_cv', { file: 'files/ava_cv.pdf' }));
-
-    // Övningar
     const exBtn = document.getElementById('btn-examples');
     if (exBtn) exBtn.addEventListener('click', () => pushEvent('open_examples', { via: 'gtm_tile' }));
-
-    // LinkedIn
     const linkedIn = document.querySelector('a[href*="linkedin.com"]');
     if (linkedIn) linkedIn.addEventListener('click', () => pushEvent('linkedin_click', { link_url: linkedIn.href }));
-
-    // Mejl
     const mail = document.querySelector('a[href^="mailto:"]');
     if (mail) mail.addEventListener('click', () => pushEvent('email_click', { link_url: mail.href }));
 
