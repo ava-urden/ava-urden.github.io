@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="sv" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Growth Toolbox — Ava Urdén</title>
+  <meta name="description" content="Hands-on work from Growth Toolbox: data layer, GTM events, query params, Chart.js and Looker Studio." />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+
+  <script>window.dataLayer = window.dataLayer || [];</script>
+  <script>
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+  var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;
+  j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-5JMB8KM3');</script>
+</head>
+<body>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5JMB8KM3" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <header class="site-header">
+    <div class="container header-row">
+      <a href="index.html" class="brand">Ava Urdén</a>
+      <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-nav">☰</button>
+      <nav id="site-nav" class="nav">
+        <a href="index.html#about">About</a>
+        <a href="cases.html">Cases</a>
+        <a class="active" href="growth-toolbox.html">Growth Toolbox</a>
+        <a href="learnings.html">Learnings</a>
+        <a href="tools.html">Tools</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <h1>Growth Toolbox</h1>
+      <p class="muted">Deliverables and knowledge from my first course at Berghs. Everything is hands-on and measurable.</p>
+
+      <div class="grid-2">
+        <div class="card reveal">
+          <h3>What I know (so far)</h3>
+          <ul class="list">
+            <li>Set up GA4 + measurement framework with KPIs</li>
+            <li>Implement GTM with a clean dataLayer & naming conventions</li>
+            <li>Create GTM tags/triggers/variables for UI clicks & section views</li>
+            <li>Use query parameters to personalize content</li>
+            <li>Scrape public data (Playwright/Python basics)</li>
+            <li>Visualize with Chart.js and Looker Studio</li>
+            <li>Ship to GitHub Pages, version control with Git</li>
+          </ul>
+        </div>
+
+        <div class="card reveal">
+          <h3>Showcase</h3>
+          <p class="muted small">Open the examples below to see code running.</p>
+          <ul class="list">
+            <li><a href="examples/01a-datalayer/index.html">01a — Data Layer demo</a></li>
+            <li><a href="examples/01b-gtm-js/index.html">01b — GTM & JavaScript events</a></li>
+            <li><a href="examples/01c-queryparams/index.html">01c — Query params</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="grid-2" style="margin-top:24px;">
+        <div class="card reveal">
+          <h3>Chart.js (demo)</h3>
+          <canvas id="gtChart" width="400" height="300"></canvas>
+          <p class="muted small">Measurable progress snapshot.</p>
+        </div>
+        <div class="card reveal">
+          <h3>Looker Studio</h3>
+          <p class="muted small">Merchant Store example / your own data (replace link).</p>
+          <div class="report-embed">
+            <iframe title="Looker Studio"
+              src="https://lookerstudio.google.com/embed/reporting/REPLACE-WITH-YOUR-REPORT"
+              frameborder="0" style="width:100%;height:420px;border:0;" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+
+      <div class="card reveal" style="margin-top:24px;">
+        <h3>Reflection</h3>
+        <p>What I learned, where I struggled, how I solved it, and how this supports real growth work with brands.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container small">
+      <span>© <span id="year"></span> Ava Urdén</span>
+      <a class="link" href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    const ctx = document.getElementById('gtChart');
+    if (ctx) {
+      new Chart(ctx, {
+        type: 'bar',
+        data: { labels: ['GA4','GTM','Scraping','Query Params','Chart.js','GitHub'],
+          datasets:[{ label:'Confidence (0–10)', data:[7,8,5,6,7,8] }] },
+        options:{ responsive:true, plugins:{legend:{display:false}}, scales:{ y:{ suggestedMin:0, suggestedMax:10 } } }
+      });
+      window.pushDL && window.pushDL('chart_render', { chart_id: 'gtChart' });
+    }
+  </script>
+</body>
+</html>

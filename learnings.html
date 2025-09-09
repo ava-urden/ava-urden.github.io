@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="sv" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Learnings — Ava Urdén</title>
+  <meta name="description" content="What I’ve learned so far: GA4, GTM, scraping, prompt engineering, Chart.js, Looker Studio." />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+
+  <script>window.dataLayer = window.dataLayer || [];</script>
+  <script>
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+  var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;
+  j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-5JMB8KM3');</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5JMB8KM3" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <header class="site-header">
+    <div class="container header-row">
+      <a href="index.html" class="brand">Ava Urdén</a>
+      <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-nav">☰</button>
+      <nav id="site-nav" class="nav">
+        <a href="index.html#about">About</a>
+        <a href="cases.html">Cases</a>
+        <a href="growth-toolbox.html">Growth Toolbox</a>
+        <a class="active" href="learnings.html">Learnings</a>
+        <a href="tools.html">Tools</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <h1>Learnings</h1>
+      <p class="muted">Continuous updates during my study year.</p>
+
+      <div class="grid-2">
+        <div class="card reveal">
+          <h3>Course checklist</h3>
+          <ul class="list">
+            <li>✅ GitHub & Command Line basics</li>
+            <li>✅ Google Analytics 4</li>
+            <li>✅ Google Tag Manager + Data Layer</li>
+            <li>✅ Prompt engineering & analysis</li>
+            <li>🔄 Scraping (Playwright / Python)</li>
+            <li>✅ Chart.js • 🔄 Looker Studio</li>
+            <li>🔄 Growth overview & where I see myself</li>
+          </ul>
+        </div>
+
+        <div class="card reveal">
+          <h3>Skills snapshot (Chart.js)</h3>
+          <canvas id="skillsChart" width="400" height="300"
+                  data-track="view_chart" data-event="chart_render" data-label="Skills Chart"></canvas>
+          <p class="muted small">Demo data — update as you progress.</p>
+        </div>
+      </div>
+
+      <div class="card reveal" style="margin-top:24px;">
+        <h3>Reflection (self-assessment)</h3>
+        <p>Thoughts on what I’ve learned, surprises, and where I’m heading in Growth Marketing…</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container small">
+      <span>© <span id="year"></span> Ava Urdén</span>
+      <a class="link" href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+  <script>
+    const ctx = document.getElementById('skillsChart');
+    if (ctx) {
+      const chart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: ['GA4', 'GTM', 'Scraping', 'SEO/Content', 'Prompting', 'Dashboards'],
+          datasets: [{ label: 'Confidence (0–10)', data: [7, 8, 5, 6, 8, 6] }]
+        },
+        options: { responsive:true, plugins:{ legend:{ display:false } }, scales:{ y:{ suggestedMin:0, suggestedMax:10 } } }
+      });
+      window.pushDL && window.pushDL('chart_render', { chart_id: 'skillsChart' });
+    }
+  </script>
+</body>
+</html>
