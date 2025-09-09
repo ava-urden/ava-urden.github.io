@@ -4,39 +4,40 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Ava Urdén — Growth Marketing Student @ Berghs</title>
-  <meta name="description" content="Ava Urdén — Growth Marketing student at Berghs School of Communication. Cases, Growth Toolbox, learnings, tools and contact." />
+  <meta name="description" content="Portfolio of Ava Urdén. Work (Cases + Growth Toolbox), About, and Contact." />
   <meta name="theme-color" content="#ffffff" />
 
+  <!-- Editorial fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css" />
 
-  <!-- dataLayer MUST come before GTM -->
+  <!-- dataLayer BEFORE GTM -->
   <script>window.dataLayer = window.dataLayer || [];</script>
   <!-- Google Tag Manager -->
-  <script>
-  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-5JMB8KM3');
-  </script>
-  <!-- End GTM -->
+  })(window,document,'script','dataLayer','GTM-5JMB8KM3');</script>
+
+  <!-- Chart.js (for Toolbox tab chart) -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
   <!-- GTM (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5JMB8KM3" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5JMB8KM3"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
+  <!-- Header -->
   <header class="site-header">
     <div class="container header-row">
-      <a href="index.html" class="brand" data-track="click" data-event="nav_click" data-label="Brand">Ava Urdén</a>
-      <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-nav">☰</button>
+      <a href="#top" class="brand" data-track="click" data-event="nav_click" data-label="Brand">Ava Urdén</a>
+      <button class="menu-toggle" aria-label="Meny" aria-expanded="false" aria-controls="site-nav">☰</button>
       <nav id="site-nav" class="nav">
         <a href="#about" data-track="click" data-event="nav_click" data-label="About">About</a>
-        <a href="cases.html" data-track="click" data-event="nav_click" data-label="Cases">Cases</a>
-        <a href="growth-toolbox.html" data-track="click" data-event="nav_click" data-label="Growth Toolbox">Growth Toolbox</a>
-        <a href="learnings.html" data-track="click" data-event="nav_click" data-label="Learnings">Learnings</a>
-        <a href="tools.html" data-track="click" data-event="nav_click" data-label="Tools">Tools</a>
+        <a href="#work" data-track="click" data-event="nav_click" data-label="Work">Work</a>
         <a href="#contact" data-track="click" data-event="nav_click" data-label="Contact">Contact</a>
       </nav>
     </div>
@@ -49,11 +50,11 @@
       <h1 class="display">Ava Urdén</h1>
       <p class="subtitle">Growth Marketing Student @ Berghs School of Communication</p>
       <div class="cta-row">
-        <a class="btn" href="cases.html" data-track="click" data-event="cta_click" data-label="See Cases">See cases</a>
-        <a class="btn ghost" href="growth-toolbox.html" data-track="click" data-event="cta_click" data-label="Growth Toolbox">Growth Toolbox</a>
+        <a class="btn" href="#work" data-track="click" data-event="cta_click" data-label="See Work">See work</a>
+        <a class="btn ghost" href="#about" data-track="click" data-event="cta_click" data-label="About">About me</a>
       </div>
     </div>
-    <img class="hero-image" src="images/city.jpg" alt="Hero image" />
+    <img class="hero-image" src="images/city.jpg" alt="City skyline" />
   </section>
 
   <!-- About -->
@@ -65,7 +66,7 @@
           <p>
             I’m a curious, structured and creatively driven growth marketer studying at Berghs.
             I build measurable systems, design experiences, and turn insights into growth.
-            This portfolio collects my cases, my Growth Toolbox, and the tools I use.
+            This one-page portfolio shows my cases and the hands-on Growth Toolbox I’m building.
           </p>
           <div class="pill-row">
             <span class="pill">Growth strategy</span>
@@ -83,48 +84,120 @@
     </div>
   </section>
 
-  <!-- Featured cases (image sneak peeks) -->
-  <section class="section alt reveal" data-observe="section" data-section-id="cases-preview">
+  <!-- Work (tabs) -->
+  <section class="section alt reveal" id="work" data-observe="section" data-section-id="work">
+    <div class="work-bg-mask"></div>
     <div class="container">
       <div class="section-head">
-        <h2>Featured cases</h2>
-        <a class="link" href="cases.html" data-track="click" data-event="link_click" data-label="All Cases">All cases →</a>
+        <h2>Work</h2>
       </div>
 
-      <div class="grid-3 grid-cases">
-        <a class="case-card image" href="cases.html#case-1" data-track="click" data-event="case_click" data-label="Case 1">
-          <figure class="case-figure">
-            <img src="images/cases/case-1.jpg" alt="Sneak peek — Scroller to Visitor funnel" loading="lazy">
-            <figcaption>
-              <span class="eyebrow">Museum funnel</span>
-              <h3>Traffic → Visits</h3>
-              <div class="tags"><span class="tag">GA4</span><span class="tag">GTM</span><span class="tag">CX</span></div>
-            </figcaption>
-          </figure>
-        </a>
-
-        <a class="case-card image" href="cases.html#case-2" data-track="click" data-event="case_click" data-label="Case 2">
-          <figure class="case-figure">
-            <img src="images/cases/case-2.jpg" alt="Sneak peek — SEO + Content" loading="lazy">
-            <figcaption>
-              <span class="eyebrow">Search & Story</span>
-              <h3>SEO + Content</h3>
-              <div class="tags"><span class="tag">SEO</span><span class="tag">Editorial</span><span class="tag">CRO</span></div>
-            </figcaption>
-          </figure>
-        </a>
-
-        <a class="case-card image" href="cases.html#case-3" data-track="click" data-event="case_click" data-label="Case 3">
-          <figure class="case-figure">
-            <img src="images/cases/case-3.jpg" alt="Sneak peek — CRO & Tracking" loading="lazy">
-            <figcaption>
-              <span class="eyebrow">Data you trust</span>
-              <h3>CRO & Tracking</h3>
-              <div class="tags"><span class="tag">GTM</span><span class="tag">GA4</span><span class="tag">Governance</span></div>
-            </figcaption>
-          </figure>
-        </a>
+      <!-- Tabs -->
+      <div class="tabs" role="tablist" aria-label="Work views">
+        <button class="tab is-active" role="tab" aria-selected="true" aria-controls="panel-cases" id="tab-cases" data-tab="cases">Cases</button>
+        <button class="tab" role="tab" aria-selected="false" aria-controls="panel-toolbox" id="tab-toolbox" data-tab="toolbox">Growth Toolbox</button>
+        <button class="tab" role="tab" aria-selected="false" aria-controls="panel-perf" id="tab-perf" data-tab="perf">Performance Marketing</button>
+        <button class="tab" role="tab" aria-selected="false" aria-controls="panel-future1" id="tab-future1" data-tab="future1">Future Area 1</button>
+        <button class="tab" role="tab" aria-selected="false" aria-controls="panel-future2" id="tab-future2" data-tab="future2">Future Area 2</button>
       </div>
+
+      <!-- Cases panel (image-only previews) -->
+      <div class="tab-panel is-active" id="panel-cases" role="tabpanel" aria-labelledby="tab-cases">
+        <div class="grid-3 grid-cases" style="margin-top:16px;">
+          <a class="case-card image" href="#" aria-label="Traffic to Visits">
+            <figure class="case-figure">
+              <img src="images/cases/case-1.jpg" alt="Traffic to Visits case" loading="lazy">
+            </figure>
+          </a>
+          <a class="case-card image" href="#" aria-label="SEO + Content">
+            <figure class="case-figure">
+              <img src="images/cases/case-2.jpg" alt="SEO + Content case" loading="lazy">
+            </figure>
+          </a>
+          <a class="case-card image" href="#" aria-label="CRO & Tracking">
+            <figure class="case-figure">
+              <img src="images/cases/case-3.jpg" alt="CRO & Tracking case" loading="lazy">
+            </figure>
+          </a>
+        </div>
+      </div>
+
+      <!-- Toolbox panel -->
+      <div class="tab-panel" id="panel-toolbox" role="tabpanel" aria-labelledby="tab-toolbox">
+        <div class="grid-2" style="margin-top:16px;">
+          <div class="card reveal">
+            <h3>Growth Toolbox — Overview</h3>
+            <ul class="list">
+              <li>GA4 setup + KPI framework</li>
+              <li>Clean GTM + dataLayer structure</li>
+              <li>UI event tracking (clicks, section views, outbound)</li>
+              <li>Query params for personalization</li>
+              <li>Charts (Chart.js) + dashboarding (Looker Studio)</li>
+              <li>GitHub Pages + version control</li>
+            </ul>
+          </div>
+
+          <div class="card reveal">
+            <h3>Skills snapshot (Chart.js)</h3>
+            <canvas id="skillsChart" width="400" height="300"></canvas>
+            <p class="muted small">Demo data — update as you progress.</p>
+          </div>
+        </div>
+
+        <div class="grid-2" style="margin-top:16px;">
+          <div class="card reveal">
+            <h3>Tools</h3>
+            <ul class="list">
+              <li>Google Analytics 4</li>
+              <li>Google Tag Manager</li>
+              <li>Looker Studio</li>
+              <li>Chart.js</li>
+              <li>GitHub, CLI, VS Code</li>
+            </ul>
+          </div>
+          <div class="card reveal">
+            <h3>Examples (course demos)</h3>
+            <ul class="list">
+              <li><a href="examples/01a-datalayer/index.html">01a — Data Layer</a></li>
+              <li><a href="examples/01b-gtm-js/index.html">01b — GTM & JavaScript</a></li>
+              <li><a href="examples/01c-queryparams/index.html">01c — Query Params</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card reveal" style="margin-top:16px;">
+          <h3>Reflection</h3>
+          <p>What I learned so far, what surprised me, and where I want to go next in Growth Marketing…</p>
+        </div>
+      </div>
+
+      <!-- Performance Marketing panel -->
+      <div class="tab-panel" id="panel-perf" role="tabpanel" aria-labelledby="tab-perf">
+        <div class="card reveal" style="margin-top:16px;">
+          <h3>Performance Marketing</h3>
+          <p class="muted">Add paid channels, funnel experiments, creatives, and results here.</p>
+          <ul class="list">
+            <li>Channel mix & budget split</li>
+            <li>Creative testing framework</li>
+            <li>Attribution / incrementality notes</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Future placeholders -->
+      <div class="tab-panel" id="panel-future1" role="tabpanel" aria-labelledby="tab-future1">
+        <div class="card reveal" style="margin-top:16px;">
+          <h3>Coming soon</h3>
+          <p class="muted">Reserved for a future area of your portfolio.</p>
+        </div>
+      </div>
+      <div class="tab-panel" id="panel-future2" role="tabpanel" aria-labelledby="tab-future2">
+        <div class="card reveal" style="margin-top:16px;">
+          <h3>Coming soon</h3>
+          <p class="muted">Reserved for a future area of your portfolio.</p>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -141,6 +214,7 @@
     </div>
   </section>
 
+  <!-- Footer -->
   <footer class="site-footer">
     <div class="container small">
       <span>© <span id="year"></span> Ava Urdén • Stockholm</span>
