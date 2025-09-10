@@ -1,266 +1,195 @@
 <!DOCTYPE html>
-<html lang="sv" data-theme="light">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ava Urdén — Growth Marketing Student @ Berghs</title>
-  <meta name="description" content="Ava Urdén — Growth Marketing student at Berghs. Earlier work and Growth Assignment with learnings, examples, Chart.js, and Looker Studio." />
-  <meta name="theme-color" content="#ffffff" />
-
-  <!-- Editorial fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-
+  <title>Ava Urdén — Portfolio</title>
+  <meta name="description" content="Ava Urdén — Growth Marketing student @ Berghs School of Communication." />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
-
-  <!-- dataLayer BEFORE GTM -->
-  <script>window.dataLayer = window.dataLayer || [];</script>
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-5JMB8KM3');</script>
-
-  <!-- Chart.js (for assignment graph) -->
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-  <!-- GTM (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5JMB8KM3"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-
-  <!-- Header -->
-  <header class="site-header">
-    <div class="container header-row">
-      <a href="#top" class="brand" data-track="click" data-event="nav_click" data-label="Brand">Ava Urdén</a>
-      <button class="menu-toggle" aria-label="Meny" aria-expanded="false" aria-controls="site-nav">☰</button>
-      <nav id="site-nav" class="nav">
-        <a href="#about" data-track="click" data-event="nav_click" data-label="About">About</a>
-        <a href="#work" data-track="click" data-event="nav_click" data-label="Work">Earlier Work</a>
-        <a href="#assignment" data-track="click" data-event="nav_click" data-label="Assignment">Growth Assignment</a>
-        <a href="#contact" data-track="click" data-event="nav_click" data-label="Contact">Contact</a>
+  <!-- Header / Nav -->
+  <header class="header">
+    <div class="container header-inner">
+      <div class="brand">Portfolio</div>
+      <nav class="nav" aria-label="Main">
+        <a href="#about">About</a>
+        <a href="#expertise">My Expertise</a>
+        <a href="#courses">Courses</a>
+        <a href="#cases">Cases</a>
+        <a href="#contact">Contact</a>
       </nav>
     </div>
   </header>
 
-  <!-- Hero -->
-  <section class="hero" id="top" data-observe="section" data-section-id="hero">
-    <div class="hero-bg"></div>
-    <div class="hero-inner">
-      <h1 class="display">Ava Urdén</h1>
-      <p class="subtitle">Growth Marketing Student @ Berghs School of Communication</p>
-      <div class="cta-row">
-        <a class="btn" href="#work" data-track="click" data-event="cta_click" data-label="See Work">See work</a>
-        <a class="btn ghost" href="#assignment" data-track="click" data-event="cta_click" data-label="Assignment">Growth Assignment</a>
+  <main class="container">
+    <!-- Hero -->
+    <section class="hero" id="home">
+      <div>
+        <h1 class="hero-name">AVA<br>URDÉN</h1>
+        <p class="hero-sub">Growth Marketing student @ Berghs School of Communication</p>
       </div>
-    </div>
-    <img class="hero-image" src="images/city.jpg" alt="City skyline" />
-  </section>
+      <div class="btn-stack" aria-label="Quick links">
+        <a class="btn" href="#about">About Me</a>
+        <a class="btn" href="#courses">Courses</a>
+        <a class="btn" href="#cases">Cases</a>
+        <a class="btn" href="#contact">Contact</a>
+      </div>
+    </section>
 
-  <!-- About (short) -->
-  <section class="section reveal" id="about" data-observe="section" data-section-id="about">
-    <div class="container">
-      <div class="grid-2">
-        <div>
-          <h2>About me</h2>
-          <p>
-            I’m a curious, structured and creatively driven growth marketer studying at Berghs.
-            I build measurable systems, design experiences, and turn insights into growth.
-          </p>
-          <div class="pill-row">
-            <span class="pill">Growth strategy</span>
-            <span class="pill">GA4 & GTM</span>
-            <span class="pill">Scraping</span>
-            <span class="pill">SEO & Content</span>
-            <span class="pill">Chart.js & Looker Studio</span>
+    <!-- About (with profile image) -->
+    <section class="section" id="about">
+  <h2 class="h1">About me</h2>
+  <p class="sub">Curious, hands-on, and data-driven with a creative streak.</p>
+
+  <div class="grid two">
+    <div>
+      <img class="profile" src="images/ava.jpg" alt="Portrait of Ava Urdén">
+    </div>
+    <div class="grid" style="gap:20px;">
+      <article class="card">
+        <h3>Short bio</h3>
+        <p>I work across communication, marketing, and business development. I love turning insights into clear concepts and measurable growth.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Expertise (bubble style) -->
+    <section class="section" id="expertise">
+      <h2 class="h1">My expertise</h2>
+      <p class="sub">Bubbles show the area + a short note of what I do.</p>
+
+      <div class="bubbles">
+        <div class="bubble">
+          <h4>GTM</h4>
+          <p>Clean container setup, events, data layer, debugging.</p>
+        </div>
+        <div class="bubble">
+          <h4>GA4</h4>
+          <p>Meaningful KPIs, explorations, funnels, reporting.</p>
+        </div>
+        <div class="bubble">
+          <h4>SEO Basics</h4>
+          <p>Keywords, on-page structure, internal links, snippets.</p>
+        </div>
+        <div class="bubble">
+          <h4>CRO</h4>
+          <p>Hypotheses, A/B thinking, UX micro-copy, forms.</p>
+        </div>
+        <div class="bubble">
+          <h4>Dashboards & KPIs</h4>
+          <p>Sheets/Looker basics, weekly updates, learnings log.</p>
+        </div>
+        <div class="bubble">
+          <h4>Scraping (basics)</h4>
+          <p>Playwright/Node intro, CSV exports for analysis.</p>
+        </div>
+        <div class="bubble">
+          <h4>HTML/CSS/JS</h4>
+          <p>Small sites, tracking hooks, component tweaks.</p>
+        </div>
+        <div class="bubble">
+          <h4>Graphic & Presentation</h4>
+          <p>Canva, Adobe, storytelling decks, pitch structure.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Courses (3) with preview images -->
+    <section class="section" id="courses">
+      <h2 class="h1">Courses</h2>
+      <p class="sub">Three core tracks this year.</p>
+
+      <div class="cards-3">
+        <a class="card-link" href="cab.html">
+          <img class="thumb" src="assets/courses/cab.jpg" alt="CAB course preview">
+          <div class="card-body">
+            <h3>CAB — Communication According to Berghs</h3>
+            <p>Problem framing, the “Scroller,” and the concept “Everyone is a Photographer.”</p>
           </div>
-        </div>
-        <div class="card card-glass align-center">
-          <img src="images/ava.jpg" alt="Ava Urdén" class="avatar" />
-          <p class="muted">Stockholm • Open to collabs & internships</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Earlier Work -->
-  <section class="section alt reveal" id="work" data-observe="section" data-section-id="work">
-    <div class="container">
-      <div class="section-head">
-        <h2>Earlier work</h2>
-      </div>
-
-      <!-- Image-only previews (clean overlays) -->
-      <div class="grid-3 grid-cases" style="margin-top:16px;">
-        <a class="case-card image" href="#case-1" aria-label="Case 1">
-          <figure class="case-figure">
-            <img src="images/cases/case-1.jpg" alt="Case preview 1" loading="lazy">
-          </figure>
         </a>
-        <a class="case-card image" href="#case-2" aria-label="Case 2">
-          <figure class="case-figure">
-            <img src="images/cases/case-2.jpg" alt="Case preview 2" loading="lazy">
-          </figure>
+
+        <a class="card-link" href="growth-toolbox.html">
+          <img class="thumb" src="assets/courses/growth-toolbox.jpg" alt="Growth Toolbox preview">
+          <div class="card-body">
+            <h3>Growth Toolbox</h3>
+            <p>GTM, GA4, clean event design, data layer, scraping, dashboards.</p>
+          </div>
         </a>
-        <a class="case-card image" href="#case-3" aria-label="Case 3">
-          <figure class="case-figure">
-            <img src="images/cases/case-3.jpg" alt="Case preview 3" loading="lazy">
-          </figure>
+
+        <a class="card-link" href="performance-marketing.html">
+          <img class="thumb" src="assets/courses/performance.jpg" alt="Performance Marketing preview">
+          <div class="card-body">
+            <h3>Performance Marketing</h3>
+            <p>SEO/CRO, funnels, creatives, experiments, and reporting basics.</p>
+          </div>
         </a>
       </div>
+    </section>
 
-      <!-- Optional brief details under the grid -->
-      <div class="case-details">
-        <article id="case-1" class="case-detail reveal" data-observe="section" data-section-id="case-1">
-          <div class="grid-2">
-            <div>
-              <h3>Turning Scrollers into Visitors</h3>
-              <p>Hypothesis-led funnel from social to visit; GA4 plan and GTM events to measure behavior.</p>
-              <ul class="list">
-                <li>KPIs: CTR, engagement, assisted conversions</li>
-                <li>Events: <code>cta_click</code>, <code>section_view</code>, <code>outbound_link</code></li>
-              </ul>
-            </div>
-            <div class="card"><img src="images/cases/case-1.jpg" alt="Case 1" style="width:100%; border-radius:16px;"></div>
+    <!-- Cases (3) with preview images) -->
+    <section class="section" id="cases">
+      <h2 class="h1">Cases</h2>
+      <p class="sub">Three projects where I applied what I learned.</p>
+
+      <div class="cards-3">
+        <a class="card-link" href="case-one.html">
+          <img class="thumb" src="assets/cases/case-1.jpg" alt="Case One preview">
+          <div class="card-body">
+            <h3>Case One — Client/Brand</h3>
+            <p>Short one-liner about the problem and outcome.</p>
           </div>
+        </a>
+
+        <a class="card-link" href="case-two.html">
+          <img class="thumb" src="assets/cases/case-2.jpg" alt="Case Two preview">
+          <div class="card-body">
+            <h3>Case Two — Client/Brand</h3>
+            <p>Short one-liner about the problem and outcome.</p>
+          </div>
+        </a>
+
+        <a class="card-link" href="case-three.html">
+          <img class="thumb" src="assets/cases/case-3.jpg" alt="Case Three preview">
+          <div class="card-body">
+            <h3>Case Three — Client/Brand</h3>
+            <p>Short one-liner about the problem and outcome.</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section" id="contact">
+      <h2 class="h1">Contact</h2>
+      <p class="sub">Let’s talk about projects, collaborations, or internships.</p>
+
+      <div class="grid" style="grid-template-columns:repeat(3,1fr); gap:20px;">
+        <article class="card">
+          <h3>Email</h3>
+          <p><a href="mailto:you@email.com">you@email.com</a></p>
         </article>
-
-        <article id="case-2" class="case-detail reveal" data-observe="section" data-section-id="case-2" style="margin-top:36px;">
-          <div class="grid-2">
-            <div>
-              <h3>SEO + Content Playbooks</h3>
-              <p>Intent-based templates, internal linking, and schema basics with measurement for content performance.</p>
-            </div>
-            <div class="card"><img src="images/cases/case-2.jpg" alt="Case 2" style="width:100%; border-radius:16px;"></div>
-          </div>
+        <article class="card">
+          <h3>LinkedIn</h3>
+          <p><a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">linkedin.com/in/your-handle</a></p>
         </article>
-
-        <article id="case-3" class="case-detail reveal" data-observe="section" data-section-id="case-3" style="margin-top:36px;">
-          <div class="grid-2">
-            <div>
-              <h3>CRO & Tracking Governance</h3>
-              <p>Clean GTM structure and naming standards; QA workflow to keep data trustworthy.</p>
-            </div>
-            <div class="card"><img src="images/cases/case-3.jpg" alt="Case 3" style="width:100%; border-radius:16px;"></div>
-          </div>
+        <article class="card">
+          <h3>CV</h3>
+          <p><a href="#" target="_blank" rel="noreferrer">Download CV (PDF)</a></p>
         </article>
       </div>
-    </div>
-  </section>
 
-  <!-- Growth Assignment (matches your brief) -->
-  <section class="section reveal" id="assignment" data-observe="section" data-section-id="assignment">
-    <div class="container">
-      <div class="section-head">
-        <h2>Growth Assignment</h2>
-      </div>
+      <p class="center mt-32"><a class="btn" href="#home">Back to top</a></p>
+    </section>
+  </main>
 
-      <!-- Requirements snapshot -->
-      <div class="grid-2">
-        <div class="card">
-          <h3>Kursmoment (så här långt)</h3>
-          <ul class="checklist">
-            <li class="done">Tillväxtstrategier</li>
-            <li class="done">GitHub & Command Line</li>
-            <li class="done">Google Analytics 4</li>
-            <li class="done">Google Tag Manager</li>
-            <li class="todo">Scraping (kommer måndag)</li>
-            <li class="done">Prompt engineering & analys</li>
-            <li class="done">Looker Studio / Chart.js</li>
-            <li class="done">Översikt av Growth & vart jag vill</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>Krav</h3>
-          <p class="muted small"><strong>Godkänt:</strong> Sidan live på GitHub • Samtliga exempelfiler • Genomgång av lärdomar</p>
-          <p class="muted small"><strong>Väl godkänt:</strong> Minst en Chart.js-graf • Looker Studio-rapport (Google Merchant Store) • Självvärdering</p>
-        </div>
-      </div>
-
-      <!-- Learnings + Tools -->
-      <div class="grid-2" style="margin-top:20px;">
-        <div class="card">
-          <h3>Learnings (kort)</h3>
-          <ul class="list">
-            <li>GA4: Mätplan, events, rapportvy.</li>
-            <li>GTM: Ren dataLayer, triggers, variabler.</li>
-            <li>CLI/GitHub: Versionering och GitHub Pages.</li>
-            <li>Prompting: Struktur för research & analys.</li>
-            <li>Scraping: Grundidé (kommer att fyllas på).</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>Tools</h3>
-          <ul class="list">
-            <li>Google Analytics 4, Google Tag Manager</li>
-            <li>Looker Studio, Chart.js</li>
-            <li>GitHub (Pages), VS Code, CLI</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Examples -->
-      <div class="card" style="margin-top:20px;">
-        <h3>Examples</h3>
-        <p class="muted small">Samtliga exempelfiler från kursen:</p>
-        <ul class="list">
-          <li><a href="examples/01a-datalayer/index.html">01a — Data Layer</a></li>
-          <li><a href="examples/01b-gtm-js/index.html">01b — GTM & JavaScript</a></li>
-          <li><a href="examples/01c-queryparams/index.html">01c — Query Params</a></li>
-        </ul>
-      </div>
-
-      <!-- Chart.js -->
-      <div class="grid-2" style="margin-top:20px;">
-        <div class="card">
-          <h3>Chart.js (demo)</h3>
-          <canvas id="assignmentChart" width="400" height="300"></canvas>
-          <p class="muted small">Graf för VG-kravet. Uppdatera värden över tid.</p>
-        </div>
-        <div class="card">
-          <h3>Looker Studio</h3>
-          <p class="muted small">Byt ut länken till din rapport (Merchant Store-exemplet).</p>
-          <div class="report-embed">
-            <iframe title="Looker Studio"
-              src="https://lookerstudio.google.com/embed/reporting/REPLACE-WITH-YOUR-REPORT"
-              frameborder="0" style="width:100%;height:420px;border:0;" allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
-
-      <!-- Self assessment -->
-      <div class="card" style="margin-top:20px;">
-        <h3>Självvärdering</h3>
-        <p>
-          Kort reflektion kring vad jag lärt mig, var det kändes svårt och hur jag löste det — samt
-          hur detta kopplar till hur jag vill arbeta med Growth (strategi, mätning och kreativt testande).
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section class="section reveal" id="contact" data-observe="section" data-section-id="contact">
-    <div class="container">
-      <h2>Let’s talk</h2>
-      <p class="muted">Open to projects, internships and collaborations.</p>
-      <div class="cta-row">
-        <a class="btn" href="mailto:ava.urden@student.berghs.se" data-track="click" data-event="outbound_email" data-label="Email">Email me</a>
-        <a class="btn" href="https://www.linkedin.com" target="_blank" rel="noopener" data-track="click" data-event="outbound_link" data-label="LinkedIn">LinkedIn</a>
-        <a class="btn ghost" href="files/ava_cv.pdf" target="_blank" data-track="click" data-event="download_cv" data-label="CV">Download CV</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="container small">
-      <span>© <span id="year"></span> Ava Urdén • Stockholm</span>
-      <a class="link" href="#top" data-track="click" data-event="link_click" data-label="Back to top">Back to top ↑</a>
-    </div>
+  <footer class="footer container">
+    © <span id="y"></span> Ava Urdén
   </footer>
 
-  <script src="app.js"></script>
+  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
 </body>
 </html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Growth Toolbox — Ava Urdén</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header container">
+    <div class="brand"><a href="index.html#cases">← Back</a></div>
+    <nav class="nav">
+      <a href="index.html#about">About</a>
+      <a href="index.html#expertise">Expertise</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main class="container section">
+    <h1 class="h1">Growth Toolbox</h1>
+    <p class="sub">GTM, GA4, data layer, event design, scraping basics, dashboards.</p>
+
+    <div class="grid">
+      <article class="card">
+        <h3>What I built</h3>
+        <p>GTM container with GA4, custom events (nav_click, button_click, etc.), and data layer variables.</p>
+      </article>
+      <article class="card">
+        <h3>How I measured</h3>
+        <p>Clean naming, currency/value params, and debugged in Preview mode for reliable reporting.</p>
+      </article>
+      <article class="card">
+        <h3>Artifacts</h3>
+        <p>Event map, screenshots, CSV exports, and a simple performance dashboard.</p>
+      </article>
+    </div>
+
+    <p class="mt-32"><a class="btn" href="index.html#cases">← All Cases</a></p>
+  </main>
+
+  <footer class="footer container">© <span id="y"></span> Ava Urdén</footer>
+  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+</body>
+</html>
