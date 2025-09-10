@@ -1,4 +1,4 @@
-/* ===== Tokens ===== */
+/* ===== Design tokens ===== */
 :root{
   --bg:#fbfcff; --fg:#0c0f13; --muted:#606774; --line:#e8ebf3; --card:#ffffff;
   --accent:#2B5BFF; --accent-ink:#ffffff;
@@ -15,7 +15,7 @@ body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--font-sans);
 
 /* ===== Layout ===== */
 .container{max-width:1080px;margin:0 auto;padding:0 20px}
-.section{padding:88px 0; position:relative; z-index:1;}
+.section{padding:88px 0}
 .section.alt{
   background:
     radial-gradient(80rem 40rem at 0% -10%, rgba(43,91,255,.06), transparent 60%),
@@ -89,14 +89,7 @@ h3{font-weight:600;font-size:1.25rem}
 .list{padding-left:18px}
 .list li{margin:6px 0}
 
-/* ===== Tabs ===== */
-.tabs{display:flex;gap:8px;flex-wrap:wrap}
-.tab{padding:10px 14px;border-radius:999px;background:#fff;border:1px solid var(--line);cursor:pointer}
-.tab.is-active{background:#eef2ff;border-color:#d8defa}
-.tab-panel{display:none}
-.tab-panel.is-active{display:block}
-
-/* ===== Case grid (no overlay text) ===== */
+/* ===== Cases (image-only cards) ===== */
 .grid-cases{align-items:stretch}
 .case-card.image{padding:0;border:none;background:transparent;box-shadow:none}
 .case-figure{position:relative;display:block;aspect-ratio:16/10;overflow:hidden;border-radius:var(--radius);border:1px solid var(--line);box-shadow:var(--shadow);background:#fff}
@@ -104,26 +97,16 @@ h3{font-weight:600;font-size:1.25rem}
 .case-card.image:hover .case-figure img{transform:scale(1.06)}
 .case-details{margin-top:28px}
 
-/* ===== Dynamic Work background ===== */
-#work{position:relative; overflow:hidden;}
-#work .work-bg-mask{
-  content:""; position:absolute; inset:0; z-index:0; opacity:0; pointer-events:none;
-  background-size:cover; background-position:center; background-repeat:no-repeat;
-  transition:opacity .5s ease;
+/* ===== Checklist ===== */
+.checklist{list-style:none;padding:0;margin:0}
+.checklist li{position:relative;padding-left:28px;margin:8px 0}
+.checklist li::before{
+  content:"";position:absolute;left:0;top:.25rem;width:18px;height:18px;border-radius:4px;border:1.5px solid var(--line);background:#fff
 }
-/* Toolbox background */
-#work.work--toolbox-bg .work-bg-mask{
-  background-image: linear-gradient(0deg, rgba(10,12,16,.55), rgba(10,12,16,.35)), url('images/bg-toolbox.jpg');
-  opacity: 1;
+.checklist li.done::before{
+  background:var(--accent);border-color:var(--accent);box-shadow:inset 0 0 0 2px #fff
 }
-/* Performance background */
-#work.work--performance-bg .work-bg-mask{
-  background-image: linear-gradient(0deg, rgba(10,12,16,.55), rgba(10,12,16,.35)), url('images/bg-performance.jpg');
-  opacity: 1;
-}
-
-/* Ensure content is above bg */
-#work .container{ position:relative; z-index:1; }
+.checklist li.todo::before{background:#fff;border-color:#d7dbe7}
 
 /* Footer */
 .site-footer{border-top:1px solid var(--line);padding:18px 0;color:var(--muted)}
@@ -132,3 +115,6 @@ h3{font-weight:600;font-size:1.25rem}
 /* Reveal on scroll */
 .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease, transform .6s ease}
 .reveal.revealed{opacity:1;transform:translateY(0)}
+
+/* Report embed */
+.report-embed{overflow:hidden;border-radius:var(--radius);border:1px solid var(--line)}

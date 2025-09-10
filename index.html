@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Ava Urdén — Growth Marketing Student @ Berghs</title>
-  <meta name="description" content="Portfolio of Ava Urdén. Work (Cases + Growth Toolbox), About, and Contact." />
+  <meta name="description" content="Ava Urdén — Growth Marketing student at Berghs. Earlier work and Growth Assignment with learnings, examples, Chart.js, and Looker Studio." />
   <meta name="theme-color" content="#ffffff" />
 
   <!-- Editorial fonts -->
@@ -22,7 +22,7 @@
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-5JMB8KM3');</script>
 
-  <!-- Chart.js (for Toolbox tab chart) -->
+  <!-- Chart.js (for assignment graph) -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
@@ -37,7 +37,8 @@
       <button class="menu-toggle" aria-label="Meny" aria-expanded="false" aria-controls="site-nav">☰</button>
       <nav id="site-nav" class="nav">
         <a href="#about" data-track="click" data-event="nav_click" data-label="About">About</a>
-        <a href="#work" data-track="click" data-event="nav_click" data-label="Work">Work</a>
+        <a href="#work" data-track="click" data-event="nav_click" data-label="Work">Earlier Work</a>
+        <a href="#assignment" data-track="click" data-event="nav_click" data-label="Assignment">Growth Assignment</a>
         <a href="#contact" data-track="click" data-event="nav_click" data-label="Contact">Contact</a>
       </nav>
     </div>
@@ -51,13 +52,13 @@
       <p class="subtitle">Growth Marketing Student @ Berghs School of Communication</p>
       <div class="cta-row">
         <a class="btn" href="#work" data-track="click" data-event="cta_click" data-label="See Work">See work</a>
-        <a class="btn ghost" href="#about" data-track="click" data-event="cta_click" data-label="About">About me</a>
+        <a class="btn ghost" href="#assignment" data-track="click" data-event="cta_click" data-label="Assignment">Growth Assignment</a>
       </div>
     </div>
     <img class="hero-image" src="images/city.jpg" alt="City skyline" />
   </section>
 
-  <!-- About -->
+  <!-- About (short) -->
   <section class="section reveal" id="about" data-observe="section" data-section-id="about">
     <div class="container">
       <div class="grid-2">
@@ -66,7 +67,6 @@
           <p>
             I’m a curious, structured and creatively driven growth marketer studying at Berghs.
             I build measurable systems, design experiences, and turn insights into growth.
-            This one-page portfolio shows my cases and the hands-on Growth Toolbox I’m building.
           </p>
           <div class="pill-row">
             <span class="pill">Growth strategy</span>
@@ -84,120 +84,159 @@
     </div>
   </section>
 
-  <!-- Work (tabs) -->
+  <!-- Earlier Work -->
   <section class="section alt reveal" id="work" data-observe="section" data-section-id="work">
-    <div class="work-bg-mask"></div>
     <div class="container">
       <div class="section-head">
-        <h2>Work</h2>
+        <h2>Earlier work</h2>
       </div>
 
-      <!-- Tabs -->
-      <div class="tabs" role="tablist" aria-label="Work views">
-        <button class="tab is-active" role="tab" aria-selected="true" aria-controls="panel-cases" id="tab-cases" data-tab="cases">Cases</button>
-        <button class="tab" role="tab" aria-selected="false" aria-controls="panel-toolbox" id="tab-toolbox" data-tab="toolbox">Growth Toolbox</button>
-        <button class="tab" role="tab" aria-selected="false" aria-controls="panel-perf" id="tab-perf" data-tab="perf">Performance Marketing</button>
-        <button class="tab" role="tab" aria-selected="false" aria-controls="panel-future1" id="tab-future1" data-tab="future1">Future Area 1</button>
-        <button class="tab" role="tab" aria-selected="false" aria-controls="panel-future2" id="tab-future2" data-tab="future2">Future Area 2</button>
+      <!-- Image-only previews (clean overlays) -->
+      <div class="grid-3 grid-cases" style="margin-top:16px;">
+        <a class="case-card image" href="#case-1" aria-label="Case 1">
+          <figure class="case-figure">
+            <img src="images/cases/case-1.jpg" alt="Case preview 1" loading="lazy">
+          </figure>
+        </a>
+        <a class="case-card image" href="#case-2" aria-label="Case 2">
+          <figure class="case-figure">
+            <img src="images/cases/case-2.jpg" alt="Case preview 2" loading="lazy">
+          </figure>
+        </a>
+        <a class="case-card image" href="#case-3" aria-label="Case 3">
+          <figure class="case-figure">
+            <img src="images/cases/case-3.jpg" alt="Case preview 3" loading="lazy">
+          </figure>
+        </a>
       </div>
 
-      <!-- Cases panel (image-only previews) -->
-      <div class="tab-panel is-active" id="panel-cases" role="tabpanel" aria-labelledby="tab-cases">
-        <div class="grid-3 grid-cases" style="margin-top:16px;">
-          <a class="case-card image" href="#" aria-label="Traffic to Visits">
-            <figure class="case-figure">
-              <img src="images/cases/case-1.jpg" alt="Traffic to Visits case" loading="lazy">
-            </figure>
-          </a>
-          <a class="case-card image" href="#" aria-label="SEO + Content">
-            <figure class="case-figure">
-              <img src="images/cases/case-2.jpg" alt="SEO + Content case" loading="lazy">
-            </figure>
-          </a>
-          <a class="case-card image" href="#" aria-label="CRO & Tracking">
-            <figure class="case-figure">
-              <img src="images/cases/case-3.jpg" alt="CRO & Tracking case" loading="lazy">
-            </figure>
-          </a>
+      <!-- Optional brief details under the grid -->
+      <div class="case-details">
+        <article id="case-1" class="case-detail reveal" data-observe="section" data-section-id="case-1">
+          <div class="grid-2">
+            <div>
+              <h3>Turning Scrollers into Visitors</h3>
+              <p>Hypothesis-led funnel from social to visit; GA4 plan and GTM events to measure behavior.</p>
+              <ul class="list">
+                <li>KPIs: CTR, engagement, assisted conversions</li>
+                <li>Events: <code>cta_click</code>, <code>section_view</code>, <code>outbound_link</code></li>
+              </ul>
+            </div>
+            <div class="card"><img src="images/cases/case-1.jpg" alt="Case 1" style="width:100%; border-radius:16px;"></div>
+          </div>
+        </article>
+
+        <article id="case-2" class="case-detail reveal" data-observe="section" data-section-id="case-2" style="margin-top:36px;">
+          <div class="grid-2">
+            <div>
+              <h3>SEO + Content Playbooks</h3>
+              <p>Intent-based templates, internal linking, and schema basics with measurement for content performance.</p>
+            </div>
+            <div class="card"><img src="images/cases/case-2.jpg" alt="Case 2" style="width:100%; border-radius:16px;"></div>
+          </div>
+        </article>
+
+        <article id="case-3" class="case-detail reveal" data-observe="section" data-section-id="case-3" style="margin-top:36px;">
+          <div class="grid-2">
+            <div>
+              <h3>CRO & Tracking Governance</h3>
+              <p>Clean GTM structure and naming standards; QA workflow to keep data trustworthy.</p>
+            </div>
+            <div class="card"><img src="images/cases/case-3.jpg" alt="Case 3" style="width:100%; border-radius:16px;"></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Growth Assignment (matches your brief) -->
+  <section class="section reveal" id="assignment" data-observe="section" data-section-id="assignment">
+    <div class="container">
+      <div class="section-head">
+        <h2>Growth Assignment</h2>
+      </div>
+
+      <!-- Requirements snapshot -->
+      <div class="grid-2">
+        <div class="card">
+          <h3>Kursmoment (så här långt)</h3>
+          <ul class="checklist">
+            <li class="done">Tillväxtstrategier</li>
+            <li class="done">GitHub & Command Line</li>
+            <li class="done">Google Analytics 4</li>
+            <li class="done">Google Tag Manager</li>
+            <li class="todo">Scraping (kommer måndag)</li>
+            <li class="done">Prompt engineering & analys</li>
+            <li class="done">Looker Studio / Chart.js</li>
+            <li class="done">Översikt av Growth & vart jag vill</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Krav</h3>
+          <p class="muted small"><strong>Godkänt:</strong> Sidan live på GitHub • Samtliga exempelfiler • Genomgång av lärdomar</p>
+          <p class="muted small"><strong>Väl godkänt:</strong> Minst en Chart.js-graf • Looker Studio-rapport (Google Merchant Store) • Självvärdering</p>
         </div>
       </div>
 
-      <!-- Toolbox panel -->
-      <div class="tab-panel" id="panel-toolbox" role="tabpanel" aria-labelledby="tab-toolbox">
-        <div class="grid-2" style="margin-top:16px;">
-          <div class="card reveal">
-            <h3>Growth Toolbox — Overview</h3>
-            <ul class="list">
-              <li>GA4 setup + KPI framework</li>
-              <li>Clean GTM + dataLayer structure</li>
-              <li>UI event tracking (clicks, section views, outbound)</li>
-              <li>Query params for personalization</li>
-              <li>Charts (Chart.js) + dashboarding (Looker Studio)</li>
-              <li>GitHub Pages + version control</li>
-            </ul>
-          </div>
-
-          <div class="card reveal">
-            <h3>Skills snapshot (Chart.js)</h3>
-            <canvas id="skillsChart" width="400" height="300"></canvas>
-            <p class="muted small">Demo data — update as you progress.</p>
-          </div>
-        </div>
-
-        <div class="grid-2" style="margin-top:16px;">
-          <div class="card reveal">
-            <h3>Tools</h3>
-            <ul class="list">
-              <li>Google Analytics 4</li>
-              <li>Google Tag Manager</li>
-              <li>Looker Studio</li>
-              <li>Chart.js</li>
-              <li>GitHub, CLI, VS Code</li>
-            </ul>
-          </div>
-          <div class="card reveal">
-            <h3>Examples (course demos)</h3>
-            <ul class="list">
-              <li><a href="examples/01a-datalayer/index.html">01a — Data Layer</a></li>
-              <li><a href="examples/01b-gtm-js/index.html">01b — GTM & JavaScript</a></li>
-              <li><a href="examples/01c-queryparams/index.html">01c — Query Params</a></li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="card reveal" style="margin-top:16px;">
-          <h3>Reflection</h3>
-          <p>What I learned so far, what surprised me, and where I want to go next in Growth Marketing…</p>
-        </div>
-      </div>
-
-      <!-- Performance Marketing panel -->
-      <div class="tab-panel" id="panel-perf" role="tabpanel" aria-labelledby="tab-perf">
-        <div class="card reveal" style="margin-top:16px;">
-          <h3>Performance Marketing</h3>
-          <p class="muted">Add paid channels, funnel experiments, creatives, and results here.</p>
+      <!-- Learnings + Tools -->
+      <div class="grid-2" style="margin-top:20px;">
+        <div class="card">
+          <h3>Learnings (kort)</h3>
           <ul class="list">
-            <li>Channel mix & budget split</li>
-            <li>Creative testing framework</li>
-            <li>Attribution / incrementality notes</li>
+            <li>GA4: Mätplan, events, rapportvy.</li>
+            <li>GTM: Ren dataLayer, triggers, variabler.</li>
+            <li>CLI/GitHub: Versionering och GitHub Pages.</li>
+            <li>Prompting: Struktur för research & analys.</li>
+            <li>Scraping: Grundidé (kommer att fyllas på).</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Tools</h3>
+          <ul class="list">
+            <li>Google Analytics 4, Google Tag Manager</li>
+            <li>Looker Studio, Chart.js</li>
+            <li>GitHub (Pages), VS Code, CLI</li>
           </ul>
         </div>
       </div>
 
-      <!-- Future placeholders -->
-      <div class="tab-panel" id="panel-future1" role="tabpanel" aria-labelledby="tab-future1">
-        <div class="card reveal" style="margin-top:16px;">
-          <h3>Coming soon</h3>
-          <p class="muted">Reserved for a future area of your portfolio.</p>
-        </div>
+      <!-- Examples -->
+      <div class="card" style="margin-top:20px;">
+        <h3>Examples</h3>
+        <p class="muted small">Samtliga exempelfiler från kursen:</p>
+        <ul class="list">
+          <li><a href="examples/01a-datalayer/index.html">01a — Data Layer</a></li>
+          <li><a href="examples/01b-gtm-js/index.html">01b — GTM & JavaScript</a></li>
+          <li><a href="examples/01c-queryparams/index.html">01c — Query Params</a></li>
+        </ul>
       </div>
-      <div class="tab-panel" id="panel-future2" role="tabpanel" aria-labelledby="tab-future2">
-        <div class="card reveal" style="margin-top:16px;">
-          <h3>Coming soon</h3>
-          <p class="muted">Reserved for a future area of your portfolio.</p>
+
+      <!-- Chart.js -->
+      <div class="grid-2" style="margin-top:20px;">
+        <div class="card">
+          <h3>Chart.js (demo)</h3>
+          <canvas id="assignmentChart" width="400" height="300"></canvas>
+          <p class="muted small">Graf för VG-kravet. Uppdatera värden över tid.</p>
+        </div>
+        <div class="card">
+          <h3>Looker Studio</h3>
+          <p class="muted small">Byt ut länken till din rapport (Merchant Store-exemplet).</p>
+          <div class="report-embed">
+            <iframe title="Looker Studio"
+              src="https://lookerstudio.google.com/embed/reporting/REPLACE-WITH-YOUR-REPORT"
+              frameborder="0" style="width:100%;height:420px;border:0;" allowfullscreen></iframe>
+          </div>
         </div>
       </div>
 
+      <!-- Self assessment -->
+      <div class="card" style="margin-top:20px;">
+        <h3>Självvärdering</h3>
+        <p>
+          Kort reflektion kring vad jag lärt mig, var det kändes svårt och hur jag löste det — samt
+          hur detta kopplar till hur jag vill arbeta med Growth (strategi, mätning och kreativt testande).
+        </p>
+      </div>
     </div>
   </section>
 
