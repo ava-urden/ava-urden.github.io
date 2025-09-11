@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Growth Toolbox — Ava Urdén</title>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
@@ -33,23 +33,20 @@
       padding: 16px 20px;
     }
 
-    .header .brand {
-      font-family: 'Inter', sans-serif;
-      font-size: 0.9rem;
-      letter-spacing: 0.25em;
+    .header .brand a {
       color: #111;
+      text-decoration: none;
       font-weight: 600;
     }
 
-    .header a {
+    .header nav a {
       color: #111;
       text-decoration: none;
       margin-left: 24px;
       font-weight: 500;
-      font-family: 'Inter', sans-serif;
     }
 
-    .header a:hover {
+    .header nav a:hover {
       color: #2B5BFF;
     }
 
@@ -57,13 +54,13 @@
     .hero {
       position: relative;
       width: 100%;
-      height: 60vh; /* omslagshöjd */
+      height: 60vh; /* hero height */
       background: url("images/courses/gtb.jpg") no-repeat center center/cover;
       display: flex;
       justify-content: center;
       align-items: center;
       text-align: center;
-      margin-top: 72px; /* så den inte krockar med headern */
+      margin-top: 64px; /* push down for fixed header */
     }
 
     .hero-overlay {
@@ -83,7 +80,6 @@
       font-family: 'Bebas Neue', sans-serif;
       font-size: 4rem;
       margin: 0;
-      letter-spacing: 1px;
     }
 
     /* ===== MAIN ===== */
@@ -146,10 +142,10 @@
   <!-- ===== HEADER ===== -->
   <header class="header">
     <div class="header-inner">
-      <div class="brand">PORTFOLIO</div>
+      <div class="brand"><a href="index.html#courses">← Back</a></div>
       <nav class="nav">
         <a href="index.html#about">About</a>
-        <a href="index.html#expertise">My Expertise</a>
+        <a href="index.html#expertise">Expertise</a>
         <a href="index.html#courses">Courses</a>
         <a href="index.html#cases">Cases</a>
         <a href="index.html#contact">Contact</a>
@@ -167,7 +163,7 @@
 
   <!-- ===== MAIN CONTENT ===== -->
   <main class="container section">
-    <p class="sub">Här samlar jag de verktyg och metoder jag lärt mig under kursen från GTM och GA4 till scraping och dashboards. Här en översikt och en samling konkreta case.</p>
+    <p class="sub">GTM, GA4, data layer, event design, scraping basics, dashboards.</p>
 
     <div class="grid">
       <article class="card">
@@ -190,6 +186,6 @@
 
   <!-- ===== FOOTER ===== -->
   <footer class="footer container">© <span id="y"></span> Ava Urdén</footer>
-  <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
+  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
 </body>
 </html>
