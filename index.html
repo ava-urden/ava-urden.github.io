@@ -7,6 +7,81 @@
   <meta name="description" content="Ava Urdén — Growth Marketing student @ Berghs School of Communication." />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    /* Smooth scroll for anchor links */
+    html { scroll-behavior: smooth; }
+
+    /* Keep anchor targets from hiding under a fixed header (adjust if your header is taller) */
+    section { scroll-margin-top: 80px; }
+
+    /* Quick CSS for icons inside bubbles */
+    .bubble i {
+      display: block;
+      margin: 0 auto 8px auto;
+      color: #2B5BFF; /* Accent color */
+      width: 28px;
+      height: 28px;
+    }
+
+    /* ===== HERO LAYOUT (name on left, buttons on right) ===== */
+    .hero {
+      min-height: 100vh;             /* fill first screen */
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      align-items: center;
+      gap: 32px;
+      padding: 60px 20px;            /* space around hero */
+    }
+
+    .hero-name { margin: 0 0 12px 0; }
+    .hero-sub { margin: 0; }
+
+    .btn-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      align-self: center;
+      width: 100%;
+      max-width: 320px;
+    }
+
+    .btn-stack .btn {
+      display: block;
+      text-align: center;
+      padding: 12px 16px;
+      border: 1px solid #111;
+      border-radius: 10px;
+      text-decoration: none;
+    }
+
+    .btn-stack .btn:hover {
+      background: #111;
+      color: #fff;
+    }
+
+    /* ===== CONTACT CARDS: black w/ centered text ===== */
+    #contact .card-link {
+      background-color: #000;  /* Black */
+      color: #fff;             /* White text */
+      text-align: center;      /* Center text */
+      padding: 16px;
+      border-radius: 8px;
+      transition: background 0.25s ease, transform 0.12s ease;
+    }
+    #contact .card-link:hover { background-color: #333; }
+    #contact .card-link:active { transform: translateY(1px); }
+
+    /* ===== Responsive: stack hero on small screens ===== */
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: 1fr;
+        padding-top: 80px; /* breathing room under fixed header */
+      }
+      .btn-stack { max-width: 100%; }
+    }
+  </style>
 </head>
 <body>
   <!-- Header / Nav -->
@@ -24,12 +99,13 @@
   </header>
 
   <main class="container">
-    <!-- Hero -->
+    <!-- Hero (name left, buttons right) -->
     <section class="hero" id="home">
       <div>
         <h1 class="hero-name">AVA<br>URDÉN</h1>
         <p class="hero-sub">Growth Marketing student @ Berghs School of Communication</p>
       </div>
+
       <div class="btn-stack" aria-label="Quick links">
         <a class="btn" href="#about">About Me</a>
         <a class="btn" href="#courses">Courses</a>
@@ -38,65 +114,70 @@
       </div>
     </section>
 
-    <!-- About (profile photo + short bio only) -->
+    <!-- About (now below the full-height hero) -->
     <section class="section" id="about">
       <h2 class="h1">About me</h2>
-
       <div class="grid two">
         <div>
           <img class="profile" src="images/avau.jpg" alt="Portrait of Ava Urdén">
         </div>
         <div class="grid" style="gap:20px;">
           <article class="card">
-            <h3>I’m Ava Urdén</h3>
-            <p>22 years old and currently studying Growth Marketing at Berghs SOC. I’ve worked with communication, marketing and business development, and I love combining that experience with everything new I’m learning now. Creativity has always been a big part of me — whether it’s finding new ideas, shaping concepts, or just exploring different ways to tell a story. What drives me most is seeing ideas turn into something concrete that makes a difference and creates growth.</p>
+            <p>I’m Ava Urdén, 22 years old and currently studying Growth Marketing at Berghs School of Communication. I have experience in communication, marketing and business development and I enjoy bringing that background into everything new I’m learning now. Creativity has always been central to me, whether it’s developing ideas, shaping concepts or exploring new ways to tell a story. What drives me most is turning ideas into something concrete that makes a real impact and creates growth.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- Expertise (bubble style) -->
+    <!-- Expertise -->
     <section class="section" id="expertise">
       <h2 class="h1">My expertise</h2>
-      <p class="sub">Bubbles show the area + a short note of what I do.</p>
 
       <div class="bubbles">
         <div class="bubble">
+          <i data-lucide="layers"></i>
           <h4>GTM</h4>
-          <p>Clean container setup, events, data layer, debugging.</p>
+          <p>Clean container setup, events, data layer</p>
         </div>
         <div class="bubble">
+          <i data-lucide="bar-chart"></i>
           <h4>GA4</h4>
-          <p>Meaningful KPIs, explorations, funnels, reporting.</p>
+          <p>Meaningful KPIs, funnels, reporting.</p>
         </div>
         <div class="bubble">
-          <h4>SEO Basics</h4>
+          <i data-lucide="search"></i>
+          <h4>SEO basics</h4>
           <p>Keywords, on-page structure, internal links, snippets.</p>
         </div>
         <div class="bubble">
+          <i data-lucide="repeat"></i>
           <h4>CRO</h4>
           <p>Hypotheses, A/B thinking, UX micro-copy, forms.</p>
         </div>
         <div class="bubble">
+          <i data-lucide="pie-chart"></i>
           <h4>Dashboards & KPIs</h4>
           <p>Sheets/Looker basics, weekly updates, learnings log.</p>
         </div>
         <div class="bubble">
+          <i data-lucide="file-code"></i>
           <h4>Scraping (basics)</h4>
           <p>Playwright/Node intro, CSV exports for analysis.</p>
         </div>
         <div class="bubble">
+          <i data-lucide="code"></i>
           <h4>HTML/CSS/JS</h4>
           <p>Small sites, tracking hooks, component tweaks.</p>
         </div>
         <div class="bubble">
+          <i data-lucide="palette"></i>
           <h4>Graphic & Presentation</h4>
           <p>Canva, Adobe, storytelling decks, pitch structure.</p>
         </div>
       </div>
     </section>
 
-    <!-- Courses (3) with preview images -->
+    <!-- Courses -->
     <section class="section" id="courses">
       <h2 class="h1">Courses</h2>
       <p class="sub">Three core tracks this year.</p>
@@ -128,66 +209,68 @@
       </div>
     </section>
 
-    <!-- Cases (3) with preview images) -->
-    <section class="section" id="cases">
-      <h2 class="h1">Cases</h2>
-      <p class="sub">Three projects where I applied what I learned.</p>
+    <!-- Cases -->
+    <section id="cases" class="section">
+      <h2>Cases</h2>
+      <div class="cases-grid">
+        <div class="case-card">
+          <a class="card-link" href="case-one.html">
+            <img class="thumb" src="assets/cases/case-2.jpg" alt="Case One preview">
+            <div class="card-body">
+              <h3>Case One — Client/Brand</h3>
+              <p>Short one-liner about the problem and outcome.</p>
+            </div>
+          </a>
 
-      <div class="cards-3">
-        <a class="card-link" href="case-one.html">
-          <img class="thumb" src="assets/cases/case-1.jpg" alt="Case One preview">
-          <div class="card-body">
-            <h3>Case One — Client/Brand</h3>
-            <p>Short one-liner about the problem and outcome.</p>
-          </div>
-        </a>
+          <a class="card-link" href="case-two.html">
+            <img class="thumb" src="assets/cases/case-2.jpg" alt="Case Two preview">
+            <div class="card-body">
+              <h3>Case Two — Client/Brand</h3>
+              <p>Short one-liner about the problem and outcome.</p>
+            </div>
+          </a>
 
-        <a class="card-link" href="case-two.html">
-          <img class="thumb" src="assets/cases/case-2.jpg" alt="Case Two preview">
-          <div class="card-body">
-            <h3>Case Two — Client/Brand</h3>
-            <p>Short one-liner about the problem and outcome.</p>
-          </div>
-        </a>
-
-        <a class="card-link" href="case-three.html">
-          <img class="thumb" src="assets/cases/case-3.jpg" alt="Case Three preview">
-          <div class="card-body">
-            <h3>Case Three — Client/Brand</h3>
-            <p>Short one-liner about the problem and outcome.</p>
-          </div>
-        </a>
+          <a class="card-link" href="case-three.html">
+            <img class="thumb" src="assets/cases/case-3.jpg" alt="Case Three preview">
+            <div class="card-body">
+              <h3>Case Three — Client/Brand</h3>
+              <p>Short one-liner about the problem and outcome.</p>
+            </div>
+          </a>
+        </div>
       </div>
     </section>
 
     <!-- Contact -->
     <section class="section" id="contact">
-      <h2 class="h1">Contact</h2>
-      <p class="sub">Let’s talk about projects, collaborations, or internships.</p>
+      <h2 class="h1">Contact me</h2>
+      <p class="sub">From conversation to collaboration</p>
 
       <div class="grid" style="grid-template-columns:repeat(3,1fr); gap:20px;">
-        <article class="card">
-          <h3>Email</h3>
-          <p><a href="mailto:you@email.com">you@email.com</a></p>
-        </article>
-        <article class="card">
-          <h3>LinkedIn</h3>
-          <p><a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">linkedin.com/in/your-handle</a></p>
-        </article>
-        <article class="card">
-          <h3>CV</h3>
-          <p><a href="files/ava_cv.pdf" target="_blank" rel="noreferrer" download>Download CV (PDF)</a></p>
-        </article>
+        <a class="card card-link" href="mailto:ava.urden@gmail.com">
+          <p>Email me</p>
+        </a>
+
+        <a class="card card-link" href="https://www.linkedin.com/in/ava-urd%C3%A9n-3014a821b" target="_blank" rel="noreferrer">
+          <p>Connect on LinkedIn</p>
+        </a>
+
+        <a class="card card-link" href="files/ava_cv.pdf" target="_blank" rel="noreferrer" download>
+          <p>Download my CV</p>
+        </a>
       </div>
 
       <p class="center mt-32"><a class="btn" href="#home">Back to top</a></p>
     </section>
   </main>
-<div>Brand &amp; Digital Strategy</div>
+
   <footer class="footer container">
     © <span id="y"></span> Ava Urdén
   </footer>
 
-  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+    lucide.createIcons();
+  </script>
 </body>
 </html>

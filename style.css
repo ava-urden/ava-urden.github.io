@@ -275,3 +275,12 @@ h3{
 @media (prefers-reduced-motion: reduce){
   * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
 }
+
+/* ---------- Bubble icons ---------- */
+.bubble i {
+  display: block;
+  margin: 0 auto 8px auto;
+  color: #455b92; /* Accent color */
+  width: 28px;
+  height: 28px;
+}
