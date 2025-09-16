@@ -54,7 +54,7 @@
       </div>
     </section>
 
-    <!-- Skills (hover-to-reveal) -->
+    <!-- Skills -->
     <section class="section" id="skills">
       <h2 class="h1">Skills</h2>
       <p class="sub">Hover a heading to reveal a short explanation</p>
@@ -107,56 +107,56 @@
     <!-- Gallery -->
     <section class="section" id="gallery">
       <h2 class="h1">Gallery</h2>
-      <p class="sub">Examples of work i´ve built/ done</p>
+      <p class="sub">Examples of work I’ve built / done</p>
 
       <div class="gallery-grid">
-        <a class="gallery-item soft hover-raise" href="images/gallery/gtm-dashboard.jpg" target="_blank" rel="noreferrer">
+        <div class="gallery-item soft hover-raise">
           <div class="media">
             <img src="images/gallery/sthlm.tips.png" alt="Looker dashboard preview">
             <span class="img-tag">Folder work</span>
           </div>
-          <div class="gallery-caption">Guide for Family Office Clients<span> - Folder for clients visiting Stockholm</span></div>
-        </a>
+          <div class="gallery-caption">Guide for Family Office Clients<span>Folder</span></div>
+        </div>
 
-        <a class="gallery-item soft hover-raise" href="images/gallery/seo-wireframe.jpg" target="_blank" rel="noreferrer">
+        <div class="gallery-item soft hover-raise">
           <div class="media">
             <img src="images/gallery/seo-wireframe.jpg" alt="SEO wireframe preview">
             <span class="img-tag">SEO</span>
           </div>
           <div class="gallery-caption">SEO wireframe for category page <span>– intent & structure</span></div>
-        </a>
+        </div>
 
-        <a class="gallery-item soft hover-raise" href="images/gallery/scraper-csv.png" target="_blank" rel="noreferrer">
+        <div class="gallery-item soft hover-raise">
           <div class="media">
             <img src="images/gallery/scraper-csv.png" alt="Scraper CSV preview">
             <span class="img-tag">Scraping</span>
           </div>
           <div class="gallery-caption">Node/Playwright: product scraper <span>– CSV export</span></div>
-        </a>
+        </div>
 
-        <a class="gallery-item soft hover-raise" href="images/gallery/email-campaign.jpg" target="_blank" rel="noreferrer">
+        <div class="gallery-item soft hover-raise">
           <div class="media">
             <img src="images/gallery/email-campaign.jpg" alt="Email campaign mockup">
             <span class="img-tag">Email</span>
           </div>
           <div class="gallery-caption">Email marketing: event campaign <span>– design + deploy</span></div>
-        </a>
+        </div>
 
-        <a class="gallery-item soft hover-raise" href="images/gallery/pitch-deck.jpg" target="_blank" rel="noreferrer">
+        <div class="gallery-item soft hover-raise">
           <div class="media">
             <img src="images/gallery/pitch-deck.jpg" alt="Pitch deck slide">
             <span class="img-tag">Deck</span>
           </div>
           <div class="gallery-caption">Pitch deck: concept & storytelling <span>– 12 slides</span></div>
-        </a>
+        </div>
 
-        <a class="gallery-item soft hover-raise" href="images/gallery/portfolio-site.jpg" target="_blank" rel="noreferrer">
+        <div class="gallery-item soft hover-raise">
           <div class="media">
             <img src="images/gallery/portfolio-site.jpg" alt="Portfolio site mockup">
             <span class="img-tag">Web</span>
           </div>
           <div class="gallery-caption">HTML/CSS: portfolio site layout <span>– components</span></div>
-        </a>
+        </div>
       </div>
     </section>
 
@@ -184,7 +184,7 @@
     // Soft fade-in on scroll
     const els = document.querySelectorAll('.fade');
     const io = new IntersectionObserver((entries)=>{
-      entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }});
+      entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }}); 
     },{ threshold:.1 });
     els.forEach(el=>io.observe(el));
   </script>
