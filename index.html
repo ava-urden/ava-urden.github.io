@@ -7,243 +7,156 @@
   <meta name="description" content="Ava Urdén — Growth Marketing student @ Berghs School of Communication." />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
-  <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
-  <style>
-    /* Smooth scroll for anchor links */
-    html { scroll-behavior: smooth; }
-
-    /* Keep anchor targets from hiding under a fixed header (adjust if your header is taller) */
-    section { scroll-margin-top: 80px; }
-
-    /* Quick CSS for icons inside bubbles */
-    .bubble i {
-      display: block;
-      margin: 0 auto 8px auto;
-      color: #2B5BFF; /* Accent color */
-      width: 28px;
-      height: 28px;
-    }
-
-    /* ===== HERO LAYOUT (name on left, buttons on right) ===== */
-    .hero {
-      min-height: 100vh;             /* fill first screen */
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      align-items: center;
-      gap: 32px;
-      padding: 60px 20px;            /* space around hero */
-    }
-
-    .hero-name { margin: 0 0 12px 0; }
-    .hero-sub { margin: 0; }
-
-    .btn-stack {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      align-self: center;
-      width: 100%;
-      max-width: 320px;
-    }
-
-    .btn-stack .btn {
-      display: block;
-      text-align: center;
-      padding: 12px 16px;
-      border: 1px solid #111;
-      border-radius: 10px;
-      text-decoration: none;
-    }
-
-    .btn-stack .btn:hover {
-      background: #111;
-      color: #fff;
-    }
-
-    /* ===== CONTACT CARDS: black w/ centered text ===== */
-    #contact .card-link {
-      background-color: #000;  /* Black */
-      color: #fff;             /* White text */
-      text-align: center;      /* Center text */
-      padding: 16px;
-      border-radius: 8px;
-      transition: background 0.25s ease, transform 0.12s ease;
-    }
-    #contact .card-link:hover { background-color: #333; }
-    #contact .card-link:active { transform: translateY(1px); }
-
-    /* ===== Responsive: stack hero on small screens ===== */
-    @media (max-width: 900px) {
-      .hero {
-        grid-template-columns: 1fr;
-        padding-top: 80px; /* breathing room under fixed header */
-      }
-      .btn-stack { max-width: 100%; }
-    }
-  </style>
 </head>
 <body>
-  <!-- Header / Nav -->
+  <!-- Header -->
   <header class="header">
     <div class="container header-inner">
-      <div class="brand">Portfolio</div>
+      <div class="brand">PORTFOLIO</div>
       <nav class="nav" aria-label="Main">
         <a href="#about">About</a>
-        <a href="#expertise">My Expertise</a>
-        <a href="#courses">Courses</a>
-        <a href="#cases">Cases</a>
+        <a href="#skills">Skills</a>
+        <a href="#gallery">Gallery</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
   </header>
 
   <main class="container">
-    <!-- Hero (name left, buttons right) -->
+    <!-- Hero -->
     <section class="hero" id="home">
-      <div>
+      <div class="fade">
         <h1 class="hero-name">AVA<br>URDÉN</h1>
         <p class="hero-sub">Growth Marketing student @ Berghs School of Communication</p>
       </div>
 
-      <div class="btn-stack" aria-label="Quick links">
-        <a class="btn" href="#about">About Me</a>
-        <a class="btn" href="#courses">Courses</a>
-        <a class="btn" href="#cases">Cases</a>
-        <a class="btn" href="#contact">Contact</a>
+      <div class="btn-stack fade" aria-label="Quick links">
+        <a class="btn btn--block btn--lg" href="#about">About Me</a>
+        <a class="btn btn--block btn--lg" href="#skills">Skills</a>
+        <a class="btn btn--block btn--lg" href="#gallery">Gallery</a>
+        <a class="btn btn--block btn--lg" href="#contact">Contact</a>
       </div>
     </section>
 
-    <!-- About (now below the full-height hero) -->
+    <!-- About -->
     <section class="section" id="about">
       <h2 class="h1">About me</h2>
       <div class="grid two">
-        <div>
+        <div class="fade">
           <img class="profile" src="images/avau.jpg" alt="Portrait of Ava Urdén">
         </div>
         <div class="grid" style="gap:20px;">
-          <article class="card">
-            <p>I’m Ava Urdén, 22 years old and currently studying Growth Marketing at Berghs School of Communication. With a background in communication, marketing and business development, I enjoy combining my experience with the new skills I am building now. Creativity has always been central to me, whether it is developing ideas, shaping concepts or exploring new ways to tell a story. What motivates me most is seeing ideas come to life, making a real impact and driving growth.</p>
+          <article class="card fade">
+            <p>I’m Ava Urdén, 22 years old and currently studying Growth Marketing at Berghs School of Communication. With a background in communication, marketing and business development, I enjoy combining my experience with the new skills I am building now. Creativity has always been central to me—whether it’s developing ideas, shaping concepts or exploring new ways to tell a story. What motivates me most is seeing ideas come to life, making a real impact and driving growth.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- Expertise -->
-    <section class="section" id="expertise">
-      <h2 class="h1">My expertise</h2>
+    <!-- Skills (hover-to-reveal) -->
+    <section class="section" id="skills">
+      <h2 class="h1">Skills</h2>
+      <p class="sub">Hover a heading to reveal a short explanation</p>
 
-      <div class="bubbles">
-        <div class="bubble">
-          <i data-lucide="layers"></i>
-          <h4>GTM</h4>
-          <p>Clean container setup, events, data layer</p>
+      <div class="skills-grid">
+        <div class="skill-card soft hover-raise" tabindex="0" aria-label="GTM and Data Layer">
+          <div class="skill-inner">
+            <div class="skill-title"><span class="dot"></span>GTM &amp; Data Layer</div>
+            <p class="skill-desc">Clean container structure, event naming and data layer design that keeps tracking stable and scalable across pages and campaigns.</p>
+          </div>
         </div>
-        <div class="bubble">
-          <i data-lucide="bar-chart"></i>
-          <h4>GA4</h4>
-          <p>Meaningful KPIs, funnels, reporting.</p>
+
+        <div class="skill-card soft hover-raise" tabindex="0" aria-label="GA4 and Measurement">
+          <div class="skill-inner">
+            <div class="skill-title"><span class="dot"></span>GA4 &amp; Measurement</div>
+            <p class="skill-desc">Meaningful KPIs, funnels and explorations. Turning raw events into insights and weekly reporting that actually drives decisions.</p>
+          </div>
         </div>
-        <div class="bubble">
-          <i data-lucide="search"></i>
-          <h4>SEO basics</h4>
-          <p>Keywords, on-page structure, internal links, snippets.</p>
+
+        <div class="skill-card soft hover-raise" tabindex="0" aria-label="SEO Foundations">
+          <div class="skill-inner">
+            <div class="skill-title"><span class="dot"></span>SEO Foundations</div>
+            <p class="skill-desc">Keyword intent, on-page structure, internal links and smart snippets. I focus on clarity, speed and searcher value.</p>
+          </div>
         </div>
-        <div class="bubble">
-          <i data-lucide="repeat"></i>
-          <h4>CRO</h4>
-          <p>Hypotheses, A/B thinking, UX micro-copy, forms.</p>
+
+        <div class="skill-card soft hover-raise" tabindex="0" aria-label="CRO and Experimentation">
+          <div class="skill-inner">
+            <div class="skill-title"><span class="dot"></span>CRO &amp; Experimentation</div>
+            <p class="skill-desc">Hypotheses, A/B thinking and UX micro-copy. Reduce friction in forms, navigation and product detail pages.</p>
+          </div>
         </div>
-        <div class="bubble">
-          <i data-lucide="pie-chart"></i>
-          <h4>Dashboards & KPIs</h4>
-          <p>Sheets/Looker basics, weekly updates, learnings log.</p>
+
+        <div class="skill-card soft hover-raise" tabindex="0" aria-label="Scraping and Data">
+          <div class="skill-inner">
+            <div class="skill-title"><span class="dot"></span>Scraping &amp; Data</div>
+            <p class="skill-desc">Playwright/Node basics to collect product/content datasets and export CSVs for quick analysis and dashboards.</p>
+          </div>
         </div>
-        <div class="bubble">
-          <i data-lucide="file-code"></i>
-          <h4>Scraping (basics)</h4>
-          <p>Playwright/Node intro, CSV exports for analysis.</p>
-        </div>
-        <div class="bubble">
-          <i data-lucide="code"></i>
-          <h4>HTML/CSS/JS</h4>
-          <p>Small sites, tracking hooks, component tweaks.</p>
-        </div>
-        <div class="bubble">
-          <i data-lucide="palette"></i>
-          <h4>Graphic & Presentation</h4>
-          <p>Canva, Adobe, storytelling decks, pitch structure.</p>
-        </div>
-      </div>
-      <div class="bubble">
-          <i data-lucide="palette"></i>
-          <h4>Emailmarketing</h4>
-          <p>Designing and creating emails from scratch, managing campaigns in CRM systems, and sending out weekly updates and event invitations.</p>
+
+        <div class="skill-card soft hover-raise" tabindex="0" aria-label="Content and Presentation">
+          <div class="skill-inner">
+            <div class="skill-title"><span class="dot"></span>Content &amp; Presentation</div>
+            <p class="skill-desc">Canva/Adobe for clear storytelling, deck structure and assets that support campaigns and stakeholder buy-in.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Courses -->
-    <section class="section" id="courses">
-      <h2 class="h1">Courses</h2>
-      <p class="sub">Three core tracks this year.</p>
+    <!-- Gallery -->
+    <section class="section" id="gallery">
+      <h2 class="h1">Gallery</h2>
+      <p class="sub">A few things I’ve designed, written or built</p>
 
-      <div class="cards-3">
-        <a class="card-link" href="cab.html">
-          <img class="thumb" src="images/courses/cab.png" alt="CAB course preview">
-          <div class="card-body">
-            <h3>CAB — Communication According to Berghs</h3>
-            <p>Problem framing, the “Scroller,” and the concept “Everyone is a Photographer.”</p>
+      <div class="gallery-grid">
+        <a class="gallery-item soft hover-raise" href="images/gallery/gtm-dashboard.jpg" target="_blank" rel="noreferrer">
+          <div class="media">
+            <img src="images/tba.png" alt="Looker dashboard preview">
+            <span class="img-tag">Dashboards</span>
           </div>
+          <div class="gallery-caption">Looker Studio: weekly growth dashboard <span>– GA4 + sheets</span></div>
         </a>
 
-        <a class="card-link" href="growth-toolbox.html">
-          <img class="thumb" src="images/courses/gtb.jpg" alt="Growth Toolbox preview">
-          <div class="card-body">
-            <h3>Growth Toolbox</h3>
-            <p>GTM, GA4, clean event design, data layer, scraping, dashboards.</p>
+        <a class="gallery-item soft hover-raise" href="images/gallery/seo-wireframe.jpg" target="_blank" rel="noreferrer">
+          <div class="media">
+            <img src="images/gallery/seo-wireframe.jpg" alt="SEO wireframe preview">
+            <span class="img-tag">SEO</span>
           </div>
+          <div class="gallery-caption">SEO wireframe for category page <span>– intent & structure</span></div>
         </a>
 
-        <a class="card-link" href="performance-marketing.html">
-          <img class="thumb" src="images/tba.png" alt="Performance Marketing preview">
-          <div class="card-body">
-            <h3>Performance Marketing</h3>
-            <p>SEO/CRO, funnels, creatives, experiments, and reporting basics.</p>
+        <a class="gallery-item soft hover-raise" href="images/gallery/scraper-csv.png" target="_blank" rel="noreferrer">
+          <div class="media">
+            <img src="images/gallery/scraper-csv.png" alt="Scraper CSV preview">
+            <span class="img-tag">Scraping</span>
           </div>
+          <div class="gallery-caption">Node/Playwright: product scraper <span>– CSV export</span></div>
         </a>
-      </div>
-    </section>
 
-    <!-- Cases -->
-    <section id="cases" class="section">
-      <h2>Cases</h2>
-      <div class="cases-grid">
-        <div class="case-card">
-          <a class="card-link" href="case-one.html">
-            <img class="thumb" src="images/tba.png" alt="Case One preview">
-            <div class="card-body">
-              <h3>Case One — Client/Brand</h3>
-              <p>Short one-liner about the problem and outcome.</p>
-            </div>
-          </a>
+        <a class="gallery-item soft hover-raise" href="images/gallery/email-campaign.jpg" target="_blank" rel="noreferrer">
+          <div class="media">
+            <img src="images/gallery/email-campaign.jpg" alt="Email campaign mockup">
+            <span class="img-tag">Email</span>
+          </div>
+          <div class="gallery-caption">Email marketing: event campaign <span>– design + deploy</span></div>
+        </a>
 
-          <a class="card-link" href="case-two.html">
-            <img class="thumb" src="images/tba.png" alt="Case Two preview">
-            <div class="card-body">
-              <h3>Case Two — Client/Brand</h3>
-              <p>Short one-liner about the problem and outcome.</p>
-            </div>
-          </a>
+        <a class="gallery-item soft hover-raise" href="images/gallery/pitch-deck.jpg" target="_blank" rel="noreferrer">
+          <div class="media">
+            <img src="images/gallery/pitch-deck.jpg" alt="Pitch deck slide">
+            <span class="img-tag">Deck</span>
+          </div>
+          <div class="gallery-caption">Pitch deck: concept & storytelling <span>– 12 slides</span></div>
+        </a>
 
-          <a class="card-link" href="case-three.html">
-            <img class="thumb" src="images/tba.png" alt="Case Three preview">
-            <div class="card-body">
-              <h3>Case Three — Client/Brand</h3>
-              <p>Short one-liner about the problem and outcome.</p>
-            </div>
-          </a>
-        </div>
+        <a class="gallery-item soft hover-raise" href="images/gallery/portfolio-site.jpg" target="_blank" rel="noreferrer">
+          <div class="media">
+            <img src="images/gallery/portfolio-site.jpg" alt="Portfolio site mockup">
+            <span class="img-tag">Web</span>
+          </div>
+          <div class="gallery-caption">HTML/CSS: portfolio site layout <span>– components</span></div>
+        </a>
       </div>
     </section>
 
@@ -253,30 +166,27 @@
       <p class="sub">From conversation to collaboration</p>
 
       <div class="grid" style="grid-template-columns:repeat(3,1fr); gap:20px;">
-        <a class="card card-link" href="mailto:ava.urden@gmail.com">
-          <p>Email me</p>
-        </a>
-
-        <a class="card card-link" href="https://www.linkedin.com/in/ava-urd%C3%A9n-3014a821b" target="_blank" rel="noreferrer">
-          <p>Connect on LinkedIn</p>
-        </a>
-
-        <a class="card card-link" href="files/ava_cv.pdf" target="_blank" rel="noreferrer" download>
-          <p>Download my CV</p>
-        </a>
+        <a class="btn btn--block btn--lg" href="mailto:ava.urden@gmail.com"><p>Email me</p></a>
+        <a class="btn btn--block btn--lg" href="https://www.linkedin.com/in/ava-urd%C3%A9n-3014a821b" target="_blank" rel="noreferrer"><p>Connect on LinkedIn</p></a>
+        <a class="btn btn--block btn--lg" href="files/ava_cv.pdf" target="_blank" rel="noreferrer" download><p>Download my CV</p></a>
       </div>
 
       <p class="center mt-32"><a class="btn" href="#home">Back to top</a></p>
     </section>
   </main>
 
-  <footer class="footer container">
-    © <span id="y"></span> Ava Urdén
-  </footer>
+  <footer class="footer container">© <span id="y"></span> Ava Urdén</footer>
 
   <script>
     document.getElementById('y').textContent = new Date().getFullYear();
     lucide.createIcons();
+
+    // Soft fade-in on scroll
+    const els = document.querySelectorAll('.fade');
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }});
+    },{ threshold:.1 });
+    els.forEach(el=>io.observe(el));
   </script>
 </body>
 </html>
