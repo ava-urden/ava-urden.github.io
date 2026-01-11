@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="sv">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Ava Urdén</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <button class="lang-toggle" type="button" id="langToggle" aria-label="Switch language">
+      Svenska / English
+    </button>
+
+    <main class="page">
+      <header class="hero">
+        <h1 class="hero__title">Ava Urdén</h1>
+        <p class="hero__subtitle" data-i18n="subtitle">
+          Growth Marketing-student, Berghs School of Communication
+        </p>
+      </header>
+
+      <section class="cards" aria-label="Quick links">
+        <a class="card" href="cv.html">
+          <img class="card__image" src="images/cv.jpg" alt="" loading="lazy" />
+          <div class="card__label" data-i18n="card_cv">Ladda ner mitt CV</div>
+        </a>
+
+        <a class="card" href="portfolio.html">
+          <img class="card__image" src="images/portfolio.jpg" alt="" loading="lazy" />
+          <div class="card__label" data-i18n="card_portfolio">Min portfolio</div>
+        </a>
+
+        <a class="card" href="contact.html">
+          <img class="card__image" src="images/contact.jpg" alt="" loading="lazy" />
+          <div class="card__label" data-i18n="card_contact">Mina kontaktuppgifter</div>
+        </a>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
