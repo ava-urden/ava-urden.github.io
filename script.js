@@ -1,6 +1,6 @@
 const i18n = {
   sv: {
-    subtitle: "Growth Marketing-student, Berghs School of Communication",
+    subtitle: "Growth Marketing student, Berghs School of Communication",
     card_cv: "Ladda ner mitt CV",
     card_portfolio: "Min portfolio",
     card_contact: "Mina kontaktuppgifter",
