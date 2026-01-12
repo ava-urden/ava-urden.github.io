@@ -4,11 +4,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title data-i18n="contact_title">Kontakt – Ava Urdén</title>
-    <link rel="stylesheet" href="style.css" />
-
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Lora:wght@300;400&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
@@ -16,29 +17,37 @@
       Svenska / English
     </button>
 
-    <main class="page page--inner">
-      <a class="back-link" href="index.html" data-i18n="back_home">← Tillbaka</a>
+    <main class="page">
+      <div class="center-content">
+        
+        <header class="inner-hero reveal">
+          <a class="back-link" href="index.html" data-i18n="back_home">← Tillbaka</a>
+          <h1 class="inner-hero__title" data-i18n="contact_heading">Mina kontaktuppgifter</h1>
+          <p class="inner-hero__subtitle" data-i18n="contact_intro">
+            Här hittar du mina länkar.
+          </p>
+        </header>
 
-      <header class="inner-hero">
-        <h1 class="inner-hero__title" data-i18n="contact_heading">Mina kontaktuppgifter</h1>
-        <p class="inner-hero__subtitle" data-i18n="contact_intro">
-          Lägg in dina länkar här (mail, LinkedIn, osv).
-        </p>
-      </header>
+        <section class="content-card reveal">
+          <ul class="contact-list">
+            <li class="contact-list__item">
+              <span class="contact-list__label">Telefon</span>
+              <a class="contact-list__link" href="tel:+46723111441">+46 72 311 14 41</a>
+            </li>
 
-      <section class="content-card">
-        <ul class="contact-list">
-          <li class="contact-list__item">
-            <span class="contact-list__label">Email</span>
-            <a class="contact-list__link" href="mailto:ava.urden@gmail.com">ava.urden@gmail.com</a>
-          </li>
+            <li class="contact-list__item">
+              <span class="contact-list__label">Email</span>
+              <a class="contact-list__link" href="mailto:ava.urden@gmail.com">ava.urden@gmail.com</a>
+            </li>
 
-          <li class="contact-list__item">
-            <span class="contact-list__label">LinkedIn</span>
-            <a class="contact-list__link" href="https://www.linkedin.com/in/ava-urd%C3%A9n-3014a821b/" target="_blank" rel="noreferrer">linkedin.com/in/ava-urdén</a>
-          </li>
-        </ul>
-      </section>
+            <li class="contact-list__item">
+              <span class="contact-list__label">LinkedIn</span>
+              <a class="contact-list__link" href="https://www.linkedin.com/in/ava-urd%C3%A9n-3014a821b/" target="_blank" rel="noreferrer">linkedin.com/in/ava-urdén</a>
+            </li>
+          </ul>
+        </section>
+        
+      </div>
     </main>
 
     <script src="script.js"></script>
