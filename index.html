@@ -4,11 +4,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Ava Urdén</title>
-    <link rel="stylesheet" href="style.css" />
-
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Lora:wght@300;400&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
@@ -17,29 +18,37 @@
     </button>
 
     <main class="page">
-      <header class="hero">
-        <h1 class="hero__title">Ava Urdén</h1>
-        <p class="hero__subtitle" data-i18n="subtitle">
-          Growth Marketing-student, Berghs School of Communication
-        </p>
-      </header>
+      <div class="center-content">
+        <header class="hero">
+          <h1 class="hero__title reveal">Ava Urdén</h1>
+          <p class="hero__subtitle reveal" data-i18n="subtitle">
+            Growth Marketing-student, Berghs School of Communication
+          </p>
+        </header>
 
-      <section class="cards" aria-label="Quick links">
-        <a class="card" href="cv.html">
-          <img class="card__image" src="images/cv.png" alt="" loading="lazy" />
-          <div class="card__label" data-i18n="card_cv">Ladda ner mitt CV</div>
-        </a>
+        <section class="cards" aria-label="Quick links">
+          <a class="card reveal" href="cv.html">
+            <div class="card__image-container">
+              <img class="card__image" src="images/cv.png" alt="" loading="lazy" />
+            </div>
+            <div class="card__label" data-i18n="card_cv">Ladda ner mitt CV</div>
+          </a>
 
-        <a class="card" href="portfolio.html">
-          <img class="card__image" src="images/portfolio.png" alt="" loading="lazy" />
-          <div class="card__label" data-i18n="card_portfolio">Min portfolio</div>
-        </a>
+          <a class="card reveal" href="portfolio.html">
+            <div class="card__image-container">
+              <img class="card__image" src="images/portfolio.png" alt="" loading="lazy" />
+            </div>
+            <div class="card__label" data-i18n="card_portfolio">Min portfolio</div>
+          </a>
 
-        <a class="card" href="contact.html">
-          <img class="card__image" src="images/contact.jpg" alt="" loading="lazy" />
-          <div class="card__label" data-i18n="card_contact">Mina kontaktuppgifter</div>
-        </a>
-      </section>
+          <a class="card reveal" href="contact.html">
+            <div class="card__image-container">
+              <img class="card__image" src="images/contact.jpg" alt="" loading="lazy" />
+            </div>
+            <div class="card__label" data-i18n="card_contact">Mina kontaktuppgifter</div>
+          </a>
+        </section>
+      </div>
     </main>
 
     <script src="script.js"></script>
