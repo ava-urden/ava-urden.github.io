@@ -138,8 +138,11 @@ function applyLang(lang) {
     if (key && d[key]) el.textContent = d[key];
   });
 
-  // Switch CV download file per language
-  const cvHref = lang === "sv" ? "./cv/ava-urden-cv-sv.pdf" : "./cv/ava-urden-cv-en.pdf";
+  // Update CV per language (rename files to match these OR change these paths)
+  const svPdf = "./cv/Ava-Urden-CV-sv.pdf";
+  const enPdf = "./cv/Ava-Urden-CV-en.pdf";
+  const cvHref = lang === "sv" ? svPdf : enPdf;
+
   const a1 = document.getElementById("cvLink");
   const a2 = document.getElementById("cvLink2");
   if (a1) a1.setAttribute("href", cvHref);
