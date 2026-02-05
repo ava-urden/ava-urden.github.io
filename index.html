@@ -6,11 +6,10 @@
     <title>Ava Urdén | Portfolio</title>
     <meta name="description" content="Portfolio — growth marketing, cases, skills and contact." />
 
-    <!-- Modern fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Manrope:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
 
@@ -40,22 +39,21 @@
     </header>
 
     <main id="top">
-      <!-- HERO -->
       <section class="hero">
         <div class="container hero__grid">
-          <div>
+          <div class="hero__content">
             <h1 class="h-display" data-i18n="hero_title">
-              Growth marketing med designöga och datadrivna beslut
+              Growth marketing med designöga och datadrivna beslut.
             </h1>
 
             <p class="muted hero__p" data-i18n="hero_body">
               Jag skapar tydlig riktning, starkare budskap och bättre konvertering genom att kombinera kreativitet,
-              strategi och mätning
+              strategi och mätning.
             </p>
 
             <div class="hero__cta">
               <a class="btn btn--dark" href="#cases" data-i18n="cta_cases">Se cases</a>
-              <a class="btn btn--ghost" id="cvLink" href="./cv/Ava-Urden-CV-sv.pdf" download data-i18n="cta_cv">
+              <a class="btn btn--link" id="cvLink" href="./cv/Ava-Urden-CV-sv.pdf" download data-i18n="cta_cv">
                 Ladda ner CV
               </a>
             </div>
@@ -65,133 +63,32 @@
               <span class="chip">Looker Studio</span>
               <span class="chip">Shopify</span>
               <span class="chip">CRO</span>
-              <span class="chip">SEO</span>
             </div>
           </div>
 
-          <div class="card card--img">
-            <!-- Your filename in the folder is: img/Ava Urdén.png -->
-            <img id="portrait" src="./img/Ava%20Urd%C3%A9n.png" alt="Porträtt av Ava" />
+          <div class="hero__img-wrapper">
+             <img id="portrait" src="./img/Ava%20Urd%C3%A9n.png" alt="Porträtt av Ava" />
           </div>
         </div>
       </section>
 
-      <div class="container">
-        <div class="divider"></div>
-      </div>
-
-      <!-- ABOUT -->
       <section id="about" class="section">
         <div class="container">
-          <h2 class="h-display" data-i18n="about_title">Om mig</h2>
-          <p class="muted" data-i18n="about_body">
-            Driven growth marketing-student med fokus på e-handel, trivs i gränslandet mellan varumärke och performance
-            och gillar att testa, mäta, optimera och skapa som känns rätt i uttrycket
-          </p>
-        </div>
-      </section>
-
-      <!-- CV -->
-      <section id="cv" class="section">
-        <div class="container">
-          <div class="card card--row">
-            <div>
-              <h2 class="h-display" data-i18n="cv_title">CV</h2>
-              <p class="muted" data-i18n="cv_body">Ladda ner mitt CV som PDF</p>
-            </div>
-
-            <a class="btn btn--accent" id="cvLink2" href="./cv/Ava-Urden-CV-sv.pdf" download data-i18n="cta_cv">
-              Ladda ner CV
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <!-- TOOLS -->
-      <section id="tools" class="section">
-        <div class="container">
-          <h2 class="h-display" data-i18n="tools_title">Verktyg</h2>
-
           <div class="grid">
-            <div class="card">
-              <h3 data-i18n="tools_cat1">Analytics & spårning</h3>
-              <ul class="list">
-                <li>GA4</li>
-                <li>Looker Studio</li>
-                <li>Google Tag Manager</li>
-                <li data-i18n="tools_item_measure">Mätplan</li>
-              </ul>
-            </div>
-
-            <div class="card">
-              <h3 data-i18n="tools_cat2">Paid & performance</h3>
-              <ul class="list">
-                <li>Meta Ads</li>
-                <li>Google Ads</li>
-                <li data-i18n="tools_item_testing">Testupplägg</li>
-                <li data-i18n="tools_item_budget">Budget & mål</li>
-              </ul>
-            </div>
+             <div><h2 class="h-label" data-i18n="about_title">Om mig</h2></div>
+             <div>
+                <p class="text-large" data-i18n="about_body">
+                  Driven growth marketing-student med fokus på e-handel. Jag trivs i gränslandet mellan varumärke och performance och gillar att testa, mäta, optimera och skapa content som känns rätt.
+                </p>
+             </div>
           </div>
         </div>
       </section>
 
-      <!-- SKILLS -->
-      <section id="skills" class="section">
-        <div class="container">
-          <h2 class="h-display" data-i18n="skills_title">Kompetens & erfarenhet</h2>
-
-          <div class="grid grid--3">
-            <div class="card">
-              <h3 data-i18n="skills_1_title">Strategi & growth</h3>
-              <ul class="list">
-                <li data-i18n="skills_1_a">Mål, KPI och roadmap</li>
-                <li data-i18n="skills_1_b">Hypotesdriven testning</li>
-                <li data-i18n="skills_1_c">Prioritering som märks</li>
-              </ul>
-            </div>
-
-            <div class="card">
-              <h3 data-i18n="skills_2_title">Mätning & insikt</h3>
-              <ul class="list">
-                <li data-i18n="skills_2_a">Eventstruktur</li>
-                <li data-i18n="skills_2_b">Dashboards</li>
-                <li data-i18n="skills_2_c">Insikter som går att agera på</li>
-              </ul>
-            </div>
-
-            <div class="card">
-              <h3 data-i18n="skills_3_title">Kreativt & UX</h3>
-              <ul class="list">
-                <li data-i18n="skills_3_a">Copy, hooks och koncept</li>
-                <li data-i18n="skills_3_b">CRO och friktionsreducering</li>
-                <li data-i18n="skills_3_c">Visuellt uttryck</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- COURSES -->
-      <section id="courses" class="section">
-        <div class="container">
-          <h2 class="h-display" data-i18n="courses_title">Relevanta kurser</h2>
-
-          <div class="card">
-            <ul class="list">
-              <li data-i18n="course_1">SEO & Content Marketing</li>
-              <li data-i18n="course_2">Growth Marketing (Berghs)</li>
-              <li data-i18n="course_3">E-handel & kundresa</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <!-- CASES -->
       <section id="cases" class="section">
         <div class="container">
           <div class="section__top">
-            <h2 class="h-display" data-i18n="cases_title">Cases</h2>
+            <h2 class="h-display" data-i18n="cases_title">Utvalda cases</h2>
 
             <div class="filters">
               <button class="filter is-active" data-filter="all" data-i18n="filter_all">Alla</button>
@@ -209,7 +106,7 @@
               <div class="case__body">
                 <div class="case__tags"><span>Growth</span><span>Tracking</span></div>
                 <h3 data-i18n="case1_title">SUIE: Growth setup för e-handel</h3>
-                <p class="muted" data-i18n="case1_sum">Struktur för mätning, content och CRO med tydliga KPI:er</p>
+                <p class="muted" data-i18n="case1_sum">Struktur för mätning, content och CRO.</p>
               </div>
             </a>
 
@@ -220,7 +117,7 @@
               <div class="case__body">
                 <div class="case__tags"><span>CRO</span><span>UX</span></div>
                 <h3 data-i18n="case2_title">CRO: Check-out optimering</h3>
-                <p class="muted" data-i18n="case2_sum">Hypotesdriven förbättring för att minska friktion</p>
+                <p class="muted" data-i18n="case2_sum">Hypotesdriven förbättring för att minska friktion.</p>
               </div>
             </a>
 
@@ -231,60 +128,82 @@
               <div class="case__body">
                 <div class="case__tags"><span>SEO</span><span>Content</span></div>
                 <h3 data-i18n="case3_title">SEO: Content-struktur</h3>
-                <p class="muted" data-i18n="case3_sum">Plan och struktur för organisk tillväxt över tid</p>
+                <p class="muted" data-i18n="case3_sum">Plan och struktur för organisk tillväxt.</p>
               </div>
             </a>
           </div>
+        </div>
+      </section>
 
-          <div class="casepage" id="case-1">
-            <div class="divider"></div>
-            <h3 class="h-display" data-i18n="case1_title">SUIE: Growth setup för e-handel</h3>
-            <p class="muted" data-i18n="case1_long">
-              Beskrivning: problem, approach, vad du gjorde, resultat och lärdomar, ersätt med riktig text
-            </p>
-          </div>
+      <section id="skills" class="section bg-light">
+        <div class="container">
+          <div class="grid grid--3">
+            
+            <div>
+              <h2 class="h-label" data-i18n="tools_title">Verktyg</h2>
+              <ul class="clean-list">
+                <li>GA4</li>
+                <li>Looker Studio</li>
+                <li>Google Tag Manager</li>
+                <li>Meta Ads / Google Ads</li>
+                <li>Shopify</li>
+                <li>Figma</li>
+              </ul>
+            </div>
 
-          <div class="casepage" id="case-2">
-            <div class="divider"></div>
-            <h3 class="h-display" data-i18n="case2_title">CRO: Check-out optimering</h3>
-            <p class="muted" data-i18n="case2_long">
-              Beskrivning: problem, approach, vad du gjorde, resultat och lärdomar, ersätt med riktig text
-            </p>
-          </div>
+            <div>
+              <h2 class="h-label" data-i18n="skills_1_title">Strategi</h2>
+              <ul class="clean-list">
+                <li data-i18n="skills_1_a">Mål, KPI och roadmap</li>
+                <li data-i18n="skills_1_b">Hypotesdriven testning</li>
+                <li data-i18n="skills_2_a">Eventstruktur & Mätning</li>
+                <li data-i18n="skills_2_c">Datadrivna insikter</li>
+              </ul>
+            </div>
 
-          <div class="casepage" id="case-3">
-            <div class="divider"></div>
-            <h3 class="h-display" data-i18n="case3_title">SEO: Content-struktur</h3>
-            <p class="muted" data-i18n="case3_long">
-              Beskrivning: problem, approach, vad du gjorde, resultat och lärdomar, ersätt med riktig text
-            </p>
+            <div>
+              <h2 class="h-label" data-i18n="skills_3_title">Kreativt</h2>
+              <ul class="clean-list">
+                <li data-i18n="skills_3_a">Copy, hooks och koncept</li>
+                <li data-i18n="skills_3_b">CRO och UX</li>
+                <li data-i18n="skills_3_c">Visuellt uttryck</li>
+                <li data-i18n="course_1">Content Marketing</li>
+              </ul>
+            </div>
+
           </div>
         </div>
       </section>
+
+      <section id="cv" class="section">
+        <div class="container">
+          <div class="banner">
+             <h2 class="h-display" data-i18n="cv_title">CV</h2>
+             <div class="banner__action">
+               <p class="muted" data-i18n="cv_body">Nyfiken på detaljerna? Ladda ner hela mitt CV.</p>
+               <a class="btn btn--outline" id="cvLink2" href="./cv/Ava-Urden-CV-sv.pdf" download data-i18n="cta_cv">
+                Ladda ner PDF
+              </a>
+             </div>
+          </div>
+        </div>
+      </section>
+
     </main>
 
     <footer id="contact" class="footer">
-      <div class="container footer__grid">
-        <div>
+      <div class="container">
+        <div class="footer__inner">
           <h2 class="h-display" data-i18n="contact_title">Kontakt</h2>
-          <p class="muted" data-i18n="contact_body">Hör gärna av dig eller connecta på LinkedIn</p>
-        </div>
-
-        <div class="footer__info">
-          <div class="row">
-            <span class="muted" data-i18n="contact_email">E-post</span>
+          
+          <div class="footer__links">
             <a href="mailto:ava@email.com">ava@email.com</a>
+            <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+            <span class="muted">Stockholm</span>
           </div>
-
-          <div class="row">
-            <span class="muted">LinkedIn</span>
-            <a href="https://linkedin.com" target="_blank" rel="noreferrer">linkedin.com/in/your-handle</a>
-          </div>
-
-          <div class="row">
-            <span class="muted" data-i18n="contact_location">Plats</span>
-            <span>Stockholm, Sweden</span>
-          </div>
+        </div>
+        <div class="footer__copy">
+            &copy; 2026 Ava Urdén
         </div>
       </div>
     </footer>
