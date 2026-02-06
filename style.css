@@ -1,12 +1,17 @@
 :root {
-  /* Modern Palette */
-  --bg: #F9F9F9; /* Very soft light grey/warm white */
-  --text: #111111; /* Sharp almost-black */
-  --muted: #666666; /* Elegant grey */
-  --accent: #E5E5E5; /* Light lines */
+  /* Modern Palette med Mörkbrun */
+  --bg: #F5F5F7; /* Ljus, modern Apple-liknande bakgrund */
+  --text-dark-brown: #3E2B22; /* Mörkbrun färg för text och rubriker */
+  --muted-brown: #6D564B; /* En mjukare brun för brödtext */
+  --accent: #E5E5E5; /* Ljusa linjer */
   
-  --radius: 4px; /* Sharper corners for modern look */
-  --max: 1300px; /* Wider container for "Space" */
+  /* Glas-effekt variabler */
+  --glass-bg: rgba(255, 255, 255, 0.65); /* Halvgenomskinlig vit */
+  --glass-border: rgba(255, 255, 255, 0.5); /* Ljusare ram */
+  --backdrop-blur: blur(16px); /* Kraftig oskärpa för glas-effekt */
+
+  --radius: 12px; /* Lite rundare hörn för en mjukare känsla */
+  --max: 1300px;
   --pad: 40px;
 
   --font-head: "Manrope", sans-serif;
@@ -19,7 +24,7 @@ html { scroll-behavior: smooth; }
 body {
   margin: 0;
   background: var(--bg);
-  color: var(--text);
+  color: var(--text-dark-brown); /* Ändrat till mörkbrun */
   font-family: var(--font-body);
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
@@ -28,7 +33,8 @@ body {
 /* --- TYPOGRAPHY --- */
 h1, h2, h3, h4 {
   font-family: var(--font-head);
-  font-weight: 400; /* Lighter weights look more premium */
+  font-weight: 500;
+  color: var(--text-dark-brown); /* Mörkbrun */
   margin: 0 0 16px;
   line-height: 1.1;
 }
@@ -36,36 +42,25 @@ h1, h2, h3, h4 {
 .h-display {
   font-size: 56px;
   letter-spacing: -0.02em;
-  font-weight: 500;
 }
 
 .h-label {
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: var(--muted);
-  font-family: var(--font-body);
-  font-weight: 500;
+  color: var(--muted-brown); /* Mjukare brun */
+  font-weight: 600;
   margin-bottom: 24px;
 }
 
 p {
   line-height: 1.6;
   font-size: 16px;
-  color: var(--muted);
+  color: var(--muted-brown); /* Mjukare brun */
   margin: 0;
 }
 
-.text-large {
-  font-size: 28px;
-  line-height: 1.4;
-  color: var(--text);
-  font-weight: 300;
-  letter-spacing: -0.01em;
-  max-width: 30ch;
-}
-
-a { color: var(--text); transition: opacity 0.2s; }
+a { color: var(--text-dark-brown); transition: opacity 0.2s; }
 a:hover { opacity: 0.7; }
 
 /* --- LAYOUT --- */
@@ -75,26 +70,29 @@ a:hover { opacity: 0.7; }
   padding: 0 var(--pad);
 }
 
-.section { padding: 120px 0; } /* More space (air) */
-.bg-light { background: #EFEFEF; } /* Slightly darker section for contrast */
+.section { padding: 120px 0; }
+/* Tog bort bg-light eftersom glas-effekten på korten ger kontrasten */
 
 .grid {
   display: grid;
-  gap: 60px; /* Big gaps for air */
+  gap: 60px;
 }
 @media(min-width: 768px) {
   .grid { grid-template-columns: 1fr 1fr; }
   .grid--3 { grid-template-columns: 1fr 1fr 1fr; }
 }
 
-/* --- HEADER --- */
+/* --- HEADER (Nu med glas-effekt och brun text) --- */
 .header {
   padding: 24px 0;
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 100;
-  background: rgba(249, 249, 249, 0.85); /* Matches var(--bg) with opacity */
-  backdrop-filter: blur(12px);
+  /* Glas-effekt */
+  background: var(--glass-bg);
+  backdrop-filter: var(--backdrop-blur);
+  -webkit-backdrop-filter: var(--backdrop-blur);
+  border-bottom: 1px solid var(--glass-border);
 }
 .header__inner {
   display: flex;
@@ -107,6 +105,7 @@ a:hover { opacity: 0.7; }
   font-size: 20px;
   text-decoration: none;
   letter-spacing: -0.02em;
+  color: var(--text-dark-brown); /* Mörkbrun */
 }
 
 .nav { display: none; gap: 32px; }
@@ -115,9 +114,10 @@ a:hover { opacity: 0.7; }
 .nav a {
   text-decoration: none;
   font-size: 14px;
-  color: var(--muted);
+  color: var(--text-dark-brown); /* Mörkbrun */
+  font-weight: 500;
 }
-.nav a:hover { color: var(--text); }
+.nav a:hover { opacity: 0.6; }
 
 .lang { display: flex; gap: 4px; }
 .lang__btn {
@@ -125,10 +125,10 @@ a:hover { opacity: 0.7; }
   font-family: var(--font-body);
   font-size: 13px;
   cursor: pointer;
-  color: var(--muted);
+  color: var(--muted-brown);
   padding: 4px 8px;
 }
-.lang__btn.is-active { color: var(--text); font-weight: 600; }
+.lang__btn.is-active { color: var(--text-dark-brown); font-weight: 700; }
 
 /* --- HERO --- */
 .hero { padding: 180px 0 100px; }
@@ -147,12 +147,14 @@ a:hover { opacity: 0.7; }
   max-width: 500px;
   margin-top: 24px;
   font-weight: 300;
+  color: var(--muted-brown);
 }
 
 .hero__img-wrapper {
   position: relative;
   overflow: hidden;
   border-radius: var(--radius);
+  box-shadow: 0 10px 30px -10px rgba(62, 43, 34, 0.1); /* Mjuk brun skugga */
 }
 .hero__img-wrapper img {
   display: block;
@@ -163,41 +165,69 @@ a:hover { opacity: 0.7; }
 
 .hero__cta { margin-top: 32px; display: flex; gap: 24px; align-items: center; }
 
-/* --- BUTTONS & CHIPS --- */
+/* --- BUTTONS & CHIPS (Glas och brunt) --- */
 .btn {
   display: inline-flex;
   padding: 14px 28px;
   border-radius: 99px;
   text-decoration: none;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 600;
   transition: all 0.3s ease;
 }
-.btn--dark { background: var(--text); color: #fff; }
-.btn--dark:hover { background: #333; transform: translateY(-2px); }
-
-.btn--outline { border: 1px solid var(--text); color: var(--text); }
-.btn--outline:hover { background: var(--text); color: #fff; }
-
-.btn--link { padding: 0; text-decoration: underline; text-underline-offset: 4px; }
-.btn--link:hover { opacity: 0.6; }
-
-.chips { display: flex; gap: 12px; margin-top: 40px; flex-wrap: wrap; }
-.chip {
-  font-size: 13px;
-  padding: 8px 16px;
-  border: 1px solid #E0E0E0;
-  border-radius: 99px;
-  color: var(--muted);
+/* Mörkbrun knapp */
+.btn--dark { 
+  background: var(--text-dark-brown); 
+  color: #fff; 
+}
+.btn--dark:hover { 
+  background: #5a4236; /* Något ljusare brun vid hover */
+  transform: translateY(-2px); 
 }
 
-/* --- CASES --- */
+/* Glas-liknande outline-knapp */
+.btn--outline { 
+  background: var(--glass-bg);
+  backdrop-filter: var(--backdrop-blur);
+  -webkit-backdrop-filter: var(--backdrop-blur);
+  border: 1px solid var(--glass-border);
+  color: var(--text-dark-brown);
+}
+.btn--outline:hover { 
+  background: var(--text-dark-brown); 
+  color: #fff; 
+  border-color: var(--text-dark-brown);
+}
+
+.btn--link { 
+  padding: 0; 
+  text-decoration: underline; 
+  text-underline-offset: 4px; 
+  color: var(--text-dark-brown);
+}
+.btn--link:hover { opacity: 0.7; }
+
+.chips { display: flex; gap: 12px; margin-top: 40px; flex-wrap: wrap; }
+/* Glas-liknande chips */
+.chip {
+  font-size: 13px;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 99px;
+  color: var(--text-dark-brown);
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: var(--backdrop-blur);
+  -webkit-backdrop-filter: var(--backdrop-blur);
+}
+
+/* --- CASES (Glas-effekt på korten) --- */
 .section__top {
   display: flex; flex-wrap: wrap;
   justify-content: space-between;
   align-items: baseline;
   margin-bottom: 60px;
-  border-bottom: 1px solid var(--accent);
+  border-bottom: 1px solid rgba(62, 43, 34, 0.1);
   padding-bottom: 20px;
 }
 
@@ -207,10 +237,16 @@ a:hover { opacity: 0.7; }
   font-family: var(--font-body);
   font-size: 14px;
   cursor: pointer;
-  color: var(--muted);
+  color: var(--muted-brown);
   padding: 0;
+  font-weight: 500;
 }
-.filter.is-active { color: var(--text); text-decoration: underline; text-underline-offset: 4px; }
+.filter.is-active { 
+  color: var(--text-dark-brown); 
+  text-decoration: underline; 
+  text-underline-offset: 4px; 
+  font-weight: 700;
+}
 
 .cases {
   display: grid;
@@ -221,13 +257,24 @@ a:hover { opacity: 0.7; }
 .case {
   text-decoration: none;
   display: block;
+  border-radius: var(--radius);
+  overflow: hidden;
+  /* Glas-effekt på hela kortet */
+  background: var(--glass-bg);
+  backdrop-filter: var(--backdrop-blur);
+  -webkit-backdrop-filter: var(--backdrop-blur);
+  border: 1px solid var(--glass-border);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+.case:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px -10px rgba(62, 43, 34, 0.15);
+}
+
 .case__img {
-  aspect-ratio: 4/5; /* Taller, editorial ratio */
+  aspect-ratio: 4/5;
   background: #eee;
   overflow: hidden;
-  border-radius: var(--radius);
-  margin-bottom: 20px;
 }
 .case__img img {
   width: 100%; height: 100%; object-fit: cover;
@@ -235,37 +282,67 @@ a:hover { opacity: 0.7; }
 }
 .case:hover .case__img img { transform: scale(1.05); }
 
-.case h3 { font-size: 20px; margin-bottom: 8px; font-weight: 500; }
+.case__body { padding: 24px; }
+
+.case h3 { font-size: 20px; margin-bottom: 8px; font-weight: 600; color: var(--text-dark-brown); }
+.case__tags { margin-bottom: 12px; display: flex; gap: 8px; }
 .case__tags span {
-  font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em;
-  color: var(--muted); margin-right: 12px;
+  font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em;
+  color: var(--muted-brown); font-weight: 600;
+  background: rgba(62, 43, 34, 0.05);
+  padding: 4px 8px; border-radius: 4px;
 }
 
-/* --- LISTS (Skills) --- */
+/* --- LISTS (Skills & Tools) --- */
+/* Applicera glas-effekt på kolumnerna för enhetlighet */
+#skills .grid > div {
+    background: var(--glass-bg);
+    backdrop-filter: var(--backdrop-blur);
+    -webkit-backdrop-filter: var(--backdrop-blur);
+    border: 1px solid var(--glass-border);
+    padding: 30px;
+    border-radius: var(--radius);
+}
+
 .clean-list {
   list-style: none; padding: 0; margin: 0;
 }
 .clean-list li {
   padding: 12px 0;
-  border-bottom: 1px solid rgba(0,0,0,0.08);
+  border-bottom: 1px solid rgba(62, 43, 34, 0.1);
   font-size: 15px;
-  color: var(--text);
+  color: var(--text-dark-brown);
+  font-weight: 500;
 }
 .clean-list li:last-child { border-bottom: none; }
 
-/* --- BANNER (CV) --- */
+/* --- BANNER (CV - Glas-effekt) --- */
 .banner {
-  background: #fff;
+  /* Glas-effekt */
+  background: var(--glass-bg);
+  backdrop-filter: var(--backdrop-blur);
+  -webkit-backdrop-filter: var(--backdrop-blur);
+  border: 1px solid var(--glass-border);
+  
   padding: 60px;
   border-radius: var(--radius);
   display: flex; flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   gap: 30px;
+  box-shadow: 0 10px 30px -10px rgba(62, 43, 34, 0.05);
 }
 
 /* --- FOOTER --- */
-.footer { border-top: 1px solid var(--accent); padding: 80px 0 40px; margin-top: 0; }
+.footer { 
+  border-top: 1px solid rgba(62, 43, 34, 0.1); 
+  padding: 80px 0 40px; 
+  margin-top: 0; 
+  /* Lätt glas-effekt på footern också */
+  background: var(--glass-bg);
+  backdrop-filter: var(--backdrop-blur);
+  -webkit-backdrop-filter: var(--backdrop-blur);
+}
 .footer__inner {
   display: flex; justify-content: space-between; flex-wrap: wrap; gap: 40px;
   margin-bottom: 60px;
@@ -273,13 +350,17 @@ a:hover { opacity: 0.7; }
 .footer__links {
   display: flex; flex-direction: column; gap: 16px; align-items: flex-end;
 }
-.footer__links a { font-size: 24px; text-decoration: none; font-weight: 300; }
-.footer__copy { font-size: 13px; color: var(--muted); }
+.footer__links a { 
+  font-size: 24px; 
+  text-decoration: none; 
+  font-weight: 500; 
+  color: var(--text-dark-brown);
+}
+.footer__copy { font-size: 13px; color: var(--muted-brown); }
 
 /* --- RESPONSIVE --- */
 @media(max-width: 768px) {
   .h-display { font-size: 40px; }
   .section { padding: 80px 0; }
-  .text-large { font-size: 22px; }
   .footer__links { align-items: flex-start; }
 }
