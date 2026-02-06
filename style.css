@@ -1,16 +1,23 @@
 :root {
-  /* Modern Palette med Mörkbrun */
-  --bg: #F5F5F7; /* Ljus, modern Apple-liknande bakgrund */
-  --text-dark-brown: #3E2B22; /* Mörkbrun färg för text och rubriker */
-  --muted-brown: #6D564B; /* En mjukare brun för brödtext */
-  --accent: #E5E5E5; /* Ljusa linjer */
+  /* --- JUSTERAD PALETT (Ljusare & Tydligare) --- */
   
-  /* Glas-effekt variabler */
-  --glass-bg: rgba(255, 255, 255, 0.65); /* Halvgenomskinlig vit */
-  --glass-border: rgba(255, 255, 255, 0.5); /* Ljusare ram */
-  --backdrop-blur: blur(16px); /* Kraftig oskärpa för glas-effekt */
+  /* Basfärger */
+  --bg: #F5F4F1; /* LJUSARE BEIGE: En mycket ljus, varm off-white */
+  --text-main: #1F1E1B; /* Nästan svart, men mjukare */
+  --text-muted: #555450; /* MÖRKARE GRÅTT: Tydligare och mer lättläst */
+  --lines: #DEDCD6; /* Diskreta linjer */
 
-  --radius: 12px; /* Lite rundare hörn för en mjukare känsla */
+  /* Mörk accent (för knappar och footer) */
+  --dark-accent: #33322E; /* Mörk espresso/oliv */
+  --text-on-dark: #F5F4F1; /* Samma ljusa färg som bakgrunden */
+
+  /* Glas-effekt (Anpassad till ljusare bakgrund) */
+  --glass-bg: rgba(245, 244, 241, 0.85); /* Mer täckande ljus färg */
+  --glass-border: rgba(255, 255, 255, 0.6);
+  --backdrop-blur: blur(20px);
+
+  /* Layout */
+  --radius: 6px; /* Elegant hörnradie */
   --max: 1300px;
   --pad: 40px;
 
@@ -24,7 +31,7 @@ html { scroll-behavior: smooth; }
 body {
   margin: 0;
   background: var(--bg);
-  color: var(--text-dark-brown); /* Ändrat till mörkbrun */
+  color: var(--text-main);
   font-family: var(--font-body);
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
@@ -34,33 +41,41 @@ body {
 h1, h2, h3, h4 {
   font-family: var(--font-head);
   font-weight: 500;
-  color: var(--text-dark-brown); /* Mörkbrun */
+  color: var(--text-main);
   margin: 0 0 16px;
-  line-height: 1.1;
+  line-height: 1.15;
 }
 
 .h-display {
-  font-size: 56px;
-  letter-spacing: -0.02em;
+  font-size: 62px;
+  letter-spacing: -0.03em;
+  font-weight: 400;
 }
 
 .h-label {
-  font-size: 12px;
+  font-size: 11px;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--muted-brown); /* Mjukare brun */
+  letter-spacing: 0.15em;
+  color: var(--text-muted);
   font-weight: 600;
   margin-bottom: 24px;
 }
 
 p {
-  line-height: 1.6;
+  line-height: 1.7;
   font-size: 16px;
-  color: var(--muted-brown); /* Mjukare brun */
+  color: var(--text-muted); /* Den mörkare grå färgen används här */
   margin: 0;
 }
 
-a { color: var(--text-dark-brown); transition: opacity 0.2s; }
+.text-large {
+  font-size: 26px;
+  font-weight: 300;
+  color: var(--text-main);
+  max-width: 32ch;
+}
+
+a { color: var(--text-main); transition: opacity 0.2s; }
 a:hover { opacity: 0.7; }
 
 /* --- LAYOUT --- */
@@ -70,8 +85,8 @@ a:hover { opacity: 0.7; }
   padding: 0 var(--pad);
 }
 
-.section { padding: 120px 0; }
-/* Tog bort bg-light eftersom glas-effekten på korten ger kontrasten */
+.section { padding: 140px 0; }
+.bg-light { background: transparent; }
 
 .grid {
   display: grid;
@@ -82,17 +97,16 @@ a:hover { opacity: 0.7; }
   .grid--3 { grid-template-columns: 1fr 1fr 1fr; }
 }
 
-/* --- HEADER (Nu med glas-effekt och brun text) --- */
+/* --- HEADER (Glas) --- */
 .header {
   padding: 24px 0;
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 100;
-  /* Glas-effekt */
   background: var(--glass-bg);
   backdrop-filter: var(--backdrop-blur);
   -webkit-backdrop-filter: var(--backdrop-blur);
-  border-bottom: 1px solid var(--glass-border);
+  border-bottom: 1px solid rgba(0,0,0,0.04);
 }
 .header__inner {
   display: flex;
@@ -102,59 +116,62 @@ a:hover { opacity: 0.7; }
 .logo {
   font-family: var(--font-head);
   font-weight: 600;
-  font-size: 20px;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
   text-decoration: none;
-  letter-spacing: -0.02em;
-  color: var(--text-dark-brown); /* Mörkbrun */
+  color: var(--text-main);
 }
 
-.nav { display: none; gap: 32px; }
+.nav { display: none; gap: 40px; }
 @media(min-width: 900px) { .nav { display: flex; } }
 
 .nav a {
   text-decoration: none;
-  font-size: 14px;
-  color: var(--text-dark-brown); /* Mörkbrun */
-  font-weight: 500;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  font-weight: 600; /* Lite tjockare för att synas bättre */
 }
-.nav a:hover { opacity: 0.6; }
+.nav a:hover { color: var(--text-main); }
 
-.lang { display: flex; gap: 4px; }
+.lang { display: flex; gap: 8px; }
 .lang__btn {
   background: none; border: none;
   font-family: var(--font-body);
-  font-size: 13px;
+  font-size: 12px;
   cursor: pointer;
-  color: var(--muted-brown);
+  color: var(--text-muted);
   padding: 4px 8px;
 }
-.lang__btn.is-active { color: var(--text-dark-brown); font-weight: 700; }
+.lang__btn.is-active { color: var(--text-main); font-weight: 700; border-bottom: 1px solid var(--text-main); }
 
 /* --- HERO --- */
-.hero { padding: 180px 0 100px; }
+.hero { padding: 200px 0 120px; }
 .hero__grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 60px;
+  gap: 80px;
   align-items: center;
 }
 @media(min-width: 900px) {
-  .hero__grid { grid-template-columns: 1.2fr 0.8fr; }
+  .hero__grid { grid-template-columns: 1.1fr 0.9fr; }
 }
 
 .hero__p {
   font-size: 20px;
-  max-width: 500px;
+  max-width: 480px;
   margin-top: 24px;
   font-weight: 300;
-  color: var(--muted-brown);
+  color: var(--text-muted);
 }
 
 .hero__img-wrapper {
   position: relative;
   overflow: hidden;
   border-radius: var(--radius);
-  box-shadow: 0 10px 30px -10px rgba(62, 43, 34, 0.1); /* Mjuk brun skugga */
+  box-shadow: 0 20px 40px rgba(0,0,0, 0.06); 
 }
 .hero__img-wrapper img {
   display: block;
@@ -163,204 +180,188 @@ a:hover { opacity: 0.7; }
   object-fit: cover;
 }
 
-.hero__cta { margin-top: 32px; display: flex; gap: 24px; align-items: center; }
+.hero__cta { margin-top: 40px; display: flex; gap: 24px; align-items: center; }
 
-/* --- BUTTONS & CHIPS (Glas och brunt) --- */
+/* --- BUTTONS --- */
 .btn {
   display: inline-flex;
-  padding: 14px 28px;
-  border-radius: 99px;
+  padding: 16px 32px;
+  border-radius: 2px;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
   font-weight: 600;
   transition: all 0.3s ease;
 }
-/* Mörkbrun knapp */
+
 .btn--dark { 
-  background: var(--text-dark-brown); 
-  color: #fff; 
+  background: var(--dark-accent); 
+  color: var(--text-on-dark); 
 }
 .btn--dark:hover { 
-  background: #5a4236; /* Något ljusare brun vid hover */
-  transform: translateY(-2px); 
+  background: #000; 
+  transform: translateY(-2px);
 }
 
-/* Glas-liknande outline-knapp */
 .btn--outline { 
-  background: var(--glass-bg);
-  backdrop-filter: var(--backdrop-blur);
-  -webkit-backdrop-filter: var(--backdrop-blur);
-  border: 1px solid var(--glass-border);
-  color: var(--text-dark-brown);
+  border: 1px solid var(--dark-accent); 
+  color: var(--dark-accent); 
 }
 .btn--outline:hover { 
-  background: var(--text-dark-brown); 
-  color: #fff; 
-  border-color: var(--text-dark-brown);
+  background: var(--dark-accent); 
+  color: var(--text-on-dark); 
 }
 
 .btn--link { 
   padding: 0; 
   text-decoration: underline; 
-  text-underline-offset: 4px; 
-  color: var(--text-dark-brown);
-}
-.btn--link:hover { opacity: 0.7; }
-
-.chips { display: flex; gap: 12px; margin-top: 40px; flex-wrap: wrap; }
-/* Glas-liknande chips */
-.chip {
-  font-size: 13px;
+  text-underline-offset: 6px; 
+  color: var(--text-main);
+  text-transform: none;
+  letter-spacing: 0;
   font-weight: 500;
-  padding: 8px 16px;
+  font-size: 15px;
+}
+.btn--link:hover { opacity: 0.6; }
+
+.chips { display: flex; gap: 10px; margin-top: 40px; flex-wrap: wrap; }
+.chip {
+  font-size: 12px;
+  padding: 8px 14px;
+  border: 1px solid var(--lines);
   border-radius: 99px;
-  color: var(--text-dark-brown);
-  background: var(--glass-bg);
-  border: 1px solid var(--glass-border);
-  backdrop-filter: var(--backdrop-blur);
-  -webkit-backdrop-filter: var(--backdrop-blur);
+  color: var(--text-muted);
+  background: rgba(255,255,255,0.4);
 }
 
-/* --- CASES (Glas-effekt på korten) --- */
+/* --- CASES --- */
 .section__top {
   display: flex; flex-wrap: wrap;
   justify-content: space-between;
   align-items: baseline;
   margin-bottom: 60px;
-  border-bottom: 1px solid rgba(62, 43, 34, 0.1);
-  padding-bottom: 20px;
+  border-bottom: 1px solid var(--lines);
+  padding-bottom: 24px;
 }
 
-.filters { display: flex; gap: 24px; }
+.filters { display: flex; gap: 32px; }
 .filter {
   background: none; border: none;
   font-family: var(--font-body);
-  font-size: 14px;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
   cursor: pointer;
-  color: var(--muted-brown);
+  color: var(--text-muted);
   padding: 0;
-  font-weight: 500;
+  font-weight: 600;
 }
 .filter.is-active { 
-  color: var(--text-dark-brown); 
-  text-decoration: underline; 
-  text-underline-offset: 4px; 
+  color: var(--text-main); 
   font-weight: 700;
+  border-bottom: 1px solid var(--text-main);
 }
 
 .cases {
   display: grid;
   gap: 40px;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
 }
 
 .case {
   text-decoration: none;
   display: block;
-  border-radius: var(--radius);
-  overflow: hidden;
-  /* Glas-effekt på hela kortet */
-  background: var(--glass-bg);
-  backdrop-filter: var(--backdrop-blur);
-  -webkit-backdrop-filter: var(--backdrop-blur);
-  border: 1px solid var(--glass-border);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.case:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 30px -10px rgba(62, 43, 34, 0.15);
-}
-
 .case__img {
   aspect-ratio: 4/5;
-  background: #eee;
+  background: #EAE8E4;
   overflow: hidden;
+  border-radius: var(--radius);
+  margin-bottom: 24px;
 }
 .case__img img {
   width: 100%; height: 100%; object-fit: cover;
-  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+  transition: transform 0.8s cubic-bezier(0.2, 1, 0.3, 1);
 }
-.case:hover .case__img img { transform: scale(1.05); }
+.case:hover .case__img img { transform: scale(1.04); }
 
-.case__body { padding: 24px; }
-
-.case h3 { font-size: 20px; margin-bottom: 8px; font-weight: 600; color: var(--text-dark-brown); }
-.case__tags { margin-bottom: 12px; display: flex; gap: 8px; }
+.case h3 { 
+  font-size: 22px; 
+  margin-bottom: 8px; 
+  font-weight: 400; 
+  color: var(--text-main);
+}
+.case__tags { display: flex; gap: 12px; margin-bottom: 12px; }
 .case__tags span {
-  font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em;
-  color: var(--muted-brown); font-weight: 600;
-  background: rgba(62, 43, 34, 0.05);
-  padding: 4px 8px; border-radius: 4px;
+  font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em;
+  color: var(--text-muted);
 }
 
-/* --- LISTS (Skills & Tools) --- */
-/* Applicera glas-effekt på kolumnerna för enhetlighet */
+/* --- SKILLS & LISTS --- */
 #skills .grid > div {
-    background: var(--glass-bg);
-    backdrop-filter: var(--backdrop-blur);
-    -webkit-backdrop-filter: var(--backdrop-blur);
-    border: 1px solid var(--glass-border);
-    padding: 30px;
-    border-radius: var(--radius);
+    border-top: 1px solid var(--lines);
+    padding-top: 24px;
 }
 
 .clean-list {
   list-style: none; padding: 0; margin: 0;
 }
 .clean-list li {
-  padding: 12px 0;
-  border-bottom: 1px solid rgba(62, 43, 34, 0.1);
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
   font-size: 15px;
-  color: var(--text-dark-brown);
-  font-weight: 500;
+  color: var(--text-main);
+  display: flex; justify-content: space-between;
 }
 .clean-list li:last-child { border-bottom: none; }
 
-/* --- BANNER (CV - Glas-effekt) --- */
+/* --- BANNER --- */
 .banner {
-  /* Glas-effekt */
-  background: var(--glass-bg);
-  backdrop-filter: var(--backdrop-blur);
-  -webkit-backdrop-filter: var(--backdrop-blur);
-  border: 1px solid var(--glass-border);
-  
-  padding: 60px;
+  background: var(--bg);
+  border: 1px solid var(--lines);
+  padding: 80px;
   border-radius: var(--radius);
   display: flex; flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   gap: 30px;
-  box-shadow: 0 10px 30px -10px rgba(62, 43, 34, 0.05);
 }
 
 /* --- FOOTER --- */
 .footer { 
-  border-top: 1px solid rgba(62, 43, 34, 0.1); 
-  padding: 80px 0 40px; 
-  margin-top: 0; 
-  /* Lätt glas-effekt på footern också */
-  background: var(--glass-bg);
-  backdrop-filter: var(--backdrop-blur);
-  -webkit-backdrop-filter: var(--backdrop-blur);
+  background: var(--dark-accent); 
+  color: var(--text-on-dark);
+  padding: 100px 0 60px; 
+  margin-top: 60px;
 }
+
+.footer h2, .footer a, .footer p, .footer span {
+    color: var(--text-on-dark);
+}
+.footer .muted { color: rgba(255, 255, 255, 0.6); }
+
 .footer__inner {
   display: flex; justify-content: space-between; flex-wrap: wrap; gap: 40px;
-  margin-bottom: 60px;
+  margin-bottom: 80px;
+  padding-bottom: 80px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 .footer__links {
   display: flex; flex-direction: column; gap: 16px; align-items: flex-end;
 }
 .footer__links a { 
-  font-size: 24px; 
+  font-size: 28px; 
   text-decoration: none; 
-  font-weight: 500; 
-  color: var(--text-dark-brown);
+  font-weight: 300; 
+  font-family: var(--font-head);
 }
-.footer__copy { font-size: 13px; color: var(--muted-brown); }
+.footer__links a:hover { opacity: 0.7; }
 
 /* --- RESPONSIVE --- */
 @media(max-width: 768px) {
-  .h-display { font-size: 40px; }
+  .h-display { font-size: 44px; }
   .section { padding: 80px 0; }
   .footer__links { align-items: flex-start; }
+  .banner { padding: 40px; }
 }
