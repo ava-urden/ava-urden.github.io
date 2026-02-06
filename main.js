@@ -1,13 +1,13 @@
 const dict = {
   sv: {
-    nav_about: "Om",
+    nav_about: "Om mig",
     nav_cv: "CV",
     nav_tools: "Verktyg",
     nav_skills: "Kompetens",
     nav_courses: "Kurser",
     nav_cases: "Cases",
     nav_contact: "Kontakt",
-    hero_title: "Growth marketing med designöga och datadrivna beslut",
+    hero_title: "Ava Urdén",
     hero_body: "Jag skapar tydlig riktning, starkare budskap och bättre konvertering genom att kombinera kreativitet, strategi och mätning",
     cta_cases: "Se cases",
     cta_cv: "Ladda ner CV",
