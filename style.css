@@ -1,23 +1,19 @@
 :root {
-  /* --- JUSTERAD PALETT (Ljusare & Tydligare) --- */
+  /* --- PALETT (Ljus Beige & Jordig) --- */
   
-  /* Basfärger */
-  --bg: #F5F4F1; /* LJUSARE BEIGE: En mycket ljus, varm off-white */
-  --text-main: #1F1E1B; /* Nästan svart, men mjukare */
-  --text-muted: #555450; /* MÖRKARE GRÅTT: Tydligare och mer lättläst */
-  --lines: #DEDCD6; /* Diskreta linjer */
+  --bg: #F5F4F1; 
+  --text-main: #1F1E1B;
+  --text-muted: #555450;
+  --lines: #DEDCD6;
 
-  /* Mörk accent (för knappar och footer) */
-  --dark-accent: #33322E; /* Mörk espresso/oliv */
-  --text-on-dark: #F5F4F1; /* Samma ljusa färg som bakgrunden */
+  --dark-accent: #33322E;
+  --text-on-dark: #F5F4F1;
 
-  /* Glas-effekt (Anpassad till ljusare bakgrund) */
-  --glass-bg: rgba(245, 244, 241, 0.85); /* Mer täckande ljus färg */
+  --glass-bg: rgba(245, 244, 241, 0.85);
   --glass-border: rgba(255, 255, 255, 0.6);
   --backdrop-blur: blur(20px);
 
-  /* Layout */
-  --radius: 6px; /* Elegant hörnradie */
+  --radius: 6px;
   --max: 1300px;
   --pad: 40px;
 
@@ -52,19 +48,10 @@ h1, h2, h3, h4 {
   font-weight: 400;
 }
 
-.h-label {
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
-  color: var(--text-muted);
-  font-weight: 600;
-  margin-bottom: 24px;
-}
-
 p {
   line-height: 1.7;
   font-size: 16px;
-  color: var(--text-muted); /* Den mörkare grå färgen används här */
+  color: var(--text-muted);
   margin: 0;
 }
 
@@ -97,7 +84,7 @@ a:hover { opacity: 0.7; }
   .grid--3 { grid-template-columns: 1fr 1fr 1fr; }
 }
 
-/* --- HEADER (Glas) --- */
+/* --- HEADER --- */
 .header {
   padding: 24px 0;
   position: fixed;
@@ -132,7 +119,7 @@ a:hover { opacity: 0.7; }
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: var(--text-muted);
-  font-weight: 600; /* Lite tjockare för att synas bättre */
+  font-weight: 600;
 }
 .nav a:hover { color: var(--text-main); }
 
@@ -182,7 +169,7 @@ a:hover { opacity: 0.7; }
 
 .hero__cta { margin-top: 40px; display: flex; gap: 24px; align-items: center; }
 
-/* --- BUTTONS --- */
+/* --- BUTTONS & CHIPS --- */
 .btn {
   display: inline-flex;
   padding: 16px 32px;
@@ -269,10 +256,7 @@ a:hover { opacity: 0.7; }
   grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
 }
 
-.case {
-  text-decoration: none;
-  display: block;
-}
+.case { text-decoration: none; display: block; }
 .case__img {
   aspect-ratio: 4/5;
   background: #EAE8E4;
@@ -285,36 +269,74 @@ a:hover { opacity: 0.7; }
   transition: transform 0.8s cubic-bezier(0.2, 1, 0.3, 1);
 }
 .case:hover .case__img img { transform: scale(1.04); }
-
-.case h3 { 
-  font-size: 22px; 
-  margin-bottom: 8px; 
-  font-weight: 400; 
-  color: var(--text-main);
-}
+.case h3 { font-size: 22px; margin-bottom: 8px; font-weight: 400; color: var(--text-main); }
 .case__tags { display: flex; gap: 12px; margin-bottom: 12px; }
 .case__tags span {
   font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em;
   color: var(--text-muted);
 }
 
-/* --- SKILLS & LISTS --- */
-#skills .grid > div {
-    border-top: 1px solid var(--lines);
-    padding-top: 24px;
+/* --- SKILLS & TOOLS (NEW) --- */
+.skills-intro {
+  margin-bottom: 60px;
 }
 
-.clean-list {
-  list-style: none; padding: 0; margin: 0;
+.card-skill {
+  border-top: 1px solid var(--lines);
+  padding-top: 24px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
-.clean-list li {
-  padding: 14px 0;
-  border-bottom: 1px solid rgba(0,0,0,0.06);
+
+.card-skill h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.bullet-list {
+  list-style: none;
+  padding: 0;
+  margin: 24px 0 auto; /* auto pushar tools-box till botten */
+}
+
+.bullet-list li {
+  position: relative;
+  padding-left: 18px;
+  margin-bottom: 12px;
   font-size: 15px;
   color: var(--text-main);
-  display: flex; justify-content: space-between;
+  line-height: 1.6;
 }
-.clean-list li:last-child { border-bottom: none; }
+
+.bullet-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--text-muted);
+}
+
+.tools-box {
+  margin-top: 32px;
+  padding-top: 20px;
+  border-top: 1px dashed var(--lines);
+  font-size: 14px;
+}
+
+.tool-label {
+  display: block;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+
+.tool-text {
+  color: var(--text-main);
+}
 
 /* --- BANNER --- */
 .banner {
@@ -336,9 +358,7 @@ a:hover { opacity: 0.7; }
   margin-top: 60px;
 }
 
-.footer h2, .footer a, .footer p, .footer span {
-    color: var(--text-on-dark);
-}
+.footer h2, .footer a, .footer p, .footer span { color: var(--text-on-dark); }
 .footer .muted { color: rgba(255, 255, 255, 0.6); }
 
 .footer__inner {

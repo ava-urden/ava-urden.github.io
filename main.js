@@ -1,113 +1,119 @@
 const dict = {
   sv: {
-    nav_about: "Om mig",
-    nav_cv: "CV",
-    nav_tools: "Verktyg",
-    nav_skills: "Kompetens",
-    nav_courses: "Kurser",
     nav_cases: "Cases",
+    nav_skills: "Färdigheter & Verktyg",
+    nav_cv: "CV",
     nav_contact: "Kontakt",
-    hero_title: "Ava Urdén",
-    hero_body: "Jag skapar tydlig riktning, starkare budskap och bättre konvertering genom att kombinera kreativitet, strategi och mätning",
+
     cta_cases: "Se cases",
     cta_cv: "Ladda ner CV",
-    about_title: "Om mig",
-    about_body: "Driven growth marketing-student med fokus på e-handel, trivs i gränslandet mellan varumärke och performance och gillar att testa, mäta, optimera och skapa som känns rätt i uttrycket",
-    cv_title: "CV",
-    cv_body: "Ladda ner mitt CV som PDF",
-    tools_title: "Verktyg",
-    tools_cat1: "Analytics & spårning",
-    tools_cat2: "Paid & performance",
-    tools_item_measure: "Mätplan",
-    tools_item_testing: "Testupplägg",
-    tools_item_budget: "Budget & mål",
-    skills_title: "Kompetens & erfarenhet",
-    skills_1_title: "Strategi & growth",
-    skills_1_a: "Mål, KPI och roadmap",
-    skills_1_b: "Hypotesdriven testning",
-    skills_1_c: "Prioritering som märks",
-    skills_2_title: "Mätning & insikt",
-    skills_2_a: "Eventstruktur",
-    skills_2_b: "Dashboards",
-    skills_2_c: "Insikter som går att agera på",
-    skills_3_title: "Kreativt & UX",
-    skills_3_a: "Copy, hooks och koncept",
-    skills_3_b: "CRO och friktionsreducering",
-    skills_3_c: "Visuellt uttryck",
-    courses_title: "Relevanta kurser",
-    course_1: "SEO & Content Marketing",
-    course_2: "Growth Marketing (Berghs)",
-    course_3: "E-handel & kundresa",
-    cases_title: "Cases",
+
+    cases_title: "Utvalda cases",
     filter_all: "Alla",
+
     case1_title: "SUIE: Growth setup för e-handel",
-    case1_sum: "Struktur för mätning, content och CRO med tydliga KPI:er",
-    case1_long: "Beskrivning: problem, approach, vad du gjorde, resultat och lärdomar, ersätt med riktig text",
+    case1_sum: "Struktur för mätning, content och CRO.",
     case2_title: "CRO: Check-out optimering",
-    case2_sum: "Hypotesdriven förbättring för att minska friktion",
-    case2_long: "Beskrivning: problem, approach, vad du gjorde, resultat och lärdomar, ersätt med riktig text",
+    case2_sum: "Hypotesdriven förbättring för att minska friktion.",
     case3_title: "SEO: Content-struktur",
-    case3_sum: "Plan och struktur för organisk tillväxt över tid",
-    case3_long: "Beskrivning: problem, approach, vad du gjorde, resultat och lärdomar, ersätt med riktig text",
-    contact_title: "Kontakt",
-    contact_body: "Hör gärna av dig eller connecta på LinkedIn",
-    contact_email: "E-post",
-    contact_location: "Plats",
+    case3_sum: "Plan och struktur för organisk tillväxt.",
+
+    // SKILLS SEKTION SVENSKA
+    skills_main_title: "Färdigheter & verktyg",
+    skills_intro: "Jag gillar att ta en idé hela vägen från tanke till färdigt. Ofta jobbar jag både med det kreativa (content, form och budskap) och det analytiska (mäta, förstå och förbättra). Här är mina främsta färdigheter och verktygen jag jobbar med.",
+    
+    cat1_title: "1. Content & Storytelling",
+    cat1_desc: "Bygger varumärke och engagemang med content anpassat efter kanal, format och mål",
+    cat1_list: `
+      <li>Copy, hooks och content för sociala medier (organiskt och betalt)</li>
+      <li>Contentplanering: teman, format och publiceringsplan</li>
+      <li>Tonalitet och riktlinjer som håller kommunikationen konsekvent</li>
+      <li>Produktion och redigering av foto och video</li>
+    `,
+
+    cat2_title: "2. Strategi, koncept & kommunikation",
+    cat2_desc: "Tar idéer till tydlig struktur som går att genomföra och följa upp",
+    cat2_list: `
+      <li>Konceptutveckling för kampanjer i content och kommunikation</li>
+      <li>Briefs och plan: målgrupp, budskap, kanalval och KPI</li>
+      <li>Presentationer och pitchdeck: struktur, copy och design</li>
+      <li>Paketering av erbjudanden och positionering: värde, social proof, upplägg</li>
+      <li>Kundkommunikation: nyhetsbrev, inbjudningar och flöden (CRM)</li>
+    `,
+
+    cat3_title: "3. Tillväxt & optimering",
+    cat3_desc: "Datadrivet arbete som driver trafik, konvertering och lärande över tid",
+    cat3_list: `
+      <li>Performance marketing: kampanjupplägg, struktur, mål och uppföljning</li>
+      <li>GA4 analys: trafik, beteende, konvertering och bortfall i flödet</li>
+      <li>CRO och testarbete: hypotes → test → utvärdering → nästa steg</li>
+      <li>Spårning i Google Tag Manager och mätplan</li>
+      <li>SEO och innehållsstrategi för synlighet, inklusive GEO för AI-svar, samt rapportering</li>
+    `,
+    
+    tools_label: "Verktyg:",
+
+    cv_title: "CV",
+    cv_body: "Nyfiken på detaljerna? Ladda ner hela mitt CV.",
+    contact_title: "Kontakt"
   },
   en: {
-    nav_about: "About",
-    nav_cv: "CV",
-    nav_tools: "Tools",
-    nav_skills: "Skills",
-    nav_courses: "Courses",
     nav_cases: "Cases",
+    nav_skills: "Skills & Tools",
+    nav_cv: "CV",
     nav_contact: "Contact",
-    hero_title: "Growth marketing with a design eye and data-driven decisions",
-    hero_body: "I create clearer direction, stronger messaging and better conversion by combining creativity, strategy and measurement",
+
     cta_cases: "View cases",
     cta_cv: "Download CV",
-    about_title: "About me",
-    about_body: "Driven growth marketing student focused on e-commerce, I thrive where brand and performance meet and I like to test, measure, optimize and build a strong expression",
-    cv_title: "CV",
-    cv_body: "Download my CV as a PDF",
-    tools_title: "Tools",
-    tools_cat1: "Analytics & tracking",
-    tools_cat2: "Paid & performance",
-    tools_item_measure: "Measurement plan",
-    tools_item_testing: "Testing setup",
-    tools_item_budget: "Budget & goals",
-    skills_title: "Skills & experience",
-    skills_1_title: "Strategy & growth",
-    skills_1_a: "Goals, KPIs and roadmap",
-    skills_1_b: "Hypothesis-driven testing",
-    skills_1_c: "Prioritization that matters",
-    skills_2_title: "Measurement & insight",
-    skills_2_a: "Event tracking",
-    skills_2_b: "Dashboards",
-    skills_2_c: "Insights you can act on",
-    skills_3_title: "Creative & UX",
-    skills_3_a: "Copy, hooks and concepts",
-    skills_3_b: "CRO and friction reduction",
-    skills_3_c: "Visual expression",
-    courses_title: "Relevant courses",
-    course_1: "SEO & Content Marketing",
-    course_2: "Growth Marketing (Berghs)",
-    course_3: "E-commerce & customer journey",
-    cases_title: "Cases",
+
+    cases_title: "Selected Cases",
     filter_all: "All",
+
     case1_title: "SUIE: Growth setup for e-commerce",
-    case1_sum: "A foundation for measurement, content and CRO aligned to clear KPIs",
-    case1_long: "Description: problem, approach, what you did, results and learnings, replace with real text",
+    case1_sum: "Structure for tracking, content, and CRO.",
     case2_title: "CRO: Checkout optimization",
-    case2_sum: "Hypothesis-driven improvements to reduce friction",
-    case2_long: "Description: problem, approach, what you did, results and learnings, replace with real text",
+    case2_sum: "Hypothesis-driven improvements to reduce friction.",
     case3_title: "SEO: Content structure",
-    case3_sum: "Plan and structure for long-term organic growth",
-    case3_long: "Description: problem, approach, what you did, results and learnings, replace with real text",
-    contact_title: "Contact",
-    contact_body: "Feel free to reach out or connect on LinkedIn",
-    contact_email: "Email",
-    contact_location: "Location",
+    case3_sum: "Plan and structure for organic growth.",
+
+    // SKILLS SECTION ENGLISH
+    skills_main_title: "Skills & Tools",
+    skills_intro: "I like taking an idea all the way from thought to finished output. I often work in the overlap between creative (content, design, messaging) and analytical (measure, understand, improve). Here are my core skills and the tools I use.",
+    
+    cat1_title: "1. Content & Storytelling",
+    cat1_desc: "Builds brand and engagement with content tailored to channel, format, and goal",
+    cat1_list: `
+      <li>Copy, hooks, and social content (organic and paid)</li>
+      <li>Content planning: themes, formats, and publishing cadence</li>
+      <li>Tone of voice and guidelines to keep communication consistent</li>
+      <li>Photo and video production and editing</li>
+    `,
+
+    cat2_title: "2. Strategy, Concept & Communication",
+    cat2_desc: "Turns ideas into clear structure that’s actionable and measurable",
+    cat2_list: `
+      <li>Campaign and concept development across content and communication</li>
+      <li>Briefs and planning: audience, message, channel mix, and KPIs</li>
+      <li>Presentations and pitch decks: structure, copy, and design</li>
+      <li>Offer packaging and positioning: value, social proof, format</li>
+      <li>Customer communication: newsletters, invites, and CRM flows</li>
+    `,
+
+    cat3_title: "3. Growth & Optimization",
+    cat3_desc: "Data-driven work that increases traffic, conversion, and learning over time",
+    cat3_list: `
+      <li>Performance marketing: setup, structure, goals, and reporting</li>
+      <li>GA4 analysis: traffic, behavior, conversion, and funnel drop-off</li>
+      <li>CRO and testing: hypothesis → test → evaluation → next step</li>
+      <li>Tracking via Google Tag Manager and measurement planning</li>
+      <li>SEO and content strategy for visibility, including GEO for AI answers, plus reporting</li>
+    `,
+    
+    tools_label: "Tools:",
+
+    cv_title: "CV",
+    cv_body: "Want the details? Download my full CV.",
+    contact_title: "Contact"
   },
 };
 
@@ -133,14 +139,20 @@ function applyLang(lang) {
   const d = dict[lang] || dict.sv;
   document.documentElement.lang = lang;
 
+  // Vanliga texter
   document.querySelectorAll("[data-i18n]").forEach((el) => {
     const key = el.getAttribute("data-i18n");
     if (key && d[key]) el.textContent = d[key];
   });
 
-  // Update CV per language (rename files to match these OR change these paths)
-  const svPdf = "./cv/Ava-Urden-CV-sv.pdf";
-  const enPdf = "./cv/Ava-Urden-CV-en.pdf";
+  // Uppdatera listorna (innerHTML eftersom det är HTML-kod)
+  if (d.cat1_list) document.getElementById("list1").innerHTML = d.cat1_list;
+  if (d.cat2_list) document.getElementById("list2").innerHTML = d.cat2_list;
+  if (d.cat3_list) document.getElementById("list3").innerHTML = d.cat3_list;
+
+  // Uppdatera CV-länkar
+  const svPdf = "./cv/ava-urden-cv-sv.pdf";
+  const enPdf = "./cv/ava-urden-cv-en.pdf";
   const cvHref = lang === "sv" ? svPdf : enPdf;
 
   const a1 = document.getElementById("cvLink");
