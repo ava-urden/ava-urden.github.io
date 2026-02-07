@@ -22,9 +22,8 @@
         <a class="logo" href="#top">Ava Urdén | Portfolio</a>
 
         <nav class="nav">
-          <a href="#cases" data-i18n="nav_cases">Cases</a>
+          <a href="#cases" data-i18n="nav_cases" class="is-active">Cases</a>
           <a href="#skills" data-i18n="nav_skills">Färdigheter & Verktyg</a>
-          <a href="#cv" data-i18n="nav_cv">CV</a>
           <a href="#contact" data-i18n="nav_contact">Kontakt</a>
         </nav>
 
@@ -36,16 +35,17 @@
     </header>
 
     <main id="top">
-      
+      <!-- HERO -->
       <section class="hero section-block">
         <div class="container hero__grid">
           <div class="hero__content">
-            <h1 class="h-display" data-i18n="hero_title">
-              Ava Urdén
-            </h1>
+            <h1 class="h-display" data-i18n="hero_title">Ava Urdén</h1>
 
             <p class="hero__p" data-i18n="hero_body">
-                Som person är jag driven och målinriktad med ett kreativt tänk och stort intresse för design, men trivs lika mycket med data, mätning och analys. Jag förstår vad som driver resultat och omsätter insikter till kreativa leveranser med strategisk grund, där kreativitet och strategi tillsammans stärker både upplevelse och effekt mot mål.
+              Som person är jag driven och målinriktad med ett kreativt tänk och stort intresse för design,
+              men trivs lika mycket med data, mätning och analys. Jag förstår vad som driver resultat och
+              omsätter insikter till kreativa leveranser med strategisk grund, där kreativitet och strategi
+              tillsammans stärker både upplevelse och effekt mot mål.
             </p>
 
             <div class="hero__cta">
@@ -54,7 +54,7 @@
                 Ladda ner CV
               </a>
             </div>
-            
+
             <div class="chips">
               <span class="chip">GA4</span>
               <span class="chip">Looker Studio</span>
@@ -64,11 +64,12 @@
           </div>
 
           <div class="hero__img-wrapper">
-             <img id="portrait" src="./  img/ava-urden.png" alt="Porträtt av Ava" />
+            <img id="portrait" src="./  img/ava-urden.png" alt="Porträtt av Ava" />
           </div>
         </div>
       </section>
 
+      <!-- CASES -->
       <section id="cases" class="section section-block">
         <div class="container">
           <div class="section__top">
@@ -83,9 +84,9 @@
           </div>
 
           <div class="cases" id="casesGrid">
-            <a class="case" href="case-suie.html" data-tags="Growth,Tracking">
+            <a class="case" href="case1.html" data-tags="Growth,Tracking">
               <div class="case__img">
-                <img src="./img/cases/suie.jpg" alt="SUIE" />
+                <img src="./  img/underyourskin.png" alt="SUIE" />
               </div>
               <div class="case__body">
                 <div class="case__tags"><span>Growth</span><span>Tracking</span></div>
@@ -94,7 +95,7 @@
               </div>
             </a>
 
-            <a class="case" href="case-cro.html" data-tags="CRO,UX">
+            <a class="case" href="case2.html" data-tags="CRO,UX">
               <div class="case__img">
                 <img src="./img/cases/cro.jpg" alt="CRO" />
               </div>
@@ -105,7 +106,7 @@
               </div>
             </a>
 
-            <a class="case" href="case-seo.html" data-tags="SEO,Content">
+            <a class="case" href="case3.html" data-tags="SEO,Content">
               <div class="case__img">
                 <img src="./img/cases/seo.jpg" alt="SEO" />
               </div>
@@ -119,21 +120,25 @@
         </div>
       </section>
 
+      <!-- SKILLS -->
       <section id="skills" class="section section-block">
         <div class="container">
           <div class="skills-intro">
             <h2 class="h-display" data-i18n="skills_main_title">Färdigheter & verktyg</h2>
             <p data-i18n="skills_intro">
-              Jag gillar att ta en idé hela vägen från tanke till färdigt. Ofta jobbar jag både med det kreativa (content, form och budskap) och det analytiska (mäta, förstå och förbättra). Här är mina främsta färdigheter och verktygen jag jobbar med.
+              Jag gillar att ta en idé hela vägen från tanke till färdigt. Ofta jobbar jag både med det kreativa
+              (content, form och budskap) och det analytiska (mäta, förstå och förbättra). Här är mina främsta
+              färdigheter och verktygen jag jobbar med.
             </p>
           </div>
 
           <div class="grid grid--3">
-            
             <div class="card-skill">
               <h3 data-i18n="cat1_title">1. Content & Storytelling</h3>
-              <p class="skill-desc" data-i18n="cat1_desc">Bygger varumärke och engagemang med content anpassat efter kanal, format och mål</p>
-              
+              <p class="skill-desc" data-i18n="cat1_desc">
+                Bygger varumärke och engagemang med content anpassat efter kanal, format och mål
+              </p>
+
               <ul class="bullet-list" id="list1">
                 <li>Copy, hooks och content för sociala medier (organiskt och betalt)</li>
                 <li>Contentplanering: teman, format och publiceringsplan</li>
@@ -149,8 +154,10 @@
 
             <div class="card-skill">
               <h3 data-i18n="cat2_title">2. Strategi, koncept & kommunikation</h3>
-              <p class="skill-desc" data-i18n="cat2_desc">Tar idéer till tydlig struktur som går att genomföra och följa upp</p>
-              
+              <p class="skill-desc" data-i18n="cat2_desc">
+                Tar idéer till tydlig struktur som går att genomföra och följa upp
+              </p>
+
               <ul class="bullet-list" id="list2">
                 <li>Konceptutveckling för kampanjer i content och kommunikation</li>
                 <li>Briefs och plan: målgrupp, budskap, kanalval och KPI</li>
@@ -167,8 +174,10 @@
 
             <div class="card-skill">
               <h3 data-i18n="cat3_title">3. Tillväxt & optimering</h3>
-              <p class="skill-desc" data-i18n="cat3_desc">Datadrivet arbete som driver trafik, konvertering och lärande över tid</p>
-              
+              <p class="skill-desc" data-i18n="cat3_desc">
+                Datadrivet arbete som driver trafik, konvertering och lärande över tid
+              </p>
+
               <ul class="bullet-list" id="list3">
                 <li>Performance marketing: kampanjupplägg, struktur, mål och uppföljning</li>
                 <li>GA4 analys: trafik, beteende, konvertering och bortfall i flödet</li>
@@ -179,31 +188,31 @@
 
               <div class="tools-box">
                 <span class="tool-label" data-i18n="tools_label">Verktyg:</span>
-                <span class="tool-text">Google Analytics 4, GTM, Looker Studio, Hotjar, Google Ads, Meta Ads, TikTok Ads, Excel</span>
+                <span class="tool-text">
+                  Google Analytics 4, GTM, Looker Studio, Hotjar, Google Ads, Meta Ads, TikTok Ads, Excel
+                </span>
               </div>
             </div>
-
           </div>
         </div>
       </section>
 
+      <!-- FOOTER / CONTACT -->
       <footer id="contact" class="footer section-block">
         <div class="container">
           <div class="footer__inner">
             <h2 class="h-display" data-i18n="contact_title">Kontakt</h2>
-            
+
             <div class="footer__links">
               <a href="mailto:ava.urden@gmail.com">ava.urden@gmail.com</a>
-              <a href="https://linkedin.com/in/avaurden" target="_blank">LinkedIn</a>
+              <a href="https://linkedin.com/in/avaurden" target="_blank" rel="noreferrer">LinkedIn</a>
               <span class="muted">Stockholm</span>
             </div>
           </div>
-          <div class="footer__copy">
-              &copy; 2026 Ava Urdén
-          </div>
+
+          <div class="footer__copy">&copy; 2026 Ava Urdén</div>
         </div>
       </footer>
-
     </main>
 
     <script src="./main.js"></script>
