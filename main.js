@@ -1,13 +1,20 @@
 const dict = {
   sv: {
+    // MENY
     nav_cases: "Cases",
     nav_skills: "Färdigheter & Verktyg",
     nav_cv: "CV",
     nav_contact: "Kontakt",
 
+    // HERO (Dessa saknades förut)
+    hero_title: "Ava Urdén",
+    hero_body: "Som person är jag driven och målinriktad med ett kreativt tänk och stort intresse för design, men trivs lika mycket med data, mätning och analys. Jag förstår vad som driver resultat och omsätter insikter till kreativa leveranser med strategisk grund, där kreativitet och strategi tillsammans stärker både upplevelse och effekt mot mål.",
+    
+    // KNAPPAR
     cta_cases: "Se cases",
     cta_cv: "Ladda ner CV",
 
+    // CASES
     cases_title: "Utvalda cases",
     filter_all: "Alla",
 
@@ -18,7 +25,7 @@ const dict = {
     case3_title: "SEO: Content-struktur",
     case3_sum: "Plan och struktur för organisk tillväxt.",
 
-    // SKILLS SEKTION SVENSKA
+    // SKILLS SEKTION
     skills_main_title: "Färdigheter & verktyg",
     skills_intro: "Jag gillar att ta en idé hela vägen från tanke till färdigt. Ofta jobbar jag både med det kreativa (content, form och budskap) och det analytiska (mäta, förstå och förbättra). Här är mina främsta färdigheter och verktygen jag jobbar med.",
     
@@ -58,14 +65,21 @@ const dict = {
     contact_title: "Kontakt"
   },
   en: {
+    // MENU
     nav_cases: "Cases",
     nav_skills: "Skills & Tools",
     nav_cv: "CV",
     nav_contact: "Contact",
 
+    // HERO (English translation)
+    hero_title: "Ava Urdén",
+    hero_body: "I am driven and goal-oriented with a creative mindset and a strong interest in design, but I enjoy data, measurement, and analysis just as much. I understand what drives results and translate insights into creative deliverables with a strategic foundation, where creativity and strategy together strengthen both the experience and the effect towards goals.",
+
+    // BUTTONS
     cta_cases: "View cases",
     cta_cv: "Download CV",
 
+    // CASES
     cases_title: "Selected Cases",
     filter_all: "All",
 
