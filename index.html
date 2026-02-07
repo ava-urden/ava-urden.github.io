@@ -36,14 +36,15 @@
     </header>
 
     <main id="top">
-      <section class="hero">
+      
+      <section class="hero section-block">
         <div class="container hero__grid">
           <div class="hero__content">
             <h1 class="h-display">
               Ava Urdén
             </h1>
 
-            <p class="muted hero__p">
+            <p class="hero__p">
                 Driven growth marketing-student med fokus på e-handel, trivs i gränslandet mellan varumärke och performance och gillar att testa, mäta, optimera och skapa som känns rätt i uttrycket
             </p>
 
@@ -53,7 +54,7 @@
                 Ladda ner CV
               </a>
             </div>
-
+            
             <div class="chips">
               <span class="chip">GA4</span>
               <span class="chip">Looker Studio</span>
@@ -68,7 +69,7 @@
         </div>
       </section>
 
-      <section id="cases" class="section">
+      <section id="cases" class="section section-block">
         <div class="container">
           <div class="section__top">
             <h2 class="h-display" data-i18n="cases_title">Utvalda cases</h2>
@@ -118,11 +119,10 @@
         </div>
       </section>
 
-      <section id="skills" class="section bg-light">
+      <section id="skills" class="section section-block">
         <div class="container">
           <div class="skills-intro">
             <h2 class="h-display" data-i18n="skills_main_title">Färdigheter & verktyg</h2>
-            
             <p data-i18n="skills_intro">
               Jag gillar att ta en idé hela vägen från tanke till färdigt. Ofta jobbar jag både med det kreativa (content, form och budskap) och det analytiska (mäta, förstå och förbättra). Här är mina främsta färdigheter och verktygen jag jobbar med.
             </p>
@@ -132,7 +132,7 @@
             
             <div class="card-skill">
               <h3 data-i18n="cat1_title">1. Content & Storytelling</h3>
-              <p class="muted" data-i18n="cat1_desc">Bygger varumärke och engagemang med content anpassat efter kanal, format och mål</p>
+              <p class="skill-desc" data-i18n="cat1_desc">Bygger varumärke och engagemang med content anpassat efter kanal, format och mål</p>
               
               <ul class="bullet-list" id="list1">
                 <li>Copy, hooks och content för sociala medier (organiskt och betalt)</li>
@@ -149,7 +149,7 @@
 
             <div class="card-skill">
               <h3 data-i18n="cat2_title">2. Strategi, koncept & kommunikation</h3>
-              <p class="muted" data-i18n="cat2_desc">Tar idéer till tydlig struktur som går att genomföra och följa upp</p>
+              <p class="skill-desc" data-i18n="cat2_desc">Tar idéer till tydlig struktur som går att genomföra och följa upp</p>
               
               <ul class="bullet-list" id="list2">
                 <li>Konceptutveckling för kampanjer i content och kommunikation</li>
@@ -167,7 +167,7 @@
 
             <div class="card-skill">
               <h3 data-i18n="cat3_title">3. Tillväxt & optimering</h3>
-              <p class="muted" data-i18n="cat3_desc">Datadrivet arbete som driver trafik, konvertering och lärande över tid</p>
+              <p class="skill-desc" data-i18n="cat3_desc">Datadrivet arbete som driver trafik, konvertering och lärande över tid</p>
               
               <ul class="bullet-list" id="list3">
                 <li>Performance marketing: kampanjupplägg, struktur, mål och uppföljning</li>
@@ -187,38 +187,24 @@
         </div>
       </section>
 
-      <section id="cv" class="section">
+      <footer id="contact" class="footer section-block">
         <div class="container">
-          <div class="banner">
-             <h2 class="h-display" data-i18n="cv_title">CV</h2>
-             <div class="banner__action">
-               <p class="muted" data-i18n="cv_body">Nyfiken på detaljerna? Ladda ner hela mitt CV.</p>
-               <a class="btn btn--outline" id="cvLink2" href="./cv/ava-urden-cv-sv.pdf" download data-i18n="cta_cv">
-                Ladda ner PDF
-              </a>
-             </div>
+          <div class="footer__inner">
+            <h2 class="h-display" data-i18n="contact_title">Kontakt</h2>
+            
+            <div class="footer__links">
+              <a href="mailto:ava.urden@gmail.com">ava.urden@gmail.com</a>
+              <a href="https://linkedin.com/in/avaurden" target="_blank">LinkedIn</a>
+              <span class="muted">Stockholm</span>
+            </div>
+          </div>
+          <div class="footer__copy">
+              &copy; 2026 Ava Urdén
           </div>
         </div>
-      </section>
+      </footer>
 
     </main>
-
-    <footer id="contact" class="footer">
-      <div class="container">
-        <div class="footer__inner">
-          <h2 class="h-display" data-i18n="contact_title">Kontakt</h2>
-          
-          <div class="footer__links">
-            <a href="mailto:ava.urden@gmail.com">ava.urden@gmail.com</a>
-            <a href="https://linkedin.com/in/avaurden" target="_blank">LinkedIn</a>
-            <span class="muted">Stockholm</span>
-          </div>
-        </div>
-        <div class="footer__copy">
-            &copy; 2026 Ava Urdén
-        </div>
-      </div>
-    </footer>
 
     <script src="./main.js"></script>
   </body>
