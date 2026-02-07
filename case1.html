@@ -3,129 +3,265 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Case: SUIE | Ava Urdén</title>
-    <meta name="description" content="Case: SUIE – Growth setup för e-handel." />
-
+    <title>Case: Under Your Skin | Ava Urdén</title>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Manrope:wght@300;400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Manrope:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./style.css" />
+
+    <style>
+      /* Fix för att matcha din befintliga CSS-variabler om de inte laddas korrekt */
+      :root {
+        --yellow-highlight: #F9ECB8;
+      }
+
+      /* Justering för Case-Hero layouten */
+      .case-hero {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: center;
+        margin-bottom: 4rem;
+      }
+
+      .back-link {
+        display: inline-block;
+        margin-bottom: 2rem;
+        text-decoration: none;
+        color: #666;
+        font-weight: 500;
+        border: 1px solid #e5e5e5;
+        padding: 8px 16px;
+        border-radius: 50px;
+        transition: all 0.3s ease;
+      }
+      .back-link:hover { border-color: #000; color: #000; }
+
+      .case-meta {
+        display: flex;
+        gap: 0.5rem;
+        margin-top: 1rem;
+        flex-wrap: wrap;
+      }
+      
+      .pill {
+        background: #f0f0f0;
+        padding: 4px 12px;
+        border-radius: 4px;
+        font-size: 0.85rem;
+        font-weight: 500;
+        font-family: 'Inter', sans-serif;
+      }
+
+      /* Bildhantering i heron */
+      .case-hero__img img {
+        width: 100%;
+        height: auto;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      }
+
+      /* Den GULA sektionen */
+      .highlight-section {
+        background-color: var(--yellow-highlight);
+        padding: 4rem 3rem;
+        border-radius: 16px;
+        margin: 4rem 0;
+        color: #1a1a1a;
+      }
+
+      .highlight-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        align-items: start;
+      }
+
+      .big-stat {
+        font-family: 'Manrope', sans-serif;
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        line-height: 1.2;
+      }
+
+      /* Tabell-stil */
+      .data-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-family: 'Inter', sans-serif;
+        font-size: 0.95rem;
+      }
+      .data-table th { text-align: left; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.1); opacity: 0.7; }
+      .data-table td { padding: 12px 0; border-bottom: 1px solid rgba(0,0,0,0.05); }
+      .data-table tr:last-child td { font-weight: 700; border-bottom: none; }
+
+      /* Textblock för läsbarhet */
+      .text-content {
+        max-width: 700px;
+        margin: 0 auto 4rem auto;
+      }
+      .text-content h2 { margin-top: 2rem; margin-bottom: 1rem; }
+      .text-content p { margin-bottom: 1.5rem; color: #444; }
+
+      /* Responsivt */
+      @media (max-width: 800px) {
+        .case-hero, .highlight-grid { grid-template-columns: 1fr; gap: 2rem; }
+        .highlight-section { padding: 2rem; }
+      }
+    </style>
   </head>
 
   <body>
     <header class="header">
       <div class="container header__inner">
-        <a class="logo" href="./index.html#top">Ava Urdén | Portfolio</a>
+        <a class="logo" href="index.html#top">Ava Urdén</a>
 
         <nav class="nav">
-          <a href="./index.html#cases" data-i18n="nav_cases" class="is-active">Cases</a>
-          <a href="./index.html#skills" data-i18n="nav_skills">Färdigheter & Verktyg</a>
-          <a href="./index.html#contact" data-i18n="nav_contact">Kontakt</a>
+          <a href="index.html#cases" data-i18n="nav_cases">Cases</a>
+          <a href="index.html#skills" data-i18n="nav_skills">Färdigheter</a>
+          <a href="index.html#contact" data-i18n="nav_contact">Kontakt</a>
         </nav>
 
         <div class="lang">
-          <button class="lang__btn" type="button" data-lang="sv">SV</button>
+          <button class="lang__btn is-active" type="button" data-lang="sv">SV</button>
           <button class="lang__btn" type="button" data-lang="en">EN</button>
         </div>
       </div>
     </header>
 
     <main id="top">
-      <section class="section section-block section--case">
+      <section class="section section-block">
         <div class="container">
-          <a class="btn btn--link" id="backToCases" href="./index.html#cases" data-i18n="back_to_cases">
-            ← Tillbaka till cases
-          </a>
+          
+          <a href="index.html#cases" class="back-link">← Tillbaka till cases</a>
 
           <div class="case-hero">
-            <div class="case-hero__left">
-              <h1 class="h-display" data-i18n="case_suie_title">SUIE: Growth setup för e-handel</h1>
-              <p class="case-subtitle" data-i18n="case_suie_subtitle">
-                Struktur för mätning, content och CRO. Fokus på att skapa en skalbar bas för tillväxt.
+            <div class="case-hero__content">
+              <h1 class="h-display">Under Your Skin: Optimering av kundresan</h1>
+              <p class="hero__p">
+                Strategi för att öka snittordervärdet (AOV) från 786 kr till 1000 kr genom beteendedesign, utan att kompromissa med varumärkets premiumkänsla.
               </p>
-
+              
               <div class="case-meta">
-                <div class="pill">Growth</div>
-                <div class="pill">Tracking</div>
-                <div class="pill">CRO</div>
+                <span class="pill">Growth</span>
+                <span class="pill">CRO</span>
+                <span class="pill">Data Analysis</span>
               </div>
             </div>
 
-            <div class="case-hero__right">
-              <div class="case-hero__img">
-                <img src="./  img/underyourskin.png" alt="SUIE case cover" />
+            <div class="case-hero__img">
+              <img src="./  img/underyourskin.png" alt="Under Your Skin mobilvy" />
+            </div>
+          </div>
+
+          <div class="grid grid--3">
+            <div class="card-skill">
+              <h3>Översikt</h3>
+              <ul class="bullet-list">
+                <li><strong>Uppdrag:</strong> Höja AOV & stärka premiumposition.</li>
+                <li><strong>Roll:</strong> Growth Marketing (Kursprojekt).</li>
+                <li><strong>Mål 2026:</strong> Snittorder på 1000 kr.</li>
+              </ul>
+            </div>
+
+            <div class="card-skill">
+              <h3>Verktyg</h3>
+              <ul class="bullet-list">
+                <li>GA4 & Orderdata</li>
+                <li>Figma (Prototyping)</li>
+                <li>Beteendepsykologi</li>
+              </ul>
+            </div>
+
+            <div class="card-skill">
+              <h3>Resultat</h3>
+              <ul class="bullet-list">
+                <li>Konkret CRO-plan</li>
+                <li>Designförslag checkout</li>
+                <li>Strategi för bundles</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="highlight-section">
+            <div class="highlight-grid">
+              <div class="highlight-text">
+                <div class="big-stat">Små förändringar, stor effekt</div>
+                <p>
+                  Genom analys av data från 2025 identifierade vi en tydlig potential. Nästan hälften av alla ordrar bestod av en enda produkt och låg under gränsen för fri frakt.
+                </p>
+                <ul class="bullet-list" style="margin-top:1rem;">
+                  <li><strong>43%</strong> av alla ordrar var 1 produkt.</li>
+                  <li>Hälften av ordrarna låg under <strong>599 kr</strong>.</li>
+                  <li>Köp med 2 produkter hade <strong>+32% högre värde</strong>.</li>
+                </ul>
+              </div>
+              
+              <div class="highlight-table">
+                <table class="data-table">
+                  <thead>
+                    <tr>
+                      <th>Antal produkter</th>
+                      <th>Antal köp</th>
+                      <th>Snittvärde (AOV)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>1</td><td>10 756</td><td>621 kr</td></tr>
+                    <tr><td>2</td><td>9 491</td><td>819 kr</td></tr>
+                    <tr><td>3</td><td>3 355</td><td>1 037 kr</td></tr>
+                    <tr><td>4-6</td><td>1 304</td><td>1 516 kr</td></tr>
+                    <tr><td><strong>Totalt</strong></td><td><strong>24 996</strong></td><td><strong>786 kr</strong></td></tr>
+                  </tbody>
+                </table>
               </div>
             </div>
           </div>
 
-          <div class="grid grid--3 case-grid">
-            <div class="card-skill">
-              <h3 data-i18n="case_overview">Översikt</h3>
-              <ul class="bullet-list">
-                <li>Roll: Growth marketing (kursprojekt)</li>
-                <li>Leverans: mätplan + dashboard + förbättringsförslag</li>
-                <li>Fokus: tracking, funnel-insikter, CRO-hypoteser</li>
-              </ul>
-            </div>
+          <div class="text-content">
+            <h2 class="h-display">Lösning & Strategi</h2>
+            <p>
+              För att nå målet på 1000 kr AOV arbetade vi med att minska friktion och göra nästa steg i köpresan självklart, baserat på psykologiska principer.
+            </p>
 
-            <div class="card-skill">
-              <h3 data-i18n="case_tools">Verktyg</h3>
-              <ul class="bullet-list">
-                <li>GA4, GTM</li>
-                <li>Looker Studio</li>
-                <li>Shopify, Hotjar</li>
-              </ul>
-            </div>
+            <h3>Visualisera målet (Goal Gradient Effect)</h3>
+            <p>
+              Vi tog fram en design för en <em>progress bar</em> i varukorgen. Genom att tydligt visa hur nära kunden är en belöning (t.ex. fri frakt eller en gåva) ökar motivationen att lägga till en extra produkt för att "nå målet".
+            </p>
 
-            <div class="card-skill">
-              <h3 data-i18n="case_results">Resultat</h3>
-              <ul class="bullet-list">
-                <li>Klar funnel-översikt + eventstruktur</li>
-                <li>Prioriterad lista med CRO-test</li>
-                <li>Template för uppföljning vecka för vecka</li>
-              </ul>
+            <h3>Smarta rekommendationer</h3>
+            <p>
+              Istället för generella tips föreslog vi "Bundling" direkt i checkouten. Har kunden valt schampo? Visa balsamet som en enkel "add-on" utan att de behöver lämna kassan. Detta driver upp ordervärdet naturligt.
+            </p>
+
+            <h2 class="h-display" style="margin-top: 3rem;">Nästa steg</h2>
+            <p>
+              Under Your Skin har nu en konkret roadmap. Fokus framåt ligger på att prioritera 2–3 A/B-tester i checkouten och införa bättre segmentering i CRM baserat på kundens köpintention.
+            </p>
+
+            <div style="margin-top: 2rem;">
+              <a class="btn btn--dark" href="mailto:ava.urden@gmail.com">Kontakta mig om detta case</a>
             </div>
           </div>
 
-          <div class="card-skill case-block">
-            <h2 class="case-h2" data-i18n="case_work_title">Vad jag gjorde</h2>
-            <ul class="bullet-list">
-              <li>Kartlade kundresan och definierade KPI:er per steg</li>
-              <li>Satte upp mätplan: events, parametrar och naming</li>
-              <li>Byggde dashboard för att följa trafik, konvertering och bortfall</li>
-              <li>Tog fram CRO-hypoteser baserat på beteendedata</li>
-            </ul>
-          </div>
-
-          <div class="card-skill case-block">
-            <h2 class="case-h2" data-i18n="case_next_title">Nästa steg</h2>
-            <ul class="bullet-list">
-              <li>Prioritera 2–3 test i checkout/produkt</li>
-              <li>Införa bättre segmentering i CRM baserat på intent</li>
-              <li>Standardisera veckorapport med actions</li>
-            </ul>
-
-            <div class="case-cta">
-              <a class="btn btn--dark" href="./index.html#contact" data-i18n="case_contact_cta">Kontakta mig</a>
-            </div>
-          </div>
         </div>
       </section>
 
-      <footer class="footer section-block footer--mini">
-        <div class="container">
-          <div class="footer__inner">
-            <h2 class="h-display" data-i18n="contact_title">Kontakt</h2>
+      <footer id="contact" class="footer section-block">
+        <div class="container footer__inner">
+          <div>
+            <h2 data-i18n="contact_title">Kontakt</h2>
             <div class="footer__links">
               <a href="mailto:ava.urden@gmail.com">ava.urden@gmail.com</a>
-              <a href="https://linkedin.com/in/avaurden" target="_blank" rel="noreferrer">LinkedIn</a>
-              <span class="muted">Stockholm</span>
+              <a href="https://linkedin.com/in/avaurden" target="_blank">LinkedIn</a>
             </div>
+            <div class="footer__copy">&copy; 2026 Ava Urdén</div>
           </div>
-          <div class="footer__copy">&copy; 2026 Ava Urdén</div>
         </div>
       </footer>
     </main>
