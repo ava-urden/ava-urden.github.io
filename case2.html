@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="sv">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Case: WOMEN | Ava Urdén</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+
+    <style>
+      :root {
+        --network-teal: #005355; /* Från PDF färgpalett [cite: 9] */
+        --network-sand: #F4E2D6; /* Från PDF färgpalett [cite: 12] */
+      }
+
+      .case-hero {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: center;
+        margin-bottom: 4rem;
+      }
+
+      .back-link {
+        display: inline-block;
+        margin-bottom: 2rem;
+        text-decoration: none;
+        color: #666;
+        font-weight: 500;
+        border: 1px solid #e5e5e5;
+        padding: 8px 16px;
+        border-radius: 50px;
+        transition: all 0.3s ease;
+      }
+      .back-link:hover { border-color: #000; color: #000; }
+
+      .case-meta {
+        display: flex;
+        gap: 0.5rem;
+        margin-top: 1rem;
+        flex-wrap: wrap;
+      }
+      
+      .pill {
+        background: #f0f0f0;
+        padding: 4px 12px;
+        border-radius: 4px;
+        font-size: 0.85rem;
+        font-weight: 500;
+        font-family: 'Inter', sans-serif;
+      }
+
+      .case-hero__img img {
+        width: 100%;
+        height: auto;
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.08); 
+      }
+
+      .highlight-section {
+        background-color: var(--network-sand);
+        padding: 4rem 3rem;
+        border-radius: 16px;
+        margin: 4rem 0;
+        color: #1a1a1a;
+      }
+
+      .highlight-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        align-items: center;
+      }
+
+      .palette-display {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+
+      .color-swatch {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        border: 1px solid rgba(0,0,0,0.1);
+      }
+
+      .feature-block {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: center;
+        margin: 6rem 0;
+      }
+      
+      .feature-block.reversed { direction: rtl; }
+      .feature-block.reversed .text-content-side { direction: ltr; }
+
+      .feature-img img {
+        width: 100%;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      }
+
+      @media (max-width: 800px) {
+        .case-hero, .highlight-grid, .feature-block { grid-template-columns: 1fr; gap: 2rem; }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container header__inner">
+        <a class="logo" href="index.html#top">Ava Urdén</a>
+        <nav class="nav">
+          <a href="index.html#cases">Cases</a>
+          <a href="index.html#skills">Färdigheter</a>
+          <a href="index.html#contact">Kontakt</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="section section-block">
+        <div class="container">
+          
+          <a href="index.html#cases" class="back-link">← Tillbaka till cases</a>
+
+          <div class="case-hero">
+            <div class="case-hero__content">
+              <h1 class="h-display">Ny visuell identitet & koncept</h1>
+              <p class="hero__p">
+                Rebranding av ett internnätverk med lång historia som behövde ett modernt uttryck troget sin grund[cite: 2, 3].
+              </p>
+              <div class="case-meta">
+                <span class="pill">Visual Identity</span>
+                <span class="pill">Branding</span>
+                <span class="pill">Event Concept</span>
+              </div>
+            </div>
+            <div class="case-hero__img">
+              <img src="./  img/case-ww/dator.png" alt="WOMEN Brand Visuals" />
+            </div>
+          </div>
+
+          <div class="grid grid--3">
+            <div class="card-skill">
+              <h3>Översikt</h3>
+              <ul class="bullet-list">
+                <li><strong>Uppdrag:</strong> Skapa ny identitet och tonalitet[cite: 3, 4].</li>
+                <li><strong>Målgrupp:</strong> 200 medlemmar[cite: 13].</li>
+                <li><strong>Utmaning:</strong> Balansera strikta varumärkesregler mot nätverkets egen identitet.</li>
+              </ul>
+            </div>
+            <div class="card-skill">
+              <h3>Verktyg & Leverans</h3>
+              <ul class="bullet-list">
+                <li>Färgpalett & Typografi [cite: 4]</li>
+                <li>Grafiska element [cite: 4]</li>
+                <li>Eventmaterial [cite: 4]</li>
+              </ul>
+            </div>
+            <div class="card-skill">
+              <h3>Resultat</h3>
+              <ul class="bullet-list">
+                <li>Stärkt intern stolthet[cite: 14].</li>
+                <li>Identitet som används för återkommande event[cite: 14].</li>
+                <li>Framgångsrikt lanseringsevent[cite: 13].</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="highlight-section">
+            <div class="highlight-grid">
+              <div class="highlight-text">
+                <h2 class="big-stat">En balanserad palett</h2>
+                <p>
+                  Jag tog fram en färgpalett som kombinerar djupa, förtroendeingivande toner med mjuka, moderna nyanser för att skapa en inbjudande känsla[cite: 4, 6].
+                </p>
+                <div class="palette-display" style="margin-top: 2rem;">
+                  <div class="color-swatch" style="background-color: #032E37;"></div>
+                  <div class="color-swatch" style="background-color: #005355;"></div>
+                  <div class="color-swatch" style="background-color: #8BA9BD;"></div>
+                  <div class="color-swatch" style="background-color: #E6745C;"></div>
+                  <div class="color-swatch" style="background-color: #E6BAAD;"></div>
+                  <div class="color-swatch" style="background-color: #F4E2D6;"></div>
+                </div>
+              </div>
+              <div class="highlight-table">
+                <table class="data-table">
+                  <thead>
+                    <tr><th>Designelement</th><th>Val</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>Rubriktypsnitt</td><td>Kenao Sans Serif [cite: 17]</td></tr>
+                    <tr><td>Brödtext</td><td>Inter Light [cite: 18]</td></tr>
+                    <tr><td>Fokusfärg</td><td>#005355 [cite: 9]</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <div class="feature-block">
+            <div class="text-content-side">
+              <h3>Från vision till verklighet</h3>
+              <p>
+                Genom ett nära samarbete med grundarna formades ett uttryck som kändes både nytt och i linje med nätverkets vision[cite: 6]. Arbetet omfattade allt från logotyp-hantering till grafiska element för kommunikation[cite: 4].
+              </p>
+            </div>
+            <div class="feature-img">
+              <img src="./img/case-women/mobile-mockup.png" alt="WOMEN mobilvy" />
+            </div>
+          </div>
+
+          <div class="feature-block reversed">
+            <div class="text-content-side">
+              <h3>Event & Genomförande</h3>
+              <p>
+                I samband med lanseringen arrangerades ett stort event för 200 medlemmar i samarbete med ett modeföretag[cite: 13]. Identiteten implementerades på allt eventmaterial för att skapa en röd tråd[cite: 4, 14].
+              </p>
+            </div>
+            <div class="feature-img">
+              <img src="./img/case-women/event.png" alt="Eventmaterial" />
+            </div>
+          </div>
+
+          <div class="intro-text">
+            <h2 class="h-display">Resultat</h2>
+            <p>
+              Den färdiga identiteten togs emot väldigt positivt internt och fungerar idag som den självklara basen för nätverkets all kommunikation och framtida event[cite: 14].
+            </p>
+            <div style="margin-top: 2rem;">
+              <a class="btn btn--dark" href="mailto:ava.urden@gmail.com">Fråga mig om detta projekt</a>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <footer id="contact" class="footer section-block">
+        <div class="container footer__inner">
+          <div>
+            <h2>Kontakt</h2>
+            <div class="footer__links">
+              <a href="mailto:ava.urden@gmail.com">ava.urden@gmail.com</a>
+              <a href="https://linkedin.com/in/avaurden" target="_blank">LinkedIn</a>
+            </div>
+            <div class="footer__copy">&copy; 2026 Ava Urdén</div>
+          </div>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>
