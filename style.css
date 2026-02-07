@@ -1,5 +1,5 @@
 :root {
-  /* --- PALETT: Ljusare & Vitare --- */
+  /* --- PALETT: Natural Calm Organic --- */
   --bg: #FAF9F6; 
   --bg-card: #FFFFFF; 
   
@@ -46,16 +46,15 @@ h1, h2, h3 {
   font-family: var(--font-head);
   font-weight: 400;
   color: var(--text-main);
-  margin: 0 0 1rem; /* Lite mindre marginal under */
+  margin: 0 0 1rem;
   line-height: 1.2;
   letter-spacing: -0.02em;
 }
 
-/* JUSTERAD RUBRIK: Lite mindre än förut */
 .h-display {
-  font-size: clamp(2rem, 3.5vw, 3rem); /* Max 3rem istället för 3.8rem */
+  font-size: clamp(2rem, 3.5vw, 3rem);
   font-weight: 300;
-  margin-bottom: 16px; /* Mindre avstånd ner till texten */
+  margin-bottom: 20px;
   color: var(--text-main);
 }
 
@@ -75,16 +74,13 @@ p {
 }
 
 .section-block {
-  /* ÄNDRAT HÄR: 85vh istället för 100vh. 
-     Nu ser man lite av nästa sektion i nederkanten */
   min-height: 85vh; 
-  
   scroll-snap-align: start;
   scroll-snap-stop: always;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding: 80px 0;
+  justify-content: center; 
+  padding: 150px 0 80px; 
   position: relative;
 }
 
@@ -115,7 +111,9 @@ footer.section-block {
 
 .logo {
   font-family: var(--font-head);
-  font-weight: 500; font-size: 1rem; letter-spacing: 0.05em;
+  font-weight: 500; 
+  font-size: 0.9rem; 
+  letter-spacing: 0.05em;
   text-transform: uppercase; color: var(--text-on-dark);
 }
 
@@ -123,7 +121,8 @@ footer.section-block {
 @media (min-width: 900px) { .nav { display: flex; } }
 
 .nav a {
-  font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em;
+  font-size: 0.75rem; 
+  text-transform: uppercase; letter-spacing: 0.1em;
   color: rgba(243, 241, 237, 0.6); font-weight: 400;
 }
 .nav a:hover, .nav a.is-active { color: var(--text-on-dark); }
@@ -131,16 +130,23 @@ footer.section-block {
 .lang { display: flex; gap: 12px; }
 .lang__btn {
   background: none; border: none; padding: 0;
-  font-size: 0.8rem; color: rgba(243, 241, 237, 0.5); 
+  font-size: 0.75rem; color: rgba(243, 241, 237, 0.5); 
   cursor: pointer; font-family: inherit;
 }
 .lang__btn.is-active { color: var(--text-on-dark); text-decoration: underline; }
 
 /* --- HERO --- */
 .hero__grid {
-  display: grid; grid-template-columns: 1fr; gap: 60px; align-items: center;
+  display: grid; 
+  grid-template-columns: 1fr; 
+  gap: 60px; 
+  align-items: center; 
+  justify-content: center; 
 }
-@media (min-width: 900px) { .hero__grid { grid-template-columns: 1.1fr 0.9fr; } }
+
+@media (min-width: 900px) { 
+  .hero__grid { grid-template-columns: 1.1fr 0.9fr; } 
+}
 
 .hero__img-wrapper {
   border-radius: var(--radius); overflow: hidden; aspect-ratio: 4/5;
@@ -155,7 +161,7 @@ footer.section-block {
 
 .btn {
   display: inline-flex; padding: 14px 30px; border-radius: 50px;
-  font-size: 0.85rem; font-weight: 500; text-transform: uppercase;
+  font-size: 0.8rem; font-weight: 500; text-transform: uppercase;
   letter-spacing: 0.05em; cursor: pointer; transition: all 0.3s ease;
   border: 1px solid transparent;
 }
@@ -171,7 +177,7 @@ footer.section-block {
 .section__top {
   display: flex; 
   justify-content: space-between; 
-  align-items: flex-end; /* Håller filterknapparna i linje med botten av texten */
+  align-items: flex-end; 
   margin-bottom: 60px; 
   padding-bottom: 20px; 
   border-bottom: 1px solid var(--line);
@@ -179,39 +185,40 @@ footer.section-block {
   gap: 20px;
 }
 
-/* Ny klass för gruppen med Rubrik + Introtext */
-.section-header-group {
-  max-width: 600px;
-}
-.section-intro {
-  margin-bottom: 0; /* Tar bort extra marginal så det ligger snyggt */
-  font-size: 1rem;
-  color: var(--text-muted);
-}
+.section-header-group { max-width: 600px; }
+.section-intro { margin-bottom: 0; font-size: 1rem; color: var(--text-muted); }
 
 .filters { display: flex; gap: 10px; }
 .filter {
   background: transparent; border: 1px solid transparent;
   padding: 6px 14px; border-radius: 50px;
-  font-size: 0.85rem; color: var(--text-muted); 
+  font-size: 0.8rem; color: var(--text-muted); 
   cursor: pointer; font-family: inherit; transition: all 0.2s;
 }
 .filter:hover { color: var(--text-main); border-color: var(--line); }
 .filter.is-active { background: var(--dark-frame); color: var(--text-on-dark); }
 
 .cases {
-  display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 40px;
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 40px;
 }
 .case { display: block; }
+
 .case__img {
-  border-radius: var(--radius); overflow: hidden; aspect-ratio: 4/5;
-  margin-bottom: 20px; background: #f0f0f0;
+  border-radius: var(--radius); 
+  overflow: hidden; 
+  /* ÄNDRAT: Från 4/5 till 3/2 för att göra dem mindre höga och mer avlånga */
+  aspect-ratio: 3/2; 
+  margin-bottom: 20px; 
+  background: #f0f0f0;
 }
+
 .case__img img {
   width: 100%; height: 100%; object-fit: cover; transition: transform 0.7s ease;
 }
 .case:hover .case__img img { transform: scale(1.03); }
+
 .case h3 { font-size: 1.2rem; margin-bottom: 6px; font-weight: 400; }
+
 .case__tags span {
   font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em;
   color: var(--text-muted); margin-right: 10px;
