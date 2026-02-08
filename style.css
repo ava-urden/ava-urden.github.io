@@ -145,13 +145,18 @@ footer.section-block {
 }
 
 @media (min-width: 900px) { 
-  .hero__grid { grid-template-columns: 1.1fr 0.9fr; } 
+  .hero__grid { grid-template-columns: 1.4fr 0.6fr; } 
 }
 
 .hero__img-wrapper {
   border-radius: var(--radius); overflow: hidden; aspect-ratio: 4/5;
   box-shadow: 0 20px 50px rgba(46, 43, 39, 0.03);
+  width: 100%;
+  max-width: 420px; 
+  margin-left: auto; 
+  margin-right: auto;
 }
+
 .hero__img-wrapper img {
   width: 100%; height: 100%; object-fit: cover;
   filter: sepia(5%) contrast(98%);
@@ -172,6 +177,11 @@ footer.section-block {
   background: transparent; border: 1px solid var(--text-main); color: var(--text-main);
 }
 .btn--link:hover { background: var(--text-main); color: var(--text-on-dark); }
+
+/* --- GRID SYSTEM (Återställd för Cases) --- */
+.grid { display: grid; gap: 30px; }
+@media (min-width: 900px) { .grid--3 { grid-template-columns: repeat(3, 1fr); } }
+
 
 /* --- CASES --- */
 .section__top {
@@ -198,15 +208,11 @@ footer.section-block {
 .filter:hover { color: var(--text-main); border-color: var(--line); }
 .filter.is-active { background: var(--dark-frame); color: var(--text-on-dark); }
 
-.cases {
-  display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 40px;
-}
 .case { display: block; }
 
 .case__img {
   border-radius: var(--radius); 
   overflow: hidden; 
-  /* ÄNDRAT: Från 4/5 till 3/2 för att göra dem mindre höga och mer avlånga */
   aspect-ratio: 3/2; 
   margin-bottom: 20px; 
   background: #f0f0f0;
@@ -224,40 +230,114 @@ footer.section-block {
   color: var(--text-muted); margin-right: 10px;
 }
 
-/* --- FÄRDIGHETER --- */
-.grid { display: grid; gap: 30px; }
-@media (min-width: 900px) { .grid--3 { grid-template-columns: repeat(3, 1fr); } }
 
-.card-skill {
-  background: var(--bg-card); padding: 32px; border-radius: var(--radius);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
-  border: 1px solid rgba(0,0,0,0.03);
-  height: 100%; display: flex; flex-direction: column;
+/* --- FÄRDIGHETER (Horizontal Stack Layout) --- */
+.skills-intro { margin-bottom: 60px; }
+
+.skills-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-.card-skill h3 {
-  font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em;
-  color: var(--text-muted); margin-bottom: 20px;
-  border-bottom: 1px solid var(--line); padding-bottom: 12px;
+.skill-row {
+  background: var(--bg-card);
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+  border: 1px solid rgba(0,0,0,0.04);
+  
+  /* Mobil layout (standard) */
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
 }
 
-.skill-desc { font-size: 1.1rem; color: var(--text-main); margin-bottom: 24px; }
+/* Desktop layout: Siffra | Innehåll | Verktyg */
+@media (min-width: 900px) {
+  .skill-row {
+    grid-template-columns: 80px 1.5fr 1fr;
+    gap: 60px;
+    align-items: start;
+  }
+}
 
-.bullet-list { list-style: none; padding: 0; margin-bottom: 24px; }
+/* Siffran */
+.skill-num {
+  font-family: var(--font-head);
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: var(--line); /* Diskret färg */
+  line-height: 1;
+}
+
+/* Innehållet i mitten */
+.skill-content h3 {
+  font-size: 1.2rem;
+  margin-bottom: 16px;
+  color: var(--text-main);
+  font-weight: 500;
+}
+
+.skill-desc {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  margin-bottom: 24px;
+}
+
+.bullet-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 .bullet-list li {
-  position: relative; padding-left: 20px; margin-bottom: 10px;
-  font-size: 0.95rem; color: var(--text-muted);
-}
-.bullet-list li::before {
-  content: "•"; position: absolute; left: 0; 
-  color: var(--text-muted); font-size: 1.2em; line-height: 1; top: 1px;
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+  color: var(--text-muted);
 }
 
-.tools-box {
-  margin-top: auto; font-size: 0.85rem; color: var(--text-muted);
-  border-top: 1px dashed var(--line); padding-top: 16px;
+.bullet-list li::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 10px;
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--line);
 }
-.tool-label { color: var(--text-main); font-weight: 500; margin-right: 5px; }
+
+/* Verktygs-delen (Höger) */
+.skill-tools {
+  padding-top: 10px; /* För att linjera med rubriken */
+}
+
+.tool-label {
+  display: block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+.tool-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tool-chips span {
+  font-size: 0.85rem;
+  color: var(--text-main);
+  background: var(--bg); 
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 500;
+  border: 1px solid rgba(0,0,0,0.03);
+}
 
 /* --- FOOTER --- */
 .footer {
