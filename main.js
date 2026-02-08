@@ -9,12 +9,21 @@ const dict = {
     cta_cv: "Ladda ner CV",
     cases_title: "Utvalda cases",
     filter_all: "Alla",
+    // Case 1-3
     case1_title: "Under Your Skin: Optimering av kundresan",
     case1_sum: "Optimering av hela kundresan och analys av data.",
     case2_title: "Ny visuell identitet & koncept",
     case2_sum: "Konceptutveckling och varumärkesstrategi",
     case3_title: "SEO: Content-struktur & Koncept",
     case3_sum: "Datadriven tillväxt genom Experternas boktips",
+    // Case 4-6 (Nya)
+    case4_title: "E-handel: CRO & Konvertering",
+    case4_sum: "A/B-testning och hypotesdriven design för ökad försäljning.",
+    case5_title: "Social Media: Tillväxtstrategi",
+    case5_sum: "Organisk räckvidd och community building på Instagram.",
+    case6_title: "Brand Book: Digital riktlinje",
+    case6_sum: "Skapandet av en skalbar visuell identitet för webb.",
+    // Skills
     skills_main_title: "Färdigheter & verktyg",
     skills_intro: "Jag gillar att ta en idé hela vägen från tanke till färdigt. Här är mina främsta färdigheter.",
     cat1_title: "1. Content & Storytelling",
@@ -39,12 +48,21 @@ const dict = {
     cta_cv: "Download CV",
     cases_title: "Selected cases",
     filter_all: "All",
+    // Case 1-3
     case1_title: "SUIE: Growth setup",
     case1_sum: "Structure for tracking, content, and CRO.",
     case2_title: "Visual identity & branding",
     case2_sum: "Hypothesis-driven improvements to reduce friction.",
     case3_title: "SEO: Content structure",
     case3_sum: "Plan and structure for organic growth.",
+    // Case 4-6 (Nya - Engelska översättning)
+    case4_title: "E-commerce: CRO & Conversion",
+    case4_sum: "A/B testing and hypothesis-driven design to boost sales.",
+    case5_title: "Social Media: Growth Strategy",
+    case5_sum: "Organic reach and community building on Instagram.",
+    case6_title: "Brand Book: Digital Guidelines",
+    case6_sum: "Creating a scalable visual identity for the web.",
+    // Skills
     skills_main_title: "Skills & tools",
     skills_intro: "I like taking an idea all the way from thought to finish. Here are my core skills.",
     cat1_title: "1. Content & Storytelling",
