@@ -97,6 +97,28 @@
         box-shadow: 0 4px 20px rgba(0,0,0,0.05);
       }
 
+      /* Nytt för Content Showcase */
+      .content-showcase {
+        background: white;
+        border: 1px solid #eee;
+        border-radius: 16px;
+        padding: 3.5rem;
+        margin: 6rem 0;
+      }
+
+      .content-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: center;
+      }
+
+      .device-mockup img {
+        width: 100%;
+        border-radius: 12px;
+        box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+      }
+
       .stat-box {
         background: white;
         padding: 2.5rem;
@@ -112,8 +134,9 @@
       }
 
       @media (max-width: 800px) {
-        .case-hero, .highlight-grid, .feature-block { grid-template-columns: 1fr; gap: 2rem; }
+        .case-hero, .highlight-grid, .feature-block, .content-grid { grid-template-columns: 1fr; gap: 2rem; }
         .content-columns { column-count: 1; }
+        .content-showcase { padding: 2rem; }
       }
     </style>
   </head>
@@ -202,11 +225,32 @@
                 <li><strong>Kurerat urval:</strong> Fyra noggrant utvalda böcker per profil, från kokböcker till romaner.</li>
                 <li><strong>SEO-optimering:</strong> Texterna är skrivna med sökordsfokus för att bygga auktoritet inom nischade segment.</li>
                 <li><strong>Friktionsfri köpresa:</strong> Varje tips är kopplat till en direktlänk för köp, vilket minimerar stegen till konvertering.</li>
-                <li><strong>Profilbredd:</strong> Samarbete med namn som Björn Frantzén, Camilla Hamid och Carolina Gynning för att nå olika målgrupper.</li>
               </ul>
             </div>
             <div class="feature-img">
-              <img src="./img/cases/experter-mobil.jpg" alt="Gränssnitt för Experternas boktips" />
+              <img src="./  img/case-ak.b/ny boktips.png" alt="Gränssnitt för Experternas boktips" />
+            </div>
+          </div>
+
+          <div class="content-showcase">
+            <div class="content-grid">
+              <div class="text-content-side">
+                <h2 class="h-display" style="font-size: 2.2rem;">Uttag i digitala kanaler</h2>
+                <p>
+                  För att maximera räckvidden översatte vi hubbens innehåll till kanalunika format. Genom att använda igenkänningsfaktorn från våra experter skapade vi ett enhetligt uttryck från första scroll i sociala medier till konvertering.
+                </p>
+                <ul class="bullet-list" style="margin-top: 1rem;">
+                  <li><strong>Instagram:</strong> Interaktiva format som driver trafik till hubben.</li>
+                  <li><strong>Nyhetsbrev:</strong> Personliga tips baserade på expertens nisch.</li>
+                  <li><strong>Paid Social:</strong> Riktade annonser mot specifika intresseområden.</li>
+                </ul>
+              </div>
+              <div class="device-mockup">
+                <img src="./  img/case-ak.b/content.png" alt="Uttag i sociala medier och nyhetsbrev" />
+                <p style="font-size: 0.85rem; color: #666; margin-top: 1.5rem; text-align: center; font-style: italic;">
+              
+                </p>
+              </div>
             </div>
           </div>
 
