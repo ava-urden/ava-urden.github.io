@@ -341,16 +341,100 @@ footer.section-block {
 
 /* --- FOOTER --- */
 .footer {
-  background: var(--dark-frame); color: var(--text-on-dark);
+  background: var(--dark-frame); 
+  color: var(--text-on-dark);
+  /* Gör footern lite högre för lyxigare känsla */
+  padding: 120px 0 60px; 
 }
-.footer h2 { color: var(--text-on-dark); font-size: 2.5rem; margin-bottom: 40px; font-weight: 300; }
-.footer__links a {
-  display: block; color: rgba(243, 241, 237, 0.7); 
-  font-size: 1.2rem; margin-bottom: 12px; font-family: var(--font-head);
+
+.footer__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 60px;
 }
-.footer__links a:hover { color: var(--text-on-dark); }
-.footer__copy {
-  margin-top: 60px; padding-top: 20px;
+
+/* På dator: Två kolumner */
+@media (min-width: 900px) {
+  .footer__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+  }
+}
+
+.footer h2 {
+  color: var(--text-on-dark);
+  font-size: clamp(2.5rem, 4vw, 3.5rem); /* Stor rubrik */
+  margin-bottom: 24px;
+  font-weight: 300;
+}
+
+.footer__text {
+  color: rgba(243, 241, 237, 0.7);
+  font-size: 1.1rem;
+  max-width: 400px;
+  margin-bottom: 40px;
+}
+
+/* Snygg vit knapp för mörk bakgrund */
+.btn--white {
+  display: inline-flex;
+  padding: 14px 32px;
+  border-radius: 50px;
+  background: var(--text-on-dark);
+  color: var(--dark-frame);
+  font-weight: 500;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.btn--white:hover {
+  background: transparent;
+  border-color: var(--text-on-dark);
+  color: var(--text-on-dark);
+  transform: translateY(-2px);
+}
+
+/* Kontakt-listan till höger */
+.contact-group {
+  margin-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted-on-dark);
+  margin-bottom: 8px;
+}
+
+.contact-link {
+  font-family: var(--font-head);
+  font-size: 1.4rem; /* Stora tydliga länkar */
+  color: var(--text-on-dark);
+  font-weight: 400;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  width: fit-content;
+}
+
+.contact-link:hover {
+  color: #FFFFFF;
+  border-bottom-color: rgba(255,255,255,0.3);
+}
+
+/* Copyright längst ner */
+.footer__bottom {
+  margin-top: 100px;
+  padding-top: 20px;
   border-top: 1px solid rgba(255,255,255,0.1);
-  font-size: 0.85rem; color: var(--text-muted-on-dark);
+}
+
+.footer__copy {
+  font-size: 0.85rem;
+  color: var(--text-muted-on-dark);
 }
