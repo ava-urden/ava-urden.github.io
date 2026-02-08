@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="sv">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Case: Akademibokhandeln | Ava Urdén</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+
+    <style>
+      :root {
+        --brand-red: #e30613; 
+        --brand-light-gray: #f9f9f9;
+        --text-dark: #1a1a1a;
+      }
+
+      .case-hero {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: center;
+        margin-bottom: 4rem;
+      }
+
+      .back-link {
+        display: inline-block;
+        margin-bottom: 2rem;
+        text-decoration: none;
+        color: #666;
+        font-weight: 500;
+        border: 1px solid #e5e5e5;
+        padding: 8px 16px;
+        border-radius: 50px;
+        transition: all 0.3s ease;
+      }
+      .back-link:hover { border-color: #000; color: #000; }
+
+      .case-meta {
+        display: flex;
+        gap: 0.5rem;
+        margin-top: 1rem;
+        flex-wrap: wrap;
+      }
+      
+      .pill {
+        background: #f0f0f0;
+        padding: 4px 12px;
+        border-radius: 4px;
+        font-size: 0.85rem;
+        font-weight: 500;
+        font-family: 'Inter', sans-serif;
+      }
+
+      .case-hero__img img {
+        width: 100%;
+        height: auto;
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.08); 
+      }
+
+      .highlight-section {
+        background-color: var(--brand-light-gray);
+        padding: 4rem 3rem;
+        border-radius: 16px;
+        margin: 4rem 0;
+        color: var(--text-dark);
+        border-left: 8px solid var(--brand-red);
+      }
+
+      .highlight-grid {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 3rem;
+        align-items: center;
+      }
+
+      .feature-block {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: center;
+        margin: 6rem 0;
+      }
+      
+      .feature-block.reversed { direction: rtl; }
+      .feature-block.reversed .text-content-side { direction: ltr; }
+
+      .feature-img img {
+        width: 100%;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      }
+
+      .stat-box {
+        background: white;
+        padding: 2.5rem;
+        border-radius: 12px;
+        text-align: left;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+      }
+
+      .content-columns {
+        column-count: 2;
+        column-gap: 3rem;
+        margin-top: 2rem;
+      }
+
+      @media (max-width: 800px) {
+        .case-hero, .highlight-grid, .feature-block { grid-template-columns: 1fr; gap: 2rem; }
+        .content-columns { column-count: 1; }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container header__inner">
+        <a class="logo" href="index.html#top">Ava Urdén</a>
+        <nav class="nav">
+          <a href="index.html#cases">Cases</a>
+          <a href="index.html#skills">Färdigheter</a>
+          <a href="index.html#contact">Kontakt</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="section section-block">
+        <div class="container">
+          
+          <a href="index.html#cases" class="back-link">← Tillbaka till cases</a>
+
+          <div class="case-hero">
+            <div class="case-hero__content">
+              <h1 class="h-display">SEO: Content-struktur & Koncept</h1>
+              <p class="hero__p">
+                Hur vi genom en datadriven strategi skapade en ny destination för bokinspiration hos Akademibokhandeln, med målet att vinna den organiska trafiken från konkurrenterna.
+              </p>
+              <div class="case-meta">
+                <span class="pill">SEO & Sökordsanalys</span>
+                <span class="pill">Content Strategy</span>
+                <span class="pill">Målgruppsinsikter</span>
+              </div>
+            </div>
+            <div class="case-hero__img">
+              <img src="./  img/case-ak.b/bok.png" alt="Akademibokhandeln Experternas boktips" />
+            </div>
+          </div>
+
+          <div class="grid grid--3">
+            <div class="card-skill">
+              <h3>Utmaning & Analys</h3>
+              <p>Arbetet inleddes med en djupgående omvärlds- och konkurrentanalys för att identifiera gap i marknaden. Genom att studera kundresan tog vi fram tre specifika personas som speglar olika sätt att inspireras och genomföra köp.</p>
+            </div>
+            <div class="card-skill">
+              <h3>Datadriven Metod</h3>
+              <p>Med stöd i Bokbarometern och Google Trends kartlade vi de cykliska mönstren i bokbranschen. Vi såg tydliga toppar inför jul- och sommarläsning, vilket dikterade vår timing för innehållsproduktion.</p>
+            </div>
+            <div class="card-skill">
+              <h3>Strategiskt Mål</h3>
+              <p>Målet var att bygga en brygga mellan ren inspiration och snabb konvertering. Genom att etablera organisk synlighet över tid skapade vi en hållbar tillväxtmodell för Akademibokhandelns e-handel.</p>
+            </div>
+          </div>
+
+          <div class="highlight-section">
+            <div class="highlight-grid">
+              <div class="highlight-text">
+                <h2 class="h-display">Insikt: Från sök till köp</h2>
+                <p>
+                  Genom en omfattande sökordsanalys identifierade vi ett tydligt beteende: användare söker aktivt efter specifik bokinspiration snarare än bara titlar. Genom att matcha detta beteende med SEO-anpassat innehåll skapade vi en lösning som möter kunden direkt i sökögonblicket.
+                </p>
+                <div class="content-columns">
+                  <p><strong>Timing:</strong> Strategin fokuserar på att maximera synlighet under årets viktigaste försäljningsperioder.</p>
+                  <p><strong>Relevans:</strong> Varje rekommendation vilar på verklig efterfrågan och aktuella trender i Google-söket.</p>
+                </div>
+              </div>
+              <div class="stat-box">
+                <h3 style="color: var(--brand-red); margin-bottom: 1rem;">Nyckeltal i fokus</h3>
+                <ul class="bullet-list" style="font-size: 0.9rem;">
+                  <li>Organisk trafik & Sökordsranking</li>
+                  <li>Klickfrekvens (CTR) på expert-rekommendationer</li>
+                  <li>Konverteringsgrad per prioriterad titel</li>
+                  <li>Engagemang i nyhetsbrev & Instagram</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="feature-block">
+            <div class="text-content-side">
+              <h3>Lösningen: Experternas boktips</h3>
+              <p>
+                Vi lanserade en helt ny sektion på webbplatsen – en "hub" för trovärdiga rekommendationer. Genom att kurera innehåll från kända profiler och experter skapade vi en exklusiv känsla som skiljer Akademibokhandeln från de stora prispressande konkurrenterna.
+              </p>
+              <ul class="bullet-list">
+                <li><strong>Kurerat urval:</strong> Fyra noggrant utvalda böcker per profil, från kokböcker till romaner.</li>
+                <li><strong>SEO-optimering:</strong> Texterna är skrivna med sökordsfokus för att bygga auktoritet inom nischade segment.</li>
+                <li><strong>Friktionsfri köpresa:</strong> Varje tips är kopplat till en direktlänk för köp, vilket minimerar stegen till konvertering.</li>
+                <li><strong>Profilbredd:</strong> Samarbete med namn som Björn Frantzén, Camilla Hamid och Carolina Gynning för att nå olika målgrupper.</li>
+              </ul>
+            </div>
+            <div class="feature-img">
+              <img src="./img/cases/experter-mobil.jpg" alt="Gränssnitt för Experternas boktips" />
+            </div>
+          </div>
+
+          <div class="feature-block reversed">
+            <div class="text-content-side">
+              <h3>Distribution & Aktivering</h3>
+              <p>
+                För att säkerställa trafik till den nya sektionen tog vi fram en omfattande aktiveringsplan. Detta inkluderade format för Instagram och nyhetsbrev, där vi genom A/B-testning av olika profiler och upplägg kontinuerligt optimerade resultatet.
+              </p>
+              <p>
+                Konceptet fungerar som en långsiktig investering i varumärkets digitala närvaro, där inspiration och expertis driver en ökad försäljning online.
+              </p>
+            </div>
+            <div class="feature-img">
+              <div class="stat-box" style="background: var(--brand-light-gray); border: 1px solid #ddd;">
+                <h4>Mätplan & Uppföljning</h4>
+                <p>Vi avslutade projektet med att sätta upp en robust mätplan som spårar allt från organisk räckvidd till faktiska köp kopplade till de profilerade titlarna.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="intro-text">
+            <h2 class="h-display">Summering av effekt</h2>
+            <p>
+              Genom att kombinera mänsklig expertis med teknisk SEO-insikt transformerade vi bokinspiration från en statisk upplevelse till en drivande kraft för e-handeln. Resultatet är en skalbar modell som Akademibokhandeln kan använda säsong efter säsong.
+            </p>
+            <div style="margin-top: 2rem;">
+              <a class="btn btn--dark" href="mailto:ava.urden@gmail.com">Vill du höra mer om min process?</a>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <footer id="contact" class="footer section-block">
+        <div class="container footer__inner">
+          <div>
+            <h2>Kontakt</h2>
+            <div class="footer__links">
+              <a href="mailto:ava.urden@gmail.com">ava.urden@gmail.com</a>
+              <a href="https://linkedin.com/in/avaurden" target="_blank">LinkedIn</a>
+            </div>
+            <div class="footer__copy">&copy; 2026 Ava Urdén</div>
+          </div>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>
