@@ -17,7 +17,7 @@ const dict = {
     case3_title: "SEO: Content-struktur & Koncept",
     case3_sum: "Datadriven tillväxt genom Experternas boktips",
     // Case 4-6 (Nya)
-    case4_title: "E-handel: CRO & Konvertering",
+    case4_title: "Datadriven E-handel",
     case4_sum: "A/B-testning och hypotesdriven design för ökad försäljning.",
     case5_title: "Social Media: Tillväxtstrategi",
     case5_sum: "Organisk räckvidd och community building på Instagram.",
