@@ -10,7 +10,7 @@ const dict = {
     cases_title: "Utvalda cases",
     filter_all: "Alla",
     // Case 1-3
-    case1_title: "Under Your Skin: Optimering av kundresan",
+    case1_title: "Optimering av kundresan",
     case1_sum: "Optimering av hela kundresan och analys av data.",
     case2_title: "Ny visuell identitet & koncept",
     case2_sum: "Konceptutveckling och varumärkesstrategi",
