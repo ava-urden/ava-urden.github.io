@@ -33,6 +33,7 @@
     </header>
 
     <main id="top">
+      
       <section class="hero section-block">
         <div class="container hero__grid">
           <div class="hero__content">
@@ -50,8 +51,6 @@
                 Ladda ner CV
               </a>
             </div>
-
-            <div class="chips"></div>
           </div>
 
           <div class="hero__img-wrapper">
@@ -65,13 +64,15 @@
           <div class="section__top">
             <div class="section-header-group">
               <h2 class="h-display" data-i18n="cases_title">Utvalda cases</h2>
-              <p class="section-intro"></p>
-              
-              <div class="filters" style="margin-top: 1.5rem;"></div>
+          
+              <div class="filters" style="margin-top: 1.5rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+                
+              </div>
             </div>
           </div>
 
           <div class="grid grid--3" id="casesGrid">
+            
             <div class="case" data-tags="data, strategy">
               <a href="case1.html" class="case__link">
                 <div class="case__img">
@@ -209,16 +210,17 @@
           </div>
         </div>
       </section>
+
       <footer id="contact" class="footer section-block">
         <div class="container footer__grid">
             
           <div class="footer__left">
             <h2 data-i18n="contact_title">Kontakt</h2>
-            <p class="footer__text">
+            <p class="footer__text" data-i18n="footer_text">
               Nyfiken på att veta mer eller diskutera ett projekt? 
               Hör av dig så tar vi en kaffe!
             </p>
-            <a href="./cv/ava-urden-cv-sv.pdf" download class="btn btn--white">
+            <a href="./cv/ava-urden-cv-sv.pdf" download class="btn btn--white" id="footerCvLink" data-i18n="cta_cv">
               Ladda ner CV
             </a>
           </div>
@@ -229,7 +231,7 @@
               <a href="mailto:ava.urden@gmail.com" class="contact-link email-link">ava.urden@gmail.com</a>
             </div>
             <div class="contact-group">
-              <span class="contact-label">Mobil</span>
+              <span class="contact-label" data-i18n="contact_mobile">Mobil</span>
               <a href="tel:+46723111441" class="contact-link">+46 72 311 14 41</a>
             </div>
             <div class="contact-group">
@@ -245,3 +247,8 @@
           <div class="footer__copy">&copy; 2026 Ava Urdén</div>
         </div>
       </footer>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
