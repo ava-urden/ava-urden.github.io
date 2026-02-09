@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="sv">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Case: Brand Book | Ava Urdén</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Sora:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container header__inner">
+        <a class="logo" href="index.html#top">Ava Urdén</a>
+        <nav class="nav">
+          <a href="index.html#about" data-i18n="nav_about">Om mig</a>
+          <a href="index.html#cases" data-i18n="nav_cases">Cases</a>
+          <a href="index.html#skills" data-i18n="nav_skills">Färdigheter</a>
+          <a href="index.html#contact" data-i18n="nav_contact">Kontakt</a>
+        </nav>
+        <div class="lang">
+          <button class="lang__btn is-active" type="button" data-lang="sv">SV</button>
+          <button class="lang__btn" type="button" data-lang="en">EN</button>
+        </div>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="section section-block">
+        <div class="container">
+          <a href="index.html#cases" class="back-link" data-i18n="back_to_cases">← Tillbaka till cases</a>
+
+          <div class="case-hero">
+            <div class="case-hero__content reveal">
+              <h1 class="h-display" data-i18n="c6_hero_title">Brand Book: Digital riktlinje</h1>
+              <p class="hero__p" data-i18n="c6_hero_body">
+                Ett urval från arbetet med en digital brand book. Sidan uppdateras med fulla case-detaljer och visuellt material.
+              </p>
+            </div>
+            <div class="case-hero__img reveal" style="--delay: 0.1s;">
+              <div class="card-skill" style="height: 100%; display: flex; align-items: center; justify-content: center; text-align: center;">
+                <p class="muted" data-i18n="c6_note_body">Bild- och materialurval publiceras snart.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="highlight-section reveal">
+            <div class="highlight-grid">
+              <div>
+                <h2 class="big-stat" data-i18n="c6_note_title">Under uppbyggnad</h2>
+                <p data-i18n="c6_note_text">
+                  Jag fyller på med case-struktur, guidelines och visuella exempel. Hör gärna av dig om du vill se materialet redan nu.
+                </p>
+              </div>
+              <div>
+                <ul class="bullet-list" data-i18n-html="c6_note_list">
+                  <li>Brandplattform & tonläge</li>
+                  <li>Typografi och färgsystem</li>
+                  <li>Layout och bildspråk</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer id="contact" class="footer section-block">
+        <div class="container footer__grid">
+          <div class="footer__left">
+            <h2 data-i18n="contact_title">Kontakt</h2>
+            <p class="footer__text" data-i18n="footer_text">
+              Nyfiken på att veta mer eller diskutera ett projekt?
+              Hör av dig så tar vi en kaffe!
+            </p>
+            <a href="./cv/ava-urden-cv-sv.pdf" download class="btn btn--white" data-cv-link data-i18n="cta_cv">
+              Ladda ner CV
+            </a>
+          </div>
+
+          <div class="footer__right">
+            <div class="contact-group">
+              <span class="contact-label" data-i18n="contact_email">Email</span>
+              <a href="mailto:ava.urden@gmail.com" class="contact-link email-link">ava.urden@gmail.com</a>
+            </div>
+            <div class="contact-group">
+              <span class="contact-label" data-i18n="contact_mobile">Mobil</span>
+              <a href="tel:+46723111441" class="contact-link">+46 72 311 14 41</a>
+            </div>
+            <div class="contact-group">
+              <span class="contact-label" data-i18n="contact_linkedin">LinkedIn</span>
+              <a href="https://linkedin.com/in/avaurden" target="_blank" class="contact-link">
+                linkedin.com/in/avaurden ↗
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="container footer__bottom">
+          <div class="footer__copy">&copy; 2026 Ava Urdén</div>
+        </div>
+      </footer>
+    </main>
+
+    <script src="./main.js"></script>
+  </body>
+</html>

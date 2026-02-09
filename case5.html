@@ -4,104 +4,26 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Case: Cay Collective | Ava Urdén</title>
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Manrope:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Sora:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./style.css" />
 
     <style>
       :root {
-        --cay-red: #8B2E2E;
-        --cay-bg: #F9F9F9;
+        --cay-red: #b6404c;
       }
 
-      /* HERO LAYOUT */
-      .case-hero {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 4rem;
-        align-items: center;
-        margin-bottom: 4rem;
-      }
-
-      .back-link {
-        display: inline-block;
-        margin-bottom: 2rem;
-        text-decoration: none;
-        color: #666;
-        font-weight: 500;
-        border: 1px solid #e5e5e5;
-        padding: 8px 16px;
-        border-radius: 50px;
-        transition: all 0.3s ease;
-      }
-      .back-link:hover { border-color: #000; color: #000; }
-
-      .case-meta {
-        display: flex;
-        gap: 0.5rem;
-        margin-top: 1rem;
-        flex-wrap: wrap;
-      }
-      
-      .pill {
-        background: #f0f0f0;
-        padding: 4px 12px;
-        border-radius: 4px;
-        font-size: 0.85rem;
-        font-weight: 500;
-        font-family: 'Inter', sans-serif;
-      }
-
-      .case-hero__img img {
-        width: 100%;
-        height: auto;
-        border-radius: 12px;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.08); 
-      }
-
-      /* GRID LAYOUT */
-      .grid--3 {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 2rem;
-        margin-bottom: 4rem;
-      }
-      
-      .card-skill {
-        background: #fff;
-        border: 1px solid #eee;
-        padding: 1.5rem;
-        border-radius: 8px;
-      }
-
-      .card-skill h3 {
-        font-size: 1.1rem;
-        margin-bottom: 1rem;
-        font-weight: 700;
-      }
-
-      .bullet-list {
-        padding-left: 1.2rem;
-        margin: 0;
-      }
-      .bullet-list li {
-        margin-bottom: 0.5rem;
-        font-size: 0.95rem;
-        color: #555;
-      }
-
-      /* CAY STRATEGI */
       .strategy-section {
-        background-color: var(--cay-bg);
-        padding: 4rem 3rem;
-        border-radius: 16px;
-        margin: 4rem 0;
-        color: #1a1a1a;
+        background: #f7f4f1;
+        padding: 3rem;
+        border-radius: var(--radius-lg);
+        border: 1px solid var(--line);
+        margin: 3rem 0;
       }
 
       .strategy-grid {
@@ -111,17 +33,11 @@
         align-items: center;
       }
 
-      .strategy-text h2 {
-        font-family: 'Manrope', sans-serif;
-        font-size: 1.8rem;
-        margin-bottom: 1rem;
-      }
-
       .persona-list {
         background: #fff;
         padding: 2rem;
         border-radius: 12px;
-        box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
       }
 
       .persona-item {
@@ -130,98 +46,56 @@
         display: flex;
         flex-direction: column;
       }
-      .persona-item:last-child { border-bottom: none; }
-      
-      .persona-name { font-weight: 700; font-size: 1rem; margin-bottom: 0.2rem; }
-      .persona-desc { font-size: 0.9rem; color: #666; font-style: italic; }
 
-      /* TEXT ONLY SECTION (FÖR HEMSIDAN) */
+      .persona-item:last-child {
+        border-bottom: none;
+      }
+
+      .persona-name {
+        font-weight: 700;
+        font-size: 1rem;
+        margin-bottom: 0.2rem;
+      }
+
+      .persona-desc {
+        font-size: 0.9rem;
+        color: #666;
+        font-style: italic;
+      }
+
       .text-focus-section {
         max-width: 800px;
         margin: 6rem auto;
         text-align: center;
       }
+
       .text-focus-section h3 {
         font-size: 1.8rem;
         margin-bottom: 1.5rem;
       }
+
       .text-focus-section p {
         font-size: 1.1rem;
         color: #555;
         line-height: 1.7;
+        margin-left: auto;
+        margin-right: auto;
       }
 
-      /* FEATURE BLOCK (FÖR CONTENT) */
-      .feature-block {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 4rem;
-        align-items: center;
-        margin: 6rem 0;
-      }
-      
-      .feature-img img {
-        width: 100%;
-        border-radius: 12px;
-        box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-        border: 1px solid #eee;
-        transition: transform 0.3s ease;
-      }
-      .feature-img img:hover {
-        transform: scale(1.01);
-      }
-
-      .text-content-side h3 {
-        font-size: 1.5rem;
-        margin-bottom: 1rem;
-      }
-
-      .red-accent { color: var(--cay-red); font-weight: 600; }
-
-      /* RESULTAT TEXT */
       .result-text-container {
         max-width: 700px;
         margin: 0 auto 6rem auto;
         text-align: center;
       }
 
-      /* FOOTER STYLES */
-      .footer__grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 4rem;
-        margin-bottom: 3rem;
-      }
-      .btn--white {
-        display: inline-block;
-        background: #fff;
-        color: #000;
-        border: 1px solid #000;
-        padding: 10px 24px;
-        border-radius: 50px;
-        text-decoration: none;
-        font-weight: 500;
-        margin-top: 1rem;
-        transition: all 0.3s ease;
-      }
-      .btn--white:hover { background: #fcfcfc; color: #fff; }
-      
-      .contact-group { margin-bottom: 1.5rem; }
-      .contact-label { display: block; font-size: 0.8rem; text-transform: uppercase; color: #888; margin-bottom: 0.3rem; letter-spacing: 0.05em; }
-      .contact-link { font-size: 1.2rem; color: #ffffff; text-decoration: none; font-weight: 500; }
-      
-      .footer__bottom {
-        border-top: 1px solid #eee;
-        padding-top: 2rem;
-        text-align: center;
-        color: #888;
-        font-size: 0.9rem;
+      .result-text-container p {
+        color: #555;
       }
 
       @media (max-width: 900px) {
-        .case-hero, .grid--3, .strategy-grid, .feature-block, .footer__grid { grid-template-columns: 1fr; gap: 2.5rem; }
-        .feature-block .feature-img { order: -1; }
-        .strategy-section { padding: 2rem; }
+        .strategy-grid {
+          grid-template-columns: 1fr;
+        }
       }
     </style>
   </head>
@@ -231,6 +105,7 @@
       <div class="container header__inner">
         <a class="logo" href="index.html#top">Ava Urdén</a>
         <nav class="nav">
+          <a href="index.html#about" data-i18n="nav_about">Om mig</a>
           <a href="index.html#cases" data-i18n="nav_cases">Cases</a>
           <a href="index.html#skills" data-i18n="nav_skills">Färdigheter</a>
           <a href="index.html#contact" data-i18n="nav_contact">Kontakt</a>
@@ -245,147 +120,145 @@
     <main id="top">
       <section class="section section-block">
         <div class="container">
-          
-          <a href="index.html#cases" class="back-link">← Tillbaka till cases</a>
+          <a href="index.html#cases" class="back-link" data-i18n="back_to_cases">← Tillbaka till cases</a>
 
           <div class="case-hero">
-            <div class="case-hero__content">
-              <h1 class="h-display">Från produktutbud till personlig guidning</h1>
-              <p class="hero__p">
+            <div class="case-hero__content reveal">
+              <h1 class="h-display" data-i18n="c5_hero_title">Från produktutbud till personlig guidning</h1>
+              <p class="hero__p" data-i18n="c5_hero_body">
                 Hur vi positionerade Cay Collective som destinationen för utvalda och unika gåvor genom att skifta fokus från prislistor till mottagarens personlighet.
               </p>
               <div class="case-meta">
-                <span class="pill">E-handelsoptimering</span>
-                <span class="pill">Content Strategi</span>
-                <span class="pill">UX/UI</span>
+                <span class="pill" data-i18n="c5_pill_1">E-handelsoptimering</span>
+                <span class="pill" data-i18n="c5_pill_2">Content Strategi</span>
+                <span class="pill" data-i18n="c5_pill_3">UX/UI</span>
               </div>
             </div>
-            <div class="case-hero__img">
-              <img src="./  img/case-cay/caybanner.png" alt="Cay Collective Campaign Hero" />
+            <div class="case-hero__img reveal" style="--delay: 0.1s;">
+              <img src="./img/case-cay/caybanner.png" alt="Cay Collective Campaign Hero" />
             </div>
           </div>
 
-          <div class="grid--3">
-            <div class="card-skill">
-              <h3>Utmaning</h3>
-              <ul class="bullet-list">
-                <li><strong>Decision Fatigue:</strong> Cays breda sortiment gjorde det svårt för kunden att välja rätt gåva i julstressen.</li>
+          <div class="grid grid--3">
+            <div class="card-skill reveal">
+              <h3 data-i18n="c5_challenge_title">Utmaning</h3>
+              <ul class="bullet-list" data-i18n-html="c5_challenge_list">
+                <li><strong>Beslutsutmattning:</strong> Cays breda sortiment gjorde det svårt för kunden att välja rätt gåva i julstressen.</li>
                 <li><strong>Otydlighet:</strong> Kunden saknade vägledning i det unika sortimentet.</li>
               </ul>
             </div>
-            <div class="card-skill">
-              <h3>Insikt</h3>
-              <ul class="bullet-list">
+            <div class="card-skill reveal" style="--delay: 0.05s;">
+              <h3 data-i18n="c5_insight_title">Insikt</h3>
+              <ul class="bullet-list" data-i18n-html="c5_insight_list">
                 <li><strong>Kontext:</strong> Produkter behöver en berättelse för att bli gåvor.</li>
                 <li><strong>Känsla:</strong> Kunden söker autenticitet och en personlig touch.</li>
               </ul>
             </div>
-            <div class="card-skill">
-              <h3>Lösning</h3>
-              <ul class="bullet-list">
+            <div class="card-skill reveal" style="--delay: 0.1s;">
+              <h3 data-i18n="c5_solution_title">Lösning</h3>
+              <ul class="bullet-list" data-i18n-html="c5_solution_list">
                 <li><strong>Persona-guide:</strong> Navigering baserad på personlighet.</li>
                 <li><strong>Optimering:</strong> UX-förbättringar för enklare köpresa.</li>
               </ul>
             </div>
           </div>
 
-          <div class="strategy-section">
+          <div class="strategy-section reveal">
             <div class="strategy-grid">
               <div class="strategy-text">
-                <h2>Strategi: Att sätta produkten i rätt sammanhang</h2>
-                <p>
+                <h2 data-i18n="c5_strategy_title">Strategi: Att sätta produkten i rätt sammanhang</h2>
+                <p data-i18n="c5_strategy_body_1">
                   För att få fler att handla julklappar hos Cay Collective räckte det inte att bara visa produkter. Vi behövde eliminera gissningsleken för kunden.
                 </p>
-                <p style="margin-top: 1rem;">
+                <p data-i18n-html="c5_strategy_body_2" style="margin-top: 1rem;">
                   Vår lösning blev att skippa generiska kategorier som "Under 500 kr" och istället fokusera på <strong>vem personen är</strong>. Genom att kategorisera sortimentet efter personlighet gjorde vi valet mer självklart.
                 </p>
               </div>
 
               <div class="persona-list">
                 <div class="persona-item">
-                  <span class="persona-name">För samlaren</span>
-                  <span class="persona-desc">Unika objekt med historia och karaktär.</span>
+                  <span class="persona-name" data-i18n="c5_persona_1_name">För samlaren</span>
+                  <span class="persona-desc" data-i18n="c5_persona_1_desc">Unika objekt med historia och karaktär.</span>
                 </div>
                 <div class="persona-item">
-                  <span class="persona-name">För den som har allt</span>
-                  <span class="persona-desc">Detaljer de inte visste att de behövde.</span>
+                  <span class="persona-name" data-i18n="c5_persona_2_name">För den som har allt</span>
+                  <span class="persona-desc" data-i18n="c5_persona_2_desc">Detaljer de inte visste att de behövde.</span>
                 </div>
                 <div class="persona-item">
-                  <span class="persona-name">För minimalisten</span>
-                  <span class="persona-desc">Curated pieces med "less is more"-fokus.</span>
+                  <span class="persona-name" data-i18n="c5_persona_3_name">För minimalisten</span>
+                  <span class="persona-desc" data-i18n="c5_persona_3_desc">Curated pieces med "less is more"-fokus.</span>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="text-focus-section">
-            <h3>Hemsidan: Att förvalta trafiken</h3>
-            <p>
+          <div class="text-focus-section reveal">
+            <h3 data-i18n="c5_web_title">Hemsidan: Att förvalta trafiken</h3>
+            <p data-i18n="c5_web_body_1">
               Att driva trafik är en sak, men att konvertera den kräver en sömlös upplevelse. Innan vi började saknades tydlig filtrering på gåvoguiden, vilket skapade friktion för kunden.
             </p>
-            <p style="margin-top: 1rem;">
+            <p data-i18n="c5_web_body_2" style="margin-top: 1rem;">
               Vi optimerade landningssidan genom att implementera samma logiska persona-struktur som i kampanjen. Besökaren möts nu direkt av en enkel navigering och relevant filtrering som gör det lätt att hitta rätt gåva snabbt.
             </p>
           </div>
 
-          <div class="feature-block">
+          <div class="feature-block reveal">
             <div class="text-content-side">
-              <h3>Sociala Medier: Visuell Identitet</h3>
-              <p>
-                Vi tog fram innehåll med målet att stoppa scrollandet, istället för skrikiga köpbudskap lät vi produkternas karaktär tala för sig själva. Detta skapade ett naturligt intresse och drev trafik direkt till den anpassade landningssidan.            
+              <h3 data-i18n="c5_social_title">Sociala Medier: Visuell Identitet</h3>
+              <p data-i18n="c5_social_body">
+                Vi tog fram innehåll med målet att stoppa scrollandet, istället för skrikiga köpbudskap lät vi produkternas karaktär tala för sig själva. Detta skapade ett naturligt intresse och drev trafik direkt till den anpassade landningssidan.
               </p>
             </div>
             <div class="feature-img">
-              <img src="./  img/case-cay/gifcon1.png" alt="Sociala Medier Content för Cay Collective" />
+              <img src="./img/case-cay/gifcon1.png" alt="Sociala medier content för Cay Collective" />
             </div>
           </div>
 
-          <div class="result-text-container">
-            <h2 class="h-display" style="font-size: 2.2rem;">Resultat</h2>
-            <p style="font-size: 1.1rem; color: #555;">
+          <div class="result-text-container reveal">
+            <h2 class="h-display" data-i18n="c5_result_title" style="font-size: 2.2rem;">Resultat</h2>
+            <p data-i18n="c5_result_body" style="font-size: 1.1rem;">
               Genom att kombinera en datadriven content-strategi med en optimerad webbupplevelse lyckades vi inte bara öka trafiken, utan även förtydliga Cays unika position på marknaden under årets viktigaste försäljningsperiod.
             </p>
           </div>
-
         </div>
       </section>
 
       <footer id="contact" class="footer section-block">
         <div class="container footer__grid">
-            
           <div class="footer__left">
             <h2 data-i18n="contact_title">Kontakt</h2>
-            <p class="footer__text">
-              Nyfiken på att veta mer eller diskutera ett projekt? 
+            <p class="footer__text" data-i18n="footer_text">
+              Nyfiken på att veta mer eller diskutera ett projekt?
               Hör av dig så tar vi en kaffe!
             </p>
-            <a href="./cv/ava-urden-cv-sv.pdf" download class="btn btn--white">
+            <a href="./cv/ava-urden-cv-sv.pdf" download class="btn btn--white" data-cv-link data-i18n="cta_cv">
               Ladda ner CV
             </a>
           </div>
 
           <div class="footer__right">
             <div class="contact-group">
-              <span class="contact-label">Email</span>
+              <span class="contact-label" data-i18n="contact_email">Email</span>
               <a href="mailto:ava.urden@gmail.com" class="contact-link email-link">ava.urden@gmail.com</a>
             </div>
             <div class="contact-group">
-              <span class="contact-label">Mobil</span>
+              <span class="contact-label" data-i18n="contact_mobile">Mobil</span>
               <a href="tel:+46723111441" class="contact-link">+46 72 311 14 41</a>
             </div>
             <div class="contact-group">
-              <span class="contact-label">LinkedIn</span>
+              <span class="contact-label" data-i18n="contact_linkedin">LinkedIn</span>
               <a href="https://linkedin.com/in/avaurden" target="_blank" class="contact-link">
                 linkedin.com/in/avaurden ↗
               </a>
             </div>
           </div>
-          
         </div>
         <div class="container footer__bottom">
           <div class="footer__copy">&copy; 2026 Ava Urdén</div>
         </div>
       </footer>
     </main>
+
+    <script src="./main.js"></script>
   </body>
 </html>

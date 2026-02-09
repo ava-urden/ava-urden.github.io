@@ -3,136 +3,20 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Case: SUIE E-handel | Ava Urdén</title>
-    
+    <title>Case: SUIE | Ava Urdén</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Manrope:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Sora:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./style.css" />
 
     <style>
       :root {
-        /* Mörk marinblå accentfärg från SUIE:s profil */
-        --brand-blue: #1B2A49; 
-        --brand-light-gray: #f9f9f9;
-        --text-dark: #1a1a1a;
-        --accent-gold: #C6A87C; /* Komplementfärg för detaljer */
-      }
-
-      .case-hero {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 4rem;
-        align-items: center;
-        margin-bottom: 4rem;
-      }
-
-      .back-link {
-        display: inline-block;
-        margin-bottom: 2rem;
-        text-decoration: none;
-        color: #666;
-        font-weight: 500;
-        border: 1px solid #e5e5e5;
-        padding: 8px 16px;
-        border-radius: 50px;
-        transition: all 0.3s ease;
-      }
-      .back-link:hover { border-color: #000; color: #000; }
-
-      .case-meta {
-        display: flex;
-        gap: 0.5rem;
-        margin-top: 1rem;
-        flex-wrap: wrap;
-      }
-      
-      .pill {
-        background: #f0f0f0;
-        padding: 4px 12px;
-        border-radius: 4px;
-        font-size: 0.85rem;
-        font-weight: 500;
-        font-family: 'Inter', sans-serif;
-      }
-
-      .case-hero__img img {
-        width: 100%;
-        height: auto;
-        border-radius: 12px;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.08); 
-      }
-
-      .highlight-section {
-        background-color: var(--brand-light-gray);
-        padding: 4rem 3rem;
-        border-radius: 16px;
-        margin: 4rem 0;
-        color: var(--text-dark);
-        border-left: 8px solid var(--brand-blue);
-      }
-
-      .highlight-grid {
-        display: grid;
-        grid-template-columns: 1.2fr 0.8fr;
-        gap: 3rem;
-        align-items: center;
-      }
-
-      .feature-block {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 4rem;
-        align-items: center;
-        margin: 6rem 0;
-      }
-      
-      .feature-block.reversed { direction: rtl; }
-      .feature-block.reversed .text-content-side { direction: ltr; }
-
-      .feature-img img {
-        width: 100%;
-        border-radius: 12px;
-        box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-      }
-
-      .content-showcase {
-        background: white;
-        border: 1px solid #eee;
-        border-radius: 16px;
-        padding: 3.5rem;
-        margin: 6rem 0;
-      }
-
-      .content-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 4rem;
-        align-items: center;
-      }
-
-      .device-mockup img {
-        width: 100%;
-        border-radius: 12px;
-        box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-      }
-
-      .stat-box {
-        background: white;
-        padding: 2rem;
-        border-radius: 12px;
-        text-align: left;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.03);
-        margin-bottom: 1rem;
-      }
-      
-      .stat-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 1rem;
+        --brand-blue: #2d4c7c;
+        --brand-light-gray: #f4f5f7;
       }
 
       .tech-stack {
@@ -141,7 +25,7 @@
         flex-wrap: wrap;
         margin-top: 1.5rem;
       }
-      
+
       .tech-badge {
         background: #eef2f6;
         color: var(--brand-blue);
@@ -164,18 +48,32 @@
         padding: 1.5rem;
         border-radius: 8px;
         border-top: 4px solid var(--brand-blue);
-        box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
       }
-      
-      .phase-card h4 { margin-top: 0; color: var(--brand-blue); }
-      .phase-card .budget { font-size: 0.9rem; color: #666; margin-bottom: 0.5rem; display: block; font-weight: 600;}
+
+      .phase-card h4 {
+        margin-top: 0;
+        color: var(--brand-blue);
+      }
+
+      .phase-card .budget {
+        font-size: 0.9rem;
+        color: #666;
+        margin-bottom: 0.5rem;
+        display: block;
+        font-weight: 600;
+      }
 
       @media (max-width: 900px) {
-        .case-hero, .highlight-grid, .feature-block, .content-grid { grid-template-columns: 1fr; gap: 2rem; }
-        .phase-grid { grid-template-columns: 1fr 1fr; }
+        .phase-grid {
+          grid-template-columns: 1fr 1fr;
+        }
       }
+
       @media (max-width: 600px) {
-        .phase-grid { grid-template-columns: 1fr; }
+        .phase-grid {
+          grid-template-columns: 1fr;
+        }
       }
     </style>
   </head>
@@ -185,114 +83,126 @@
       <div class="container header__inner">
         <a class="logo" href="index.html#top">Ava Urdén</a>
         <nav class="nav">
-          <a href="index.html#cases">Cases</a>
-          <a href="index.html#skills">Färdigheter</a>
-          <a href="index.html#contact">Kontakt</a>
+          <a href="index.html#about" data-i18n="nav_about">Om mig</a>
+          <a href="index.html#cases" data-i18n="nav_cases">Cases</a>
+          <a href="index.html#skills" data-i18n="nav_skills">Färdigheter</a>
+          <a href="index.html#contact" data-i18n="nav_contact">Kontakt</a>
         </nav>
+        <div class="lang">
+          <button class="lang__btn is-active" type="button" data-lang="sv">SV</button>
+          <button class="lang__btn" type="button" data-lang="en">EN</button>
+        </div>
       </div>
     </header>
 
     <main id="top">
       <section class="section section-block">
         <div class="container">
-          
-          <a href="index.html#cases" class="back-link">← Tillbaka till cases</a>
+          <a href="index.html#cases" class="back-link" data-i18n="back_to_cases">← Tillbaka till cases</a>
 
           <div class="case-hero">
-            <div class="case-hero__content">
-              <h1 class="h-display">SUIE: Datadriven E-handel</h1>
-              <p class="hero__p">
+            <div class="case-hero__content reveal">
+              <h1 class="h-display" data-i18n="c4_hero_title">SUIE: Datadriven E-handel</h1>
+              <p class="hero__p" data-i18n="c4_hero_body">
                 Strategi och implementation av en scarf-butik byggd på kundinsikter. Från positionering i mid-range till en teknisk infrastruktur optimerad för lojalitet och konvertering.
               </p>
               <div class="case-meta">
-                <span class="pill">E-commerce Strategy</span>
-                <span class="pill">CRO & UX</span>
-                <span class="pill">Tech Stack Setup</span>
+                <span class="pill" data-i18n="c4_pill_1">E-commerce Strategy</span>
+                <span class="pill" data-i18n="c4_pill_2">CRO & UX</span>
+                <span class="pill" data-i18n="c4_pill_3">Tech Stack Setup</span>
               </div>
             </div>
-            <div class="case-hero__img">
-              <img src="./  img/case-suie/suie.png" alt="SUIE Scarf Brand" />
+            <div class="case-hero__img reveal" style="--delay: 0.1s;">
+              <img src="./img/case-suie/suie.png" alt="SUIE Scarf Brand" />
             </div>
           </div>
 
           <div class="grid grid--3">
-            <div class="card-skill">
-              <h3>Insikt & Data</h3>
-              <p>Google Trends visade en ökning på 174% för "scarf". Samtidigt saknade marknaden en dedikerad aktör i mellanprisklassen. Målgruppen (kvinnor 50-70) efterfrågade kvalitet och delaktighet.</p>
+            <div class="card-skill reveal">
+              <h3 data-i18n="c4_card1_title">Insikt & Data</h3>
+              <p data-i18n="c4_card1_body">
+                Google Trends visade en ökning på 174% för "scarf". Samtidigt saknade marknaden en dedikerad aktör i mellanprisklassen. Målgruppen (kvinnor 50-70) efterfrågade kvalitet och delaktighet.
+              </p>
             </div>
-            <div class="card-skill">
-              <h3>Co-Creation</h3>
-              <p>Enkätsvar visade att 72% av målgruppen ville rösta om färger och mönster. Vi byggde "Team SUIE" – en community-driven modell för att minska lagerrisk och öka lojalitet.</p>
+            <div class="card-skill reveal" style="--delay: 0.05s;">
+              <h3 data-i18n="c4_card2_title">Co-Creation</h3>
+              <p data-i18n="c4_card2_body">
+                Enkätsvar visade att 72% av målgruppen ville rösta om färger och mönster. Vi byggde "Team SUIE" – en community-driven modell för att minska lagerrisk och öka lojalitet.
+              </p>
             </div>
-            <div class="card-skill">
-              <h3>Teknisk Setup</h3>
-              <p>En skalbar infrastruktur byggd på Shopify, med GA4 för analys, Klaviyo för automatiserad CRM och Looker Studio för uppföljning av nyckeltal per fas.</p>
+            <div class="card-skill reveal" style="--delay: 0.1s;">
+              <h3 data-i18n="c4_card3_title">Teknisk Setup</h3>
+              <p data-i18n="c4_card3_body">
+                En skalbar infrastruktur byggd på Shopify, med GA4 för analys, Klaviyo för automatiserad CRM och Looker Studio för uppföljning av nyckeltal per fas.
+              </p>
             </div>
           </div>
 
-          <div class="highlight-section">
-            <h2 class="h-display" style="margin-bottom: 2rem;">Ramverket: SEE-THINK-DO-CARE</h2>
-            <p style="max-width: 700px; margin-bottom: 2rem;">
+          <div class="highlight-section reveal">
+            <h2 class="h-display" data-i18n="c4_framework_title" style="margin-bottom: 2rem;">
+              Ramverket: SEE-THINK-DO-CARE
+            </h2>
+            <p data-i18n="c4_framework_body" style="max-width: 700px; margin-bottom: 2rem;">
               För att maximera effekten av budgeten fördelades insatserna över hela kundresan. Strategin var att inte bara köpa trafik, utan att bygga ett ekosystem för återkommande kunder.
             </p>
-            
+
             <div class="phase-grid">
               <div class="phase-card">
                 <h4>SEE</h4>
-                <span class="budget">35% av budget</span>
-                <p style="font-size: 0.9rem;"><strong>Mål:</strong> Räckvidd & Igenkänning.</p>
-                <p style="font-size: 0.9rem;"><strong>Kanaler:</strong> Partnerskap, PR, Organiskt content.</p>
-                <p style="font-size: 0.9rem;"><strong>KPI:</strong> Impressions, Nya användare.</p>
+                <span class="budget" data-i18n="c4_phase_see_budget">35% av budget</span>
+                <p data-i18n-html="c4_phase_see_goal"><strong>Mål:</strong> Räckvidd & Igenkänning.</p>
+                <p data-i18n-html="c4_phase_see_channels"><strong>Kanaler:</strong> Partnerskap, PR, Organiskt content.</p>
+                <p data-i18n-html="c4_phase_see_kpi"><strong>KPI:</strong> Impressions, Nya användare.</p>
               </div>
               <div class="phase-card">
                 <h4>THINK</h4>
-                <span class="budget">30% av budget</span>
-                <p style="font-size: 0.9rem;"><strong>Mål:</strong> Inspirera & Utbilda.</p>
-                <p style="font-size: 0.9rem;"><strong>Kanaler:</strong> SEO, Styling-guider, Retargeting.</p>
-                <p style="font-size: 0.9rem;"><strong>KPI:</strong> Produktguide start, Add to cart.</p>
+                <span class="budget" data-i18n="c4_phase_think_budget">30% av budget</span>
+                <p data-i18n-html="c4_phase_think_goal"><strong>Mål:</strong> Inspirera & Utbilda.</p>
+                <p data-i18n-html="c4_phase_think_channels"><strong>Kanaler:</strong> SEO, Styling-guider, Retargeting.</p>
+                <p data-i18n-html="c4_phase_think_kpi"><strong>KPI:</strong> Produktguide start, Add to cart.</p>
               </div>
               <div class="phase-card">
                 <h4>DO</h4>
-                <span class="budget">25% av budget</span>
-                <p style="font-size: 0.9rem;"><strong>Mål:</strong> Friktionsfri konvertering.</p>
-                <p style="font-size: 0.9rem;"><strong>Fokus:</strong> Checkout-optimering, Trust signals.</p>
-                <p style="font-size: 0.9rem;"><strong>KPI:</strong> Konverteringsgrad (CR).</p>
+                <span class="budget" data-i18n="c4_phase_do_budget">25% av budget</span>
+                <p data-i18n-html="c4_phase_do_goal"><strong>Mål:</strong> Friktionsfri konvertering.</p>
+                <p data-i18n-html="c4_phase_do_channels"><strong>Fokus:</strong> Checkout-optimering, Trust signals.</p>
+                <p data-i18n-html="c4_phase_do_kpi"><strong>KPI:</strong> Konverteringsgrad (CR).</p>
               </div>
               <div class="phase-card">
                 <h4>CARE</h4>
-                <span class="budget">10% av budget</span>
-                <p style="font-size: 0.9rem;"><strong>Mål:</strong> Lojalitet & Retention.</p>
-                <p style="font-size: 0.9rem;"><strong>Kanaler:</strong> Email, SMS, Co-creation.</p>
-                <p style="font-size: 0.9rem;"><strong>KPI:</strong> Repeat Purchase Rate, LTV.</p>
+                <span class="budget" data-i18n="c4_phase_care_budget">10% av budget</span>
+                <p data-i18n-html="c4_phase_care_goal"><strong>Mål:</strong> Lojalitet & Retention.</p>
+                <p data-i18n-html="c4_phase_care_channels"><strong>Kanaler:</strong> Email, SMS, Co-creation.</p>
+                <p data-i18n-html="c4_phase_care_kpi"><strong>KPI:</strong> Repeat Purchase Rate, LTV.</p>
               </div>
             </div>
           </div>
 
-          <div class="feature-block">
+          <div class="feature-block reveal">
             <div class="text-content-side">
-              <h3>Konvertering & Beslutsstöd</h3>
-              <p>
+              <h3 data-i18n="c4_feature1_title">Konvertering & Beslutsstöd</h3>
+              <p data-i18n-html="c4_feature1_body">
                 En av de största utmaningarna vi identifierade var <strong>beslutsångest</strong>. För att lösa detta implementerade vi en interaktiv produktguide ("Hitta din produkt").
               </p>
-              <ul class="bullet-list">
+              <ul class="bullet-list" data-i18n-html="c4_feature1_list">
                 <li><strong>Minskad friktion:</strong> Guiden leder kunden från osäkerhet till ett kurerat urval baserat på stilpreferenser.</li>
                 <li><strong>Smart Data:</strong> Svaren används inte bara för rekommendationer utan sparas (via Klaviyo) för att segmentera framtida utskick.</li>
                 <li><strong>Trygghet i kassan:</strong> Vi motverkar checkout-avhopp genom tydliga leveranslöften och betalalternativ som målgruppen litar på (Klarna, Apple Pay).</li>
               </ul>
             </div>
             <div class="feature-img">
-              <img src="./  img/case-suie/mobilersuie.png" alt="SUIE Produktguide och Checkout" />
+              <img src="./img/case-suie/mobilersuie.png" alt="SUIE Produktguide och Checkout" />
             </div>
           </div>
 
-          <div class="content-showcase">
+          <div class="content-showcase reveal">
             <div class="content-grid">
               <div class="text-content-side">
-                <h2 class="h-display" style="font-size: 2.2rem;">Teknik & Mätning</h2>
-                <p>
+                <h2 class="h-display" data-i18n="c4_tech_title" style="font-size: 2.2rem;">Teknik & Mätning</h2>
+                <p data-i18n="c4_tech_body">
                   SUIE är byggt för att vara datadrivet från dag ett. Genom att integrera systemen kan vi följa användaren från första annonsklicket (SEE) till återköp och lojalitet (CARE).
                 </p>
-                
+
                 <div class="tech-stack">
                   <span class="tech-badge">Shopify</span>
                   <span class="tech-badge">GA4</span>
@@ -302,32 +212,32 @@
                   <span class="tech-badge">Trustpilot</span>
                 </div>
 
-                <p style="margin-top: 2rem; font-size: 0.9rem;">
+                <p data-i18n-html="c4_tech_data" style="margin-top: 2rem; font-size: 0.95rem;">
                   <strong>Datakvalitet:</strong> Vi använder en strikt eventstruktur i GA4 (view_item, begin_checkout, purchase) och validerar data mot Shopify för att säkerställa att beslut fattas på korrekta siffror.
                 </p>
               </div>
               <div class="device-mockup">
-                <img src="./  img/case-suie/rev.png" alt="SUIE Systemkarta och Dashboards" />
+                <img src="./img/case-suie/rev.png" alt="SUIE Systemkarta och Dashboards" />
               </div>
             </div>
           </div>
 
-          <div class="feature-block reversed">
+          <div class="feature-block reversed reveal">
             <div class="text-content-side">
-              <h3>Community: Team SUIE</h3>
-              <p>
+              <h3 data-i18n="c4_community_title">Community: Team SUIE</h3>
+              <p data-i18n-html="c4_community_body_1">
                 Istället för dyra annonskostnader (CAC) satsar vi på <strong>retention</strong>. Genom lojalitetsprogrammet "Team SUIE" involveras kunderna i produktutvecklingen.
               </p>
-              <p>
-                Medlemmar får rösta på kommande kollektioner, vilket ger oss två fördelar: 
+              <p data-i18n-html="c4_community_body_2">
+                Medlemmar får rösta på kommande kollektioner, vilket ger oss två fördelar:
                 1) Vi producerar bara det som efterfrågas (minskat svinn).
                 2) Kunderna känner ägandeskap för produkten, vilket ökar sannolikheten för köp när den lanseras.
               </p>
             </div>
             <div class="feature-img">
               <div class="stat-box" style="background: var(--brand-light-gray); border: 1px solid #ddd;">
-                <h4 style="color: var(--brand-blue);">Vanliga utmaningar vi löste</h4>
-                <ul class="bullet-list" style="font-size: 0.9rem; margin-top: 1rem;">
+                <h4 data-i18n="c4_challenges_title" style="color: var(--brand-blue);">Vanliga utmaningar vi löste</h4>
+                <ul class="bullet-list" data-i18n-html="c4_challenges_list" style="font-size: 0.9rem; margin-top: 1rem;">
                   <li><strong>Beslutsångest:</strong> Löstes med Produktguide & få filter.</li>
                   <li><strong>Priskänslighet:</strong> Löstes med 10% välkomstrabatt vid rätt timing (nära köpbeslut).</li>
                   <li><strong>Checkout-friktion:</strong> Löstes med förutsägbar frakt och färre steg i kassan.</li>
@@ -336,49 +246,51 @@
             </div>
           </div>
 
-          <div class="intro-text">
-            <h2 class="h-display">Sammanfattning</h2>
-            <p>
+          <div class="intro-text reveal">
+            <h2 class="h-display" data-i18n="c4_summary_title">Sammanfattning</h2>
+            <p data-i18n="c4_summary_body">
               Projektet resulterade i en komplett prototyp för en e-handel som balanserar varumärkesbyggande med hård konverteringsdata. Genom att förstå målgruppens behov av trygghet och delaktighet har vi skapat en modell för hållbar tillväxt utan beroende av stora mediebudgetar.
             </p>
           </div>
-
         </div>
       </section>
 
-     <footer id="contact" class="footer section-block">
+      <footer id="contact" class="footer section-block">
         <div class="container footer__grid">
-            
           <div class="footer__left">
             <h2 data-i18n="contact_title">Kontakt</h2>
-            <p class="footer__text">
-              Nyfiken på att veta mer eller diskutera ett projekt? 
+            <p class="footer__text" data-i18n="footer_text">
+              Nyfiken på att veta mer eller diskutera ett projekt?
               Hör av dig så tar vi en kaffe!
             </p>
-            <a href="./cv/ava-urden-cv-sv.pdf" download class="btn btn--white">
+            <a href="./cv/ava-urden-cv-sv.pdf" download class="btn btn--white" data-cv-link data-i18n="cta_cv">
               Ladda ner CV
             </a>
           </div>
 
           <div class="footer__right">
             <div class="contact-group">
-              <span class="contact-label">Email</span>
+              <span class="contact-label" data-i18n="contact_email">Email</span>
               <a href="mailto:ava.urden@gmail.com" class="contact-link email-link">ava.urden@gmail.com</a>
             </div>
             <div class="contact-group">
-              <span class="contact-label">Mobil</span>
+              <span class="contact-label" data-i18n="contact_mobile">Mobil</span>
               <a href="tel:+46723111441" class="contact-link">+46 72 311 14 41</a>
             </div>
             <div class="contact-group">
-              <span class="contact-label">LinkedIn</span>
+              <span class="contact-label" data-i18n="contact_linkedin">LinkedIn</span>
               <a href="https://linkedin.com/in/avaurden" target="_blank" class="contact-link">
                 linkedin.com/in/avaurden ↗
               </a>
             </div>
           </div>
-          
         </div>
         <div class="container footer__bottom">
           <div class="footer__copy">&copy; 2026 Ava Urdén</div>
         </div>
       </footer>
+    </main>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
