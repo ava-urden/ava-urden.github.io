@@ -31,7 +31,7 @@ const dict = {
     case3_sum: "Datadriven tillväxt.",
     case4_title: "E-handel: CRO",
     case4_sum: "A/B-testning och analys.",
-    case5_title: "Social Media",
+    case5_title: "Giftguide för Cay Collective",
     case5_sum: "Tillväxtstrategi.",
     case6_title: "Brand Book",
     case6_sum: "Digital riktlinje.",
