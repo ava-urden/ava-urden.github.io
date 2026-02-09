@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="sv">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Case: Cay Collective | Ava Urdén</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+
+    <style>
+      :root {
+        /* Färgpalett: Editorial / High Contrast */
+        --cay-black: #111111;
+        --cay-white: #FFFFFF;
+        --cay-red: #8B2E2E; /* Accent från sigillet */
+        --line-color: #111111; /* Svarta linjer för "cool" look */
+        
+        /* Globala variabler */
+        --text-main: #1C1B1B;
+        --text-light: #555555;
+      }
+
+      body {
+        font-family: 'Inter', sans-serif;
+        font-weight: 300;
+        color: var(--text-main);
+        background-color: var(--cay-white);
+        line-height: 1.6;
+      }
+
+      h1, h2, h3, .h-display {
+        font-family: 'Manrope', sans-serif;
+        color: var(--cay-black);
+      }
+
+      /* FIX: Space för menyn */
+      .section-block {
+        padding-top: 120px; /* Ser till att vi hamnar nedanför den fasta headern */
+        padding-bottom: 6rem;
+      }
+
+      /* BACK LINK - Din kod + styling */
+      .back-link {
+        display: inline-block;
+        margin-bottom: 3rem;
+        text-decoration: none;
+        color: #888;
+        font-weight: 500;
+        border: 1px solid #E5E5E5;
+        padding: 10px 20px;
+        border-radius: 50px;
+        transition: all 0.3s ease;
+        font-size: 0.9rem;
+      }
+      .back-link:hover { 
+        border-color: var(--cay-black); 
+        color: var(--cay-black); 
+      }
+
+      /* HERO SECTION */
+      .case-hero {
+        margin-bottom: 8rem;
+      }
+
+      .case-hero__grid {
+        display: grid;
+        grid-template-columns: 1fr 1.2fr; /* Lite mer plats åt bilden */
+        gap: 6rem;
+        align-items: center;
+      }
+
+      .h-display {
+        font-weight: 600; 
+        line-height: 1.1;
+        font-size: 4rem; /* Stor, kaxig rubrik */
+        letter-spacing: -0.03em;
+        margin-bottom: 2rem;
+      }
+
+      .hero__p {
+        font-size: 1.2rem;
+        line-height: 1.6;
+        color: var(--text-light);
+        margin-bottom: 3rem;
+        font-weight: 300;
+        max-width: 90%;
+      }
+
+      /* PILLS / TAGS - Runda och snygga */
+      .case-meta {
+        display: flex;
+        gap: 0.8rem;
+        flex-wrap: wrap;
+      }
+      
+      .pill {
+        border: 1px solid #CCC;
+        padding: 8px 20px;
+        border-radius: 50px; /* Helt runda hörn */
+        font-size: 0.85rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: var(--cay-black);
+      }
+
+      .case-hero__img img {
+        width: 100%;
+        height: auto;
+        display: block;
+        /* Ingen border-radius för skarpare mode-look */
+      }
+
+      /* GRID LAYOUT - Editorial stil med linjer ovanför */
+      .grid--3 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 4rem;
+        margin-bottom: 10rem;
+      }
+
+      .info-col {
+        border-top: 1px solid var(--line-color); /* Svart linje */
+        padding-top: 1.5rem;
+      }
+
+      .info-col h3 {
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        margin-bottom: 1.5rem;
+        font-weight: 700;
+      }
+
+      /* CLEAN LIST (Inga punkter, snygg typografi) */
+      .clean-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .clean-list li {
+        margin-bottom: 1.5rem;
+        font-size: 1rem;
+        color: var(--text-light);
+      }
+      .clean-list strong {
+        color: var(--cay-black);
+        font-weight: 600;
+        font-size: 1.1rem;
+        display: block;
+        margin-bottom: 0.3rem;
+        font-family: 'Manrope', sans-serif;
+      }
+
+      /* STRATEGY SECTION */
+      .strategy-section {
+        margin: 8rem 0;
+      }
+      
+      .strategy-header {
+        font-size: 2.5rem;
+        margin-bottom: 4rem;
+        max-width: 800px;
+        line-height: 1.2;
+      }
+
+      .strategy-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 6rem;
+      }
+
+      /* PERSONA LIST - Linjer mellan varje */
+      .persona-list {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .persona-item {
+        border-bottom: 1px solid #E5E5E5;
+        padding: 1.5rem 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .persona-item:first-child { border-top: 1px solid #E5E5E5; }
+      
+      .persona-name {
+        font-family: 'Manrope', sans-serif;
+        font-weight: 600;
+        font-size: 1.2rem;
+        color: var(--cay-black);
+      }
+      
+      .persona-desc {
+        text-align: right;
+        font-size: 1rem;
+        color: var(--text-light);
+        font-weight: 300;
+      }
+
+      /* FEATURE BLOCKS */
+      .feature-block {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 6rem;
+        align-items: center;
+        margin: 12rem 0;
+      }
+      
+      .feature-text h3 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+      }
+      
+      .feature-text p {
+        font-size: 1.1rem;
+        color: var(--text-light);
+        margin-bottom: 2rem;
+      }
+
+      /* Röd accent för hooks */
+      .red-accent {
+        color: var(--cay-red);
+        font-weight: 500; 
+      }
+
+      /* Mobilanpassning */
+      @media (max-width: 900px) {
+        .case-hero__grid, .grid--3, .strategy-grid, .feature-block { grid-template-columns: 1fr; gap: 3rem; }
+        .h-display { font-size: 2.8rem; }
+        .persona-item { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+        .persona-desc { text-align: left; }
+        .section-block { padding-top: 100px; }
+        .feature-block { margin: 6rem 0; }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container header__inner">
+        <a class="logo" href="index.html#top">Ava Urdén</a>
+        <nav class="nav">
+          <a href="index.html#cases">Cases</a>
+          <a href="index.html#skills">Färdigheter</a>
+          <a href="index.html#contact">Kontakt</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="section section-block">
+        <div class="container">
+          
+          <a href="index.html#cases" class="back-link">← Tillbaka till cases</a>
+
+          <div class="case-hero">
+            <div class="case-hero__grid">
+              <div class="case-hero__content">
+                <h1 class="h-display">The Curated<br>Gift Guide</h1>
+                <p class="hero__p">
+                  Hur vi positionerade Cay Collective som destinationen för "Vintage Luxury" genom en persona-baserad kampanjstruktur och datadriven content-strategi.
+                </p>
+                <div class="case-meta">
+                  <span class="pill">Growth Marketing</span>
+                  <span class="pill">Content Strategy</span>
+                  <span class="pill">Art Direction</span>
+                </div>
+              </div>
+              <div class="case-hero__img">
+                <img src="./  img/case-cay/caybanner.png" alt="Cay Collective Campaign Hero" />
+              </div>
+            </div>
+          </div>
+
+          <div class="grid--3">
+            <div class="info-col">
+              <h3>Utmaning</h3>
+              <ul class="clean-list">
+                <li>
+                  <strong>Julstress & Tidsbrist</strong>
+                  Målgruppen vill ge unika gåvor men hinner inte leta efter dem.
+                </li>
+                <li>
+                  <strong>Otydlig position</strong>
+                  Låg kännedom om Cay Collective som gåvodestination.
+                </li>
+              </ul>
+            </div>
+            <div class="info-col">
+              <h3>Insikt</h3>
+              <ul class="clean-list">
+                <li>
+                  <strong>Kontext är nyckeln</strong>
+                  Produkter behöver en berättelse för att bli gåvor.
+                </li>
+                <li>
+                  <strong>Autenticitet</strong>
+                  Kunden söker "den nya lyxen" – omtanke snarare än prislapp.
+                </li>
+              </ul>
+            </div>
+            <div class="info-col">
+              <h3>Lösning</h3>
+              <ul class="clean-list">
+                <li>
+                  <strong>Persona-guide</strong>
+                  Navigering baserad på personlighet, inte produktkategori.
+                </li>
+                <li>
+                  <strong>Visuellt koncept</strong>
+                  Varmt, vintage och inbjudande (kontrast till julhets).
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="strategy-section">
+            <h2 class="strategy-header">Strategi: Från produkt till personlighet.</h2>
+            
+            <div class="strategy-grid">
+              <div class="strategy-text">
+                <p style="font-size: 1.1rem; color: var(--text-light); margin-bottom: 2rem;">
+                  För att minska "decision fatigue" tog vi bort fokuset från själva objektet (vasen, kudden) och lade det på mottagaren. 
+                </p>
+                <p style="font-size: 1.1rem; color: var(--text-light);">
+                  Genom att skapa fyra tydliga arketyper hjälpte vi kunden att snabbt identifiera vem gåvan var till, vilket kortade köpresan drastiskt och skapade en känsla av personlig service.
+                </p>
+              </div>
+
+              <div class="persona-list">
+                <div class="persona-item">
+                  <span class="persona-name">The Minimalist</span>
+                  <span class="persona-desc">Curated pieces that do more with less</span>
+                </div>
+                <div class="persona-item">
+                  <span class="persona-name">The Creative One</span>
+                  <span class="persona-desc">Gifts that inspire their everyday</span>
+                </div>
+                <div class="persona-item">
+                  <span class="persona-name">The Dad who wants nothing</span>
+                  <span class="persona-desc">Something he'll actually keep</span>
+                </div>
+                <div class="persona-item">
+                  <span class="persona-name">The One who has everything</span>
+                  <span class="persona-desc">Unique vintage details</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="feature-block">
+            <div class="feature-img">
+              <img src="./  img/case-cay/hemsidandes.png" alt="Cay Collective Gift Guide Website" />
+            </div>
+            <div class="feature-text">
+              <h3>The Guide: Navigering & UX</h3>
+              <p>
+                Navet i kampanjen. Vi designade startsidan för guiden så att besökaren direkt möts av frågan: <span class="red-accent">"Struggling to find gifts that feel unique?"</span>
+              </p>
+              <p>
+                Genom att klicka sig in på en persona (t.ex. "The Creative One") får kunden ett färdigt, kurerat urval. Det känns som en personlig rekommendation snarare än en generisk webshop.
+              </p>
+            </div>
+          </div>
+
+          <div class="feature-block" style="direction: rtl;">
+            <div class="feature-img" style="direction: ltr;">
+              <img src="./  img/case-cay/gifcon2.png" alt="Instagram Stories Content" />
+            </div>
+            <div class="feature-text" style="direction: ltr;">
+              <h3>Sociala Medier: The Hook</h3>
+              <p>
+                I sociala kanaler som Instagram och TikTok var målet att stoppa scrollandet med igenkänning och estetik.
+              </p>
+              <p>
+                Vi använde specifika hooks som <span class="red-accent">"Out of gift ideas?"</span> kombinerat med rörligt material som visade hantverket och detaljerna i produkterna.
+              </p>
+            </div>
+          </div>
+
+          <div style="max-width: 700px; margin: 0 auto 8rem auto; text-align: center;">
+            <h2 class="h-display" style="font-size: 2.5rem;">Resultat</h2>
+            <p style="font-size: 1.2rem; color: var(--text-light);">
+              Genom att skifta fokus från produkt till personlighet gjorde vi det enklare för kunden att handla unikt. Resultatet är ett koncept som positionerar Cay Collective som en självklar destination för genomtänkta gåvor.
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+      <footer id="contact" class="footer section-block">
+        <div class="container footer__grid">
+          <div class="footer__left">
+            <h2>Kontakt</h2>
+            <p class="footer__text">
+              Nyfiken på att veta mer eller diskutera ett projekt? 
+              Hör av dig så tar vi en kaffe!
+            </p>
+            <a href="./cv/ava-urden-cv-sv.pdf" download class="btn btn--white">
+              Ladda ner CV
+            </a>
+          </div>
+
+          <div class="footer__right">
+            <div class="contact-group">
+              <span class="contact-label">Email</span>
+              <a href="mailto:ava.urden@gmail.com" class="contact-link email-link">ava.urden@gmail.com</a>
+            </div>
+            <div class="contact-group">
+              <span class="contact-label">Mobil</span>
+              <a href="tel:+46723111441" class="contact-link">+46 72 311 14 41</a>
+            </div>
+            <div class="contact-group">
+              <span class="contact-label">LinkedIn</span>
+              <a href="https://linkedin.com/in/avaurden" target="_blank" class="contact-link">
+                linkedin.com/in/avaurden ↗
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="container footer__bottom">
+          <div class="footer__copy">&copy; 2026 Ava Urdén</div>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>
