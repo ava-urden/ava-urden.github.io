@@ -2,7 +2,7 @@
   --bg: #f7f7f6;
   --surface: #ffffff;
   --ink: #111111;
-  --muted: #5f5f5f;
+  --muted: #4f4f4f;
   --accent: #a59f96;
   --accent-dark: #1b1b1b;
   --accent-light: #ededed;
@@ -79,8 +79,9 @@ h4 {
 p {
   color: var(--muted);
   margin: 0 0 22px;
-  max-width: 680px;
-  font-size: 1.05rem;
+  max-width: 760px;
+  font-size: 1.06rem;
+  font-weight: 300;
 }
 
 .muted {
@@ -452,7 +453,7 @@ main {
 }
 
 .section-header-group {
-  max-width: 640px;
+  max-width: 720px;
 }
 
 .section-intro {
