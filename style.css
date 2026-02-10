@@ -4,7 +4,7 @@
   --ink: #111111;
   --muted: #5a5a5a;
   --accent: #7b7a66;
-  --accent-dark: #4b3b32;
+  --accent-dark: #111111;
   --accent-light: #efece7;
   --line: rgba(0, 0, 0, 0.05);
   --line-strong: rgba(0, 0, 0, 0.1);
@@ -20,9 +20,9 @@
   --shadow-card: 0 20px 55px rgba(0, 0, 0, 0.12);
   --shadow-glass: 0 24px 70px rgba(0, 0, 0, 0.14);
 
-  --font-head: "Sora", sans-serif;
-  --font-body: "Manrope", sans-serif;
-  --font-display: "Sora", sans-serif;
+  --font-head: "Helvetica Now", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-body: "Helvetica Now", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-display: "Helvetica Now", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 * {
@@ -39,7 +39,7 @@ body {
   background: var(--bg);
   color: var(--ink);
   font-family: var(--font-body);
-  font-weight: 400;
+  font-weight: 300;
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
 }
@@ -64,7 +64,7 @@ h2,
 h3,
 h4 {
   font-family: var(--font-head);
-  font-weight: 600;
+  font-weight: 700;
   color: var(--ink);
   margin: 0 0 16px;
   line-height: 1.2;
@@ -144,7 +144,7 @@ main {
   height: var(--header-height);
   display: flex;
   align-items: center;
-  background: rgba(75, 59, 50, 0.94);
+  background: rgba(17, 17, 17, 0.96);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
