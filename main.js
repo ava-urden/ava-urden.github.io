@@ -1,16 +1,18 @@
 /* eslint-disable no-unused-vars */
 const dict = {
   sv: {
+    logo_text: "A.U. Portfolio",
     nav_cases: "Cases",
     nav_about: "Om mig",
     nav_skills: "Färdigheter",
     nav_contact: "Kontakt",
 
-    cover_kicker: "Growth Marketing",
     cover_title: "AVA URDÉN",
-    cover_subtitle: "Portfolio",
-    cta_cases: "Se cases",
-    cta_cv: "Ladda ner CV",
+    hero_role: "Growth Marketing",
+    hero_school: "@Berghs School of Communication",
+    hero_welcome: "Välkommen till min portfolio",
+    cta_cases: "Se tidigare projekt",
+    cta_cv: "Ladda ner mitt CV",
 
     about_title: "Om mig",
     about_body_1:
@@ -21,7 +23,7 @@ const dict = {
       "Jag trivs när jag får ta ansvar och driva saker framåt. Jag gillar att samarbeta med andra som också har en drivkraft, och jag motiveras av att utvecklas, lära mig nytt och hela tiden hitta bättre sätt att göra det jag gör.",
     about_note: "Fortsätt gärna scrolla för mer information om mina cases och färdigheter.",
 
-    cases_title: "Utvalda cases",
+    cases_title: "Tidigare projekt & case",
     cases_intro: "Ett urval av projekt där strategi, kreativitet och data möts.",
 
 
@@ -41,6 +43,7 @@ const dict = {
 
     skills_main_title: "Färdigheter & verktyg",
     skills_intro: "Där strategi möter genomförande – från idé till mätbar effekt.",
+    tools_label: "Verktyg:",
 
     cat1_title: "Content & Storytelling",
     cat1_desc: "Bygger varumärke och engagemang med content anpassat efter kanal.",
@@ -285,16 +288,18 @@ const dict = {
   },
 
   en: {
+    logo_text: "A.U. Portfolio",
     nav_cases: "Cases",
     nav_about: "About",
     nav_skills: "Skills",
     nav_contact: "Contact",
 
-    cover_kicker: "Growth Marketing",
     cover_title: "AVA URDÉN",
-    cover_subtitle: "Portfolio",
-    cta_cases: "View cases",
-    cta_cv: "Download CV",
+    hero_role: "Growth Marketing",
+    hero_school: "@Berghs School of Communication",
+    hero_welcome: "Welcome to my portfolio",
+    cta_cases: "View projects",
+    cta_cv: "Download my CV",
 
     about_title: "About",
     about_body_1:
@@ -305,7 +310,7 @@ const dict = {
       "I thrive when I can take ownership and drive things forward. I enjoy collaborating with others who are equally driven, and I’m motivated by learning, growing, and always finding better ways to do what I do.",
     about_note: "Scroll on for more about my cases and skills.",
 
-    cases_title: "Selected cases",
+    cases_title: "Previous projects & cases",
     cases_intro: "A selection of projects where strategy, creativity, and data meet.",
 
 
@@ -325,6 +330,7 @@ const dict = {
 
     skills_main_title: "Skills & tools",
     skills_intro: "Where strategy meets execution — from idea to measurable impact.",
+    tools_label: "Tools:",
 
     cat1_title: "Content & storytelling",
     cat1_desc: "Building brand and engagement tailored to the channel.",

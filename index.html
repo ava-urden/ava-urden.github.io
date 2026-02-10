@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Sora:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./style.css" />
@@ -17,7 +17,7 @@
   <body class="is-landing">
     <header class="header">
       <div class="container header__inner">
-        <a class="logo" href="#top">Ava Urdén</a>
+        <a class="logo" href="#top" data-i18n="logo_text">A.U. Portfolio</a>
 
         <nav class="nav">
           <a href="#about" data-i18n="nav_about">Om mig</a>
@@ -34,19 +34,24 @@
     </header>
 
     <main id="top">
-      <section class="cover section-block">
-        <div class="container cover__grid">
-          <div class="cover__content reveal">
-            <div class="eyebrow" data-i18n="cover_kicker">Growth Marketing</div>
-            <h1 class="cover__title" data-i18n="cover_title">AVA URDÉN</h1>
-            <div class="cover__subtitle" data-i18n="cover_subtitle">Portfolio</div>
+      <section class="cover section-block hero">
+        <div class="hero__overlay"></div>
+        <div class="container hero__grid">
+          <div class="hero__left reveal">
+            <h1 class="hero__title" data-i18n="cover_title">AVA URDÉN</h1>
+            <div class="hero__role" data-i18n="hero_role">Growth Marketing</div>
+            <div class="hero__school" data-i18n="hero_school">@Berghs School of Communication</div>
 
-            <div class="cover__cta">
-              <a class="btn btn--dark" href="#cases" data-i18n="cta_cases">Se cases</a>
-              <a class="btn btn--link" data-cv-link href="./cv/ava-urden-cv-sv.pdf" download data-i18n="cta_cv">
+            <div class="hero__cta">
+              <a class="btn btn--light" href="#cases" data-i18n="cta_cases">Se cases</a>
+              <a class="btn btn--light" data-cv-link href="./cv/ava-urden-cv-sv.pdf" download data-i18n="cta_cv">
                 Ladda ner CV
               </a>
             </div>
+          </div>
+
+          <div class="hero__right reveal">
+            <div class="hero__welcome" data-i18n="hero_welcome">Välkommen till min portfolio</div>
           </div>
         </div>
       </section>
@@ -73,11 +78,10 @@
                 <p data-i18n="about_body_3">
                   Jag trivs när jag får ta ansvar och driva saker framåt. Jag gillar att samarbeta med andra som också har en drivkraft, och jag motiveras av att utvecklas, lära mig nytt och hela tiden hitta bättre sätt att göra det jag gör.
                 </p>
+                <div class="about__note" data-i18n="about_note">
+                  Fortsätt gärna scrolla för mer information om mina cases och färdigheter.
+                </div>
               </div>
-            </div>
-
-            <div class="about__note" data-i18n="about_note">
-              Fortsätt gärna scrolla för mer information om mina cases och färdigheter.
             </div>
           </div>
         </div>
@@ -98,11 +102,13 @@
           <div class="grid grid--3" id="casesGrid">
             <div class="case reveal" data-tags="data, strategy">
               <a href="case1.html" class="case__link">
+                <div class="case__body">
+                  <h3 data-i18n="case1_title">Under Your Skin</h3>
+                </div>
                 <div class="case__img">
                   <img src="./img/case-uys/underyourskin.png" alt="Under Your Skin" />
                 </div>
-                <div class="case__body">
-                  <h3 data-i18n="case1_title">Under Your Skin</h3>
+                <div class="case__summary">
                   <p class="muted" data-i18n="case1_sum">Optimering av kundresan.</p>
                 </div>
               </a>
@@ -110,11 +116,13 @@
 
             <div class="case reveal" data-tags="creative, strategy">
               <a href="case2.html" class="case__link">
+                <div class="case__body">
+                  <h3 data-i18n="case2_title">Ny visuell identitet</h3>
+                </div>
                 <div class="case__img">
                   <img src="./img/case-ww/wwdator.png" alt="Visual Identity" />
                 </div>
-                <div class="case__body">
-                  <h3 data-i18n="case2_title">Ny visuell identitet</h3>
+                <div class="case__summary">
                   <p class="muted" data-i18n="case2_sum">Konceptutveckling.</p>
                 </div>
               </a>
@@ -122,11 +130,13 @@
 
             <div class="case reveal" data-tags="data, strategy">
               <a href="case3.html" class="case__link">
+                <div class="case__body">
+                  <h3 data-i18n="case3_title">SEO: Content-struktur</h3>
+                </div>
                 <div class="case__img">
                   <img src="./img/case-ak.b/akbanner.png" alt="SEO" />
                 </div>
-                <div class="case__body">
-                  <h3 data-i18n="case3_title">SEO: Content-struktur</h3>
+                <div class="case__summary">
                   <p class="muted" data-i18n="case3_sum">Datadriven tillväxt.</p>
                 </div>
               </a>
@@ -134,11 +144,13 @@
 
             <div class="case reveal" data-tags="data">
               <a href="case4.html" class="case__link">
+                <div class="case__body">
+                  <h3 data-i18n="case4_title">E-handel: CRO</h3>
+                </div>
                 <div class="case__img">
                   <img src="./img/case-suie/suie.png" alt="SUIE" />
                 </div>
-                <div class="case__body">
-                  <h3 data-i18n="case4_title">E-handel: CRO</h3>
+                <div class="case__summary">
                   <p class="muted" data-i18n="case4_sum">A/B-testning och analys.</p>
                 </div>
               </a>
@@ -146,11 +158,13 @@
 
             <div class="case reveal" data-tags="creative">
               <a href="case5.html" class="case__link">
+                <div class="case__body">
+                  <h3 data-i18n="case5_title">Giftguide för Cay Collective</h3>
+                </div>
                 <div class="case__img">
                   <img src="./img/case-cay/caybanner.png" alt="Cay Collective" />
                 </div>
-                <div class="case__body">
-                  <h3 data-i18n="case5_title">Giftguide för Cay Collective</h3>
+                <div class="case__summary">
                   <p class="muted" data-i18n="case5_sum">Tillväxtstrategi.</p>
                 </div>
               </a>
@@ -158,11 +172,13 @@
 
             <div class="case reveal" data-tags="creative, strategy">
               <a href="case-brandbook.html" class="case__link">
+                <div class="case__body">
+                  <h3 data-i18n="case6_title">Brand Book</h3>
+                </div>
                 <div class="case__img" style="background:#f4f4f4; display:flex; align-items:center; justify-content:center;">
                   <span style="color:#999; font-size:0.9rem;" data-i18n="case6_image_note">Bild kommer</span>
                 </div>
-                <div class="case__body">
-                  <h3 data-i18n="case6_title">Brand Book</h3>
+                <div class="case__summary">
                   <p class="muted" data-i18n="case6_sum">Digital riktlinje.</p>
                 </div>
               </a>
@@ -197,6 +213,7 @@
                   <li>Produktion av foto och video</li>
                 </ul>
                 <div class="tool-chips">
+                  <span class="tool-label" data-i18n="tools_label">Verktyg:</span>
                   <span>Canva</span> <span>Figma</span> <span>Adobe CC</span> <span>CapCut</span>
                 </div>
               </div>
@@ -218,6 +235,7 @@
                   <li>Kundkommunikation (CRM)</li>
                 </ul>
                 <div class="tool-chips">
+                  <span class="tool-label" data-i18n="tools_label">Verktyg:</span>
                   <span>Shopify</span> <span>Mailchimp</span> <span>Notion</span> <span>Slack</span>
                 </div>
               </div>
@@ -239,6 +257,7 @@
                   <li>SEO och teknisk mätplan</li>
                 </ul>
                 <div class="tool-chips">
+                  <span class="tool-label" data-i18n="tools_label">Verktyg:</span>
                   <span>GA4</span> <span>GTM</span> <span>Looker</span> <span>Ads</span> <span>Excel</span>
                 </div>
               </div>
