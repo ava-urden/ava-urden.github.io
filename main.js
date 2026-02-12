@@ -99,6 +99,18 @@ const dict = {
       "Insikterna visade att den avgörande förändringen var liten men strategisk: fler kunder behöver gå från 1 till 2 produkter.",
     c1_strategy_body_3:
       "När det händer ökar ordervärdet med +32 %, vilket gör det till den tydligaste hävstången för målet.",
+    c1_layers_title: "Strategin i tre lager",
+    c1_layers_body:
+      "För att nå målet byggdes lösningen i tre nivåer: positionering, beteendedesign och checkout-optimering.",
+    c1_layer_1_title: "Positionering",
+    c1_layer_1_body:
+      "Premium först, pris senare. Rabatten syns sent i resan för att bygga värde innan incitament.",
+    c1_layer_2_title: "Beteendedesign",
+    c1_layer_2_body:
+      "Progress bar, gåva vid 1 000 kr och smarta rekommendationer som sänker tröskeln.",
+    c1_layer_3_title: "Checkout",
+    c1_layer_3_body:
+      "Friktionsfria tillägg, tydliga mål och förvalt betalningsval som gör det lätt att slutföra.",
     c1_premium_title: "Premium är en konverteringsstrategi – inte bara estetik",
     c1_premium_body_1:
       "En central insikt var att premiumkänsla påverkar hur beslut tas. När rabatter exponeras tidigt skiftar fokus från värde till pris.",
@@ -130,11 +142,30 @@ const dict = {
       "Vi förenklade vägen till köp genom att visa <strong>\"Relevanta tilläggsprodukter\"</strong> direkt i steget innan kassan.<br><br>Istället för att tvinga kunden tillbaka till shoppen, kan de med ett klick lägga till ett matchande balsam eller refill. Detta utnyttjar \"Anchoring\"-effekten där huvudprodukten sätter prisreferensen.",
     c1_feature2_caption:
       "Mockup: Tidigare och optimerad varukorg med progress bar samt relevanta produkter",
+    c1_tests_title: "Experiment & hypoteser",
+    c1_tests_body:
+      "Varje insats knöts till en testbar hypotes. Fokus låg på att flytta andelen kunder från 1 till 2 produkter, utan att sänka premiumkänslan.",
+    c1_tests_list:
+      "<li>Hypotes: Progress bar ökar andel ordrar över fri frakt</li><li>Hypotes: Sen rabatt‑timing höjer AOV utan att sänka CR</li><li>Hypotes: Relevanta tillägg ökar AOV med låg friktion</li><li>Hypotes: Quiz minskar osäkerhet och ökar 2‑produktköp</li>",
+    c1_tests_matrix_title: "Testmatris",
+    c1_tests_matrix_list:
+      "<li><strong>Primär KPI:</strong> AOV</li><li><strong>Sekundär KPI:</strong> CR och add‑to‑cart</li><li><strong>Segment:</strong> nya vs återkommande</li><li><strong>Tidsfönster:</strong> 2–3 veckor per test</li>",
     c1_sustainability_title: "Hållbarhet som AOV-drivare",
     c1_sustainability_body:
       "Varumärkets styrka ligger i svensktillverkade och hållbara produkter. Genom att göra hållbarheten till ett konkret värdeargument ökar betalningsviljan.",
     c1_sustainability_list:
       "<li><strong>Refillsystem med premiumkänsla:</strong> exklusiv glasflaska för prenumeranter som återanvänds vid refill.</li><li><strong>Tydligare värdekommunikation:</strong> transparens, fakta och ursprung gör att kunder är mer benägna att betala mer.</li>",
+    c1_metrics_title: "Mätplan & KPI:er",
+    c1_metrics_body:
+      "Vi följde både värde och beteende för att säkerställa att premiumpositionen stärktes samtidigt som AOV ökade.",
+    c1_metric_1_title: "AOV",
+    c1_metric_1_body: "Total ordernivå och förflyttning mot 1 000 kr.",
+    c1_metric_2_title: "2-produktsandel",
+    c1_metric_2_body: "Andelen ordrar som går från 1 till 2 produkter.",
+    c1_metric_3_title: "Under fri frakt",
+    c1_metric_3_body: "Andel ordrar under gräns innan/efter ändring.",
+    c1_metric_4_title: "Checkout-drop",
+    c1_metric_4_body: "Friktion i sista steget och påverkan på CR.",
     c1_friction_title: "Minska friktion med guidning",
     c1_friction_body:
       "Data visade att flera besökare återkom till produktsidor innan köp, vilket signalerar osäkerhet. Ett guidande quiz hjälper kunden att välja rätt och gör varumärket till en expert.",
@@ -148,9 +179,6 @@ const dict = {
     c1_summary_title: "Sammanfattning",
     c1_summary_body:
       "Strategin bygger på tre lager: positionering (premium först, pris senare), beteendedesign (progress bar, gåva vid 1 000 kr, smarta rekommendationer) och checkout-optimering (friktionsfria tillägg och betalning). Det är så AOV kan gå från 786 kr till 1 000 kr utan att kompromissa med varumärket.",
-    c1_next_title: "Nästa steg",
-    c1_next_body:
-      "Under Your Skin har nu en konkret roadmap. Fokus framåt ligger på att prioritera 2–3 A/B-tester i checkouten och införa bättre segmentering i CRM baserat på kundens köpintention.",
 
     // Case 2
     c2_hero_title: "Ny visuell identitet & koncept",
@@ -435,6 +463,18 @@ const dict = {
       "The insights showed that the decisive change is small but strategic: more customers need to move from 1 to 2 products.",
     c1_strategy_body_3:
       "When that happens, order value rises by +32%, making it the clearest leverage for the target.",
+    c1_layers_title: "The strategy in three layers",
+    c1_layers_body:
+      "To reach the goal, the solution was built in three levels: positioning, behavioral design, and checkout optimization.",
+    c1_layer_1_title: "Positioning",
+    c1_layer_1_body:
+      "Premium first, price later. The discount appears later to build value before incentives.",
+    c1_layer_2_title: "Behavioral design",
+    c1_layer_2_body:
+      "Progress bar, gift at 1,000 SEK, and smart recommendations that lower the threshold.",
+    c1_layer_3_title: "Checkout",
+    c1_layer_3_body:
+      "Low-friction add-ons, clear goals, and a default payment choice that makes completion easy.",
     c1_premium_title: "Premium is a conversion strategy — not just aesthetics",
     c1_premium_body_1:
       "A key insight was that premium feeling shapes how decisions are made. When discounts are exposed early, the focus shifts from value to price.",
@@ -466,11 +506,30 @@ const dict = {
       "We simplified the path to purchase by showing <strong>\"Relevant add-ons\"</strong> directly before checkout.<br><br>Instead of sending customers back to the shop, they can add a matching conditioner or refill with one click. This leverages the anchoring effect where the main product sets the price reference.",
     c1_feature2_caption:
       "Mockup: previous vs. optimized cart with progress bar and relevant products",
+    c1_tests_title: "Experiments & hypotheses",
+    c1_tests_body:
+      "Each initiative was tied to a testable hypothesis. The focus was to move customers from 1 to 2 products without reducing the premium feel.",
+    c1_tests_list:
+      "<li>Hypothesis: Progress bar increases orders above free shipping</li><li>Hypothesis: Later discount timing lifts AOV without lowering CR</li><li>Hypothesis: Relevant add-ons increase AOV with low friction</li><li>Hypothesis: Quiz reduces uncertainty and increases 2‑product orders</li>",
+    c1_tests_matrix_title: "Test matrix",
+    c1_tests_matrix_list:
+      "<li><strong>Primary KPI:</strong> AOV</li><li><strong>Secondary KPI:</strong> CR and add‑to‑cart</li><li><strong>Segments:</strong> new vs returning</li><li><strong>Window:</strong> 2–3 weeks per test</li>",
     c1_sustainability_title: "Sustainability as an AOV driver",
     c1_sustainability_body:
       "The brand’s strength lies in Swedish-made, sustainable products. Turning sustainability into a concrete value argument raises willingness to pay.",
     c1_sustainability_list:
       "<li><strong>Premium refill system:</strong> an exclusive glass bottle for subscribers that is reused for refills.</li><li><strong>Clearer value communication:</strong> transparency, facts, and origin make customers more willing to pay more.</li>",
+    c1_metrics_title: "Measurement plan & KPIs",
+    c1_metrics_body:
+      "We tracked both value and behavior to ensure the premium position strengthened as AOV increased.",
+    c1_metric_1_title: "AOV",
+    c1_metric_1_body: "Total order value and movement toward 1,000 SEK.",
+    c1_metric_2_title: "2-product share",
+    c1_metric_2_body: "Share of orders moving from 1 to 2 products.",
+    c1_metric_3_title: "Below free shipping",
+    c1_metric_3_body: "Share of orders below the threshold before/after.",
+    c1_metric_4_title: "Checkout drop",
+    c1_metric_4_body: "Friction in the final step and impact on CR.",
     c1_friction_title: "Reduce friction with guidance",
     c1_friction_body:
       "Data showed repeat visits to product pages before purchase, signaling uncertainty. A guided quiz helps customers choose and positions the brand as the expert.",
@@ -484,9 +543,6 @@ const dict = {
     c1_summary_title: "Summary",
     c1_summary_body:
       "The strategy rests on three layers: positioning (premium first, price later), behavioral design (progress bar, gift at 1,000 SEK, smart recommendations), and checkout optimization (low-friction add-ons and payment). This is how AOV can move from 786 SEK to 1,000 SEK without compromising the brand.",
-    c1_next_title: "Next steps",
-    c1_next_body:
-      "Under Your Skin now has a concrete roadmap. The next focus is to prioritize 2–3 A/B tests in checkout and improve CRM segmentation based on purchase intent.",
 
     // Case 2
     c2_hero_title: "New visual identity & concept",

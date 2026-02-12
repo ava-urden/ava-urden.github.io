@@ -1005,6 +1005,48 @@ main {
   text-align: center;
 }
 
+.case-wide-block {
+  margin: 52px 0 72px;
+}
+
+.case-wide-block .grid {
+  margin-top: 24px;
+}
+
+.case-showcase {
+  margin: 72px 0;
+}
+
+.case-showcase .stat-box {
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.case-metrics {
+  margin: 64px 0 72px;
+}
+
+.case-metrics .metrics-header {
+  margin-bottom: 24px;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+}
+
+.metric-card {
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: var(--radius-md);
+  background: #fff;
+  padding: 18px 20px;
+  box-shadow: none;
+}
+
+.metric-card h4 {
+  margin-bottom: 8px;
+}
+
 .content-showcase {
   background: rgba(255, 255, 255, 0.75);
   padding: 44px;
