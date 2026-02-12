@@ -930,6 +930,10 @@ main {
   }
 }
 
+.case-page--uys .feature-block {
+  margin: 72px 0;
+}
+
 .feature-block.reversed {
   direction: rtl;
 }
@@ -948,6 +952,51 @@ main {
 .intro-text {
   max-width: 720px;
   margin: 0 auto 40px;
+}
+
+.case-page--uys .intro-text {
+  margin: 0 auto 28px;
+}
+
+.case-stack {
+  display: grid;
+  gap: 28px;
+  margin: 44px auto 64px;
+  max-width: 960px;
+}
+
+.case-stack .intro-text {
+  margin: 0;
+}
+
+.case-gallery {
+  margin: 52px 0 64px;
+}
+
+.case-gallery .gallery-header {
+  max-width: 720px;
+  margin-bottom: 24px;
+}
+
+.case-gallery .gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  align-items: start;
+}
+
+.case-gallery img {
+  width: 100%;
+  border-radius: var(--radius-md);
+  background: #fafafa;
+  border: 1px solid rgba(32, 26, 22, 0.08);
+}
+
+.case-gallery figcaption {
+  margin-top: 8px;
+  font-size: 0.85rem;
+  color: var(--muted);
+  text-align: center;
 }
 
 .content-showcase {
