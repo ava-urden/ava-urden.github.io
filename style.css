@@ -135,7 +135,7 @@ p {
 }
 
 .section {
-  scroll-margin-top: calc(var(--header-height) + 16px);
+  scroll-margin-top: 0;
 }
 
 main {
@@ -350,6 +350,10 @@ main {
   --section-bg: linear-gradient(180deg, rgba(0, 0, 0, 0.015), rgba(0, 0, 0, 0));
 }
 
+#about.section-block {
+  padding-bottom: 70px;
+}
+
 #cases {
   background: #171717;
   color: #f5f5f5;
@@ -378,14 +382,16 @@ main {
 
 @media (min-width: 900px) {
   .about__grid {
-    grid-template-columns: 1.05fr 0.9fr 1.05fr;
+    grid-template-columns: 1.05fr 0.9fr 1.1fr;
+    column-gap: 60px;
   }
 }
 
 .about__title {
-  font-size: 1.8rem;
+  font-size: 2.4rem;
   text-transform: uppercase;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.08em;
+  margin-bottom: 18px;
 }
 
 .about__image {
@@ -394,17 +400,45 @@ main {
 }
 
 .about__image img {
-  border-radius: var(--radius-md);
+  width: 100%;
+  max-width: 320px;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 0;
   background: #fafafa;
-  box-shadow: none;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
 }
 
 .about__note {
-  margin-top: 24px;
+  margin-top: 48px;
   font-size: 0.95rem;
   letter-spacing: 0;
   text-transform: none;
   color: var(--muted);
+  font-style: italic;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.about__note:hover {
+  color: var(--ink);
+}
+
+.about__grid > .reveal:nth-child(1) {
+  --delay: 0.05s;
+}
+
+.about__grid > .reveal:nth-child(2) {
+  --delay: 0.15s;
+}
+
+.about__grid > .reveal:nth-child(3) {
+  --delay: 0.25s;
+}
+
+.about__note.reveal {
+  --delay: 0.35s;
 }
 
 /* Buttons */
@@ -504,6 +538,11 @@ main {
 #cases .h-display {
   text-transform: uppercase;
   letter-spacing: 0.08em;
+  font-size: 2.4rem;
+}
+
+#cases .section-intro {
+  font-size: 1.06rem;
 }
 
 .filters {
@@ -584,7 +623,7 @@ main {
 }
 
 .case h3 {
-  font-size: 1.05rem;
+  font-size: 1.06rem;
   margin-bottom: 0;
   color: #fff;
   text-transform: uppercase;
@@ -599,7 +638,7 @@ main {
 .case__summary p {
   margin-bottom: 0;
   color: rgba(255, 255, 255, 0.7);
-  font-size: 0.95rem;
+  font-size: 1.06rem;
   line-height: 1.6;
 }
 
@@ -1222,5 +1261,17 @@ main {
 
   .about__frame {
     padding: 28px 20px;
+  }
+
+  .about__title {
+    font-size: 2rem;
+  }
+
+  #cases .h-display {
+    font-size: 2rem;
+  }
+
+  .about__image img {
+    max-width: 260px;
   }
 }

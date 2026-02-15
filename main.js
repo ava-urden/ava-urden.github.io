@@ -16,12 +16,12 @@ const dict = {
 
     about_title: "Om mig",
     about_body_1:
-      "Jag är Ava — driven, nyfiken och målinriktad. Jag gillar att förstå saker på djupet, göra uppdrag ordentligt och se hur ett arbete leder till resultat. Jag har alltid haft en kreativ drivkraft, men också en stark nyfikenhet på varför saker fungerar som de gör och hur de kan förbättras.",
+      "Det är jag som är Ava, som person är jag driven, nyfiken och målinriktad. Jag gillar att förstå saker på djupet, göra uppdrag ordentligt och se hur ett arbete leder till resultat. Jag har alltid haft en kreativ drivkraft, men också en stark nyfikenhet på varför saker fungerar som de gör och hur de kan förbättras.",
     about_body_2:
-      "Marknadsföring blev snabbt ett område jag drogs till eftersom det kombinerar båda sidor av mig. Jag gillar att ta en idé och göra den konkret, testa, mäta och lära mig längs vägen. För mig handlar det om att skapa något som inte bara ser bra ut, utan som faktiskt fungerar och ger effekt.",
+      "Marknadsföring har alltid varit ett stort intresse för mig eftersom det kombinerar båda sidor av mig. Jag gillar att ta en idé och göra den konkret, testa, mäta och lära mig längs vägen. För mig handlar det om att skapa något som inte bara ser bra ut, utan som faktiskt fungerar och ger effekt.",
     about_body_3:
       "Jag trivs när jag får ta ansvar och driva saker framåt. Jag gillar att samarbeta med andra som också har en drivkraft, och jag motiveras av att utvecklas, lära mig nytt och hela tiden hitta bättre sätt att göra det jag gör.",
-    about_note: "Fortsätt gärna scrolla för mer information om mina cases och färdigheter.",
+    about_note: "Fortsätt gärna scrolla för att se mer om mina erfarenheter och färdigheter.",
 
     cases_title: "Tidigare projekt & case",
     cases_intro: "Ett urval av projekt där strategi, kreativitet och data möts.",
