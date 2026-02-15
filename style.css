@@ -259,10 +259,11 @@ main {
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: 1fr;
   gap: 56px;
-  align-items: center;
-  padding: 48px 0 96px;
+  align-items: start;
+  padding: 24px 0 120px;
+  min-height: calc(86vh - var(--header-height));
   max-width: 1060px;
   margin: 0 auto;
   width: 100%;
@@ -273,6 +274,9 @@ main {
 }
 
 .hero__right {
+  position: absolute;
+  right: 0;
+  bottom: 32px;
   display: flex;
   justify-content: flex-end;
 }
@@ -304,13 +308,14 @@ main {
 }
 
 .hero__welcome {
-  font-family: var(--font-display);
-  font-size: clamp(2.4rem, 5.4vw, 3.8rem);
+  font-family: var(--font-body);
+  font-size: 0.92rem;
   text-transform: uppercase;
   text-align: right;
   color: #fff;
-  letter-spacing: 0.02em;
-  max-width: 460px;
+  letter-spacing: 0.2em;
+  font-weight: 600;
+  max-width: none;
   margin-left: auto;
 }
 
@@ -1111,7 +1116,7 @@ main {
   }
 
   .hero__welcome {
-    text-align: left;
+    text-align: right;
   }
 
   .feature-block.reversed {
@@ -1138,7 +1143,7 @@ main {
   }
 
   .hero__welcome {
-    text-align: left;
+    text-align: right;
   }
 
   .hero__cta {
