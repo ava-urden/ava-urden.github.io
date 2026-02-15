@@ -44,21 +44,25 @@ const dict = {
     skills_main_title: "Färdigheter & verktyg",
     skills_intro: "Där strategi möter genomförande – från idé till mätbar effekt.",
     tools_label: "Verktyg:",
+    skills_list_label: "Jag jobbar med:",
 
     cat1_title: "Content & Storytelling",
-    cat1_desc: "Bygger varumärke och engagemang med content anpassat efter kanal.",
+    cat1_desc:
+      "Skapar innehåll som både bygger varumärke och driver handling. Jag tar fram koncept, tonalitet och format som passar kanal, och säkerställer att content kan produceras effektivt och återanvändas smart över tid.",
     cat1_list:
-      "<li>Copy, hooks och content för sociala medier</li><li>Contentplanering och publiceringsplan</li><li>Tonalitet och riktlinjer</li><li>Produktion av foto och video</li>",
+      "<li>Copy, hooks och tydliga budskap för sociala medier (organiskt + paid)</li><li>Contentplanering: publiceringskalender, teman, format och produktionstakt</li><li>Tonalitet, guideliner och brand voice så allt hänger ihop</li><li>Foto/video för kortformat (Reels/TikTok) + enklare redigering och anpassning</li><li>UGC-tänk: content som känns äkta men ändå konverterar</li>",
 
     cat2_title: "Strategi & Koncept",
-    cat2_desc: "Tar idéer till tydlig struktur som går att genomföra.",
+    cat2_desc:
+      "Omsätter idéer till struktur som går att genomföra. Jag gillar när strategi blir konkret: tydliga val (målgrupp, budskap, kanal, KPI) och en plan som gör det lätt att producera, testa och följa upp.",
     cat2_list:
-      "<li>Konceptutveckling för kampanjer</li><li>Briefs: målgrupp, budskap och KPI</li><li>Presentationer och pitchdecks</li><li>Kundkommunikation (CRM)</li>",
+      "<li>Konceptutveckling för kampanjer, erbjudanden och medlemskommunikation</li><li>Briefs: mål, målgrupp/segment, budskap, kanalval och KPI:er</li><li>Kundresa och CRM-tänk: vad behöver kunden nu och vilket nästa steg vill vi skapa?</li><li>Presentationer/pitchdecks som säljer idéer med logik, data och tydlig payoff</li><li>Samarbete och projektstruktur så det faktiskt blir gjort</li>",
 
     cat3_title: "Tillväxt & Data",
-    cat3_desc: "Datadrivet arbete som driver trafik och konvertering.",
+    cat3_desc:
+      "Datadrivet arbete som hittar friktion, testar hypoteser och skapar effekt. Jag använder data för att förstå beteenden, prioritera rätt och förbättra kundresan stegvis - med fokus på konvertering, AOV och retention.",
     cat3_list:
-      "<li>Performance marketing setup</li><li>GA4 analys och funnel-tracking</li><li>CRO: hypotes och A/B-test</li><li>SEO och teknisk mätplan</li>",
+      "<li>GA4-analys: funnels, drop-offs, beteenden och segment</li><li>CRO: hypoteser, prioritering, testplan och uppföljning av resultat och lärdomar</li><li>Performance marketing-grunder: setup, spårning och iterering på kreativet</li><li>Dashboards och uppföljning: göra siffror enkla att agera på</li><li>SEO och teknik på en praktisk nivå: vad som påverkar synlighet + mätplan/spårning</li>",
 
     contact_title: "Kontakt",
     footer_text: "Nyfiken på att veta mer eller diskutera ett projekt? Hör av dig så tar vi en kaffe!",
@@ -408,21 +412,25 @@ const dict = {
     skills_main_title: "Skills & tools",
     skills_intro: "Where strategy meets execution — from idea to measurable impact.",
     tools_label: "Tools:",
+    skills_list_label: "I work with:",
 
     cat1_title: "Content & storytelling",
-    cat1_desc: "Building brand and engagement tailored to the channel.",
+    cat1_desc:
+      "Creates content that builds brand and drives action. I shape concepts, tone, and formats per channel, and make sure content can be produced efficiently and repurposed over time.",
     cat1_list:
-      "<li>Copy, hooks, and social content</li><li>Content planning and publishing</li><li>Tone of voice and guidelines</li><li>Photo and video production</li>",
+      "<li>Copy, hooks, and clear messaging for social media (organic + paid)</li><li>Content planning: calendars, themes, formats, and production cadence</li><li>Tone of voice, guidelines, and brand voice consistency</li><li>Short-form photo/video (Reels/TikTok) with light editing and adaptations</li><li>UGC thinking: content that feels authentic but still converts</li>",
 
     cat2_title: "Strategy & concept",
-    cat2_desc: "Turning ideas into actionable structures.",
+    cat2_desc:
+      "Turns ideas into structure you can execute. I like strategy that becomes concrete: clear choices (audience, message, channel, KPIs) and a plan that makes it easy to produce, test, and follow up.",
     cat2_list:
-      "<li>Campaign concept development</li><li>Briefs: audience, message, and KPIs</li><li>Presentations and pitch decks</li><li>Customer communication (CRM)</li>",
+      "<li>Concept development for campaigns, offers, and member communication</li><li>Briefs: goals, audience/segments, message, channel selection, and KPIs</li><li>Customer journey + CRM thinking: what the customer needs now and the next step we want to create</li><li>Presentations/pitch decks that sell ideas with logic, data, and clear payoff</li><li>Collaboration and project structure so it actually gets done</li>",
 
     cat3_title: "Growth & data",
-    cat3_desc: "Data-driven work driving traffic and conversion.",
+    cat3_desc:
+      "Data-driven work that finds friction, tests hypotheses, and creates impact. I use data to understand behavior, prioritize, and improve the journey step by step - with focus on conversion, AOV, and retention.",
     cat3_list:
-      "<li>Performance marketing setup</li><li>GA4 analysis and tracking</li><li>CRO: hypothesis and A/B testing</li><li>SEO and technical measurement plan</li>",
+      "<li>GA4 analysis: funnels, drop-offs, behavior, and segments</li><li>CRO: hypotheses, prioritization, test plan, and results learnings</li><li>Performance marketing basics: setup, tracking, and creative iteration</li><li>Dashboards and follow-up: making numbers easy to act on</li><li>SEO and tech at a practical level: what affects visibility + measurement plan/tracking</li>",
 
     contact_title: "Contact",
     footer_text: "Curious to know more or discuss a project? Get in touch and let's have a coffee!",
