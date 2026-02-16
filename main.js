@@ -23,7 +23,7 @@ const dict = {
       "Jag trivs när jag får ta ansvar och driva saker framåt. Jag gillar att samarbeta med andra som också har en drivkraft, och jag motiveras av att utvecklas, lära mig nytt och hela tiden hitta bättre sätt att göra det jag gör.",
     about_note: "Fortsätt gärna scrolla för att se mer om mina erfarenheter och färdigheter.",
 
-    cases_title: "Tidigare projekt & case",
+    cases_title: "Utvalda projekt",
     cases_intro: "Ett urval av projekt där strategi, kreativitet och data möts.",
 
 
@@ -391,7 +391,7 @@ const dict = {
       "I thrive when I can take ownership and drive things forward. I enjoy collaborating with others who are equally driven, and I’m motivated by learning, growing, and always finding better ways to do what I do.",
     about_note: "Scroll on for more about my cases and skills.",
 
-    cases_title: "Previous projects & cases",
+    cases_title: "Selected projects",
     cases_intro: "A selection of projects where strategy, creativity, and data meet.",
 
 
