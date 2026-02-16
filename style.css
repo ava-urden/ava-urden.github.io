@@ -97,7 +97,7 @@ p {
 }
 
 .section-block {
-  padding: 110px 0;
+  padding: clamp(64px, 8vw, 96px) 0;
   position: relative;
   z-index: 0;
   scroll-snap-align: start;
@@ -152,13 +152,19 @@ main {
   height: var(--header-height);
   display: flex;
   align-items: center;
-  background: rgba(27, 27, 27, 0.96);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(30, 27, 24, 0.7);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  transition: background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease,
+    backdrop-filter 0.25s ease;
 }
 
 .header--scrolled {
+  background: rgba(30, 27, 24, 0.96);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
@@ -196,7 +202,7 @@ main {
   text-transform: uppercase;
   letter-spacing: 0.24em;
   color: rgba(246, 242, 236, 0.76);
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .nav a:hover,
@@ -234,6 +240,7 @@ main {
 .hero {
   position: relative;
   padding-top: var(--header-height);
+  margin-top: calc(-1 * var(--header-height));
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -266,8 +273,8 @@ main {
   align-items: center;
   justify-items: center;
   align-content: center;
-  padding: clamp(48px, 8vh, 120px) var(--pad);
-  min-height: calc(100vh - var(--header-height));
+  padding: clamp(64px, 12vh, 140px) var(--pad);
+  min-height: 100vh;
   max-width: 1060px;
   margin: 0 auto;
   width: 100%;
@@ -279,7 +286,7 @@ main {
   margin-right: auto;
   text-align: center;
   align-self: center;
-  transform: translateY(clamp(12px, 2.2vh, 32px));
+  transform: translateY(0);
 }
 
 .hero__title {
@@ -305,7 +312,7 @@ main {
 }
 
 .hero__school {
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .hero__welcome {
@@ -318,7 +325,7 @@ main {
   font-weight: 700;
   max-width: none;
   margin-left: 0;
-  margin-top: clamp(48px, 12vw, 160px);
+  margin-top: clamp(24px, 8vw, 96px);
   line-height: 1.1;
   white-space: nowrap;
 }
@@ -360,7 +367,7 @@ main {
 }
 
 .hero__cta {
-  margin-top: 34px;
+  margin-top: 28px;
   display: flex;
   gap: 14px;
   flex-wrap: wrap;
@@ -372,17 +379,16 @@ main {
 }
 
 #about.section-block {
-  padding-top: clamp(72px, 10vw, 96px);
-  padding-bottom: 70px;
+  padding: clamp(64px, 8vw, 96px) 0;
 }
 
 #cases {
-  background: #171717;
+  background: #1e1b18;
   color: #f5f5f5;
 }
 
 #cases.section-block {
-  padding-top: clamp(72px, 10vw, 96px);
+  padding: clamp(64px, 8vw, 96px) 0;
 }
 
 #cases.section-block::before {
@@ -394,7 +400,7 @@ main {
   background: transparent;
   backdrop-filter: none;
   -webkit-backdrop-filter: none;
-  padding: 20px 0;
+  padding: 36px 0;
   border-radius: var(--radius-lg);
   box-shadow: none;
 }
@@ -402,14 +408,24 @@ main {
 .about__grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 48px;
+  gap: 64px;
   align-items: start;
 }
 
 @media (min-width: 900px) {
+  #about.section-block {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+
+  #about.section-block > .container {
+    width: 100%;
+  }
+
   .about__grid {
     grid-template-columns: 1.05fr 0.9fr 1.1fr;
-    column-gap: 60px;
+    column-gap: 80px;
   }
 }
 
@@ -418,6 +434,10 @@ main {
   text-transform: uppercase;
   letter-spacing: 0.08em;
   margin-bottom: 18px;
+}
+
+.about p {
+  font-weight: 400;
 }
 
 .about__image {
@@ -436,7 +456,7 @@ main {
 }
 
 .about__note {
-  margin-top: 48px;
+  margin-top: 64px;
   font-size: 0.95rem;
   letter-spacing: 0;
   text-transform: none;
@@ -576,6 +596,28 @@ main {
 
 #skills .section-intro {
   font-size: 1.06rem;
+}
+
+#cases .section__top {
+  margin-bottom: 56px;
+}
+
+#cases .grid {
+  gap: 24px;
+}
+
+#cases .case__link {
+  gap: 8px;
+}
+
+#cases .case h3 {
+  font-size: 0.95rem;
+  letter-spacing: 0.12em;
+}
+
+#cases .case__summary p {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.65);
 }
 
 .filters {
@@ -1230,7 +1272,7 @@ main {
 /* Responsive */
 @media (max-width: 900px) {
   .section-block {
-    padding: 90px 0;
+    padding: 72px 0;
   }
 
   .hero__grid {
