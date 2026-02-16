@@ -861,6 +861,87 @@ function initSectionObserver() {
   sections.forEach((section) => observer.observe(section));
 }
 
+function pushDataLayerEvent(name, payload = {}) {
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({ event: name, ...payload });
+}
+
+function getBaseEventData() {
+  return {
+    page_path: window.location.pathname,
+    page_title: document.title
+  };
+}
+
+function getEventLabel(el) {
+  const explicit = el.getAttribute("data-track-label");
+  if (explicit) return explicit;
+  return (el.textContent || "").trim();
+}
+
+function initTracking() {
+  const base = getBaseEventData;
+
+  document.querySelectorAll("[data-track]").forEach((el) => {
+    el.addEventListener("click", () => {
+      pushDataLayerEvent(el.getAttribute("data-track"), {
+        ...base(),
+        label: getEventLabel(el),
+        href: el.getAttribute("href") || undefined
+      });
+    });
+  });
+
+  document.querySelectorAll(".nav a").forEach((link) => {
+    link.addEventListener("click", () => {
+      pushDataLayerEvent("nav_click", {
+        ...base(),
+        label: (link.textContent || "").trim(),
+        href: link.getAttribute("href") || undefined
+      });
+    });
+  });
+
+  document.querySelectorAll("[data-cv-link]").forEach((link) => {
+    link.addEventListener("click", () => {
+      pushDataLayerEvent("cv_download", {
+        ...base(),
+        href: link.getAttribute("href") || undefined
+      });
+    });
+  });
+
+  document.querySelectorAll(".case__link").forEach((link) => {
+    link.addEventListener("click", () => {
+      const title = link.querySelector("h3");
+      pushDataLayerEvent("case_click", {
+        ...base(),
+        label: title ? title.textContent.trim() : "",
+        href: link.getAttribute("href") || undefined
+      });
+    });
+  });
+
+  document.querySelectorAll(".contact-link").forEach((link) => {
+    link.addEventListener("click", () => {
+      pushDataLayerEvent("contact_click", {
+        ...base(),
+        label: (link.textContent || "").trim(),
+        href: link.getAttribute("href") || undefined
+      });
+    });
+  });
+
+  document.querySelectorAll(".lang__btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      pushDataLayerEvent("language_switch", {
+        ...base(),
+        language: btn.dataset.lang
+      });
+    });
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   const storedLang = localStorage.getItem("lang") || "sv";
   applyLang(storedLang);
@@ -875,4 +956,5 @@ document.addEventListener("DOMContentLoaded", () => {
   initReveal();
   initHeader();
   initSectionObserver();
+  initTracking();
 });
