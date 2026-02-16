@@ -619,10 +619,10 @@ main {
 
 /* Case cards */
 .case {
-  display: flex;
+  display: block;
   background: transparent;
-  border-radius: var(--radius-md);
-  overflow: hidden;
+  border-radius: 0;
+  overflow: visible;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   min-height: 100%;
   box-shadow: none;
@@ -630,17 +630,16 @@ main {
 }
 
 .case__link {
-  display: flex;
-  flex-direction: column;
+  display: grid;
   width: 100%;
-  gap: 14px;
+  gap: 16px;
 }
 
 .case__img {
   overflow: hidden;
   aspect-ratio: 4 / 3;
   background: #111111;
-  border-radius: 8px;
+  border-radius: 0;
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
@@ -653,6 +652,8 @@ main {
 
 .case__body {
   padding: 0;
+  display: grid;
+  gap: 6px;
 }
 
 .case h3 {
@@ -664,14 +665,14 @@ main {
 }
 
 .case__summary {
-  padding-top: 2px;
-  max-width: 92%;
+  padding-top: 0;
+  max-width: none;
 }
 
 .case__summary p {
   margin-bottom: 0;
   color: rgba(255, 255, 255, 0.7);
-  font-size: 1.06rem;
+  font-size: 1.02rem;
   line-height: 1.6;
 }
 
