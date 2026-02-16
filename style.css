@@ -563,7 +563,8 @@ main {
 
 #cases .h-display,
 #skills .h-display,
-.case-page .h-display {
+.case-page h1.h-display,
+.case-page h2.h-display {
   text-transform: uppercase;
   letter-spacing: 0.08em;
   font-size: 2.4rem;
@@ -1300,7 +1301,8 @@ main {
 
   #cases .h-display,
   #skills .h-display,
-  .case-page .h-display {
+  .case-page h1.h-display,
+  .case-page h2.h-display {
     font-size: 2rem;
   }
 
