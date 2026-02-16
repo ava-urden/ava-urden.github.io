@@ -756,6 +756,7 @@ function applyLang(lang) {
       "href",
       lang === "en" ? "./cv/ava-urden-cv-en.pdf" : "./cv/ava-urden-cv-sv.pdf"
     );
+    link.setAttribute("download", "");
   });
 
   document.querySelectorAll(".lang__btn").forEach((btn) => {

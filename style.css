@@ -318,7 +318,7 @@ main {
   font-weight: 700;
   max-width: none;
   margin-left: 0;
-  margin-top: clamp(80px, 20vw, 240px);
+  margin-top: clamp(48px, 12vw, 160px);
   line-height: 1.1;
   white-space: nowrap;
 }
@@ -1248,7 +1248,7 @@ main {
     white-space: normal;
     transform: none;
     letter-spacing: 0.16em;
-    margin-top: clamp(56px, 16vw, 160px);
+    margin-top: clamp(40px, 12vw, 120px);
   }
 
   .feature-block.reversed {
@@ -1280,7 +1280,7 @@ main {
 
   .hero__welcome {
     text-align: center;
-    margin-top: clamp(44px, 18vw, 140px);
+    margin-top: clamp(32px, 14vw, 96px);
   }
 
   .hero__cta {
