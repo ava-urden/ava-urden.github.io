@@ -2,7 +2,7 @@
 const dict = {
   sv: {
     logo_text: "A.U. Portfolio",
-    nav_cases: "Cases",
+    nav_cases: "Utvalda projekt",
     nav_about: "Om mig",
     nav_skills: "Färdigheter",
     nav_contact: "Kontakt",
@@ -370,7 +370,7 @@ const dict = {
 
   en: {
     logo_text: "A.U. Portfolio",
-    nav_cases: "Cases",
+    nav_cases: "Selected projects",
     nav_about: "About",
     nav_skills: "Skills",
     nav_contact: "Contact",
