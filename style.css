@@ -574,6 +574,10 @@ main {
   font-size: 1.06rem;
 }
 
+#skills .section-intro {
+  font-size: 1.06rem;
+}
+
 .filters {
   display: flex;
   gap: 10px;
@@ -689,8 +693,7 @@ main {
 }
 
 .skills-intro {
-  margin: 0 auto 60px;
-  max-width: 1060px;
+  margin-bottom: 40px;
 }
 
 .skills-list {
