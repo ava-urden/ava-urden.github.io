@@ -603,21 +603,33 @@ main {
 }
 
 #cases .grid {
-  gap: 24px;
+  gap: 20px;
 }
 
 #cases .case__link {
-  gap: 8px;
+  gap: 6px;
 }
 
 #cases .case h3 {
   font-size: 0.95rem;
   letter-spacing: 0.12em;
+  line-height: 1.35;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  min-height: calc(1.35em * 2);
 }
 
 #cases .case__summary p {
   font-size: 0.95rem;
   color: rgba(255, 255, 255, 0.65);
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  min-height: 1.5em;
 }
 
 .filters {
