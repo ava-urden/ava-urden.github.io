@@ -383,6 +383,7 @@ main {
 }
 
 #cases {
+  --cases-gap: 30px;
   background: #1e1b18;
   color: #f5f5f5;
 }
@@ -599,11 +600,21 @@ main {
 }
 
 #cases .section__top {
-  margin-bottom: 56px;
+  margin-bottom: var(--cases-gap);
+  padding-bottom: 0;
 }
 
 #cases .grid {
-  gap: 20px;
+  gap: var(--cases-gap);
+}
+
+#cases .section-header-group {
+  display: grid;
+  gap: 12px;
+}
+
+#cases .h-display {
+  margin-bottom: 0;
 }
 
 #cases .case__link {
@@ -618,7 +629,8 @@ main {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   overflow: hidden;
-  min-height: calc(1.35em * 2);
+  min-height: 0;
+  margin-bottom: 4px;
 }
 
 #cases .case__summary p {
@@ -630,6 +642,25 @@ main {
   -webkit-line-clamp: 1;
   overflow: hidden;
   min-height: 1.5em;
+}
+
+#cases .case__summary {
+  margin-top: 0;
+  display: grid;
+  gap: 4px;
+}
+
+#cases .case__more {
+  display: inline-block;
+  margin-top: 0;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+#cases .case__link:hover .case__more {
+  color: #ffffff;
 }
 
 .filters {

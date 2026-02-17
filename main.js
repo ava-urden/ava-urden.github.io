@@ -25,6 +25,7 @@ const dict = {
 
     cases_title: "Utvalda projekt",
     cases_intro: "Ett urval av projekt där strategi, kreativitet och data möts.",
+    case_read_more: "Läs mer →",
 
 
     case1_title: "Under Your Skin",
@@ -393,6 +394,7 @@ const dict = {
 
     cases_title: "Selected projects",
     cases_intro: "A selection of projects where strategy, creativity, and data meet.",
+    case_read_more: "Read more →",
 
 
     case1_title: "Under Your Skin",
