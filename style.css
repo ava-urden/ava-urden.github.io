@@ -887,7 +887,7 @@ main {
 
 /* Footer */
 .footer {
-  background: var(--accent-dark);
+  background: rgba(30, 27, 24, 0.96);
   color: #fff;
   padding: 90px 0 60px;
 }
