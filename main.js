@@ -188,30 +188,31 @@ const dict = {
     // Case 2
     c2_hero_title: "Ny visuell identitet & koncept",
     c2_hero_body:
-      "Skapandet av en modern visuell identitet och ett kommunikationskoncept för ett nätverk, med målet att förena en 20-årig historia med en framåtlutad vision.",
+      "En uppdaterad identitet och ett kommunikationskoncept för nätverket – där 20 års historia möter en samtida, framåtblickande ton.",
     c2_pill_1: "Visuell identitet",
     c2_pill_2: "Branding",
     c2_pill_3: "Eventkoncept",
     c2_overview_title: "Översikt",
     c2_overview_list:
-      "<li><strong>Uppdrag:</strong> Skapa nätverkets nya uttryck utan att tappa dess kärna.</li><li><strong>Målgrupp:</strong> 200 medlemmar.</li><li><strong>Utmaning:</strong> Navigera mellan strikta företagsriktlinjer och behovet av en unik, inspirerande identitet.</li>",
+      "<li><strong>Uppdrag:</strong> Skapa ett nytt uttryck som speglar nätverkets arv och ambition.</li><li><strong>Målgrupp:</strong> Cirka 200 medlemmar.</li><li><strong>Utmaning:</strong> Hålla sig inom företagsriktlinjer utan att tappa den unika, inspirerande känslan.</li>",
     c2_tools_title: "Verktyg & leverans",
-    c2_tools_list: "<li>Färgpalett & typografi</li><li>Grafiska element</li><li>Eventmaterial</li>",
+    c2_tools_list:
+      "<li>Färgpalett & typografi</li><li>Grafiska element & mallar</li><li>Eventmaterial & presentationer</li>",
     c2_results_title: "Resultat",
     c2_results_list:
-      "<li>Stärkt intern stolthet.</li><li>Identitet som används för återkommande event.</li><li>Framgångsrikt lanseringsevent.</li>",
-    c2_highlight_title: "Strategisk färgsättning",
+      "<li>Tydligare identitet och ökad intern stolthet.</li><li>Enhetlig kommunikation vid återkommande event.</li><li>Lyckad lansering med starkt engagemang.</li>",
+    c2_highlight_title: "Färgpalett",
     c2_highlight_body:
-      "Identiteten vilar på en palett som tillgodoser företagets varumärke och grundarnas önskemål.",
+      "Paletten binder ihop varumärkets kärna med nätverkets personlighet och skapar en modern, tydlig igenkänning.",
     c2_feature1_title: "Från vision till visuell röst",
     c2_feature1_body:
-      "I nära samarbete med nätverkets grundare tog jag fram konkreta idéer kring typografi och bildspråk. Resultatet gav nätverket verktyg att kommunicera i linje med företagets rebranding.",
+      "Tillsammans med grundarna tog jag fram typografi, bildspråk och grafiska regler. Resultatet blev ett tydligt ramverk som gör kommunikationen konsekvent i alla kanaler.",
     c2_feature2_title: "Event & genomförande",
     c2_feature2_body:
-      "I samband med lanseringen arrangerades ett event för 200 medlemmar. Den nya identiteten fick liv genom allt från digitala presentationer till fysiskt eventmaterial, vilket skapade en enhetlig och exklusiv upplevelse.",
+      "Lanseringen blev ett event för 200 medlemmar där identiteten aktiverades i presentationer, signage, digitala ytor och trycksaker – en sammanhållen och exklusiv upplevelse.",
     c2_outcome_title: "Resultat & effekt",
     c2_outcome_body:
-      "Den nya identiteten blev snabbt en naturlig del av företagskulturen. Den har stärkt nätverkets interna stolthet och används idag konsekvent i återkommande kommunikation och större strategiska event.",
+      "Identiteten används idag löpande i nätverkets kommunikation och gör det enklare att planera framtida aktiviteter med en tydlig visuell ram.",
 
     // Case 3
     c3_hero_title: "SEO: Content-struktur & koncept",
@@ -557,30 +558,31 @@ const dict = {
     // Case 2
     c2_hero_title: "New visual identity & concept",
     c2_hero_body:
-      "Creating a modern visual identity and communication concept for a network, with the goal of merging a 20-year history with a forward-looking vision.",
+      "A refreshed identity and communication concept for the network—bridging 20 years of history with a contemporary, forward-looking tone.",
     c2_pill_1: "Visual identity",
     c2_pill_2: "Branding",
     c2_pill_3: "Event concept",
     c2_overview_title: "Overview",
     c2_overview_list:
-      "<li><strong>Brief:</strong> Create a new expression for the network without losing its core.</li><li><strong>Audience:</strong> 200 members.</li><li><strong>Challenge:</strong> Balance strict corporate guidelines with the need for a unique, inspiring identity.</li>",
+      "<li><strong>Brief:</strong> Create a new expression that reflects the network’s heritage and ambition.</li><li><strong>Audience:</strong> About 200 members.</li><li><strong>Challenge:</strong> Stay within brand guidelines without losing a unique, inspiring feel.</li>",
     c2_tools_title: "Tools & delivery",
-    c2_tools_list: "<li>Color palette & typography</li><li>Graphic elements</li><li>Event materials</li>",
+    c2_tools_list:
+      "<li>Color palette & typography</li><li>Graphic elements & templates</li><li>Event materials & presentations</li>",
     c2_results_title: "Outcome",
     c2_results_list:
-      "<li>Stronger internal pride.</li><li>Identity used for recurring events.</li><li>Successful launch event.</li>",
-    c2_highlight_title: "Strategic color system",
+      "<li>Clearer identity and stronger internal pride.</li><li>Consistent communication at recurring events.</li><li>Successful launch with strong engagement.</li>",
+    c2_highlight_title: "Color palette",
     c2_highlight_body:
-      "The identity is grounded in a palette that aligns with the brand while reflecting the founders' vision.",
+      "The palette connects the brand’s core with the network’s personality, creating a modern and recognizable look.",
     c2_feature1_title: "From vision to visual voice",
     c2_feature1_body:
-      "In close collaboration with the founders, I developed concrete ideas around typography and imagery. The result gave the network tools to communicate in line with the company's rebranding.",
+      "Working closely with the founders, I defined typography, imagery and graphic rules. The result is a clear framework that keeps communication consistent across channels.",
     c2_feature2_title: "Event & execution",
     c2_feature2_body:
-      "A launch event for 200 members brought the identity to life through everything from digital presentations to physical event materials, creating a cohesive and exclusive experience.",
+      "The launch event for 200 members activated the identity across presentations, signage, digital surfaces and print—creating a cohesive and premium experience.",
     c2_outcome_title: "Result & impact",
     c2_outcome_body:
-      "The new identity quickly became a natural part of the company culture. It strengthened internal pride and is now used consistently in ongoing communication and major strategic events.",
+      "The identity is now used continuously in network communications and makes future initiatives easier to plan within a clear visual framework.",
 
     // Case 3
     c3_hero_title: "SEO: Content structure & concept",
