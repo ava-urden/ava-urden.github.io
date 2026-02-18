@@ -918,9 +918,10 @@ main {
 
 /* Footer */
 .footer {
-  background: rgba(30, 27, 24, 0.96);
+  background: var(--accent-dark);
   color: #fff;
   padding: 90px 0 60px;
+  border-radius: 0;
 }
 
 .footer__grid,
@@ -1157,7 +1158,7 @@ main {
 
 .feature-img img {
   width: 100%;
-  border-radius: var(--radius-md);
+  border-radius: 0;
   background: #fafafa;
   box-shadow: none;
 }
@@ -1195,6 +1196,93 @@ main {
 .case-page--uys .intro-text p,
 .case-page--uys .case-gallery .gallery-header p {
   max-width: 100%;
+}
+
+.case-page--uys {
+  --uys-accent: #f1c644;
+  --uys-panel: #ffffff;
+  --uys-panel-soft: #f9f3ed;
+  --uys-border: rgba(31, 27, 22, 0.1);
+  --uys-shadow: 0 22px 50px rgba(23, 18, 13, 0.08);
+  background: linear-gradient(180deg, #f4eee7 0%, #f8f4ef 45%, #ffffff 100%);
+}
+
+.case-page--uys .section-block {
+  background: transparent;
+}
+
+.case-page--uys .footer {
+  background: var(--accent-dark);
+  border-radius: 0;
+}
+
+.case-page--uys .back-link {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid var(--uys-border);
+}
+
+.case-page--uys .case-hero {
+  background: var(--uys-panel);
+  border: 1px solid var(--uys-border);
+  border-radius: 0;
+  padding: clamp(24px, 4vw, 40px);
+  box-shadow: var(--uys-shadow);
+}
+
+.case-page--uys .case-hero__content .hero__p {
+  max-width: 560px;
+  color: #4d4741;
+}
+
+.case-page--uys .case-hero__img img {
+  border-radius: 0;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+}
+
+.case-page--uys .card-skill {
+  background: var(--uys-panel);
+  border: 1px solid var(--uys-border);
+  border-radius: 0;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.06);
+}
+
+.case-page--uys .highlight-section {
+  background: #f6e2a3;
+  border: 1px solid rgba(241, 198, 68, 0.35);
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.case-page--uys .case-gallery,
+.case-page--uys .case-wide-block,
+.case-page--uys .content-showcase,
+.case-page--uys .case-metrics {
+  background: var(--uys-panel);
+  border: 1px solid var(--uys-border);
+  border-radius: 0;
+  padding: clamp(28px, 4vw, 40px);
+  box-shadow: var(--uys-shadow);
+}
+
+.case-page--uys .feature-block {
+  background: var(--uys-panel);
+  border: 1px solid var(--uys-border);
+  border-radius: 0;
+  padding: clamp(24px, 4vw, 36px);
+  box-shadow: var(--uys-shadow);
+}
+
+.case-page--uys .intro-text {
+  background: var(--uys-panel);
+  border: 1px solid var(--uys-border);
+  border-left: 3px solid var(--uys-accent);
+  border-radius: 0;
+  padding: 20px 24px;
+}
+
+.case-page--uys .intro-text h2,
+.case-page--uys .intro-text h3 {
+  margin-bottom: 12px;
 }
 
 .case-gallery .gallery-grid {
@@ -1250,7 +1338,7 @@ main {
 
 .metric-card {
   border: 1px solid rgba(0, 0, 0, 0.08);
-  border-radius: var(--radius-md);
+  border-radius: 0;
   background: #fff;
   padding: 18px 20px;
   box-shadow: none;
