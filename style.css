@@ -97,7 +97,7 @@ p {
 }
 
 .section-block {
-  padding: clamp(64px, 8vw, 96px) 0;
+  padding: clamp(44px, 6vw, 72px) 0;
   position: relative;
   z-index: 0;
   scroll-snap-align: start;
@@ -1480,7 +1480,7 @@ main {
 /* Responsive */
 @media (max-width: 900px) {
   .section-block {
-    padding: 72px 0;
+    padding: 56px 0;
   }
 
   .hero__grid {
