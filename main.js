@@ -42,6 +42,9 @@ const dict = {
     case6_sum: "Digital riktlinje.",
     case6_image_note: "Bild kommer",
 
+    mini_title: "Små projekt & blogg",
+    mini_intro: "Små experiment, prototyper och korta reflektioner jag testar just nu.",
+
     skills_main_title: "Färdigheter & verktyg",
     skills_intro: "Där strategi möter genomförande – från idé till mätbar effekt.",
     tools_label: "Verktyg:",
@@ -412,8 +415,11 @@ const dict = {
     case6_sum: "Digital guidelines.",
     case6_image_note: "Image coming soon",
 
+    mini_title: "Side Projects & Notes",
+    mini_intro: "Small experiments, prototypes, and short reflections I am exploring right now.",
+
     skills_main_title: "Skills & tools",
-    skills_intro: "Where strategy meets execution — from idea to measurable impact.",
+    skills_intro: "Where strategy meets execution – from idea to measurable impact.",
     tools_label: "Tools:",
     skills_list_label: "I work with:",
 
