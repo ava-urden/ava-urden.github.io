@@ -17,11 +17,11 @@ const dict = {
 
     about_title: "Om mig",
     about_body_1:
-      "Det är jag som är Ava, som person är jag driven, nyfiken och målinriktad. Jag gillar att förstå saker på djupet, göra uppdrag ordentligt och se hur ett arbete leder till resultat. Jag har alltid haft en kreativ drivkraft, men också en stark nyfikenhet på varför saker fungerar som de gör och hur de kan förbättras.",
+      "Jag heter Ava och är en nyfiken person med stark drivkraft. Jag är kreativ och tycker om att kombinera idéer med tydlig strategi för att skapa resultat. Jag gillar att förstå människor och varför saker fungerar.",
     about_body_2:
-      "Marknadsföring har alltid varit ett stort intresse för mig eftersom det kombinerar båda sidor av mig. Jag gillar att ta en idé och göra den konkret, testa, mäta och lära mig längs vägen. För mig handlar det om att skapa något som inte bara ser bra ut, utan som faktiskt fungerar och ger effekt.",
+      "För mig handlar marknadsföring om att göra det enkelt att välja rätt. Jag tar gärna ansvar för helheten och gör idéer genomförbara, från koncept till innehåll och uppföljning.",
     about_body_3:
-      "Jag trivs när jag får ta ansvar och driva saker framåt. Jag gillar att samarbeta med andra som också har en drivkraft, och jag motiveras av att utvecklas, lära mig nytt och hela tiden hitta bättre sätt att göra det jag gör.",
+      "Jag trivs när jag får jobba nära andra och göra jobbet ordentligt. Att testa, mäta och förbättra är en naturlig del av hur jag arbetar, och jag vill alltid lämna något som känns både smart och snyggt.",
     about_note: "Fortsätt gärna scrolla för att se mer om mina erfarenheter och färdigheter.",
 
     cases_title: "Utvalda projekt",
@@ -391,11 +391,11 @@ const dict = {
 
     about_title: "About",
     about_body_1:
-      "I'm Ava — driven, curious, and goal-oriented. I like to understand things deeply, do the work properly, and see how it leads to results. I've always had a creative drive, paired with a strong curiosity about why things work the way they do and how they can be improved.",
+      "I am Ava, a curious person with strong drive. I am creative and I like combining ideas with clear strategy to create results. I enjoy understanding people and why things work.",
     about_body_2:
-      "Marketing quickly became an area I was drawn to because it combines both sides of me. I like turning ideas into something concrete, testing, measuring, and learning along the way. For me, it’s about creating work that doesn’t just look good, but actually works and makes an impact.",
+      "For me marketing is about making it easy to choose. I like owning the full path and turning ideas into execution, from concept to content and follow up.",
     about_body_3:
-      "I thrive when I can take ownership and drive things forward. I enjoy collaborating with others who are equally driven, and I’m motivated by learning, growing, and always finding better ways to do what I do.",
+      "I thrive in collaboration and take pride in doing the work properly. Testing, measuring, and improving is a natural part of how I work, and I want the outcome to feel both smart and beautiful.",
     about_note: "Scroll on for more about my cases and skills.",
 
     cases_title: "Selected projects",
