@@ -334,7 +334,7 @@ main {
   text-transform: uppercase;
   color: #fff;
   margin-bottom: 14px;
-  will-change: transform, opacity, filter, letter-spacing;
+  will-change: transform, opacity;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -346,8 +346,7 @@ main {
 .hero__name {
   display: inline-block;
   opacity: 0;
-  filter: blur(6px);
-  will-change: transform, opacity, filter;
+  will-change: transform, opacity;
 }
 
 .hero__role,
@@ -400,12 +399,10 @@ main {
   0% {
     opacity: 0;
     transform: translate3d(-60px, 0, 0);
-    filter: blur(8px);
   }
   100% {
     opacity: 1;
     transform: translate3d(0, 0, 0);
-    filter: blur(0);
   }
 }
 
@@ -413,12 +410,10 @@ main {
   0% {
     opacity: 0;
     transform: translate3d(60px, 0, 0);
-    filter: blur(8px);
   }
   100% {
     opacity: 1;
     transform: translate3d(0, 0, 0);
-    filter: blur(0);
   }
 }
 
