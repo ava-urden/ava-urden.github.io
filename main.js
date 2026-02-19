@@ -7,7 +7,8 @@ const dict = {
     nav_skills: "Färdigheter",
     nav_contact: "Kontakt",
 
-    cover_title: "AVA URDÉN",
+    cover_title:
+      '<span class="hero__name hero__name--first">AVA</span> <span class="hero__name hero__name--last">URDÉN</span>',
     hero_role: "Growth Marketing",
     hero_school: "@Berghs School of Communication",
     hero_welcome: "Välkommen till min portfolio",
@@ -380,7 +381,8 @@ const dict = {
     nav_skills: "Skills",
     nav_contact: "Contact",
 
-    cover_title: "AVA URDÉN",
+    cover_title:
+      '<span class="hero__name hero__name--first">AVA</span> <span class="hero__name hero__name--last">URDÉN</span>',
     hero_role: "Growth Marketing",
     hero_school: "@Berghs School of Communication",
     hero_welcome: "Welcome to my portfolio",
@@ -831,13 +833,19 @@ function initHeader() {
   const header = document.querySelector(".header");
   if (!header) return;
 
-  const onScroll = () => {
-    if (window.scrollY > 10) header.classList.add("header--scrolled");
+  const update = (y) => {
+    if (y > 10) header.classList.add("header--scrolled");
     else header.classList.remove("header--scrolled");
   };
 
-  window.addEventListener("scroll", onScroll);
-  onScroll();
+  if (window.lenis) {
+    window.lenis.on("scroll", ({ scroll }) => update(scroll));
+    update(window.lenis.scroll || 0);
+  } else {
+    const onScroll = () => update(window.scrollY);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+  }
 }
 
 function initSectionObserver() {
@@ -870,6 +878,44 @@ function initSectionObserver() {
   );
 
   sections.forEach((section) => observer.observe(section));
+}
+
+function getHeaderOffset() {
+  const header = document.querySelector(".header");
+  return header ? header.offsetHeight : 0;
+}
+
+function initLenis() {
+  if (typeof Lenis === "undefined") return;
+  if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+  const lenis = new Lenis({
+    lerp: 0.18,
+    wheelMultiplier: 1,
+    infinite: false,
+    gestureOrientation: "vertical",
+    normalizeWheel: false,
+    smoothTouch: false
+  });
+
+  window.lenis = lenis;
+
+  function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
+  requestAnimationFrame(raf);
+
+  document.querySelectorAll("a[href^='#']").forEach((link) => {
+    link.addEventListener("click", (event) => {
+      const href = link.getAttribute("href");
+      if (!href || href === "#" || href === "#top") return;
+      const target = document.querySelector(href);
+      if (!target) return;
+      event.preventDefault();
+      lenis.scrollTo(target, { offset: -getHeaderOffset() });
+    });
+  });
 }
 
 function pushDataLayerEvent(name, payload = {}) {
@@ -965,6 +1011,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   initFilters();
   initReveal();
+  initLenis();
   initHeader();
   initSectionObserver();
   initTracking();
