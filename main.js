@@ -94,6 +94,7 @@ const dict = {
     mini1_note:
       "Det här är en kortare, lättläst projektsida. Jag fyller på med mer detaljer och resultat när nästa version är klar.",
     mini1_privacy_link: "Integritetspolicy →",
+    modal_close: "Stäng",
     privacy_tabless_title: "Integritetspolicy – Tabless Library",
     privacy_tabless_intro:
       "Tabless Library lagrar dina samlingar lokalt i webbläsaren. Ingen data skickas till externa servrar.",
@@ -531,6 +532,7 @@ const dict = {
     mini1_note:
       "This is a short, easy-to-read project page. I’ll add more details and results as the next version ships.",
     mini1_privacy_link: "Privacy policy →",
+    modal_close: "Close",
     privacy_tabless_title: "Privacy Policy – Tabless Library",
     privacy_tabless_intro:
       "Tabless Library stores your collections locally in the browser. No data is sent to external servers.",
@@ -890,6 +892,11 @@ function applyLang(lang) {
     if (d[key] !== undefined) el.innerHTML = d[key];
   });
 
+  document.querySelectorAll("[data-i18n-aria]").forEach((el) => {
+    const key = el.getAttribute("data-i18n-aria");
+    if (d[key] !== undefined) el.setAttribute("aria-label", d[key]);
+  });
+
   document.querySelectorAll("[data-cv-link]").forEach((link) => {
     link.setAttribute(
       "href",
@@ -1126,6 +1133,44 @@ function initTracking() {
   });
 }
 
+function initModals() {
+  const openers = document.querySelectorAll("[data-modal-open]");
+  if (!openers.length) return;
+
+  const closeModal = (modal) => {
+    if (!modal) return;
+    modal.classList.remove("is-open");
+    modal.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("modal-open");
+  };
+
+  openers.forEach((btn) => {
+    const targetId = btn.getAttribute("data-modal-open");
+    if (!targetId) return;
+    const modal = document.getElementById(targetId);
+    if (!modal) return;
+
+    btn.addEventListener("click", () => {
+      modal.classList.add("is-open");
+      modal.setAttribute("aria-hidden", "false");
+      document.body.classList.add("modal-open");
+    });
+  });
+
+  document.querySelectorAll("[data-modal-close]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const modal = btn.closest(".privacy-modal");
+      closeModal(modal);
+    });
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key !== "Escape") return;
+    const modal = document.querySelector(".privacy-modal.is-open");
+    closeModal(modal);
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   const storedLang = localStorage.getItem("lang") || "sv";
   applyLang(storedLang);
@@ -1142,4 +1187,5 @@ document.addEventListener("DOMContentLoaded", () => {
   initHeader();
   initSectionObserver();
   initTracking();
+  initModals();
 });
