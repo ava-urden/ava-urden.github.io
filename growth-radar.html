@@ -122,6 +122,32 @@
         white-space: nowrap;
       }
 
+      .back-link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 28px;
+        height: 3em;
+        padding: 0 16px;
+        min-width: 140px;
+        text-decoration: none;
+        color: #111111;
+        font-weight: 500;
+        letter-spacing: 0.08em;
+        border-radius: 3px;
+        transition: all 0.2s linear;
+        cursor: pointer;
+        border: none;
+        background: #ffffff;
+        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+      }
+
+      .back-link:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.12);
+      }
+
       /* Header (from Tabless base) */
       .header {
         position: fixed;
@@ -825,36 +851,40 @@
       }
 
       .header {
-        background: #ffffff;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+        background: rgba(30, 27, 24, 0.92);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.04);
       }
 
       .header--scrolled {
-        background: #ffffff;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.18);
-        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+        background: rgba(30, 27, 24, 0.98);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
       }
 
       .logo {
-        color: #111111;
+        color: #f6f2ec;
       }
 
       .nav a {
-        color: #555555;
+        color: rgba(246, 242, 236, 0.76);
       }
 
       .nav a:hover,
       .nav a.is-active {
-        color: #111111;
+        color: #ffffff;
       }
 
       .lang {
-        border: 1px solid rgba(0, 0, 0, 0.2);
-        background: #f7f7f7;
+        border: 1px solid rgba(246, 242, 236, 0.28);
+        background: rgba(246, 242, 236, 0.12);
       }
 
       .lang__btn {
-        color: #111111;
+        color: rgba(246, 242, 236, 0.78);
+      }
+
+      .lang__btn.is-active {
+        color: #ffffff;
       }
 
       .search {
@@ -1026,17 +1056,21 @@
       :focus-visible {
         outline: 2px solid #111111;
       }
+
+      .header :focus-visible {
+        outline: 2px solid #ffffff;
+      }
     </style>
   </head>
   <body class="case-page">
     <header class="header">
       <div class="container header__inner">
-        <a class="logo" href="index.html#top">A.U. Portfolio</a>
+        <a class="logo" href="index.html#top" data-i18n="logo_text">A.U. Portfolio</a>
         <nav class="nav">
-          <a href="index.html#about">Om mig</a>
-          <a href="index.html#cases">Utvalda projekt</a>
-          <a href="index.html#skills">Färdigheter</a>
-          <a href="index.html#contact">Kontakt</a>
+          <a href="index.html#about" data-i18n="nav_about">Om mig</a>
+          <a href="index.html#cases" data-i18n="nav_cases">Utvalda projekt</a>
+          <a href="index.html#skills" data-i18n="nav_skills">Färdigheter</a>
+          <a href="index.html#contact" data-i18n="nav_contact">Kontakt</a>
         </nav>
         <div class="lang" aria-label="Language toggle">
           <button class="lang__btn is-active" type="button" data-lang="sv">SV</button>
@@ -1048,21 +1082,37 @@
     <main id="top">
       <section class="section-block radar">
         <div class="container">
+          <a href="index.html#mini" class="back-link" data-i18n="back_to_mini">← Tillbaka till små projekt</a>
           <div class="radar__hero">
             <div>
-              <h1 class="h-display">Ava Growth Radar</h1>
-              <p class="eyebrow">Growth Signals API</p>
-              <p class="hero__p">
+              <h1 class="h-display" data-i18n="page_title">Ava Growth Radar</h1>
+              <p class="eyebrow" data-i18n="growth_signals_api">Growth Signals API</p>
+              <p class="hero__p" data-i18n="hero_desc">
                 Live signals for growth teams. Track what is spiking, what is shifting, and where demand is forming.
               </p>
             </div>
             <div class="radar__controls">
-              <div class="timestamp">Updated <span id="updatedAt">--</span></div>
+              <div class="timestamp"><span data-i18n="updated_label">Updated</span> <span id="updatedAt">--</span></div>
               <div class="controls-row">
-                <button class="btn btn--light" id="refreshBtn" type="button" aria-label="Refresh data">Refresh</button>
+                <button
+                  class="btn btn--light"
+                  id="refreshBtn"
+                  type="button"
+                  aria-label="Refresh data"
+                  data-i18n="refresh"
+                  data-i18n-aria="refresh_aria"
+                >
+                  Refresh
+                </button>
                 <div class="search">
-                  <label class="sr-only" for="searchInput">Search signals</label>
-                  <input id="searchInput" type="search" placeholder="Search signals..." autocomplete="off" />
+                  <label class="sr-only" for="searchInput" data-i18n="search_label">Search signals</label>
+                  <input
+                    id="searchInput"
+                    type="search"
+                    placeholder="Search signals..."
+                    autocomplete="off"
+                    data-i18n-placeholder="search_placeholder"
+                  />
                 </div>
               </div>
             </div>
@@ -1074,16 +1124,24 @@
                 <div class="card__heading">
                   <span class="icon-circle" aria-hidden="true">V</span>
                   <div>
-                    <h2>Viral just nu</h2>
-                    <span class="tag">Wikimedia</span>
+                    <h2 data-i18n="viral_title">Viral just nu</h2>
+                    <span class="tag" data-i18n="viral_tag">Wikimedia</span>
                   </div>
                 </div>
                 <div class="card__actions">
                   <div class="chip-group" id="viralToggle" role="tablist" aria-label="Viral region">
                     <button class="chip is-active" type="button" data-project="sv.wikipedia" aria-pressed="true">SE</button>
-                    <button class="chip" type="button" data-project="en.wikipedia" aria-pressed="false">Global</button>
+                    <button
+                      class="chip"
+                      type="button"
+                      data-project="en.wikipedia"
+                      aria-pressed="false"
+                      data-i18n="global_label"
+                    >
+                      Global
+                    </button>
                   </div>
-                  <button class="kebab" type="button" aria-label="More options">...</button>
+                  <button class="kebab" type="button" aria-label="More options" data-i18n-aria="more_options">...</button>
                 </div>
               </div>
               <div class="card__body">
@@ -1096,12 +1154,12 @@
                 <div class="card__heading">
                   <span class="icon-circle" aria-hidden="true">B</span>
                   <div>
-                    <h2>Buzz</h2>
-                    <span class="tag">HN / AI / Ads</span>
+                    <h2 data-i18n="buzz_title">Buzz</h2>
+                    <span class="tag" data-i18n="buzz_tag">HN / AI / Ads</span>
                   </div>
                 </div>
                 <div class="card__actions">
-                  <button class="kebab" type="button" aria-label="More options">...</button>
+                  <button class="kebab" type="button" aria-label="More options" data-i18n-aria="more_options">...</button>
                 </div>
               </div>
               <div class="card__body">
@@ -1115,8 +1173,8 @@
                 <div class="card__heading">
                   <span class="icon-circle" aria-hidden="true">P</span>
                   <div>
-                    <h2>Platform Pulse</h2>
-                    <span class="tag">GDELT</span>
+                    <h2 data-i18n="pulse_title">Platform Pulse</h2>
+                    <span class="tag" data-i18n="pulse_tag">GDELT</span>
                   </div>
                 </div>
                 <div class="card__actions">
@@ -1128,7 +1186,7 @@
                     <button class="chip is-active" type="button" data-timespan="7d" aria-pressed="true">7d</button>
                     <button class="chip" type="button" data-timespan="30d" aria-pressed="false">30d</button>
                   </div>
-                  <button class="kebab" type="button" aria-label="More options">...</button>
+                  <button class="kebab" type="button" aria-label="More options" data-i18n-aria="more_options">...</button>
                 </div>
               </div>
               <div class="card__body">
@@ -1141,12 +1199,12 @@
                 <div class="card__heading">
                   <span class="icon-circle" aria-hidden="true">FX</span>
                   <div>
-                    <h2>FX / Margin Watch</h2>
-                    <span class="tag">Frankfurter</span>
+                    <h2 data-i18n="fx_title">FX / Margin Watch</h2>
+                    <span class="tag" data-i18n="fx_tag">Frankfurter</span>
                   </div>
                 </div>
                 <div class="card__actions">
-                  <button class="kebab" type="button" aria-label="More options">...</button>
+                  <button class="kebab" type="button" aria-label="More options" data-i18n-aria="more_options">...</button>
                 </div>
               </div>
               <div class="card__body">
@@ -1159,21 +1217,35 @@
                 <div class="card__heading">
                   <span class="icon-circle" aria-hidden="true">WX</span>
                   <div>
-                    <h2>Weather Trigger</h2>
-                    <span class="tag">Open-Meteo</span>
+                    <h2 data-i18n="weather_title">Weather Trigger</h2>
+                    <span class="tag" data-i18n="weather_tag">Open-Meteo</span>
                   </div>
                 </div>
                 <div class="card__actions">
-                  <button class="kebab" type="button" aria-label="More options">...</button>
+                  <button class="kebab" type="button" aria-label="More options" data-i18n-aria="more_options">...</button>
                 </div>
               </div>
               <div class="card__body">
                 <form class="weather__form" id="weatherForm">
-                  <label class="sr-only" for="weatherCity">City</label>
-                  <input id="weatherCity" type="text" value="Stockholm" placeholder="City (Stockholm)" />
-                  <button class="btn btn--ghost btn--small" type="submit" aria-label="Set city">Set</button>
+                  <label class="sr-only" for="weatherCity" data-i18n="weather_label">City</label>
+                  <input
+                    id="weatherCity"
+                    type="text"
+                    value="Stockholm"
+                    placeholder="City (Stockholm)"
+                    data-i18n-placeholder="weather_placeholder"
+                  />
+                  <button
+                    class="btn btn--ghost btn--small"
+                    type="submit"
+                    aria-label="Set city"
+                    data-i18n="weather_set"
+                    data-i18n-aria="weather_set_aria"
+                  >
+                    Set
+                  </button>
                 </form>
-                <span class="status-pill" id="weatherTrigger">Laddar...</span>
+                <span class="status-pill" id="weatherTrigger" data-i18n="loading">Laddar...</span>
                 <div class="weather__summary" id="weatherSummary"></div>
               </div>
             </article>
@@ -1183,12 +1255,12 @@
                 <div class="card__heading">
                   <span class="icon-circle" aria-hidden="true">S</span>
                   <div>
-                    <h2>Signal Meter</h2>
-                    <span class="tag">Composite</span>
+                    <h2 data-i18n="meter_title">Signal Meter</h2>
+                    <span class="tag" data-i18n="meter_tag">Composite</span>
                   </div>
                 </div>
                 <div class="card__actions">
-                  <button class="kebab" type="button" aria-label="More options">...</button>
+                  <button class="kebab" type="button" aria-label="More options" data-i18n-aria="more_options">...</button>
                 </div>
               </div>
               <div class="card__body meter">
@@ -1196,20 +1268,20 @@
                   <div class="meter__fill" id="signalFill"></div>
                 </div>
                 <div class="meter__labels">
-                  <div>Score: <strong id="signalScore">--</strong></div>
-                  <div class="muted" id="signalLevel">Loading...</div>
+                  <div><span data-i18n="signal_score">Score</span>: <strong id="signalScore">--</strong></div>
+                  <div class="muted" id="signalLevel" data-i18n="loading">Loading...</div>
                 </div>
                 <div class="meter__stats">
                   <div class="stat">
-                    <span class="stat__label">Buzz hits</span>
+                    <span class="stat__label" data-i18n="signal_buzz">Buzz hits</span>
                     <span class="stat__value" id="signalBuzz">--</span>
                   </div>
                   <div class="stat">
-                    <span class="stat__label">Pulse volume</span>
+                    <span class="stat__label" data-i18n="signal_pulse">Pulse volume</span>
                     <span class="stat__value" id="signalPulse">--</span>
                   </div>
                   <div class="stat">
-                    <span class="stat__label">Weather trigger</span>
+                    <span class="stat__label" data-i18n="signal_weather">Weather trigger</span>
                     <span class="stat__value" id="signalWeather">--</span>
                   </div>
                 </div>
@@ -1221,24 +1293,28 @@
                 <div class="card__heading">
                   <span class="icon-circle" aria-hidden="true">M</span>
                   <div>
-                    <h2>Founder Manifesto</h2>
-                    <span class="tag">Daily</span>
+                    <h2 data-i18n="manifesto_title">Founder Manifesto</h2>
+                    <span class="tag" data-i18n="manifesto_tag">Daily</span>
                   </div>
                 </div>
                 <div class="card__actions">
-                  <button class="kebab" type="button" aria-label="More options">...</button>
+                  <button class="kebab" type="button" aria-label="More options" data-i18n-aria="more_options">...</button>
                 </div>
               </div>
               <div class="card__body" id="manifestoBody">
                 <span class="tag" id="manifestoTag">Laddar...</span>
                 <div class="manifesto__line" id="manifestoLine">...</div>
                 <div class="manifesto__meta">
-                  <span><strong>Action:</strong> <span id="manifestoAction">...</span></span>
-                  <span><strong>Focus metric:</strong> <span id="manifestoMetric">...</span></span>
+                  <span><strong data-i18n="action_label">Action:</strong> <span id="manifestoAction">...</span></span>
+                  <span><strong data-i18n="metric_label">Focus metric:</strong> <span id="manifestoMetric">...</span></span>
                 </div>
                 <div class="manifesto__buttons">
-                  <button class="btn btn--light btn--small" type="button" id="manifestoRandom">Ny mantra</button>
-                  <button class="btn btn--outline btn--small" type="button" id="manifestoCopy">Kopiera</button>
+                  <button class="btn btn--light btn--small" type="button" id="manifestoRandom" data-i18n="new_mantra">
+                    Ny mantra
+                  </button>
+                  <button class="btn btn--outline btn--small" type="button" id="manifestoCopy" data-i18n="copy">
+                    Kopiera
+                  </button>
                 </div>
               </div>
             </article>
@@ -1249,25 +1325,25 @@
       <footer id="contact" class="footer section-block">
         <div class="container footer__grid">
           <div class="footer__left">
-            <h2>Kontakt</h2>
-            <p class="footer__text">
+            <h2 data-i18n="contact_title">Kontakt</h2>
+            <p class="footer__text" data-i18n="footer_text">
               Nyfiken på att veta mer eller diskutera ett projekt?
               Hör av dig så tar vi en kaffe!
             </p>
-            <a href="./cv/ava-urden-cv-sv.pdf" download class="btn btn--white">Ladda ner CV</a>
+            <a href="./cv/ava-urden-cv-sv.pdf" download class="btn btn--white" data-i18n="cta_cv">Ladda ner CV</a>
           </div>
 
           <div class="footer__right">
             <div class="contact-group">
-              <span class="contact-label">Email</span>
+              <span class="contact-label" data-i18n="contact_email">Email</span>
               <a href="mailto:ava.urden@gmail.com" class="contact-link email-link">ava.urden@gmail.com</a>
             </div>
             <div class="contact-group">
-              <span class="contact-label">Mobil</span>
+              <span class="contact-label" data-i18n="contact_mobile">Mobil</span>
               <a href="tel:+46723111441" class="contact-link">+46 72 311 14 41</a>
             </div>
             <div class="contact-group">
-              <span class="contact-label">LinkedIn</span>
+              <span class="contact-label" data-i18n="contact_linkedin">LinkedIn</span>
               <a href="https://linkedin.com/in/avaurden" target="_blank" rel="noopener" class="contact-link">
                 linkedin.com/in/avaurden
               </a>
@@ -1293,10 +1369,164 @@
         buzzMatches: 0,
         viralTopViews: 0,
         weatherTrigger: "",
+        weatherData: null,
+        lang: "sv",
         loaded: {
           viral: false,
           buzz: false,
           pulse: false
+        }
+      };
+
+      const langDict = {
+        sv: {
+          logo_text: "A.U. Portfolio",
+          nav_about: "Om mig",
+          nav_cases: "Utvalda projekt",
+          nav_skills: "Färdigheter",
+          nav_contact: "Kontakt",
+          back_to_mini: "← Tillbaka till små projekt",
+          page_title: "Ava Growth Radar",
+          growth_signals_api: "Growth Signals API",
+          hero_desc: "Live-signaler för growth-team. Se vad som spikar, vad som skiftar och var efterfrågan byggs.",
+          updated_label: "Uppdaterad",
+          refresh: "Uppdatera",
+          refresh_aria: "Uppdatera data",
+          search_label: "Sök signaler",
+          search_placeholder: "Sök signaler...",
+          viral_title: "Viral just nu",
+          viral_tag: "Wikimedia",
+          global_label: "Global",
+          buzz_title: "Buzz",
+          buzz_tag: "HN / AI / Ads",
+          pulse_title: "Platform Pulse",
+          pulse_tag: "GDELT",
+          fx_title: "FX / Marginalkoll",
+          fx_tag: "Frankfurter",
+          weather_title: "Vädertrigger",
+          weather_tag: "Open-Meteo",
+          weather_label: "Stad",
+          weather_placeholder: "Stad (Stockholm)",
+          weather_set: "Sätt",
+          weather_set_aria: "Sätt stad",
+          meter_title: "Signalmätare",
+          meter_tag: "Kombinerad",
+          manifesto_title: "Grundarmanifest",
+          manifesto_tag: "Daglig",
+          more_options: "Fler alternativ",
+          signal_score: "Poäng",
+          signal_buzz: "Buzz-träffar",
+          signal_pulse: "Pulse-volym",
+          signal_weather: "Vädertrigger",
+          action_label: "Action:",
+          metric_label: "Fokusmått:",
+          new_mantra: "Ny mantra",
+          copy: "Kopiera",
+          copied: "Kopierad",
+          copy_failed: "Misslyckades",
+          open: "Öppna",
+          no_matches: "Inga träffar.",
+          views: "visningar",
+          points: "poäng",
+          loading: "Laddar...",
+          open_source: "Open source",
+          error_wikimedia: "Kunde inte hämta Wikimedia just nu.",
+          error_hn: "Kunde inte hämta HN just nu.",
+          error_gdelt: "Kunde inte hämta GDELT just nu.",
+          error_fx: "Kunde inte hämta FX-kurser just nu.",
+          error_weather: "Kunde inte hämta väder just nu.",
+          error_manifesto: "Kunde inte hämta manifestet.",
+          buzz_no_matches: "Inga träffar på nyckelord. Visar topp 10.",
+          weather_unavailable: "Otillgängligt",
+          weather_summary: "{city}: {temp}°C, moln {cloud}%, regn {precip}%",
+          weather_sunny: "Soligt fönster",
+          weather_rain: "Regnläge",
+          weather_cloud: "Molnläge",
+          weather_mild: "Lugn nivå",
+          signal_level_hot: "Hett",
+          signal_level_building: "Bygger",
+          signal_level_quiet: "Lugnt",
+          contact_title: "Kontakt",
+          footer_text:
+            "Nyfiken på att veta mer eller diskutera ett projekt? Hör av dig så tar vi en kaffe!",
+          cta_cv: "Ladda ner CV",
+          contact_email: "Email",
+          contact_mobile: "Mobil",
+          contact_linkedin: "LinkedIn"
+        },
+        en: {
+          logo_text: "A.U. Portfolio",
+          nav_about: "About",
+          nav_cases: "Selected work",
+          nav_skills: "Skills",
+          nav_contact: "Contact",
+          back_to_mini: "← Back to mini projects",
+          page_title: "Ava Growth Radar",
+          growth_signals_api: "Growth Signals API",
+          hero_desc: "Live signals for growth teams. Track what is spiking, what is shifting, and where demand is forming.",
+          updated_label: "Updated",
+          refresh: "Refresh",
+          refresh_aria: "Refresh data",
+          search_label: "Search signals",
+          search_placeholder: "Search signals...",
+          viral_title: "Viral now",
+          viral_tag: "Wikimedia",
+          global_label: "Global",
+          buzz_title: "Buzz",
+          buzz_tag: "HN / AI / Ads",
+          pulse_title: "Platform Pulse",
+          pulse_tag: "GDELT",
+          fx_title: "FX / Margin Watch",
+          fx_tag: "Frankfurter",
+          weather_title: "Weather Trigger",
+          weather_tag: "Open-Meteo",
+          weather_label: "City",
+          weather_placeholder: "City (Stockholm)",
+          weather_set: "Set",
+          weather_set_aria: "Set city",
+          meter_title: "Signal Meter",
+          meter_tag: "Composite",
+          manifesto_title: "Founder Manifesto",
+          manifesto_tag: "Daily",
+          more_options: "More options",
+          signal_score: "Score",
+          signal_buzz: "Buzz hits",
+          signal_pulse: "Pulse volume",
+          signal_weather: "Weather trigger",
+          action_label: "Action:",
+          metric_label: "Focus metric:",
+          new_mantra: "New mantra",
+          copy: "Copy",
+          copied: "Copied",
+          copy_failed: "Failed",
+          open: "Open",
+          no_matches: "No matches.",
+          views: "views",
+          points: "points",
+          loading: "Loading...",
+          open_source: "Open source",
+          error_wikimedia: "Could not load Wikimedia right now.",
+          error_hn: "Could not load HN right now.",
+          error_gdelt: "Could not load GDELT right now.",
+          error_fx: "Could not load FX rates right now.",
+          error_weather: "Could not load weather right now.",
+          error_manifesto: "Could not load manifesto.",
+          buzz_no_matches: "No keyword matches. Showing top 10.",
+          weather_unavailable: "Unavailable",
+          weather_summary: "{city}: {temp}°C, clouds {cloud}%, precip {precip}%",
+          weather_sunny: "Sunny window",
+          weather_rain: "Rain push",
+          weather_cloud: "Cloud watch",
+          weather_mild: "Mild watch",
+          signal_level_hot: "Hot",
+          signal_level_building: "Building",
+          signal_level_quiet: "Quiet",
+          contact_title: "Contact",
+          footer_text: "Curious to learn more or discuss a project? Reach out and let’s grab a coffee.",
+          cta_cv: "Download CV",
+          contact_email: "Email",
+          contact_mobile: "Phone",
+          contact_linkedin: "LinkedIn"
         }
       };
 
@@ -1354,9 +1584,49 @@
         manifestoBody: document.getElementById("manifestoBody")
       };
 
+      function t(key) {
+        const dict = langDict[state.lang] || langDict.sv;
+        return dict[key] || langDict.sv[key] || "";
+      }
+
+      function formatTemplate(str, vars) {
+        return str.replace(/\{(\w+)\}/g, (match, key) => (key in vars ? vars[key] : match));
+      }
+
+      function applyLang(lang) {
+        const dict = langDict[lang] || langDict.sv;
+        state.lang = lang;
+        document.documentElement.lang = lang;
+        document.querySelectorAll("[data-i18n]").forEach((el) => {
+          const key = el.dataset.i18n;
+          if (dict[key]) el.textContent = dict[key];
+        });
+        document.querySelectorAll("[data-i18n-placeholder]").forEach((el) => {
+          const key = el.dataset.i18nPlaceholder;
+          if (dict[key]) el.setAttribute("placeholder", dict[key]);
+        });
+        document.querySelectorAll("[data-i18n-aria]").forEach((el) => {
+          const key = el.dataset.i18nAria;
+          if (dict[key]) el.setAttribute("aria-label", dict[key]);
+        });
+        document.querySelectorAll(".lang__btn").forEach((btn) => {
+          btn.classList.toggle("is-active", btn.dataset.lang === lang);
+        });
+        localStorage.setItem("lang", lang);
+        updateTimestamp();
+        renderViral();
+        renderBuzz();
+        renderPulse();
+        updateSignalMeter();
+        if (state.weatherData) {
+          renderWeather(state.weatherData);
+        }
+      }
+
       function updateTimestamp() {
         const now = new Date();
-        const formatted = now.toLocaleString("sv-SE", {
+        const locale = state.lang === "en" ? "en-US" : "sv-SE";
+        const formatted = now.toLocaleString(locale, {
           year: "numeric",
           month: "short",
           day: "numeric",
@@ -1427,7 +1697,7 @@
 
       function renderError(container, message, link, asList = false) {
         const linkHtml = link
-          ? ` <a href="${link}" target="_blank" rel="noopener">Open source</a>`
+          ? ` <a href="${link}" target="_blank" rel="noopener">${t("open_source")}</a>`
           : "";
         const body = `<div class="error">${escapeHTML(message)}${linkHtml}</div>`;
         container.innerHTML = asList ? `<li class="list__empty">${body}</li>` : body;
@@ -1457,7 +1727,7 @@
         if (!state.loaded.viral) return;
         const list = filterBySearch(state.viral);
         if (!list.length) {
-          elements.viralList.innerHTML = `<li class="list__empty">No matches.</li>`;
+          elements.viralList.innerHTML = `<li class="list__empty">${t("no_matches")}</li>`;
           return;
         }
         elements.viralList.innerHTML = list
@@ -1467,9 +1737,9 @@
                 <span class="rank">${String(item.rank).padStart(2, "0")}</span>
                 <div class="list__text">
                   <span class="list__title">${escapeHTML(item.title)}</span>
-                  <span class="list__meta">${formatNumber(item.views)} views</span>
+                  <span class="list__meta">${formatNumber(item.views)} ${t("views")}</span>
                 </div>
-                <a class="list__link" href="${item.url}" target="_blank" rel="noopener" aria-label="Open ${escapeHTML(item.title)}">Open</a>
+                <a class="list__link" href="${item.url}" target="_blank" rel="noopener" aria-label="${t("open")} ${escapeHTML(item.title)}">${t("open")}</a>
               </li>
             `;
           })
@@ -1478,9 +1748,10 @@
 
       function renderBuzz() {
         if (!state.loaded.buzz) return;
+        elements.buzzNote.textContent = state.buzzMatches ? "" : t("buzz_no_matches");
         const list = filterBySearch(state.buzz);
         if (!list.length) {
-          elements.buzzList.innerHTML = `<li class="list__empty">No matches.</li>`;
+          elements.buzzList.innerHTML = `<li class="list__empty">${t("no_matches")}</li>`;
           return;
         }
         elements.buzzList.innerHTML = list
@@ -1490,9 +1761,9 @@
                 <span class="rank">${String(index + 1).padStart(2, "0")}</span>
                 <div class="list__text">
                   <span class="list__title">${escapeHTML(item.title)}</span>
-                  <span class="list__meta">${formatNumber(item.points)} points</span>
+                  <span class="list__meta">${formatNumber(item.points)} ${t("points")}</span>
                 </div>
-                <a class="list__link" href="${item.url}" target="_blank" rel="noopener" aria-label="Open ${escapeHTML(item.title)}">Open</a>
+                <a class="list__link" href="${item.url}" target="_blank" rel="noopener" aria-label="${t("open")} ${escapeHTML(item.title)}">${t("open")}</a>
               </li>
             `;
           })
@@ -1503,7 +1774,7 @@
         if (!state.loaded.pulse) return;
         const list = filterBySearch(state.pulse);
         if (!list.length) {
-          elements.pulseList.innerHTML = `<li class="list__empty">No matches.</li>`;
+          elements.pulseList.innerHTML = `<li class="list__empty">${t("no_matches")}</li>`;
           return;
         }
         elements.pulseList.innerHTML = list
@@ -1515,7 +1786,7 @@
                   <span class="list__title">${escapeHTML(item.title)}</span>
                   <span class="list__meta">${escapeHTML(item.source)} • ${escapeHTML(item.date)}</span>
                 </div>
-                <a class="list__link" href="${item.url}" target="_blank" rel="noopener" aria-label="Open ${escapeHTML(item.title)}">Open</a>
+                <a class="list__link" href="${item.url}" target="_blank" rel="noopener" aria-label="${t("open")} ${escapeHTML(item.title)}">${t("open")}</a>
               </li>
             `;
           })
@@ -1530,17 +1801,17 @@
         const buzzBoost = Math.min(20, buzzHits * 3);
         const pulseBoost = Math.min(15, pulseHits);
         const viralBoost = Math.min(15, Math.round(topViews / 50000));
-        const weatherBoost = state.weatherTrigger === "Sunny window" ? 10 : state.weatherTrigger === "Rain push" ? 5 : 0;
+        const weatherBoost = state.weatherTrigger === "sunny" ? 10 : state.weatherTrigger === "rain" ? 5 : 0;
 
         const score = Math.max(0, Math.min(100, 40 + buzzBoost + pulseBoost + viralBoost + weatherBoost));
-        const level = score > 75 ? "Hot" : score > 55 ? "Building" : "Quiet";
+        const levelKey = score > 75 ? "signal_level_hot" : score > 55 ? "signal_level_building" : "signal_level_quiet";
 
         elements.signalScore.textContent = score;
-        elements.signalLevel.textContent = level;
+        elements.signalLevel.textContent = t(levelKey);
         elements.signalFill.style.width = `${score}%`;
         elements.signalBuzz.textContent = buzzHits;
         elements.signalPulse.textContent = pulseHits;
-        elements.signalWeather.textContent = state.weatherTrigger || "--";
+        elements.signalWeather.textContent = state.weatherTrigger ? t(`weather_${state.weatherTrigger}`) : "--";
       }
 
       async function loadViral(force = false) {
@@ -1565,7 +1836,7 @@
           renderViral();
         } catch (err) {
           state.loaded.viral = true;
-          renderError(elements.viralList, "Could not load Wikimedia right now.", url, true);
+          renderError(elements.viralList, t("error_wikimedia"), url, true);
         }
         updateSignalMeter();
       }
@@ -1589,13 +1860,11 @@
             url: hit.url || `https://news.ycombinator.com/item?id=${hit.objectID}`
           }));
           state.loaded.buzz = true;
-          if (!matches.length) {
-            elements.buzzNote.textContent = "No keyword matches. Showing top 10.";
-          }
+          if (!matches.length) elements.buzzNote.textContent = t("buzz_no_matches");
           renderBuzz();
         } catch (err) {
           state.loaded.buzz = true;
-          renderError(elements.buzzList, "Could not load HN right now.", url, true);
+          renderError(elements.buzzList, t("error_hn"), url, true);
         }
         updateSignalMeter();
       }
@@ -1645,13 +1914,13 @@
           renderPulse();
         } catch (err) {
           state.loaded.pulse = true;
-          renderError(elements.pulseList, "Could not load GDELT right now.", url, true);
+          renderError(elements.pulseList, t("error_gdelt"), url, true);
         }
         updateSignalMeter();
       }
 
       async function loadFx(force = false) {
-        elements.fxRates.innerHTML = `<div class="muted">Laddar...</div>`;
+        elements.fxRates.innerHTML = `<div class="muted">${t("loading")}</div>`;
         const url = "https://api.frankfurter.dev/latest?from=EUR&to=SEK,USD,NOK";
         const cacheKey = "growthRadar:fx:latest";
         try {
@@ -1690,15 +1959,25 @@
             })
             .join("");
         } catch (err) {
-          renderError(elements.fxRates, "Could not load FX rates right now.", url, false);
+          renderError(elements.fxRates, t("error_fx"), url, false);
         }
       }
 
-      function getWeatherTrigger(cloud, precip) {
-        if (cloud < 40 && precip < 20) return "Sunny window";
-        if (precip >= 60) return "Rain push";
-        if (cloud >= 70) return "Cloud watch";
-        return "Mild watch";
+      function getWeatherTriggerKey(cloud, precip) {
+        if (cloud < 40 && precip < 20) return "sunny";
+        if (precip >= 60) return "rain";
+        if (cloud >= 70) return "cloud";
+        return "mild";
+      }
+
+      function renderWeather(data) {
+        elements.weatherTrigger.textContent = t(`weather_${data.triggerKey}`);
+        elements.weatherSummary.textContent = formatTemplate(t("weather_summary"), {
+          city: data.city,
+          temp: data.temp ?? "--",
+          cloud: data.cloud ?? "--",
+          precip: data.precip ?? "--"
+        });
       }
 
       async function resolveCity(city, force = false) {
@@ -1721,7 +2000,7 @@
       }
 
       async function loadWeather(force = false) {
-        elements.weatherTrigger.textContent = "Laddar...";
+        elements.weatherTrigger.textContent = t("loading");
         elements.weatherSummary.textContent = "";
         const city = elements.weatherCity.value || defaultCity.name;
 
@@ -1737,22 +2016,28 @@
             ? daily.precipitation_probability_max[0]
             : 0;
 
-          const trigger = getWeatherTrigger(current.cloud_cover || 0, precipProb || 0);
-          state.weatherTrigger = trigger;
-          elements.weatherTrigger.textContent = trigger;
-          elements.weatherSummary.textContent = `${coords.name}: ${current.temperature_2m ?? "--"}°C, clouds ${
-            current.cloud_cover ?? "--"
-          }%, precip ${precipProb ?? "--"}%`;
+          const triggerKey = getWeatherTriggerKey(current.cloud_cover || 0, precipProb || 0);
+          state.weatherTrigger = triggerKey;
+          state.weatherData = {
+            city: coords.name,
+            temp: current.temperature_2m,
+            cloud: current.cloud_cover,
+            precip: precipProb,
+            triggerKey
+          };
+          renderWeather(state.weatherData);
 
           updateSignalMeter();
         } catch (err) {
           renderError(
             elements.weatherSummary,
-            "Could not load weather right now.",
+            t("error_weather"),
             "https://api.open-meteo.com/",
             false
           );
-          elements.weatherTrigger.textContent = "Unavailable";
+          state.weatherTrigger = "";
+          state.weatherData = null;
+          elements.weatherTrigger.textContent = t("weather_unavailable");
         }
       }
 
@@ -1770,7 +2055,7 @@
       }
 
       async function loadManifesto(force = false) {
-        elements.manifestoTag.textContent = "Laddar...";
+        elements.manifestoTag.textContent = t("loading");
         elements.manifestoLine.textContent = "...";
         const url = "/data/manifesto.json";
         const cacheKey = "growthRadar:manifesto";
@@ -1782,7 +2067,7 @@
           const item = data[index];
           renderManifesto(item);
         } catch (err) {
-          renderError(elements.manifestoBody, "Could not load manifesto.", url, false);
+          renderError(elements.manifestoBody, t("error_manifesto"), url, false);
         }
       }
 
@@ -1795,6 +2080,13 @@
       }
 
       function attachEvents() {
+        const storedLang = localStorage.getItem("lang") || "sv";
+        applyLang(storedLang);
+
+        document.querySelectorAll(".lang__btn").forEach((btn) => {
+          btn.addEventListener("click", () => applyLang(btn.dataset.lang));
+        });
+
         const viralToggle = document.getElementById("viralToggle");
         viralToggle.addEventListener("click", (event) => {
           const button = event.target.closest("button[data-project]");
@@ -1849,14 +2141,14 @@
           const text = `${elements.manifestoLine.textContent}\n${elements.manifestoAction.textContent}\n${elements.manifestoMetric.textContent}`;
           try {
             await navigator.clipboard.writeText(text);
-            elements.manifestoCopy.textContent = "Kopierad";
+            elements.manifestoCopy.textContent = t("copied");
             setTimeout(() => {
-              elements.manifestoCopy.textContent = "Kopiera";
+              elements.manifestoCopy.textContent = t("copy");
             }, 1200);
           } catch (err) {
-            elements.manifestoCopy.textContent = "Misslyckades";
+            elements.manifestoCopy.textContent = t("copy_failed");
             setTimeout(() => {
-              elements.manifestoCopy.textContent = "Kopiera";
+              elements.manifestoCopy.textContent = t("copy");
             }, 1200);
           }
         });
@@ -1876,7 +2168,6 @@
         loadManifesto(force);
       }
 
-      updateTimestamp();
       attachEvents();
       loadAll(false);
     </script>
