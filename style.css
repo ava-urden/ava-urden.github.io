@@ -1244,6 +1244,23 @@ main {
   color: rgba(0, 0, 0, 0.55);
 }
 
+.mini-detail__note {
+  margin: 14px 0 0;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.mini-steps {
+  margin: 0;
+  padding-left: 20px;
+  font-size: 0.98rem;
+  color: var(--muted);
+}
+
+.mini-steps li {
+  margin-bottom: 10px;
+}
+
 /* Footer */
 .footer {
   background: var(--accent-dark);

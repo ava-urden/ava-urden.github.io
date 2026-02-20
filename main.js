@@ -76,6 +76,10 @@ const dict = {
     mini1_pill_2: "Growth Tech",
     mini1_pill_3: "Gratis",
     mini1_download: "Ladda ner gratis",
+    mini1_install_note: "Manuell installation krävs (Developer mode i Chrome).",
+    mini1_install_title: "Installera i Chrome",
+    mini1_install_list:
+      "<li>Ladda ner zipfilen och packa upp den.</li><li>Öppna <strong>chrome://extensions</strong> i Chrome.</li><li>Slå på <strong>Developer mode</strong>.</li><li>Klicka <strong>Load unpacked</strong> och välj mappen.</li>",
     mini1_media_label: "Plugin preview",
     mini1_overview_title: "Översikt",
     mini1_overview_list:
@@ -87,6 +91,22 @@ const dict = {
     mini1_stack_list: "<li>JavaScript</li><li>Chrome Extension API</li><li>Local storage</li>",
     mini1_note:
       "Det här är en kortare, lättläst projektsida. Jag fyller på med mer detaljer och resultat när nästa version är klar.",
+    mini1_privacy_link: "Integritetspolicy →",
+    privacy_tabless_title: "Integritetspolicy – Tabless Library",
+    privacy_tabless_intro:
+      "Tabless Library lagrar dina samlingar lokalt i webbläsaren. Ingen data skickas till externa servrar.",
+    privacy_tabless_updated: "Senast uppdaterad: 20 februari 2026.",
+    privacy_tabless_data_title: "Data som lagras",
+    privacy_tabless_data_list:
+      "<li>Sparade flikar: URL, titel och ev. bild/metadata</li><li>Samlingar/mappar och inställningar</li><li>Widget-position per webbplats</li>",
+    privacy_tabless_permissions_title: "Behörigheter",
+    privacy_tabless_permissions_list:
+      "<li><strong>tabs:</strong> läsa titel/URL och öppna sparade flikar</li><li><strong>storage:</strong> spara samlingar lokalt</li><li><strong>sidePanel:</strong> visa biblioteket i sidopanelen</li><li><strong>contextMenus:</strong> snabbmeny för att spara flik</li><li><strong>host permissions (http/https):</strong> visa pin-widget och läsa sidans metadata när du sparar</li>",
+    privacy_tabless_sharing_title: "Delning & analys",
+    privacy_tabless_sharing_body:
+      "Ingen data delas eller säljs. Ingen analytics eller spårning används.",
+    privacy_tabless_contact_title: "Kontakt",
+    privacy_tabless_contact_body: "Frågor om integritet? Mejla ava.urden@gmail.com.",
 
     skills_main_title: "Färdigheter & verktyg",
     skills_intro: "Där strategi möter genomförande – från idé till mätbar effekt.",
@@ -492,6 +512,10 @@ const dict = {
     mini1_pill_2: "Growth Tech",
     mini1_pill_3: "Free",
     mini1_download: "Download for free",
+    mini1_install_note: "Manual installation required (Developer mode in Chrome).",
+    mini1_install_title: "Install in Chrome",
+    mini1_install_list:
+      "<li>Download the zip file and unzip it.</li><li>Open <strong>chrome://extensions</strong> in Chrome.</li><li>Enable <strong>Developer mode</strong>.</li><li>Click <strong>Load unpacked</strong> and select the folder.</li>",
     mini1_media_label: "Plugin preview",
     mini1_overview_title: "Overview",
     mini1_overview_list:
@@ -502,6 +526,22 @@ const dict = {
     mini1_stack_list: "<li>JavaScript</li><li>Chrome Extension API</li><li>Local storage</li>",
     mini1_note:
       "This is a short, easy-to-read project page. I’ll add more details and results as the next version ships.",
+    mini1_privacy_link: "Privacy policy →",
+    privacy_tabless_title: "Privacy Policy – Tabless Library",
+    privacy_tabless_intro:
+      "Tabless Library stores your collections locally in the browser. No data is sent to external servers.",
+    privacy_tabless_updated: "Last updated: February 20, 2026.",
+    privacy_tabless_data_title: "Data stored",
+    privacy_tabless_data_list:
+      "<li>Saved tabs: URL, title, and optional image/metadata</li><li>Collections/folders and settings</li><li>Widget position per site</li>",
+    privacy_tabless_permissions_title: "Permissions",
+    privacy_tabless_permissions_list:
+      "<li><strong>tabs:</strong> read tab title/URL and open saved tabs</li><li><strong>storage:</strong> store collections locally</li><li><strong>sidePanel:</strong> show the library in the side panel</li><li><strong>contextMenus:</strong> quick menu to save a tab</li><li><strong>host permissions (http/https):</strong> show the pin widget and read page metadata when saving</li>",
+    privacy_tabless_sharing_title: "Sharing & analytics",
+    privacy_tabless_sharing_body:
+      "No data is shared or sold. No analytics or tracking is used.",
+    privacy_tabless_contact_title: "Contact",
+    privacy_tabless_contact_body: "Questions about privacy? Email ava.urden@gmail.com.",
 
     skills_main_title: "Skills & tools",
     skills_intro: "Where strategy meets execution – from idea to measurable impact.",
