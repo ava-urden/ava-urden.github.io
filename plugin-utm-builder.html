@@ -142,54 +142,6 @@
             </ol>
           </div>
 
-          <div class="privacy-modal" id="privacy-modal" role="dialog" aria-modal="true" aria-labelledby="privacy-modal-title" aria-hidden="true">
-            <div class="privacy-modal__overlay" data-modal-close></div>
-            <div class="privacy-modal__content">
-              <button
-                class="privacy-modal__close"
-                type="button"
-                data-modal-close
-                data-i18n-aria="modal_close"
-                aria-label="Stäng"
-              >
-                <span class="privacy-modal__close-icon" aria-hidden="true">&times;</span>
-                <span class="sr-only" data-i18n="modal_close">Stäng</span>
-              </button>
-              <h3 id="privacy-modal-title" data-i18n="privacy_tabless_title">Integritetspolicy – Tabless Library</h3>
-              <p data-i18n="privacy_tabless_intro">
-                Tabless Library lagrar dina samlingar lokalt i webbläsaren. Ingen data skickas till externa servrar.
-              </p>
-              <div class="privacy-modal__section">
-                <h4 data-i18n="privacy_tabless_data_title">Data som lagras</h4>
-                <ul class="bullet-list" data-i18n-html="privacy_tabless_data_list">
-                  <li>Sparade flikar: URL, titel och ev. bild/metadata</li>
-                  <li>Samlingar/mappar och inställningar</li>
-                  <li>Widget-position per webbplats</li>
-                </ul>
-              </div>
-              <div class="privacy-modal__section">
-                <h4 data-i18n="privacy_tabless_permissions_title">Behörigheter</h4>
-                <ul class="bullet-list" data-i18n-html="privacy_tabless_permissions_list">
-                  <li><strong>tabs:</strong> läsa titel/URL och öppna sparade flikar</li>
-                  <li><strong>storage:</strong> spara samlingar lokalt</li>
-                  <li><strong>sidePanel:</strong> visa biblioteket i sidopanelen</li>
-                  <li><strong>contextMenus:</strong> snabbmeny för att spara flik</li>
-                  <li><strong>host permissions (http/https):</strong> visa pin-widget och läsa sidans metadata när du sparar</li>
-                </ul>
-              </div>
-              <div class="privacy-modal__section">
-                <h4 data-i18n="privacy_tabless_sharing_title">Delning & analys</h4>
-                <p data-i18n="privacy_tabless_sharing_body">
-                  Ingen data delas eller säljs. Ingen analytics eller spårning används.
-                </p>
-              </div>
-              <div class="privacy-modal__section">
-                <h4 data-i18n="privacy_tabless_contact_title">Kontakt</h4>
-                <p data-i18n="privacy_tabless_contact_body">Frågor om integritet? Mejla ava.urden@gmail.com.</p>
-              </div>
-            </div>
-          </div>
-
         </div>
       </section>
 
@@ -228,6 +180,54 @@
         </div>
       </footer>
     </main>
+
+    <div class="privacy-modal" id="privacy-modal" role="dialog" aria-modal="true" aria-labelledby="privacy-modal-title" aria-hidden="true">
+      <div class="privacy-modal__overlay" data-modal-close></div>
+      <div class="privacy-modal__content">
+        <button
+          class="privacy-modal__close"
+          type="button"
+          data-modal-close
+          data-i18n-aria="modal_close"
+          aria-label="Stäng"
+        >
+          <span class="privacy-modal__close-icon" aria-hidden="true">&times;</span>
+          <span class="sr-only" data-i18n="modal_close">Stäng</span>
+        </button>
+        <h3 id="privacy-modal-title" data-i18n="privacy_tabless_title">Integritetspolicy – Tabless Library</h3>
+        <p data-i18n="privacy_tabless_intro">
+          Tabless Library lagrar dina samlingar lokalt i webbläsaren. Ingen data skickas till externa servrar.
+        </p>
+        <div class="privacy-modal__section">
+          <h4 data-i18n="privacy_tabless_data_title">Data som lagras</h4>
+          <ul class="bullet-list" data-i18n-html="privacy_tabless_data_list">
+            <li>Sparade flikar: URL, titel och ev. bild/metadata</li>
+            <li>Samlingar/mappar och inställningar</li>
+            <li>Widget-position per webbplats</li>
+          </ul>
+        </div>
+        <div class="privacy-modal__section">
+          <h4 data-i18n="privacy_tabless_permissions_title">Behörigheter</h4>
+          <ul class="bullet-list" data-i18n-html="privacy_tabless_permissions_list">
+            <li><strong>tabs:</strong> läsa titel/URL och öppna sparade flikar</li>
+            <li><strong>storage:</strong> spara samlingar lokalt</li>
+            <li><strong>sidePanel:</strong> visa biblioteket i sidopanelen</li>
+            <li><strong>contextMenus:</strong> snabbmeny för att spara flik</li>
+            <li><strong>host permissions (http/https):</strong> visa pin-widget och läsa sidans metadata när du sparar</li>
+          </ul>
+        </div>
+        <div class="privacy-modal__section">
+          <h4 data-i18n="privacy_tabless_sharing_title">Delning & analys</h4>
+          <p data-i18n="privacy_tabless_sharing_body">
+            Ingen data delas eller säljs. Ingen analytics eller spårning används.
+          </p>
+        </div>
+        <div class="privacy-modal__section">
+          <h4 data-i18n="privacy_tabless_contact_title">Kontakt</h4>
+          <p data-i18n="privacy_tabless_contact_body">Frågor om integritet? Mejla ava.urden@gmail.com.</p>
+        </div>
+      </div>
+    </div>
 
     <script src="./main.js"></script>
   </body>
