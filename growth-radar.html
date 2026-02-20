@@ -367,15 +367,13 @@
       .card--viral { grid-column: span 6; }
       .card--buzz { grid-column: span 6; }
       .card--pulse { grid-column: 1 / -1; }
-      .card--fx { grid-column: span 4; }
-      .card--weather { grid-column: span 4; }
-      .card--meter { grid-column: span 4; }
-      .card--manifesto { grid-column: 1 / -1; }
+      .card--fx { grid-column: span 6; }
+      .card--weather { grid-column: span 6; }
 
       @media (max-width: 960px) {
         .dashboard { grid-template-columns: repeat(6, minmax(0, 1fr)); }
-        .card--viral, .card--buzz, .card--pulse, .card--manifesto,
-        .card--fx, .card--weather, .card--meter { grid-column: 1 / -1; }
+        .card--viral, .card--buzz, .card--pulse,
+        .card--fx, .card--weather { grid-column: 1 / -1; }
       }
 
       @media (max-width: 640px) {
@@ -1250,74 +1248,6 @@
               </div>
             </article>
 
-            <article class="card card--meter" aria-live="polite">
-              <div class="card__header">
-                <div class="card__heading">
-                  <span class="icon-circle" aria-hidden="true">S</span>
-                  <div>
-                    <h2 data-i18n="meter_title">Signal Meter</h2>
-                    <span class="tag" data-i18n="meter_tag">Composite</span>
-                  </div>
-                </div>
-                <div class="card__actions">
-                  <button class="kebab" type="button" aria-label="More options" data-i18n-aria="more_options">...</button>
-                </div>
-              </div>
-              <div class="card__body meter">
-                <div class="meter__track">
-                  <div class="meter__fill" id="signalFill"></div>
-                </div>
-                <div class="meter__labels">
-                  <div><span data-i18n="signal_score">Score</span>: <strong id="signalScore">--</strong></div>
-                  <div class="muted" id="signalLevel" data-i18n="loading">Loading...</div>
-                </div>
-                <div class="meter__stats">
-                  <div class="stat">
-                    <span class="stat__label" data-i18n="signal_buzz">Buzz hits</span>
-                    <span class="stat__value" id="signalBuzz">--</span>
-                  </div>
-                  <div class="stat">
-                    <span class="stat__label" data-i18n="signal_pulse">Pulse volume</span>
-                    <span class="stat__value" id="signalPulse">--</span>
-                  </div>
-                  <div class="stat">
-                    <span class="stat__label" data-i18n="signal_weather">Weather trigger</span>
-                    <span class="stat__value" id="signalWeather">--</span>
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <article class="card card--manifesto" aria-live="polite">
-              <div class="card__header">
-                <div class="card__heading">
-                  <span class="icon-circle" aria-hidden="true">M</span>
-                  <div>
-                    <h2 data-i18n="manifesto_title">Founder Manifesto</h2>
-                    <span class="tag" data-i18n="manifesto_tag">Daily</span>
-                  </div>
-                </div>
-                <div class="card__actions">
-                  <button class="kebab" type="button" aria-label="More options" data-i18n-aria="more_options">...</button>
-                </div>
-              </div>
-              <div class="card__body" id="manifestoBody">
-                <span class="tag" id="manifestoTag">Laddar...</span>
-                <div class="manifesto__line" id="manifestoLine">...</div>
-                <div class="manifesto__meta">
-                  <span><strong data-i18n="action_label">Action:</strong> <span id="manifestoAction">...</span></span>
-                  <span><strong data-i18n="metric_label">Focus metric:</strong> <span id="manifestoMetric">...</span></span>
-                </div>
-                <div class="manifesto__buttons">
-                  <button class="btn btn--light btn--small" type="button" id="manifestoRandom" data-i18n="new_mantra">
-                    Ny mantra
-                  </button>
-                  <button class="btn btn--outline btn--small" type="button" id="manifestoCopy" data-i18n="copy">
-                    Kopiera
-                  </button>
-                </div>
-              </div>
-            </article>
           </div>
         </div>
       </section>
@@ -1365,10 +1295,8 @@
         viral: [],
         buzz: [],
         pulse: [],
-        manifesto: [],
         buzzMatches: 0,
         viralTopViews: 0,
-        weatherTrigger: "",
         weatherData: null,
         lang: "sv",
         loaded: {
@@ -1409,21 +1337,7 @@
           weather_placeholder: "Stad (Stockholm)",
           weather_set: "Sätt",
           weather_set_aria: "Sätt stad",
-          meter_title: "Signalmätare",
-          meter_tag: "Kombinerad",
-          manifesto_title: "Grundarmanifest",
-          manifesto_tag: "Daglig",
           more_options: "Fler alternativ",
-          signal_score: "Poäng",
-          signal_buzz: "Buzz-träffar",
-          signal_pulse: "Pulse-volym",
-          signal_weather: "Vädertrigger",
-          action_label: "Action:",
-          metric_label: "Fokusmått:",
-          new_mantra: "Ny mantra",
-          copy: "Kopiera",
-          copied: "Kopierad",
-          copy_failed: "Misslyckades",
           open: "Öppna",
           no_matches: "Inga träffar.",
           views: "visningar",
@@ -1435,17 +1349,13 @@
           error_gdelt: "Kunde inte hämta GDELT just nu.",
           error_fx: "Kunde inte hämta FX-kurser just nu.",
           error_weather: "Kunde inte hämta väder just nu.",
-          error_manifesto: "Kunde inte hämta manifestet.",
-          buzz_no_matches: "Inga träffar på nyckelord. Visar topp 10.",
+          buzz_no_matches: "Inga träffar på nyckelord idag.",
           weather_unavailable: "Otillgängligt",
           weather_summary: "{city}: {temp}°C, moln {cloud}%, regn {precip}%",
           weather_sunny: "Soligt fönster",
           weather_rain: "Regnläge",
           weather_cloud: "Molnläge",
           weather_mild: "Lugn nivå",
-          signal_level_hot: "Hett",
-          signal_level_building: "Bygger",
-          signal_level_quiet: "Lugnt",
           contact_title: "Kontakt",
           footer_text:
             "Nyfiken på att veta mer eller diskutera ett projekt? Hör av dig så tar vi en kaffe!",
@@ -1484,21 +1394,7 @@
           weather_placeholder: "City (Stockholm)",
           weather_set: "Set",
           weather_set_aria: "Set city",
-          meter_title: "Signal Meter",
-          meter_tag: "Composite",
-          manifesto_title: "Founder Manifesto",
-          manifesto_tag: "Daily",
           more_options: "More options",
-          signal_score: "Score",
-          signal_buzz: "Buzz hits",
-          signal_pulse: "Pulse volume",
-          signal_weather: "Weather trigger",
-          action_label: "Action:",
-          metric_label: "Focus metric:",
-          new_mantra: "New mantra",
-          copy: "Copy",
-          copied: "Copied",
-          copy_failed: "Failed",
           open: "Open",
           no_matches: "No matches.",
           views: "views",
@@ -1510,17 +1406,13 @@
           error_gdelt: "Could not load GDELT right now.",
           error_fx: "Could not load FX rates right now.",
           error_weather: "Could not load weather right now.",
-          error_manifesto: "Could not load manifesto.",
-          buzz_no_matches: "No keyword matches. Showing top 10.",
+          buzz_no_matches: "No keyword matches today.",
           weather_unavailable: "Unavailable",
           weather_summary: "{city}: {temp}°C, clouds {cloud}%, precip {precip}%",
           weather_sunny: "Sunny window",
           weather_rain: "Rain push",
           weather_cloud: "Cloud watch",
           weather_mild: "Mild watch",
-          signal_level_hot: "Hot",
-          signal_level_building: "Building",
-          signal_level_quiet: "Quiet",
           contact_title: "Contact",
           footer_text: "Curious to learn more or discuss a project? Reach out and let’s grab a coffee.",
           cta_cv: "Download CV",
@@ -1568,20 +1460,7 @@
         weatherForm: document.getElementById("weatherForm"),
         weatherCity: document.getElementById("weatherCity"),
         weatherTrigger: document.getElementById("weatherTrigger"),
-        weatherSummary: document.getElementById("weatherSummary"),
-        signalFill: document.getElementById("signalFill"),
-        signalScore: document.getElementById("signalScore"),
-        signalLevel: document.getElementById("signalLevel"),
-        signalBuzz: document.getElementById("signalBuzz"),
-        signalPulse: document.getElementById("signalPulse"),
-        signalWeather: document.getElementById("signalWeather"),
-        manifestoTag: document.getElementById("manifestoTag"),
-        manifestoLine: document.getElementById("manifestoLine"),
-        manifestoAction: document.getElementById("manifestoAction"),
-        manifestoMetric: document.getElementById("manifestoMetric"),
-        manifestoRandom: document.getElementById("manifestoRandom"),
-        manifestoCopy: document.getElementById("manifestoCopy"),
-        manifestoBody: document.getElementById("manifestoBody")
+        weatherSummary: document.getElementById("weatherSummary")
       };
 
       function t(key) {
@@ -1617,7 +1496,6 @@
         renderViral();
         renderBuzz();
         renderPulse();
-        updateSignalMeter();
         if (state.weatherData) {
           renderWeather(state.weatherData);
         }
@@ -1793,26 +1671,6 @@
           .join("");
       }
 
-      function updateSignalMeter() {
-        const buzzHits = state.buzzMatches || 0;
-        const pulseHits = state.pulse.length || 0;
-        const topViews = state.viralTopViews || 0;
-
-        const buzzBoost = Math.min(20, buzzHits * 3);
-        const pulseBoost = Math.min(15, pulseHits);
-        const viralBoost = Math.min(15, Math.round(topViews / 50000));
-        const weatherBoost = state.weatherTrigger === "sunny" ? 10 : state.weatherTrigger === "rain" ? 5 : 0;
-
-        const score = Math.max(0, Math.min(100, 40 + buzzBoost + pulseBoost + viralBoost + weatherBoost));
-        const levelKey = score > 75 ? "signal_level_hot" : score > 55 ? "signal_level_building" : "signal_level_quiet";
-
-        elements.signalScore.textContent = score;
-        elements.signalLevel.textContent = t(levelKey);
-        elements.signalFill.style.width = `${score}%`;
-        elements.signalBuzz.textContent = buzzHits;
-        elements.signalPulse.textContent = pulseHits;
-        elements.signalWeather.textContent = state.weatherTrigger ? t(`weather_${state.weatherTrigger}`) : "--";
-      }
 
       async function loadViral(force = false) {
         renderSkeleton(elements.viralList, 8);
@@ -1824,9 +1682,31 @@
         try {
           const data = await fetchJson(url, { cacheKey, force });
           const items = data?.items?.[0]?.articles || [];
-          const top = items.slice(0, 12).map((item, index) => ({
+          const blockedPrefixes = [
+            "special:",
+            "portal:",
+            "wikipedia:",
+            "kategori:",
+            "category:",
+            "file:",
+            "fil:",
+            "template:",
+            "mall:",
+            "help:",
+            "user:",
+            "draft:",
+            "talk:",
+            "diskussion:"
+          ];
+          const cleaned = items
+            .map((item) => ({ ...item, title: decodeTitle(item.article) }))
+            .filter((item) => {
+              const lower = item.title.toLowerCase();
+              return !blockedPrefixes.some((prefix) => lower.startsWith(prefix));
+            });
+          const top = cleaned.slice(0, 8).map((item, index) => ({
             rank: index + 1,
-            title: decodeTitle(item.article),
+            title: item.title,
             views: item.views,
             url: `${base}${encodeURIComponent(item.article)}`
           }));
@@ -1838,11 +1718,10 @@
           state.loaded.viral = true;
           renderError(elements.viralList, t("error_wikimedia"), url, true);
         }
-        updateSignalMeter();
       }
 
       async function loadBuzz(force = false) {
-        renderSkeleton(elements.buzzList, 6);
+        renderSkeleton(elements.buzzList, 8);
         elements.buzzNote.textContent = "";
         const url = "https://hn.algolia.com/api/v1/search?tags=front_page";
         const cacheKey = "growthRadar:buzz";
@@ -1852,8 +1731,8 @@
           const matches = hits.filter((hit) =>
             KEYWORDS.some((keyword) => hit.title && hit.title.toLowerCase().includes(keyword))
           );
-          const selected = matches.length ? matches.slice(0, 10) : hits.slice(0, 10);
-          state.buzzMatches = matches.length;
+          const selected = matches.slice(0, 8);
+          state.buzzMatches = selected.length;
           state.buzz = selected.map((hit) => ({
             title: hit.title || "Untitled",
             points: hit.points || 0,
@@ -1866,7 +1745,6 @@
           state.loaded.buzz = true;
           renderError(elements.buzzList, t("error_hn"), url, true);
         }
-        updateSignalMeter();
       }
 
       function formatSeenDate(seen) {
@@ -1896,15 +1774,15 @@
       }
 
       async function loadPulse(force = false) {
-        renderSkeleton(elements.pulseList, 6);
+        renderSkeleton(elements.pulseList, 8);
         const query = encodeURIComponent(PULSE_QUERIES[state.pulseQuery]);
         const timespan = state.pulseTimespan;
-        const url = `https://api.gdeltproject.org/api/v2/doc/doc?query=${query}&mode=ArtList&format=json&maxrecords=12&sort=HybridRel&timelinesmooth=0&timespan=${timespan}`;
+        const url = `https://api.gdeltproject.org/api/v2/doc/doc?query=${query}&mode=ArtList&format=json&maxrecords=8&sort=HybridRel&timelinesmooth=0&timespan=${timespan}`;
         const cacheKey = `growthRadar:pulse:${state.pulseQuery}:${timespan}`;
         try {
           const data = await fetchJson(url, { cacheKey, force });
           const articles = data?.articles || [];
-          state.pulse = articles.slice(0, 12).map((article) => ({
+          state.pulse = articles.slice(0, 8).map((article) => ({
             title: article.title || "Untitled",
             url: article.url || "#",
             source: getSourceName(article),
@@ -1916,7 +1794,6 @@
           state.loaded.pulse = true;
           renderError(elements.pulseList, t("error_gdelt"), url, true);
         }
-        updateSignalMeter();
       }
 
       async function loadFx(force = false) {
@@ -2017,7 +1894,6 @@
             : 0;
 
           const triggerKey = getWeatherTriggerKey(current.cloud_cover || 0, precipProb || 0);
-          state.weatherTrigger = triggerKey;
           state.weatherData = {
             city: coords.name,
             temp: current.temperature_2m,
@@ -2027,7 +1903,6 @@
           };
           renderWeather(state.weatherData);
 
-          updateSignalMeter();
         } catch (err) {
           renderError(
             elements.weatherSummary,
@@ -2035,39 +1910,8 @@
             "https://api.open-meteo.com/",
             false
           );
-          state.weatherTrigger = "";
           state.weatherData = null;
           elements.weatherTrigger.textContent = t("weather_unavailable");
-        }
-      }
-
-      function getUtcDayIndex() {
-        const now = new Date();
-        const dayUtc = Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate());
-        return Math.floor(dayUtc / 86400000);
-      }
-
-      function renderManifesto(item) {
-        elements.manifestoTag.textContent = item.tag;
-        elements.manifestoLine.textContent = item.line;
-        elements.manifestoAction.textContent = item.action;
-        elements.manifestoMetric.textContent = item.focusMetric;
-      }
-
-      async function loadManifesto(force = false) {
-        elements.manifestoTag.textContent = t("loading");
-        elements.manifestoLine.textContent = "...";
-        const url = "/data/manifesto.json";
-        const cacheKey = "growthRadar:manifesto";
-        try {
-          const data = await fetchJson(url, { cacheKey, ttl: 24 * 60 * 60 * 1000, force });
-          if (!Array.isArray(data) || data.length < 1) throw new Error("No manifesto data");
-          state.manifesto = data;
-          const index = getUtcDayIndex() % data.length;
-          const item = data[index];
-          renderManifesto(item);
-        } catch (err) {
-          renderError(elements.manifestoBody, t("error_manifesto"), url, false);
         }
       }
 
@@ -2131,28 +1975,6 @@
           loadWeather(true);
         });
 
-        elements.manifestoRandom.addEventListener("click", () => {
-          if (!state.manifesto.length) return;
-          const random = state.manifesto[Math.floor(Math.random() * state.manifesto.length)];
-          renderManifesto(random);
-        });
-
-        elements.manifestoCopy.addEventListener("click", async () => {
-          const text = `${elements.manifestoLine.textContent}\n${elements.manifestoAction.textContent}\n${elements.manifestoMetric.textContent}`;
-          try {
-            await navigator.clipboard.writeText(text);
-            elements.manifestoCopy.textContent = t("copied");
-            setTimeout(() => {
-              elements.manifestoCopy.textContent = t("copy");
-            }, 1200);
-          } catch (err) {
-            elements.manifestoCopy.textContent = t("copy_failed");
-            setTimeout(() => {
-              elements.manifestoCopy.textContent = t("copy");
-            }, 1200);
-          }
-        });
-
         window.addEventListener("scroll", () => {
           const header = document.querySelector(".header");
           header.classList.toggle("header--scrolled", window.scrollY > 8);
@@ -2165,7 +1987,6 @@
         loadPulse(force);
         loadFx(force);
         loadWeather(force);
-        loadManifesto(force);
       }
 
       attachEvents();
