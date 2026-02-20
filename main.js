@@ -43,8 +43,50 @@ const dict = {
     case6_sum: "Digital riktlinje.",
     case6_image_note: "Bild kommer",
 
-    mini_title: "Små projekt & blogg",
-    mini_intro: "Små experiment, prototyper och korta reflektioner jag testar just nu.",
+    mini_title: "Mina små projekt: API:er & plugins",
+    mini_intro:
+      "Growth-tech jag bygger just nu – små API:er, plugins och automationer som gör marknadsföring smartare.",
+    mini_item_1_media: "Plugin",
+    mini_item_1_tag: "Plugin",
+    mini_item_1_status: "Gratis",
+    mini_item_1_title: "Tabless Library",
+    mini_item_1_desc:
+      "Spara och organisera dina öppna flikar i snygga samlingar så att du hittar dem senare.",
+    mini_item_1_cta: "Ladda ner gratis",
+    mini_item_1_more: "Läs mer →",
+    mini_item_2_media: "API",
+    mini_item_2_tag: "API",
+    mini_item_2_status: "Pågående",
+    mini_item_2_title: "Growth Signals API",
+    mini_item_2_desc:
+      "Plats för API-projekt och endpoints jag bygger för att samla in och tolka tillväxtdata.",
+    mini_item_2_cta: "Kommer snart",
+    mini_item_3_media: "Plugin",
+    mini_item_3_tag: "Plugin",
+    mini_item_3_status: "Pågående",
+    mini_item_3_title: "Automation Toolkit",
+    mini_item_3_desc:
+      "Små plugins och scripts som kapar manuella steg i research, rapportering och kampanjarbete.",
+    mini_item_3_cta: "Kommer snart",
+    back_to_mini: "← Tillbaka till små projekt",
+    mini1_hero_title: "Tabless Library – Spara dina flikar, rensa ditt sinne",
+    mini1_hero_body:
+      "Ett egenbyggt plugin som låter dig spara och organisera öppna flikar i snygga samlingar så att du enkelt hittar dem senare.",
+    mini1_pill_1: "Plugin",
+    mini1_pill_2: "Growth Tech",
+    mini1_pill_3: "Gratis",
+    mini1_download: "Ladda ner gratis",
+    mini1_media_label: "Plugin preview",
+    mini1_overview_title: "Översikt",
+    mini1_overview_list:
+      "<li><strong>Typ:</strong> Webbläsarplugin</li><li><strong>Syfte:</strong> Ordning bland flikar & snabb återkomst</li><li><strong>Status:</strong> Klar för nedladdning</li>",
+    mini1_features_title: "Funktioner",
+    mini1_features_list:
+      "<li>Spara öppna flikar i samlingar</li><li>Taggar och struktur för snabb sökning</li><li>Återställ valda flikar med ett klick</li>",
+    mini1_stack_title: "Stack",
+    mini1_stack_list: "<li>JavaScript</li><li>Chrome Extension API</li><li>Local storage</li>",
+    mini1_note:
+      "Det här är en kortare, lättläst projektsida. Jag fyller på med mer detaljer och resultat när nästa version är klar.",
 
     skills_main_title: "Färdigheter & verktyg",
     skills_intro: "Där strategi möter genomförande – från idé till mätbar effekt.",
@@ -417,8 +459,49 @@ const dict = {
     case6_sum: "Digital guidelines.",
     case6_image_note: "Image coming soon",
 
-    mini_title: "Side Projects & Notes",
-    mini_intro: "Small experiments, prototypes, and short reflections I am exploring right now.",
+    mini_title: "Mini projects: APIs & plugins",
+    mini_intro:
+      "Growth tech I’m building right now – small APIs, plugins, and automations that make marketing smarter.",
+    mini_item_1_media: "Plugin",
+    mini_item_1_tag: "Plugin",
+    mini_item_1_status: "Free",
+    mini_item_1_title: "Tabless Library",
+    mini_item_1_desc:
+      "Save and organize your open tabs into neat collections so you can find them later.",
+    mini_item_1_cta: "Download for free",
+    mini_item_1_more: "Read more →",
+    mini_item_2_media: "API",
+    mini_item_2_tag: "API",
+    mini_item_2_status: "In progress",
+    mini_item_2_title: "Growth Signals API",
+    mini_item_2_desc:
+      "Space for API projects and endpoints I’m building to collect and interpret growth data.",
+    mini_item_2_cta: "Coming soon",
+    mini_item_3_media: "Plugin",
+    mini_item_3_tag: "Plugin",
+    mini_item_3_status: "In progress",
+    mini_item_3_title: "Automation Toolkit",
+    mini_item_3_desc:
+      "Small plugins and scripts that cut manual steps in research, reporting, and campaign work.",
+    mini_item_3_cta: "Coming soon",
+    back_to_mini: "← Back to mini projects",
+    mini1_hero_title: "Tabless Library – Save your tabs, clear your mind",
+    mini1_hero_body:
+      "A custom-built extension that lets you save and organize open tabs into neat collections so you can easily find them later.",
+    mini1_pill_1: "Plugin",
+    mini1_pill_2: "Growth Tech",
+    mini1_pill_3: "Free",
+    mini1_download: "Download for free",
+    mini1_media_label: "Plugin preview",
+    mini1_overview_title: "Overview",
+    mini1_overview_list:
+      "<li><strong>Type:</strong> Browser extension</li><li><strong>Goal:</strong> Organized tabs & quick return</li><li><strong>Status:</strong> Ready to download</li>",
+    mini1_features_title: "Features",
+    mini1_features_list: "<li>Save open tabs into collections</li><li>Tags and structure for fast search</li><li>Restore selected tabs in one click</li>",
+    mini1_stack_title: "Stack",
+    mini1_stack_list: "<li>JavaScript</li><li>Chrome Extension API</li><li>Local storage</li>",
+    mini1_note:
+      "This is a short, easy-to-read project page. I’ll add more details and results as the next version ships.",
 
     skills_main_title: "Skills & tools",
     skills_intro: "Where strategy meets execution – from idea to measurable impact.",
