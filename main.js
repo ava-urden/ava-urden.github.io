@@ -72,6 +72,8 @@ const dict = {
     mini1_hero_title: "Tabless Library – Spara dina flikar, rensa ditt sinne",
     mini1_hero_body:
       "Ett egenbyggt plugin som låter dig spara och organisera öppna flikar i snygga samlingar så att du enkelt hittar dem senare.",
+    mini1_hero_extra:
+      "Om du är som jag och gillar ordning, reda och listor kommer du trivas med Tabless Library.",
     mini1_pill_1: "Plugin",
     mini1_pill_2: "Growth Tech",
     mini1_pill_3: "Gratis",
@@ -508,6 +510,8 @@ const dict = {
     mini1_hero_title: "Tabless Library – Save your tabs, clear your mind",
     mini1_hero_body:
       "A custom-built extension that lets you save and organize open tabs into neat collections so you can easily find them later.",
+    mini1_hero_extra:
+      "If you’re like me and love order, structure, and lists, you’ll feel right at home with Tabless Library.",
     mini1_pill_1: "Plugin",
     mini1_pill_2: "Growth Tech",
     mini1_pill_3: "Free",
