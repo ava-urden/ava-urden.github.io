@@ -1,0 +1,266 @@
+[
+  {
+    "tag": "Velocity",
+    "line": "I ship small, learn fast, and compound the wins.",
+    "action": "Publish v0.3 today.",
+    "focusMetric": "Cycle time"
+  },
+  {
+    "tag": "Clarity",
+    "line": "Every metric needs a decision behind it.",
+    "action": "Write the decision memo for this week.",
+    "focusMetric": "Decision latency"
+  },
+  {
+    "tag": "Demand",
+    "line": "I build pull before I push.",
+    "action": "Launch a waitlist landing page.",
+    "focusMetric": "Signup rate"
+  },
+  {
+    "tag": "Retention",
+    "line": "Keep the promise; fix the drop-off.",
+    "action": "Review churn reasons from last 30 days.",
+    "focusMetric": "Logo retention"
+  },
+  {
+    "tag": "Pricing",
+    "line": "Price signals value, not cost.",
+    "action": "Run a 3-tier pricing test.",
+    "focusMetric": "ARPA"
+  },
+  {
+    "tag": "Distribution",
+    "line": "Channels are assets when they compound.",
+    "action": "Schedule 4 evergreen posts.",
+    "focusMetric": "Organic reach"
+  },
+  {
+    "tag": "SEO",
+    "line": "Search wins are earned by solving tasks.",
+    "action": "Ship one FAQ cluster.",
+    "focusMetric": "Non-brand clicks"
+  },
+  {
+    "tag": "Creative",
+    "line": "Great ads read like insights.",
+    "action": "Write 5 new hooks.",
+    "focusMetric": "Thumbstop rate"
+  },
+  {
+    "tag": "Lifecycle",
+    "line": "Nurture beats nag.",
+    "action": "Fix the day-2 email.",
+    "focusMetric": "Activation rate"
+  },
+  {
+    "tag": "Conversion",
+    "line": "Remove one click, win one step.",
+    "action": "Simplify checkout to 3 steps.",
+    "focusMetric": "Checkout completion"
+  },
+  {
+    "tag": "Partnerships",
+    "line": "Borrow trust, add value.",
+    "action": "Pitch 2 aligned partners.",
+    "focusMetric": "Referral signups"
+  },
+  {
+    "tag": "Analytics",
+    "line": "Trust the trend, not the spike.",
+    "action": "Validate this weeks anomaly.",
+    "focusMetric": "Data accuracy"
+  },
+  {
+    "tag": "Positioning",
+    "line": "If it is not distinct, it is invisible.",
+    "action": "Rewrite the hero statement.",
+    "focusMetric": "Message match"
+  },
+  {
+    "tag": "Community",
+    "line": "Listen before you scale noise.",
+    "action": "Reply to 10 community posts.",
+    "focusMetric": "Engagement rate"
+  },
+  {
+    "tag": "Attribution",
+    "line": "Know what moves, then move it.",
+    "action": "Audit top 3 channels.",
+    "focusMetric": "CAC by channel"
+  },
+  {
+    "tag": "Ops",
+    "line": "Systems beat heroics.",
+    "action": "Document the weekly growth loop.",
+    "focusMetric": "Repeatability"
+  },
+  {
+    "tag": "Product",
+    "line": "Growth is a product feature.",
+    "action": "Add one small aha moment.",
+    "focusMetric": "Time to value"
+  },
+  {
+    "tag": "Winback",
+    "line": "Lost users still have context.",
+    "action": "Send a winback note.",
+    "focusMetric": "Reactivation rate"
+  },
+  {
+    "tag": "LTV",
+    "line": "Earn back CAC in months, not years.",
+    "action": "Review cohort payback.",
+    "focusMetric": "Payback period"
+  },
+  {
+    "tag": "Friction",
+    "line": "Every unanswered question is a leak.",
+    "action": "Add 3 clarifying tooltips.",
+    "focusMetric": "Support tickets"
+  },
+  {
+    "tag": "Research",
+    "line": "Field notes beat assumptions.",
+    "action": "Run 3 customer calls.",
+    "focusMetric": "Insight count"
+  },
+  {
+    "tag": "Budget",
+    "line": "Spend where learning is fastest.",
+    "action": "Shift 10 percent to experiments.",
+    "focusMetric": "Learning velocity"
+  },
+  {
+    "tag": "Focus",
+    "line": "One north star beats ten dashboards.",
+    "action": "Pick the weekly north star.",
+    "focusMetric": "North star movement"
+  },
+  {
+    "tag": "Automation",
+    "line": "Let the system do the repeatable work.",
+    "action": "Automate one report.",
+    "focusMetric": "Hours saved"
+  },
+  {
+    "tag": "Quality",
+    "line": "Growth without quality is churn in disguise.",
+    "action": "Review top 5 negative reviews.",
+    "focusMetric": "NPS"
+  },
+  {
+    "tag": "Brand",
+    "line": "Consistency builds recall.",
+    "action": "Align 3 key pages to one story.",
+    "focusMetric": "Brand search lift"
+  },
+  {
+    "tag": "Copy",
+    "line": "Shorter sells when it is clearer.",
+    "action": "Cut 20 percent of ad copy.",
+    "focusMetric": "CTR"
+  },
+  {
+    "tag": "Experiment",
+    "line": "Small bets, clear winners.",
+    "action": "Ship one A/B test.",
+    "focusMetric": "Test throughput"
+  },
+  {
+    "tag": "Landing",
+    "line": "One page, one promise.",
+    "action": "Refocus the hero CTA.",
+    "focusMetric": "Lead conversion"
+  },
+  {
+    "tag": "International",
+    "line": "Translate intent, not just words.",
+    "action": "Localize one market page.",
+    "focusMetric": "Intl CVR"
+  },
+  {
+    "tag": "Churn",
+    "line": "Fix the first broken promise.",
+    "action": "Triage top churn reason.",
+    "focusMetric": "Voluntary churn"
+  },
+  {
+    "tag": "Segment",
+    "line": "Segments beat averages.",
+    "action": "Split onboarding by persona.",
+    "focusMetric": "Activation by segment"
+  },
+  {
+    "tag": "Virality",
+    "line": "Sharing is easier when it helps the sender.",
+    "action": "Add a share-worthy result.",
+    "focusMetric": "Share rate"
+  },
+  {
+    "tag": "Referral",
+    "line": "Make it obvious to invite.",
+    "action": "Add referral prompt after win.",
+    "focusMetric": "Invite rate"
+  },
+  {
+    "tag": "Onboarding",
+    "line": "Guide the first five minutes.",
+    "action": "Add a 3-step starter.",
+    "focusMetric": "Day-1 activation"
+  },
+  {
+    "tag": "Pipeline",
+    "line": "Top of funnel feeds everything.",
+    "action": "Publish one discovery piece.",
+    "focusMetric": "New leads"
+  },
+  {
+    "tag": "Data",
+    "line": "One clean event is worth ten dirty ones.",
+    "action": "Fix the signup event schema.",
+    "focusMetric": "Event accuracy"
+  },
+  {
+    "tag": "Roadmap",
+    "line": "Growth asks are product asks.",
+    "action": "Align next sprint with growth goal.",
+    "focusMetric": "Impact per sprint"
+  },
+  {
+    "tag": "Story",
+    "line": "Tell the story customers repeat.",
+    "action": "Collect 3 customer quotes.",
+    "focusMetric": "Social proof usage"
+  },
+  {
+    "tag": "Resilience",
+    "line": "Sustain the pace you can keep.",
+    "action": "Block 2 focus hours.",
+    "focusMetric": "Deep work time"
+  },
+  {
+    "tag": "Playbook",
+    "line": "Playbooks turn wins into defaults.",
+    "action": "Write the winning ad spec.",
+    "focusMetric": "Reuse rate"
+  },
+  {
+    "tag": "Channel Mix",
+    "line": "Balance compounding and capture.",
+    "action": "Set channel guardrails.",
+    "focusMetric": "Channel concentration"
+  },
+  {
+    "tag": "CRO",
+    "line": "Test the point of most doubt.",
+    "action": "Rewrite the risk reversal.",
+    "focusMetric": "Checkout trust"
+  },
+  {
+    "tag": "Metrics",
+    "line": "What gets named gets improved.",
+    "action": "Define 3 leading indicators.",
+    "focusMetric": "Leading indicator trend"
+  }
+]

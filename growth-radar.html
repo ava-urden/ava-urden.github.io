@@ -1,0 +1,1884 @@
+<!doctype html>
+<html lang="sv">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ava Growth Radar | Ava Urdén</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        --green:#14471d;
+        --green2:#0f3817;
+        --cream:#ffffff;
+        --coral:#ef7ea1;
+        --ink:#0b2210;
+        --line: rgba(243,234,212,0.18);
+        --shadow: 0 12px 32px rgba(0,0,0,0.35);
+
+        --header-height: 76px;
+        --max: 1180px;
+        --pad: 32px;
+        --radius-lg: 22px;
+        --radius-md: 16px;
+
+        --font-head: "Lato", "Helvetica Neue", Arial, sans-serif;
+        --font-body: "Lato", "Helvetica Neue", Arial, sans-serif;
+        --accent-dark: #0c1c12;
+      }
+
+      * { box-sizing: border-box; }
+
+      html { font-size: 16px; scroll-behavior: smooth; }
+
+      body {
+        margin: 0;
+        font-family: var(--font-body);
+        color: var(--cream);
+        background: linear-gradient(160deg, var(--green), var(--green2));
+        min-height: 100vh;
+        line-height: 1.6;
+        position: relative;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background: radial-gradient(600px 380px at 80% 10%, rgba(239,126,161,0.28), transparent 60%);
+        pointer-events: none;
+        z-index: 0;
+      }
+
+      body::after {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background-image: radial-gradient(rgba(255,255,255,0.06) 1px, transparent 1px);
+        background-size: 3px 3px;
+        opacity: 0.18;
+        mix-blend-mode: soft-light;
+        pointer-events: none;
+        z-index: 0;
+      }
+
+      a { color: inherit; text-decoration: none; }
+      img { max-width: 100%; display: block; }
+
+      .container {
+        max-width: var(--max);
+        margin: 0 auto;
+        padding: 0 var(--pad);
+        width: 100%;
+      }
+
+      .section-block {
+        padding: clamp(48px, 6vw, 84px) 0;
+        position: relative;
+        z-index: 1;
+      }
+
+      main { padding-top: var(--header-height); position: relative; z-index: 1; }
+
+      h1, h2, h3, h4 {
+        font-family: var(--font-head);
+        font-weight: 700;
+        margin: 0 0 12px;
+        line-height: 1.2;
+        color: var(--cream);
+      }
+
+      .h-display {
+        font-size: clamp(2.2rem, 5vw, 3.6rem);
+        letter-spacing: -0.02em;
+      }
+
+      .hero__p {
+        color: rgba(255,255,255,0.72);
+        max-width: 720px;
+        margin: 0;
+      }
+
+      .eyebrow {
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        font-size: 0.72rem;
+        color: rgba(255,255,255,0.68);
+        margin: 8px 0 12px;
+      }
+
+      .muted { color: rgba(255,255,255,0.68); }
+
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        border: 0;
+        white-space: nowrap;
+      }
+
+      /* Header (from Tabless base) */
+      .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 100;
+        height: var(--header-height);
+        display: flex;
+        align-items: center;
+        background: rgba(30, 27, 24, 0.92);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+        transition: background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      .header--scrolled {
+        background: rgba(30, 27, 24, 0.98);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .header__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        width: 100%;
+      }
+
+      .logo {
+        font-family: var(--font-head);
+        font-weight: 700;
+        font-size: 0.9rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        white-space: nowrap;
+        color: #f6f2ec;
+      }
+
+      .nav {
+        display: none;
+        gap: 26px;
+      }
+
+      @media (min-width: 900px) {
+        .nav { display: flex; }
+      }
+
+      .nav a {
+        font-size: 0.72rem;
+        text-transform: uppercase;
+        letter-spacing: 0.24em;
+        color: rgba(246, 242, 236, 0.76);
+        font-weight: 500;
+      }
+
+      .nav a:hover,
+      .nav a.is-active {
+        color: #ffffff;
+      }
+
+      .lang {
+        display: flex;
+        gap: 6px;
+        padding: 4px 8px;
+        border-radius: 999px;
+        border: 1px solid rgba(246, 242, 236, 0.28);
+        background: rgba(246, 242, 236, 0.12);
+      }
+
+      .lang__btn {
+        background: none;
+        border: none;
+        padding: 2px 8px;
+        font-size: 0.7rem;
+        letter-spacing: 0.28em;
+        text-transform: uppercase;
+        color: rgba(246, 242, 236, 0.78);
+        cursor: pointer;
+        font-family: inherit;
+      }
+
+      .lang__btn.is-active { color: #ffffff; }
+
+      /* Controls */
+      .radar__hero {
+        display: grid;
+        gap: 24px;
+        grid-template-columns: 1fr;
+        align-items: center;
+        margin-bottom: 26px;
+      }
+
+      @media (min-width: 900px) {
+        .radar__hero {
+          grid-template-columns: 1.2fr 0.8fr;
+          align-items: end;
+        }
+      }
+
+      .radar__controls {
+        display: grid;
+        gap: 14px;
+        justify-items: start;
+      }
+
+      .timestamp {
+        font-size: 0.85rem;
+        color: rgba(255,255,255,0.7);
+      }
+
+      .controls-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        align-items: center;
+      }
+
+      .search {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 14px;
+        border-radius: 999px;
+        border: 1px solid var(--line);
+        background: rgba(255,255,255,0.08);
+        min-width: 220px;
+      }
+
+      .search input {
+        background: transparent;
+        border: none;
+        color: var(--cream);
+        outline: none;
+        font-size: 0.85rem;
+        width: 100%;
+      }
+
+      .search input::placeholder { color: rgba(255,255,255,0.5); }
+
+      /* Buttons */
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 12px 26px;
+        border-radius: 999px;
+        font-size: 0.7rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.18em;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        border: 1px solid transparent;
+        font-family: inherit;
+      }
+
+      .btn--light {
+        background: #ffffff;
+        color: var(--ink);
+        border: 1px solid #ffffff;
+      }
+
+      .btn--light:hover { transform: translateY(-2px); }
+
+      .btn--white {
+        background: #ffffff;
+        color: var(--ink);
+        border: 1px solid #ffffff;
+        font-weight: 600;
+      }
+
+      .btn--white:hover { transform: translateY(-2px); }
+
+      .btn--outline {
+        background: transparent;
+        color: #ffffff;
+        border: 1px solid rgba(255, 255, 255, 0.85);
+      }
+
+      .btn--outline:hover { transform: translateY(-2px); }
+
+      .btn--ghost {
+        background: rgba(255,255,255,0.08);
+        color: #ffffff;
+        border: 1px solid var(--line);
+      }
+
+      .btn--ghost:hover { transform: translateY(-2px); }
+
+      .btn--small {
+        padding: 8px 16px;
+        font-size: 0.62rem;
+        letter-spacing: 0.14em;
+      }
+
+      /* Dashboard */
+      .dashboard {
+        display: grid;
+        gap: 22px;
+        grid-template-columns: repeat(12, minmax(0, 1fr));
+      }
+
+      .card {
+        border-radius: var(--radius-lg);
+        border: 1px solid var(--line);
+        background: rgba(255,255,255,0.06);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        box-shadow: var(--shadow);
+        padding: 22px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .card--viral { grid-column: span 6; }
+      .card--buzz { grid-column: span 6; }
+      .card--pulse { grid-column: 1 / -1; }
+      .card--fx { grid-column: span 4; }
+      .card--weather { grid-column: span 4; }
+      .card--meter { grid-column: span 4; }
+      .card--manifesto { grid-column: 1 / -1; }
+
+      @media (max-width: 960px) {
+        .dashboard { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+        .card--viral, .card--buzz, .card--pulse, .card--manifesto,
+        .card--fx, .card--weather, .card--meter { grid-column: 1 / -1; }
+      }
+
+      @media (max-width: 640px) {
+        .dashboard { grid-template-columns: 1fr; }
+        .card { padding: 18px; }
+        .search { min-width: 0; width: 100%; }
+        .controls-row { width: 100%; }
+      }
+
+      .card__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        flex-wrap: wrap;
+        margin-bottom: 16px;
+      }
+
+      .card__heading {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .icon-circle {
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        background: rgba(239,126,161,0.2);
+        border: 1px solid rgba(239,126,161,0.4);
+        color: #fff;
+        font-size: 0.9rem;
+      }
+
+      .card__heading h2 {
+        font-size: 1.05rem;
+        margin: 0;
+      }
+
+      .tag {
+        display: inline-flex;
+        align-items: center;
+        padding: 4px 10px;
+        border-radius: 999px;
+        border: 1px solid var(--line);
+        background: rgba(255,255,255,0.08);
+        font-size: 0.62rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: rgba(255,255,255,0.7);
+        margin-top: 4px;
+      }
+
+      .card__actions {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+
+      .chip-group {
+        display: flex;
+        gap: 6px;
+        flex-wrap: wrap;
+      }
+
+      .chip {
+        padding: 6px 12px;
+        border-radius: 999px;
+        border: 1px solid var(--line);
+        background: rgba(255,255,255,0.04);
+        color: rgba(255,255,255,0.78);
+        font-size: 0.62rem;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        cursor: pointer;
+        font-family: inherit;
+      }
+
+      .chip.is-active {
+        background: rgba(239,126,161,0.22);
+        border-color: rgba(239,126,161,0.6);
+        color: #fff;
+      }
+
+      .kebab {
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        border: 1px solid transparent;
+        background: transparent;
+        color: rgba(255,255,255,0.7);
+        cursor: pointer;
+        font-size: 1.2rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .kebab:hover {
+        border-color: var(--line);
+        background: rgba(255,255,255,0.08);
+      }
+
+      .list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        gap: 12px;
+      }
+
+      .list__item {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 10px 12px;
+        border-radius: 14px;
+        background: rgba(255,255,255,0.05);
+        border: 1px solid rgba(255,255,255,0.06);
+      }
+
+      .rank {
+        min-width: 30px;
+        height: 30px;
+        border-radius: 8px;
+        background: rgba(255,255,255,0.08);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 0.75rem;
+      }
+
+      .list__text {
+        flex: 1;
+        display: grid;
+        gap: 4px;
+      }
+
+      .list__title {
+        font-size: 0.92rem;
+        font-weight: 600;
+        color: #fff;
+      }
+
+      .list__meta {
+        font-size: 0.75rem;
+        color: rgba(255,255,255,0.6);
+      }
+
+      .list__link {
+        font-size: 0.72rem;
+        text-transform: uppercase;
+        letter-spacing: 0.18em;
+        color: rgba(255,255,255,0.7);
+      }
+
+      .list__link:hover { color: #fff; }
+
+      .list__empty {
+        padding: 14px;
+        border-radius: 14px;
+        border: 1px dashed var(--line);
+        color: rgba(255,255,255,0.7);
+      }
+
+      .skeleton {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .skeleton__bar {
+        height: 14px;
+        width: 100%;
+        border-radius: 8px;
+        background: rgba(255,255,255,0.08);
+        position: relative;
+        overflow: hidden;
+        flex: 1;
+      }
+
+      .skeleton__bar::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        transform: translateX(-100%);
+        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+        animation: shimmer 1.4s infinite;
+      }
+
+      @keyframes shimmer {
+        100% { transform: translateX(100%); }
+      }
+
+      .error {
+        padding: 14px;
+        border-radius: 14px;
+        border: 1px solid rgba(255,255,255,0.2);
+        background: rgba(255,80,80,0.08);
+        color: rgba(255,255,255,0.85);
+      }
+
+      .error a {
+        text-decoration: underline;
+        margin-left: 6px;
+      }
+
+      /* FX / KPIs */
+      .kpi-grid {
+        display: grid;
+        gap: 10px;
+      }
+
+      .kpi-pill {
+        padding: 10px 12px;
+        border-radius: 999px;
+        border: 1px solid var(--line);
+        background: rgba(255,255,255,0.08);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 0.85rem;
+      }
+
+      .kpi-pill strong { font-size: 1rem; }
+
+      .delta {
+        font-size: 0.75rem;
+        margin-left: 8px;
+      }
+
+      .delta.up { color: #b9f6c1; }
+      .delta.down { color: #ffb2b2; }
+
+      /* Weather */
+      .weather__form {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        margin-bottom: 12px;
+      }
+
+      .weather__form input {
+        flex: 1;
+        background: rgba(255,255,255,0.08);
+        border: 1px solid var(--line);
+        color: #fff;
+        border-radius: 999px;
+        padding: 8px 12px;
+        font-size: 0.85rem;
+        outline: none;
+      }
+
+      .status-pill {
+        display: inline-flex;
+        align-items: center;
+        padding: 6px 12px;
+        border-radius: 999px;
+        background: rgba(239,126,161,0.22);
+        border: 1px solid rgba(239,126,161,0.5);
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        letter-spacing: 0.16em;
+        color: #fff;
+      }
+
+      .weather__summary {
+        margin-top: 10px;
+        color: rgba(255,255,255,0.7);
+        font-size: 0.85rem;
+      }
+
+      /* Signal meter */
+      .meter {
+        display: grid;
+        gap: 14px;
+      }
+
+      .meter__track {
+        position: relative;
+        height: 10px;
+        border-radius: 999px;
+        background: rgba(255,255,255,0.12);
+        overflow: hidden;
+      }
+
+      .meter__fill {
+        position: absolute;
+        inset: 0;
+        width: 0%;
+        background: linear-gradient(90deg, rgba(239,126,161,0.8), rgba(255,255,255,0.9));
+        transition: width 0.4s ease;
+      }
+
+      .meter__labels {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 0.85rem;
+      }
+
+      .meter__stats {
+        display: grid;
+        gap: 8px;
+      }
+
+      .stat {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 0.85rem;
+        color: rgba(255,255,255,0.7);
+      }
+
+      .stat__value { color: #fff; font-weight: 600; }
+
+      /* Manifesto */
+      .manifesto__line {
+        font-size: 1.3rem;
+        font-weight: 600;
+        margin: 16px 0 10px;
+        color: #fff;
+      }
+
+      .manifesto__meta {
+        display: grid;
+        gap: 10px;
+        margin-top: 12px;
+        color: rgba(255,255,255,0.75);
+        font-size: 0.9rem;
+      }
+
+      .manifesto__meta span {
+        display: block;
+      }
+
+      .manifesto__buttons {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin-top: 16px;
+      }
+
+      /* Footer (from Tabless base) */
+      .footer {
+        background: var(--accent-dark);
+        color: #fff;
+        padding: 90px 0 60px;
+        border-radius: 0;
+      }
+
+      .footer__grid,
+      .footer__bottom {
+        max-width: 1060px;
+        margin: 0 auto;
+      }
+
+      .footer__grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 50px;
+        margin-bottom: 60px;
+      }
+
+      @media (min-width: 900px) {
+        .footer__grid { grid-template-columns: 1fr 1fr; }
+      }
+
+      .footer h2 {
+        color: #fff;
+        font-size: 2.3rem;
+        margin-bottom: 24px;
+      }
+
+      .footer__text {
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 1.05rem;
+        max-width: 460px;
+        margin-bottom: 30px;
+      }
+
+      .footer__right {
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+      }
+
+      @media (min-width: 900px) {
+        .footer__right {
+          align-items: flex-end;
+          text-align: right;
+        }
+      }
+
+      .contact-label {
+        display: block;
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        color: rgba(255, 255, 255, 0.6);
+        margin-bottom: 8px;
+      }
+
+      .contact-link {
+        font-family: var(--font-head);
+        font-size: 1.3rem;
+        color: #fff;
+        font-weight: 500;
+      }
+
+      .contact-link:hover { text-decoration: underline; }
+
+      .footer__bottom {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: 24px;
+      }
+
+      .footer__copy {
+        font-size: 0.8rem;
+        color: rgba(255, 255, 255, 0.6);
+      }
+
+      /* Focus states */
+      :focus-visible {
+        outline: 2px solid rgba(239,126,161,0.7);
+        outline-offset: 2px;
+      }
+
+      /* Mono override */
+      :root {
+        --green: #111111;
+        --green2: #111111;
+        --cream: #111111;
+        --coral: #111111;
+        --ink: #111111;
+        --line: rgba(0, 0, 0, 0.12);
+        --shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+      }
+
+      body {
+        background: #ffffff;
+        color: #111111;
+      }
+
+      body::before,
+      body::after {
+        display: none;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4 {
+        color: #111111;
+      }
+
+      .hero__p,
+      .muted,
+      .timestamp,
+      .list__meta,
+      .weather__summary,
+      .manifesto__meta {
+        color: #555555;
+      }
+
+      .eyebrow {
+        color: #555555;
+      }
+
+      .header {
+        background: #ffffff;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+      }
+
+      .header--scrolled {
+        background: #ffffff;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.18);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+      }
+
+      .logo {
+        color: #111111;
+      }
+
+      .nav a {
+        color: #555555;
+      }
+
+      .nav a:hover,
+      .nav a.is-active {
+        color: #111111;
+      }
+
+      .lang {
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        background: #f7f7f7;
+      }
+
+      .lang__btn {
+        color: #111111;
+      }
+
+      .search {
+        background: #ffffff;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+      }
+
+      .search input {
+        color: #111111;
+      }
+
+      .search input::placeholder {
+        color: #888888;
+      }
+
+      .btn--light,
+      .btn--white {
+        background: #111111;
+        color: #ffffff;
+        border-color: #111111;
+      }
+
+      .btn--outline {
+        color: #111111;
+        border-color: #111111;
+        background: transparent;
+      }
+
+      .btn--ghost {
+        color: #111111;
+        border-color: rgba(0, 0, 0, 0.2);
+        background: #ffffff;
+      }
+
+      .card {
+        background: #ffffff;
+        border: 1px solid rgba(0, 0, 0, 0.12);
+        box-shadow: none;
+      }
+
+      .icon-circle {
+        background: #111111;
+        border-color: #111111;
+        color: #ffffff;
+      }
+
+      .tag,
+      .chip {
+        background: #f2f2f2;
+        border-color: #e0e0e0;
+        color: #111111;
+      }
+
+      .chip.is-active {
+        background: #111111;
+        border-color: #111111;
+        color: #ffffff;
+      }
+
+      .kebab {
+        color: #111111;
+      }
+
+      .kebab:hover {
+        background: #f2f2f2;
+        border-color: #e0e0e0;
+      }
+
+      .list__item {
+        background: #f7f7f7;
+        border-color: #e0e0e0;
+      }
+
+      .rank {
+        background: #ffffff;
+        border: 1px solid #e0e0e0;
+        color: #111111;
+      }
+
+      .list__title {
+        color: #111111;
+      }
+
+      .list__link {
+        color: #111111;
+      }
+
+      .list__link:hover {
+        color: #000000;
+      }
+
+      .list__empty {
+        border-color: #e0e0e0;
+        color: #555555;
+      }
+
+      .skeleton__bar {
+        background: #eeeeee;
+      }
+
+      .skeleton__bar::after {
+        background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.06), transparent);
+      }
+
+      .error {
+        background: #ffffff;
+        border-color: #e0e0e0;
+        color: #111111;
+      }
+
+      .kpi-pill {
+        background: #f7f7f7;
+        border-color: #e0e0e0;
+        color: #111111;
+      }
+
+      .delta.up {
+        color: #111111;
+      }
+
+      .delta.down {
+        color: #666666;
+      }
+
+      .status-pill {
+        background: #111111;
+        border-color: #111111;
+        color: #ffffff;
+      }
+
+      .meter__track {
+        background: #e0e0e0;
+      }
+
+      .meter__fill {
+        background: #111111;
+      }
+
+      .meter__labels {
+        color: #111111;
+      }
+
+      .stat {
+        color: #555555;
+      }
+
+      .stat__value {
+        color: #111111;
+      }
+
+      .manifesto__line {
+        color: #111111;
+      }
+
+      .footer {
+        background: #111111;
+      }
+
+      .footer__text,
+      .footer__copy,
+      .contact-label {
+        color: rgba(255, 255, 255, 0.7);
+      }
+
+      .contact-link {
+        color: #ffffff;
+      }
+
+      :focus-visible {
+        outline: 2px solid #111111;
+      }
+    </style>
+  </head>
+  <body class="case-page">
+    <header class="header">
+      <div class="container header__inner">
+        <a class="logo" href="index.html#top">A.U. Portfolio</a>
+        <nav class="nav">
+          <a href="index.html#about">Om mig</a>
+          <a href="index.html#cases">Utvalda projekt</a>
+          <a href="index.html#skills">Färdigheter</a>
+          <a href="index.html#contact">Kontakt</a>
+        </nav>
+        <div class="lang" aria-label="Language toggle">
+          <button class="lang__btn is-active" type="button" data-lang="sv">SV</button>
+          <button class="lang__btn" type="button" data-lang="en">EN</button>
+        </div>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="section-block radar">
+        <div class="container">
+          <div class="radar__hero">
+            <div>
+              <h1 class="h-display">Ava Growth Radar</h1>
+              <p class="eyebrow">Growth Signals API</p>
+              <p class="hero__p">
+                Live signals for growth teams. Track what is spiking, what is shifting, and where demand is forming.
+              </p>
+            </div>
+            <div class="radar__controls">
+              <div class="timestamp">Updated <span id="updatedAt">--</span></div>
+              <div class="controls-row">
+                <button class="btn btn--light" id="refreshBtn" type="button" aria-label="Refresh data">Refresh</button>
+                <div class="search">
+                  <label class="sr-only" for="searchInput">Search signals</label>
+                  <input id="searchInput" type="search" placeholder="Search signals..." autocomplete="off" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="dashboard">
+            <article class="card card--viral" aria-live="polite">
+              <div class="card__header">
+                <div class="card__heading">
+                  <span class="icon-circle" aria-hidden="true">V</span>
+                  <div>
+                    <h2>Viral just nu</h2>
+                    <span class="tag">Wikimedia</span>
+                  </div>
+                </div>
+                <div class="card__actions">
+                  <div class="chip-group" id="viralToggle" role="tablist" aria-label="Viral region">
+                    <button class="chip is-active" type="button" data-project="sv.wikipedia" aria-pressed="true">SE</button>
+                    <button class="chip" type="button" data-project="en.wikipedia" aria-pressed="false">Global</button>
+                  </div>
+                  <button class="kebab" type="button" aria-label="More options">...</button>
+                </div>
+              </div>
+              <div class="card__body">
+                <ul class="list" id="viralList"></ul>
+              </div>
+            </article>
+
+            <article class="card card--buzz" aria-live="polite">
+              <div class="card__header">
+                <div class="card__heading">
+                  <span class="icon-circle" aria-hidden="true">B</span>
+                  <div>
+                    <h2>Buzz</h2>
+                    <span class="tag">HN / AI / Ads</span>
+                  </div>
+                </div>
+                <div class="card__actions">
+                  <button class="kebab" type="button" aria-label="More options">...</button>
+                </div>
+              </div>
+              <div class="card__body">
+                <div class="muted" id="buzzNote" style="margin-bottom: 10px;"></div>
+                <ul class="list" id="buzzList"></ul>
+              </div>
+            </article>
+
+            <article class="card card--pulse" aria-live="polite">
+              <div class="card__header">
+                <div class="card__heading">
+                  <span class="icon-circle" aria-hidden="true">P</span>
+                  <div>
+                    <h2>Platform Pulse</h2>
+                    <span class="tag">GDELT</span>
+                  </div>
+                </div>
+                <div class="card__actions">
+                  <div class="chip-group" id="pulseQueryToggle" role="tablist" aria-label="Platform query">
+                    <button class="chip is-active" type="button" data-query="google" aria-pressed="true">Google</button>
+                    <button class="chip" type="button" data-query="meta" aria-pressed="false">Meta</button>
+                  </div>
+                  <div class="chip-group" id="pulseTimespanToggle" role="tablist" aria-label="Timespan">
+                    <button class="chip is-active" type="button" data-timespan="7d" aria-pressed="true">7d</button>
+                    <button class="chip" type="button" data-timespan="30d" aria-pressed="false">30d</button>
+                  </div>
+                  <button class="kebab" type="button" aria-label="More options">...</button>
+                </div>
+              </div>
+              <div class="card__body">
+                <ul class="list" id="pulseList"></ul>
+              </div>
+            </article>
+
+            <article class="card card--fx" aria-live="polite">
+              <div class="card__header">
+                <div class="card__heading">
+                  <span class="icon-circle" aria-hidden="true">FX</span>
+                  <div>
+                    <h2>FX / Margin Watch</h2>
+                    <span class="tag">Frankfurter</span>
+                  </div>
+                </div>
+                <div class="card__actions">
+                  <button class="kebab" type="button" aria-label="More options">...</button>
+                </div>
+              </div>
+              <div class="card__body">
+                <div id="fxRates" class="kpi-grid"></div>
+              </div>
+            </article>
+
+            <article class="card card--weather" aria-live="polite">
+              <div class="card__header">
+                <div class="card__heading">
+                  <span class="icon-circle" aria-hidden="true">WX</span>
+                  <div>
+                    <h2>Weather Trigger</h2>
+                    <span class="tag">Open-Meteo</span>
+                  </div>
+                </div>
+                <div class="card__actions">
+                  <button class="kebab" type="button" aria-label="More options">...</button>
+                </div>
+              </div>
+              <div class="card__body">
+                <form class="weather__form" id="weatherForm">
+                  <label class="sr-only" for="weatherCity">City</label>
+                  <input id="weatherCity" type="text" value="Stockholm" placeholder="City (Stockholm)" />
+                  <button class="btn btn--ghost btn--small" type="submit" aria-label="Set city">Set</button>
+                </form>
+                <span class="status-pill" id="weatherTrigger">Laddar...</span>
+                <div class="weather__summary" id="weatherSummary"></div>
+              </div>
+            </article>
+
+            <article class="card card--meter" aria-live="polite">
+              <div class="card__header">
+                <div class="card__heading">
+                  <span class="icon-circle" aria-hidden="true">S</span>
+                  <div>
+                    <h2>Signal Meter</h2>
+                    <span class="tag">Composite</span>
+                  </div>
+                </div>
+                <div class="card__actions">
+                  <button class="kebab" type="button" aria-label="More options">...</button>
+                </div>
+              </div>
+              <div class="card__body meter">
+                <div class="meter__track">
+                  <div class="meter__fill" id="signalFill"></div>
+                </div>
+                <div class="meter__labels">
+                  <div>Score: <strong id="signalScore">--</strong></div>
+                  <div class="muted" id="signalLevel">Loading...</div>
+                </div>
+                <div class="meter__stats">
+                  <div class="stat">
+                    <span class="stat__label">Buzz hits</span>
+                    <span class="stat__value" id="signalBuzz">--</span>
+                  </div>
+                  <div class="stat">
+                    <span class="stat__label">Pulse volume</span>
+                    <span class="stat__value" id="signalPulse">--</span>
+                  </div>
+                  <div class="stat">
+                    <span class="stat__label">Weather trigger</span>
+                    <span class="stat__value" id="signalWeather">--</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="card card--manifesto" aria-live="polite">
+              <div class="card__header">
+                <div class="card__heading">
+                  <span class="icon-circle" aria-hidden="true">M</span>
+                  <div>
+                    <h2>Founder Manifesto</h2>
+                    <span class="tag">Daily</span>
+                  </div>
+                </div>
+                <div class="card__actions">
+                  <button class="kebab" type="button" aria-label="More options">...</button>
+                </div>
+              </div>
+              <div class="card__body" id="manifestoBody">
+                <span class="tag" id="manifestoTag">Laddar...</span>
+                <div class="manifesto__line" id="manifestoLine">...</div>
+                <div class="manifesto__meta">
+                  <span><strong>Action:</strong> <span id="manifestoAction">...</span></span>
+                  <span><strong>Focus metric:</strong> <span id="manifestoMetric">...</span></span>
+                </div>
+                <div class="manifesto__buttons">
+                  <button class="btn btn--light btn--small" type="button" id="manifestoRandom">Ny mantra</button>
+                  <button class="btn btn--outline btn--small" type="button" id="manifestoCopy">Kopiera</button>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <footer id="contact" class="footer section-block">
+        <div class="container footer__grid">
+          <div class="footer__left">
+            <h2>Kontakt</h2>
+            <p class="footer__text">
+              Nyfiken på att veta mer eller diskutera ett projekt?
+              Hör av dig så tar vi en kaffe!
+            </p>
+            <a href="./cv/ava-urden-cv-sv.pdf" download class="btn btn--white">Ladda ner CV</a>
+          </div>
+
+          <div class="footer__right">
+            <div class="contact-group">
+              <span class="contact-label">Email</span>
+              <a href="mailto:ava.urden@gmail.com" class="contact-link email-link">ava.urden@gmail.com</a>
+            </div>
+            <div class="contact-group">
+              <span class="contact-label">Mobil</span>
+              <a href="tel:+46723111441" class="contact-link">+46 72 311 14 41</a>
+            </div>
+            <div class="contact-group">
+              <span class="contact-label">LinkedIn</span>
+              <a href="https://linkedin.com/in/avaurden" target="_blank" rel="noopener" class="contact-link">
+                linkedin.com/in/avaurden
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="container footer__bottom">
+          <div class="footer__copy">&copy; 2026 Ava Urdén</div>
+        </div>
+      </footer>
+    </main>
+
+    <script>
+      const state = {
+        viralProject: "sv.wikipedia",
+        pulseQuery: "google",
+        pulseTimespan: "7d",
+        searchTerm: "",
+        viral: [],
+        buzz: [],
+        pulse: [],
+        manifesto: [],
+        buzzMatches: 0,
+        viralTopViews: 0,
+        weatherTrigger: "",
+        loaded: {
+          viral: false,
+          buzz: false,
+          pulse: false
+        }
+      };
+
+      const CACHE_TTL = 15 * 60 * 1000;
+      const KEYWORDS = [
+        "ads",
+        "marketing",
+        "ecommerce",
+        "seo",
+        "google",
+        "meta",
+        "ai",
+        "gemini",
+        "overviews",
+        "pmax",
+        "performance max"
+      ];
+
+      const PULSE_QUERIES = {
+        google: '("AI Overviews" OR "AI Mode" OR "core update" OR "Search Central") AND (Google OR "Search Console")',
+        meta: '("Marketing API" OR "Advantage+" OR "Ads Manager" OR "Meta ads") AND (Meta OR Facebook OR Instagram)'
+      };
+
+      const defaultCity = {
+        name: "Stockholm",
+        latitude: 59.3293,
+        longitude: 18.0686
+      };
+
+      const elements = {
+        updatedAt: document.getElementById("updatedAt"),
+        refreshBtn: document.getElementById("refreshBtn"),
+        searchInput: document.getElementById("searchInput"),
+        viralList: document.getElementById("viralList"),
+        buzzList: document.getElementById("buzzList"),
+        buzzNote: document.getElementById("buzzNote"),
+        pulseList: document.getElementById("pulseList"),
+        fxRates: document.getElementById("fxRates"),
+        weatherForm: document.getElementById("weatherForm"),
+        weatherCity: document.getElementById("weatherCity"),
+        weatherTrigger: document.getElementById("weatherTrigger"),
+        weatherSummary: document.getElementById("weatherSummary"),
+        signalFill: document.getElementById("signalFill"),
+        signalScore: document.getElementById("signalScore"),
+        signalLevel: document.getElementById("signalLevel"),
+        signalBuzz: document.getElementById("signalBuzz"),
+        signalPulse: document.getElementById("signalPulse"),
+        signalWeather: document.getElementById("signalWeather"),
+        manifestoTag: document.getElementById("manifestoTag"),
+        manifestoLine: document.getElementById("manifestoLine"),
+        manifestoAction: document.getElementById("manifestoAction"),
+        manifestoMetric: document.getElementById("manifestoMetric"),
+        manifestoRandom: document.getElementById("manifestoRandom"),
+        manifestoCopy: document.getElementById("manifestoCopy"),
+        manifestoBody: document.getElementById("manifestoBody")
+      };
+
+      function updateTimestamp() {
+        const now = new Date();
+        const formatted = now.toLocaleString("sv-SE", {
+          year: "numeric",
+          month: "short",
+          day: "numeric",
+          hour: "2-digit",
+          minute: "2-digit"
+        });
+        elements.updatedAt.textContent = formatted;
+      }
+
+      function escapeHTML(str = "") {
+        return str.replace(/[&<>"']/g, (match) => {
+          const map = {
+            "&": "&amp;",
+            "<": "&lt;",
+            ">": "&gt;",
+            "\"": "&quot;",
+            "'": "&#39;"
+          };
+          return map[match] || match;
+        });
+      }
+
+      function formatNumber(value) {
+        if (value === undefined || value === null) return "--";
+        return new Intl.NumberFormat("sv-SE").format(value);
+      }
+
+      function formatPercent(value) {
+        if (value === undefined || value === null || Number.isNaN(value)) return "--";
+        const sign = value > 0 ? "+" : "";
+        return `${sign}${value.toFixed(2)}%`;
+      }
+
+      function cacheGet(key, ttl, force) {
+        if (force) return null;
+        const raw = localStorage.getItem(key);
+        if (!raw) return null;
+        try {
+          const payload = JSON.parse(raw);
+          if (Date.now() - payload.ts < ttl) return payload.data;
+        } catch (err) {
+          return null;
+        }
+        return null;
+      }
+
+      function cacheSet(key, data) {
+        localStorage.setItem(key, JSON.stringify({ ts: Date.now(), data }));
+      }
+
+      async function fetchJson(url, { cacheKey, ttl = CACHE_TTL, force = false } = {}) {
+        if (cacheKey) {
+          const cached = cacheGet(cacheKey, ttl, force);
+          if (cached) return cached;
+        }
+        const response = await fetch(url);
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        const data = await response.json();
+        if (cacheKey) cacheSet(cacheKey, data);
+        return data;
+      }
+
+      function renderSkeleton(listEl, count = 6) {
+        listEl.innerHTML = Array.from({ length: count })
+          .map(() => `<li class="list__item skeleton"><div class="skeleton__bar"></div></li>`)
+          .join("");
+      }
+
+      function renderError(container, message, link, asList = false) {
+        const linkHtml = link
+          ? ` <a href="${link}" target="_blank" rel="noopener">Open source</a>`
+          : "";
+        const body = `<div class="error">${escapeHTML(message)}${linkHtml}</div>`;
+        container.innerHTML = asList ? `<li class="list__empty">${body}</li>` : body;
+      }
+
+      function filterBySearch(items) {
+        const query = state.searchTerm.trim().toLowerCase();
+        if (!query) return items;
+        return items.filter((item) => item.title.toLowerCase().includes(query));
+      }
+
+      function getUtcYesterday() {
+        const now = new Date();
+        const utc = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate()));
+        const yesterday = new Date(utc.getTime() - 24 * 60 * 60 * 1000);
+        const year = yesterday.getUTCFullYear();
+        const month = String(yesterday.getUTCMonth() + 1).padStart(2, "0");
+        const day = String(yesterday.getUTCDate()).padStart(2, "0");
+        return { year, month, day };
+      }
+
+      function decodeTitle(title = "") {
+        return decodeURIComponent(title.replace(/_/g, " "));
+      }
+
+      function renderViral() {
+        if (!state.loaded.viral) return;
+        const list = filterBySearch(state.viral);
+        if (!list.length) {
+          elements.viralList.innerHTML = `<li class="list__empty">No matches.</li>`;
+          return;
+        }
+        elements.viralList.innerHTML = list
+          .map((item) => {
+            return `
+              <li class="list__item">
+                <span class="rank">${String(item.rank).padStart(2, "0")}</span>
+                <div class="list__text">
+                  <span class="list__title">${escapeHTML(item.title)}</span>
+                  <span class="list__meta">${formatNumber(item.views)} views</span>
+                </div>
+                <a class="list__link" href="${item.url}" target="_blank" rel="noopener" aria-label="Open ${escapeHTML(item.title)}">Open</a>
+              </li>
+            `;
+          })
+          .join("");
+      }
+
+      function renderBuzz() {
+        if (!state.loaded.buzz) return;
+        const list = filterBySearch(state.buzz);
+        if (!list.length) {
+          elements.buzzList.innerHTML = `<li class="list__empty">No matches.</li>`;
+          return;
+        }
+        elements.buzzList.innerHTML = list
+          .map((item, index) => {
+            return `
+              <li class="list__item">
+                <span class="rank">${String(index + 1).padStart(2, "0")}</span>
+                <div class="list__text">
+                  <span class="list__title">${escapeHTML(item.title)}</span>
+                  <span class="list__meta">${formatNumber(item.points)} points</span>
+                </div>
+                <a class="list__link" href="${item.url}" target="_blank" rel="noopener" aria-label="Open ${escapeHTML(item.title)}">Open</a>
+              </li>
+            `;
+          })
+          .join("");
+      }
+
+      function renderPulse() {
+        if (!state.loaded.pulse) return;
+        const list = filterBySearch(state.pulse);
+        if (!list.length) {
+          elements.pulseList.innerHTML = `<li class="list__empty">No matches.</li>`;
+          return;
+        }
+        elements.pulseList.innerHTML = list
+          .map((item, index) => {
+            return `
+              <li class="list__item">
+                <span class="rank">${String(index + 1).padStart(2, "0")}</span>
+                <div class="list__text">
+                  <span class="list__title">${escapeHTML(item.title)}</span>
+                  <span class="list__meta">${escapeHTML(item.source)} • ${escapeHTML(item.date)}</span>
+                </div>
+                <a class="list__link" href="${item.url}" target="_blank" rel="noopener" aria-label="Open ${escapeHTML(item.title)}">Open</a>
+              </li>
+            `;
+          })
+          .join("");
+      }
+
+      function updateSignalMeter() {
+        const buzzHits = state.buzzMatches || 0;
+        const pulseHits = state.pulse.length || 0;
+        const topViews = state.viralTopViews || 0;
+
+        const buzzBoost = Math.min(20, buzzHits * 3);
+        const pulseBoost = Math.min(15, pulseHits);
+        const viralBoost = Math.min(15, Math.round(topViews / 50000));
+        const weatherBoost = state.weatherTrigger === "Sunny window" ? 10 : state.weatherTrigger === "Rain push" ? 5 : 0;
+
+        const score = Math.max(0, Math.min(100, 40 + buzzBoost + pulseBoost + viralBoost + weatherBoost));
+        const level = score > 75 ? "Hot" : score > 55 ? "Building" : "Quiet";
+
+        elements.signalScore.textContent = score;
+        elements.signalLevel.textContent = level;
+        elements.signalFill.style.width = `${score}%`;
+        elements.signalBuzz.textContent = buzzHits;
+        elements.signalPulse.textContent = pulseHits;
+        elements.signalWeather.textContent = state.weatherTrigger || "--";
+      }
+
+      async function loadViral(force = false) {
+        renderSkeleton(elements.viralList, 8);
+        const { year, month, day } = getUtcYesterday();
+        const project = state.viralProject;
+        const url = `https://wikimedia.org/api/rest_v1/metrics/pageviews/top/${project}/all-access/${year}/${month}/${day}`;
+        const cacheKey = `growthRadar:viral:${project}:${year}-${month}-${day}`;
+        const base = project === "sv.wikipedia" ? "https://sv.wikipedia.org/wiki/" : "https://en.wikipedia.org/wiki/";
+        try {
+          const data = await fetchJson(url, { cacheKey, force });
+          const items = data?.items?.[0]?.articles || [];
+          const top = items.slice(0, 12).map((item, index) => ({
+            rank: index + 1,
+            title: decodeTitle(item.article),
+            views: item.views,
+            url: `${base}${encodeURIComponent(item.article)}`
+          }));
+          state.viral = top;
+          state.viralTopViews = top[0]?.views || 0;
+          state.loaded.viral = true;
+          renderViral();
+        } catch (err) {
+          state.loaded.viral = true;
+          renderError(elements.viralList, "Could not load Wikimedia right now.", url, true);
+        }
+        updateSignalMeter();
+      }
+
+      async function loadBuzz(force = false) {
+        renderSkeleton(elements.buzzList, 6);
+        elements.buzzNote.textContent = "";
+        const url = "https://hn.algolia.com/api/v1/search?tags=front_page";
+        const cacheKey = "growthRadar:buzz";
+        try {
+          const data = await fetchJson(url, { cacheKey, force });
+          const hits = data?.hits || [];
+          const matches = hits.filter((hit) =>
+            KEYWORDS.some((keyword) => hit.title && hit.title.toLowerCase().includes(keyword))
+          );
+          const selected = matches.length ? matches.slice(0, 10) : hits.slice(0, 10);
+          state.buzzMatches = matches.length;
+          state.buzz = selected.map((hit) => ({
+            title: hit.title || "Untitled",
+            points: hit.points || 0,
+            url: hit.url || `https://news.ycombinator.com/item?id=${hit.objectID}`
+          }));
+          state.loaded.buzz = true;
+          if (!matches.length) {
+            elements.buzzNote.textContent = "No keyword matches. Showing top 10.";
+          }
+          renderBuzz();
+        } catch (err) {
+          state.loaded.buzz = true;
+          renderError(elements.buzzList, "Could not load HN right now.", url, true);
+        }
+        updateSignalMeter();
+      }
+
+      function formatSeenDate(seen) {
+        if (!seen) return "Unknown date";
+        const digits = seen.replace(/\D/g, "");
+        if (digits.length >= 8) {
+          const y = digits.slice(0, 4);
+          const m = digits.slice(4, 6);
+          const d = digits.slice(6, 8);
+          return `${y}-${m}-${d}`;
+        }
+        return seen;
+      }
+
+      function getSourceName(article) {
+        if (article.sourceCommonName) return article.sourceCommonName;
+        if (article.sourceCountry) return article.sourceCountry;
+        if (article.url) {
+          try {
+            const host = new URL(article.url).hostname.replace("www.", "");
+            return host;
+          } catch (err) {
+            return "Source";
+          }
+        }
+        return "Source";
+      }
+
+      async function loadPulse(force = false) {
+        renderSkeleton(elements.pulseList, 6);
+        const query = encodeURIComponent(PULSE_QUERIES[state.pulseQuery]);
+        const timespan = state.pulseTimespan;
+        const url = `https://api.gdeltproject.org/api/v2/doc/doc?query=${query}&mode=ArtList&format=json&maxrecords=12&sort=HybridRel&timelinesmooth=0&timespan=${timespan}`;
+        const cacheKey = `growthRadar:pulse:${state.pulseQuery}:${timespan}`;
+        try {
+          const data = await fetchJson(url, { cacheKey, force });
+          const articles = data?.articles || [];
+          state.pulse = articles.slice(0, 12).map((article) => ({
+            title: article.title || "Untitled",
+            url: article.url || "#",
+            source: getSourceName(article),
+            date: formatSeenDate(article.seendate || article.seenDate || "")
+          }));
+          state.loaded.pulse = true;
+          renderPulse();
+        } catch (err) {
+          state.loaded.pulse = true;
+          renderError(elements.pulseList, "Could not load GDELT right now.", url, true);
+        }
+        updateSignalMeter();
+      }
+
+      async function loadFx(force = false) {
+        elements.fxRates.innerHTML = `<div class="muted">Laddar...</div>`;
+        const url = "https://api.frankfurter.dev/latest?from=EUR&to=SEK,USD,NOK";
+        const cacheKey = "growthRadar:fx:latest";
+        try {
+          const latest = await fetchJson(url, { cacheKey, force });
+          const latestRates = latest?.rates || {};
+          const yesterday = new Date();
+          yesterday.setUTCDate(yesterday.getUTCDate() - 1);
+          const dateStr = `${yesterday.getUTCFullYear()}-${String(yesterday.getUTCMonth() + 1).padStart(2, "0")}-${String(yesterday.getUTCDate()).padStart(2, "0")}`;
+
+          let previousRates = null;
+          try {
+            const prevUrl = `https://api.frankfurter.dev/${dateStr}?from=EUR&to=SEK,USD,NOK`;
+            previousRates = await fetchJson(prevUrl, { cacheKey: `growthRadar:fx:${dateStr}`, force });
+          } catch (err) {
+            previousRates = null;
+          }
+
+          const pairs = [
+            { code: "SEK", value: latestRates.SEK, prev: previousRates?.rates?.SEK },
+            { code: "USD", value: latestRates.USD, prev: previousRates?.rates?.USD },
+            { code: "NOK", value: latestRates.NOK, prev: previousRates?.rates?.NOK }
+          ];
+
+          elements.fxRates.innerHTML = pairs
+            .map((pair) => {
+              const delta =
+                pair.prev && pair.value ? ((pair.value - pair.prev) / pair.prev) * 100 : null;
+              const deltaClass = delta > 0 ? "delta up" : "delta down";
+              const deltaText = delta !== null ? `<span class="${deltaClass}">${formatPercent(delta)}</span>` : "";
+              return `
+                <div class="kpi-pill">
+                  <span>EUR/${pair.code}</span>
+                  <span><strong>${pair.value ? pair.value.toFixed(4) : "--"}</strong>${deltaText}</span>
+                </div>
+              `;
+            })
+            .join("");
+        } catch (err) {
+          renderError(elements.fxRates, "Could not load FX rates right now.", url, false);
+        }
+      }
+
+      function getWeatherTrigger(cloud, precip) {
+        if (cloud < 40 && precip < 20) return "Sunny window";
+        if (precip >= 60) return "Rain push";
+        if (cloud >= 70) return "Cloud watch";
+        return "Mild watch";
+      }
+
+      async function resolveCity(city, force = false) {
+        if (!city || city.trim().length === 0) return defaultCity;
+        const normalized = city.trim().toLowerCase();
+        if (normalized === "stockholm") return defaultCity;
+
+        const url = `https://geocoding-api.open-meteo.com/v1/search?name=${encodeURIComponent(
+          city
+        )}&count=1&language=en&format=json`;
+        const cacheKey = `growthRadar:geo:${normalized}`;
+        const data = await fetchJson(url, { cacheKey, ttl: 24 * 60 * 60 * 1000, force });
+        if (!data?.results?.length) throw new Error("City not found");
+        const result = data.results[0];
+        return {
+          name: result.name,
+          latitude: result.latitude,
+          longitude: result.longitude
+        };
+      }
+
+      async function loadWeather(force = false) {
+        elements.weatherTrigger.textContent = "Laddar...";
+        elements.weatherSummary.textContent = "";
+        const city = elements.weatherCity.value || defaultCity.name;
+
+        try {
+          const coords = await resolveCity(city, force);
+          const url = `https://api.open-meteo.com/v1/forecast?latitude=${coords.latitude}&longitude=${coords.longitude}&current=temperature_2m,precipitation,cloud_cover&daily=precipitation_probability_max&timezone=auto`;
+          const cacheKey = `growthRadar:weather:${coords.name.toLowerCase()}`;
+          const data = await fetchJson(url, { cacheKey, force });
+
+          const current = data.current || {};
+          const daily = data.daily || {};
+          const precipProb = Array.isArray(daily.precipitation_probability_max)
+            ? daily.precipitation_probability_max[0]
+            : 0;
+
+          const trigger = getWeatherTrigger(current.cloud_cover || 0, precipProb || 0);
+          state.weatherTrigger = trigger;
+          elements.weatherTrigger.textContent = trigger;
+          elements.weatherSummary.textContent = `${coords.name}: ${current.temperature_2m ?? "--"}°C, clouds ${
+            current.cloud_cover ?? "--"
+          }%, precip ${precipProb ?? "--"}%`;
+
+          updateSignalMeter();
+        } catch (err) {
+          renderError(
+            elements.weatherSummary,
+            "Could not load weather right now.",
+            "https://api.open-meteo.com/",
+            false
+          );
+          elements.weatherTrigger.textContent = "Unavailable";
+        }
+      }
+
+      function getUtcDayIndex() {
+        const now = new Date();
+        const dayUtc = Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate());
+        return Math.floor(dayUtc / 86400000);
+      }
+
+      function renderManifesto(item) {
+        elements.manifestoTag.textContent = item.tag;
+        elements.manifestoLine.textContent = item.line;
+        elements.manifestoAction.textContent = item.action;
+        elements.manifestoMetric.textContent = item.focusMetric;
+      }
+
+      async function loadManifesto(force = false) {
+        elements.manifestoTag.textContent = "Laddar...";
+        elements.manifestoLine.textContent = "...";
+        const url = "/data/manifesto.json";
+        const cacheKey = "growthRadar:manifesto";
+        try {
+          const data = await fetchJson(url, { cacheKey, ttl: 24 * 60 * 60 * 1000, force });
+          if (!Array.isArray(data) || data.length < 1) throw new Error("No manifesto data");
+          state.manifesto = data;
+          const index = getUtcDayIndex() % data.length;
+          const item = data[index];
+          renderManifesto(item);
+        } catch (err) {
+          renderError(elements.manifestoBody, "Could not load manifesto.", url, false);
+        }
+      }
+
+      function setToggleActive(group, attr, value) {
+        group.querySelectorAll("button").forEach((btn) => {
+          const isActive = btn.getAttribute(attr) === value;
+          btn.classList.toggle("is-active", isActive);
+          btn.setAttribute("aria-pressed", isActive ? "true" : "false");
+        });
+      }
+
+      function attachEvents() {
+        const viralToggle = document.getElementById("viralToggle");
+        viralToggle.addEventListener("click", (event) => {
+          const button = event.target.closest("button[data-project]");
+          if (!button) return;
+          state.viralProject = button.dataset.project;
+          setToggleActive(viralToggle, "data-project", state.viralProject);
+          loadViral(true);
+        });
+
+        const pulseQueryToggle = document.getElementById("pulseQueryToggle");
+        pulseQueryToggle.addEventListener("click", (event) => {
+          const button = event.target.closest("button[data-query]");
+          if (!button) return;
+          state.pulseQuery = button.dataset.query;
+          setToggleActive(pulseQueryToggle, "data-query", state.pulseQuery);
+          loadPulse(true);
+        });
+
+        const pulseTimespanToggle = document.getElementById("pulseTimespanToggle");
+        pulseTimespanToggle.addEventListener("click", (event) => {
+          const button = event.target.closest("button[data-timespan]");
+          if (!button) return;
+          state.pulseTimespan = button.dataset.timespan;
+          setToggleActive(pulseTimespanToggle, "data-timespan", state.pulseTimespan);
+          loadPulse(true);
+        });
+
+        elements.refreshBtn.addEventListener("click", () => {
+          updateTimestamp();
+          loadAll(true);
+        });
+
+        elements.searchInput.addEventListener("input", (event) => {
+          state.searchTerm = event.target.value;
+          renderViral();
+          renderBuzz();
+          renderPulse();
+        });
+
+        elements.weatherForm.addEventListener("submit", (event) => {
+          event.preventDefault();
+          loadWeather(true);
+        });
+
+        elements.manifestoRandom.addEventListener("click", () => {
+          if (!state.manifesto.length) return;
+          const random = state.manifesto[Math.floor(Math.random() * state.manifesto.length)];
+          renderManifesto(random);
+        });
+
+        elements.manifestoCopy.addEventListener("click", async () => {
+          const text = `${elements.manifestoLine.textContent}\n${elements.manifestoAction.textContent}\n${elements.manifestoMetric.textContent}`;
+          try {
+            await navigator.clipboard.writeText(text);
+            elements.manifestoCopy.textContent = "Kopierad";
+            setTimeout(() => {
+              elements.manifestoCopy.textContent = "Kopiera";
+            }, 1200);
+          } catch (err) {
+            elements.manifestoCopy.textContent = "Misslyckades";
+            setTimeout(() => {
+              elements.manifestoCopy.textContent = "Kopiera";
+            }, 1200);
+          }
+        });
+
+        window.addEventListener("scroll", () => {
+          const header = document.querySelector(".header");
+          header.classList.toggle("header--scrolled", window.scrollY > 8);
+        });
+      }
+
+      function loadAll(force = false) {
+        loadViral(force);
+        loadBuzz(force);
+        loadPulse(force);
+        loadFx(force);
+        loadWeather(force);
+        loadManifesto(force);
+      }
+
+      updateTimestamp();
+      attachEvents();
+      loadAll(false);
+    </script>
+  </body>
+</html>
