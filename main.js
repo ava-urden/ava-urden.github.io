@@ -53,14 +53,14 @@ const dict = {
     mini_item_1_desc:
       "Spara och organisera dina öppna flikar i snygga samlingar så att du hittar dem senare.",
     mini_item_1_cta: "Ladda ner gratis",
-    mini_item_1_more: "Läs mer →",
+    mini_item_1_more: "Läs mer",
     mini_item_2_media: "API",
     mini_item_2_tag: "API",
     mini_item_2_status: "Pågående",
     mini_item_2_title: "Growth Signals API",
     mini_item_2_desc:
       "Plats för API-projekt och endpoints jag bygger för att samla in och tolka tillväxtdata.",
-    mini_item_2_cta: "Läs mer →",
+    mini_item_2_cta: "Läs mer",
     mini_item_3_media: "Plugin",
     mini_item_3_tag: "Plugin",
     mini_item_3_status: "Pågående",
@@ -492,14 +492,14 @@ const dict = {
     mini_item_1_desc:
       "Save and organize your open tabs into neat collections so you can find them later.",
     mini_item_1_cta: "Download for free",
-    mini_item_1_more: "Read more →",
+    mini_item_1_more: "Read more",
     mini_item_2_media: "API",
     mini_item_2_tag: "API",
     mini_item_2_status: "In progress",
     mini_item_2_title: "Growth Signals API",
     mini_item_2_desc:
       "Space for API projects and endpoints I’m building to collect and interpret growth data.",
-    mini_item_2_cta: "Read more →",
+    mini_item_2_cta: "Read more",
     mini_item_3_media: "Plugin",
     mini_item_3_tag: "Plugin",
     mini_item_3_status: "In progress",

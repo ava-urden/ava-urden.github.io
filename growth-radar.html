@@ -369,6 +369,7 @@
       .card--pulse { grid-column: 1 / -1; }
       .card--fx { grid-column: span 6; }
       .card--weather { grid-column: span 6; }
+      .card--pinterest { grid-column: 1 / -1; }
 
       @media (max-width: 960px) {
         .dashboard { grid-template-columns: repeat(6, minmax(0, 1fr)); }
@@ -444,6 +445,10 @@
         flex-wrap: wrap;
       }
 
+      .chip-group--static {
+        margin: 10px 0 12px;
+      }
+
       .chip {
         padding: 6px 12px;
         border-radius: 999px;
@@ -461,6 +466,10 @@
         background: rgba(239,126,161,0.22);
         border-color: rgba(239,126,161,0.6);
         color: #fff;
+      }
+
+      .chip--static {
+        cursor: default;
       }
 
       .kebab {
@@ -630,6 +639,26 @@
         padding: 8px 12px;
         font-size: 0.85rem;
         outline: none;
+      }
+
+      .token-row {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 12px 0;
+      }
+
+      .token-row input {
+        flex: 1;
+        background: rgba(255,255,255,0.08);
+        border: 1px solid var(--line);
+        color: #fff;
+        border-radius: 999px;
+        padding: 8px 12px;
+        font-size: 0.85rem;
+        outline: none;
+        min-width: 180px;
       }
 
       .status-pill {
@@ -896,6 +925,13 @@
 
       .search input::placeholder {
         color: #888888;
+      }
+
+      .weather__form input,
+      .token-row input {
+        background: #ffffff;
+        border-color: #e0e0e0;
+        color: #111111;
       }
 
       .btn--light,
@@ -1248,6 +1284,64 @@
               </div>
             </article>
 
+            <article class="card card--pinterest" aria-live="polite">
+              <div class="card__header">
+                <div class="card__heading">
+                  <span class="icon-circle" aria-hidden="true">PT</span>
+                  <div>
+                    <h2 data-i18n="pinterest_title">Pinterest Trendspaning</h2>
+                    <span class="tag" data-i18n="pinterest_tag">REST API v5.23</span>
+                  </div>
+                </div>
+                <div class="card__actions">
+                  <button class="kebab" type="button" aria-label="More options" data-i18n-aria="more_options">...</button>
+                </div>
+              </div>
+              <div class="card__body">
+                <p class="muted" data-i18n="pinterest_desc">Trendspaning via Pinterest Trends API.</p>
+                <div class="chip-group chip-group--static" data-i18n-aria="pinterest_capabilities">
+                  <span class="chip chip--static" data-i18n="pinterest_feature_conversion">Conversion</span>
+                  <span class="chip chip--static" data-i18n="pinterest_feature_content">Content</span>
+                  <span class="chip chip--static" data-i18n="pinterest_feature_ads">Ads</span>
+                  <span class="chip chip--static" data-i18n="pinterest_feature_targeting">Targeting</span>
+                  <span class="chip chip--static" data-i18n="pinterest_feature_shopping">Shopping</span>
+                  <span class="chip chip--static" data-i18n="pinterest_feature_analytics">Analytics</span>
+                </div>
+                <div class="chip-group" id="pinterestRegionToggle" role="tablist" data-i18n-aria="pinterest_region_label">
+                  <button class="chip is-active" type="button" data-region="SE+DK+FI+NO" aria-pressed="true" data-i18n="pinterest_region_nordic">Nordic</button>
+                  <button class="chip" type="button" data-region="US" aria-pressed="false" data-i18n="pinterest_region_us">US</button>
+                </div>
+                <div class="chip-group" id="pinterestTrendToggle" role="tablist" data-i18n-aria="pinterest_trend_label">
+                  <button class="chip is-active" type="button" data-trend="growing" aria-pressed="true" data-i18n="pinterest_trend_growing">Growing</button>
+                  <button class="chip" type="button" data-trend="monthly" aria-pressed="false" data-i18n="pinterest_trend_monthly">Monthly</button>
+                  <button class="chip" type="button" data-trend="yearly" aria-pressed="false" data-i18n="pinterest_trend_yearly">Yearly</button>
+                  <button class="chip" type="button" data-trend="seasonal" aria-pressed="false" data-i18n="pinterest_trend_seasonal">Seasonal</button>
+                </div>
+                <div class="token-row">
+                  <label class="sr-only" for="pinterestToken" data-i18n="pinterest_token_label">Pinterest access token</label>
+                  <input
+                    id="pinterestToken"
+                    type="password"
+                    autocomplete="off"
+                    placeholder="Pinterest access token"
+                    data-i18n-placeholder="pinterest_token_placeholder"
+                  />
+                  <button
+                    class="btn btn--ghost btn--small"
+                    id="pinterestSave"
+                    type="button"
+                    aria-label="Save Pinterest token"
+                    data-i18n="pinterest_save"
+                    data-i18n-aria="pinterest_save_aria"
+                  >
+                    Spara
+                  </button>
+                </div>
+                <div class="muted" id="pinterestNote" style="margin-bottom: 10px;"></div>
+                <ul class="list" id="pinterestList"></ul>
+              </div>
+            </article>
+
           </div>
         </div>
       </section>
@@ -1291,10 +1385,13 @@
         viralProject: "sv.wikipedia",
         pulseQuery: "google",
         pulseTimespan: "7d",
+        pinterestRegion: "SE+DK+FI+NO",
+        pinterestTrendType: "growing",
         searchTerm: "",
         viral: [],
         buzz: [],
         pulse: [],
+        pinterest: [],
         buzzMatches: 0,
         viralTopViews: 0,
         weatherData: null,
@@ -1302,7 +1399,8 @@
         loaded: {
           viral: false,
           buzz: false,
-          pulse: false
+          pulse: false,
+          pinterest: false
         }
       };
 
@@ -1339,6 +1437,7 @@
           weather_set_aria: "Sätt stad",
           more_options: "Fler alternativ",
           open: "Öppna",
+          trend_label: "Trend",
           no_matches: "Inga träffar.",
           views: "visningar",
           points: "poäng",
@@ -1349,6 +1448,7 @@
           error_gdelt: "Kunde inte hämta GDELT just nu.",
           error_fx: "Kunde inte hämta FX-kurser just nu.",
           error_weather: "Kunde inte hämta väder just nu.",
+          error_pinterest: "Kunde inte hämta Pinterest-trender just nu.",
           buzz_no_matches: "Inga träffar på nyckelord idag.",
           weather_unavailable: "Otillgängligt",
           weather_summary: "{city}: {temp}°C, moln {cloud}%, regn {precip}%",
@@ -1356,6 +1456,34 @@
           weather_rain: "Regnläge",
           weather_cloud: "Molnläge",
           weather_mild: "Lugn nivå",
+          pinterest_title: "Pinterest Trendspaning",
+          pinterest_tag: "REST API v5.23",
+          pinterest_desc: "Trendspaning via Pinterest Trends API.",
+          pinterest_capabilities: "Pinterest API-områden",
+          pinterest_feature_conversion: "Konvertering",
+          pinterest_feature_content: "Innehåll",
+          pinterest_feature_ads: "Annonser",
+          pinterest_feature_targeting: "Målgrupper",
+          pinterest_feature_shopping: "Shopping",
+          pinterest_feature_analytics: "Analys",
+          pinterest_region_label: "Region",
+          pinterest_region_nordic: "Norden",
+          pinterest_region_us: "USA",
+          pinterest_trend_label: "Trendtyp",
+          pinterest_trend_growing: "Växande",
+          pinterest_trend_monthly: "Månad",
+          pinterest_trend_yearly: "År",
+          pinterest_trend_seasonal: "Säsong",
+          pinterest_token_label: "Pinterest access token",
+          pinterest_token_placeholder: "Pinterest access token",
+          pinterest_save: "Spara",
+          pinterest_save_aria: "Spara Pinterest-token",
+          pinterest_need_token: "Lägg in en access token för att hämta trendord.",
+          pinterest_empty: "Ingen Pinterest-data ännu.",
+          growth_wow: "WoW",
+          growth_mom: "MoM",
+          growth_yoy: "YoY",
+          growth_unavailable: "Ingen tillväxtdata",
           contact_title: "Kontakt",
           footer_text:
             "Nyfiken på att veta mer eller diskutera ett projekt? Hör av dig så tar vi en kaffe!",
@@ -1396,6 +1524,7 @@
           weather_set_aria: "Set city",
           more_options: "More options",
           open: "Open",
+          trend_label: "Trend",
           no_matches: "No matches.",
           views: "views",
           points: "points",
@@ -1406,6 +1535,7 @@
           error_gdelt: "Could not load GDELT right now.",
           error_fx: "Could not load FX rates right now.",
           error_weather: "Could not load weather right now.",
+          error_pinterest: "Could not load Pinterest trends right now.",
           buzz_no_matches: "No keyword matches today.",
           weather_unavailable: "Unavailable",
           weather_summary: "{city}: {temp}°C, clouds {cloud}%, precip {precip}%",
@@ -1413,6 +1543,34 @@
           weather_rain: "Rain push",
           weather_cloud: "Cloud watch",
           weather_mild: "Mild watch",
+          pinterest_title: "Pinterest Trend Watch",
+          pinterest_tag: "REST API v5.23",
+          pinterest_desc: "Trend watch via the Pinterest Trends API.",
+          pinterest_capabilities: "Pinterest API areas",
+          pinterest_feature_conversion: "Conversion",
+          pinterest_feature_content: "Content",
+          pinterest_feature_ads: "Ads",
+          pinterest_feature_targeting: "Targeting",
+          pinterest_feature_shopping: "Shopping",
+          pinterest_feature_analytics: "Analytics",
+          pinterest_region_label: "Region",
+          pinterest_region_nordic: "Nordic",
+          pinterest_region_us: "US",
+          pinterest_trend_label: "Trend type",
+          pinterest_trend_growing: "Growing",
+          pinterest_trend_monthly: "Monthly",
+          pinterest_trend_yearly: "Yearly",
+          pinterest_trend_seasonal: "Seasonal",
+          pinterest_token_label: "Pinterest access token",
+          pinterest_token_placeholder: "Pinterest access token",
+          pinterest_save: "Save",
+          pinterest_save_aria: "Save Pinterest token",
+          pinterest_need_token: "Add an access token to fetch trend keywords.",
+          pinterest_empty: "No Pinterest data yet.",
+          growth_wow: "WoW",
+          growth_mom: "MoM",
+          growth_yoy: "YoY",
+          growth_unavailable: "Growth data unavailable",
           contact_title: "Contact",
           footer_text: "Curious to learn more or discuss a project? Reach out and let’s grab a coffee.",
           cta_cv: "Download CV",
@@ -1442,6 +1600,10 @@
         meta: '("Marketing API" OR "Advantage+" OR "Ads Manager" OR "Meta ads") AND (Meta OR Facebook OR Instagram)'
       };
 
+      const PINTEREST_BASE = "https://api.pinterest.com/v5";
+      const PINTEREST_DOCS = "https://developers.pinterest.com/docs/api/v5/";
+      const PINTEREST_TOKEN_KEY = "growthRadar:pinterestToken";
+
       const defaultCity = {
         name: "Stockholm",
         latitude: 59.3293,
@@ -1460,7 +1622,11 @@
         weatherForm: document.getElementById("weatherForm"),
         weatherCity: document.getElementById("weatherCity"),
         weatherTrigger: document.getElementById("weatherTrigger"),
-        weatherSummary: document.getElementById("weatherSummary")
+        weatherSummary: document.getElementById("weatherSummary"),
+        pinterestList: document.getElementById("pinterestList"),
+        pinterestNote: document.getElementById("pinterestNote"),
+        pinterestToken: document.getElementById("pinterestToken"),
+        pinterestSave: document.getElementById("pinterestSave")
       };
 
       function t(key) {
@@ -1496,6 +1662,10 @@
         renderViral();
         renderBuzz();
         renderPulse();
+        renderPinterest();
+        if (!getPinterestToken()) {
+          elements.pinterestNote.textContent = t("pinterest_need_token");
+        }
         if (state.weatherData) {
           renderWeather(state.weatherData);
         }
@@ -1555,13 +1725,17 @@
         localStorage.setItem(key, JSON.stringify({ ts: Date.now(), data }));
       }
 
-      async function fetchJson(url, { cacheKey, ttl = CACHE_TTL, force = false } = {}) {
+      async function fetchJson(url, { cacheKey, ttl = CACHE_TTL, force = false, headers } = {}) {
         if (cacheKey) {
           const cached = cacheGet(cacheKey, ttl, force);
           if (cached) return cached;
         }
-        const response = await fetch(url);
-        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        const response = await fetch(url, { headers });
+        if (!response.ok) {
+          const error = new Error(`HTTP ${response.status}`);
+          error.status = response.status;
+          throw error;
+        }
         const data = await response.json();
         if (cacheKey) cacheSet(cacheKey, data);
         return data;
@@ -1599,6 +1773,27 @@
 
       function decodeTitle(title = "") {
         return decodeURIComponent(title.replace(/_/g, " "));
+      }
+
+      function getPinterestToken() {
+        return localStorage.getItem(PINTEREST_TOKEN_KEY) || "";
+      }
+
+      function getPinterestGrowthMeta(item) {
+        let value = null;
+        let suffix = "";
+        if (state.pinterestTrendType === "growing" || state.pinterestTrendType === "seasonal") {
+          value = item.pct_growth_wow;
+          suffix = t("growth_wow");
+        } else if (state.pinterestTrendType === "monthly") {
+          value = item.pct_growth_mom;
+          suffix = t("growth_mom");
+        } else if (state.pinterestTrendType === "yearly") {
+          value = item.pct_growth_yoy;
+          suffix = t("growth_yoy");
+        }
+        if (typeof value !== "number") return t("growth_unavailable");
+        return `${formatPercent(value)} ${suffix}`;
       }
 
       function renderViral() {
@@ -1665,6 +1860,34 @@
                   <span class="list__meta">${escapeHTML(item.source)} • ${escapeHTML(item.date)}</span>
                 </div>
                 <a class="list__link" href="${item.url}" target="_blank" rel="noopener" aria-label="${t("open")} ${escapeHTML(item.title)}">${t("open")}</a>
+              </li>
+            `;
+          })
+          .join("");
+      }
+
+      function renderPinterest() {
+        if (!state.loaded.pinterest) return;
+        const token = getPinterestToken();
+        if (!token) {
+          elements.pinterestList.innerHTML = `<li class="list__empty">${t("pinterest_empty")}</li>`;
+          return;
+        }
+        const list = filterBySearch(state.pinterest);
+        if (!list.length) {
+          elements.pinterestList.innerHTML = `<li class="list__empty">${t("no_matches")}</li>`;
+          return;
+        }
+        elements.pinterestList.innerHTML = list
+          .map((item, index) => {
+            return `
+              <li class="list__item">
+                <span class="rank">${String(index + 1).padStart(2, "0")}</span>
+                <div class="list__text">
+                  <span class="list__title">${escapeHTML(item.title)}</span>
+                  <span class="list__meta">${escapeHTML(item.meta)}</span>
+                </div>
+                <span class="list__link">${t("trend_label")}</span>
               </li>
             `;
           })
@@ -1793,6 +2016,43 @@
         } catch (err) {
           state.loaded.pulse = true;
           renderError(elements.pulseList, t("error_gdelt"), url, true);
+        }
+      }
+
+      async function loadPinterest(force = false) {
+        renderSkeleton(elements.pinterestList, 6);
+        elements.pinterestNote.textContent = "";
+        const token = getPinterestToken();
+        if (!token) {
+          state.pinterest = [];
+          state.loaded.pinterest = true;
+          elements.pinterestNote.textContent = t("pinterest_need_token");
+          renderPinterest();
+          return;
+        }
+        const region = encodeURIComponent(state.pinterestRegion);
+        const trendType = state.pinterestTrendType;
+        const url = `${PINTEREST_BASE}/trends/keywords/${region}/top/${trendType}?limit=10`;
+        const cacheKey = `growthRadar:pinterest:${state.pinterestRegion}:${trendType}`;
+        try {
+          const data = await fetchJson(url, {
+            cacheKey,
+            force,
+            headers: { Authorization: `Bearer ${token}` }
+          });
+          const trends = data?.trends || [];
+          state.pinterest = trends.map((trend) => ({
+            title: trend.keyword || "Untitled",
+            meta: getPinterestGrowthMeta(trend)
+          }));
+          state.loaded.pinterest = true;
+          renderPinterest();
+        } catch (err) {
+          state.loaded.pinterest = true;
+          if (err?.status === 401 || err?.status === 403) {
+            elements.pinterestNote.textContent = t("pinterest_need_token");
+          }
+          renderError(elements.pinterestList, t("error_pinterest"), PINTEREST_DOCS, true);
         }
       }
 
@@ -1931,6 +2191,11 @@
           btn.addEventListener("click", () => applyLang(btn.dataset.lang));
         });
 
+        const storedPinterestToken = getPinterestToken();
+        if (storedPinterestToken) {
+          elements.pinterestToken.value = storedPinterestToken;
+        }
+
         const viralToggle = document.getElementById("viralToggle");
         viralToggle.addEventListener("click", (event) => {
           const button = event.target.closest("button[data-project]");
@@ -1958,6 +2223,34 @@
           loadPulse(true);
         });
 
+        const pinterestRegionToggle = document.getElementById("pinterestRegionToggle");
+        pinterestRegionToggle.addEventListener("click", (event) => {
+          const button = event.target.closest("button[data-region]");
+          if (!button) return;
+          state.pinterestRegion = button.dataset.region;
+          setToggleActive(pinterestRegionToggle, "data-region", state.pinterestRegion);
+          loadPinterest(true);
+        });
+
+        const pinterestTrendToggle = document.getElementById("pinterestTrendToggle");
+        pinterestTrendToggle.addEventListener("click", (event) => {
+          const button = event.target.closest("button[data-trend]");
+          if (!button) return;
+          state.pinterestTrendType = button.dataset.trend;
+          setToggleActive(pinterestTrendToggle, "data-trend", state.pinterestTrendType);
+          loadPinterest(true);
+        });
+
+        elements.pinterestSave.addEventListener("click", () => {
+          const token = elements.pinterestToken.value.trim();
+          if (token) {
+            localStorage.setItem(PINTEREST_TOKEN_KEY, token);
+          } else {
+            localStorage.removeItem(PINTEREST_TOKEN_KEY);
+          }
+          loadPinterest(true);
+        });
+
         elements.refreshBtn.addEventListener("click", () => {
           updateTimestamp();
           loadAll(true);
@@ -1968,6 +2261,7 @@
           renderViral();
           renderBuzz();
           renderPulse();
+          renderPinterest();
         });
 
         elements.weatherForm.addEventListener("submit", (event) => {
@@ -1985,6 +2279,7 @@
         loadViral(force);
         loadBuzz(force);
         loadPulse(force);
+        loadPinterest(force);
         loadFx(force);
         loadWeather(force);
       }
