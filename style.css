@@ -2143,6 +2143,24 @@ body.modal-open {
   border-radius: 0;
 }
 
+.case-page--ak .intro-text,
+.case-page--ak .case-hero__content,
+.case-page--ak .highlight-section,
+.case-page--ak .case-gallery,
+.case-page--ak .feature-block {
+  text-align: left;
+}
+
+.case-page--ak .intro-text {
+  max-width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.case-page--ak .case-hero__content .hero__p {
+  max-width: 600px;
+}
+
 .case-gallery .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));

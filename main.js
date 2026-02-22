@@ -39,9 +39,10 @@ const dict = {
     case4_sum: "A/B-testning och analys.",
     case5_title: "Giftguide för Cay Collective",
     case5_sum: "Tillväxtstrategi.",
-    case6_title: "Brand Book",
-    case6_sum: "Digital riktlinje.",
-    case6_image_note: "Bild kommer",
+    case6_title: "Akademibokhandeln",
+    case6_sum:
+      "Experternas boktips: koncept & contentplan med SEO‑text, profilerade boktips och tydliga köplänkar.",
+    case6_image_note: "Akademibokhandeln",
 
     mini_title: "Mina små projekt: API:er & plugins",
     mini_intro:
@@ -428,15 +429,30 @@ const dict = {
       "Genom att kombinera en datadriven content-strategi med en optimerad webbupplevelse lyckades vi inte bara öka trafiken, utan även förtydliga Cays unika position på marknaden under årets viktigaste försäljningsperiod.",
 
     // Case 6
-    c6_hero_title: "Brand Book: Digital riktlinje",
-    c6_hero_body:
-      "Ett urval från arbetet med en digital brand book. Sidan uppdateras med fulla case-detaljer och visuellt material.",
-    c6_note_body: "Bild- och materialurval publiceras snart.",
-    c6_note_title: "Under uppbyggnad",
-    c6_note_text:
-      "Jag fyller på med case-struktur, guidelines och visuella exempel. Hör gärna av dig om du vill se materialet redan nu.",
-    c6_note_list:
-      "<li>Brandplattform & tonläge</li><li>Typografi och färgsystem</li><li>Layout och bildspråk</li>"
+    c6_hero_title: "Akademibokhandeln – Experternas boktips",
+    c6_hero_body: "Koncept och contentplan för ökad försäljning online.",
+    c6_mockup_note: "Mockups och grafiskt material läggs in här.",
+    c6_intro_title: "Insikt & riktning",
+    c6_intro_p1:
+      "Med stöd i Bokbarometern och Google Trends kartlade vi säsongsmönster och såg tydliga toppar inför jul och sommarläsning. Det gav oss en tydlig riktning för både innehåll och timing. Lösningen landade i Experternas boktips, en ny sektion på sajten där profiler och experter tipsar om utvalda böcker med sökanpassad text och tydliga länkar till köp. Målet var att kombinera inspiration med en snabb väg till konvertering och samtidigt bygga organisk synlighet över tid.",
+    c6_intro_p2:
+      "För att driva trafik och intresse kompletterade vi med en plan för Instagram och nyhetsbrev, inklusive idéer på format och hur man kan testa olika profiler och upplägg för att se vad som fungerar bäst. Vi avslutade med en mätplan och KPI:er för organisk trafik, klick, engagemang, nyhetsbrevsresultat och köp kopplat till prioriterade titlar.",
+    c6_concept_title: "Koncept och målgrupp",
+    c6_concept_body:
+      "Vi tog fram en datadriven idé för att få fler vuxna att välja Akademibokhandeln när de ska köpa böcker. Arbetet började i en omvärlds och konkurrentanalys och gick vidare till målgruppsinsikter där vi tog fram tre personas som speglar olika sätt att inspireras och köpa.",
+    c6_deliver_title: "Koncept & contentplan",
+    c6_deliver_text: "Koncept och contentplan för ökad försäljning online.",
+    c6_deliver_list:
+      "<li>Fyra noggrant utvalda böcker</li><li>SEO‑anpassad text</li><li>Direktlänk till köp</li>",
+    c6_plan_title: "Plan & mätning",
+    c6_plan_text:
+      "Plan för Instagram och nyhetsbrev med formatidéer och tester av olika profiler och upplägg.",
+    c6_plan_list:
+      "<li>Organisk trafik</li><li>Klick</li><li>Engagemang</li><li>Nyhetsbrevsresultat</li><li>Köp kopplat till prioriterade titlar</li>",
+    c6_gallery_title: "Grafiskt material",
+    c6_gallery_body: "Mockups och slides från konceptet.",
+    c6_gallery_cap_1: "Experternas boktips – vy",
+    c6_gallery_cap_2: "Målbild"
   },
 
   en: {
@@ -478,9 +494,10 @@ const dict = {
     case4_sum: "A/B testing and analysis.",
     case5_title: "Gift guide for Cay Collective",
     case5_sum: "Growth strategy.",
-    case6_title: "Brand Book",
-    case6_sum: "Digital guidelines.",
-    case6_image_note: "Image coming soon",
+    case6_title: "Akademibokhandeln",
+    case6_sum:
+      "Expert Book Picks: concept & content plan with SEO copy, expert picks, and direct buy links.",
+    case6_image_note: "Akademibokhandeln",
 
     mini_title: "Mini projects: APIs & plugins",
     mini_intro:
@@ -866,15 +883,30 @@ const dict = {
       "By combining a data-driven content strategy with an optimized web experience, we not only increased traffic but clarified Cay's unique position during the year's most important sales period.",
 
     // Case 6
-    c6_hero_title: "Brand Book: Digital guidelines",
-    c6_hero_body:
-      "A selection from the work on a digital brand book. This page will be updated with full case details and visual material.",
-    c6_note_body: "Imagery and materials will be published soon.",
-    c6_note_title: "In progress",
-    c6_note_text:
-      "I'm adding case structure, guidelines, and visual examples. Feel free to reach out if you'd like to see the material already now.",
-    c6_note_list:
-      "<li>Brand platform & tone of voice</li><li>Typography and color system</li><li>Layout and imagery</li>"
+    c6_hero_title: "Akademibokhandeln – Expert Book Picks",
+    c6_hero_body: "Concept and content plan to increase online sales.",
+    c6_mockup_note: "Mockups and visuals will be added here.",
+    c6_intro_title: "Insight & direction",
+    c6_intro_p1:
+      "Using Bokbarometern and Google Trends, we mapped seasonal patterns and saw clear peaks ahead of Christmas and summer reading. That gave us a clear direction for both content and timing. The solution became Expert Book Picks, a new site section where profiles and experts recommend selected books with search‑optimized copy and clear buy links. The goal was to combine inspiration with a fast path to conversion while building organic visibility over time.",
+    c6_intro_p2:
+      "To drive traffic and interest we added a plan for Instagram and newsletters, including format ideas and tests of different profiles and angles to see what performs best. We finished with a measurement plan and KPIs for organic traffic, clicks, engagement, newsletter results, and purchases tied to prioritized titles.",
+    c6_concept_title: "Concept and audience",
+    c6_concept_body:
+      "We developed a data‑driven idea to get more adults to choose Akademibokhandeln when buying books. The work started with a market and competitor analysis and moved into audience insights where we created three personas representing different ways of discovering and buying.",
+    c6_deliver_title: "Concept & content plan",
+    c6_deliver_text: "Concept and content plan to increase online sales.",
+    c6_deliver_list:
+      "<li>Four carefully selected books</li><li>SEO‑adapted copy</li><li>Direct buy links</li>",
+    c6_plan_title: "Plan & measurement",
+    c6_plan_text:
+      "Instagram and newsletter plan with format ideas and tests of different profiles and angles.",
+    c6_plan_list:
+      "<li>Organic traffic</li><li>Clicks</li><li>Engagement</li><li>Newsletter performance</li><li>Purchases tied to prioritized titles</li>",
+    c6_gallery_title: "Visuals",
+    c6_gallery_body: "Mockups and slides from the concept.",
+    c6_gallery_cap_1: "Expert Book Picks – view",
+    c6_gallery_cap_2: "Goal"
   }
 };
 

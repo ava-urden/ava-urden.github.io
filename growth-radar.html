@@ -367,14 +367,12 @@
       .card--viral { grid-column: span 6; }
       .card--buzz { grid-column: span 6; }
       .card--pulse { grid-column: 1 / -1; }
-      .card--fx { grid-column: span 6; }
-      .card--weather { grid-column: span 6; }
       .card--pinterest { grid-column: 1 / -1; }
 
       @media (max-width: 960px) {
         .dashboard { grid-template-columns: repeat(6, minmax(0, 1fr)); }
         .card--viral, .card--buzz, .card--pulse,
-        .card--fx, .card--weather { grid-column: 1 / -1; }
+        .card--pinterest { grid-column: 1 / -1; }
       }
 
       @media (max-width: 640px) {
@@ -595,52 +593,6 @@
         margin-left: 6px;
       }
 
-      /* FX / KPIs */
-      .kpi-grid {
-        display: grid;
-        gap: 10px;
-      }
-
-      .kpi-pill {
-        padding: 10px 12px;
-        border-radius: 999px;
-        border: 1px solid var(--line);
-        background: rgba(255,255,255,0.08);
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        font-size: 0.85rem;
-      }
-
-      .kpi-pill strong { font-size: 1rem; }
-
-      .delta {
-        font-size: 0.75rem;
-        margin-left: 8px;
-      }
-
-      .delta.up { color: #b9f6c1; }
-      .delta.down { color: #ffb2b2; }
-
-      /* Weather */
-      .weather__form {
-        display: flex;
-        gap: 8px;
-        align-items: center;
-        margin-bottom: 12px;
-      }
-
-      .weather__form input {
-        flex: 1;
-        background: rgba(255,255,255,0.08);
-        border: 1px solid var(--line);
-        color: #fff;
-        border-radius: 999px;
-        padding: 8px 12px;
-        font-size: 0.85rem;
-        outline: none;
-      }
-
       .token-row {
         display: flex;
         gap: 8px;
@@ -659,25 +611,6 @@
         font-size: 0.85rem;
         outline: none;
         min-width: 180px;
-      }
-
-      .status-pill {
-        display: inline-flex;
-        align-items: center;
-        padding: 6px 12px;
-        border-radius: 999px;
-        background: rgba(239,126,161,0.22);
-        border: 1px solid rgba(239,126,161,0.5);
-        font-size: 0.7rem;
-        text-transform: uppercase;
-        letter-spacing: 0.16em;
-        color: #fff;
-      }
-
-      .weather__summary {
-        margin-top: 10px;
-        color: rgba(255,255,255,0.7);
-        font-size: 0.85rem;
       }
 
       /* Signal meter */
@@ -867,9 +800,7 @@
       .hero__p,
       .muted,
       .timestamp,
-      .list__meta,
-      .weather__summary,
-      .manifesto__meta {
+      .list__meta {
         color: #555555;
       }
 
@@ -927,7 +858,6 @@
         color: #888888;
       }
 
-      .weather__form input,
       .token-row input {
         background: #ffffff;
         border-color: #e0e0e0;
@@ -1027,26 +957,6 @@
         background: #ffffff;
         border-color: #e0e0e0;
         color: #111111;
-      }
-
-      .kpi-pill {
-        background: #f7f7f7;
-        border-color: #e0e0e0;
-        color: #111111;
-      }
-
-      .delta.up {
-        color: #111111;
-      }
-
-      .delta.down {
-        color: #666666;
-      }
-
-      .status-pill {
-        background: #111111;
-        border-color: #111111;
-        color: #ffffff;
       }
 
       .meter__track {
@@ -1228,62 +1138,6 @@
               </div>
             </article>
 
-            <article class="card card--fx" aria-live="polite">
-              <div class="card__header">
-                <div class="card__heading">
-                  <span class="icon-circle" aria-hidden="true">FX</span>
-                  <div>
-                    <h2 data-i18n="fx_title">FX / Margin Watch</h2>
-                    <span class="tag" data-i18n="fx_tag">Frankfurter</span>
-                  </div>
-                </div>
-                <div class="card__actions">
-                  <button class="kebab" type="button" aria-label="More options" data-i18n-aria="more_options">...</button>
-                </div>
-              </div>
-              <div class="card__body">
-                <div id="fxRates" class="kpi-grid"></div>
-              </div>
-            </article>
-
-            <article class="card card--weather" aria-live="polite">
-              <div class="card__header">
-                <div class="card__heading">
-                  <span class="icon-circle" aria-hidden="true">WX</span>
-                  <div>
-                    <h2 data-i18n="weather_title">Weather Trigger</h2>
-                    <span class="tag" data-i18n="weather_tag">Open-Meteo</span>
-                  </div>
-                </div>
-                <div class="card__actions">
-                  <button class="kebab" type="button" aria-label="More options" data-i18n-aria="more_options">...</button>
-                </div>
-              </div>
-              <div class="card__body">
-                <form class="weather__form" id="weatherForm">
-                  <label class="sr-only" for="weatherCity" data-i18n="weather_label">City</label>
-                  <input
-                    id="weatherCity"
-                    type="text"
-                    value="Stockholm"
-                    placeholder="City (Stockholm)"
-                    data-i18n-placeholder="weather_placeholder"
-                  />
-                  <button
-                    class="btn btn--ghost btn--small"
-                    type="submit"
-                    aria-label="Set city"
-                    data-i18n="weather_set"
-                    data-i18n-aria="weather_set_aria"
-                  >
-                    Set
-                  </button>
-                </form>
-                <span class="status-pill" id="weatherTrigger" data-i18n="loading">Laddar...</span>
-                <div class="weather__summary" id="weatherSummary"></div>
-              </div>
-            </article>
-
             <article class="card card--pinterest" aria-live="polite">
               <div class="card__header">
                 <div class="card__heading">
@@ -1394,7 +1248,6 @@
         pinterest: [],
         buzzMatches: 0,
         viralTopViews: 0,
-        weatherData: null,
         lang: "sv",
         loaded: {
           viral: false,
@@ -1427,14 +1280,6 @@
           buzz_tag: "HN / AI / Ads",
           pulse_title: "Platform Pulse",
           pulse_tag: "GDELT",
-          fx_title: "FX / Marginalkoll",
-          fx_tag: "Frankfurter",
-          weather_title: "Vädertrigger",
-          weather_tag: "Open-Meteo",
-          weather_label: "Stad",
-          weather_placeholder: "Stad (Stockholm)",
-          weather_set: "Sätt",
-          weather_set_aria: "Sätt stad",
           more_options: "Fler alternativ",
           open: "Öppna",
           trend_label: "Trend",
@@ -1446,16 +1291,8 @@
           error_wikimedia: "Kunde inte hämta Wikimedia just nu.",
           error_hn: "Kunde inte hämta HN just nu.",
           error_gdelt: "Kunde inte hämta GDELT just nu.",
-          error_fx: "Kunde inte hämta FX-kurser just nu.",
-          error_weather: "Kunde inte hämta väder just nu.",
           error_pinterest: "Kunde inte hämta Pinterest-trender just nu.",
           buzz_no_matches: "Inga träffar på nyckelord idag.",
-          weather_unavailable: "Otillgängligt",
-          weather_summary: "{city}: {temp}°C, moln {cloud}%, regn {precip}%",
-          weather_sunny: "Soligt fönster",
-          weather_rain: "Regnläge",
-          weather_cloud: "Molnläge",
-          weather_mild: "Lugn nivå",
           pinterest_title: "Pinterest Trendspaning",
           pinterest_tag: "REST API v5.23",
           pinterest_desc: "Trendspaning via Pinterest Trends API.",
@@ -1514,14 +1351,6 @@
           buzz_tag: "HN / AI / Ads",
           pulse_title: "Platform Pulse",
           pulse_tag: "GDELT",
-          fx_title: "FX / Margin Watch",
-          fx_tag: "Frankfurter",
-          weather_title: "Weather Trigger",
-          weather_tag: "Open-Meteo",
-          weather_label: "City",
-          weather_placeholder: "City (Stockholm)",
-          weather_set: "Set",
-          weather_set_aria: "Set city",
           more_options: "More options",
           open: "Open",
           trend_label: "Trend",
@@ -1533,16 +1362,8 @@
           error_wikimedia: "Could not load Wikimedia right now.",
           error_hn: "Could not load HN right now.",
           error_gdelt: "Could not load GDELT right now.",
-          error_fx: "Could not load FX rates right now.",
-          error_weather: "Could not load weather right now.",
           error_pinterest: "Could not load Pinterest trends right now.",
           buzz_no_matches: "No keyword matches today.",
-          weather_unavailable: "Unavailable",
-          weather_summary: "{city}: {temp}°C, clouds {cloud}%, precip {precip}%",
-          weather_sunny: "Sunny window",
-          weather_rain: "Rain push",
-          weather_cloud: "Cloud watch",
-          weather_mild: "Mild watch",
           pinterest_title: "Pinterest Trend Watch",
           pinterest_tag: "REST API v5.23",
           pinterest_desc: "Trend watch via the Pinterest Trends API.",
@@ -1604,12 +1425,6 @@
       const PINTEREST_DOCS = "https://developers.pinterest.com/docs/api/v5/";
       const PINTEREST_TOKEN_KEY = "growthRadar:pinterestToken";
 
-      const defaultCity = {
-        name: "Stockholm",
-        latitude: 59.3293,
-        longitude: 18.0686
-      };
-
       const elements = {
         updatedAt: document.getElementById("updatedAt"),
         refreshBtn: document.getElementById("refreshBtn"),
@@ -1618,11 +1433,6 @@
         buzzList: document.getElementById("buzzList"),
         buzzNote: document.getElementById("buzzNote"),
         pulseList: document.getElementById("pulseList"),
-        fxRates: document.getElementById("fxRates"),
-        weatherForm: document.getElementById("weatherForm"),
-        weatherCity: document.getElementById("weatherCity"),
-        weatherTrigger: document.getElementById("weatherTrigger"),
-        weatherSummary: document.getElementById("weatherSummary"),
         pinterestList: document.getElementById("pinterestList"),
         pinterestNote: document.getElementById("pinterestNote"),
         pinterestToken: document.getElementById("pinterestToken"),
@@ -1665,9 +1475,6 @@
         renderPinterest();
         if (!getPinterestToken()) {
           elements.pinterestNote.textContent = t("pinterest_need_token");
-        }
-        if (state.weatherData) {
-          renderWeather(state.weatherData);
         }
       }
 
@@ -2056,125 +1863,6 @@
         }
       }
 
-      async function loadFx(force = false) {
-        elements.fxRates.innerHTML = `<div class="muted">${t("loading")}</div>`;
-        const url = "https://api.frankfurter.dev/latest?from=EUR&to=SEK,USD,NOK";
-        const cacheKey = "growthRadar:fx:latest";
-        try {
-          const latest = await fetchJson(url, { cacheKey, force });
-          const latestRates = latest?.rates || {};
-          const yesterday = new Date();
-          yesterday.setUTCDate(yesterday.getUTCDate() - 1);
-          const dateStr = `${yesterday.getUTCFullYear()}-${String(yesterday.getUTCMonth() + 1).padStart(2, "0")}-${String(yesterday.getUTCDate()).padStart(2, "0")}`;
-
-          let previousRates = null;
-          try {
-            const prevUrl = `https://api.frankfurter.dev/${dateStr}?from=EUR&to=SEK,USD,NOK`;
-            previousRates = await fetchJson(prevUrl, { cacheKey: `growthRadar:fx:${dateStr}`, force });
-          } catch (err) {
-            previousRates = null;
-          }
-
-          const pairs = [
-            { code: "SEK", value: latestRates.SEK, prev: previousRates?.rates?.SEK },
-            { code: "USD", value: latestRates.USD, prev: previousRates?.rates?.USD },
-            { code: "NOK", value: latestRates.NOK, prev: previousRates?.rates?.NOK }
-          ];
-
-          elements.fxRates.innerHTML = pairs
-            .map((pair) => {
-              const delta =
-                pair.prev && pair.value ? ((pair.value - pair.prev) / pair.prev) * 100 : null;
-              const deltaClass = delta > 0 ? "delta up" : "delta down";
-              const deltaText = delta !== null ? `<span class="${deltaClass}">${formatPercent(delta)}</span>` : "";
-              return `
-                <div class="kpi-pill">
-                  <span>EUR/${pair.code}</span>
-                  <span><strong>${pair.value ? pair.value.toFixed(4) : "--"}</strong>${deltaText}</span>
-                </div>
-              `;
-            })
-            .join("");
-        } catch (err) {
-          renderError(elements.fxRates, t("error_fx"), url, false);
-        }
-      }
-
-      function getWeatherTriggerKey(cloud, precip) {
-        if (cloud < 40 && precip < 20) return "sunny";
-        if (precip >= 60) return "rain";
-        if (cloud >= 70) return "cloud";
-        return "mild";
-      }
-
-      function renderWeather(data) {
-        elements.weatherTrigger.textContent = t(`weather_${data.triggerKey}`);
-        elements.weatherSummary.textContent = formatTemplate(t("weather_summary"), {
-          city: data.city,
-          temp: data.temp ?? "--",
-          cloud: data.cloud ?? "--",
-          precip: data.precip ?? "--"
-        });
-      }
-
-      async function resolveCity(city, force = false) {
-        if (!city || city.trim().length === 0) return defaultCity;
-        const normalized = city.trim().toLowerCase();
-        if (normalized === "stockholm") return defaultCity;
-
-        const url = `https://geocoding-api.open-meteo.com/v1/search?name=${encodeURIComponent(
-          city
-        )}&count=1&language=en&format=json`;
-        const cacheKey = `growthRadar:geo:${normalized}`;
-        const data = await fetchJson(url, { cacheKey, ttl: 24 * 60 * 60 * 1000, force });
-        if (!data?.results?.length) throw new Error("City not found");
-        const result = data.results[0];
-        return {
-          name: result.name,
-          latitude: result.latitude,
-          longitude: result.longitude
-        };
-      }
-
-      async function loadWeather(force = false) {
-        elements.weatherTrigger.textContent = t("loading");
-        elements.weatherSummary.textContent = "";
-        const city = elements.weatherCity.value || defaultCity.name;
-
-        try {
-          const coords = await resolveCity(city, force);
-          const url = `https://api.open-meteo.com/v1/forecast?latitude=${coords.latitude}&longitude=${coords.longitude}&current=temperature_2m,precipitation,cloud_cover&daily=precipitation_probability_max&timezone=auto`;
-          const cacheKey = `growthRadar:weather:${coords.name.toLowerCase()}`;
-          const data = await fetchJson(url, { cacheKey, force });
-
-          const current = data.current || {};
-          const daily = data.daily || {};
-          const precipProb = Array.isArray(daily.precipitation_probability_max)
-            ? daily.precipitation_probability_max[0]
-            : 0;
-
-          const triggerKey = getWeatherTriggerKey(current.cloud_cover || 0, precipProb || 0);
-          state.weatherData = {
-            city: coords.name,
-            temp: current.temperature_2m,
-            cloud: current.cloud_cover,
-            precip: precipProb,
-            triggerKey
-          };
-          renderWeather(state.weatherData);
-
-        } catch (err) {
-          renderError(
-            elements.weatherSummary,
-            t("error_weather"),
-            "https://api.open-meteo.com/",
-            false
-          );
-          state.weatherData = null;
-          elements.weatherTrigger.textContent = t("weather_unavailable");
-        }
-      }
-
       function setToggleActive(group, attr, value) {
         group.querySelectorAll("button").forEach((btn) => {
           const isActive = btn.getAttribute(attr) === value;
@@ -2264,11 +1952,6 @@
           renderPinterest();
         });
 
-        elements.weatherForm.addEventListener("submit", (event) => {
-          event.preventDefault();
-          loadWeather(true);
-        });
-
         window.addEventListener("scroll", () => {
           const header = document.querySelector(".header");
           header.classList.toggle("header--scrolled", window.scrollY > 8);
@@ -2280,8 +1963,6 @@
         loadBuzz(force);
         loadPulse(force);
         loadPinterest(force);
-        loadFx(force);
-        loadWeather(force);
       }
 
       attachEvents();
