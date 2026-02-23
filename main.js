@@ -50,7 +50,7 @@ const dict = {
     mini_item_1_media: "Plugin",
     mini_item_1_tag: "Plugin",
     mini_item_1_status: "Gratis",
-    mini_item_1_title: "Tabless Library",
+    mini_item_1_title: "TABMANAGER",
     mini_item_1_desc:
       "Spara och organisera dina öppna flikar i snygga samlingar så att du hittar dem senare.",
     mini_item_1_cta: "Ladda ner gratis",
@@ -70,11 +70,11 @@ const dict = {
       "Små plugins och scripts som kapar manuella steg i research, rapportering och kampanjarbete.",
     mini_item_3_cta: "Kommer snart",
     back_to_mini: "← Tillbaka till små projekt",
-    mini1_hero_title: "Tabless Library – Spara dina flikar, rensa ditt sinne",
+    mini1_hero_title: "TABMANAGER",
     mini1_hero_body:
-      "Ett egenbyggt plugin som låter dig spara och organisera öppna flikar i snygga samlingar så att du enkelt hittar dem senare.",
+      "Jag har byggt ett plugin som låter dig spara och organisera öppna flikar i snygga samlingar så att du enkelt hittar dem senare.",
     mini1_hero_extra:
-      "Om du är som jag och gillar ordning, reda och listor kommer du trivas med Tabless Library.",
+      "Om du är som jag och gillar ordning och reda kommer du trivas med mitt plugin! Helt gratis att ladda ner.",
     mini1_pill_1: "Plugin",
     mini1_pill_2: "Growth Tech",
     mini1_pill_3: "Gratis",
@@ -96,9 +96,9 @@ const dict = {
       "Det här är en kortare, lättläst projektsida. Jag fyller på med mer detaljer och resultat när nästa version är klar.",
     mini1_privacy_link: "Integritetspolicy →",
     modal_close: "Stäng",
-    privacy_tabless_title: "Integritetspolicy – Tabless Library",
+    privacy_tabless_title: "Integritetspolicy – Senmoccc Tab Manager",
     privacy_tabless_intro:
-      "Tabless Library lagrar dina samlingar lokalt i webbläsaren. Ingen data skickas till externa servrar.",
+      "Senmoccc Tab Manager lagrar dina samlingar lokalt i webbläsaren. Ingen data skickas till externa servrar.",
     privacy_tabless_updated: "Senast uppdaterad: 20 februari 2026.",
     privacy_tabless_data_title: "Data som lagras",
     privacy_tabless_data_list:
@@ -505,7 +505,7 @@ const dict = {
     mini_item_1_media: "Plugin",
     mini_item_1_tag: "Plugin",
     mini_item_1_status: "Free",
-    mini_item_1_title: "Tabless Library",
+    mini_item_1_title: "TABMANAGER",
     mini_item_1_desc:
       "Save and organize your open tabs into neat collections so you can find them later.",
     mini_item_1_cta: "Download for free",
@@ -525,11 +525,11 @@ const dict = {
       "Small plugins and scripts that cut manual steps in research, reporting, and campaign work.",
     mini_item_3_cta: "Coming soon",
     back_to_mini: "← Back to mini projects",
-    mini1_hero_title: "Tabless Library – Save your tabs, clear your mind",
+    mini1_hero_title: "TABMANAGER",
     mini1_hero_body:
-      "A custom-built extension that lets you save and organize open tabs into neat collections so you can easily find them later.",
+      "I built a plugin that lets you save and organize open tabs into neat collections so you can easily find them later.",
     mini1_hero_extra:
-      "If you’re like me and love order, structure, and lists, you’ll feel right at home with Tabless Library.",
+      "If you’re like me and love order and structure, you’ll feel right at home with my plugin! Completely free to download.",
     mini1_pill_1: "Plugin",
     mini1_pill_2: "Growth Tech",
     mini1_pill_3: "Free",
@@ -550,9 +550,9 @@ const dict = {
       "This is a short, easy-to-read project page. I’ll add more details and results as the next version ships.",
     mini1_privacy_link: "Privacy policy →",
     modal_close: "Close",
-    privacy_tabless_title: "Privacy Policy – Tabless Library",
+    privacy_tabless_title: "Privacy Policy – Senmoccc Tab Manager",
     privacy_tabless_intro:
-      "Tabless Library stores your collections locally in the browser. No data is sent to external servers.",
+      "Senmoccc Tab Manager stores your collections locally in the browser. No data is sent to external servers.",
     privacy_tabless_updated: "Last updated: February 20, 2026.",
     privacy_tabless_data_title: "Data stored",
     privacy_tabless_data_list:

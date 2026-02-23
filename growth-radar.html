@@ -375,11 +375,12 @@
       .card--buzz { grid-column: span 6; }
       .card--pulse { grid-column: 1 / -1; }
       .card--pinterest { grid-column: 1 / -1; }
+      .card--resource { grid-column: span 4; }
 
       @media (max-width: 960px) {
         .dashboard { grid-template-columns: repeat(6, minmax(0, 1fr)); }
         .card--viral, .card--buzz, .card--pulse,
-        .card--pinterest { grid-column: 1 / -1; }
+        .card--pinterest, .card--resource { grid-column: 1 / -1; }
       }
 
       @media (max-width: 640px) {
@@ -396,6 +397,10 @@
         gap: 16px;
         flex-wrap: wrap;
         margin-bottom: 16px;
+      }
+
+      .card__body p {
+        margin: 0 0 16px;
       }
 
       .card__heading {
@@ -1073,139 +1078,125 @@
           </div>
 
           <div class="dashboard">
-            <article class="card card--viral" aria-live="polite">
+            <article class="card card--resource">
               <div class="card__header">
                 <div class="card__heading">
-                  <span class="icon-circle" aria-hidden="true">V</span>
+                  <span class="icon-circle" aria-hidden="true">G</span>
                   <div>
-                    <h2 data-i18n="viral_title">Viral just nu</h2>
-                    <span class="tag" data-i18n="viral_tag">Wikimedia</span>
+                    <h2 data-i18n="resource_searchapi_google_title">SearchAPI – Google</h2>
+                    <span class="tag" data-i18n="resource_tag_endpoint">Endpoint</span>
                   </div>
-                </div>
-                <div class="card__actions">
-                  <div class="chip-group" id="viralToggle" role="tablist" aria-label="Viral region">
-                    <button class="chip is-active" type="button" data-project="sv.wikipedia" aria-pressed="true">SE</button>
-                    <button
-                      class="chip"
-                      type="button"
-                      data-project="en.wikipedia"
-                      aria-pressed="false"
-                      data-i18n="global_label"
-                    >
-                      Global
-                    </button>
-                  </div>
-                  <button class="kebab" type="button" aria-label="More options" data-i18n-aria="more_options">...</button>
                 </div>
               </div>
               <div class="card__body">
-                <ul class="list" id="viralList"></ul>
+                <p class="muted" data-i18n="resource_searchapi_google_desc">API-endpoint för Google-sök.</p>
+                <a
+                  class="btn btn--ghost btn--small"
+                  href="https://www.searchapi.io/api/v1/search?engine=google"
+                  target="_blank"
+                  rel="noopener"
+                  data-i18n="open"
+                >
+                  Öppna
+                </a>
               </div>
             </article>
 
-            <article class="card card--buzz" aria-live="polite">
+            <article class="card card--resource">
               <div class="card__header">
                 <div class="card__heading">
-                  <span class="icon-circle" aria-hidden="true">B</span>
+                  <span class="icon-circle" aria-hidden="true">TT</span>
                   <div>
-                    <h2 data-i18n="buzz_title">Buzz</h2>
-                    <span class="tag" data-i18n="buzz_tag">HN / AI / Ads</span>
+                    <h2 data-i18n="resource_searchapi_tiktok_title">SearchAPI – TikTok Ads Library</h2>
+                    <span class="tag" data-i18n="resource_tag_endpoint">Endpoint</span>
                   </div>
-                </div>
-                <div class="card__actions">
-                  <button class="kebab" type="button" aria-label="More options" data-i18n-aria="more_options">...</button>
                 </div>
               </div>
               <div class="card__body">
-                <div class="muted" id="buzzNote" style="margin-bottom: 10px;"></div>
-                <ul class="list" id="buzzList"></ul>
+                <p class="muted" data-i18n="resource_searchapi_tiktok_desc">API-endpoint för TikTok Ads Library.</p>
+                <a
+                  class="btn btn--ghost btn--small"
+                  href="https://www.searchapi.io/api/v1/search?engine=tiktok_ads_library"
+                  target="_blank"
+                  rel="noopener"
+                  data-i18n="open"
+                >
+                  Öppna
+                </a>
               </div>
             </article>
 
-            <article class="card card--pulse" aria-live="polite">
+            <article class="card card--resource">
               <div class="card__header">
                 <div class="card__heading">
-                  <span class="icon-circle" aria-hidden="true">P</span>
+                  <span class="icon-circle" aria-hidden="true">GT</span>
                   <div>
-                    <h2 data-i18n="pulse_title">Platform Pulse</h2>
-                    <span class="tag" data-i18n="pulse_tag">GDELT</span>
+                    <h2 data-i18n="resource_searchapi_trends_title">SearchAPI – Google Trends</h2>
+                    <span class="tag" data-i18n="resource_tag_endpoint">Endpoint</span>
                   </div>
-                </div>
-                <div class="card__actions">
-                  <div class="chip-group" id="pulseQueryToggle" role="tablist" aria-label="Platform query">
-                    <button class="chip is-active" type="button" data-query="google" aria-pressed="true">Google</button>
-                    <button class="chip" type="button" data-query="meta" aria-pressed="false">Meta</button>
-                  </div>
-                  <div class="chip-group" id="pulseTimespanToggle" role="tablist" aria-label="Timespan">
-                    <button class="chip is-active" type="button" data-timespan="7d" aria-pressed="true">7d</button>
-                    <button class="chip" type="button" data-timespan="30d" aria-pressed="false">30d</button>
-                  </div>
-                  <button class="kebab" type="button" aria-label="More options" data-i18n-aria="more_options">...</button>
                 </div>
               </div>
               <div class="card__body">
-                <ul class="list" id="pulseList"></ul>
+                <p class="muted" data-i18n="resource_searchapi_trends_desc">API-endpoint för Google Trends.</p>
+                <a
+                  class="btn btn--ghost btn--small"
+                  href="https://www.searchapi.io/api/v1/search?engine=google_trends"
+                  target="_blank"
+                  rel="noopener"
+                  data-i18n="open"
+                >
+                  Öppna
+                </a>
               </div>
             </article>
 
-            <article class="card card--pinterest" aria-live="polite">
+            <article class="card card--resource">
               <div class="card__header">
                 <div class="card__heading">
-                  <span class="icon-circle" aria-hidden="true">PT</span>
+                  <span class="icon-circle" aria-hidden="true">PH</span>
                   <div>
-                    <h2 data-i18n="pinterest_title">Pinterest Trendspaning</h2>
-                    <span class="tag" data-i18n="pinterest_tag">REST API v5.23</span>
+                    <h2 data-i18n="resource_producthunt_title">Product Hunt API</h2>
+                    <span class="tag" data-i18n="resource_tag_docs">Docs</span>
                   </div>
-                </div>
-                <div class="card__actions">
-                  <button class="kebab" type="button" aria-label="More options" data-i18n-aria="more_options">...</button>
                 </div>
               </div>
               <div class="card__body">
-                <p class="muted" data-i18n="pinterest_desc">Trendspaning via Pinterest Trends API.</p>
-                <div class="chip-group chip-group--static" data-i18n-aria="pinterest_capabilities">
-                  <span class="chip chip--static" data-i18n="pinterest_feature_conversion">Conversion</span>
-                  <span class="chip chip--static" data-i18n="pinterest_feature_content">Content</span>
-                  <span class="chip chip--static" data-i18n="pinterest_feature_ads">Ads</span>
-                  <span class="chip chip--static" data-i18n="pinterest_feature_targeting">Targeting</span>
-                  <span class="chip chip--static" data-i18n="pinterest_feature_shopping">Shopping</span>
-                  <span class="chip chip--static" data-i18n="pinterest_feature_analytics">Analytics</span>
-                </div>
-                <div class="chip-group" id="pinterestRegionToggle" role="tablist" data-i18n-aria="pinterest_region_label">
-                  <button class="chip is-active" type="button" data-region="SE+DK+FI+NO" aria-pressed="true" data-i18n="pinterest_region_nordic">Nordic</button>
-                  <button class="chip" type="button" data-region="US" aria-pressed="false" data-i18n="pinterest_region_us">US</button>
-                </div>
-                <div class="chip-group" id="pinterestTrendToggle" role="tablist" data-i18n-aria="pinterest_trend_label">
-                  <button class="chip is-active" type="button" data-trend="growing" aria-pressed="true" data-i18n="pinterest_trend_growing">Growing</button>
-                  <button class="chip" type="button" data-trend="monthly" aria-pressed="false" data-i18n="pinterest_trend_monthly">Monthly</button>
-                  <button class="chip" type="button" data-trend="yearly" aria-pressed="false" data-i18n="pinterest_trend_yearly">Yearly</button>
-                  <button class="chip" type="button" data-trend="seasonal" aria-pressed="false" data-i18n="pinterest_trend_seasonal">Seasonal</button>
-                </div>
-                <div class="token-row">
-                  <label class="sr-only" for="pinterestToken" data-i18n="pinterest_token_label">Pinterest access token</label>
-                  <input
-                    id="pinterestToken"
-                    type="password"
-                    autocomplete="off"
-                    placeholder="Pinterest access token"
-                    data-i18n-placeholder="pinterest_token_placeholder"
-                  />
-                  <button
-                    class="btn btn--ghost btn--small"
-                    id="pinterestSave"
-                    type="button"
-                    aria-label="Save Pinterest token"
-                    data-i18n="pinterest_save"
-                    data-i18n-aria="pinterest_save_aria"
-                  >
-                    Spara
-                  </button>
-                </div>
-                <div class="muted" id="pinterestNote" style="margin-bottom: 10px;"></div>
-                <ul class="list" id="pinterestList"></ul>
+                <p class="muted" data-i18n="resource_producthunt_desc">Dokumentation för Product Hunt API.</p>
+                <a
+                  class="btn btn--ghost btn--small"
+                  href="https://api.producthunt.com/v2/docs"
+                  target="_blank"
+                  rel="noopener"
+                  data-i18n="open"
+                >
+                  Öppna
+                </a>
               </div>
             </article>
 
+            <article class="card card--resource">
+              <div class="card__header">
+                <div class="card__heading">
+                  <span class="icon-circle" aria-hidden="true">R</span>
+                  <div>
+                    <h2 data-i18n="resource_reddit_title">Reddit API</h2>
+                    <span class="tag" data-i18n="resource_tag_docs">Docs</span>
+                  </div>
+                </div>
+              </div>
+              <div class="card__body">
+                <p class="muted" data-i18n="resource_reddit_desc">Dokumentation för Reddit API.</p>
+                <a
+                  class="btn btn--ghost btn--small"
+                  href="https://www.reddit.com/dev/api/"
+                  target="_blank"
+                  rel="noopener"
+                  data-i18n="open"
+                >
+                  Öppna
+                </a>
+              </div>
+            </article>
           </div>
         </div>
       </section>
@@ -1245,28 +1236,6 @@
     </main>
 
     <script>
-      const state = {
-        viralProject: "sv.wikipedia",
-        pulseQuery: "google",
-        pulseTimespan: "7d",
-        pinterestRegion: "SE+DK+FI+NO",
-        pinterestTrendType: "growing",
-        searchTerm: "",
-        viral: [],
-        buzz: [],
-        pulse: [],
-        pinterest: [],
-        buzzMatches: 0,
-        viralTopViews: 0,
-        lang: "sv",
-        loaded: {
-          viral: false,
-          buzz: false,
-          pulse: false,
-          pinterest: false
-        }
-      };
-
       const langDict = {
         sv: {
           logo_text: "A.U. Portfolio",
@@ -1283,54 +1252,19 @@
           refresh_aria: "Uppdatera data",
           search_label: "Sök signaler",
           search_placeholder: "Sök signaler...",
-          viral_title: "Viral just nu",
-          viral_tag: "Wikimedia",
-          global_label: "Global",
-          buzz_title: "Buzz",
-          buzz_tag: "HN / AI / Ads",
-          pulse_title: "Platform Pulse",
-          pulse_tag: "GDELT",
-          more_options: "Fler alternativ",
           open: "Öppna",
-          trend_label: "Trend",
-          no_matches: "Inga träffar.",
-          views: "visningar",
-          points: "poäng",
-          loading: "Laddar...",
-          open_source: "Open source",
-          error_wikimedia: "Kunde inte hämta Wikimedia just nu.",
-          error_hn: "Kunde inte hämta HN just nu.",
-          error_gdelt: "Kunde inte hämta GDELT just nu.",
-          error_pinterest: "Kunde inte hämta Pinterest-trender just nu.",
-          buzz_no_matches: "Inga träffar på nyckelord idag.",
-          pinterest_title: "Pinterest Trendspaning",
-          pinterest_tag: "REST API v5.23",
-          pinterest_desc: "Trendspaning via Pinterest Trends API.",
-          pinterest_capabilities: "Pinterest API-områden",
-          pinterest_feature_conversion: "Konvertering",
-          pinterest_feature_content: "Innehåll",
-          pinterest_feature_ads: "Annonser",
-          pinterest_feature_targeting: "Målgrupper",
-          pinterest_feature_shopping: "Shopping",
-          pinterest_feature_analytics: "Analys",
-          pinterest_region_label: "Region",
-          pinterest_region_nordic: "Norden",
-          pinterest_region_us: "USA",
-          pinterest_trend_label: "Trendtyp",
-          pinterest_trend_growing: "Växande",
-          pinterest_trend_monthly: "Månad",
-          pinterest_trend_yearly: "År",
-          pinterest_trend_seasonal: "Säsong",
-          pinterest_token_label: "Pinterest access token",
-          pinterest_token_placeholder: "Pinterest access token",
-          pinterest_save: "Spara",
-          pinterest_save_aria: "Spara Pinterest-token",
-          pinterest_need_token: "Lägg in en access token för att hämta trendord.",
-          pinterest_empty: "Ingen Pinterest-data ännu.",
-          growth_wow: "WoW",
-          growth_mom: "MoM",
-          growth_yoy: "YoY",
-          growth_unavailable: "Ingen tillväxtdata",
+          resource_tag_endpoint: "Endpoint",
+          resource_tag_docs: "Docs",
+          resource_searchapi_google_title: "SearchAPI – Google",
+          resource_searchapi_google_desc: "API-endpoint för Google-sök.",
+          resource_searchapi_tiktok_title: "SearchAPI – TikTok Ads Library",
+          resource_searchapi_tiktok_desc: "API-endpoint för TikTok Ads Library.",
+          resource_searchapi_trends_title: "SearchAPI – Google Trends",
+          resource_searchapi_trends_desc: "API-endpoint för Google Trends.",
+          resource_producthunt_title: "Product Hunt API",
+          resource_producthunt_desc: "Dokumentation för Product Hunt API.",
+          resource_reddit_title: "Reddit API",
+          resource_reddit_desc: "Dokumentation för Reddit API.",
           contact_title: "Kontakt",
           footer_text:
             "Nyfiken på att veta mer eller diskutera ett projekt? Hör av dig så tar vi en kaffe!",
@@ -1354,54 +1288,19 @@
           refresh_aria: "Refresh data",
           search_label: "Search signals",
           search_placeholder: "Search signals...",
-          viral_title: "Viral now",
-          viral_tag: "Wikimedia",
-          global_label: "Global",
-          buzz_title: "Buzz",
-          buzz_tag: "HN / AI / Ads",
-          pulse_title: "Platform Pulse",
-          pulse_tag: "GDELT",
-          more_options: "More options",
           open: "Open",
-          trend_label: "Trend",
-          no_matches: "No matches.",
-          views: "views",
-          points: "points",
-          loading: "Loading...",
-          open_source: "Open source",
-          error_wikimedia: "Could not load Wikimedia right now.",
-          error_hn: "Could not load HN right now.",
-          error_gdelt: "Could not load GDELT right now.",
-          error_pinterest: "Could not load Pinterest trends right now.",
-          buzz_no_matches: "No keyword matches today.",
-          pinterest_title: "Pinterest Trend Watch",
-          pinterest_tag: "REST API v5.23",
-          pinterest_desc: "Trend watch via the Pinterest Trends API.",
-          pinterest_capabilities: "Pinterest API areas",
-          pinterest_feature_conversion: "Conversion",
-          pinterest_feature_content: "Content",
-          pinterest_feature_ads: "Ads",
-          pinterest_feature_targeting: "Targeting",
-          pinterest_feature_shopping: "Shopping",
-          pinterest_feature_analytics: "Analytics",
-          pinterest_region_label: "Region",
-          pinterest_region_nordic: "Nordic",
-          pinterest_region_us: "US",
-          pinterest_trend_label: "Trend type",
-          pinterest_trend_growing: "Growing",
-          pinterest_trend_monthly: "Monthly",
-          pinterest_trend_yearly: "Yearly",
-          pinterest_trend_seasonal: "Seasonal",
-          pinterest_token_label: "Pinterest access token",
-          pinterest_token_placeholder: "Pinterest access token",
-          pinterest_save: "Save",
-          pinterest_save_aria: "Save Pinterest token",
-          pinterest_need_token: "Add an access token to fetch trend keywords.",
-          pinterest_empty: "No Pinterest data yet.",
-          growth_wow: "WoW",
-          growth_mom: "MoM",
-          growth_yoy: "YoY",
-          growth_unavailable: "Growth data unavailable",
+          resource_tag_endpoint: "Endpoint",
+          resource_tag_docs: "Docs",
+          resource_searchapi_google_title: "SearchAPI – Google",
+          resource_searchapi_google_desc: "API endpoint for Google search.",
+          resource_searchapi_tiktok_title: "SearchAPI – TikTok Ads Library",
+          resource_searchapi_tiktok_desc: "API endpoint for TikTok Ads Library.",
+          resource_searchapi_trends_title: "SearchAPI – Google Trends",
+          resource_searchapi_trends_desc: "API endpoint for Google Trends.",
+          resource_producthunt_title: "Product Hunt API",
+          resource_producthunt_desc: "Product Hunt API documentation.",
+          resource_reddit_title: "Reddit API",
+          resource_reddit_desc: "Reddit API documentation.",
           contact_title: "Contact",
           footer_text: "Curious to learn more or discuss a project? Reach out and let’s grab a coffee.",
           cta_cv: "Download CV",
@@ -1411,56 +1310,8 @@
         }
       };
 
-      const CACHE_TTL = 15 * 60 * 1000;
-      const KEYWORDS = [
-        "ads",
-        "marketing",
-        "ecommerce",
-        "seo",
-        "google",
-        "meta",
-        "ai",
-        "gemini",
-        "overviews",
-        "pmax",
-        "performance max"
-      ];
-
-      const PULSE_QUERIES = {
-        google: '("AI Overviews" OR "AI Mode" OR "core update" OR "Search Central") AND (Google OR "Search Console")',
-        meta: '("Marketing API" OR "Advantage+" OR "Ads Manager" OR "Meta ads") AND (Meta OR Facebook OR Instagram)'
-      };
-
-      const PINTEREST_BASE = "https://api.pinterest.com/v5";
-      const PINTEREST_DOCS = "https://developers.pinterest.com/docs/api/v5/";
-      const PINTEREST_TOKEN_KEY = "growthRadar:pinterestToken";
-
-      const elements = {
-        updatedAt: document.getElementById("updatedAt"),
-        refreshBtn: document.getElementById("refreshBtn"),
-        searchInput: document.getElementById("searchInput"),
-        viralList: document.getElementById("viralList"),
-        buzzList: document.getElementById("buzzList"),
-        buzzNote: document.getElementById("buzzNote"),
-        pulseList: document.getElementById("pulseList"),
-        pinterestList: document.getElementById("pinterestList"),
-        pinterestNote: document.getElementById("pinterestNote"),
-        pinterestToken: document.getElementById("pinterestToken"),
-        pinterestSave: document.getElementById("pinterestSave")
-      };
-
-      function t(key) {
-        const dict = langDict[state.lang] || langDict.sv;
-        return dict[key] || langDict.sv[key] || "";
-      }
-
-      function formatTemplate(str, vars) {
-        return str.replace(/\{(\w+)\}/g, (match, key) => (key in vars ? vars[key] : match));
-      }
-
       function applyLang(lang) {
         const dict = langDict[lang] || langDict.sv;
-        state.lang = lang;
         document.documentElement.lang = lang;
         document.querySelectorAll("[data-i18n]").forEach((el) => {
           const key = el.dataset.i18n;
@@ -1478,505 +1329,48 @@
           btn.classList.toggle("is-active", btn.dataset.lang === lang);
         });
         localStorage.setItem("lang", lang);
-        updateTimestamp();
-        renderViral();
-        renderBuzz();
-        renderPulse();
-        renderPinterest();
-        if (!getPinterestToken()) {
-          elements.pinterestNote.textContent = t("pinterest_need_token");
-        }
       }
 
       function updateTimestamp() {
+        const updatedAt = document.getElementById("updatedAt");
+        if (!updatedAt) return;
         const now = new Date();
-        const locale = state.lang === "en" ? "en-US" : "sv-SE";
-        const formatted = now.toLocaleString(locale, {
+        const lang = document.documentElement.lang || "sv";
+        const locale = lang === "en" ? "en-US" : "sv-SE";
+        updatedAt.textContent = now.toLocaleString(locale, {
           year: "numeric",
           month: "short",
           day: "numeric",
           hour: "2-digit",
           minute: "2-digit"
         });
-        elements.updatedAt.textContent = formatted;
-      }
-
-      function escapeHTML(str = "") {
-        return str.replace(/[&<>"']/g, (match) => {
-          const map = {
-            "&": "&amp;",
-            "<": "&lt;",
-            ">": "&gt;",
-            "\"": "&quot;",
-            "'": "&#39;"
-          };
-          return map[match] || match;
-        });
-      }
-
-      function formatNumber(value) {
-        if (value === undefined || value === null) return "--";
-        return new Intl.NumberFormat("sv-SE").format(value);
-      }
-
-      function formatPercent(value) {
-        if (value === undefined || value === null || Number.isNaN(value)) return "--";
-        const sign = value > 0 ? "+" : "";
-        return `${sign}${value.toFixed(2)}%`;
-      }
-
-      function cacheGet(key, ttl, force) {
-        if (force) return null;
-        const raw = localStorage.getItem(key);
-        if (!raw) return null;
-        try {
-          const payload = JSON.parse(raw);
-          if (Date.now() - payload.ts < ttl) return payload.data;
-        } catch (err) {
-          return null;
-        }
-        return null;
-      }
-
-      function cacheSet(key, data) {
-        localStorage.setItem(key, JSON.stringify({ ts: Date.now(), data }));
-      }
-
-      async function fetchJson(url, { cacheKey, ttl = CACHE_TTL, force = false, headers } = {}) {
-        if (cacheKey) {
-          const cached = cacheGet(cacheKey, ttl, force);
-          if (cached) return cached;
-        }
-        const response = await fetch(url, { headers });
-        if (!response.ok) {
-          const error = new Error(`HTTP ${response.status}`);
-          error.status = response.status;
-          throw error;
-        }
-        const data = await response.json();
-        if (cacheKey) cacheSet(cacheKey, data);
-        return data;
-      }
-
-      function renderSkeleton(listEl, count = 6) {
-        listEl.innerHTML = Array.from({ length: count })
-          .map(() => `<li class="list__item skeleton"><div class="skeleton__bar"></div></li>`)
-          .join("");
-      }
-
-      function renderError(container, message, link, asList = false) {
-        const linkHtml = link
-          ? ` <a href="${link}" target="_blank" rel="noopener">${t("open_source")}</a>`
-          : "";
-        const body = `<div class="error">${escapeHTML(message)}${linkHtml}</div>`;
-        container.innerHTML = asList ? `<li class="list__empty">${body}</li>` : body;
-      }
-
-      function filterBySearch(items) {
-        const query = state.searchTerm.trim().toLowerCase();
-        if (!query) return items;
-        return items.filter((item) => item.title.toLowerCase().includes(query));
-      }
-
-      function getUtcYesterday() {
-        const now = new Date();
-        const utc = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate()));
-        const yesterday = new Date(utc.getTime() - 24 * 60 * 60 * 1000);
-        const year = yesterday.getUTCFullYear();
-        const month = String(yesterday.getUTCMonth() + 1).padStart(2, "0");
-        const day = String(yesterday.getUTCDate()).padStart(2, "0");
-        return { year, month, day };
-      }
-
-      function decodeTitle(title = "") {
-        return decodeURIComponent(title.replace(/_/g, " "));
-      }
-
-      function getPinterestToken() {
-        return localStorage.getItem(PINTEREST_TOKEN_KEY) || "";
-      }
-
-      function getPinterestGrowthMeta(item) {
-        let value = null;
-        let suffix = "";
-        if (state.pinterestTrendType === "growing" || state.pinterestTrendType === "seasonal") {
-          value = item.pct_growth_wow;
-          suffix = t("growth_wow");
-        } else if (state.pinterestTrendType === "monthly") {
-          value = item.pct_growth_mom;
-          suffix = t("growth_mom");
-        } else if (state.pinterestTrendType === "yearly") {
-          value = item.pct_growth_yoy;
-          suffix = t("growth_yoy");
-        }
-        if (typeof value !== "number") return t("growth_unavailable");
-        return `${formatPercent(value)} ${suffix}`;
-      }
-
-      function renderViral() {
-        if (!state.loaded.viral) return;
-        const list = filterBySearch(state.viral);
-        if (!list.length) {
-          elements.viralList.innerHTML = `<li class="list__empty">${t("no_matches")}</li>`;
-          return;
-        }
-        elements.viralList.innerHTML = list
-          .map((item) => {
-            return `
-              <li class="list__item">
-                <span class="rank">${String(item.rank).padStart(2, "0")}</span>
-                <div class="list__text">
-                  <span class="list__title">${escapeHTML(item.title)}</span>
-                  <span class="list__meta">${formatNumber(item.views)} ${t("views")}</span>
-                </div>
-                <a class="list__link" href="${item.url}" target="_blank" rel="noopener" aria-label="${t("open")} ${escapeHTML(item.title)}">${t("open")}</a>
-              </li>
-            `;
-          })
-          .join("");
-      }
-
-      function renderBuzz() {
-        if (!state.loaded.buzz) return;
-        elements.buzzNote.textContent = state.buzzMatches ? "" : t("buzz_no_matches");
-        const list = filterBySearch(state.buzz);
-        if (!list.length) {
-          elements.buzzList.innerHTML = `<li class="list__empty">${t("no_matches")}</li>`;
-          return;
-        }
-        elements.buzzList.innerHTML = list
-          .map((item, index) => {
-            return `
-              <li class="list__item">
-                <span class="rank">${String(index + 1).padStart(2, "0")}</span>
-                <div class="list__text">
-                  <span class="list__title">${escapeHTML(item.title)}</span>
-                  <span class="list__meta">${formatNumber(item.points)} ${t("points")}</span>
-                </div>
-                <a class="list__link" href="${item.url}" target="_blank" rel="noopener" aria-label="${t("open")} ${escapeHTML(item.title)}">${t("open")}</a>
-              </li>
-            `;
-          })
-          .join("");
-      }
-
-      function renderPulse() {
-        if (!state.loaded.pulse) return;
-        const list = filterBySearch(state.pulse);
-        if (!list.length) {
-          elements.pulseList.innerHTML = `<li class="list__empty">${t("no_matches")}</li>`;
-          return;
-        }
-        elements.pulseList.innerHTML = list
-          .map((item, index) => {
-            return `
-              <li class="list__item">
-                <span class="rank">${String(index + 1).padStart(2, "0")}</span>
-                <div class="list__text">
-                  <span class="list__title">${escapeHTML(item.title)}</span>
-                  <span class="list__meta">${escapeHTML(item.source)} • ${escapeHTML(item.date)}</span>
-                </div>
-                <a class="list__link" href="${item.url}" target="_blank" rel="noopener" aria-label="${t("open")} ${escapeHTML(item.title)}">${t("open")}</a>
-              </li>
-            `;
-          })
-          .join("");
-      }
-
-      function renderPinterest() {
-        if (!state.loaded.pinterest) return;
-        const token = getPinterestToken();
-        if (!token) {
-          elements.pinterestList.innerHTML = `<li class="list__empty">${t("pinterest_empty")}</li>`;
-          return;
-        }
-        const list = filterBySearch(state.pinterest);
-        if (!list.length) {
-          elements.pinterestList.innerHTML = `<li class="list__empty">${t("no_matches")}</li>`;
-          return;
-        }
-        elements.pinterestList.innerHTML = list
-          .map((item, index) => {
-            return `
-              <li class="list__item">
-                <span class="rank">${String(index + 1).padStart(2, "0")}</span>
-                <div class="list__text">
-                  <span class="list__title">${escapeHTML(item.title)}</span>
-                  <span class="list__meta">${escapeHTML(item.meta)}</span>
-                </div>
-                <span class="list__link">${t("trend_label")}</span>
-              </li>
-            `;
-          })
-          .join("");
-      }
-
-
-      async function loadViral(force = false) {
-        renderSkeleton(elements.viralList, 8);
-        const { year, month, day } = getUtcYesterday();
-        const project = state.viralProject;
-        const url = `https://wikimedia.org/api/rest_v1/metrics/pageviews/top/${project}/all-access/${year}/${month}/${day}`;
-        const cacheKey = `growthRadar:viral:${project}:${year}-${month}-${day}`;
-        const base = project === "sv.wikipedia" ? "https://sv.wikipedia.org/wiki/" : "https://en.wikipedia.org/wiki/";
-        try {
-          const data = await fetchJson(url, { cacheKey, force });
-          const items = data?.items?.[0]?.articles || [];
-          const blockedPrefixes = [
-            "special:",
-            "portal:",
-            "wikipedia:",
-            "kategori:",
-            "category:",
-            "file:",
-            "fil:",
-            "template:",
-            "mall:",
-            "help:",
-            "user:",
-            "draft:",
-            "talk:",
-            "diskussion:"
-          ];
-          const cleaned = items
-            .map((item) => ({ ...item, title: decodeTitle(item.article) }))
-            .filter((item) => {
-              const lower = item.title.toLowerCase();
-              return !blockedPrefixes.some((prefix) => lower.startsWith(prefix));
-            });
-          const top = cleaned.slice(0, 8).map((item, index) => ({
-            rank: index + 1,
-            title: item.title,
-            views: item.views,
-            url: `${base}${encodeURIComponent(item.article)}`
-          }));
-          state.viral = top;
-          state.viralTopViews = top[0]?.views || 0;
-          state.loaded.viral = true;
-          renderViral();
-        } catch (err) {
-          state.loaded.viral = true;
-          renderError(elements.viralList, t("error_wikimedia"), url, true);
-        }
-      }
-
-      async function loadBuzz(force = false) {
-        renderSkeleton(elements.buzzList, 8);
-        elements.buzzNote.textContent = "";
-        const url = "https://hn.algolia.com/api/v1/search?tags=front_page";
-        const cacheKey = "growthRadar:buzz";
-        try {
-          const data = await fetchJson(url, { cacheKey, force });
-          const hits = data?.hits || [];
-          const matches = hits.filter((hit) =>
-            KEYWORDS.some((keyword) => hit.title && hit.title.toLowerCase().includes(keyword))
-          );
-          const selected = matches.slice(0, 8);
-          state.buzzMatches = selected.length;
-          state.buzz = selected.map((hit) => ({
-            title: hit.title || "Untitled",
-            points: hit.points || 0,
-            url: hit.url || `https://news.ycombinator.com/item?id=${hit.objectID}`
-          }));
-          state.loaded.buzz = true;
-          if (!matches.length) elements.buzzNote.textContent = t("buzz_no_matches");
-          renderBuzz();
-        } catch (err) {
-          state.loaded.buzz = true;
-          renderError(elements.buzzList, t("error_hn"), url, true);
-        }
-      }
-
-      function formatSeenDate(seen) {
-        if (!seen) return "Unknown date";
-        const digits = seen.replace(/\D/g, "");
-        if (digits.length >= 8) {
-          const y = digits.slice(0, 4);
-          const m = digits.slice(4, 6);
-          const d = digits.slice(6, 8);
-          return `${y}-${m}-${d}`;
-        }
-        return seen;
-      }
-
-      function getSourceName(article) {
-        if (article.sourceCommonName) return article.sourceCommonName;
-        if (article.sourceCountry) return article.sourceCountry;
-        if (article.url) {
-          try {
-            const host = new URL(article.url).hostname.replace("www.", "");
-            return host;
-          } catch (err) {
-            return "Source";
-          }
-        }
-        return "Source";
-      }
-
-      async function loadPulse(force = false) {
-        renderSkeleton(elements.pulseList, 8);
-        const query = encodeURIComponent(PULSE_QUERIES[state.pulseQuery]);
-        const timespan = state.pulseTimespan;
-        const url = `https://api.gdeltproject.org/api/v2/doc/doc?query=${query}&mode=ArtList&format=json&maxrecords=8&sort=HybridRel&timelinesmooth=0&timespan=${timespan}`;
-        const cacheKey = `growthRadar:pulse:${state.pulseQuery}:${timespan}`;
-        try {
-          const data = await fetchJson(url, { cacheKey, force });
-          const articles = data?.articles || [];
-          state.pulse = articles.slice(0, 8).map((article) => ({
-            title: article.title || "Untitled",
-            url: article.url || "#",
-            source: getSourceName(article),
-            date: formatSeenDate(article.seendate || article.seenDate || "")
-          }));
-          state.loaded.pulse = true;
-          renderPulse();
-        } catch (err) {
-          state.loaded.pulse = true;
-          renderError(elements.pulseList, t("error_gdelt"), url, true);
-        }
-      }
-
-      async function loadPinterest(force = false) {
-        renderSkeleton(elements.pinterestList, 6);
-        elements.pinterestNote.textContent = "";
-        const token = getPinterestToken();
-        if (!token) {
-          state.pinterest = [];
-          state.loaded.pinterest = true;
-          elements.pinterestNote.textContent = t("pinterest_need_token");
-          renderPinterest();
-          return;
-        }
-        const region = encodeURIComponent(state.pinterestRegion);
-        const trendType = state.pinterestTrendType;
-        const url = `${PINTEREST_BASE}/trends/keywords/${region}/top/${trendType}?limit=10`;
-        const cacheKey = `growthRadar:pinterest:${state.pinterestRegion}:${trendType}`;
-        try {
-          const data = await fetchJson(url, {
-            cacheKey,
-            force,
-            headers: { Authorization: `Bearer ${token}` }
-          });
-          const trends = data?.trends || [];
-          state.pinterest = trends.map((trend) => ({
-            title: trend.keyword || "Untitled",
-            meta: getPinterestGrowthMeta(trend)
-          }));
-          state.loaded.pinterest = true;
-          renderPinterest();
-        } catch (err) {
-          state.loaded.pinterest = true;
-          if (err?.status === 401 || err?.status === 403) {
-            elements.pinterestNote.textContent = t("pinterest_need_token");
-          }
-          renderError(elements.pinterestList, t("error_pinterest"), PINTEREST_DOCS, true);
-        }
-      }
-
-      function setToggleActive(group, attr, value) {
-        group.querySelectorAll("button").forEach((btn) => {
-          const isActive = btn.getAttribute(attr) === value;
-          btn.classList.toggle("is-active", isActive);
-          btn.setAttribute("aria-pressed", isActive ? "true" : "false");
-        });
       }
 
       function attachEvents() {
         const storedLang = localStorage.getItem("lang") || "sv";
         applyLang(storedLang);
+        updateTimestamp();
 
         document.querySelectorAll(".lang__btn").forEach((btn) => {
-          btn.addEventListener("click", () => applyLang(btn.dataset.lang));
+          btn.addEventListener("click", () => {
+            applyLang(btn.dataset.lang);
+            updateTimestamp();
+          });
         });
 
-        const storedPinterestToken = getPinterestToken();
-        if (storedPinterestToken) {
-          elements.pinterestToken.value = storedPinterestToken;
+        const refreshBtn = document.getElementById("refreshBtn");
+        if (refreshBtn) {
+          refreshBtn.addEventListener("click", updateTimestamp);
         }
-
-        const viralToggle = document.getElementById("viralToggle");
-        viralToggle.addEventListener("click", (event) => {
-          const button = event.target.closest("button[data-project]");
-          if (!button) return;
-          state.viralProject = button.dataset.project;
-          setToggleActive(viralToggle, "data-project", state.viralProject);
-          loadViral(true);
-        });
-
-        const pulseQueryToggle = document.getElementById("pulseQueryToggle");
-        pulseQueryToggle.addEventListener("click", (event) => {
-          const button = event.target.closest("button[data-query]");
-          if (!button) return;
-          state.pulseQuery = button.dataset.query;
-          setToggleActive(pulseQueryToggle, "data-query", state.pulseQuery);
-          loadPulse(true);
-        });
-
-        const pulseTimespanToggle = document.getElementById("pulseTimespanToggle");
-        pulseTimespanToggle.addEventListener("click", (event) => {
-          const button = event.target.closest("button[data-timespan]");
-          if (!button) return;
-          state.pulseTimespan = button.dataset.timespan;
-          setToggleActive(pulseTimespanToggle, "data-timespan", state.pulseTimespan);
-          loadPulse(true);
-        });
-
-        const pinterestRegionToggle = document.getElementById("pinterestRegionToggle");
-        pinterestRegionToggle.addEventListener("click", (event) => {
-          const button = event.target.closest("button[data-region]");
-          if (!button) return;
-          state.pinterestRegion = button.dataset.region;
-          setToggleActive(pinterestRegionToggle, "data-region", state.pinterestRegion);
-          loadPinterest(true);
-        });
-
-        const pinterestTrendToggle = document.getElementById("pinterestTrendToggle");
-        pinterestTrendToggle.addEventListener("click", (event) => {
-          const button = event.target.closest("button[data-trend]");
-          if (!button) return;
-          state.pinterestTrendType = button.dataset.trend;
-          setToggleActive(pinterestTrendToggle, "data-trend", state.pinterestTrendType);
-          loadPinterest(true);
-        });
-
-        elements.pinterestSave.addEventListener("click", () => {
-          const token = elements.pinterestToken.value.trim();
-          if (token) {
-            localStorage.setItem(PINTEREST_TOKEN_KEY, token);
-          } else {
-            localStorage.removeItem(PINTEREST_TOKEN_KEY);
-          }
-          loadPinterest(true);
-        });
-
-        elements.refreshBtn.addEventListener("click", () => {
-          updateTimestamp();
-          loadAll(true);
-        });
-
-        elements.searchInput.addEventListener("input", (event) => {
-          state.searchTerm = event.target.value;
-          renderViral();
-          renderBuzz();
-          renderPulse();
-          renderPinterest();
-        });
 
         window.addEventListener("scroll", () => {
           const header = document.querySelector(".header");
+          if (!header) return;
           header.classList.toggle("header--scrolled", window.scrollY > 8);
         });
       }
 
-      function loadAll(force = false) {
-        loadViral(force);
-        loadBuzz(force);
-        loadPulse(force);
-        loadPinterest(force);
-      }
-
       attachEvents();
-      loadAll(false);
     </script>
   </body>
 </html>
