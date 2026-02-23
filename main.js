@@ -1020,10 +1020,16 @@ function initSectionObserver() {
 
   const navLinks = Array.from(document.querySelectorAll(".nav a[href^='#']"));
   const linkMap = new Map();
+  const seenSections = new Set();
   navLinks.forEach((link) => {
     const id = link.getAttribute("href").slice(1);
     if (id) linkMap.set(id, link);
   });
+
+  const getSectionTitle = (section) => {
+    const heading = section.querySelector("h1, h2, h3");
+    return heading ? heading.textContent.trim() : "";
+  };
 
   const setActive = (section) => {
     sections.forEach((s) => s.classList.remove("is-active"));
@@ -1037,7 +1043,19 @@ function initSectionObserver() {
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting) setActive(entry.target);
+        if (!entry.isIntersecting) return;
+        setActive(entry.target);
+
+        const id = entry.target.getAttribute("id");
+        if (id && !seenSections.has(id)) {
+          seenSections.add(id);
+          const sectionTitle = getSectionTitle(entry.target);
+          pushDataLayerEvent("view_section", {
+            ...getBaseEventData(),
+            section_name: id,
+            section_title: sectionTitle || undefined
+          });
+        }
       });
     },
     { threshold: 0.35 }
