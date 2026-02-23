@@ -22,7 +22,7 @@ const dict = {
       "För mig handlar marknadsföring om att göra det enkelt att välja rätt. Jag tar gärna ansvar för helheten och gör idéer genomförbara, från koncept till innehåll och uppföljning.",
     about_body_3:
       "Jag trivs när jag får jobba nära andra och göra jobbet ordentligt. Att testa, mäta och förbättra är en naturlig del av hur jag arbetar, och jag vill alltid lämna något som känns både smart och snyggt.",
-    about_note: "Fortsätt gärna scrolla för att se mer om mina erfarenheter och färdigheter.",
+    about_note: "Fortsätt gärna scrolla för mer om mina erfarenheter.",
 
     cases_title: "Utvalda projekt",
     cases_intro: "Ett urval av projekt där strategi, kreativitet och data möts.",
@@ -477,7 +477,7 @@ const dict = {
       "For me marketing is about making it easy to choose. I like owning the full path and turning ideas into execution, from concept to content and follow up.",
     about_body_3:
       "I thrive in collaboration and take pride in doing the work properly. Testing, measuring, and improving is a natural part of how I work, and I want the outcome to feel both smart and beautiful.",
-    about_note: "Scroll on for more about my cases and skills.",
+    about_note: "Keep scrolling for more about my experience.",
 
     cases_title: "Selected projects",
     cases_intro: "A selection of projects where strategy, creativity, and data meet.",
