@@ -499,9 +499,9 @@ const dict = {
       "Expert Book Picks: concept & content plan with SEO copy, expert picks, and direct buy links.",
     case6_image_note: "Akademibokhandeln",
 
-    mini_title: "Prototypes & Experiments",
+    mini_title: "Experiments & prototypes",
     mini_intro:
-      "Side builds made to learn, test, and improve.",
+      "Side projects I've made to learn, test, and improve.",
     mini_item_1_media: "Plugin",
     mini_item_1_tag: "Plugin",
     mini_item_1_status: "Free",
