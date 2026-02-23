@@ -2,12 +2,13 @@
 const dict = {
   sv: {
     logo_text: "A.U. Portfolio",
-    nav_cases: "Cases",
+    nav_cases: "Utvalda projekt",
     nav_about: "Om mig",
     nav_skills: "Färdigheter",
     nav_contact: "Kontakt",
 
-    cover_title: "AVA URDÉN",
+    cover_title:
+      '<span class="hero__name hero__name--first">AVA</span> <span class="hero__name hero__name--last">URDÉN</span>',
     hero_role: "Growth Marketing",
     hero_school: "@Berghs School of Communication",
     hero_welcome: "Välkommen till min portfolio",
@@ -16,15 +17,16 @@ const dict = {
 
     about_title: "Om mig",
     about_body_1:
-      "Jag är Ava — driven, nyfiken och målinriktad. Jag gillar att förstå saker på djupet, göra uppdrag ordentligt och se hur ett arbete leder till resultat. Jag har alltid haft en kreativ drivkraft, men också en stark nyfikenhet på varför saker fungerar som de gör och hur de kan förbättras.",
+      "Jag heter Ava och är en nyfiken person med stark drivkraft. Jag är kreativ och tycker om att kombinera idéer med tydlig strategi för att skapa resultat. Jag gillar att förstå människor och varför saker fungerar.",
     about_body_2:
-      "Marknadsföring blev snabbt ett område jag drogs till eftersom det kombinerar båda sidor av mig. Jag gillar att ta en idé och göra den konkret, testa, mäta och lära mig längs vägen. För mig handlar det om att skapa något som inte bara ser bra ut, utan som faktiskt fungerar och ger effekt.",
+      "För mig handlar marknadsföring om att göra det enkelt att välja rätt. Jag tar gärna ansvar för helheten och gör idéer genomförbara, från koncept till innehåll och uppföljning.",
     about_body_3:
-      "Jag trivs när jag får ta ansvar och driva saker framåt. Jag gillar att samarbeta med andra som också har en drivkraft, och jag motiveras av att utvecklas, lära mig nytt och hela tiden hitta bättre sätt att göra det jag gör.",
-    about_note: "Fortsätt gärna scrolla för mer information om mina cases och färdigheter.",
+      "Jag trivs när jag får jobba nära andra och göra jobbet ordentligt. Att testa, mäta och förbättra är en naturlig del av hur jag arbetar, och jag vill alltid lämna något som känns både smart och snyggt.",
+    about_note: "Fortsätt gärna scrolla för att se mer om mina erfarenheter och färdigheter.",
 
-    cases_title: "Tidigare projekt & case",
+    cases_title: "Utvalda projekt",
     cases_intro: "Ett urval av projekt där strategi, kreativitet och data möts.",
+    case_read_more: "Läs mer →",
 
 
     case1_title: "Under Your Skin",
@@ -37,28 +39,101 @@ const dict = {
     case4_sum: "A/B-testning och analys.",
     case5_title: "Giftguide för Cay Collective",
     case5_sum: "Tillväxtstrategi.",
-    case6_title: "Brand Book",
-    case6_sum: "Digital riktlinje.",
-    case6_image_note: "Bild kommer",
+    case6_title: "Akademibokhandeln",
+    case6_sum:
+      "Experternas boktips: koncept & contentplan med SEO‑text, profilerade boktips och tydliga köplänkar.",
+    case6_image_note: "Akademibokhandeln",
+
+    mini_title: "Mina små projekt: API:er & plugins",
+    mini_intro:
+      "Growth-tech jag bygger just nu – små API:er, plugins och automationer som gör marknadsföring smartare.",
+    mini_item_1_media: "Plugin",
+    mini_item_1_tag: "Plugin",
+    mini_item_1_status: "Gratis",
+    mini_item_1_title: "Tabless Library",
+    mini_item_1_desc:
+      "Spara och organisera dina öppna flikar i snygga samlingar så att du hittar dem senare.",
+    mini_item_1_cta: "Ladda ner gratis",
+    mini_item_1_more: "Läs mer",
+    mini_item_2_media: "API",
+    mini_item_2_tag: "API",
+    mini_item_2_status: "Pågående",
+    mini_item_2_title: "Growth Signals API",
+    mini_item_2_desc:
+      "Plats för API-projekt och endpoints jag bygger för att samla in och tolka tillväxtdata.",
+    mini_item_2_cta: "Läs mer",
+    mini_item_3_media: "Plugin",
+    mini_item_3_tag: "Plugin",
+    mini_item_3_status: "Pågående",
+    mini_item_3_title: "Automation Toolkit",
+    mini_item_3_desc:
+      "Små plugins och scripts som kapar manuella steg i research, rapportering och kampanjarbete.",
+    mini_item_3_cta: "Kommer snart",
+    back_to_mini: "← Tillbaka till små projekt",
+    mini1_hero_title: "Tabless Library – Spara dina flikar, rensa ditt sinne",
+    mini1_hero_body:
+      "Ett egenbyggt plugin som låter dig spara och organisera öppna flikar i snygga samlingar så att du enkelt hittar dem senare.",
+    mini1_hero_extra:
+      "Om du är som jag och gillar ordning, reda och listor kommer du trivas med Tabless Library.",
+    mini1_pill_1: "Plugin",
+    mini1_pill_2: "Growth Tech",
+    mini1_pill_3: "Gratis",
+    mini1_download: "Ladda ner gratis",
+    mini1_install_note: "Manuell installation krävs (Developer mode i Chrome).",
+    mini1_install_title: "Installera i Chrome",
+    mini1_install_list:
+      "<li>Ladda ner zipfilen och packa upp den.</li><li>Öppna <strong>chrome://extensions</strong> i Chrome.</li><li>Slå på <strong>Developer mode</strong>.</li><li>Klicka <strong>Load unpacked</strong> och välj mappen.</li>",
+    mini1_media_label: "Plugin preview",
+    mini1_overview_title: "Översikt",
+    mini1_overview_list:
+      "<li><strong>Typ:</strong> Webbläsarplugin</li><li><strong>Syfte:</strong> Ordning bland flikar & snabb återkomst</li><li><strong>Status:</strong> Klar för nedladdning</li>",
+    mini1_features_title: "Funktioner",
+    mini1_features_list:
+      "<li>Spara öppna flikar i samlingar</li><li>Taggar och struktur för snabb sökning</li><li>Återställ valda flikar med ett klick</li>",
+    mini1_stack_title: "Stack",
+    mini1_stack_list: "<li>JavaScript</li><li>Chrome Extension API</li><li>Local storage</li>",
+    mini1_note:
+      "Det här är en kortare, lättläst projektsida. Jag fyller på med mer detaljer och resultat när nästa version är klar.",
+    mini1_privacy_link: "Integritetspolicy →",
+    modal_close: "Stäng",
+    privacy_tabless_title: "Integritetspolicy – Tabless Library",
+    privacy_tabless_intro:
+      "Tabless Library lagrar dina samlingar lokalt i webbläsaren. Ingen data skickas till externa servrar.",
+    privacy_tabless_updated: "Senast uppdaterad: 20 februari 2026.",
+    privacy_tabless_data_title: "Data som lagras",
+    privacy_tabless_data_list:
+      "<li>Sparade flikar: URL, titel och ev. bild/metadata</li><li>Samlingar/mappar och inställningar</li><li>Widget-position per webbplats</li>",
+    privacy_tabless_permissions_title: "Behörigheter",
+    privacy_tabless_permissions_list:
+      "<li><strong>tabs:</strong> läsa titel/URL och öppna sparade flikar</li><li><strong>storage:</strong> spara samlingar lokalt</li><li><strong>sidePanel:</strong> visa biblioteket i sidopanelen</li><li><strong>contextMenus:</strong> snabbmeny för att spara flik</li><li><strong>host permissions (http/https):</strong> visa pin-widget och läsa sidans metadata när du sparar</li>",
+    privacy_tabless_sharing_title: "Delning & analys",
+    privacy_tabless_sharing_body:
+      "Ingen data delas eller säljs. Ingen analytics eller spårning används.",
+    privacy_tabless_contact_title: "Kontakt",
+    privacy_tabless_contact_body: "Frågor om integritet? Mejla ava.urden@gmail.com.",
 
     skills_main_title: "Färdigheter & verktyg",
     skills_intro: "Där strategi möter genomförande – från idé till mätbar effekt.",
     tools_label: "Verktyg:",
+    skills_list_label: "Jag jobbar med:",
 
     cat1_title: "Content & Storytelling",
-    cat1_desc: "Bygger varumärke och engagemang med content anpassat efter kanal.",
+    cat1_desc:
+      "Skapar innehåll som både bygger varumärke och driver handling. Jag tar fram koncept, tonalitet och format som passar kanal, och säkerställer att content kan produceras effektivt och återanvändas smart över tid.",
     cat1_list:
-      "<li>Copy, hooks och content för sociala medier</li><li>Contentplanering och publiceringsplan</li><li>Tonalitet och riktlinjer</li><li>Produktion av foto och video</li>",
+      "<li>Copy, hooks och tydliga budskap för sociala medier (organiskt + paid)</li><li>Contentplanering: publiceringskalender, teman, format och produktionstakt</li><li>Tonalitet, guideliner och brand voice så allt hänger ihop</li><li>Foto/video för kortformat (Reels/TikTok) + enklare redigering och anpassning</li><li>UGC-tänk: content som känns äkta men ändå konverterar</li>",
 
     cat2_title: "Strategi & Koncept",
-    cat2_desc: "Tar idéer till tydlig struktur som går att genomföra.",
+    cat2_desc:
+      "Omsätter idéer till struktur som går att genomföra. Jag gillar när strategi blir konkret: tydliga val (målgrupp, budskap, kanal, KPI) och en plan som gör det lätt att producera, testa och följa upp.",
     cat2_list:
-      "<li>Konceptutveckling för kampanjer</li><li>Briefs: målgrupp, budskap och KPI</li><li>Presentationer och pitchdecks</li><li>Kundkommunikation (CRM)</li>",
+      "<li>Konceptutveckling för kampanjer, erbjudanden och medlemskommunikation</li><li>Briefs: mål, målgrupp/segment, budskap, kanalval och KPI:er</li><li>Kundresa och CRM-tänk: vad behöver kunden nu och vilket nästa steg vill vi skapa?</li><li>Presentationer/pitchdecks som säljer idéer med logik, data och tydlig payoff</li><li>Samarbete och projektstruktur så det faktiskt blir gjort</li>",
 
     cat3_title: "Tillväxt & Data",
-    cat3_desc: "Datadrivet arbete som driver trafik och konvertering.",
+    cat3_desc:
+      "Datadrivet arbete som hittar friktion, testar hypoteser och skapar effekt. Jag använder data för att förstå beteenden, prioritera rätt och förbättra kundresan stegvis - med fokus på konvertering, AOV och retention.",
     cat3_list:
-      "<li>Performance marketing setup</li><li>GA4 analys och funnel-tracking</li><li>CRO: hypotes och A/B-test</li><li>SEO och teknisk mätplan</li>",
+      "<li>GA4-analys: funnels, drop-offs, beteenden och segment</li><li>CRO: hypoteser, prioritering, testplan och uppföljning av resultat och lärdomar</li><li>Performance marketing-grunder: setup, spårning och iterering på kreativet</li><li>Dashboards och uppföljning: göra siffror enkla att agera på</li><li>SEO och teknik på en praktisk nivå: vad som påverkar synlighet + mätplan/spårning</li>",
 
     contact_title: "Kontakt",
     footer_text: "Nyfiken på att veta mer eller diskutera ett projekt? Hör av dig så tar vi en kaffe!",
@@ -183,30 +258,31 @@ const dict = {
     // Case 2
     c2_hero_title: "Ny visuell identitet & koncept",
     c2_hero_body:
-      "Skapandet av en modern visuell identitet och ett kommunikationskoncept för ett nätverk, med målet att förena en 20-årig historia med en framåtlutad vision.",
+      "En uppdaterad identitet och ett kommunikationskoncept för nätverket – där 20 års historia möter en samtida, framåtblickande ton.",
     c2_pill_1: "Visuell identitet",
     c2_pill_2: "Branding",
     c2_pill_3: "Eventkoncept",
     c2_overview_title: "Översikt",
     c2_overview_list:
-      "<li><strong>Uppdrag:</strong> Skapa nätverkets nya uttryck utan att tappa dess kärna.</li><li><strong>Målgrupp:</strong> 200 medlemmar.</li><li><strong>Utmaning:</strong> Navigera mellan strikta företagsriktlinjer och behovet av en unik, inspirerande identitet.</li>",
+      "<li><strong>Uppdrag:</strong> Skapa ett nytt uttryck som speglar nätverkets arv och ambition.</li><li><strong>Målgrupp:</strong> Cirka 200 medlemmar.</li><li><strong>Utmaning:</strong> Hålla sig inom företagsriktlinjer utan att tappa den unika, inspirerande känslan.</li>",
     c2_tools_title: "Verktyg & leverans",
-    c2_tools_list: "<li>Färgpalett & typografi</li><li>Grafiska element</li><li>Eventmaterial</li>",
+    c2_tools_list:
+      "<li>Färgpalett & typografi</li><li>Grafiska element & mallar</li><li>Eventmaterial & presentationer</li>",
     c2_results_title: "Resultat",
     c2_results_list:
-      "<li>Stärkt intern stolthet.</li><li>Identitet som används för återkommande event.</li><li>Framgångsrikt lanseringsevent.</li>",
-    c2_highlight_title: "Strategisk färgsättning",
+      "<li>Tydligare identitet och ökad intern stolthet.</li><li>Enhetlig kommunikation vid återkommande event.</li><li>Lyckad lansering med starkt engagemang.</li>",
+    c2_highlight_title: "Färgpalett",
     c2_highlight_body:
-      "Identiteten vilar på en palett som tillgodoser företagets varumärke och grundarnas önskemål.",
+      "Paletten binder ihop varumärkets kärna med nätverkets personlighet och skapar en modern, tydlig igenkänning.",
     c2_feature1_title: "Från vision till visuell röst",
     c2_feature1_body:
-      "I nära samarbete med nätverkets grundare tog jag fram konkreta idéer kring typografi och bildspråk. Resultatet gav nätverket verktyg att kommunicera i linje med företagets rebranding.",
+      "Tillsammans med grundarna tog jag fram typografi, bildspråk och grafiska regler. Resultatet blev ett tydligt ramverk som gör kommunikationen konsekvent i alla kanaler.",
     c2_feature2_title: "Event & genomförande",
     c2_feature2_body:
-      "I samband med lanseringen arrangerades ett event för 200 medlemmar. Den nya identiteten fick liv genom allt från digitala presentationer till fysiskt eventmaterial, vilket skapade en enhetlig och exklusiv upplevelse.",
+      "Lanseringen blev ett event för 200 medlemmar där identiteten aktiverades i presentationer, signage, digitala ytor och trycksaker – en sammanhållen och exklusiv upplevelse.",
     c2_outcome_title: "Resultat & effekt",
     c2_outcome_body:
-      "Den nya identiteten blev snabbt en naturlig del av företagskulturen. Den har stärkt nätverkets interna stolthet och används idag konsekvent i återkommande kommunikation och större strategiska event.",
+      "Identiteten används idag löpande i nätverkets kommunikation och gör det enklare att planera framtida aktiviteter med en tydlig visuell ram.",
 
     // Case 3
     c3_hero_title: "SEO: Content-struktur & koncept",
@@ -353,25 +429,41 @@ const dict = {
       "Genom att kombinera en datadriven content-strategi med en optimerad webbupplevelse lyckades vi inte bara öka trafiken, utan även förtydliga Cays unika position på marknaden under årets viktigaste försäljningsperiod.",
 
     // Case 6
-    c6_hero_title: "Brand Book: Digital riktlinje",
-    c6_hero_body:
-      "Ett urval från arbetet med en digital brand book. Sidan uppdateras med fulla case-detaljer och visuellt material.",
-    c6_note_body: "Bild- och materialurval publiceras snart.",
-    c6_note_title: "Under uppbyggnad",
-    c6_note_text:
-      "Jag fyller på med case-struktur, guidelines och visuella exempel. Hör gärna av dig om du vill se materialet redan nu.",
-    c6_note_list:
-      "<li>Brandplattform & tonläge</li><li>Typografi och färgsystem</li><li>Layout och bildspråk</li>"
+    c6_hero_title: "Akademibokhandeln – Experternas boktips",
+    c6_hero_body: "Koncept och contentplan för ökad försäljning online.",
+    c6_mockup_note: "Mockups och grafiskt material läggs in här.",
+    c6_intro_title: "Insikt & riktning",
+    c6_intro_p1:
+      "Med stöd i Bokbarometern och Google Trends kartlade vi säsongsmönster och såg tydliga toppar inför jul och sommarläsning. Det gav oss en tydlig riktning för både innehåll och timing. Lösningen landade i Experternas boktips, en ny sektion på sajten där profiler och experter tipsar om utvalda böcker med sökanpassad text och tydliga länkar till köp. Målet var att kombinera inspiration med en snabb väg till konvertering och samtidigt bygga organisk synlighet över tid.",
+    c6_intro_p2:
+      "För att driva trafik och intresse kompletterade vi med en plan för Instagram och nyhetsbrev, inklusive idéer på format och hur man kan testa olika profiler och upplägg för att se vad som fungerar bäst. Vi avslutade med en mätplan och KPI:er för organisk trafik, klick, engagemang, nyhetsbrevsresultat och köp kopplat till prioriterade titlar.",
+    c6_concept_title: "Koncept och målgrupp",
+    c6_concept_body:
+      "Vi tog fram en datadriven idé för att få fler vuxna att välja Akademibokhandeln när de ska köpa böcker. Arbetet började i en omvärlds och konkurrentanalys och gick vidare till målgruppsinsikter där vi tog fram tre personas som speglar olika sätt att inspireras och köpa.",
+    c6_deliver_title: "Koncept & contentplan",
+    c6_deliver_text: "Koncept och contentplan för ökad försäljning online.",
+    c6_deliver_list:
+      "<li>Fyra noggrant utvalda böcker</li><li>SEO‑anpassad text</li><li>Direktlänk till köp</li>",
+    c6_plan_title: "Plan & mätning",
+    c6_plan_text:
+      "Plan för Instagram och nyhetsbrev med formatidéer och tester av olika profiler och upplägg.",
+    c6_plan_list:
+      "<li>Organisk trafik</li><li>Klick</li><li>Engagemang</li><li>Nyhetsbrevsresultat</li><li>Köp kopplat till prioriterade titlar</li>",
+    c6_gallery_title: "Grafiskt material",
+    c6_gallery_body: "Mockups och slides från konceptet.",
+    c6_gallery_cap_1: "Experternas boktips – vy",
+    c6_gallery_cap_2: "Målbild"
   },
 
   en: {
     logo_text: "A.U. Portfolio",
-    nav_cases: "Cases",
+    nav_cases: "Selected projects",
     nav_about: "About",
     nav_skills: "Skills",
     nav_contact: "Contact",
 
-    cover_title: "AVA URDÉN",
+    cover_title:
+      '<span class="hero__name hero__name--first">AVA</span> <span class="hero__name hero__name--last">URDÉN</span>',
     hero_role: "Growth Marketing",
     hero_school: "@Berghs School of Communication",
     hero_welcome: "Welcome to my portfolio",
@@ -380,15 +472,16 @@ const dict = {
 
     about_title: "About",
     about_body_1:
-      "I'm Ava — driven, curious, and goal-oriented. I like to understand things deeply, do the work properly, and see how it leads to results. I've always had a creative drive, paired with a strong curiosity about why things work the way they do and how they can be improved.",
+      "I am Ava, a curious person with strong drive. I am creative and I like combining ideas with clear strategy to create results. I enjoy understanding people and why things work.",
     about_body_2:
-      "Marketing quickly became an area I was drawn to because it combines both sides of me. I like turning ideas into something concrete, testing, measuring, and learning along the way. For me, it’s about creating work that doesn’t just look good, but actually works and makes an impact.",
+      "For me marketing is about making it easy to choose. I like owning the full path and turning ideas into execution, from concept to content and follow up.",
     about_body_3:
-      "I thrive when I can take ownership and drive things forward. I enjoy collaborating with others who are equally driven, and I’m motivated by learning, growing, and always finding better ways to do what I do.",
+      "I thrive in collaboration and take pride in doing the work properly. Testing, measuring, and improving is a natural part of how I work, and I want the outcome to feel both smart and beautiful.",
     about_note: "Scroll on for more about my cases and skills.",
 
-    cases_title: "Previous projects & cases",
+    cases_title: "Selected projects",
     cases_intro: "A selection of projects where strategy, creativity, and data meet.",
+    case_read_more: "Read more →",
 
 
     case1_title: "Under Your Skin",
@@ -401,28 +494,100 @@ const dict = {
     case4_sum: "A/B testing and analysis.",
     case5_title: "Gift guide for Cay Collective",
     case5_sum: "Growth strategy.",
-    case6_title: "Brand Book",
-    case6_sum: "Digital guidelines.",
-    case6_image_note: "Image coming soon",
+    case6_title: "Akademibokhandeln",
+    case6_sum:
+      "Expert Book Picks: concept & content plan with SEO copy, expert picks, and direct buy links.",
+    case6_image_note: "Akademibokhandeln",
+
+    mini_title: "Mini projects: APIs & plugins",
+    mini_intro:
+      "Growth tech I’m building right now – small APIs, plugins, and automations that make marketing smarter.",
+    mini_item_1_media: "Plugin",
+    mini_item_1_tag: "Plugin",
+    mini_item_1_status: "Free",
+    mini_item_1_title: "Tabless Library",
+    mini_item_1_desc:
+      "Save and organize your open tabs into neat collections so you can find them later.",
+    mini_item_1_cta: "Download for free",
+    mini_item_1_more: "Read more",
+    mini_item_2_media: "API",
+    mini_item_2_tag: "API",
+    mini_item_2_status: "In progress",
+    mini_item_2_title: "Growth Signals API",
+    mini_item_2_desc:
+      "Space for API projects and endpoints I’m building to collect and interpret growth data.",
+    mini_item_2_cta: "Read more",
+    mini_item_3_media: "Plugin",
+    mini_item_3_tag: "Plugin",
+    mini_item_3_status: "In progress",
+    mini_item_3_title: "Automation Toolkit",
+    mini_item_3_desc:
+      "Small plugins and scripts that cut manual steps in research, reporting, and campaign work.",
+    mini_item_3_cta: "Coming soon",
+    back_to_mini: "← Back to mini projects",
+    mini1_hero_title: "Tabless Library – Save your tabs, clear your mind",
+    mini1_hero_body:
+      "A custom-built extension that lets you save and organize open tabs into neat collections so you can easily find them later.",
+    mini1_hero_extra:
+      "If you’re like me and love order, structure, and lists, you’ll feel right at home with Tabless Library.",
+    mini1_pill_1: "Plugin",
+    mini1_pill_2: "Growth Tech",
+    mini1_pill_3: "Free",
+    mini1_download: "Download for free",
+    mini1_install_note: "Manual installation required (Developer mode in Chrome).",
+    mini1_install_title: "Install in Chrome",
+    mini1_install_list:
+      "<li>Download the zip file and unzip it.</li><li>Open <strong>chrome://extensions</strong> in Chrome.</li><li>Enable <strong>Developer mode</strong>.</li><li>Click <strong>Load unpacked</strong> and select the folder.</li>",
+    mini1_media_label: "Plugin preview",
+    mini1_overview_title: "Overview",
+    mini1_overview_list:
+      "<li><strong>Type:</strong> Browser extension</li><li><strong>Goal:</strong> Organized tabs & quick return</li><li><strong>Status:</strong> Ready to download</li>",
+    mini1_features_title: "Features",
+    mini1_features_list: "<li>Save open tabs into collections</li><li>Tags and structure for fast search</li><li>Restore selected tabs in one click</li>",
+    mini1_stack_title: "Stack",
+    mini1_stack_list: "<li>JavaScript</li><li>Chrome Extension API</li><li>Local storage</li>",
+    mini1_note:
+      "This is a short, easy-to-read project page. I’ll add more details and results as the next version ships.",
+    mini1_privacy_link: "Privacy policy →",
+    modal_close: "Close",
+    privacy_tabless_title: "Privacy Policy – Tabless Library",
+    privacy_tabless_intro:
+      "Tabless Library stores your collections locally in the browser. No data is sent to external servers.",
+    privacy_tabless_updated: "Last updated: February 20, 2026.",
+    privacy_tabless_data_title: "Data stored",
+    privacy_tabless_data_list:
+      "<li>Saved tabs: URL, title, and optional image/metadata</li><li>Collections/folders and settings</li><li>Widget position per site</li>",
+    privacy_tabless_permissions_title: "Permissions",
+    privacy_tabless_permissions_list:
+      "<li><strong>tabs:</strong> read tab title/URL and open saved tabs</li><li><strong>storage:</strong> store collections locally</li><li><strong>sidePanel:</strong> show the library in the side panel</li><li><strong>contextMenus:</strong> quick menu to save a tab</li><li><strong>host permissions (http/https):</strong> show the pin widget and read page metadata when saving</li>",
+    privacy_tabless_sharing_title: "Sharing & analytics",
+    privacy_tabless_sharing_body:
+      "No data is shared or sold. No analytics or tracking is used.",
+    privacy_tabless_contact_title: "Contact",
+    privacy_tabless_contact_body: "Questions about privacy? Email ava.urden@gmail.com.",
 
     skills_main_title: "Skills & tools",
-    skills_intro: "Where strategy meets execution — from idea to measurable impact.",
+    skills_intro: "Where strategy meets execution – from idea to measurable impact.",
     tools_label: "Tools:",
+    skills_list_label: "I work with:",
 
     cat1_title: "Content & storytelling",
-    cat1_desc: "Building brand and engagement tailored to the channel.",
+    cat1_desc:
+      "Creates content that builds brand and drives action. I shape concepts, tone, and formats per channel, and make sure content can be produced efficiently and repurposed over time.",
     cat1_list:
-      "<li>Copy, hooks, and social content</li><li>Content planning and publishing</li><li>Tone of voice and guidelines</li><li>Photo and video production</li>",
+      "<li>Copy, hooks, and clear messaging for social media (organic + paid)</li><li>Content planning: calendars, themes, formats, and production cadence</li><li>Tone of voice, guidelines, and brand voice consistency</li><li>Short-form photo/video (Reels/TikTok) with light editing and adaptations</li><li>UGC thinking: content that feels authentic but still converts</li>",
 
     cat2_title: "Strategy & concept",
-    cat2_desc: "Turning ideas into actionable structures.",
+    cat2_desc:
+      "Turns ideas into structure you can execute. I like strategy that becomes concrete: clear choices (audience, message, channel, KPIs) and a plan that makes it easy to produce, test, and follow up.",
     cat2_list:
-      "<li>Campaign concept development</li><li>Briefs: audience, message, and KPIs</li><li>Presentations and pitch decks</li><li>Customer communication (CRM)</li>",
+      "<li>Concept development for campaigns, offers, and member communication</li><li>Briefs: goals, audience/segments, message, channel selection, and KPIs</li><li>Customer journey + CRM thinking: what the customer needs now and the next step we want to create</li><li>Presentations/pitch decks that sell ideas with logic, data, and clear payoff</li><li>Collaboration and project structure so it actually gets done</li>",
 
     cat3_title: "Growth & data",
-    cat3_desc: "Data-driven work driving traffic and conversion.",
+    cat3_desc:
+      "Data-driven work that finds friction, tests hypotheses, and creates impact. I use data to understand behavior, prioritize, and improve the journey step by step - with focus on conversion, AOV, and retention.",
     cat3_list:
-      "<li>Performance marketing setup</li><li>GA4 analysis and tracking</li><li>CRO: hypothesis and A/B testing</li><li>SEO and technical measurement plan</li>",
+      "<li>GA4 analysis: funnels, drop-offs, behavior, and segments</li><li>CRO: hypotheses, prioritization, test plan, and results learnings</li><li>Performance marketing basics: setup, tracking, and creative iteration</li><li>Dashboards and follow-up: making numbers easy to act on</li><li>SEO and tech at a practical level: what affects visibility + measurement plan/tracking</li>",
 
     contact_title: "Contact",
     footer_text: "Curious to know more or discuss a project? Get in touch and let's have a coffee!",
@@ -547,30 +712,31 @@ const dict = {
     // Case 2
     c2_hero_title: "New visual identity & concept",
     c2_hero_body:
-      "Creating a modern visual identity and communication concept for a network, with the goal of merging a 20-year history with a forward-looking vision.",
+      "A refreshed identity and communication concept for the network—bridging 20 years of history with a contemporary, forward-looking tone.",
     c2_pill_1: "Visual identity",
     c2_pill_2: "Branding",
     c2_pill_3: "Event concept",
     c2_overview_title: "Overview",
     c2_overview_list:
-      "<li><strong>Brief:</strong> Create a new expression for the network without losing its core.</li><li><strong>Audience:</strong> 200 members.</li><li><strong>Challenge:</strong> Balance strict corporate guidelines with the need for a unique, inspiring identity.</li>",
+      "<li><strong>Brief:</strong> Create a new expression that reflects the network’s heritage and ambition.</li><li><strong>Audience:</strong> About 200 members.</li><li><strong>Challenge:</strong> Stay within brand guidelines without losing a unique, inspiring feel.</li>",
     c2_tools_title: "Tools & delivery",
-    c2_tools_list: "<li>Color palette & typography</li><li>Graphic elements</li><li>Event materials</li>",
+    c2_tools_list:
+      "<li>Color palette & typography</li><li>Graphic elements & templates</li><li>Event materials & presentations</li>",
     c2_results_title: "Outcome",
     c2_results_list:
-      "<li>Stronger internal pride.</li><li>Identity used for recurring events.</li><li>Successful launch event.</li>",
-    c2_highlight_title: "Strategic color system",
+      "<li>Clearer identity and stronger internal pride.</li><li>Consistent communication at recurring events.</li><li>Successful launch with strong engagement.</li>",
+    c2_highlight_title: "Color palette",
     c2_highlight_body:
-      "The identity is grounded in a palette that aligns with the brand while reflecting the founders' vision.",
+      "The palette connects the brand’s core with the network’s personality, creating a modern and recognizable look.",
     c2_feature1_title: "From vision to visual voice",
     c2_feature1_body:
-      "In close collaboration with the founders, I developed concrete ideas around typography and imagery. The result gave the network tools to communicate in line with the company's rebranding.",
+      "Working closely with the founders, I defined typography, imagery and graphic rules. The result is a clear framework that keeps communication consistent across channels.",
     c2_feature2_title: "Event & execution",
     c2_feature2_body:
-      "A launch event for 200 members brought the identity to life through everything from digital presentations to physical event materials, creating a cohesive and exclusive experience.",
+      "The launch event for 200 members activated the identity across presentations, signage, digital surfaces and print—creating a cohesive and premium experience.",
     c2_outcome_title: "Result & impact",
     c2_outcome_body:
-      "The new identity quickly became a natural part of the company culture. It strengthened internal pride and is now used consistently in ongoing communication and major strategic events.",
+      "The identity is now used continuously in network communications and makes future initiatives easier to plan within a clear visual framework.",
 
     // Case 3
     c3_hero_title: "SEO: Content structure & concept",
@@ -717,15 +883,30 @@ const dict = {
       "By combining a data-driven content strategy with an optimized web experience, we not only increased traffic but clarified Cay's unique position during the year's most important sales period.",
 
     // Case 6
-    c6_hero_title: "Brand Book: Digital guidelines",
-    c6_hero_body:
-      "A selection from the work on a digital brand book. This page will be updated with full case details and visual material.",
-    c6_note_body: "Imagery and materials will be published soon.",
-    c6_note_title: "In progress",
-    c6_note_text:
-      "I'm adding case structure, guidelines, and visual examples. Feel free to reach out if you'd like to see the material already now.",
-    c6_note_list:
-      "<li>Brand platform & tone of voice</li><li>Typography and color system</li><li>Layout and imagery</li>"
+    c6_hero_title: "Akademibokhandeln – Expert Book Picks",
+    c6_hero_body: "Concept and content plan to increase online sales.",
+    c6_mockup_note: "Mockups and visuals will be added here.",
+    c6_intro_title: "Insight & direction",
+    c6_intro_p1:
+      "Using Bokbarometern and Google Trends, we mapped seasonal patterns and saw clear peaks ahead of Christmas and summer reading. That gave us a clear direction for both content and timing. The solution became Expert Book Picks, a new site section where profiles and experts recommend selected books with search‑optimized copy and clear buy links. The goal was to combine inspiration with a fast path to conversion while building organic visibility over time.",
+    c6_intro_p2:
+      "To drive traffic and interest we added a plan for Instagram and newsletters, including format ideas and tests of different profiles and angles to see what performs best. We finished with a measurement plan and KPIs for organic traffic, clicks, engagement, newsletter results, and purchases tied to prioritized titles.",
+    c6_concept_title: "Concept and audience",
+    c6_concept_body:
+      "We developed a data‑driven idea to get more adults to choose Akademibokhandeln when buying books. The work started with a market and competitor analysis and moved into audience insights where we created three personas representing different ways of discovering and buying.",
+    c6_deliver_title: "Concept & content plan",
+    c6_deliver_text: "Concept and content plan to increase online sales.",
+    c6_deliver_list:
+      "<li>Four carefully selected books</li><li>SEO‑adapted copy</li><li>Direct buy links</li>",
+    c6_plan_title: "Plan & measurement",
+    c6_plan_text:
+      "Instagram and newsletter plan with format ideas and tests of different profiles and angles.",
+    c6_plan_list:
+      "<li>Organic traffic</li><li>Clicks</li><li>Engagement</li><li>Newsletter performance</li><li>Purchases tied to prioritized titles</li>",
+    c6_gallery_title: "Visuals",
+    c6_gallery_body: "Mockups and slides from the concept.",
+    c6_gallery_cap_1: "Expert Book Picks – view",
+    c6_gallery_cap_2: "Goal"
   }
 };
 
@@ -743,11 +924,17 @@ function applyLang(lang) {
     if (d[key] !== undefined) el.innerHTML = d[key];
   });
 
+  document.querySelectorAll("[data-i18n-aria]").forEach((el) => {
+    const key = el.getAttribute("data-i18n-aria");
+    if (d[key] !== undefined) el.setAttribute("aria-label", d[key]);
+  });
+
   document.querySelectorAll("[data-cv-link]").forEach((link) => {
     link.setAttribute(
       "href",
       lang === "en" ? "./cv/ava-urden-cv-en.pdf" : "./cv/ava-urden-cv-sv.pdf"
     );
+    link.setAttribute("download", "");
   });
 
   document.querySelectorAll(".lang__btn").forEach((btn) => {
@@ -759,6 +946,7 @@ function applyLang(lang) {
   });
 
   localStorage.setItem("lang", lang);
+  setDataLayerState({ language: lang });
 }
 
 function initFilters() {
@@ -812,13 +1000,19 @@ function initHeader() {
   const header = document.querySelector(".header");
   if (!header) return;
 
-  const onScroll = () => {
-    if (window.scrollY > 10) header.classList.add("header--scrolled");
+  const update = (y) => {
+    if (y > 10) header.classList.add("header--scrolled");
     else header.classList.remove("header--scrolled");
   };
 
-  window.addEventListener("scroll", onScroll);
-  onScroll();
+  if (window.lenis) {
+    window.lenis.on("scroll", ({ scroll }) => update(scroll));
+    update(window.lenis.scroll || 0);
+  } else {
+    const onScroll = () => update(window.scrollY);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+  }
 }
 
 function initSectionObserver() {
@@ -827,10 +1021,16 @@ function initSectionObserver() {
 
   const navLinks = Array.from(document.querySelectorAll(".nav a[href^='#']"));
   const linkMap = new Map();
+  const seenSections = new Set();
   navLinks.forEach((link) => {
     const id = link.getAttribute("href").slice(1);
     if (id) linkMap.set(id, link);
   });
+
+  const getSectionTitle = (section) => {
+    const heading = section.querySelector("h1, h2, h3");
+    return heading ? heading.textContent.trim() : "";
+  };
 
   const setActive = (section) => {
     sections.forEach((s) => s.classList.remove("is-active"));
@@ -844,7 +1044,19 @@ function initSectionObserver() {
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting) setActive(entry.target);
+        if (!entry.isIntersecting) return;
+        setActive(entry.target);
+
+        const id = entry.target.getAttribute("id");
+        if (id && !seenSections.has(id)) {
+          seenSections.add(id);
+          const sectionTitle = getSectionTitle(entry.target);
+          pushDataLayerEvent("view_section", {
+            ...getBaseEventData(),
+            section_name: id,
+            section_title: sectionTitle || undefined
+          });
+        }
       });
     },
     { threshold: 0.35 }
@@ -853,9 +1065,168 @@ function initSectionObserver() {
   sections.forEach((section) => observer.observe(section));
 }
 
+function getHeaderOffset() {
+  const header = document.querySelector(".header");
+  return header ? header.offsetHeight : 0;
+}
+
+function initLenis() {
+  if (typeof Lenis === "undefined") return;
+  if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+  const lenis = new Lenis({
+    lerp: 0.18,
+    wheelMultiplier: 1,
+    infinite: false,
+    gestureOrientation: "vertical",
+    normalizeWheel: false,
+    smoothTouch: false
+  });
+
+  window.lenis = lenis;
+
+  function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
+  requestAnimationFrame(raf);
+
+  document.querySelectorAll("a[href^='#']").forEach((link) => {
+    link.addEventListener("click", (event) => {
+      const href = link.getAttribute("href");
+      if (!href || href === "#" || href === "#top") return;
+      const target = document.querySelector(href);
+      if (!target) return;
+      event.preventDefault();
+      lenis.scrollTo(target, { offset: -getHeaderOffset() });
+    });
+  });
+}
+
+// ------------------------------
+// DATA LAYER TRACKING (GTM/GA4)
+// Events: view_section, nav_click, hero_cases_click, cv_download,
+// case_click, contact_click, language_switch
+// ------------------------------
+function pushDataLayerEvent(name, payload = {}) {
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({ event: name, ...payload });
+}
+
+function setDataLayerState(payload = {}) {
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push(payload);
+}
+
+function getCurrentLanguage() {
+  return (
+    document.documentElement.getAttribute("lang") ||
+    localStorage.getItem("lang") ||
+    "sv"
+  );
+}
+
+function getBaseEventData() {
+  return {
+    page_path: window.location.pathname,
+    page_title: document.title,
+    language: getCurrentLanguage()
+  };
+}
+
+function getEventLabel(el) {
+  const explicit = el.getAttribute("data-track-label");
+  if (explicit) return explicit;
+  return (el.textContent || "").trim();
+}
+
+function initTracking() {
+  const base = getBaseEventData;
+
+  const bindClickTracking = (selector, eventName, buildPayload) => {
+    document.querySelectorAll(selector).forEach((el) => {
+      el.addEventListener("click", () => {
+        const extra = buildPayload ? buildPayload(el) : {};
+        pushDataLayerEvent(eventName, { ...base(), ...extra });
+      });
+    });
+  };
+
+  bindClickTracking(".track-hero_cases_click", "hero_cases_click", (el) => ({
+    label: getEventLabel(el),
+    href: el.getAttribute("href") || undefined
+  }));
+
+  bindClickTracking(".nav a", "nav_click", (link) => ({
+    label: (link.textContent || "").trim(),
+    href: link.getAttribute("href") || undefined
+  }));
+
+  bindClickTracking(".track-cv_download", "cv_download", (link) => ({
+    label: getEventLabel(link),
+    href: link.getAttribute("href") || undefined
+  }));
+
+  bindClickTracking(".case__link", "case_click", (link) => {
+    const title = link.querySelector("h3");
+    return {
+      label: title ? title.textContent.trim() : getEventLabel(link),
+      href: link.getAttribute("href") || undefined
+    };
+  });
+
+  bindClickTracking(".contact-link", "contact_click", (link) => ({
+    label: (link.textContent || "").trim(),
+    href: link.getAttribute("href") || undefined
+  }));
+
+  bindClickTracking(".lang__btn", "language_switch", (btn) => ({
+    language: btn.dataset.lang
+  }));
+}
+
+function initModals() {
+  const openers = document.querySelectorAll("[data-modal-open]");
+  if (!openers.length) return;
+
+  const closeModal = (modal) => {
+    if (!modal) return;
+    modal.classList.remove("is-open");
+    modal.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("modal-open");
+  };
+
+  openers.forEach((btn) => {
+    const targetId = btn.getAttribute("data-modal-open");
+    if (!targetId) return;
+    const modal = document.getElementById(targetId);
+    if (!modal) return;
+
+    btn.addEventListener("click", () => {
+      modal.classList.add("is-open");
+      modal.setAttribute("aria-hidden", "false");
+      document.body.classList.add("modal-open");
+    });
+  });
+
+  document.querySelectorAll("[data-modal-close]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const modal = btn.closest(".privacy-modal");
+      closeModal(modal);
+    });
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key !== "Escape") return;
+    const modal = document.querySelector(".privacy-modal.is-open");
+    closeModal(modal);
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   const storedLang = localStorage.getItem("lang") || "sv";
   applyLang(storedLang);
+  setDataLayerState(getBaseEventData());
 
   document.querySelectorAll(".lang__btn").forEach((btn) => {
     btn.addEventListener("click", () => {
@@ -865,6 +1236,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   initFilters();
   initReveal();
+  initLenis();
   initHeader();
   initSectionObserver();
+  initTracking();
+  initModals();
 });

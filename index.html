@@ -4,6 +4,20 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Ava Urdén | Portfolio</title>
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l !== "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-PGNG2H2P");
+    </script>
+    <!-- End Google Tag Manager -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -11,17 +25,31 @@
       href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
     <link rel="stylesheet" href="./style.css" />
   </head>
 
   <body class="is-landing">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-PGNG2H2P"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <header class="header">
       <div class="container header__inner">
         <a class="logo" href="#top" data-i18n="logo_text">A.U. Portfolio</a>
 
         <nav class="nav">
           <a href="#about" data-i18n="nav_about">Om mig</a>
-          <a href="#cases" data-i18n="nav_cases">Cases</a>
+          <a href="#cases" data-i18n="nav_cases">Utvalda projekt</a>
           <a href="#skills" data-i18n="nav_skills">Färdigheter</a>
           <a href="#contact" data-i18n="nav_contact">Kontakt</a>
         </nav>
@@ -38,19 +66,32 @@
         <div class="hero__overlay"></div>
         <div class="container hero__grid">
           <div class="hero__left reveal">
-            <h1 class="hero__title" data-i18n="cover_title">AVA URDÉN</h1>
+            <h1 class="hero__title" data-i18n-html="cover_title">
+              <span class="hero__name hero__name--first">AVA</span>
+              <span class="hero__name hero__name--last">URDÉN</span>
+            </h1>
             <div class="hero__role" data-i18n="hero_role">Growth Marketing</div>
             <div class="hero__school" data-i18n="hero_school">@Berghs School of Communication</div>
 
             <div class="hero__cta">
-              <a class="btn btn--light" href="#cases" data-i18n="cta_cases">Se cases</a>
-              <a class="btn btn--light" data-cv-link href="./cv/ava-urden-cv-sv.pdf" download data-i18n="cta_cv">
-                Ladda ner CV
+              <a
+                class="btn btn--outline track-hero_cases_click"
+                href="#cases"
+                data-i18n="cta_cases"
+                >Se tidigare projekt</a
+              >
+              <a
+                class="btn btn--outline track-cv_download"
+                id="cv-download-hero"
+                data-cv-link
+                href="./cv/ava-urden-cv-sv.pdf"
+                download
+                data-i18n="cta_cv"
+              >
+                Ladda ner mitt CV
               </a>
             </div>
-          </div>
 
-          <div class="hero__right reveal">
             <div class="hero__welcome" data-i18n="hero_welcome">Välkommen till min portfolio</div>
           </div>
         </div>
@@ -58,31 +99,31 @@
 
       <section id="about" class="section-block about">
         <div class="container">
-          <div class="about__frame reveal">
+          <div class="about__frame">
             <div class="about__grid">
-              <div>
+              <div class="reveal">
                 <h2 class="about__title" data-i18n="about_title">Om mig</h2>
                 <p data-i18n="about_body_1">
-                  Jag är Ava — driven, nyfiken och målinriktad. Jag gillar att förstå saker på djupet, göra uppdrag ordentligt och se hur ett arbete leder till resultat. Jag har alltid haft en kreativ drivkraft, men också en stark nyfikenhet på varför saker fungerar som de gör och hur de kan förbättras.
+                  Det är jag som är Ava, som person är jag driven, nyfiken och målinriktad. Jag gillar att förstå saker på djupet, göra uppdrag ordentligt och se hur ett arbete leder till resultat. Jag har alltid haft en kreativ drivkraft, men också en stark nyfikenhet på varför saker fungerar som de gör och hur de kan förbättras.
                 </p>
               </div>
 
-              <div class="about__image">
-                <img src="./img/ava-urden.png" alt="Ava Urdén porträtt" />
+              <div class="about__image reveal">
+                <img src="./img/ava-urden-900.jpg" alt="Ava Urdén porträtt" loading="lazy" decoding="async" />
               </div>
 
-              <div>
+              <div class="reveal">
                 <p data-i18n="about_body_2">
-                  Marknadsföring blev snabbt ett område jag drogs till eftersom det kombinerar båda sidor av mig. Jag gillar att ta en idé och göra den konkret, testa, mäta och lära mig längs vägen. För mig handlar det om att skapa något som inte bara ser bra ut, utan som faktiskt fungerar och ger effekt.
+                  Marknadsföring har alltid varit ett stort intresse för mig eftersom det kombinerar båda sidor av mig. Jag gillar att ta en idé och göra den konkret, testa, mäta och lära mig längs vägen. För mig handlar det om att skapa något som inte bara ser bra ut, utan som faktiskt fungerar och ger effekt.
                 </p>
                 <p data-i18n="about_body_3">
                   Jag trivs när jag får ta ansvar och driva saker framåt. Jag gillar att samarbeta med andra som också har en drivkraft, och jag motiveras av att utvecklas, lära mig nytt och hela tiden hitta bättre sätt att göra det jag gör.
                 </p>
-                <div class="about__note" data-i18n="about_note">
-                  Fortsätt gärna scrolla för mer information om mina cases och färdigheter.
-                </div>
               </div>
             </div>
+            <a class="about__note reveal" href="#cases" data-i18n="about_note">
+              Fortsätt gärna scrolla för att se mer om mina erfarenheter och färdigheter.
+            </a>
           </div>
         </div>
       </section>
@@ -91,7 +132,7 @@
         <div class="container">
           <div class="section__top">
             <div class="section-header-group reveal">
-              <h2 class="h-display" data-i18n="cases_title">Utvalda cases</h2>
+              <h2 class="h-display" data-i18n="cases_title">Utvalda projekt</h2>
               <p class="section-intro" data-i18n="cases_intro">
                 Ett urval av projekt där strategi, kreativitet och data möts.
               </p>
@@ -102,84 +143,93 @@
           <div class="grid grid--3" id="casesGrid">
             <div class="case reveal" data-tags="data, strategy">
               <a href="case1.html" class="case__link">
+                <div class="case__img">
+                  <img
+                    src="./img/case-uys/underunderunder-1200.jpg"
+                    alt="Under Your Skin"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
                 <div class="case__body">
                   <h3 data-i18n="case1_title">Under Your Skin</h3>
                 </div>
+<<<<<<< HEAD
                 <div class="case__img">
                   <img src="./img/case-uys/banneruyss.png" alt="Under Your Skin" />
                 </div>
+=======
+>>>>>>> 6c9b706d17782d20fdb678ceabd24273bf84a6c5
                 <div class="case__summary">
                   <p class="muted" data-i18n="case1_sum">Optimering av kundresan.</p>
+                  <span class="case__more" data-i18n="case_read_more">Läs mer →</span>
                 </div>
               </a>
             </div>
 
             <div class="case reveal" data-tags="creative, strategy">
               <a href="case2.html" class="case__link">
+                <div class="case__img">
+                  <img src="./img/case-ww/wwomslag.svg" alt="Visual Identity" loading="lazy" decoding="async" />
+                </div>
                 <div class="case__body">
                   <h3 data-i18n="case2_title">Ny visuell identitet</h3>
                 </div>
-                <div class="case__img">
-                  <img src="./img/case-ww/wwdator.png" alt="Visual Identity" />
-                </div>
                 <div class="case__summary">
                   <p class="muted" data-i18n="case2_sum">Konceptutveckling.</p>
-                </div>
-              </a>
-            </div>
-
-            <div class="case reveal" data-tags="data, strategy">
-              <a href="case3.html" class="case__link">
-                <div class="case__body">
-                  <h3 data-i18n="case3_title">SEO: Content-struktur</h3>
-                </div>
-                <div class="case__img">
-                  <img src="./img/case-ak.b/akbanner.png" alt="SEO" />
-                </div>
-                <div class="case__summary">
-                  <p class="muted" data-i18n="case3_sum">Datadriven tillväxt.</p>
+                  <span class="case__more" data-i18n="case_read_more">Läs mer →</span>
                 </div>
               </a>
             </div>
 
             <div class="case reveal" data-tags="data">
               <a href="case4.html" class="case__link">
+                <div class="case__img">
+                  <img src="./img/case-suie/nysuiebanner-1200.jpg" alt="SUIE" loading="lazy" decoding="async" />
+                </div>
                 <div class="case__body">
                   <h3 data-i18n="case4_title">E-handel: CRO</h3>
                 </div>
-                <div class="case__img">
-                  <img src="./img/case-suie/suie.png" alt="SUIE" />
-                </div>
                 <div class="case__summary">
                   <p class="muted" data-i18n="case4_sum">A/B-testning och analys.</p>
+                  <span class="case__more" data-i18n="case_read_more">Läs mer →</span>
                 </div>
               </a>
             </div>
 
             <div class="case reveal" data-tags="creative">
               <a href="case5.html" class="case__link">
+                <div class="case__img">
+                  <img src="./img/case-cay/caybanner-1200.jpg" alt="Cay Collective" loading="lazy" decoding="async" />
+                </div>
                 <div class="case__body">
                   <h3 data-i18n="case5_title">Giftguide för Cay Collective</h3>
                 </div>
-                <div class="case__img">
-                  <img src="./img/case-cay/caybanner.png" alt="Cay Collective" />
-                </div>
                 <div class="case__summary">
                   <p class="muted" data-i18n="case5_sum">Tillväxtstrategi.</p>
+                  <span class="case__more" data-i18n="case_read_more">Läs mer →</span>
                 </div>
               </a>
             </div>
 
             <div class="case reveal" data-tags="creative, strategy">
               <a href="case-brandbook.html" class="case__link">
-                <div class="case__body">
-                  <h3 data-i18n="case6_title">Brand Book</h3>
+                <div class="case__img">
+                  <img
+                    src="./img/case-akademibokhandeln/omslag.svg"
+                    alt="Akademibokhandeln"
+                    loading="lazy"
+                    decoding="async"
+                  />
                 </div>
-                <div class="case__img" style="background:#f4f4f4; display:flex; align-items:center; justify-content:center;">
-                  <span style="color:#999; font-size:0.9rem;" data-i18n="case6_image_note">Bild kommer</span>
+                <div class="case__body">
+                  <h3 data-i18n="case6_title">Akademibokhandeln</h3>
                 </div>
                 <div class="case__summary">
-                  <p class="muted" data-i18n="case6_sum">Digital riktlinje.</p>
+                  <p class="muted" data-i18n="case6_sum">
+                    Experternas boktips: koncept & contentplan med SEO‑text, profilerade boktips och tydliga köplänkar.
+                  </p>
+                  <span class="case__more" data-i18n="case_read_more">Läs mer →</span>
                 </div>
               </a>
             </div>
@@ -187,13 +237,103 @@
         </div>
       </section>
 
+      <section id="mini" class="section-block mini-lab">
+        <div class="container">
+          <div class="section__top">
+            <div class="section-header-group reveal">
+              <h2 class="h-display" data-i18n="mini_title">Mina små projekt: API:er & plugins</h2>
+              <p class="section-intro" data-i18n="mini_intro">
+                Growth-tech jag bygger just nu – små API:er, plugins och automationer som gör marknadsföring smartare.
+              </p>
+            </div>
+          </div>
+
+          <div class="mini-grid">
+            <article class="mini-card reveal">
+              <a class="mini-card__media-link" href="plugin-utm-builder.html">
+                <div class="mini-card__media mini-card__media--tabless">
+                  <img
+                    class="mini-card__image"
+                    src="./downloads/tablessmock.png"
+                    alt="Tabless Library preview"
+                    loading="lazy"
+                  />
+                  <span class="mini-card__media-label" data-i18n="mini_item_1_media">Plugin</span>
+                </div>
+              </a>
+              <div class="mini-card__body">
+                <h3 data-i18n="mini_item_1_title">Tabless Library</h3>
+                <p data-i18n="mini_item_1_desc">
+                  Spara och organisera dina öppna flikar i snygga samlingar så att du hittar dem senare.
+                </p>
+                <div class="mini-card__cta">
+                  <a class="button-wrap" href="plugin-utm-builder.html">
+                    <span class="button-shadow" aria-hidden="true"></span>
+                    <span class="mini-button">
+                      <span class="mini-button__label" data-i18n="mini_item_1_more">Läs mer</span>
+                      <span class="material-symbols-outlined" aria-hidden="true">arrow_right_alt</span>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="mini-card reveal" style="--delay: 0.05s;">
+              <a class="mini-card__media-link" href="growth-radar.html">
+                <div class="mini-card__media">
+                  <span class="mini-card__media-label" data-i18n="mini_item_2_media">API</span>
+                </div>
+              </a>
+              <div class="mini-card__body">
+                <h3 data-i18n="mini_item_2_title">Growth Signals API</h3>
+                <p data-i18n="mini_item_2_desc">
+                  Plats för API-projekt och endpoints jag bygger för att samla in och tolka tillväxtdata.
+                </p>
+                <div class="mini-card__cta">
+                  <a class="button-wrap" href="growth-radar.html">
+                    <span class="button-shadow" aria-hidden="true"></span>
+                    <span class="mini-button">
+                      <span class="mini-button__label" data-i18n="mini_item_2_cta">Läs mer</span>
+                      <span class="material-symbols-outlined" aria-hidden="true">arrow_right_alt</span>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="mini-card reveal" style="--delay: 0.1s;">
+              <div class="mini-card__media">
+                <span class="mini-card__media-label" data-i18n="mini_item_3_media">Plugin</span>
+              </div>
+              <div class="mini-card__body">
+                <h3 data-i18n="mini_item_3_title">Automation Toolkit</h3>
+                <p data-i18n="mini_item_3_desc">
+                  Små plugins och scripts som kapar manuella steg i research, rapportering och kampanjarbete.
+                </p>
+                <div class="mini-card__cta">
+                  <span class="button-wrap is-disabled">
+                    <span class="button-shadow" aria-hidden="true"></span>
+                    <span class="mini-button">
+                      <span class="mini-button__label" data-i18n="mini_item_3_cta">Kommer snart</span>
+                      <span class="material-symbols-outlined" aria-hidden="true">arrow_right_alt</span>
+                    </span>
+                  </span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
       <section id="skills" class="section-block skills-section">
         <div class="container">
-          <div class="skills-intro reveal">
-            <h2 class="h-display" data-i18n="skills_main_title">Färdigheter & verktyg</h2>
-            <p class="section-intro" data-i18n="skills_intro">
-              Där strategi möter genomförande – från idé till mätbar effekt.
-            </p>
+          <div class="section__top skills-intro reveal">
+            <div class="section-header-group">
+              <h2 class="h-display" data-i18n="skills_main_title">Färdigheter & verktyg</h2>
+              <p class="section-intro" data-i18n="skills_intro">
+                Där strategi möter genomförande – från idé till mätbar effekt.
+              </p>
+            </div>
           </div>
 
           <div class="skills-list">
@@ -204,13 +344,17 @@
               </div>
               <div class="skill-body">
                 <p class="skill-desc" data-i18n="cat1_desc">
-                  Bygger varumärke och engagemang med content anpassat efter kanal.
+                  Skapar innehåll som både bygger varumärke och driver handling. Jag tar fram koncept,
+                  tonalitet och format som passar kanal, och säkerställer att content kan produceras effektivt
+                  och återanvändas smart över tid.
                 </p>
+                <p class="skill-label" data-i18n="skills_list_label">Jag jobbar med:</p>
                 <ul class="bullet-list" data-i18n-html="cat1_list" id="list1">
-                  <li>Copy, hooks och content för sociala medier</li>
-                  <li>Contentplanering och publiceringsplan</li>
-                  <li>Tonalitet och riktlinjer</li>
-                  <li>Produktion av foto och video</li>
+                  <li>Copy, hooks och tydliga budskap för sociala medier (organiskt + paid)</li>
+                  <li>Contentplanering: publiceringskalender, teman, format och produktionstakt</li>
+                  <li>Tonalitet, guideliner och brand voice så allt hänger ihop</li>
+                  <li>Foto/video för kortformat (Reels/TikTok) + enklare redigering och anpassning</li>
+                  <li>UGC-tänk: content som känns äkta men ändå konverterar</li>
                 </ul>
                 <div class="tool-chips">
                   <span class="tool-label" data-i18n="tools_label">Verktyg:</span>
@@ -226,13 +370,17 @@
               </div>
               <div class="skill-body">
                 <p class="skill-desc" data-i18n="cat2_desc">
-                  Tar idéer till tydlig struktur som går att genomföra.
+                  Omsätter idéer till struktur som går att genomföra. Jag gillar när strategi blir konkret:
+                  tydliga val (målgrupp, budskap, kanal, KPI) och en plan som gör det lätt att producera,
+                  testa och följa upp.
                 </p>
+                <p class="skill-label" data-i18n="skills_list_label">Jag jobbar med:</p>
                 <ul class="bullet-list" data-i18n-html="cat2_list" id="list2">
-                  <li>Konceptutveckling för kampanjer</li>
-                  <li>Briefs: målgrupp, budskap och KPI</li>
-                  <li>Presentationer och pitchdecks</li>
-                  <li>Kundkommunikation (CRM)</li>
+                  <li>Konceptutveckling för kampanjer, erbjudanden och medlemskommunikation</li>
+                  <li>Briefs: mål, målgrupp/segment, budskap, kanalval och KPI:er</li>
+                  <li>Kundresa och CRM-tänk: vad behöver kunden nu och vilket nästa steg vill vi skapa?</li>
+                  <li>Presentationer/pitchdecks som säljer idéer med logik, data och tydlig payoff</li>
+                  <li>Samarbete och projektstruktur så det faktiskt blir gjort</li>
                 </ul>
                 <div class="tool-chips">
                   <span class="tool-label" data-i18n="tools_label">Verktyg:</span>
@@ -248,17 +396,21 @@
               </div>
               <div class="skill-body">
                 <p class="skill-desc" data-i18n="cat3_desc">
-                  Datadrivet arbete som driver trafik och konvertering.
+                  Datadrivet arbete som hittar friktion, testar hypoteser och skapar effekt. Jag använder data
+                  för att förstå beteenden, prioritera rätt och förbättra kundresan stegvis - med fokus på
+                  konvertering, AOV och retention.
                 </p>
+                <p class="skill-label" data-i18n="skills_list_label">Jag jobbar med:</p>
                 <ul class="bullet-list" data-i18n-html="cat3_list" id="list3">
-                  <li>Performance marketing setup</li>
-                  <li>GA4 analys och funnel-tracking</li>
-                  <li>CRO: hypotes och A/B-test</li>
-                  <li>SEO och teknisk mätplan</li>
+                  <li>GA4-analys: funnels, drop-offs, beteenden och segment</li>
+                  <li>CRO: hypoteser, prioritering, testplan och uppföljning av resultat och lärdomar</li>
+                  <li>Performance marketing-grunder: setup, spårning och iterering på kreativet</li>
+                  <li>Dashboards och uppföljning: göra siffror enkla att agera på</li>
+                  <li>SEO och teknik på en praktisk nivå: vad som påverkar synlighet + mätplan/spårning</li>
                 </ul>
                 <div class="tool-chips">
                   <span class="tool-label" data-i18n="tools_label">Verktyg:</span>
-                  <span>GA4</span> <span>GTM</span> <span>Looker</span> <span>Ads</span> <span>Excel</span>
+                  <span>GA4</span> <span>GTM</span> <span>Looker Studio</span> <span>Ads Manager</span> <span>Excel</span>
                 </div>
               </div>
             </div>
@@ -274,7 +426,14 @@
               Nyfiken på att veta mer eller diskutera ett projekt?
               Hör av dig så tar vi en kaffe!
             </p>
-            <a href="./cv/ava-urden-cv-sv.pdf" download class="btn btn--white" data-cv-link data-i18n="cta_cv">
+            <a
+              href="./cv/ava-urden-cv-sv.pdf"
+              download
+              class="btn btn--white track-cv_download"
+              id="cv-download-footer"
+              data-cv-link
+              data-i18n="cta_cv"
+            >
               Ladda ner CV
             </a>
           </div>
