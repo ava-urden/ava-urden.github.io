@@ -46,7 +46,7 @@ const dict = {
 
     mini_title: "Experiment & prototyper",
     mini_intro:
-      "Growth-tech jag bygger just nu – små API:er, plugins och automationer som gör marknadsföring smartare.",
+      "Mina sidoprojekt jag gjort för att lära, testa och förbättra.",
     mini_item_1_media: "Plugin",
     mini_item_1_tag: "Plugin",
     mini_item_1_status: "Gratis",
