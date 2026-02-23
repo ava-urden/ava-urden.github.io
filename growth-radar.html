@@ -1063,16 +1063,6 @@
                 >
                   Refresh
                 </button>
-                <div class="search">
-                  <label class="sr-only" for="searchInput" data-i18n="search_label">Search signals</label>
-                  <input
-                    id="searchInput"
-                    type="search"
-                    placeholder="Search signals..."
-                    autocomplete="off"
-                    data-i18n-placeholder="search_placeholder"
-                  />
-                </div>
               </div>
             </div>
           </div>
@@ -1090,15 +1080,29 @@
               </div>
               <div class="card__body">
                 <p class="muted" data-i18n="resource_searchapi_google_desc">API-endpoint för Google-sök.</p>
-                <a
-                  class="btn btn--ghost btn--small"
-                  href="https://www.searchapi.io/api/v1/search?engine=google"
-                  target="_blank"
-                  rel="noopener"
-                  data-i18n="open"
-                >
-                  Öppna
-                </a>
+                <div class="controls-row">
+                  <div class="search">
+                    <label class="sr-only" for="searchapiGoogleQuery" data-i18n="resource_query_label">Sökterm</label>
+                    <input
+                      id="searchapiGoogleQuery"
+                      type="search"
+                      autocomplete="off"
+                      value="ai overviews"
+                      data-i18n-placeholder="resource_query_placeholder"
+                      placeholder="Skriv en sökfråga..."
+                    />
+                  </div>
+                  <button
+                    class="btn btn--ghost btn--small"
+                    type="button"
+                    data-action="searchapi-google"
+                    data-i18n="resource_fetch"
+                  >
+                    Hämta
+                  </button>
+                </div>
+                <div class="muted" id="searchapiGoogleNote" style="margin-top: 10px;"></div>
+                <ul class="list" id="searchapiGoogleList"></ul>
               </div>
             </article>
 
@@ -1114,15 +1118,29 @@
               </div>
               <div class="card__body">
                 <p class="muted" data-i18n="resource_searchapi_tiktok_desc">API-endpoint för TikTok Ads Library.</p>
-                <a
-                  class="btn btn--ghost btn--small"
-                  href="https://www.searchapi.io/api/v1/search?engine=tiktok_ads_library"
-                  target="_blank"
-                  rel="noopener"
-                  data-i18n="open"
-                >
-                  Öppna
-                </a>
+                <div class="controls-row">
+                  <div class="search">
+                    <label class="sr-only" for="searchapiTiktokQuery" data-i18n="resource_query_label">Sökterm</label>
+                    <input
+                      id="searchapiTiktokQuery"
+                      type="search"
+                      autocomplete="off"
+                      value="skincare"
+                      data-i18n-placeholder="resource_query_placeholder"
+                      placeholder="Skriv en sökfråga..."
+                    />
+                  </div>
+                  <button
+                    class="btn btn--ghost btn--small"
+                    type="button"
+                    data-action="searchapi-tiktok"
+                    data-i18n="resource_fetch"
+                  >
+                    Hämta
+                  </button>
+                </div>
+                <div class="muted" id="searchapiTiktokNote" style="margin-top: 10px;"></div>
+                <ul class="list" id="searchapiTiktokList"></ul>
               </div>
             </article>
 
@@ -1138,15 +1156,29 @@
               </div>
               <div class="card__body">
                 <p class="muted" data-i18n="resource_searchapi_trends_desc">API-endpoint för Google Trends.</p>
-                <a
-                  class="btn btn--ghost btn--small"
-                  href="https://www.searchapi.io/api/v1/search?engine=google_trends"
-                  target="_blank"
-                  rel="noopener"
-                  data-i18n="open"
-                >
-                  Öppna
-                </a>
+                <div class="controls-row">
+                  <div class="search">
+                    <label class="sr-only" for="searchapiTrendsQuery" data-i18n="resource_query_label">Sökterm</label>
+                    <input
+                      id="searchapiTrendsQuery"
+                      type="search"
+                      autocomplete="off"
+                      value="ai tools"
+                      data-i18n-placeholder="resource_query_placeholder"
+                      placeholder="Skriv en sökfråga..."
+                    />
+                  </div>
+                  <button
+                    class="btn btn--ghost btn--small"
+                    type="button"
+                    data-action="searchapi-trends"
+                    data-i18n="resource_fetch"
+                  >
+                    Hämta
+                  </button>
+                </div>
+                <div class="muted" id="searchapiTrendsNote" style="margin-top: 10px;"></div>
+                <ul class="list" id="searchapiTrendsList"></ul>
               </div>
             </article>
 
@@ -1162,15 +1194,18 @@
               </div>
               <div class="card__body">
                 <p class="muted" data-i18n="resource_producthunt_desc">Dokumentation för Product Hunt API.</p>
-                <a
-                  class="btn btn--ghost btn--small"
-                  href="https://api.producthunt.com/v2/docs"
-                  target="_blank"
-                  rel="noopener"
-                  data-i18n="open"
-                >
-                  Öppna
-                </a>
+                <div class="controls-row">
+                  <button
+                    class="btn btn--ghost btn--small"
+                    type="button"
+                    data-action="producthunt"
+                    data-i18n="resource_fetch"
+                  >
+                    Hämta
+                  </button>
+                </div>
+                <div class="muted" id="producthuntNote" style="margin-top: 10px;"></div>
+                <ul class="list" id="producthuntList"></ul>
               </div>
             </article>
 
@@ -1186,15 +1221,29 @@
               </div>
               <div class="card__body">
                 <p class="muted" data-i18n="resource_reddit_desc">Dokumentation för Reddit API.</p>
-                <a
-                  class="btn btn--ghost btn--small"
-                  href="https://www.reddit.com/dev/api/"
-                  target="_blank"
-                  rel="noopener"
-                  data-i18n="open"
-                >
-                  Öppna
-                </a>
+                <div class="controls-row">
+                  <div class="search">
+                    <label class="sr-only" for="redditSubreddit" data-i18n="resource_subreddit_label">Subreddit</label>
+                    <input
+                      id="redditSubreddit"
+                      type="search"
+                      autocomplete="off"
+                      value="marketing"
+                      data-i18n-placeholder="resource_subreddit_placeholder"
+                      placeholder="t.ex. marketing"
+                    />
+                  </div>
+                  <button
+                    class="btn btn--ghost btn--small"
+                    type="button"
+                    data-action="reddit"
+                    data-i18n="resource_fetch"
+                  >
+                    Hämta
+                  </button>
+                </div>
+                <div class="muted" id="redditNote" style="margin-top: 10px;"></div>
+                <ul class="list" id="redditList"></ul>
               </div>
             </article>
           </div>
@@ -1236,6 +1285,44 @@
     </main>
 
     <script>
+      const state = {
+        lang: "sv",
+        data: {
+          google: [],
+          tiktok: [],
+          trends: [],
+          producthunt: [],
+          reddit: []
+        }
+      };
+
+      const endpoints = {
+        google: "/api/searchapi-google",
+        tiktok: "/api/searchapi-tiktok",
+        trends: "/api/searchapi-trends",
+        producthunt: "/api/producthunt",
+        reddit: "/api/reddit"
+      };
+
+      const elements = {
+        updatedAt: document.getElementById("updatedAt"),
+        refreshBtn: document.getElementById("refreshBtn"),
+        searchapiGoogleQuery: document.getElementById("searchapiGoogleQuery"),
+        searchapiGoogleList: document.getElementById("searchapiGoogleList"),
+        searchapiGoogleNote: document.getElementById("searchapiGoogleNote"),
+        searchapiTiktokQuery: document.getElementById("searchapiTiktokQuery"),
+        searchapiTiktokList: document.getElementById("searchapiTiktokList"),
+        searchapiTiktokNote: document.getElementById("searchapiTiktokNote"),
+        searchapiTrendsQuery: document.getElementById("searchapiTrendsQuery"),
+        searchapiTrendsList: document.getElementById("searchapiTrendsList"),
+        searchapiTrendsNote: document.getElementById("searchapiTrendsNote"),
+        producthuntList: document.getElementById("producthuntList"),
+        producthuntNote: document.getElementById("producthuntNote"),
+        redditSubreddit: document.getElementById("redditSubreddit"),
+        redditList: document.getElementById("redditList"),
+        redditNote: document.getElementById("redditNote")
+      };
+
       const langDict = {
         sv: {
           logo_text: "A.U. Portfolio",
@@ -1250,11 +1337,18 @@
           updated_label: "Uppdaterad",
           refresh: "Uppdatera",
           refresh_aria: "Uppdatera data",
-          search_label: "Sök signaler",
-          search_placeholder: "Sök signaler...",
           open: "Öppna",
           resource_tag_endpoint: "Endpoint",
           resource_tag_docs: "Docs",
+          resource_query_label: "Sökterm",
+          resource_query_placeholder: "Skriv en sökfråga...",
+          resource_subreddit_label: "Subreddit",
+          resource_subreddit_placeholder: "t.ex. marketing",
+          resource_fetch: "Hämta",
+          resource_loading: "Laddar...",
+          resource_empty: "Inga resultat.",
+          resource_error: "Kunde inte hämta data just nu.",
+          resource_missing_key: "API-nyckel saknas i servern.",
           resource_searchapi_google_title: "SearchAPI – Google",
           resource_searchapi_google_desc: "API-endpoint för Google-sök.",
           resource_searchapi_tiktok_title: "SearchAPI – TikTok Ads Library",
@@ -1286,11 +1380,18 @@
           updated_label: "Updated",
           refresh: "Refresh",
           refresh_aria: "Refresh data",
-          search_label: "Search signals",
-          search_placeholder: "Search signals...",
           open: "Open",
           resource_tag_endpoint: "Endpoint",
           resource_tag_docs: "Docs",
+          resource_query_label: "Search term",
+          resource_query_placeholder: "Type a query...",
+          resource_subreddit_label: "Subreddit",
+          resource_subreddit_placeholder: "e.g. marketing",
+          resource_fetch: "Fetch",
+          resource_loading: "Loading...",
+          resource_empty: "No results.",
+          resource_error: "Could not load data right now.",
+          resource_missing_key: "Missing API key on the server.",
           resource_searchapi_google_title: "SearchAPI – Google",
           resource_searchapi_google_desc: "API endpoint for Google search.",
           resource_searchapi_tiktok_title: "SearchAPI – TikTok Ads Library",
@@ -1302,7 +1403,7 @@
           resource_reddit_title: "Reddit API",
           resource_reddit_desc: "Reddit API documentation.",
           contact_title: "Contact",
-          footer_text: "Curious to learn more or discuss a project? Reach out and let’s grab a coffee.",
+          footer_text: "Curious to learn more or discuss a project? Reach out and let's grab a coffee.",
           cta_cv: "Download CV",
           contact_email: "Email",
           contact_mobile: "Phone",
@@ -1310,8 +1411,14 @@
         }
       };
 
+      function t(key) {
+        const dict = langDict[state.lang] || langDict.sv;
+        return dict[key] || langDict.sv[key] || "";
+      }
+
       function applyLang(lang) {
         const dict = langDict[lang] || langDict.sv;
+        state.lang = lang;
         document.documentElement.lang = lang;
         document.querySelectorAll("[data-i18n]").forEach((el) => {
           const key = el.dataset.i18n;
@@ -1332,18 +1439,123 @@
       }
 
       function updateTimestamp() {
-        const updatedAt = document.getElementById("updatedAt");
-        if (!updatedAt) return;
+        if (!elements.updatedAt) return;
         const now = new Date();
-        const lang = document.documentElement.lang || "sv";
-        const locale = lang === "en" ? "en-US" : "sv-SE";
-        updatedAt.textContent = now.toLocaleString(locale, {
+        const locale = state.lang === "en" ? "en-US" : "sv-SE";
+        elements.updatedAt.textContent = now.toLocaleString(locale, {
           year: "numeric",
           month: "short",
           day: "numeric",
           hour: "2-digit",
           minute: "2-digit"
         });
+      }
+
+      function escapeHTML(str = "") {
+        return str.replace(/[&<>"']/g, (match) => {
+          const map = {
+            "&": "&amp;",
+            "<": "&lt;",
+            ">": "&gt;",
+            """: "&quot;",
+            "'": "&#39;"
+          };
+          return map[match] || match;
+        });
+      }
+
+      function renderSkeleton(listEl, count = 6) {
+        if (!listEl) return;
+        listEl.innerHTML = Array.from({ length: count })
+          .map(() => '<li class="list__item skeleton"><div class="skeleton__bar"></div></li>')
+          .join("");
+      }
+
+      function renderList(listEl, items) {
+        if (!listEl) return;
+        if (!items || !items.length) {
+          listEl.innerHTML = `<li class="list__empty">${t("resource_empty")}</li>`;
+          return;
+        }
+
+        listEl.innerHTML = items
+          .map((item, index) => {
+            const title = escapeHTML(item.title || "Untitled");
+            const meta = escapeHTML(item.meta || "");
+            const url = item.url || "#";
+            const link =
+              url && url !== "#"
+                ? `<a class="list__link" href="${url}" target="_blank" rel="noopener">${t("open")}</a>`
+                : `<span class="list__link">${t("open")}</span>`;
+            return `
+              <li class="list__item">
+                <span class="rank">${String(index + 1).padStart(2, "0")}</span>
+                <div class="list__text">
+                  <span class="list__title">${title}</span>
+                  <span class="list__meta">${meta}</span>
+                </div>
+                ${link}
+              </li>
+            `;
+          })
+          .join("");
+      }
+
+      function setNote(noteEl, message) {
+        if (!noteEl) return;
+        noteEl.textContent = message || "";
+      }
+
+      async function fetchResults(url) {
+        const response = await fetch(url);
+        const data = await response.json().catch(() => ({}));
+        if (!response.ok) {
+          throw new Error(data.error || "error");
+        }
+        return data.results || [];
+      }
+
+      function handleError(noteEl, listEl, error) {
+        const message = String(error?.message || "");
+        if (message.toLowerCase().includes("missing")) {
+          setNote(noteEl, t("resource_missing_key"));
+        } else {
+          setNote(noteEl, t("resource_error"));
+        }
+        renderList(listEl, []);
+      }
+
+      async function loadSearchApi(type, query, noteEl, listEl) {
+        setNote(noteEl, "");
+        renderSkeleton(listEl, 6);
+        try {
+          const results = await fetchResults(`${endpoints[type]}?q=${encodeURIComponent(query)}`);
+          renderList(listEl, results);
+        } catch (err) {
+          handleError(noteEl, listEl, err);
+        }
+      }
+
+      async function loadProductHunt() {
+        setNote(elements.producthuntNote, "");
+        renderSkeleton(elements.producthuntList, 6);
+        try {
+          const results = await fetchResults(endpoints.producthunt);
+          renderList(elements.producthuntList, results);
+        } catch (err) {
+          handleError(elements.producthuntNote, elements.producthuntList, err);
+        }
+      }
+
+      async function loadReddit(subreddit) {
+        setNote(elements.redditNote, "");
+        renderSkeleton(elements.redditList, 6);
+        try {
+          const results = await fetchResults(`${endpoints.reddit}?sub=${encodeURIComponent(subreddit)}`);
+          renderList(elements.redditList, results);
+        } catch (err) {
+          handleError(elements.redditNote, elements.redditList, err);
+        }
       }
 
       function attachEvents() {
@@ -1358,9 +1570,36 @@
           });
         });
 
-        const refreshBtn = document.getElementById("refreshBtn");
-        if (refreshBtn) {
-          refreshBtn.addEventListener("click", updateTimestamp);
+        document.querySelectorAll("[data-action]").forEach((btn) => {
+          btn.addEventListener("click", () => {
+            const action = btn.dataset.action;
+            if (action === "searchapi-google") {
+              loadSearchApi("google", elements.searchapiGoogleQuery.value, elements.searchapiGoogleNote, elements.searchapiGoogleList);
+            }
+            if (action === "searchapi-tiktok") {
+              loadSearchApi("tiktok", elements.searchapiTiktokQuery.value, elements.searchapiTiktokNote, elements.searchapiTiktokList);
+            }
+            if (action === "searchapi-trends") {
+              loadSearchApi("trends", elements.searchapiTrendsQuery.value, elements.searchapiTrendsNote, elements.searchapiTrendsList);
+            }
+            if (action === "producthunt") {
+              loadProductHunt();
+            }
+            if (action === "reddit") {
+              loadReddit(elements.redditSubreddit.value || "marketing");
+            }
+          });
+        });
+
+        if (elements.refreshBtn) {
+          elements.refreshBtn.addEventListener("click", () => {
+            updateTimestamp();
+            loadSearchApi("google", elements.searchapiGoogleQuery.value, elements.searchapiGoogleNote, elements.searchapiGoogleList);
+            loadSearchApi("tiktok", elements.searchapiTiktokQuery.value, elements.searchapiTiktokNote, elements.searchapiTiktokList);
+            loadSearchApi("trends", elements.searchapiTrendsQuery.value, elements.searchapiTrendsNote, elements.searchapiTrendsList);
+            loadProductHunt();
+            loadReddit(elements.redditSubreddit.value || "marketing");
+          });
         }
 
         window.addEventListener("scroll", () => {
