@@ -16,13 +16,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet" />
     <style>
       :root {
-        --green:#14471d;
-        --green2:#0f3817;
-        --cream:#ffffff;
-        --coral:#ef7ea1;
-        --ink:#0b2210;
-        --line: rgba(243,234,212,0.18);
-        --shadow: 0 12px 32px rgba(0,0,0,0.35);
+        --green: #0f172a;
+        --green2: #0b1220;
+        --cream: #e5e7eb;
+        --coral: #3b82f6;
+        --ink: #e5e7eb;
+        --line: rgba(255, 255, 255, 0.08);
+        --shadow: 0 18px 36px rgba(3, 7, 18, 0.45);
+        --panel: rgba(255, 255, 255, 0.05);
+        --panel-strong: rgba(255, 255, 255, 0.08);
+        --accent: #3b82f6;
+        --accent-soft: rgba(59, 130, 246, 0.2);
 
         --header-height: 76px;
         --max: 1180px;
@@ -32,7 +36,7 @@
 
         --font-head: "Lato", "Helvetica Neue", Arial, sans-serif;
         --font-body: "Lato", "Helvetica Neue", Arial, sans-serif;
-        --accent-dark: #0c1c12;
+        --accent-dark: #0b1220;
       }
 
       * { box-sizing: border-box; }
@@ -43,7 +47,8 @@
         margin: 0;
         font-family: var(--font-body);
         color: var(--cream);
-        background: linear-gradient(160deg, var(--green), var(--green2));
+        background: radial-gradient(circle at top right, rgba(59, 130, 246, 0.2), transparent 45%),
+          linear-gradient(160deg, var(--green), var(--green2));
         min-height: 100vh;
         line-height: 1.6;
         position: relative;
@@ -53,7 +58,7 @@
         content: "";
         position: fixed;
         inset: 0;
-        background: radial-gradient(600px 380px at 80% 10%, rgba(239,126,161,0.28), transparent 60%);
+        background: radial-gradient(600px 380px at 80% 10%, rgba(59, 130, 246, 0.25), transparent 60%);
         pointer-events: none;
         z-index: 0;
       }
@@ -165,13 +170,13 @@
         height: var(--header-height);
         display: flex;
         align-items: center;
-        background: rgba(30, 27, 24, 0.92);
+        background: rgba(11, 18, 32, 0.92);
         border-bottom: 1px solid rgba(255, 255, 255, 0.04);
         transition: background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
       }
 
       .header--scrolled {
-        background: rgba(30, 27, 24, 0.98);
+        background: rgba(11, 18, 32, 0.98);
         border-bottom: 1px solid rgba(255, 255, 255, 0.08);
         box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
       }
@@ -261,6 +266,281 @@
         justify-items: start;
       }
 
+      /* App layout */
+      .radar-app {
+        display: grid;
+        gap: 24px;
+        grid-template-columns: 240px 1fr;
+        align-items: start;
+      }
+
+      @media (max-width: 1100px) {
+        .radar-app {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .radar-side {
+        position: sticky;
+        top: calc(var(--header-height) + 24px);
+        align-self: start;
+        background: rgba(10, 16, 28, 0.75);
+        border: 1px solid var(--line);
+        border-radius: var(--radius-lg);
+        padding: 20px;
+        backdrop-filter: blur(12px);
+      }
+
+      .radar-brand {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        margin-bottom: 20px;
+      }
+
+      .radar-mark {
+        width: 44px;
+        height: 44px;
+        border-radius: 14px;
+        background: var(--accent);
+        box-shadow: 0 10px 22px rgba(59, 130, 246, 0.35);
+        display: grid;
+        place-items: center;
+        font-weight: 700;
+        color: #ffffff;
+        letter-spacing: 0.08em;
+      }
+
+      .radar-side h1 {
+        font-size: 1.05rem;
+        margin: 0;
+      }
+
+      .radar-side p {
+        margin: 4px 0 0;
+        font-size: 0.62rem;
+        text-transform: uppercase;
+        letter-spacing: 0.18em;
+        color: rgba(229, 231, 235, 0.6);
+      }
+
+      .radar-nav {
+        display: grid;
+        gap: 8px;
+      }
+
+      .radar-nav__label {
+        margin-top: 18px;
+        font-size: 0.62rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: rgba(229, 231, 235, 0.4);
+      }
+
+      .radar-nav a {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 10px 12px;
+        border-radius: 14px;
+        color: rgba(229, 231, 235, 0.7);
+        background: transparent;
+        border: 1px solid transparent;
+        font-size: 0.82rem;
+        font-weight: 500;
+      }
+
+      .radar-nav a.is-active {
+        background: rgba(59, 130, 246, 0.16);
+        border-color: rgba(59, 130, 246, 0.35);
+        color: #ffffff;
+      }
+
+      .radar-nav__badge {
+        width: 28px;
+        height: 28px;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.08);
+        display: grid;
+        place-items: center;
+        font-size: 0.7rem;
+        color: rgba(229, 231, 235, 0.7);
+      }
+
+      .radar-nav a.is-active .radar-nav__badge {
+        background: rgba(59, 130, 246, 0.4);
+        color: #ffffff;
+      }
+
+      .radar-main {
+        display: grid;
+        gap: 28px;
+      }
+
+      .radar-topbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        background: rgba(10, 16, 28, 0.6);
+        border: 1px solid var(--line);
+        border-radius: var(--radius-lg);
+        padding: 14px 18px;
+        backdrop-filter: blur(12px);
+      }
+
+      .radar-search {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 8px 14px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid var(--line);
+        min-width: min(420px, 100%);
+      }
+
+      .radar-search span {
+        color: rgba(229, 231, 235, 0.5);
+        font-size: 0.9rem;
+      }
+
+      .radar-search input {
+        background: transparent;
+        border: none;
+        color: var(--cream);
+        outline: none;
+        font-size: 0.85rem;
+        width: 100%;
+      }
+
+      .radar-search input::placeholder {
+        color: rgba(229, 231, 235, 0.45);
+      }
+
+      .radar-topbar .timestamp {
+        font-size: 0.8rem;
+      }
+
+      .radar-actions {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+
+      @media (max-width: 900px) {
+        .radar-topbar {
+          flex-direction: column;
+          align-items: stretch;
+        }
+
+        .radar-actions {
+          justify-content: space-between;
+        }
+
+        .radar-search {
+          min-width: 100%;
+        }
+      }
+
+      .radar-hero {
+        display: grid;
+        gap: 18px;
+        grid-template-columns: 1.2fr 0.8fr;
+        align-items: center;
+      }
+
+      @media (max-width: 1000px) {
+        .radar-hero {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .radar-kpis {
+        display: grid;
+        gap: 12px;
+      }
+
+      .radar-kpi {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 14px 16px;
+      }
+
+      .radar-kpi strong {
+        display: block;
+        font-size: 1rem;
+        margin-top: 6px;
+      }
+
+      .radar-board {
+        position: relative;
+        overflow: hidden;
+        min-height: 240px;
+      }
+
+      .radar-board::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: radial-gradient(circle, rgba(59, 130, 246, 0.18) 1px, transparent 1px);
+        background-size: 28px 28px;
+        opacity: 0.6;
+      }
+
+      .radar-bars {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+        gap: 12px;
+        align-items: end;
+        height: 180px;
+        margin-top: 18px;
+      }
+
+      .radar-bar-group {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .radar-bar {
+        height: 140px;
+        background: rgba(255, 255, 255, 0.08);
+        border-radius: 12px 12px 0 0;
+        overflow: hidden;
+        position: relative;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .radar-bar span {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(59, 130, 246, 0.55);
+        height: var(--bar);
+      }
+
+      .radar-bar-label {
+        margin-top: 10px;
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: rgba(229, 231, 235, 0.6);
+        text-align: center;
+      }
+
+      .radar-section__head {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 12px;
+        margin-bottom: 16px;
+      }
+
       .timestamp {
         font-size: 0.85rem;
         color: rgba(255,255,255,0.7);
@@ -315,7 +595,7 @@
 
       .btn--light {
         background: #ffffff;
-        color: var(--ink);
+        color: #0b1220;
         border: 1px solid #ffffff;
       }
 
@@ -323,7 +603,7 @@
 
       .btn--white {
         background: #ffffff;
-        color: var(--ink);
+        color: #0b1220;
         border: 1px solid #ffffff;
         font-weight: 600;
       }
@@ -355,32 +635,26 @@
       /* Dashboard */
       .dashboard {
         display: grid;
-        gap: 22px;
-        grid-template-columns: repeat(12, minmax(0, 1fr));
+        gap: 18px;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       }
 
       .card {
-        border-radius: var(--radius-lg);
+        border-radius: 22px;
         border: 1px solid var(--line);
-        background: rgba(255,255,255,0.06);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
+        background: var(--panel);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
         box-shadow: var(--shadow);
-        padding: 22px;
+        padding: 20px;
         position: relative;
         overflow: hidden;
       }
 
-      .card--viral { grid-column: span 6; }
-      .card--buzz { grid-column: span 6; }
-      .card--pulse { grid-column: 1 / -1; }
-      .card--pinterest { grid-column: 1 / -1; }
-      .card--resource { grid-column: span 4; }
+      .card--resource { grid-column: auto; }
 
       @media (max-width: 960px) {
-        .dashboard { grid-template-columns: repeat(6, minmax(0, 1fr)); }
-        .card--viral, .card--buzz, .card--pulse,
-        .card--pinterest, .card--resource { grid-column: 1 / -1; }
+        .dashboard { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
       }
 
       @media (max-width: 640px) {
@@ -417,8 +691,8 @@
         align-items: center;
         justify-content: center;
         font-weight: 700;
-        background: rgba(239,126,161,0.2);
-        border: 1px solid rgba(239,126,161,0.4);
+        background: var(--accent-soft);
+        border: 1px solid rgba(59, 130, 246, 0.4);
         color: #fff;
         font-size: 0.9rem;
       }
@@ -777,246 +1051,11 @@
 
       /* Focus states */
       :focus-visible {
-        outline: 2px solid rgba(239,126,161,0.7);
+        outline: 2px solid rgba(59, 130, 246, 0.7);
         outline-offset: 2px;
       }
 
-      /* Mono override */
-      :root {
-        --green: #111111;
-        --green2: #111111;
-        --cream: #111111;
-        --coral: #111111;
-        --ink: #111111;
-        --line: rgba(0, 0, 0, 0.12);
-        --shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
-      }
-
-      body {
-        background: #ffffff;
-        color: #111111;
-      }
-
-      body::before,
-      body::after {
-        display: none;
-      }
-
-      h1,
-      h2,
-      h3,
-      h4 {
-        color: #111111;
-      }
-
-      .hero__p,
-      .muted,
-      .timestamp,
-      .list__meta {
-        color: #555555;
-      }
-
-      .eyebrow {
-        color: #555555;
-      }
-
-      .header {
-        background: rgba(30, 27, 24, 0.92);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.04);
-      }
-
-      .header--scrolled {
-        background: rgba(30, 27, 24, 0.98);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-      }
-
-      .logo {
-        color: #f6f2ec;
-      }
-
-      .nav a {
-        color: rgba(246, 242, 236, 0.76);
-      }
-
-      .nav a:hover,
-      .nav a.is-active {
-        color: #ffffff;
-      }
-
-      .lang {
-        border: 1px solid rgba(246, 242, 236, 0.28);
-        background: rgba(246, 242, 236, 0.12);
-      }
-
-      .lang__btn {
-        color: rgba(246, 242, 236, 0.78);
-      }
-
-      .lang__btn.is-active {
-        color: #ffffff;
-      }
-
-      .search {
-        background: #ffffff;
-        border: 1px solid rgba(0, 0, 0, 0.2);
-      }
-
-      .search input {
-        color: #111111;
-      }
-
-      .search input::placeholder {
-        color: #888888;
-      }
-
-      .token-row input {
-        background: #ffffff;
-        border-color: #e0e0e0;
-        color: #111111;
-      }
-
-      .btn--light,
-      .btn--white {
-        background: #111111;
-        color: #ffffff;
-        border-color: #111111;
-      }
-
-      .btn--outline {
-        color: #111111;
-        border-color: #111111;
-        background: transparent;
-      }
-
-      .btn--ghost {
-        color: #111111;
-        border-color: rgba(0, 0, 0, 0.2);
-        background: #ffffff;
-      }
-
-      .card {
-        background: #ffffff;
-        border: 1px solid rgba(0, 0, 0, 0.12);
-        box-shadow: none;
-      }
-
-      .icon-circle {
-        background: #111111;
-        border-color: #111111;
-        color: #ffffff;
-      }
-
-      .tag,
-      .chip {
-        background: #f2f2f2;
-        border-color: #e0e0e0;
-        color: #111111;
-      }
-
-      .chip.is-active {
-        background: #111111;
-        border-color: #111111;
-        color: #ffffff;
-      }
-
-      .kebab {
-        color: #111111;
-      }
-
-      .kebab:hover {
-        background: #f2f2f2;
-        border-color: #e0e0e0;
-      }
-
-      .list__item {
-        background: #f7f7f7;
-        border-color: #e0e0e0;
-      }
-
-      .rank {
-        background: #ffffff;
-        border: 1px solid #e0e0e0;
-        color: #111111;
-      }
-
-      .list__title {
-        color: #111111;
-      }
-
-      .list__link {
-        color: #111111;
-      }
-
-      .list__link:hover {
-        color: #000000;
-      }
-
-      .list__empty {
-        border-color: #e0e0e0;
-        color: #555555;
-      }
-
-      .skeleton__bar {
-        background: #eeeeee;
-      }
-
-      .skeleton__bar::after {
-        background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.06), transparent);
-      }
-
-      .error {
-        background: #ffffff;
-        border-color: #e0e0e0;
-        color: #111111;
-      }
-
-      .meter__track {
-        background: #e0e0e0;
-      }
-
-      .meter__fill {
-        background: #111111;
-      }
-
-      .meter__labels {
-        color: #111111;
-      }
-
-      .stat {
-        color: #555555;
-      }
-
-      .stat__value {
-        color: #111111;
-      }
-
-      .manifesto__line {
-        color: #111111;
-      }
-
-      .footer {
-        background: #111111;
-      }
-
-      .footer__text,
-      .footer__copy,
-      .contact-label {
-        color: rgba(255, 255, 255, 0.7);
-      }
-
-      .contact-link {
-        color: #ffffff;
-      }
-
-      :focus-visible {
-        outline: 2px solid #111111;
-      }
-
-      .header :focus-visible {
-        outline: 2px solid #ffffff;
-      }
-    </style>
+</style>
   </head>
   <body class="case-page">
     <noscript>
@@ -1042,210 +1081,307 @@
       <section class="section-block radar">
         <div class="container">
           <a href="index.html#mini" class="back-link" data-i18n="back_to_mini">← Tillbaka till små projekt</a>
-          <div class="radar__hero">
-            <div>
-              <h1 class="h-display" data-i18n="page_title">Ava Growth Radar</h1>
-              <p class="eyebrow" data-i18n="growth_signals_api">Growth Signals API</p>
-              <p class="hero__p" data-i18n="hero_desc">
-                Live signals for growth teams. Track what is spiking, what is shifting, and where demand is forming.
-              </p>
+
+          <div class="radar-app">
+            <aside class="radar-side">
+              <div class="radar-brand">
+                <div class="radar-mark">GR</div>
+                <div>
+                  <h1 data-i18n="page_title">Ava Growth Radar</h1>
+                  <p data-i18n="growth_signals_api">Growth Signals API</p>
+                </div>
+              </div>
+              <nav class="radar-nav">
+                <a class="is-active" href="#"><span class="radar-nav__badge">01</span><span data-i18n="radar_nav_overview">Radar</span></a>
+                <a href="#api-sources"><span class="radar-nav__badge">02</span><span data-i18n="radar_nav_sources">API-källor</span></a>
+                <a href="#signals"><span class="radar-nav__badge">03</span><span data-i18n="radar_nav_signals">Signalspaning</span></a>
+                <div class="radar-nav__label" data-i18n="radar_nav_workspace">Workspace</div>
+                <a href="#"><span class="radar-nav__badge">04</span><span data-i18n="radar_nav_campaigns">Kampanjer</span></a>
+                <a href="#"><span class="radar-nav__badge">05</span><span data-i18n="radar_nav_performance">Performance</span></a>
+              </nav>
+            </aside>
+
+            <div class="radar-main">
+              <div class="radar-topbar">
+                <div class="radar-search">
+                  <span aria-hidden="true">⌕</span>
+                  <input
+                    type="search"
+                    placeholder="Sök trender, plattformar eller insikter..."
+                    data-i18n-placeholder="radar_search_placeholder"
+                  />
+                </div>
+                <div class="radar-actions">
+                  <div class="timestamp"><span data-i18n="updated_label">Uppdaterad</span> <span id="updatedAt">--</span></div>
+                  <button
+                    class="btn btn--light"
+                    id="refreshBtn"
+                    type="button"
+                    aria-label="Refresh data"
+                    data-i18n="refresh"
+                    data-i18n-aria="refresh_aria"
+                  >
+                    Uppdatera
+                  </button>
+                </div>
+              </div>
+
+              <div class="radar-hero">
+                <div>
+                  <p class="eyebrow" data-i18n="growth_signals_api">Growth Signals API</p>
+                  <h1 class="h-display" data-i18n="radar_title">Growth Radar</h1>
+                  <p class="hero__p" data-i18n="hero_desc">
+                    Live-signaler för growth-team. Se vad som spikar, vad som skiftar och var efterfrågan byggs.
+                  </p>
+                </div>
+                <div class="radar-kpis">
+                  <div class="radar-kpi">
+                    <span class="tag" data-i18n="radar_kpi_1_label">Signalstyrka</span>
+                    <strong data-i18n="radar_kpi_1_value">Hög aktivitet</strong>
+                    <div class="muted" data-i18n="radar_kpi_1_note">+18% senaste 24h</div>
+                  </div>
+                  <div class="radar-kpi">
+                    <span class="tag" data-i18n="radar_kpi_2_label">Trendfokus</span>
+                    <strong data-i18n="radar_kpi_2_value">AI Search</strong>
+                    <div class="muted" data-i18n="radar_kpi_2_note">Nya spår i TikTok & Google</div>
+                  </div>
+                  <div class="radar-kpi">
+                    <span class="tag" data-i18n="radar_kpi_3_label">API-status</span>
+                    <strong data-i18n="radar_kpi_3_value">Redo att hämta</strong>
+                    <div class="muted" data-i18n="radar_kpi_3_note">Koppla dina nycklar</div>
+                  </div>
+                </div>
+              </div>
+
+              <section id="signals" class="radar-section">
+                <div class="radar-section__head">
+                  <div>
+                    <h2 data-i18n="radar_board_title">Channel Pulse</h2>
+                    <p class="muted" data-i18n="radar_board_desc">Snabb överblick av signalstyrka per kanal.</p>
+                  </div>
+                  <span class="tag" data-i18n="radar_board_tag">Live</span>
+                </div>
+                <div class="card radar-board">
+                  <div class="radar-bars">
+                    <div class="radar-bar-group">
+                      <div class="radar-bar" style="--bar: 84%;"><span></span></div>
+                      <div class="radar-bar-label">TikTok</div>
+                    </div>
+                    <div class="radar-bar-group">
+                      <div class="radar-bar" style="--bar: 62%;"><span></span></div>
+                      <div class="radar-bar-label">Meta</div>
+                    </div>
+                    <div class="radar-bar-group">
+                      <div class="radar-bar" style="--bar: 92%;"><span></span></div>
+                      <div class="radar-bar-label">Google</div>
+                    </div>
+                    <div class="radar-bar-group">
+                      <div class="radar-bar" style="--bar: 35%;"><span></span></div>
+                      <div class="radar-bar-label">LinkedIn</div>
+                    </div>
+                    <div class="radar-bar-group">
+                      <div class="radar-bar" style="--bar: 75%;"><span></span></div>
+                      <div class="radar-bar-label">X</div>
+                    </div>
+                    <div class="radar-bar-group">
+                      <div class="radar-bar" style="--bar: 48%;"><span></span></div>
+                      <div class="radar-bar-label">Pinterest</div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <section id="api-sources" class="radar-section">
+                <div class="radar-section__head">
+                  <div>
+                    <h2 data-i18n="radar_sources_title">API-källor</h2>
+                    <p class="muted" data-i18n="radar_sources_desc">Hämta live-data från dina viktigaste marknads-API:er.</p>
+                  </div>
+                  <span class="tag" data-i18n="radar_sources_tag">Live</span>
+                </div>
+
+                <div class="dashboard">
+                  <article class="card card--resource">
+                    <div class="card__header">
+                      <div class="card__heading">
+                        <span class="icon-circle" aria-hidden="true">G</span>
+                        <div>
+                          <h2 data-i18n="resource_searchapi_google_title">SearchAPI – Google</h2>
+                          <span class="tag" data-i18n="resource_tag_endpoint">Endpoint</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card__body">
+                      <p class="muted" data-i18n="resource_searchapi_google_desc">API-endpoint för Google-sök.</p>
+                      <div class="controls-row">
+                        <div class="search">
+                          <label class="sr-only" for="searchapiGoogleQuery" data-i18n="resource_query_label">Sökterm</label>
+                          <input
+                            id="searchapiGoogleQuery"
+                            type="search"
+                            autocomplete="off"
+                            value="ai overviews"
+                            data-i18n-placeholder="resource_query_placeholder"
+                            placeholder="Skriv en sökfråga..."
+                          />
+                        </div>
+                        <button
+                          class="btn btn--ghost btn--small"
+                          type="button"
+                          data-action="searchapi-google"
+                          data-i18n="resource_fetch"
+                        >
+                          Hämta
+                        </button>
+                      </div>
+                      <div class="muted" id="searchapiGoogleNote" style="margin-top: 10px;"></div>
+                      <ul class="list" id="searchapiGoogleList"></ul>
+                    </div>
+                  </article>
+
+                  <article class="card card--resource">
+                    <div class="card__header">
+                      <div class="card__heading">
+                        <span class="icon-circle" aria-hidden="true">TT</span>
+                        <div>
+                          <h2 data-i18n="resource_searchapi_tiktok_title">SearchAPI – TikTok Ads Library</h2>
+                          <span class="tag" data-i18n="resource_tag_endpoint">Endpoint</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card__body">
+                      <p class="muted" data-i18n="resource_searchapi_tiktok_desc">API-endpoint för TikTok Ads Library.</p>
+                      <div class="controls-row">
+                        <div class="search">
+                          <label class="sr-only" for="searchapiTiktokQuery" data-i18n="resource_query_label">Sökterm</label>
+                          <input
+                            id="searchapiTiktokQuery"
+                            type="search"
+                            autocomplete="off"
+                            value="skincare"
+                            data-i18n-placeholder="resource_query_placeholder"
+                            placeholder="Skriv en sökfråga..."
+                          />
+                        </div>
+                        <button
+                          class="btn btn--ghost btn--small"
+                          type="button"
+                          data-action="searchapi-tiktok"
+                          data-i18n="resource_fetch"
+                        >
+                          Hämta
+                        </button>
+                      </div>
+                      <div class="muted" id="searchapiTiktokNote" style="margin-top: 10px;"></div>
+                      <ul class="list" id="searchapiTiktokList"></ul>
+                    </div>
+                  </article>
+
+                  <article class="card card--resource">
+                    <div class="card__header">
+                      <div class="card__heading">
+                        <span class="icon-circle" aria-hidden="true">GT</span>
+                        <div>
+                          <h2 data-i18n="resource_searchapi_trends_title">SearchAPI – Google Trends</h2>
+                          <span class="tag" data-i18n="resource_tag_endpoint">Endpoint</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card__body">
+                      <p class="muted" data-i18n="resource_searchapi_trends_desc">API-endpoint för Google Trends.</p>
+                      <div class="controls-row">
+                        <div class="search">
+                          <label class="sr-only" for="searchapiTrendsQuery" data-i18n="resource_query_label">Sökterm</label>
+                          <input
+                            id="searchapiTrendsQuery"
+                            type="search"
+                            autocomplete="off"
+                            value="ai tools"
+                            data-i18n-placeholder="resource_query_placeholder"
+                            placeholder="Skriv en sökfråga..."
+                          />
+                        </div>
+                        <button
+                          class="btn btn--ghost btn--small"
+                          type="button"
+                          data-action="searchapi-trends"
+                          data-i18n="resource_fetch"
+                        >
+                          Hämta
+                        </button>
+                      </div>
+                      <div class="muted" id="searchapiTrendsNote" style="margin-top: 10px;"></div>
+                      <ul class="list" id="searchapiTrendsList"></ul>
+                    </div>
+                  </article>
+
+                  <article class="card card--resource">
+                    <div class="card__header">
+                      <div class="card__heading">
+                        <span class="icon-circle" aria-hidden="true">PH</span>
+                        <div>
+                          <h2 data-i18n="resource_producthunt_title">Product Hunt API</h2>
+                          <span class="tag" data-i18n="resource_tag_docs">Docs</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card__body">
+                      <p class="muted" data-i18n="resource_producthunt_desc">Dokumentation för Product Hunt API.</p>
+                      <div class="controls-row">
+                        <button
+                          class="btn btn--ghost btn--small"
+                          type="button"
+                          data-action="producthunt"
+                          data-i18n="resource_fetch"
+                        >
+                          Hämta
+                        </button>
+                      </div>
+                      <div class="muted" id="producthuntNote" style="margin-top: 10px;"></div>
+                      <ul class="list" id="producthuntList"></ul>
+                    </div>
+                  </article>
+
+                  <article class="card card--resource">
+                    <div class="card__header">
+                      <div class="card__heading">
+                        <span class="icon-circle" aria-hidden="true">R</span>
+                        <div>
+                          <h2 data-i18n="resource_reddit_title">Reddit API</h2>
+                          <span class="tag" data-i18n="resource_tag_docs">Docs</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card__body">
+                      <p class="muted" data-i18n="resource_reddit_desc">Dokumentation för Reddit API.</p>
+                      <div class="controls-row">
+                        <div class="search">
+                          <label class="sr-only" for="redditSubreddit" data-i18n="resource_subreddit_label">Subreddit</label>
+                          <input
+                            id="redditSubreddit"
+                            type="search"
+                            autocomplete="off"
+                            value="marketing"
+                            data-i18n-placeholder="resource_subreddit_placeholder"
+                            placeholder="t.ex. marketing"
+                          />
+                        </div>
+                        <button
+                          class="btn btn--ghost btn--small"
+                          type="button"
+                          data-action="reddit"
+                          data-i18n="resource_fetch"
+                        >
+                          Hämta
+                        </button>
+                      </div>
+                      <div class="muted" id="redditNote" style="margin-top: 10px;"></div>
+                      <ul class="list" id="redditList"></ul>
+                    </div>
+                  </article>
+                </div>
+              </section>
             </div>
-            <div class="radar__controls">
-              <div class="timestamp"><span data-i18n="updated_label">Updated</span> <span id="updatedAt">--</span></div>
-              <div class="controls-row">
-                <button
-                  class="btn btn--light"
-                  id="refreshBtn"
-                  type="button"
-                  aria-label="Refresh data"
-                  data-i18n="refresh"
-                  data-i18n-aria="refresh_aria"
-                >
-                  Refresh
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <div class="dashboard">
-            <article class="card card--resource">
-              <div class="card__header">
-                <div class="card__heading">
-                  <span class="icon-circle" aria-hidden="true">G</span>
-                  <div>
-                    <h2 data-i18n="resource_searchapi_google_title">SearchAPI – Google</h2>
-                    <span class="tag" data-i18n="resource_tag_endpoint">Endpoint</span>
-                  </div>
-                </div>
-              </div>
-              <div class="card__body">
-                <p class="muted" data-i18n="resource_searchapi_google_desc">API-endpoint för Google-sök.</p>
-                <div class="controls-row">
-                  <div class="search">
-                    <label class="sr-only" for="searchapiGoogleQuery" data-i18n="resource_query_label">Sökterm</label>
-                    <input
-                      id="searchapiGoogleQuery"
-                      type="search"
-                      autocomplete="off"
-                      value="ai overviews"
-                      data-i18n-placeholder="resource_query_placeholder"
-                      placeholder="Skriv en sökfråga..."
-                    />
-                  </div>
-                  <button
-                    class="btn btn--ghost btn--small"
-                    type="button"
-                    data-action="searchapi-google"
-                    data-i18n="resource_fetch"
-                  >
-                    Hämta
-                  </button>
-                </div>
-                <div class="muted" id="searchapiGoogleNote" style="margin-top: 10px;"></div>
-                <ul class="list" id="searchapiGoogleList"></ul>
-              </div>
-            </article>
-
-            <article class="card card--resource">
-              <div class="card__header">
-                <div class="card__heading">
-                  <span class="icon-circle" aria-hidden="true">TT</span>
-                  <div>
-                    <h2 data-i18n="resource_searchapi_tiktok_title">SearchAPI – TikTok Ads Library</h2>
-                    <span class="tag" data-i18n="resource_tag_endpoint">Endpoint</span>
-                  </div>
-                </div>
-              </div>
-              <div class="card__body">
-                <p class="muted" data-i18n="resource_searchapi_tiktok_desc">API-endpoint för TikTok Ads Library.</p>
-                <div class="controls-row">
-                  <div class="search">
-                    <label class="sr-only" for="searchapiTiktokQuery" data-i18n="resource_query_label">Sökterm</label>
-                    <input
-                      id="searchapiTiktokQuery"
-                      type="search"
-                      autocomplete="off"
-                      value="skincare"
-                      data-i18n-placeholder="resource_query_placeholder"
-                      placeholder="Skriv en sökfråga..."
-                    />
-                  </div>
-                  <button
-                    class="btn btn--ghost btn--small"
-                    type="button"
-                    data-action="searchapi-tiktok"
-                    data-i18n="resource_fetch"
-                  >
-                    Hämta
-                  </button>
-                </div>
-                <div class="muted" id="searchapiTiktokNote" style="margin-top: 10px;"></div>
-                <ul class="list" id="searchapiTiktokList"></ul>
-              </div>
-            </article>
-
-            <article class="card card--resource">
-              <div class="card__header">
-                <div class="card__heading">
-                  <span class="icon-circle" aria-hidden="true">GT</span>
-                  <div>
-                    <h2 data-i18n="resource_searchapi_trends_title">SearchAPI – Google Trends</h2>
-                    <span class="tag" data-i18n="resource_tag_endpoint">Endpoint</span>
-                  </div>
-                </div>
-              </div>
-              <div class="card__body">
-                <p class="muted" data-i18n="resource_searchapi_trends_desc">API-endpoint för Google Trends.</p>
-                <div class="controls-row">
-                  <div class="search">
-                    <label class="sr-only" for="searchapiTrendsQuery" data-i18n="resource_query_label">Sökterm</label>
-                    <input
-                      id="searchapiTrendsQuery"
-                      type="search"
-                      autocomplete="off"
-                      value="ai tools"
-                      data-i18n-placeholder="resource_query_placeholder"
-                      placeholder="Skriv en sökfråga..."
-                    />
-                  </div>
-                  <button
-                    class="btn btn--ghost btn--small"
-                    type="button"
-                    data-action="searchapi-trends"
-                    data-i18n="resource_fetch"
-                  >
-                    Hämta
-                  </button>
-                </div>
-                <div class="muted" id="searchapiTrendsNote" style="margin-top: 10px;"></div>
-                <ul class="list" id="searchapiTrendsList"></ul>
-              </div>
-            </article>
-
-            <article class="card card--resource">
-              <div class="card__header">
-                <div class="card__heading">
-                  <span class="icon-circle" aria-hidden="true">PH</span>
-                  <div>
-                    <h2 data-i18n="resource_producthunt_title">Product Hunt API</h2>
-                    <span class="tag" data-i18n="resource_tag_docs">Docs</span>
-                  </div>
-                </div>
-              </div>
-              <div class="card__body">
-                <p class="muted" data-i18n="resource_producthunt_desc">Dokumentation för Product Hunt API.</p>
-                <div class="controls-row">
-                  <button
-                    class="btn btn--ghost btn--small"
-                    type="button"
-                    data-action="producthunt"
-                    data-i18n="resource_fetch"
-                  >
-                    Hämta
-                  </button>
-                </div>
-                <div class="muted" id="producthuntNote" style="margin-top: 10px;"></div>
-                <ul class="list" id="producthuntList"></ul>
-              </div>
-            </article>
-
-            <article class="card card--resource">
-              <div class="card__header">
-                <div class="card__heading">
-                  <span class="icon-circle" aria-hidden="true">R</span>
-                  <div>
-                    <h2 data-i18n="resource_reddit_title">Reddit API</h2>
-                    <span class="tag" data-i18n="resource_tag_docs">Docs</span>
-                  </div>
-                </div>
-              </div>
-              <div class="card__body">
-                <p class="muted" data-i18n="resource_reddit_desc">Dokumentation för Reddit API.</p>
-                <div class="controls-row">
-                  <div class="search">
-                    <label class="sr-only" for="redditSubreddit" data-i18n="resource_subreddit_label">Subreddit</label>
-                    <input
-                      id="redditSubreddit"
-                      type="search"
-                      autocomplete="off"
-                      value="marketing"
-                      data-i18n-placeholder="resource_subreddit_placeholder"
-                      placeholder="t.ex. marketing"
-                    />
-                  </div>
-                  <button
-                    class="btn btn--ghost btn--small"
-                    type="button"
-                    data-action="reddit"
-                    data-i18n="resource_fetch"
-                  >
-                    Hämta
-                  </button>
-                </div>
-                <div class="muted" id="redditNote" style="margin-top: 10px;"></div>
-                <ul class="list" id="redditList"></ul>
-              </div>
-            </article>
           </div>
         </div>
       </section>
@@ -1333,6 +1469,29 @@
           back_to_mini: "← Tillbaka till små projekt",
           page_title: "Ava Growth Radar",
           growth_signals_api: "Growth Signals API",
+          radar_title: "Growth Radar",
+          radar_nav_overview: "Radar",
+          radar_nav_sources: "API-källor",
+          radar_nav_signals: "Signalspaning",
+          radar_nav_workspace: "Workspace",
+          radar_nav_campaigns: "Kampanjer",
+          radar_nav_performance: "Performance",
+          radar_search_placeholder: "Sök trender, plattformar eller insikter...",
+          radar_kpi_1_label: "Signalstyrka",
+          radar_kpi_1_value: "Hög aktivitet",
+          radar_kpi_1_note: "+18% senaste 24h",
+          radar_kpi_2_label: "Trendfokus",
+          radar_kpi_2_value: "AI Search",
+          radar_kpi_2_note: "Nya spår i TikTok & Google",
+          radar_kpi_3_label: "API-status",
+          radar_kpi_3_value: "Redo att hämta",
+          radar_kpi_3_note: "Koppla dina nycklar",
+          radar_board_title: "Channel Pulse",
+          radar_board_desc: "Snabb överblick av signalstyrka per kanal.",
+          radar_board_tag: "Live",
+          radar_sources_title: "API-källor",
+          radar_sources_desc: "Hämta live-data från dina viktigaste marknads-API:er.",
+          radar_sources_tag: "Live",
           hero_desc: "Live-signaler för growth-team. Se vad som spikar, vad som skiftar och var efterfrågan byggs.",
           updated_label: "Uppdaterad",
           refresh: "Uppdatera",
@@ -1376,6 +1535,29 @@
           back_to_mini: "← Back to mini projects",
           page_title: "Ava Growth Radar",
           growth_signals_api: "Growth Signals API",
+          radar_title: "Growth Radar",
+          radar_nav_overview: "Radar",
+          radar_nav_sources: "API sources",
+          radar_nav_signals: "Signal watch",
+          radar_nav_workspace: "Workspace",
+          radar_nav_campaigns: "Campaigns",
+          radar_nav_performance: "Performance",
+          radar_search_placeholder: "Search trends, platforms, or insights...",
+          radar_kpi_1_label: "Signal strength",
+          radar_kpi_1_value: "High activity",
+          radar_kpi_1_note: "+18% last 24h",
+          radar_kpi_2_label: "Trend focus",
+          radar_kpi_2_value: "AI Search",
+          radar_kpi_2_note: "New signals in TikTok & Google",
+          radar_kpi_3_label: "API status",
+          radar_kpi_3_value: "Ready to fetch",
+          radar_kpi_3_note: "Connect your keys",
+          radar_board_title: "Channel Pulse",
+          radar_board_desc: "Quick view of signal strength by channel.",
+          radar_board_tag: "Live",
+          radar_sources_title: "API sources",
+          radar_sources_desc: "Pull live data from your key marketing APIs.",
+          radar_sources_tag: "Live",
           hero_desc: "Live signals for growth teams. Track what is spiking, what is shifting, and where demand is forming.",
           updated_label: "Updated",
           refresh: "Refresh",
