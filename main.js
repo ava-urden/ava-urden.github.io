@@ -946,6 +946,7 @@ function applyLang(lang) {
   });
 
   localStorage.setItem("lang", lang);
+  setDataLayerState({ language: lang });
 }
 
 function initFilters() {
@@ -1112,10 +1113,24 @@ function pushDataLayerEvent(name, payload = {}) {
   window.dataLayer.push({ event: name, ...payload });
 }
 
+function setDataLayerState(payload = {}) {
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push(payload);
+}
+
+function getCurrentLanguage() {
+  return (
+    document.documentElement.getAttribute("lang") ||
+    localStorage.getItem("lang") ||
+    "sv"
+  );
+}
+
 function getBaseEventData() {
   return {
     page_path: window.location.pathname,
-    page_title: document.title
+    page_title: document.title,
+    language: getCurrentLanguage()
   };
 }
 
@@ -1128,64 +1143,46 @@ function getEventLabel(el) {
 function initTracking() {
   const base = getBaseEventData;
 
-  document.querySelectorAll("[data-track]").forEach((el) => {
-    el.addEventListener("click", () => {
-      pushDataLayerEvent(el.getAttribute("data-track"), {
-        ...base(),
-        label: getEventLabel(el),
-        href: el.getAttribute("href") || undefined
+  const bindClickTracking = (selector, eventName, buildPayload) => {
+    document.querySelectorAll(selector).forEach((el) => {
+      el.addEventListener("click", () => {
+        const extra = buildPayload ? buildPayload(el) : {};
+        pushDataLayerEvent(eventName, { ...base(), ...extra });
       });
     });
+  };
+
+  bindClickTracking(".track-hero_cases_click", "hero_cases_click", (el) => ({
+    label: getEventLabel(el),
+    href: el.getAttribute("href") || undefined
+  }));
+
+  bindClickTracking(".nav a", "nav_click", (link) => ({
+    label: (link.textContent || "").trim(),
+    href: link.getAttribute("href") || undefined
+  }));
+
+  bindClickTracking(".track-cv_download", "cv_download", (link) => ({
+    label: getEventLabel(link),
+    href: link.getAttribute("href") || undefined
+  }));
+
+  bindClickTracking(".case__link", "case_click", (link) => {
+    const title = link.querySelector("h3");
+    return {
+      label: title ? title.textContent.trim() : getEventLabel(link),
+      href: link.getAttribute("href") || undefined
+    };
   });
 
-  document.querySelectorAll(".nav a").forEach((link) => {
-    link.addEventListener("click", () => {
-      pushDataLayerEvent("nav_click", {
-        ...base(),
-        label: (link.textContent || "").trim(),
-        href: link.getAttribute("href") || undefined
-      });
-    });
-  });
+  bindClickTracking(".contact-link", "contact_click", (link) => ({
+    label: (link.textContent || "").trim(),
+    href: link.getAttribute("href") || undefined
+  }));
 
-  document.querySelectorAll("[data-cv-link]").forEach((link) => {
-    link.addEventListener("click", () => {
-      pushDataLayerEvent("cv_download", {
-        ...base(),
-        href: link.getAttribute("href") || undefined
-      });
-    });
-  });
-
-  document.querySelectorAll(".case__link").forEach((link) => {
-    link.addEventListener("click", () => {
-      const title = link.querySelector("h3");
-      pushDataLayerEvent("case_click", {
-        ...base(),
-        label: title ? title.textContent.trim() : "",
-        href: link.getAttribute("href") || undefined
-      });
-    });
-  });
-
-  document.querySelectorAll(".contact-link").forEach((link) => {
-    link.addEventListener("click", () => {
-      pushDataLayerEvent("contact_click", {
-        ...base(),
-        label: (link.textContent || "").trim(),
-        href: link.getAttribute("href") || undefined
-      });
-    });
-  });
-
-  document.querySelectorAll(".lang__btn").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      pushDataLayerEvent("language_switch", {
-        ...base(),
-        language: btn.dataset.lang
-      });
-    });
-  });
+  bindClickTracking(".lang__btn", "language_switch", (btn) => ({
+    language: btn.dataset.lang
+  }));
 }
 
 function initModals() {
@@ -1229,6 +1226,7 @@ function initModals() {
 document.addEventListener("DOMContentLoaded", () => {
   const storedLang = localStorage.getItem("lang") || "sv";
   applyLang(storedLang);
+  setDataLayerState(getBaseEventData());
 
   document.querySelectorAll(".lang__btn").forEach((btn) => {
     btn.addEventListener("click", () => {
