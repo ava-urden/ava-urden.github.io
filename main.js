@@ -1102,6 +1102,11 @@ function initLenis() {
   });
 }
 
+// ------------------------------
+// DATA LAYER TRACKING (GTM/GA4)
+// Events: view_section, nav_click, hero_cases_click, cv_download,
+// case_click, contact_click, language_switch
+// ------------------------------
 function pushDataLayerEvent(name, payload = {}) {
   window.dataLayer = window.dataLayer || [];
   window.dataLayer.push({ event: name, ...payload });
