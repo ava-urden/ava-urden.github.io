@@ -44,7 +44,7 @@ const dict = {
       "Experternas boktips: koncept & contentplan med SEO‑text, profilerade boktips och tydliga köplänkar.",
     case6_image_note: "Akademibokhandeln",
 
-    mini_title: "Mina små projekt: API:er & plugins",
+    mini_title: "Experiment & prototyper",
     mini_intro:
       "Growth-tech jag bygger just nu – små API:er, plugins och automationer som gör marknadsföring smartare.",
     mini_item_1_media: "Plugin",
@@ -499,9 +499,9 @@ const dict = {
       "Expert Book Picks: concept & content plan with SEO copy, expert picks, and direct buy links.",
     case6_image_note: "Akademibokhandeln",
 
-    mini_title: "Mini projects: APIs & plugins",
+    mini_title: "Prototypes & Experiments",
     mini_intro:
-      "Growth tech I’m building right now – small APIs, plugins, and automations that make marketing smarter.",
+      "Side builds made to learn, test, and improve.",
     mini_item_1_media: "Plugin",
     mini_item_1_tag: "Plugin",
     mini_item_1_status: "Free",
