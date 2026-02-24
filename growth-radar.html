@@ -1092,12 +1092,12 @@
                 </div>
               </div>
               <nav class="radar-nav">
-                <a class="is-active" href="#"><span class="radar-nav__badge">01</span><span data-i18n="radar_nav_overview">Radar</span></a>
-                <a href="#api-sources"><span class="radar-nav__badge">02</span><span data-i18n="radar_nav_sources">API-källor</span></a>
-                <a href="#signals"><span class="radar-nav__badge">03</span><span data-i18n="radar_nav_signals">Signalspaning</span></a>
-                <div class="radar-nav__label" data-i18n="radar_nav_workspace">Workspace</div>
-                <a href="#"><span class="radar-nav__badge">04</span><span data-i18n="radar_nav_campaigns">Kampanjer</span></a>
-                <a href="#"><span class="radar-nav__badge">05</span><span data-i18n="radar_nav_performance">Performance</span></a>
+                <a class="is-active" href="#signals"><span class="radar-nav__badge">01</span><span data-i18n="radar_nav_overview">Översikt</span></a>
+                <a href="#search-pulse"><span class="radar-nav__badge">02</span><span data-i18n="radar_nav_sources">Search Pulse</span></a>
+                <a href="#tech-shift"><span class="radar-nav__badge">03</span><span data-i18n="radar_nav_signals">Tech Shift</span></a>
+                <div class="radar-nav__label" data-i18n="radar_nav_workspace">Signals</div>
+                <a href="#social-buzz"><span class="radar-nav__badge">04</span><span data-i18n="radar_nav_campaigns">Social Buzz</span></a>
+                <a href="#launch-pad"><span class="radar-nav__badge">05</span><span data-i18n="radar_nav_performance">Launch Pad</span></a>
               </nav>
             </aside>
 
@@ -1201,94 +1201,18 @@
                 </div>
 
                 <div class="dashboard">
-                  <article class="card card--resource">
+                  <article class="card card--resource" id="search-pulse">
                     <div class="card__header">
                       <div class="card__heading">
-                        <span class="icon-circle" aria-hidden="true">G</span>
+                        <span class="icon-circle" aria-hidden="true">SP</span>
                         <div>
-                          <h2 data-i18n="resource_searchapi_google_title">SearchAPI – Google</h2>
-                          <span class="tag" data-i18n="resource_tag_endpoint">Endpoint</span>
+                          <h2 data-i18n="search_pulse_title">Search Pulse</h2>
+                          <span class="tag" data-i18n="search_pulse_tag">SerpApi · Google Trends</span>
                         </div>
                       </div>
                     </div>
                     <div class="card__body">
-                      <p class="muted" data-i18n="resource_searchapi_google_desc">API-endpoint för Google-sök.</p>
-                      <div class="controls-row">
-                        <div class="search">
-                          <label class="sr-only" for="searchapiGoogleQuery" data-i18n="resource_query_label">Sökterm</label>
-                          <input
-                            id="searchapiGoogleQuery"
-                            type="search"
-                            autocomplete="off"
-                            value="ai overviews"
-                            data-i18n-placeholder="resource_query_placeholder"
-                            placeholder="Skriv en sökfråga..."
-                          />
-                        </div>
-                        <button
-                          class="btn btn--ghost btn--small"
-                          type="button"
-                          data-action="searchapi-google"
-                          data-i18n="resource_fetch"
-                        >
-                          Hämta
-                        </button>
-                      </div>
-                      <div class="muted" id="searchapiGoogleNote" style="margin-top: 10px;"></div>
-                      <ul class="list" id="searchapiGoogleList"></ul>
-                    </div>
-                  </article>
-
-                  <article class="card card--resource">
-                    <div class="card__header">
-                      <div class="card__heading">
-                        <span class="icon-circle" aria-hidden="true">TT</span>
-                        <div>
-                          <h2 data-i18n="resource_searchapi_tiktok_title">SearchAPI – TikTok Ads Library</h2>
-                          <span class="tag" data-i18n="resource_tag_endpoint">Endpoint</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card__body">
-                      <p class="muted" data-i18n="resource_searchapi_tiktok_desc">API-endpoint för TikTok Ads Library.</p>
-                      <div class="controls-row">
-                        <div class="search">
-                          <label class="sr-only" for="searchapiTiktokQuery" data-i18n="resource_query_label">Sökterm</label>
-                          <input
-                            id="searchapiTiktokQuery"
-                            type="search"
-                            autocomplete="off"
-                            value="skincare"
-                            data-i18n-placeholder="resource_query_placeholder"
-                            placeholder="Skriv en sökfråga..."
-                          />
-                        </div>
-                        <button
-                          class="btn btn--ghost btn--small"
-                          type="button"
-                          data-action="searchapi-tiktok"
-                          data-i18n="resource_fetch"
-                        >
-                          Hämta
-                        </button>
-                      </div>
-                      <div class="muted" id="searchapiTiktokNote" style="margin-top: 10px;"></div>
-                      <ul class="list" id="searchapiTiktokList"></ul>
-                    </div>
-                  </article>
-
-                  <article class="card card--resource">
-                    <div class="card__header">
-                      <div class="card__heading">
-                        <span class="icon-circle" aria-hidden="true">GT</span>
-                        <div>
-                          <h2 data-i18n="resource_searchapi_trends_title">SearchAPI – Google Trends</h2>
-                          <span class="tag" data-i18n="resource_tag_endpoint">Endpoint</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card__body">
-                      <p class="muted" data-i18n="resource_searchapi_trends_desc">API-endpoint för Google Trends.</p>
+                      <p class="muted" data-i18n="search_pulse_desc">Vad konsumenter letar efter.</p>
                       <div class="controls-row">
                         <div class="search">
                           <label class="sr-only" for="searchapiTrendsQuery" data-i18n="resource_query_label">Sökterm</label>
@@ -1304,7 +1228,7 @@
                         <button
                           class="btn btn--ghost btn--small"
                           type="button"
-                          data-action="searchapi-trends"
+                          data-action="serpapi-trends"
                           data-i18n="resource_fetch"
                         >
                           Hämta
@@ -1315,45 +1239,56 @@
                     </div>
                   </article>
 
-                  <article class="card card--resource">
+                  <article class="card card--resource" id="tech-shift">
                     <div class="card__header">
                       <div class="card__heading">
-                        <span class="icon-circle" aria-hidden="true">PH</span>
+                        <span class="icon-circle" aria-hidden="true">TS</span>
                         <div>
-                          <h2 data-i18n="resource_producthunt_title">Product Hunt API</h2>
-                          <span class="tag" data-i18n="resource_tag_docs">Docs</span>
+                          <h2 data-i18n="tech_shift_title">Tech Shift</h2>
+                          <span class="tag" data-i18n="tech_shift_tag">BuiltWith</span>
                         </div>
                       </div>
                     </div>
                     <div class="card__body">
-                      <p class="muted" data-i18n="resource_producthunt_desc">Dokumentation för Product Hunt API.</p>
+                      <p class="muted" data-i18n="tech_shift_desc">Vilka verktyg som vinner marknad.</p>
                       <div class="controls-row">
+                        <div class="search">
+                          <label class="sr-only" for="builtwithQuery" data-i18n="resource_query_label">Sökterm</label>
+                          <input
+                            id="builtwithQuery"
+                            type="search"
+                            autocomplete="off"
+                            value="shopify.com"
+                            data-i18n-placeholder="tech_shift_placeholder"
+                            placeholder="Domän att analysera..."
+                          />
+                        </div>
                         <button
                           class="btn btn--ghost btn--small"
                           type="button"
-                          data-action="producthunt"
+                          data-action="builtwith"
                           data-i18n="resource_fetch"
                         >
                           Hämta
                         </button>
                       </div>
-                      <div class="muted" id="producthuntNote" style="margin-top: 10px;"></div>
-                      <ul class="list" id="producthuntList"></ul>
+                      <div class="muted" id="builtwithNote" style="margin-top: 10px;"></div>
+                      <ul class="list" id="builtwithList"></ul>
                     </div>
                   </article>
 
-                  <article class="card card--resource">
+                  <article class="card card--resource" id="social-buzz">
                     <div class="card__header">
                       <div class="card__heading">
-                        <span class="icon-circle" aria-hidden="true">R</span>
+                        <span class="icon-circle" aria-hidden="true">SB</span>
                         <div>
-                          <h2 data-i18n="resource_reddit_title">Reddit API</h2>
-                          <span class="tag" data-i18n="resource_tag_docs">Docs</span>
+                          <h2 data-i18n="social_buzz_title">Social Buzz</h2>
+                          <span class="tag" data-i18n="social_buzz_tag">Reddit + TikTok</span>
                         </div>
                       </div>
                     </div>
                     <div class="card__body">
-                      <p class="muted" data-i18n="resource_reddit_desc">Dokumentation för Reddit API.</p>
+                      <p class="muted" data-i18n="social_buzz_desc">Var diskussionerna sker.</p>
                       <div class="controls-row">
                         <div class="search">
                           <label class="sr-only" for="redditSubreddit" data-i18n="resource_subreddit_label">Subreddit</label>
@@ -1370,13 +1305,121 @@
                           class="btn btn--ghost btn--small"
                           type="button"
                           data-action="reddit"
+                          data-i18n="social_buzz_reddit"
+                        >
+                          Reddit
+                        </button>
+                      </div>
+                      <div class="muted" id="redditNote" style="margin-top: 10px;"></div>
+                      <ul class="list" id="redditList"></ul>
+
+                      <div class="controls-row" style="margin-top: 14px;">
+                        <div class="search">
+                          <label class="sr-only" for="searchapiTiktokQuery" data-i18n="resource_query_label">Sökterm</label>
+                          <input
+                            id="searchapiTiktokQuery"
+                            type="search"
+                            autocomplete="off"
+                            value="skincare"
+                            data-i18n-placeholder="resource_query_placeholder"
+                            placeholder="Skriv en sökfråga..."
+                          />
+                        </div>
+                        <button
+                          class="btn btn--ghost btn--small"
+                          type="button"
+                          data-action="searchapi-tiktok"
+                          data-i18n="social_buzz_tiktok"
+                        >
+                          TikTok
+                        </button>
+                      </div>
+                      <div class="muted" id="searchapiTiktokNote" style="margin-top: 10px;"></div>
+                      <ul class="list" id="searchapiTiktokList"></ul>
+                    </div>
+                  </article>
+
+                  <article class="card card--resource" id="launch-pad">
+                    <div class="card__header">
+                      <div class="card__heading">
+                        <span class="icon-circle" aria-hidden="true">LP</span>
+                        <div>
+                          <h2 data-i18n="launch_pad_title">Launch Pad</h2>
+                          <span class="tag" data-i18n="launch_pad_tag">Product Hunt</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card__body">
+                      <p class="muted" data-i18n="launch_pad_desc">Nya konkurrenter på marknaden.</p>
+                      <div class="controls-row">
+                        <button
+                          class="btn btn--ghost btn--small"
+                          type="button"
+                          data-action="producthunt"
                           data-i18n="resource_fetch"
                         >
                           Hämta
                         </button>
                       </div>
-                      <div class="muted" id="redditNote" style="margin-top: 10px;"></div>
-                      <ul class="list" id="redditList"></ul>
+                      <div class="muted" id="producthuntNote" style="margin-top: 10px;"></div>
+                      <ul class="list" id="producthuntList"></ul>
+                    </div>
+                  </article>
+
+                  <article class="card card--resource" id="api-docs">
+                    <div class="card__header">
+                      <div class="card__heading">
+                        <span class="icon-circle" aria-hidden="true">API</span>
+                        <div>
+                          <h2 data-i18n="radar_resources_title">API-resurser</h2>
+                          <span class="tag" data-i18n="resource_tag_docs">Docs</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card__body">
+                      <p class="muted" data-i18n="radar_resources_desc">Snabblänkar till endpoints och dokumentation.</p>
+                      <ul class="list">
+                        <li class="list__item">
+                          <span class="rank">01</span>
+                          <div class="list__text">
+                            <span class="list__title">SearchAPI Google</span>
+                            <span class="list__meta">searchapi.io/api/v1/search?engine=google</span>
+                          </div>
+                          <a class="list__link" href="https://www.searchapi.io/api/v1/search?engine=google" target="_blank" rel="noopener" data-i18n="open">Öppna</a>
+                        </li>
+                        <li class="list__item">
+                          <span class="rank">02</span>
+                          <div class="list__text">
+                            <span class="list__title">SearchAPI TikTok Ads Library</span>
+                            <span class="list__meta">searchapi.io/api/v1/search?engine=tiktok_ads_library</span>
+                          </div>
+                          <a class="list__link" href="https://www.searchapi.io/api/v1/search?engine=tiktok_ads_library" target="_blank" rel="noopener" data-i18n="open">Öppna</a>
+                        </li>
+                        <li class="list__item">
+                          <span class="rank">03</span>
+                          <div class="list__text">
+                            <span class="list__title">SearchAPI Google Trends</span>
+                            <span class="list__meta">searchapi.io/api/v1/search?engine=google_trends</span>
+                          </div>
+                          <a class="list__link" href="https://www.searchapi.io/api/v1/search?engine=google_trends" target="_blank" rel="noopener" data-i18n="open">Öppna</a>
+                        </li>
+                        <li class="list__item">
+                          <span class="rank">04</span>
+                          <div class="list__text">
+                            <span class="list__title">Product Hunt API Docs</span>
+                            <span class="list__meta">api.producthunt.com/v2/docs</span>
+                          </div>
+                          <a class="list__link" href="https://api.producthunt.com/v2/docs" target="_blank" rel="noopener" data-i18n="open">Öppna</a>
+                        </li>
+                        <li class="list__item">
+                          <span class="rank">05</span>
+                          <div class="list__text">
+                            <span class="list__title">Reddit API Docs</span>
+                            <span class="list__meta">reddit.com/dev/api</span>
+                          </div>
+                          <a class="list__link" href="https://www.reddit.com/dev/api/" target="_blank" rel="noopener" data-i18n="open">Öppna</a>
+                        </li>
+                      </ul>
                     </div>
                   </article>
                 </div>
@@ -1422,20 +1465,13 @@
 
     <script>
       const state = {
-        lang: "sv",
-        data: {
-          google: [],
-          tiktok: [],
-          trends: [],
-          producthunt: [],
-          reddit: []
-        }
+        lang: "sv"
       };
 
       const endpoints = {
-        google: "/api/searchapi-google",
+        trends: "/api/serpapi-trends",
         tiktok: "/api/searchapi-tiktok",
-        trends: "/api/searchapi-trends",
+        builtwith: "/api/builtwith",
         producthunt: "/api/producthunt",
         reddit: "/api/reddit"
       };
@@ -1443,15 +1479,15 @@
       const elements = {
         updatedAt: document.getElementById("updatedAt"),
         refreshBtn: document.getElementById("refreshBtn"),
-        searchapiGoogleQuery: document.getElementById("searchapiGoogleQuery"),
-        searchapiGoogleList: document.getElementById("searchapiGoogleList"),
-        searchapiGoogleNote: document.getElementById("searchapiGoogleNote"),
         searchapiTiktokQuery: document.getElementById("searchapiTiktokQuery"),
         searchapiTiktokList: document.getElementById("searchapiTiktokList"),
         searchapiTiktokNote: document.getElementById("searchapiTiktokNote"),
         searchapiTrendsQuery: document.getElementById("searchapiTrendsQuery"),
         searchapiTrendsList: document.getElementById("searchapiTrendsList"),
         searchapiTrendsNote: document.getElementById("searchapiTrendsNote"),
+        builtwithQuery: document.getElementById("builtwithQuery"),
+        builtwithList: document.getElementById("builtwithList"),
+        builtwithNote: document.getElementById("builtwithNote"),
         producthuntList: document.getElementById("producthuntList"),
         producthuntNote: document.getElementById("producthuntNote"),
         redditSubreddit: document.getElementById("redditSubreddit"),
@@ -1470,12 +1506,12 @@
           page_title: "Ava Growth Radar",
           growth_signals_api: "Growth Signals API",
           radar_title: "Growth Radar",
-          radar_nav_overview: "Radar",
-          radar_nav_sources: "API-källor",
-          radar_nav_signals: "Signalspaning",
-          radar_nav_workspace: "Workspace",
-          radar_nav_campaigns: "Kampanjer",
-          radar_nav_performance: "Performance",
+          radar_nav_overview: "Översikt",
+          radar_nav_sources: "Search Pulse",
+          radar_nav_signals: "Tech Shift",
+          radar_nav_workspace: "Signals",
+          radar_nav_campaigns: "Social Buzz",
+          radar_nav_performance: "Launch Pad",
           radar_search_placeholder: "Sök trender, plattformar eller insikter...",
           radar_kpi_1_label: "Signalstyrka",
           radar_kpi_1_value: "Hög aktivitet",
@@ -1489,9 +1525,26 @@
           radar_board_title: "Channel Pulse",
           radar_board_desc: "Snabb överblick av signalstyrka per kanal.",
           radar_board_tag: "Live",
-          radar_sources_title: "API-källor",
-          radar_sources_desc: "Hämta live-data från dina viktigaste marknads-API:er.",
+          radar_sources_title: "Growth Signals",
+          radar_sources_desc: "Koppla API:er och följ förändringar i marknaden.",
           radar_sources_tag: "Live",
+          radar_resources_title: "API-resurser",
+          radar_resources_desc: "Snabblänkar till endpoints och dokumentation.",
+          search_pulse_title: "Search Pulse",
+          search_pulse_tag: "SerpApi · Google Trends",
+          search_pulse_desc: "Vad konsumenter letar efter.",
+          tech_shift_title: "Tech Shift",
+          tech_shift_tag: "BuiltWith",
+          tech_shift_desc: "Vilka verktyg som vinner marknad.",
+          tech_shift_placeholder: "Domän att analysera...",
+          social_buzz_title: "Social Buzz",
+          social_buzz_tag: "Reddit + TikTok",
+          social_buzz_desc: "Var diskussionerna sker.",
+          social_buzz_reddit: "Reddit",
+          social_buzz_tiktok: "TikTok",
+          launch_pad_title: "Launch Pad",
+          launch_pad_tag: "Product Hunt",
+          launch_pad_desc: "Nya konkurrenter på marknaden.",
           hero_desc: "Live-signaler för growth-team. Se vad som spikar, vad som skiftar och var efterfrågan byggs.",
           updated_label: "Uppdaterad",
           refresh: "Uppdatera",
@@ -1508,12 +1561,10 @@
           resource_empty: "Inga resultat.",
           resource_error: "Kunde inte hämta data just nu.",
           resource_missing_key: "API-nyckel saknas i servern.",
-          resource_searchapi_google_title: "SearchAPI – Google",
-          resource_searchapi_google_desc: "API-endpoint för Google-sök.",
-          resource_searchapi_tiktok_title: "SearchAPI – TikTok Ads Library",
+          resource_searchapi_tiktok_title: "TikTok Ads Library",
           resource_searchapi_tiktok_desc: "API-endpoint för TikTok Ads Library.",
-          resource_searchapi_trends_title: "SearchAPI – Google Trends",
-          resource_searchapi_trends_desc: "API-endpoint för Google Trends.",
+          resource_searchapi_trends_title: "Google Trends",
+          resource_searchapi_trends_desc: "Trenddata via SerpApi.",
           resource_producthunt_title: "Product Hunt API",
           resource_producthunt_desc: "Dokumentation för Product Hunt API.",
           resource_reddit_title: "Reddit API",
@@ -1536,12 +1587,12 @@
           page_title: "Ava Growth Radar",
           growth_signals_api: "Growth Signals API",
           radar_title: "Growth Radar",
-          radar_nav_overview: "Radar",
-          radar_nav_sources: "API sources",
-          radar_nav_signals: "Signal watch",
-          radar_nav_workspace: "Workspace",
-          radar_nav_campaigns: "Campaigns",
-          radar_nav_performance: "Performance",
+          radar_nav_overview: "Overview",
+          radar_nav_sources: "Search Pulse",
+          radar_nav_signals: "Tech Shift",
+          radar_nav_workspace: "Signals",
+          radar_nav_campaigns: "Social Buzz",
+          radar_nav_performance: "Launch Pad",
           radar_search_placeholder: "Search trends, platforms, or insights...",
           radar_kpi_1_label: "Signal strength",
           radar_kpi_1_value: "High activity",
@@ -1555,9 +1606,26 @@
           radar_board_title: "Channel Pulse",
           radar_board_desc: "Quick view of signal strength by channel.",
           radar_board_tag: "Live",
-          radar_sources_title: "API sources",
-          radar_sources_desc: "Pull live data from your key marketing APIs.",
+          radar_sources_title: "Growth Signals",
+          radar_sources_desc: "Connect APIs and track market shifts in one view.",
           radar_sources_tag: "Live",
+          radar_resources_title: "API resources",
+          radar_resources_desc: "Quick links to endpoints and docs.",
+          search_pulse_title: "Search Pulse",
+          search_pulse_tag: "SerpApi · Google Trends",
+          search_pulse_desc: "What consumers are searching for.",
+          tech_shift_title: "Tech Shift",
+          tech_shift_tag: "BuiltWith",
+          tech_shift_desc: "Which tools are winning market share.",
+          tech_shift_placeholder: "Domain to analyze...",
+          social_buzz_title: "Social Buzz",
+          social_buzz_tag: "Reddit + TikTok",
+          social_buzz_desc: "Where the conversations happen.",
+          social_buzz_reddit: "Reddit",
+          social_buzz_tiktok: "TikTok",
+          launch_pad_title: "Launch Pad",
+          launch_pad_tag: "Product Hunt",
+          launch_pad_desc: "New competitors entering the market.",
           hero_desc: "Live signals for growth teams. Track what is spiking, what is shifting, and where demand is forming.",
           updated_label: "Updated",
           refresh: "Refresh",
@@ -1574,12 +1642,10 @@
           resource_empty: "No results.",
           resource_error: "Could not load data right now.",
           resource_missing_key: "Missing API key on the server.",
-          resource_searchapi_google_title: "SearchAPI – Google",
-          resource_searchapi_google_desc: "API endpoint for Google search.",
-          resource_searchapi_tiktok_title: "SearchAPI – TikTok Ads Library",
+          resource_searchapi_tiktok_title: "TikTok Ads Library",
           resource_searchapi_tiktok_desc: "API endpoint for TikTok Ads Library.",
-          resource_searchapi_trends_title: "SearchAPI – Google Trends",
-          resource_searchapi_trends_desc: "API endpoint for Google Trends.",
+          resource_searchapi_trends_title: "Google Trends",
+          resource_searchapi_trends_desc: "Trend data via SerpApi.",
           resource_producthunt_title: "Product Hunt API",
           resource_producthunt_desc: "Product Hunt API documentation.",
           resource_reddit_title: "Reddit API",
@@ -1639,7 +1705,7 @@
             "&": "&amp;",
             "<": "&lt;",
             ">": "&gt;",
-            """: "&quot;",
+            "\"": "&quot;",
             "'": "&#39;"
           };
           return map[match] || match;
@@ -1755,14 +1821,14 @@
         document.querySelectorAll("[data-action]").forEach((btn) => {
           btn.addEventListener("click", () => {
             const action = btn.dataset.action;
-            if (action === "searchapi-google") {
-              loadSearchApi("google", elements.searchapiGoogleQuery.value, elements.searchapiGoogleNote, elements.searchapiGoogleList);
-            }
             if (action === "searchapi-tiktok") {
               loadSearchApi("tiktok", elements.searchapiTiktokQuery.value, elements.searchapiTiktokNote, elements.searchapiTiktokList);
             }
-            if (action === "searchapi-trends") {
+            if (action === "serpapi-trends") {
               loadSearchApi("trends", elements.searchapiTrendsQuery.value, elements.searchapiTrendsNote, elements.searchapiTrendsList);
+            }
+            if (action === "builtwith") {
+              loadSearchApi("builtwith", elements.builtwithQuery.value, elements.builtwithNote, elements.builtwithList);
             }
             if (action === "producthunt") {
               loadProductHunt();
@@ -1776,9 +1842,9 @@
         if (elements.refreshBtn) {
           elements.refreshBtn.addEventListener("click", () => {
             updateTimestamp();
-            loadSearchApi("google", elements.searchapiGoogleQuery.value, elements.searchapiGoogleNote, elements.searchapiGoogleList);
             loadSearchApi("tiktok", elements.searchapiTiktokQuery.value, elements.searchapiTiktokNote, elements.searchapiTiktokList);
             loadSearchApi("trends", elements.searchapiTrendsQuery.value, elements.searchapiTrendsNote, elements.searchapiTrendsList);
+            loadSearchApi("builtwith", elements.builtwithQuery.value, elements.builtwithNote, elements.builtwithList);
             loadProductHunt();
             loadReddit(elements.redditSubreddit.value || "marketing");
           });

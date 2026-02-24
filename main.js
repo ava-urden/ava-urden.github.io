@@ -96,9 +96,9 @@ const dict = {
       "Det här är en kortare, lättläst projektsida. Jag fyller på med mer detaljer och resultat när nästa version är klar.",
     mini1_privacy_link: "Integritetspolicy →",
     modal_close: "Stäng",
-    privacy_tabless_title: "Integritetspolicy – Senmoccc Tab Manager",
+    privacy_tabless_title: "Integritetspolicy – TabManager",
     privacy_tabless_intro:
-      "Senmoccc Tab Manager lagrar dina samlingar lokalt i webbläsaren. Ingen data skickas till externa servrar.",
+      "TabManager lagrar dina samlingar lokalt i webbläsaren. Ingen data skickas till externa servrar.",
     privacy_tabless_updated: "Senast uppdaterad: 20 februari 2026.",
     privacy_tabless_data_title: "Data som lagras",
     privacy_tabless_data_list:
@@ -550,9 +550,9 @@ const dict = {
       "This is a short, easy-to-read project page. I’ll add more details and results as the next version ships.",
     mini1_privacy_link: "Privacy policy →",
     modal_close: "Close",
-    privacy_tabless_title: "Privacy Policy – Senmoccc Tab Manager",
+    privacy_tabless_title: "Privacy Policy – TabManager",
     privacy_tabless_intro:
-      "Senmoccc Tab Manager stores your collections locally in the browser. No data is sent to external servers.",
+      "TabManager stores your collections locally in the browser. No data is sent to external servers.",
     privacy_tabless_updated: "Last updated: February 20, 2026.",
     privacy_tabless_data_title: "Data stored",
     privacy_tabless_data_list:
