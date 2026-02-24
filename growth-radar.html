@@ -270,7 +270,7 @@
       .radar-app {
         display: grid;
         gap: 24px;
-        grid-template-columns: 240px 1fr;
+        grid-template-columns: 1fr; /* Updated to use full width */
         align-items: start;
       }
 
@@ -1083,24 +1083,7 @@
           <a href="index.html#mini" class="back-link" data-i18n="back_to_mini">← Tillbaka till små projekt</a>
 
           <div class="radar-app">
-            <aside class="radar-side">
-              <div class="radar-brand">
-                <div class="radar-mark">GR</div>
-                <div>
-                  <h1 data-i18n="page_title">Ava Growth Radar</h1>
-                  <p data-i18n="growth_signals_api">Growth Signals API</p>
-                </div>
-              </div>
-              <nav class="radar-nav">
-                <a class="is-active" href="#signals"><span class="radar-nav__badge">01</span><span data-i18n="radar_nav_overview">Översikt</span></a>
-                <a href="#search-pulse"><span class="radar-nav__badge">02</span><span data-i18n="radar_nav_sources">Search Pulse</span></a>
-                <a href="#tech-shift"><span class="radar-nav__badge">03</span><span data-i18n="radar_nav_signals">Tech Shift</span></a>
-                <div class="radar-nav__label" data-i18n="radar_nav_workspace">Signals</div>
-                <a href="#social-buzz"><span class="radar-nav__badge">04</span><span data-i18n="radar_nav_campaigns">Social Buzz</span></a>
-                <a href="#launch-pad"><span class="radar-nav__badge">05</span><span data-i18n="radar_nav_performance">Launch Pad</span></a>
-              </nav>
-            </aside>
-
+            
             <div class="radar-main">
               <div class="radar-topbar">
                 <div class="radar-search">
