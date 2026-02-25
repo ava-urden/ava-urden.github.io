@@ -4,13 +4,6 @@
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>Growth Radar | Ava Urdén</title>
-<<<<<<< HEAD
-    
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-    
-=======
 
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
@@ -18,7 +11,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet"/>
 
->>>>>>> 582ad6e (Redesign growth-radar with modern 7-panel live dashboard)
     <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
@@ -50,12 +42,7 @@
         .custom-scrollbar::-webkit-scrollbar { width: 6px; }
         .custom-scrollbar::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
         .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
-<<<<<<< HEAD
-        
-        /* Skeleton animation */
-=======
 
->>>>>>> 582ad6e (Redesign growth-radar with modern 7-panel live dashboard)
         @keyframes shimmer { 100% { transform: translateX(100%); } }
         .skeleton-bar {
             position: relative; overflow: hidden; background: #e2e8f0; border-radius: 8px;
@@ -65,8 +52,6 @@
             background: linear-gradient(90deg, transparent, rgba(255,255,255,0.5), transparent);
             animation: shimmer 1.5s infinite;
         }
-<<<<<<< HEAD
-=======
 
         @keyframes fadeIn { from { opacity:0; transform: translateY(8px); } to { opacity:1; transform: translateY(0); } }
         .fade-in { animation: fadeIn 0.4s ease forwards; }
@@ -101,18 +86,13 @@
             padding: 4px 10px; border-radius: 9999px;
             font-size: 11px; font-weight: 600;
         }
->>>>>>> 582ad6e (Redesign growth-radar with modern 7-panel live dashboard)
     </style>
 </head>
 <body class="bg-background-light text-slate-900 antialiased flex flex-col min-h-screen">
 
     <header class="h-20 flex items-center justify-between px-6 md:px-12 bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-slate-200">
         <a href="index.html#top" class="font-bold text-lg tracking-[0.2em] uppercase" data-i18n="logo_text">A.U. Portfolio</a>
-<<<<<<< HEAD
-        
-=======
 
->>>>>>> 582ad6e (Redesign growth-radar with modern 7-panel live dashboard)
         <nav class="hidden md:flex gap-8 text-xs font-bold uppercase tracking-[0.2em] text-slate-500">
             <a href="index.html#about" class="hover:text-slate-900 transition-colors" data-i18n="nav_about">Om mig</a>
             <a href="index.html#cases" class="hover:text-slate-900 transition-colors" data-i18n="nav_cases">Utvalda projekt</a>
@@ -129,30 +109,6 @@
     </header>
 
     <main class="flex-1 w-full max-w-7xl mx-auto px-6 md:px-12 py-8 space-y-8">
-<<<<<<< HEAD
-        
-        <div>
-            <a href="index.html#mini" class="inline-flex items-center gap-2 px-4 py-2 bg-white border border-slate-200 rounded-lg shadow-sm hover:shadow-md transition-all text-sm font-bold text-slate-700">
-                <span aria-hidden="true">←</span> 
-                <span data-i18n="back_to_mini">Tillbaka till små projekt</span>
-            </a>
-        </div>
-        
-        <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mt-4">
-            <div>
-                <p class="text-xs font-bold text-slate-400 uppercase tracking-[0.2em] mb-2" data-i18n="growth_signals_api">Growth Signals API</p>
-                <h1 class="text-4xl md:text-5xl font-bold mb-3 tracking-tight" data-i18n="radar_title">Growth Radar</h1>
-                <p class="text-slate-500 max-w-xl text-sm md:text-base" data-i18n="hero_desc">Live-signaler för growth-team. Se vad som spikar, vad som skiftar och var efterfrågan byggs.</p>
-            </div>
-            <div class="flex flex-col items-end gap-3">
-                <div class="text-xs font-medium text-slate-400 text-right">
-                    <span data-i18n="updated_label">Uppdaterad</span>
-                    <span id="updatedAt" class="text-slate-700 font-bold ml-1">--</span>
-                </div>
-                <button id="refreshBtn" class="flex items-center gap-2 px-5 py-2.5 bg-slate-900 text-white text-xs font-bold rounded-full hover:bg-slate-800 transition-all shadow-md hover:shadow-lg">
-                    <span class="material-symbols-outlined text-sm">refresh</span>
-                    <span data-i18n="refresh">Uppdatera data</span>
-=======
 
         <!-- BACK -->
         <div>
@@ -180,156 +136,10 @@
                 <button id="refreshBtn" class="flex items-center gap-2 px-5 py-2.5 bg-slate-900 text-white text-xs font-bold rounded-full hover:bg-slate-800 transition-all">
                     <span class="material-symbols-outlined text-sm">refresh</span>
                     Uppdatera allt
->>>>>>> 582ad6e (Redesign growth-radar with modern 7-panel live dashboard)
                 </button>
             </div>
         </div>
 
-<<<<<<< HEAD
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
-                <div class="flex justify-between items-start mb-4">
-                    <p class="text-slate-500 text-sm font-medium" data-i18n="radar_kpi_1_label">Signalstyrka</p>
-                    <span class="text-green-600 text-xs font-bold bg-green-50 px-2 py-1 rounded-lg border border-green-100" data-i18n="radar_kpi_1_note">+18% senaste 24h</span>
-                </div>
-                <div class="flex items-end justify-between">
-                    <h3 class="text-2xl font-bold" data-i18n="radar_kpi_1_value">Hög aktivitet</h3>
-                    <div class="w-24 h-12 flex items-end gap-1">
-                        <div class="w-full bg-primary/30 h-1/3 rounded-t-sm"></div>
-                        <div class="w-full bg-primary/30 h-2/3 rounded-t-sm"></div>
-                        <div class="w-full bg-primary/30 h-1/2 rounded-t-sm"></div>
-                        <div class="w-full bg-primary/60 h-4/5 rounded-t-sm"></div>
-                        <div class="w-full bg-primary h-full rounded-t-sm"></div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
-                <div class="flex justify-between items-start mb-4">
-                    <p class="text-slate-500 text-sm font-medium" data-i18n="radar_kpi_2_label">Trendfokus</p>
-                    <span class="text-blue-600 text-xs font-bold bg-blue-50 px-2 py-1 rounded-lg border border-blue-100">Live</span>
-                </div>
-                <div class="flex items-end justify-between">
-                    <h3 class="text-2xl font-bold" data-i18n="radar_kpi_2_value">AI Search</h3>
-                    <div class="w-24 h-12 flex items-end gap-1">
-                        <div class="w-full bg-secondary/30 h-2/3 rounded-t-sm"></div>
-                        <div class="w-full bg-secondary/30 h-1/2 rounded-t-sm"></div>
-                        <div class="w-full bg-secondary/60 h-full rounded-t-sm"></div>
-                        <div class="w-full bg-secondary/30 h-3/4 rounded-t-sm"></div>
-                        <div class="w-full bg-secondary h-4/5 rounded-t-sm"></div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
-                <div class="flex justify-between items-start mb-4">
-                    <p class="text-slate-500 text-sm font-medium" data-i18n="radar_kpi_3_label">API-status</p>
-                    <span class="text-slate-600 text-xs font-bold bg-slate-100 px-2 py-1 rounded-lg border border-slate-200">Proxy Active</span>
-                </div>
-                <div class="flex items-end justify-between">
-                    <h3 class="text-2xl font-bold" data-i18n="radar_kpi_3_value">Redo att hämta</h3>
-                    <div class="w-24 h-12 flex items-end gap-1">
-                        <div class="w-full bg-slate-200 h-full rounded-t-sm"></div>
-                        <div class="w-full bg-slate-200 h-3/4 rounded-t-sm"></div>
-                        <div class="w-full bg-slate-200 h-4/5 rounded-t-sm"></div>
-                        <div class="w-full bg-slate-200 h-1/2 rounded-t-sm"></div>
-                        <div class="w-full bg-slate-800 h-1/3 rounded-t-sm"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            
-            <div class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-slate-100 flex flex-col">
-                <div class="flex items-center gap-3 mb-2">
-                    <div class="w-10 h-10 rounded-full bg-primary/20 text-slate-800 flex items-center justify-center font-bold">SP</div>
-                    <div>
-                        <h2 class="text-lg font-bold" data-i18n="search_pulse_title">Search Pulse</h2>
-                        <p class="text-xs text-slate-500">Google Trends / Mock</p>
-                    </div>
-                </div>
-                <p class="text-sm text-slate-500 mb-6 flex-1" data-i18n="search_pulse_desc">Vad konsumenter letar efter.</p>
-                
-                <div class="flex gap-2 mb-4">
-                    <input id="searchapiTrendsQuery" type="text" value="ai tools" class="flex-1 bg-slate-50 border border-slate-200 text-sm rounded-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary/50" placeholder="Skriv en sökfråga...">
-                    <button data-action="serpapi-trends" class="bg-slate-900 text-white text-xs font-bold px-5 py-2 rounded-full hover:bg-slate-800 transition-colors" data-i18n="resource_fetch">Hämta</button>
-                </div>
-                <div class="text-xs text-slate-400 mb-2 h-4" id="searchapiTrendsNote"></div>
-                <ul class="space-y-3" id="searchapiTrendsList"></ul>
-            </div>
-
-            <div class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-slate-100 flex flex-col">
-                <div class="flex items-center gap-3 mb-2">
-                    <div class="w-10 h-10 rounded-full bg-secondary/30 text-slate-800 flex items-center justify-center font-bold">TS</div>
-                    <div>
-                        <h2 class="text-lg font-bold" data-i18n="tech_shift_title">Tech Shift</h2>
-                        <p class="text-xs text-slate-500">GitHub API Proxy</p>
-                    </div>
-                </div>
-                <p class="text-sm text-slate-500 mb-6 flex-1" data-i18n="tech_shift_desc">Vilka verktyg som vinner marknad.</p>
-                
-                <div class="flex gap-2 mb-4">
-                    <input id="builtwithQuery" type="text" value="javascript" class="flex-1 bg-slate-50 border border-slate-200 text-sm rounded-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-secondary/50" placeholder="Sök språk...">
-                    <button data-action="builtwith" class="bg-slate-900 text-white text-xs font-bold px-5 py-2 rounded-full hover:bg-slate-800 transition-colors" data-i18n="resource_fetch">Hämta</button>
-                </div>
-                <div class="text-xs text-slate-400 mb-2 h-4" id="builtwithNote"></div>
-                <ul class="space-y-3" id="builtwithList"></ul>
-            </div>
-
-            <div class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-slate-100 flex flex-col">
-                <div class="flex items-center gap-3 mb-2">
-                    <div class="w-10 h-10 rounded-full bg-purple-100 text-purple-700 flex items-center justify-center font-bold">SB</div>
-                    <div>
-                        <h2 class="text-lg font-bold" data-i18n="social_buzz_title">Social Buzz</h2>
-                        <p class="text-xs text-slate-500">Reddit / TikTok Proxy</p>
-                    </div>
-                </div>
-                <p class="text-sm text-slate-500 mb-6" data-i18n="social_buzz_desc">Var diskussionerna sker.</p>
-                
-                <div class="space-y-6 flex-1">
-                    <div>
-                        <div class="flex gap-2 mb-3">
-                            <input id="redditSubreddit" type="text" value="marketing" class="flex-1 bg-slate-50 border border-slate-200 text-sm rounded-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-purple-200" placeholder="Subreddit...">
-                            <button data-action="reddit" class="bg-slate-900 text-white text-xs font-bold px-5 py-2 rounded-full hover:bg-slate-800 transition-colors">Reddit</button>
-                        </div>
-                        <div class="text-xs text-slate-400 mb-2 h-4" id="redditNote"></div>
-                        <ul class="space-y-3" id="redditList"></ul>
-                    </div>
-                    
-                    <div class="border-t border-slate-100 pt-4">
-                        <div class="flex gap-2 mb-3">
-                            <input id="searchapiTiktokQuery" type="text" value="skincare" class="flex-1 bg-slate-50 border border-slate-200 text-sm rounded-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-purple-200" placeholder="TikTok sök...">
-                            <button data-action="searchapi-tiktok" class="bg-slate-900 text-white text-xs font-bold px-5 py-2 rounded-full hover:bg-slate-800 transition-colors">TikTok</button>
-                        </div>
-                        <div class="text-xs text-slate-400 mb-2 h-4" id="searchapiTiktokNote"></div>
-                        <ul class="space-y-3" id="searchapiTiktokList"></ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-slate-100 flex flex-col">
-                <div class="flex items-center gap-3 mb-2">
-                    <div class="w-10 h-10 rounded-full bg-orange-100 text-orange-600 flex items-center justify-center font-bold">LP</div>
-                    <div>
-                        <h2 class="text-lg font-bold" data-i18n="launch_pad_title">Launch Pad</h2>
-                        <p class="text-xs text-slate-500">Hacker News API</p>
-                    </div>
-                </div>
-                <p class="text-sm text-slate-500 mb-6 flex-1" data-i18n="launch_pad_desc">Nya konkurrenter på marknaden.</p>
-                
-                <div class="mb-4">
-                    <button data-action="producthunt" class="w-full bg-slate-900 text-white text-sm font-bold px-5 py-3 rounded-xl hover:bg-slate-800 transition-colors flex justify-center items-center gap-2">
-                        <span class="material-symbols-outlined text-sm">rocket_launch</span>
-                        <span data-i18n="resource_fetch">Hämta Startups</span>
-                    </button>
-                </div>
-                <div class="text-xs text-slate-400 mb-2 h-4" id="producthuntNote"></div>
-                <ul class="space-y-3" id="producthuntList"></ul>
-            </div>
-
-        </div>
-=======
         <!-- ROW 1: Trends + AI-nyheter -->
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
 
@@ -474,7 +284,6 @@
 
         </div>
 
->>>>>>> 582ad6e (Redesign growth-radar with modern 7-panel live dashboard)
     </main>
 
     <footer id="contact" class="bg-[#0b1220] text-white py-16 mt-12">
@@ -487,10 +296,6 @@
                     </p>
                     <a href="./cv/ava-urden-cv-sv.pdf" download class="inline-block px-8 py-3 bg-white text-slate-900 font-bold text-sm uppercase tracking-wider rounded-full hover:-translate-y-1 transition-transform" data-i18n="cta_cv">Ladda ner CV</a>
                 </div>
-<<<<<<< HEAD
-
-=======
->>>>>>> 582ad6e (Redesign growth-radar with modern 7-panel live dashboard)
                 <div class="flex flex-col gap-6 md:items-end">
                     <div>
                         <span class="block text-xs uppercase tracking-[0.2em] text-slate-500 mb-1" data-i18n="contact_email">Email</span>
@@ -513,205 +318,6 @@
     </footer>
 
     <script>
-<<<<<<< HEAD
-      const state = { lang: "sv" };
-
-      const elements = {
-        updatedAt: document.getElementById("updatedAt"),
-        refreshBtn: document.getElementById("refreshBtn"),
-        searchapiTiktokQuery: document.getElementById("searchapiTiktokQuery"),
-        searchapiTiktokList: document.getElementById("searchapiTiktokList"),
-        searchapiTiktokNote: document.getElementById("searchapiTiktokNote"),
-        searchapiTrendsQuery: document.getElementById("searchapiTrendsQuery"),
-        searchapiTrendsList: document.getElementById("searchapiTrendsList"),
-        searchapiTrendsNote: document.getElementById("searchapiTrendsNote"),
-        builtwithQuery: document.getElementById("builtwithQuery"),
-        builtwithList: document.getElementById("builtwithList"),
-        builtwithNote: document.getElementById("builtwithNote"),
-        producthuntList: document.getElementById("producthuntList"),
-        producthuntNote: document.getElementById("producthuntNote"),
-        redditSubreddit: document.getElementById("redditSubreddit"),
-        redditList: document.getElementById("redditList"),
-        redditNote: document.getElementById("redditNote")
-      };
-
-      function updateTimestamp() {
-        if (!elements.updatedAt) return;
-        const now = new Date();
-        elements.updatedAt.textContent = now.toLocaleString("sv-SE", {
-          year: "numeric", month: "short", day: "numeric", hour: "2-digit", minute: "2-digit"
-        });
-      }
-
-      function renderSkeleton(listEl, count = 4) {
-        if (!listEl) return;
-        listEl.innerHTML = Array.from({ length: count })
-          .map(() => `
-            <li class="flex items-center gap-4 p-3 rounded-xl bg-slate-50 border border-slate-100">
-                <div class="w-8 h-8 rounded-lg skeleton-bar shrink-0"></div>
-                <div class="flex-1 space-y-2">
-                    <div class="h-4 skeleton-bar w-3/4"></div>
-                    <div class="h-3 skeleton-bar w-1/2"></div>
-                </div>
-            </li>`)
-          .join("");
-      }
-
-      function renderList(listEl, items) {
-        if (!listEl) return;
-        if (!items || !items.length) {
-          listEl.innerHTML = `<li class="p-4 text-center text-sm text-slate-500 bg-slate-50 rounded-xl">Inga resultat.</li>`;
-          return;
-        }
-
-        listEl.innerHTML = items.map((item, index) => {
-            const title = item.title || "Untitled";
-            const meta = item.meta || "";
-            const url = item.url || "#";
-            const link = url !== "#"
-                ? `<a class="text-xs font-bold text-slate-600 hover:text-slate-900 bg-white border border-slate-200 px-3 py-1.5 rounded-lg shadow-sm hover:shadow transition-all" href="${url}" target="_blank" rel="noopener">Öppna</a>`
-                : `<span class="text-xs text-slate-400">Öppna</span>`;
-            
-            return `
-              <li class="flex items-center gap-4 p-3 rounded-xl bg-slate-50 border border-slate-100 hover:border-slate-300 transition-colors">
-                <span class="w-8 h-8 shrink-0 rounded-lg bg-white shadow-sm flex items-center justify-center font-bold text-xs text-slate-400">${String(index + 1).padStart(2, "0")}</span>
-                <div class="flex-1 min-w-0">
-                  <p class="text-sm font-bold text-slate-900 truncate">${title}</p>
-                  <p class="text-xs text-slate-500 truncate">${meta}</p>
-                </div>
-                ${link}
-              </li>
-            `;
-          }).join("");
-      }
-
-      function setNote(noteEl, message) {
-        if (!noteEl) return;
-        noteEl.textContent = message || "";
-      }
-
-      // API Logic with Proxies
-      async function loadTechShift(query) {
-        setNote(elements.builtwithNote, "");
-        renderSkeleton(elements.builtwithList, 4);
-        try {
-          const searchTerm = query || "javascript";
-          const targetUrl = `https://api.github.com/search/repositories?q=${encodeURIComponent(searchTerm)}+created:>2025-01-01&sort=stars&order=desc`;
-          const res = await fetch(`https://api.allorigins.win/raw?url=${encodeURIComponent(targetUrl)}`);
-          if (!res.ok) throw new Error("API Limit");
-          const data = await res.json();
-          
-          const results = data.items.slice(0, 4).map(repo => ({
-            title: repo.name,
-            meta: `⭐ ${repo.stargazers_count} stars · ${repo.language || 'Code'}`,
-            url: repo.html_url
-          }));
-          renderList(elements.builtwithList, results);
-        } catch (err) {
-          setNote(elements.builtwithNote, "Visar cachad data pga rate limit.");
-          renderList(elements.builtwithList, [
-            { title: "next.js", meta: "⭐ 120k stars · TypeScript", url: "https://github.com/vercel/next.js" },
-            { title: "supabase", meta: "⭐ 65k stars · TypeScript", url: "https://github.com/supabase/supabase" }
-          ]);
-        }
-      }
-
-      async function loadLaunchPad() {
-        setNote(elements.producthuntNote, "");
-        renderSkeleton(elements.producthuntList, 4);
-        try {
-          const targetUrl = `https://hn.algolia.com/api/v1/search_by_date?tags=show_hn&hitsPerPage=4`;
-          const res = await fetch(`https://api.allorigins.win/raw?url=${encodeURIComponent(targetUrl)}`);
-          if (!res.ok) throw new Error("Network error");
-          const data = await res.json();
-          const results = data.hits.map(hit => ({
-            title: hit.title.replace("Show HN: ", "").substring(0, 50) + "...",
-            meta: `↑ ${hit.points} points · ${hit.author}`,
-            url: hit.url || `https://news.ycombinator.com/item?id=${hit.objectID}`
-          }));
-          renderList(elements.producthuntList, results);
-        } catch (err) {
-          setNote(elements.producthuntNote, "Kunde inte hämta data.");
-          renderList(elements.producthuntList, []);
-        }
-      }
-
-      async function loadReddit(subreddit) {
-        setNote(elements.redditNote, "");
-        renderSkeleton(elements.redditList, 3);
-        try {
-          const sub = subreddit || "marketing";
-          const targetUrl = `https://www.reddit.com/r/${sub}/hot.json?limit=3`;
-          const res = await fetch(`https://api.allorigins.win/raw?url=${encodeURIComponent(targetUrl)}`);
-          if (!res.ok) throw new Error("API Limit");
-          const data = await res.json();
-          const results = data.data.children.map(child => ({
-            title: child.data.title.substring(0, 50) + "...",
-            meta: `👍 ${child.data.ups} upvotes · r/${child.data.subreddit}`,
-            url: `https://reddit.com${child.data.permalink}`
-          }));
-          renderList(elements.redditList, results);
-        } catch (err) {
-          setNote(elements.redditNote, "Kunde inte hämta data.");
-          renderList(elements.redditList, []);
-        }
-      }
-
-      function loadMockTrends() {
-        renderSkeleton(elements.searchapiTrendsList, 4);
-        setTimeout(() => {
-          renderList(elements.searchapiTrendsList, [
-            { title: elements.searchapiTrendsQuery.value || "AI Agents", meta: "Trending +142% i Sverige", url: "#" },
-            { title: "Growth Hacking B2B", meta: "Trending +45% globalt", url: "#" },
-            { title: "Marketing Automation", meta: "Stabil sökvolym", url: "#" },
-            { title: "TikTok SEO", meta: "Trending +88% globalt", url: "#" }
-          ]);
-        }, 600);
-      }
-
-      function loadMockTikTok() {
-        renderSkeleton(elements.searchapiTiktokList, 3);
-        setTimeout(() => {
-          renderList(elements.searchapiTiktokList, [
-            { title: `#${elements.searchapiTiktokQuery.value || 'skincare'}`, meta: "1.2B views · Hög interaktion", url: "#" },
-            { title: "#ugccreator", meta: "850M views", url: "#" },
-            { title: "#marketingtips", meta: "420M views", url: "#" }
-          ]);
-        }, 600);
-      }
-
-      function fetchAllData() {
-        updateTimestamp();
-        loadMockTrends();
-        loadMockTikTok();
-        loadTechShift(elements.builtwithQuery.value);
-        loadLaunchPad();
-        loadReddit(elements.redditSubreddit.value);
-      }
-
-      function attachEvents() {
-        document.querySelectorAll("[data-action]").forEach((btn) => {
-          btn.addEventListener("click", () => {
-            const action = btn.dataset.action;
-            if (action === "serpapi-trends") loadMockTrends();
-            if (action === "searchapi-tiktok") loadMockTikTok();
-            if (action === "builtwith") loadTechShift(elements.builtwithQuery.value);
-            if (action === "producthunt") loadLaunchPad();
-            if (action === "reddit") loadReddit(elements.redditSubreddit.value);
-          });
-        });
-
-        if (elements.refreshBtn) {
-          elements.refreshBtn.addEventListener("click", fetchAllData);
-        }
-      }
-
-      attachEvents();
-      fetchAllData();
-    </script>
-</body>
-</html>
-=======
       function updateTimestamp() {
         const el = document.getElementById("updatedAt");
         if (el) el.textContent = new Date().toLocaleString("sv-SE", { month:"short", day:"numeric", hour:"2-digit", minute:"2-digit" });
@@ -940,4 +546,3 @@
     </script>
 </body>
 </html>
->>>>>>> 582ad6e (Redesign growth-radar with modern 7-panel live dashboard)
