@@ -62,13 +62,13 @@ const dict = {
     mini_item_2_desc:
       "Ett live-dashboard som hämtar aktuella tillväxtsignaler från Google Trends, Hacker News och Reddit – presenterat i realtid.",
     mini_item_2_cta: "Läs mer",
-    mini_item_3_media: "Plugin",
-    mini_item_3_tag: "Plugin",
-    mini_item_3_status: "Pågående",
-    mini_item_3_title: "Lönsam tillväxt 2026",
+    mini_item_3_media: "Whitepaper",
+    mini_item_3_tag: "Whitepaper",
+    mini_item_3_status: "Klar",
+    mini_item_3_title: "Att starta en e-handel 2026",
     mini_item_3_desc:
-      "De flesta e-handlare misslyckas inte för att annonserna är dåliga – de försöker skala innan verksamheten är redo.",
-    mini_item_3_cta: "Kommer snart",
+      "Jag har samlat mina vassaste insikter från det senaste året – från rapporter, föreläsningar och poddar med branschproffs. Det här är saker som faktiskt kommer påverka e-handel 2026 och du vill inte missa dem.",
+    mini_item_3_cta: "Läs mer",
     lead_eyebrow: "Whitepaper",
     lead_title: "Automation Toolkit 2026",
     lead_body:
@@ -561,13 +561,13 @@ const dict = {
     mini_item_2_desc:
       "A live dashboard pulling current growth signals from Google Trends, Hacker News and Reddit – displayed in real time.",
     mini_item_2_cta: "Read more",
-    mini_item_3_media: "Plugin",
-    mini_item_3_tag: "Plugin",
-    mini_item_3_status: "In progress",
-    mini_item_3_title: "Profitable Growth in 2026",
+    mini_item_3_media: "Whitepaper",
+    mini_item_3_tag: "Whitepaper",
+    mini_item_3_status: "Live",
+    mini_item_3_title: "Starting an e-commerce in 2026",
     mini_item_3_desc:
-      "Most e-commerce brands don't fail because of bad ads. They fail because they try to scale before the business is ready.",
-    mini_item_3_cta: "Coming soon",
+      "I've gathered my sharpest insights from the past year – from reports, lectures and podcasts with industry experts. These are things that will actually impact e-commerce in 2026, and you don't want to miss them.",
+    mini_item_3_cta: "Read more",
     lead_eyebrow: "Whitepaper",
     lead_title: "Automation Toolkit 2026",
     lead_body:
