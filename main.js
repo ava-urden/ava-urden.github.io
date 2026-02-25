@@ -60,7 +60,7 @@ const dict = {
     mini_item_2_status: "Pågående",
     mini_item_2_title: "Growth Signals API",
     mini_item_2_desc:
-      "Plats för API-projekt och endpoints jag bygger för att samla in och tolka tillväxtdata.",
+      "Ett live-dashboard som hämtar aktuella tillväxtsignaler från Google Trends, Hacker News och Reddit – presenterat i realtid.",
     mini_item_2_cta: "Läs mer",
     mini_item_3_media: "Plugin",
     mini_item_3_tag: "Plugin",
@@ -559,7 +559,7 @@ const dict = {
     mini_item_2_status: "In progress",
     mini_item_2_title: "Growth Signals API",
     mini_item_2_desc:
-      "Space for API projects and endpoints I’m building to collect and interpret growth data.",
+      "A live dashboard pulling current growth signals from Google Trends, Hacker News and Reddit – displayed in real time.",
     mini_item_2_cta: "Read more",
     mini_item_3_media: "Plugin",
     mini_item_3_tag: "Plugin",
