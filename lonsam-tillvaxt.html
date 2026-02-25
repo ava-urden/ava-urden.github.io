@@ -548,11 +548,19 @@
         // Submit form to hidden iframe → Apps Script responds via postMessage
         form.action = APPS_SCRIPT_URL;
         form.submit();
+
+        // Fallback: reveal download after 5 s if no postMessage received
+        // (handles Workspace domain restrictions or iframe cross-origin issues)
+        var fallbackTimer = setTimeout(revealDownload, 5000);
+
+        // Store timer so the message handler can cancel it
+        form._fallbackTimer = fallbackTimer;
       });
 
       // Listen for response from Apps Script
       window.addEventListener("message", function (ev) {
         if (!ev.data) return;
+        clearTimeout(form._fallbackTimer);
         if (ev.data.ok === true) {
           revealDownload();
         } else if (ev.data.ok === false) {
