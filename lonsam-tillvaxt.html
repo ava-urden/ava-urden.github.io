@@ -86,41 +86,6 @@
         margin-top: 1rem;
       }
 
-      /* ── Locked preview ── */
-      .locked-preview {
-        position: relative;
-        overflow: hidden;
-        border-radius: 8px;
-        border: 1px solid rgba(11,18,32,0.1);
-        padding: 1.5rem;
-        background: #fff;
-        margin-bottom: 2rem;
-      }
-      .locked-preview__blur {
-        filter: blur(4px);
-        pointer-events: none;
-        user-select: none;
-        opacity: 0.5;
-      }
-      .locked-preview__overlay {
-        position: absolute;
-        inset: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 0.5rem;
-      }
-      .lock-icon {
-        font-size: 1.75rem;
-      }
-      .lock-label {
-        font-size: 0.85rem;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 0.06em;
-        color: #444;
-      }
 
       /* ── Spinner ── */
       .btn--submitting {
@@ -253,25 +218,6 @@
       <section id="lead-form" class="section-block lead-section">
         <div class="container">
           <div class="lead-form-card gate-wrap">
-
-            <!-- ── Locked preview ── -->
-            <div class="locked-preview">
-              <div class="locked-preview__blur">
-                <p style="font-weight:700;margin-bottom:0.5rem">Kapitel 2: Retention före räckvidd</p>
-                <p style="color:#555;font-size:0.9rem;line-height:1.7">
-                  Det genomsnittliga e-handelsföretaget spenderar 80 % av sin budget på
-                  kundanskaffning och 20 % på att behålla dem. Lönsamma varumärken gör tvärtom...
-                </p>
-                <p style="font-weight:700;margin:1rem 0 0.5rem">Kapitel 3: Offer stack &amp; AOV</p>
-                <p style="color:#555;font-size:0.9rem;line-height:1.7">
-                  En välstrukturerad bundle lyfter AOV med 15–30 % utan att öka CPM...
-                </p>
-              </div>
-              <div class="locked-preview__overlay">
-                <span class="lock-icon">🔒</span>
-                <span class="lock-label" data-i18n="pg_locked_label">Låst – hämta guiden nedan</span>
-              </div>
-            </div>
 
             <!-- ── Form state ── -->
             <div class="gate-form-state" id="gateForm">
