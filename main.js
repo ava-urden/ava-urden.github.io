@@ -1066,7 +1066,7 @@ function initFilters() {
 }
 
 function initReveal() {
-  const items = document.querySelectorAll(".reveal");
+  const items = document.querySelectorAll(".reveal, .reveal--img");
   if (!items.length) return;
 
   const observer = new IntersectionObserver(
@@ -1078,11 +1078,38 @@ function initReveal() {
         }
       });
     },
-    { threshold: 0.2 }
+    { threshold: 0.15 }
   );
 
   items.forEach((el) => observer.observe(el));
 }
+
+function initImageReveal() {
+  const selectors = [".case__img", ".about__image", ".mini-card__media"];
+  selectors.forEach((sel) => {
+    document.querySelectorAll(sel).forEach((el) => {
+      el.classList.add("reveal--img");
+    });
+  });
+}
+
+function initAutoStagger() {
+  const groups = [
+    { parent: ".grid--3", child: ".case" },
+    { parent: ".mini-grid", child: ".mini-card" },
+    { parent: ".skills-list", child: ".skill-item" }
+  ];
+  groups.forEach(({ parent, child }) => {
+    const parentEl = document.querySelector(parent);
+    if (!parentEl) return;
+    parentEl.querySelectorAll(child).forEach((el, i) => {
+      if (!el.style.getPropertyValue("--delay")) {
+        el.style.setProperty("--delay", `${i * 0.09}s`);
+      }
+    });
+  });
+}
+
 
 function initHeader() {
   const header = document.querySelector(".header");
@@ -1163,7 +1190,7 @@ function initLenis() {
   if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
   const lenis = new Lenis({
-    lerp: 0.18,
+    lerp: 0.08,
     wheelMultiplier: 1,
     infinite: false,
     gestureOrientation: "vertical",
@@ -1323,6 +1350,8 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   initFilters();
+  initImageReveal();
+  initAutoStagger();
   initReveal();
   initLenis();
   initHeader();
