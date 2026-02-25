@@ -26,7 +26,6 @@
     <link rel="stylesheet" href="./style.css" />
 
     <style>
-
       /* ── Email gate ── */
       .gate-wrap {
         position: relative;
@@ -128,6 +127,11 @@
         opacity: 0.7;
         pointer-events: none;
       }
+
+      /* ── Restore dark footer on lead page ── */
+      .case-page--lead .footer {
+        background: var(--accent-dark);
+      }
     </style>
   </head>
 
@@ -143,12 +147,12 @@
 
     <header class="header">
       <div class="container header__inner">
-        <a class="logo" href="index.html#top">A.U. Portfolio</a>
+        <a class="logo" href="index.html#top" data-i18n="logo_text">A.U. Portfolio</a>
         <nav class="nav">
-          <a href="index.html#about">Om mig</a>
-          <a href="index.html#cases">Utvalda projekt</a>
-          <a href="index.html#skills">Färdigheter</a>
-          <a href="index.html#contact">Kontakt</a>
+          <a href="index.html#about" data-i18n="nav_about">Om mig</a>
+          <a href="index.html#cases" data-i18n="nav_cases">Utvalda projekt</a>
+          <a href="index.html#skills" data-i18n="nav_skills">Färdigheter</a>
+          <a href="index.html#contact" data-i18n="nav_contact">Kontakt</a>
         </nav>
         <div class="lang">
           <button class="lang__btn is-active" type="button" data-lang="sv">SV</button>
@@ -163,34 +167,34 @@
       ═══════════════════════════════════════════ -->
       <section class="section section-block">
         <div class="container">
-          <a href="index.html#mini" class="back-link">← Tillbaka till små projekt</a>
+          <a href="index.html#mini" class="back-link" data-i18n="back_to_mini">← Tillbaka till små projekt</a>
 
           <div class="lead-hero">
             <div class="lead-hero__grid">
               <div class="lead-hero__content">
-                <p class="eyebrow">Whitepaper</p>
-                <h1 class="h-display lead-title">Lönsam tillväxt 2026</h1>
-                <p class="hero__p">
+                <p class="eyebrow" data-i18n="pg_eyebrow">Whitepaper</p>
+                <h1 class="h-display lead-title" data-i18n="pg_title">Lönsam tillväxt 2026</h1>
+                <p class="hero__p" data-i18n-html="pg_body">
                   De flesta e-handlare misslyckas inte för att annonserna är dåliga.<br />
                   De skalar innan grunden är redo.
                 </p>
                 <div class="lead-hero__cta">
-                  <a class="btn btn--dark" href="#lead-form">Hämta guiden</a>
-                  <a class="btn btn--outline" href="#lead-kit">Se innehåll</a>
+                  <a class="btn btn--dark" href="#lead-form" data-i18n="pg_primary_cta">Hämta guiden</a>
+                  <a class="btn btn--outline" href="#lead-kit" data-i18n="pg_secondary_cta">Se innehåll</a>
                 </div>
               </div>
               <div class="lead-hero__visual">
                 <div class="lead-hero__panel">
-                  <div class="lead-hero__badge">2026 Guide</div>
-                  <h3>CRM First. Product Smart.</h3>
-                  <p class="muted">
+                  <div class="lead-hero__badge" data-i18n="pg_badge">2026 Guide</div>
+                  <h3 data-i18n="pg_panel_title">CRM First. Product Smart.</h3>
+                  <p class="muted" data-i18n="pg_panel_body">
                     Sekvensen som gör tillväxt lönsam – innan du ökar spend.
                   </p>
                   <ul class="lead-hero__list">
-                    <li>Varför mer trafik inte löser läckorna</li>
-                    <li>CRM-systemet som driver återköp</li>
-                    <li>Offer stack + AOV-strategier som lyfter lönsamheten</li>
-                    <li>När du är redo att skala (CAC/LTV + break-even)</li>
+                    <li data-i18n="pg_panel_point_1">Varför mer trafik inte löser läckorna</li>
+                    <li data-i18n="pg_panel_point_2">CRM-systemet som driver återköp</li>
+                    <li data-i18n="pg_panel_point_3">Offer stack + AOV-strategier som lyfter lönsamheten</li>
+                    <li data-i18n="pg_panel_point_4">När du är redo att skala (CAC/LTV + break-even)</li>
                   </ul>
                 </div>
               </div>
@@ -199,37 +203,36 @@
         </div>
       </section>
 
-
       <!-- ═══════════════════════════════════════════
            WHAT'S IN THE GUIDE (teaser cards)
       ═══════════════════════════════════════════ -->
       <section id="lead-kit" class="section-block lead-section">
         <div class="container">
           <div class="lead-section__head">
-            <h2 class="h-display">I guiden får du</h2>
+            <h2 class="h-display" data-i18n="pg_section_title">I guiden får du</h2>
           </div>
 
           <div class="lead-grid">
             <article class="lead-card">
               <div class="lead-card__icon">CRM</div>
-              <h3>CRM-system som säljer</h3>
-              <p class="muted">
+              <h3 data-i18n="pg_card_1_title">CRM-system som säljer</h3>
+              <p class="muted" data-i18n="pg_card_1_desc">
                 Retention-flöden, triggers och copy-moduler som driver återköp
                 utan extra annonsbudget.
               </p>
             </article>
             <article class="lead-card">
               <div class="lead-card__icon">OS</div>
-              <h3>Offer Stack</h3>
-              <p class="muted">
+              <h3 data-i18n="pg_card_2_title">Offer Stack</h3>
+              <p class="muted" data-i18n="pg_card_2_desc">
                 Bundle- och upsell-strategier som lyfter AOV och förbättrar
                 lönsamheten per order.
               </p>
             </article>
             <article class="lead-card lead-card--dark">
               <div class="lead-card__icon">ADS</div>
-              <h3>Annonser i rätt sekvens</h3>
-              <p>
+              <h3 data-i18n="pg_card_3_title">Annonser i rätt sekvens</h3>
+              <p data-i18n="pg_card_3_desc">
                 CAC/LTV-modeller och break-even-kalkyl för att veta exakt
                 när du är redo att skala.
               </p>
@@ -253,60 +256,74 @@
                   Det genomsnittliga e-handelsföretaget spenderar 80 % av sin budget på
                   kundanskaffning och 20 % på att behålla dem. Lönsamma varumärken gör tvärtom...
                 </p>
-                <p style="font-weight:700;margin:1rem 0 0.5rem">Kapitel 3: Offer stack & AOV</p>
+                <p style="font-weight:700;margin:1rem 0 0.5rem">Kapitel 3: Offer stack &amp; AOV</p>
                 <p style="color:#555;font-size:0.9rem;line-height:1.7">
                   En välstrukturerad bundle lyfter AOV med 15–30 % utan att öka CPM...
                 </p>
               </div>
               <div class="locked-preview__overlay">
                 <span class="lock-icon">🔒</span>
-                <span class="lock-label">Låst – hämta guiden nedan</span>
+                <span class="lock-label" data-i18n="pg_locked_label">Låst – hämta guiden nedan</span>
               </div>
             </div>
 
             <!-- ── Form state ── -->
             <div class="gate-form-state" id="gateForm">
               <div class="lead-form__intro">
-                <h2 class="h-display">Vill du ha hela spelplanen?</h2>
-                <p class="section-intro">
+                <h2 class="h-display" data-i18n="pg_gate_title">Vill du ha hela spelplanen?</h2>
+                <p class="section-intro" data-i18n-html="pg_gate_desc">
                   Skriv in din mejl och få
                   <em>E-commerce in 2026: CRM First, Product Smart</em> direkt.
                 </p>
               </div>
-              <form class="lead-form" id="emailGateForm" novalidate>
+              <form class="lead-form" id="emailGateForm" novalidate method="POST" target="gs-frame">
+                <!-- Hidden tracking fields (filled by JS on submit) -->
+                <input type="hidden" name="source" value="lead-magnet" />
+                <input type="hidden" name="page" value="Lönsam tillväxt 2026" />
+                <input type="hidden" name="consent" value="yes" />
+                <input type="hidden" name="referrer" id="referrerField" value="" />
+                <input type="hidden" name="utm_source" id="utmSource" value="" />
+                <input type="hidden" name="utm_medium" id="utmMedium" value="" />
+                <input type="hidden" name="utm_campaign" id="utmCampaign" value="" />
+
                 <label class="lead-label">
-                  <span>Din mejladress</span>
+                  <span data-i18n="pg_form_label">Din mejladress</span>
                   <input
                     type="email"
                     name="email"
                     id="emailInput"
                     required
                     placeholder="namn@foretag.com"
+                    data-i18n-placeholder="pg_form_placeholder"
                   />
                 </label>
-                <input class="lead-honey" type="text" name="bot-field" id="botField" tabindex="-1" autocomplete="off" />
+                <!-- Honeypot – name must match Apps Script (company_website) -->
+                <input class="lead-honey" type="text" name="company_website" tabindex="-1" autocomplete="off" />
                 <label class="lead-check">
                   <input type="checkbox" name="updates" id="updatesCheck" checked />
-                  <span>Skicka gärna korta uppdateringar (max 1/månad).</span>
+                  <span data-i18n="pg_form_optin">Skicka gärna korta uppdateringar (max 1/månad).</span>
                 </label>
-                <button class="btn btn--dark lead-form__button" type="submit" id="submitBtn">
+                <button class="btn btn--dark lead-form__button" type="submit" id="submitBtn" data-i18n="pg_form_button">
                   Hämta guiden
                 </button>
-                <p id="formError" style="color:#c0392b;font-size:0.85rem;margin-top:0.5rem;display:none;">
+                <p id="formError" data-i18n="pg_form_error" style="color:#c0392b;font-size:0.85rem;margin-top:0.5rem;display:none;">
                   Något gick fel – försök igen eller mejla mig direkt.
                 </p>
-                <p class="lead-form__note">
+                <p class="lead-form__note" data-i18n="pg_form_note">
                   Ingen spam. Bara konkreta tillväxtinsikter.
                 </p>
               </form>
+
+              <!-- Hidden iframe – receives the Apps Script HTML response -->
+              <iframe name="gs-frame" id="gs-frame" style="display:none" title="form response"></iframe>
             </div>
 
             <!-- ── Success / download state ── -->
             <div class="gate-success-state" id="gateSuccess">
               <div class="gate-success-inner">
                 <div class="gate-success-icon">✅</div>
-                <h3>Tack! Guiden är din.</h3>
-                <p>
+                <h3 data-i18n="pg_success_title">Tack! Guiden är din.</h3>
+                <p data-i18n-html="pg_success_body">
                   Klicka nedan för att ladda ner
                   <em>E-commerce in 2026: CRM First, Product Smart</em>.
                 </p>
@@ -314,10 +331,11 @@
                   class="btn--download"
                   href="downloads/wp-e-commerce-in-2026.pdf"
                   download="E-commerce-in-2026-CRM-First-Product-Smart.pdf"
+                  data-i18n="pg_success_download"
                 >
                   ↓ Ladda ner PDF
                 </a>
-                <p class="gate-note">
+                <p class="gate-note" data-i18n="pg_success_note">
                   Filen öppnas i en ny flik om din webbläsare inte
                   sparar den direkt.
                 </p>
@@ -334,30 +352,30 @@
       <section id="lead-faq" class="section-block lead-section">
         <div class="container">
           <div class="lead-section__head lead-section__head--center">
-            <h2 class="h-display">Vanliga frågor</h2>
+            <h2 class="h-display" data-i18n="pg_faq_title">Vanliga frågor</h2>
           </div>
           <div class="lead-faq">
             <details class="lead-faq__item">
-              <summary>Är guiden gratis?</summary>
-              <p>Ja, helt gratis. Jag vill dela insikter som hjälper fler att växa lönsamt.</p>
+              <summary data-i18n="pg_faq_q1">Är guiden gratis?</summary>
+              <p data-i18n="pg_faq_a1">Ja, helt gratis. Jag vill dela insikter som hjälper fler att växa lönsamt.</p>
             </details>
             <details class="lead-faq__item">
-              <summary>Vad ingår i guiden?</summary>
-              <p>
+              <summary data-i18n="pg_faq_q2">Vad ingår i guiden?</summary>
+              <p data-i18n="pg_faq_a2">
                 CRM-strategi och retention-flöden, offer stack och AOV-taktiker,
                 samt en CAC/LTV-modell för att veta när du är redo att skala annonser.
               </p>
             </details>
             <details class="lead-faq__item">
-              <summary>För vem är det här?</summary>
-              <p>
+              <summary data-i18n="pg_faq_q3">För vem är det här?</summary>
+              <p data-i18n="pg_faq_a3">
                 E-handlare och growth marketers som vill växa utan att bränna
                 budgeten på trafik till en konverteringsläckande sajt.
               </p>
             </details>
             <details class="lead-faq__item">
-              <summary>Får jag dela det med teamet?</summary>
-              <p>Absolut – dela gärna internt och använd ramverken i era processer.</p>
+              <summary data-i18n="pg_faq_q4">Får jag dela det med teamet?</summary>
+              <p data-i18n="pg_faq_a4">Absolut – dela gärna internt och använd ramverken i era processer.</p>
             </details>
           </div>
         </div>
@@ -369,25 +387,25 @@
       <footer id="contact" class="footer section-block">
         <div class="container footer__grid">
           <div class="footer__left">
-            <h2>Kontakt</h2>
-            <p class="footer__text">
+            <h2 data-i18n="contact_title">Kontakt</h2>
+            <p class="footer__text" data-i18n="footer_text">
               Nyfiken på att veta mer eller diskutera ett projekt? Hör av dig!
             </p>
-            <a href="./cv/ava-urden-cv-sv.pdf" download class="btn btn--white">
+            <a href="./cv/ava-urden-cv-sv.pdf" download class="btn btn--white" data-i18n="cta_cv">
               Ladda ner CV
             </a>
           </div>
           <div class="footer__right">
             <div class="contact-group">
-              <span class="contact-label">Email</span>
+              <span class="contact-label" data-i18n="contact_email">Email</span>
               <a href="mailto:ava.urden@gmail.com" class="contact-link email-link">ava.urden@gmail.com</a>
             </div>
             <div class="contact-group">
-              <span class="contact-label">Mobil</span>
+              <span class="contact-label" data-i18n="contact_mobile">Mobil</span>
               <a href="tel:+46723111441" class="contact-link">+46 72 311 14 41</a>
             </div>
             <div class="contact-group">
-              <span class="contact-label">LinkedIn</span>
+              <span class="contact-label" data-i18n="contact_linkedin">LinkedIn</span>
               <a href="https://linkedin.com/in/avaurden" target="_blank" class="contact-link">
                 linkedin.com/in/avaurden ↗
               </a>
@@ -406,94 +424,148 @@
     ══════════════════════════════════════════════════════════════════
 
     1. Gå till script.google.com → Nytt projekt
-    2. Klistra in koden nedan i Code.gs
+    2. Klistra in koden nedan i Code.gs (SHEET_ID och SHEET_NAME är redan ifyllda)
     3. Klicka Deploy → New deployment → Web app
        - Execute as: Me
        - Who has access: Anyone
-    4. Kopiera Web App URL och ersätt APPS_SCRIPT_URL_HERE nedan
+    4. Kopiera Web App URL och ersätt APPS_SCRIPT_URL_HERE i <script>-blocket nedan
 
     ── Code.gs ──────────────────────────────────────────────────────
+    const SHEET_ID   = "17fgBwYL6oceuvaZH7zEiespecdITcxrxo1aDu-SteXI";
+    const SHEET_NAME = "Whitepaper";
+
     function doPost(e) {
-      var sheet = SpreadsheetApp
-        .openById('DIN_SPREADSHEET_ID')   // ersätt med ditt Sheet ID
-        .getActiveSheet();
-      var data = JSON.parse(e.postData.contents);
-      sheet.appendRow([
-        data.email,
-        'Lönsam tillväxt 2026',
-        Utilities.formatDate(new Date(), 'Europe/Stockholm', 'yyyy-MM-dd'),
-        'Yes',
-        'Ecom-Playbook-2026'
-      ]);
-      return ContentService
-        .createTextOutput(JSON.stringify({ status: 'success' }))
-        .setMimeType(ContentService.MimeType.JSON);
+      const sheet = SpreadsheetApp.openById(SHEET_ID).getSheetByName(SHEET_NAME);
+
+      const email        = (e.parameter.email        || "").trim().toLowerCase();
+      const name         = (e.parameter.name         || "").trim();
+      const source       = (e.parameter.source       || "").trim();
+      const page         = (e.parameter.page         || "").trim();
+      const referrer     = (e.parameter.referrer     || "").trim();
+      const utm_source   = (e.parameter.utm_source   || "").trim();
+      const utm_medium   = (e.parameter.utm_medium   || "").trim();
+      const utm_campaign = (e.parameter.utm_campaign || "").trim();
+      const consent      = (e.parameter.consent      || "").trim();
+      const honeypot     = (e.parameter.company_website || "").trim();
+
+      if (honeypot)          return okHtml_();
+      if (!isValidEmail_(email)) return errorHtml_("invalid_email");
+      if (consent !== "yes") return errorHtml_("no_consent");
+
+      const now = new Date();
+      const existingRow = findEmailRow_(sheet, email);
+      if (existingRow) {
+        sheet.getRange(existingRow, 1, 1, 10).setValues([[
+          now, email, name, source, page, referrer,
+          utm_source, utm_medium, utm_campaign, "updated"
+        ]]);
+      } else {
+        sheet.appendRow([
+          now, email, name, source, page, referrer,
+          utm_source, utm_medium, utm_campaign, "new"
+        ]);
+      }
+      return okHtml_();
     }
+
     function doGet() {
-      return ContentService.createTextOutput('OK');
+      return HtmlService.createHtmlOutput("OK");
+    }
+
+    function isValidEmail_(email) {
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    }
+
+    function findEmailRow_(sheet, email) {
+      const lastRow = sheet.getLastRow();
+      if (lastRow < 2) return null;
+      const emails = sheet.getRange(2, 2, lastRow - 1, 1).getValues()
+        .flat().map(String);
+      const idx = emails.findIndex(v => v.trim().toLowerCase() === email);
+      return idx === -1 ? null : idx + 2;
+    }
+
+    function okHtml_() {
+      return HtmlService.createHtmlOutput(
+        '<script>window.parent.postMessage({ ok: true }, "*");<\/script>'
+      );
+    }
+
+    function errorHtml_(code) {
+      return HtmlService.createHtmlOutput(
+        '<script>window.parent.postMessage({ ok: false, code: "' + code + '" }, "*");<\/script>'
+      );
     }
     ─────────────────────────────────────────────────────────────────
 
-    Kolumnordning i Sheets:
-    Email | Source | Datum | Consent | Tag
+    Kolumnordning i Sheets (Whitepaper):
+    Datum | Email | Name | Source | Page | Referrer | utm_source | utm_medium | utm_campaign | Status
     ══════════════════════════════════════════════════════════════════
     -->
 
     <script>
-      // ── Replace with your deployed Google Apps Script Web App URL ──
-      var APPS_SCRIPT_URL = "APPS_SCRIPT_URL_HERE";
+      // ── Klistra in din Web App URL här efter deploy ──
+      var APPS_SCRIPT_URL = "https://script.google.com/a/macros/student.berghs.se/s/AKfycbw7QkJqxXQ7rhAe2KRZXZCxdDbkigTtUew03OmMxvyfQ58iEppZS20XEyfocfXbEGVM9Q/exec";
 
-      var form       = document.getElementById("emailGateForm");
-      var submitBtn  = document.getElementById("submitBtn");
-      var formError  = document.getElementById("formError");
-      var gateForm   = document.getElementById("gateForm");
+      var form        = document.getElementById("emailGateForm");
+      var submitBtn   = document.getElementById("submitBtn");
+      var gateForm    = document.getElementById("gateForm");
       var gateSuccess = document.getElementById("gateSuccess");
+      var formError   = document.getElementById("formError");
+
+      // Fill UTM params + referrer on load
+      (function () {
+        var p = new URLSearchParams(window.location.search);
+        document.getElementById("referrerField").value  = document.referrer || "";
+        document.getElementById("utmSource").value     = p.get("utm_source")   || "";
+        document.getElementById("utmMedium").value     = p.get("utm_medium")   || "";
+        document.getElementById("utmCampaign").value   = p.get("utm_campaign") || "";
+      })();
 
       form.addEventListener("submit", function (e) {
         e.preventDefault();
-
-        // Honeypot check
-        if (document.getElementById("botField").value) return;
-
-        var email = document.getElementById("emailInput").value.trim();
-        if (!email) return;
-
-        // Disable button while submitting
-        submitBtn.textContent = "Skickar…";
-        submitBtn.classList.add("btn--submitting");
         formError.style.display = "none";
 
-        // If Apps Script URL is not configured, skip the network call
-        // and just reveal the download (useful during development)
+        // Honeypot
+        if (form.elements["company_website"].value) return;
+
+        var email = document.getElementById("emailInput").value.trim();
+        if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+          formError.style.display = "block";
+          return;
+        }
+
+        var lang = document.documentElement.lang || "sv";
+        submitBtn.textContent = lang === "en" ? "Sending…" : "Skickar…";
+        submitBtn.classList.add("btn--submitting");
+
+        // Dev mode – no URL configured yet
         if (APPS_SCRIPT_URL === "APPS_SCRIPT_URL_HERE") {
           revealDownload();
           return;
         }
 
-        // Submit to Google Apps Script (no-cors → we can't read the response,
-        // but the row will be written to the Sheet)
-        fetch(APPS_SCRIPT_URL, {
-          method: "POST",
-          mode: "no-cors",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            email: email,
-            updates: document.getElementById("updatesCheck").checked
-          })
-        })
-          .then(function () {
-            revealDownload();
-          })
-          .catch(function () {
-            // Network error – still show the download so the user isn't blocked
-            revealDownload();
-          });
+        // Submit form to hidden iframe → Apps Script responds via postMessage
+        form.action = APPS_SCRIPT_URL;
+        form.submit();
+      });
+
+      // Listen for response from Apps Script
+      window.addEventListener("message", function (ev) {
+        if (!ev.data) return;
+        if (ev.data.ok === true) {
+          revealDownload();
+        } else if (ev.data.ok === false) {
+          var lang = document.documentElement.lang || "sv";
+          submitBtn.textContent = lang === "en" ? "Get the guide" : "Hämta guiden";
+          submitBtn.classList.remove("btn--submitting");
+          formError.style.display = "block";
+        }
       });
 
       function revealDownload() {
         gateForm.classList.add("is-hidden");
         gateSuccess.classList.add("is-visible");
-        // Scroll to the success message
         gateSuccess.scrollIntoView({ behavior: "smooth", block: "center" });
       }
     </script>
