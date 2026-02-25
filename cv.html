@@ -1,0 +1,879 @@
+<!doctype html>
+<html lang="sv">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CV | Ava Urdén</title>
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l !== "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-PGNG2H2P");
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+
+    <style>
+      /* ══════════════════════════════════════════════
+         CV PAGE
+      ══════════════════════════════════════════════ */
+
+      body.cv-page { background: #f6f2ec; }
+
+      /* ── HERO (light) ─────────────────────────── */
+      .cv-hero {
+        background: #fff;
+        border-bottom: 1px solid #ede9e2;
+        padding: 5rem 0 4rem;
+      }
+
+      .cv-hero__grid {
+        display: grid;
+        grid-template-columns: 1fr 260px;
+        gap: 4rem;
+        align-items: center;
+      }
+
+      .cv-hero__top {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1.25rem;
+        flex-wrap: wrap;
+      }
+
+      .cv-eyebrow {
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: #aaa;
+      }
+
+      .cv-avail {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        color: #2a6341;
+        background: #edf7f0;
+        border: 1px solid #b6ddc3;
+        border-radius: 100px;
+        padding: 0.25rem 0.75rem;
+      }
+
+      .cv-avail__dot {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: #2a6341;
+        flex-shrink: 0;
+        animation: pulse-dot 2s ease-in-out infinite;
+      }
+
+      @keyframes pulse-dot {
+        0%, 100% { opacity: 1; }
+        50%       { opacity: 0.35; }
+      }
+
+      .cv-hero__name {
+        font-size: clamp(3.5rem, 7.5vw, 6rem);
+        font-weight: 900;
+        line-height: 0.95;
+        letter-spacing: -0.04em;
+        color: #0b0b0b;
+        margin-bottom: 1rem;
+      }
+
+      .cv-hero__role {
+        font-size: 1.05rem;
+        font-weight: 300;
+        color: #666;
+        line-height: 1.55;
+        max-width: 440px;
+        margin-bottom: 2rem;
+      }
+
+      .cv-chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.45rem;
+        margin-bottom: 2rem;
+      }
+
+      .cv-chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+        font-size: 0.78rem;
+        color: #444;
+        background: #f4f2ef;
+        border: 1px solid #e4e0da;
+        border-radius: 100px;
+        padding: 0.35rem 0.85rem;
+        text-decoration: none;
+        transition: background 0.15s, border-color 0.15s;
+      }
+
+      .cv-chip:hover {
+        background: #ece8e2;
+        border-color: #ccc;
+      }
+
+      .cv-chip svg {
+        width: 12px;
+        height: 12px;
+        opacity: 0.45;
+        flex-shrink: 0;
+      }
+
+      .cv-hero__actions { display: flex; gap: 0.7rem; flex-wrap: wrap; }
+
+      /* Photo */
+      .cv-photo-wrap {
+        position: relative;
+      }
+
+      .cv-photo-wrap img {
+        width: 100%;
+        height: 320px;
+        object-fit: cover;
+        object-position: top center;
+        border-radius: 12px;
+        display: block;
+        filter: grayscale(8%);
+      }
+
+      .cv-photo-badge {
+        position: absolute;
+        bottom: 1rem;
+        left: 1rem;
+        background: #fff;
+        border: 1px solid #ede9e2;
+        border-radius: 8px;
+        padding: 0.6rem 0.85rem;
+        box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+      }
+
+      .cv-photo-badge__label {
+        font-size: 0.65rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: #bbb;
+        margin-bottom: 0.15rem;
+      }
+
+      .cv-photo-badge__value {
+        font-size: 0.78rem;
+        font-weight: 700;
+        color: #0b0b0b;
+      }
+
+      /* ── BODY ─────────────────────────────────── */
+      .cv-body { background: #fff; }
+
+      .cv-row {
+        display: grid;
+        grid-template-columns: 160px 1fr;
+        gap: 3rem;
+        padding: 3rem 0;
+        border-top: 1px solid #ede9e2;
+      }
+
+      .cv-row:first-child { border-top: none; }
+
+      .cv-row__label {
+        font-size: 0.68rem;
+        font-weight: 700;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: #bbb;
+        padding-top: 0.1rem;
+        position: sticky;
+        top: 5rem;
+        align-self: start;
+      }
+
+      /* ── TIMELINE ──────────────────────────────── */
+      .cv-timeline {
+        position: relative;
+        padding-left: 1.5rem;
+      }
+
+      .cv-timeline::before {
+        content: '';
+        position: absolute;
+        left: 4px;
+        top: 8px;
+        bottom: 2rem;
+        width: 1px;
+        background: linear-gradient(to bottom, #d4cfc8, transparent);
+      }
+
+      .cv-tl-entry {
+        position: relative;
+        padding-bottom: 1.5rem;
+      }
+
+      .cv-tl-entry:last-child { padding-bottom: 0; }
+
+      .cv-tl-entry::before {
+        content: '';
+        position: absolute;
+        left: -1.5rem;
+        top: 8px;
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        background: #fff;
+        border: 2px solid #d4cfc8;
+        transition: background 0.2s, border-color 0.2s;
+        z-index: 1;
+      }
+
+      .cv-tl-entry:hover::before {
+        background: var(--accent-dark, #1e1b18);
+        border-color: var(--accent-dark, #1e1b18);
+      }
+
+      .cv-tl-card {
+        background: #fff;
+        border: 1px solid #ede9e2;
+        border-radius: 10px;
+        padding: 1.4rem 1.6rem;
+        transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.22s;
+      }
+
+      .cv-tl-entry:hover .cv-tl-card {
+        transform: translateX(6px);
+        box-shadow: 0 4px 22px rgba(0,0,0,0.06);
+        border-color: #ccc;
+      }
+
+      .cv-tl-meta {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-bottom: 0.5rem;
+        flex-wrap: wrap;
+      }
+
+      .cv-tl-period {
+        font-size: 0.72rem;
+        font-weight: 700;
+        color: #fff;
+        background: #0b0b0b;
+        border-radius: 4px;
+        padding: 0.15rem 0.5rem;
+        letter-spacing: 0.02em;
+      }
+
+      .cv-tl-org {
+        font-size: 0.78rem;
+        color: #999;
+      }
+
+      .cv-tl-title {
+        font-size: 0.97rem;
+        font-weight: 700;
+        color: #0b0b0b;
+        margin: 0 0 0.45rem;
+        line-height: 1.3;
+      }
+
+      .cv-tl-desc {
+        font-size: 0.87rem;
+        line-height: 1.7;
+        color: #666;
+        margin: 0;
+      }
+
+      .cv-tl-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.3rem;
+        margin-top: 0.8rem;
+      }
+
+      .cv-tag {
+        font-size: 0.7rem;
+        color: #777;
+        background: #f4f2ef;
+        border-radius: 4px;
+        padding: 0.18rem 0.55rem;
+      }
+
+      /* dashed placeholder entries */
+      .cv-tl-card--dashed {
+        border-style: dashed;
+        background: #faf8f5;
+      }
+
+      /* ── SKILLS ──────────────────────────────── */
+      .cv-skills-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+      }
+
+      .cv-skill-card {
+        border-radius: 10px;
+        padding: 1.5rem;
+        border: 1px solid #ede9e2;
+        background: #faf8f5;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      .cv-skill-card:last-child {
+        background: var(--accent-dark, #1e1b18);
+        border-color: transparent;
+      }
+
+      .cv-skill-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 28px rgba(0,0,0,0.07);
+      }
+
+      .cv-skill-card__num {
+        font-size: 0.65rem;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: #bbb;
+        margin-bottom: 0.4rem;
+      }
+
+      .cv-skill-card:last-child .cv-skill-card__num { color: rgba(255,255,255,0.3); }
+
+      .cv-skill-card__title {
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: #0b0b0b;
+        margin-bottom: 0.5rem;
+      }
+
+      .cv-skill-card:last-child .cv-skill-card__title { color: rgba(255,255,255,0.9); }
+
+      .cv-skill-card__desc {
+        font-size: 0.8rem;
+        line-height: 1.6;
+        color: #777;
+        margin-bottom: 1rem;
+      }
+
+      .cv-skill-card:last-child .cv-skill-card__desc { color: rgba(255,255,255,0.5); }
+
+      .cv-tool-chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.3rem;
+      }
+
+      .cv-tool-chip {
+        font-size: 0.7rem;
+        color: #666;
+        background: #edeae4;
+        border: 1px solid #e0dbd2;
+        border-radius: 4px;
+        padding: 0.2rem 0.55rem;
+      }
+
+      .cv-skill-card:last-child .cv-tool-chip {
+        background: rgba(255,255,255,0.08);
+        border-color: rgba(255,255,255,0.14);
+        color: rgba(255,255,255,0.6);
+      }
+
+      /* ── PROJECTS ───────────────────────────── */
+      .cv-proj-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+      }
+
+      .cv-proj-card {
+        display: block;
+        background: #faf8f5;
+        border: 1px solid #ede9e2;
+        border-radius: 10px;
+        padding: 1.25rem 1.4rem;
+        text-decoration: none;
+        transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s;
+      }
+
+      .cv-proj-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 24px rgba(0,0,0,0.07);
+        border-color: #c8c3bb;
+      }
+
+      .cv-proj-card__type {
+        font-size: 0.65rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: #bbb;
+        margin-bottom: 0.5rem;
+      }
+
+      .cv-proj-card__title {
+        font-size: 0.9rem;
+        font-weight: 700;
+        color: #0b0b0b;
+        margin-bottom: 0.35rem;
+        line-height: 1.3;
+      }
+
+      .cv-proj-card__desc {
+        font-size: 0.78rem;
+        color: #888;
+        line-height: 1.5;
+      }
+
+      .cv-proj-card__arrow {
+        display: inline-block;
+        margin-top: 0.7rem;
+        font-size: 0.75rem;
+        color: #ccc;
+        transition: transform 0.18s, color 0.18s;
+      }
+
+      .cv-proj-card:hover .cv-proj-card__arrow {
+        transform: translateX(3px);
+        color: #0b0b0b;
+      }
+
+      /* ── SCROLL REVEAL ───────────────────────── */
+      .cv-reveal {
+        opacity: 0;
+        transform: translateY(16px);
+        transition: opacity 0.45s ease, transform 0.45s ease;
+      }
+      .cv-reveal.is-visible { opacity: 1; transform: none; }
+      .cv-reveal:nth-child(2) { transition-delay: 0.08s; }
+      .cv-reveal:nth-child(3) { transition-delay: 0.16s; }
+      .cv-reveal:nth-child(4) { transition-delay: 0.24s; }
+
+      /* ── PRINT ───────────────────────────────── */
+      @media print {
+        .header, .cv-hero__actions, footer { display: none !important; }
+        .cv-hero { padding: 1rem 0; }
+      }
+
+      /* ── MOBILE ──────────────────────────────── */
+      @media (max-width: 800px) {
+        .cv-hero__grid { grid-template-columns: 1fr; gap: 2rem; }
+        .cv-photo-wrap { order: -1; }
+        .cv-photo-wrap img { height: 220px; }
+        .cv-row { grid-template-columns: 1fr; gap: 0.75rem; }
+        .cv-row__label { position: static; margin-bottom: 0.25rem; }
+        .cv-skills-grid, .cv-proj-grid { grid-template-columns: 1fr; }
+      }
+    </style>
+  </head>
+
+  <body class="case-page cv-page">
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-PGNG2H2P"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+
+    <header class="header">
+      <div class="container header__inner">
+        <a class="logo" href="index.html#top" data-i18n="logo_text">A.U. Portfolio</a>
+        <nav class="nav">
+          <a href="index.html#about" data-i18n="nav_about">Om mig</a>
+          <a href="index.html#cases" data-i18n="nav_cases">Utvalda projekt</a>
+          <a href="index.html#skills" data-i18n="nav_skills">Färdigheter</a>
+          <a href="cv.html" data-i18n="nav_cv" class="is-current">CV</a>
+          <a href="index.html#contact" data-i18n="nav_contact">Kontakt</a>
+        </nav>
+        <div class="lang">
+          <button class="lang__btn is-active" type="button" data-lang="sv">SV</button>
+          <button class="lang__btn" type="button" data-lang="en">EN</button>
+        </div>
+      </div>
+    </header>
+
+    <main id="top">
+
+      <!-- ══════════════════════════════════════════
+           HERO
+      ══════════════════════════════════════════ -->
+      <section class="cv-hero">
+        <div class="container">
+          <div class="cv-hero__grid">
+
+            <div class="cv-hero__left">
+              <div class="cv-hero__top">
+                <span class="cv-eyebrow" data-i18n="cv_eyebrow">Growth Marketing</span>
+                <span class="cv-avail">
+                  <span class="cv-avail__dot" aria-hidden="true"></span>
+                  <span data-i18n="cv_open_badge">Öppen för möjligheter</span>
+                </span>
+              </div>
+
+              <h1 class="cv-hero__name">Ava<br>Urdén</h1>
+
+              <p class="cv-hero__role" data-i18n="cv_hero_role">
+                Growth Marketer med fokus på content, strategi och data –<br>
+                driven av att skapa saker som faktiskt fungerar.
+              </p>
+
+              <div class="cv-chips">
+                <a class="cv-chip" href="mailto:ava.urden@gmail.com">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
+                  ava.urden@gmail.com
+                </a>
+                <a class="cv-chip" href="tel:+46723111441">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.15 9.81a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.06 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16z"/></svg>
+                  +46 72 311 14 41
+                </a>
+                <a class="cv-chip" href="https://linkedin.com/in/avaurden" target="_blank" rel="noopener">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                  linkedin.com/in/avaurden
+                </a>
+                <span class="cv-chip">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                  <span data-i18n="cv_location">Stockholm, Sverige</span>
+                </span>
+              </div>
+
+              <div class="cv-hero__actions">
+                <a
+                  href="./cv/ava-urden-cv-sv.pdf"
+                  download
+                  class="btn btn--dark track-cv_download"
+                  data-cv-link
+                  data-i18n="cv_download_btn"
+                >
+                  ↓ Ladda ner CV (PDF)
+                </a>
+                <a href="index.html#cases" class="btn btn--outline" data-i18n="cv_see_work">
+                  Se mitt arbete →
+                </a>
+              </div>
+            </div>
+
+            <!-- Photo -->
+            <div class="cv-photo-wrap">
+              <img src="./img/ava-urden-900.jpg" alt="Ava Urdén" />
+              <div class="cv-photo-badge">
+                <p class="cv-photo-badge__label" data-i18n="cv_badge_prog_label">Program</p>
+                <p class="cv-photo-badge__value">Growth Marketing<br>Berghs, 2024–2026</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════
+           CONTENT BODY
+      ══════════════════════════════════════════ -->
+      <div class="cv-body">
+        <div class="container" style="padding-top:1px;">
+
+          <!-- EXPERIENCE -->
+          <div class="cv-row">
+            <p class="cv-row__label" data-i18n="cv_exp_label">Erfarenhet</p>
+
+            <div class="cv-timeline">
+
+              <div class="cv-tl-entry cv-reveal">
+                <div class="cv-tl-card">
+                  <div class="cv-tl-meta">
+                    <span class="cv-tl-period" data-i18n="cv_exp1_period">Feb 2024 – Jul 2025</span>
+                    <span class="cv-tl-org" data-i18n="cv_exp1_org">CMS Wistrand</span>
+                  </div>
+                  <h3 class="cv-tl-title" data-i18n="cv_exp1_title">Marknadskoordinator</h3>
+                  <p class="cv-tl-desc" data-i18n="cv_exp1_desc">
+                    Koordinerade och genomförde marknadsinsatser för en av Sveriges ledande advokatbyråer.
+                    Ansvarade för innehållsproduktion, digitala kanaler, kampanjplanering och intern kommunikation.
+                    Jobbade datanära med uppföljning och optimering av insatser.
+                  </p>
+                  <div class="cv-tl-tags">
+                    <span class="cv-tag">Content</span>
+                    <span class="cv-tag">Kampanjplanering</span>
+                    <span class="cv-tag">Digital marknadsföring</span>
+                    <span class="cv-tag">Analys & rapportering</span>
+                    <span class="cv-tag">Projektledning</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="cv-tl-entry cv-reveal">
+                <div class="cv-tl-card">
+                  <div class="cv-tl-meta">
+                    <span class="cv-tl-period" data-i18n="cv_exp2_period">Mars 2023 – Aug 2023</span>
+                    <span class="cv-tl-org" data-i18n="cv_exp2_org">Frans Bistro & Bar</span>
+                  </div>
+                  <h3 class="cv-tl-title" data-i18n="cv_exp2_title">Servitris</h3>
+                  <p class="cv-tl-desc" data-i18n="cv_exp2_desc">
+                    Kundservice i högt tempo med fokus på upplevelse och service. Byggde vana vid att
+                    snabbt läsa av och anpassa sig efter gäster, teamarbete och att leverera under press.
+                  </p>
+                  <div class="cv-tl-tags">
+                    <span class="cv-tag">Kundservice</span>
+                    <span class="cv-tag">Teamarbete</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="cv-tl-entry cv-reveal">
+                <div class="cv-tl-card">
+                  <div class="cv-tl-meta">
+                    <span class="cv-tl-period" data-i18n="cv_exp3_period">Maj 2022 – Dec 2022</span>
+                    <span class="cv-tl-org" data-i18n="cv_exp3_org">Gina Tricot</span>
+                  </div>
+                  <h3 class="cv-tl-title" data-i18n="cv_exp3_title">Avdelningskoordinator</h3>
+                  <p class="cv-tl-desc" data-i18n="cv_exp3_desc">
+                    Ansvarade för avdelningsdrift i butik – styling, exponering, lagerflöde och kundmöten.
+                    Koordinerade team och säkerställde att avdelningen mötte försäljningsmål och kundupplevelse.
+                  </p>
+                  <div class="cv-tl-tags">
+                    <span class="cv-tag">Koordinering</span>
+                    <span class="cv-tag">Retail</span>
+                    <span class="cv-tag">Visual merchandising</span>
+                    <span class="cv-tag">Försäljning</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- EDUCATION -->
+          <div class="cv-row">
+            <p class="cv-row__label" data-i18n="cv_edu_label">Utbildning</p>
+
+            <div class="cv-timeline">
+
+              <div class="cv-tl-entry cv-reveal">
+                <div class="cv-tl-card">
+                  <div class="cv-tl-meta">
+                    <span class="cv-tl-period" data-i18n="cv_edu1_period">2024 – 2026</span>
+                    <span class="cv-tl-org" data-i18n="cv_edu1_org">Berghs School of Communication</span>
+                  </div>
+                  <h3 class="cv-tl-title" data-i18n="cv_edu1_title">Growth Marketing</h3>
+                  <p class="cv-tl-desc" data-i18n="cv_edu1_desc">
+                    Tvåårig yrkesutbildning med fokus på datadriven marknadsföring, konceptutveckling,
+                    content, digital annonsering, CRO och tillväxtstrategi. Praktiska projekt för verkliga klienter
+                    som Under Your Skin, SUIE och Akademibokhandeln.
+                  </p>
+                  <div class="cv-tl-tags">
+                    <span class="cv-tag">Growth</span>
+                    <span class="cv-tag">CRO</span>
+                    <span class="cv-tag">Data</span>
+                    <span class="cv-tag">Performance marketing</span>
+                    <span class="cv-tag">SEO & content</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="cv-tl-entry cv-reveal">
+                <div class="cv-tl-card">
+                  <div class="cv-tl-meta">
+                    <span class="cv-tl-period" data-i18n="cv_edu2_period">Aug 2023 – Feb 2024</span>
+                    <span class="cv-tl-org" data-i18n="cv_edu2_org">Stockholm School of Economics</span>
+                  </div>
+                  <h3 class="cv-tl-title" data-i18n="cv_edu2_title">Utvalda kurser</h3>
+                  <p class="cv-tl-desc" data-i18n="cv_edu2_desc">
+                    Kurser inom marknadsföring, business och strategi vid Handelshögskolan i Stockholm.
+                  </p>
+                </div>
+              </div>
+
+              <div class="cv-tl-entry cv-reveal">
+                <div class="cv-tl-card">
+                  <div class="cv-tl-meta">
+                    <span class="cv-tl-period" data-i18n="cv_edu3_period">2019 – 2022</span>
+                    <span class="cv-tl-org" data-i18n="cv_edu3_org">Lundellska skolan</span>
+                  </div>
+                  <h3 class="cv-tl-title" data-i18n="cv_edu3_title">Ekonomiprogrammet</h3>
+                  <p class="cv-tl-desc" data-i18n="cv_edu3_desc">
+                    Gymnasieutbildning med inriktning ekonomi.
+                  </p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- SKILLS -->
+          <div class="cv-row">
+            <p class="cv-row__label" data-i18n="cv_skills_label">Färdigheter</p>
+
+            <div class="cv-skills-grid">
+
+              <div class="cv-skill-card cv-reveal">
+                <p class="cv-skill-card__num" data-i18n="cv_skill1_num">01</p>
+                <p class="cv-skill-card__title" data-i18n="cv_skill1_title">Content & Storytelling</p>
+                <p class="cv-skill-card__desc" data-i18n="cv_skill1_desc">
+                  Skapar innehåll som bygger varumärke och driver handling – från copy och hooks
+                  till contentplan och brand voice.
+                </p>
+                <div class="cv-tool-chips">
+                  <span class="cv-tool-chip">Canva</span>
+                  <span class="cv-tool-chip">Figma</span>
+                  <span class="cv-tool-chip">Adobe CC</span>
+                  <span class="cv-tool-chip">CapCut</span>
+                  <span class="cv-tool-chip">Copy</span>
+                  <span class="cv-tool-chip">Hooks</span>
+                  <span class="cv-tool-chip">Contentplan</span>
+                  <span class="cv-tool-chip">Brand voice</span>
+                  <span class="cv-tool-chip">UGC</span>
+                </div>
+              </div>
+
+              <div class="cv-skill-card cv-reveal">
+                <p class="cv-skill-card__num" data-i18n="cv_skill2_num">02</p>
+                <p class="cv-skill-card__title" data-i18n="cv_skill2_title">Strategi & Koncept</p>
+                <p class="cv-skill-card__desc" data-i18n="cv_skill2_desc">
+                  Omsätter idéer till tydlig struktur: målgrupp, budskap, kanalval och KPI – med
+                  en plan som faktiskt går att genomföra.
+                </p>
+                <div class="cv-tool-chips">
+                  <span class="cv-tool-chip">Shopify</span>
+                  <span class="cv-tool-chip">Mailchimp</span>
+                  <span class="cv-tool-chip">Notion</span>
+                  <span class="cv-tool-chip">Slack</span>
+                  <span class="cv-tool-chip">CRM</span>
+                  <span class="cv-tool-chip">Brief</span>
+                  <span class="cv-tool-chip">Konceptutveckling</span>
+                  <span class="cv-tool-chip">Kundresa</span>
+                </div>
+              </div>
+
+              <div class="cv-skill-card cv-reveal">
+                <p class="cv-skill-card__num" data-i18n="cv_skill3_num">03</p>
+                <p class="cv-skill-card__title" data-i18n="cv_skill3_title">Tillväxt & Data</p>
+                <p class="cv-skill-card__desc" data-i18n="cv_skill3_desc">
+                  Datadrivet arbete som hittar friktion, testar hypoteser och förbättrar
+                  konvertering, AOV och retention steg för steg.
+                </p>
+                <div class="cv-tool-chips">
+                  <span class="cv-tool-chip">GA4</span>
+                  <span class="cv-tool-chip">GTM</span>
+                  <span class="cv-tool-chip">Looker Studio</span>
+                  <span class="cv-tool-chip">Ads Manager</span>
+                  <span class="cv-tool-chip">Excel</span>
+                  <span class="cv-tool-chip">CRO</span>
+                  <span class="cv-tool-chip">A/B-test</span>
+                  <span class="cv-tool-chip">SEO</span>
+                  <span class="cv-tool-chip">Dashboard</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- FEATURED PROJECTS -->
+          <div class="cv-row">
+            <p class="cv-row__label" data-i18n="cv_proj_label">Projekt</p>
+
+            <div class="cv-proj-grid">
+
+              <a class="cv-proj-card cv-reveal" href="case1.html">
+                <p class="cv-proj-card__type" data-i18n="cv_proj1_type">CRO · Kundresa</p>
+                <p class="cv-proj-card__title" data-i18n="cv_proj1_title">Under Your Skin</p>
+                <p class="cv-proj-card__desc" data-i18n="cv_proj1_desc">Strategi för att lyfta AOV från 786 → 1 000 kr utan att tappa premiumkänslan.</p>
+                <span class="cv-proj-card__arrow">Läs case →</span>
+              </a>
+
+              <a class="cv-proj-card cv-reveal" href="case4.html">
+                <p class="cv-proj-card__type" data-i18n="cv_proj2_type">E-handel · A/B-test</p>
+                <p class="cv-proj-card__title" data-i18n="cv_proj2_title">E-handel: CRO</p>
+                <p class="cv-proj-card__desc" data-i18n="cv_proj2_desc">Datadriven CRO med hypoteser, testplan och uppföljning av konvertering.</p>
+                <span class="cv-proj-card__arrow">Läs case →</span>
+              </a>
+
+              <a class="cv-proj-card cv-reveal" href="lonsam-tillvaxt.html">
+                <p class="cv-proj-card__type" data-i18n="cv_proj3_type">Whitepaper · Lead gen</p>
+                <p class="cv-proj-card__title" data-i18n="cv_proj3_title">Lönsam tillväxt 2026</p>
+                <p class="cv-proj-card__desc" data-i18n="cv_proj3_desc">E-handelsguide med CRM-strategi, offer stack och CAC/LTV-modeller.</p>
+                <span class="cv-proj-card__arrow">Se projekt →</span>
+              </a>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ══════════════════════════════════════════
+           FOOTER
+      ══════════════════════════════════════════ -->
+      <footer id="contact" class="footer section-block">
+        <div class="container footer__grid">
+          <div class="footer__left">
+            <h2 data-i18n="contact_title">Kontakt</h2>
+            <p class="footer__text" data-i18n="footer_text">
+              Nyfiken på att veta mer eller diskutera ett projekt? Hör av dig!
+            </p>
+            <a href="./cv/ava-urden-cv-sv.pdf" download class="btn btn--white track-cv_download" data-cv-link data-i18n="cta_cv">
+              Ladda ner CV
+            </a>
+          </div>
+          <div class="footer__right">
+            <div class="contact-group">
+              <span class="contact-label" data-i18n="contact_email">Email</span>
+              <a href="mailto:ava.urden@gmail.com" class="contact-link email-link">ava.urden@gmail.com</a>
+            </div>
+            <div class="contact-group">
+              <span class="contact-label" data-i18n="contact_mobile">Mobil</span>
+              <a href="tel:+46723111441" class="contact-link">+46 72 311 14 41</a>
+            </div>
+            <div class="contact-group">
+              <span class="contact-label" data-i18n="contact_linkedin">LinkedIn</span>
+              <a href="https://linkedin.com/in/avaurden" target="_blank" class="contact-link">
+                linkedin.com/in/avaurden ↗
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="container footer__bottom">
+          <div class="footer__copy">&copy; 2026 Ava Urdén</div>
+        </div>
+      </footer>
+
+    </main>
+
+    <script>
+      (function () {
+        var els = document.querySelectorAll('.cv-reveal');
+        if (!els.length) return;
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) {
+              e.target.classList.add('is-visible');
+              io.unobserve(e.target);
+            }
+          });
+        }, { threshold: 0.1 });
+        els.forEach(function (el) { io.observe(el); });
+      })();
+    </script>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
