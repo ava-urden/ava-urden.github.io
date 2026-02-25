@@ -276,7 +276,7 @@
                   <em>E-commerce in 2026: CRM First, Product Smart</em> direkt.
                 </p>
               </div>
-              <form class="lead-form" id="emailGateForm" novalidate method="POST" target="gs-frame">
+              <form class="lead-form" id="emailGateForm" novalidate>
                 <!-- Hidden tracking fields (filled by JS on submit) -->
                 <input type="hidden" name="source" value="lead-magnet" />
                 <input type="hidden" name="page" value="Lönsam tillväxt 2026" />
@@ -314,8 +314,6 @@
                 </p>
               </form>
 
-              <!-- Hidden iframe – receives the Apps Script HTML response -->
-              <iframe name="gs-frame" id="gs-frame" style="display:none" title="form response"></iframe>
             </div>
 
             <!-- ── Success / download state ── -->
@@ -539,36 +537,18 @@
         submitBtn.textContent = lang === "en" ? "Sending…" : "Skickar…";
         submitBtn.classList.add("btn--submitting");
 
-        // Dev mode – no URL configured yet
-        if (APPS_SCRIPT_URL === "APPS_SCRIPT_URL_HERE") {
-          revealDownload();
-          return;
+        // Best-effort send to Apps Script (fire-and-forget, no CORS needed)
+        if (APPS_SCRIPT_URL !== "APPS_SCRIPT_URL_HERE") {
+          var fd = new FormData(form);
+          fetch(APPS_SCRIPT_URL, {
+            method: "POST",
+            mode: "no-cors",
+            body: fd
+          }).catch(function () {});
         }
 
-        // Submit form to hidden iframe → Apps Script responds via postMessage
-        form.action = APPS_SCRIPT_URL;
-        form.submit();
-
-        // Fallback: reveal download after 5 s if no postMessage received
-        // (handles Workspace domain restrictions or iframe cross-origin issues)
-        var fallbackTimer = setTimeout(revealDownload, 5000);
-
-        // Store timer so the message handler can cancel it
-        form._fallbackTimer = fallbackTimer;
-      });
-
-      // Listen for response from Apps Script
-      window.addEventListener("message", function (ev) {
-        if (!ev.data) return;
-        clearTimeout(form._fallbackTimer);
-        if (ev.data.ok === true) {
-          revealDownload();
-        } else if (ev.data.ok === false) {
-          var lang = document.documentElement.lang || "sv";
-          submitBtn.textContent = lang === "en" ? "Get the guide" : "Hämta guiden";
-          submitBtn.classList.remove("btn--submitting");
-          formError.style.display = "block";
-        }
+        // Always reveal the download after 800 ms regardless of script response
+        setTimeout(revealDownload, 800);
       });
 
       function revealDownload() {
