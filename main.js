@@ -65,9 +65,9 @@ const dict = {
     mini_item_3_media: "Plugin",
     mini_item_3_tag: "Plugin",
     mini_item_3_status: "Pågående",
-    mini_item_3_title: "Automation Toolkit",
+    mini_item_3_title: "Lönsam tillväxt 2026",
     mini_item_3_desc:
-      "Små plugins och scripts som kapar manuella steg i research, rapportering och kampanjarbete.",
+      "De flesta e-handlare misslyckas inte för att annonserna är dåliga – de försöker skala innan verksamheten är redo.",
     mini_item_3_cta: "Kommer snart",
     lead_eyebrow: "Whitepaper",
     lead_title: "Automation Toolkit 2026",
@@ -564,9 +564,9 @@ const dict = {
     mini_item_3_media: "Plugin",
     mini_item_3_tag: "Plugin",
     mini_item_3_status: "In progress",
-    mini_item_3_title: "Automation Toolkit",
+    mini_item_3_title: "Profitable Growth in 2026",
     mini_item_3_desc:
-      "Small plugins and scripts that cut manual steps in research, reporting, and campaign work.",
+      "Most e-commerce brands don't fail because of bad ads. They fail because they try to scale before the business is ready.",
     mini_item_3_cta: "Coming soon",
     lead_eyebrow: "Whitepaper",
     lead_title: "Automation Toolkit 2026",
