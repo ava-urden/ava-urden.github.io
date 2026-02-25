@@ -4,11 +4,19 @@
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>Growth Radar | Ava Urdén</title>
+<<<<<<< HEAD
     
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
     
+=======
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+
+>>>>>>> 582ad6e (Redesign growth-radar with modern 7-panel live dashboard)
     <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
@@ -40,8 +48,12 @@
         .custom-scrollbar::-webkit-scrollbar { width: 6px; }
         .custom-scrollbar::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
         .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+<<<<<<< HEAD
         
         /* Skeleton animation */
+=======
+
+>>>>>>> 582ad6e (Redesign growth-radar with modern 7-panel live dashboard)
         @keyframes shimmer { 100% { transform: translateX(100%); } }
         .skeleton-bar {
             position: relative; overflow: hidden; background: #e2e8f0; border-radius: 8px;
@@ -51,13 +63,54 @@
             background: linear-gradient(90deg, transparent, rgba(255,255,255,0.5), transparent);
             animation: shimmer 1.5s infinite;
         }
+<<<<<<< HEAD
+=======
+
+        @keyframes fadeIn { from { opacity:0; transform: translateY(8px); } to { opacity:1; transform: translateY(0); } }
+        .fade-in { animation: fadeIn 0.4s ease forwards; }
+
+        .pulse-dot {
+            width: 8px; height: 8px; border-radius: 9999px; background: #a7c400;
+            box-shadow: 0 0 0 0 rgba(167,196,0,0.4);
+            animation: pulse-ring 2s infinite;
+        }
+        @keyframes pulse-ring {
+            0% { box-shadow: 0 0 0 0 rgba(167,196,0,0.4); }
+            70% { box-shadow: 0 0 0 8px rgba(167,196,0,0); }
+            100% { box-shadow: 0 0 0 0 rgba(167,196,0,0); }
+        }
+
+        .tag-hot { background:#fef2f2; color:#dc2626; border: 1px solid #fecaca; }
+        .tag-rising { background:#f0fdf4; color:#16a34a; border: 1px solid #bbf7d0; }
+        .tag-stable { background:#f8fafc; color:#64748b; border: 1px solid #e2e8f0; }
+        .tag-seasonal { background:#fffbeb; color:#d97706; border: 1px solid #fde68a; }
+        .tag-new { background:#eff6ff; color:#2563eb; border: 1px solid #bfdbfe; }
+
+        .card-hover { transition: transform 0.2s ease, box-shadow 0.2s ease; }
+        .card-hover:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+
+        .section-label {
+            font-size: 10px; font-weight: 700; letter-spacing: 0.2em;
+            text-transform: uppercase; color: #94a3b8;
+        }
+
+        .insight-pill {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 4px 10px; border-radius: 9999px;
+            font-size: 11px; font-weight: 600;
+        }
+>>>>>>> 582ad6e (Redesign growth-radar with modern 7-panel live dashboard)
     </style>
 </head>
 <body class="bg-background-light text-slate-900 antialiased flex flex-col min-h-screen">
 
     <header class="h-20 flex items-center justify-between px-6 md:px-12 bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-slate-200">
         <a href="index.html#top" class="font-bold text-lg tracking-[0.2em] uppercase" data-i18n="logo_text">A.U. Portfolio</a>
+<<<<<<< HEAD
         
+=======
+
+>>>>>>> 582ad6e (Redesign growth-radar with modern 7-panel live dashboard)
         <nav class="hidden md:flex gap-8 text-xs font-bold uppercase tracking-[0.2em] text-slate-500">
             <a href="index.html#about" class="hover:text-slate-900 transition-colors" data-i18n="nav_about">Om mig</a>
             <a href="index.html#cases" class="hover:text-slate-900 transition-colors" data-i18n="nav_cases">Utvalda projekt</a>
@@ -74,6 +127,7 @@
     </header>
 
     <main class="flex-1 w-full max-w-7xl mx-auto px-6 md:px-12 py-8 space-y-8">
+<<<<<<< HEAD
         
         <div>
             <a href="index.html#mini" class="inline-flex items-center gap-2 px-4 py-2 bg-white border border-slate-200 rounded-lg shadow-sm hover:shadow-md transition-all text-sm font-bold text-slate-700">
@@ -96,10 +150,40 @@
                 <button id="refreshBtn" class="flex items-center gap-2 px-5 py-2.5 bg-slate-900 text-white text-xs font-bold rounded-full hover:bg-slate-800 transition-all shadow-md hover:shadow-lg">
                     <span class="material-symbols-outlined text-sm">refresh</span>
                     <span data-i18n="refresh">Uppdatera data</span>
+=======
+
+        <!-- BACK -->
+        <div>
+            <a href="index.html#mini" class="inline-flex items-center gap-2 px-4 py-2 bg-white border border-slate-200 rounded-lg shadow-sm hover:shadow-md transition-all text-sm font-bold text-slate-700">
+                <span aria-hidden="true">&larr;</span>
+                <span data-i18n="back_to_mini">Tillbaka till små projekt</span>
+            </a>
+        </div>
+
+        <!-- HERO -->
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-4">
+            <div>
+                <p class="section-label mb-2">Performance &amp; Growth Marketing</p>
+                <h1 class="text-4xl md:text-5xl font-bold mb-2 tracking-tight">Growth Radar</h1>
+                <p class="text-slate-500 max-w-xl text-sm">
+                    Automatisk trendspaning för growth-team. Uppdateras live från Google Trends, Reddit och Hacker News.
+                </p>
+            </div>
+            <div class="flex flex-col items-end gap-2 shrink-0">
+                <div class="flex items-center gap-2">
+                    <div class="pulse-dot"></div>
+                    <span class="text-xs text-slate-400">Live &middot;</span>
+                    <span id="updatedAt" class="text-slate-700 text-xs font-bold">--</span>
+                </div>
+                <button id="refreshBtn" class="flex items-center gap-2 px-5 py-2.5 bg-slate-900 text-white text-xs font-bold rounded-full hover:bg-slate-800 transition-all">
+                    <span class="material-symbols-outlined text-sm">refresh</span>
+                    Uppdatera allt
+>>>>>>> 582ad6e (Redesign growth-radar with modern 7-panel live dashboard)
                 </button>
             </div>
         </div>
 
+<<<<<<< HEAD
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
                 <div class="flex justify-between items-start mb-4">
@@ -243,6 +327,152 @@
             </div>
 
         </div>
+=======
+        <!-- ROW 1: Trends + AI-nyheter -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+
+            <!-- 1. Trending Sverige -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden card-hover">
+                <div class="px-6 pt-6 pb-4 border-b border-slate-100">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <div class="w-9 h-9 rounded-xl bg-[#a7c400]/20 flex items-center justify-center font-bold text-xs text-slate-700">TR</div>
+                            <div>
+                                <h2 class="text-sm font-bold">Trending i Sverige</h2>
+                                <p class="text-xs text-slate-400">Google Trends &mdash; just nu</p>
+                            </div>
+                        </div>
+                        <span class="insight-pill tag-rising text-[10px]">Live</span>
+                    </div>
+                </div>
+                <div class="px-6 py-4">
+                    <p class="text-xs text-slate-400 mb-3 min-h-[16px]" id="trendsNote"></p>
+                    <ul class="space-y-2" id="trendsList"></ul>
+                </div>
+            </div>
+
+            <!-- 2. AI & Tech-nyheter -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden card-hover">
+                <div class="px-6 pt-6 pb-4 border-b border-slate-100">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <div class="w-9 h-9 rounded-xl bg-[#a5f3fc]/40 flex items-center justify-center font-bold text-xs text-slate-700">AI</div>
+                            <div>
+                                <h2 class="text-sm font-bold">AI &amp; tech-nyheter</h2>
+                                <p class="text-xs text-slate-400">Hacker News &mdash; mest diskuterat idag</p>
+                            </div>
+                        </div>
+                        <span class="insight-pill tag-new text-[10px]">Live</span>
+                    </div>
+                </div>
+                <div class="px-6 py-4">
+                    <p class="text-xs text-slate-400 mb-3 min-h-[16px]" id="aiNote"></p>
+                    <ul class="space-y-2" id="aiList"></ul>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- ROW 2: E-handel + Content & social -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+
+            <!-- 3. E-handel & produkter -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden card-hover">
+                <div class="px-6 pt-6 pb-4 border-b border-slate-100">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <div class="w-9 h-9 rounded-xl bg-orange-100 flex items-center justify-center font-bold text-xs text-orange-700">EC</div>
+                            <div>
+                                <h2 class="text-sm font-bold">E-handel &amp; produkttrender</h2>
+                                <p class="text-xs text-slate-400">Reddit r/ecommerce &mdash; hetast just nu</p>
+                            </div>
+                        </div>
+                        <span class="insight-pill tag-hot text-[10px]">Live</span>
+                    </div>
+                </div>
+                <div class="px-6 py-4">
+                    <p class="text-xs text-slate-400 mb-3 min-h-[16px]" id="ecomNote"></p>
+                    <ul class="space-y-2" id="ecomList"></ul>
+                </div>
+            </div>
+
+            <!-- 4. Content & social -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden card-hover">
+                <div class="px-6 pt-6 pb-4 border-b border-slate-100">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <div class="w-9 h-9 rounded-xl bg-purple-100 flex items-center justify-center font-bold text-xs text-purple-700">CS</div>
+                            <div>
+                                <h2 class="text-sm font-bold">Content &amp; social media</h2>
+                                <p class="text-xs text-slate-400">Reddit r/marketing &mdash; hetast just nu</p>
+                            </div>
+                        </div>
+                        <span class="insight-pill tag-rising text-[10px]">Live</span>
+                    </div>
+                </div>
+                <div class="px-6 py-4">
+                    <p class="text-xs text-slate-400 mb-3 min-h-[16px]" id="socialNote"></p>
+                    <ul class="space-y-2" id="socialList"></ul>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- ROW 3: Nya verktyg + Kalender + Insikter -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+
+            <!-- 5. Nya verktyg -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden card-hover">
+                <div class="px-6 pt-6 pb-4 border-b border-slate-100">
+                    <div class="flex items-center gap-3">
+                        <div class="w-9 h-9 rounded-xl bg-green-100 flex items-center justify-center font-bold text-xs text-green-700">NY</div>
+                        <div>
+                            <h2 class="text-sm font-bold">Nya verktyg &amp; produkter</h2>
+                            <p class="text-xs text-slate-400">HN Show HN &mdash; precis lanserat</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="px-6 py-4">
+                    <p class="text-xs text-slate-400 mb-3 min-h-[16px]" id="toolsNote"></p>
+                    <ul class="space-y-2" id="toolsList"></ul>
+                </div>
+            </div>
+
+            <!-- 6. Kampanjkalender -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden card-hover">
+                <div class="px-6 pt-6 pb-4 border-b border-slate-100">
+                    <div class="flex items-center gap-3">
+                        <div class="w-9 h-9 rounded-xl bg-amber-100 flex items-center justify-center font-bold text-xs text-amber-700">KAL</div>
+                        <div>
+                            <h2 class="text-sm font-bold">Kampanjkalender</h2>
+                            <p class="text-xs text-slate-400">Nästa tillfällen att planera kring</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="px-6 py-4">
+                    <ul class="space-y-2" id="calendarList"></ul>
+                </div>
+            </div>
+
+            <!-- 7. Growth-insikter -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden card-hover">
+                <div class="px-6 pt-6 pb-4 border-b border-slate-100">
+                    <div class="flex items-center gap-3">
+                        <div class="w-9 h-9 rounded-xl bg-slate-100 flex items-center justify-center font-bold text-xs text-slate-600">PI</div>
+                        <div>
+                            <h2 class="text-sm font-bold">Performance-insikter</h2>
+                            <p class="text-xs text-slate-400">Taktiker med hög potential just nu</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="px-6 py-4">
+                    <ul class="space-y-2" id="insightsList"></ul>
+                </div>
+            </div>
+
+        </div>
+
+>>>>>>> 582ad6e (Redesign growth-radar with modern 7-panel live dashboard)
     </main>
 
     <footer id="contact" class="bg-[#0b1220] text-white py-16 mt-12">
@@ -255,7 +485,10 @@
                     </p>
                     <a href="./cv/ava-urden-cv-sv.pdf" download class="inline-block px-8 py-3 bg-white text-slate-900 font-bold text-sm uppercase tracking-wider rounded-full hover:-translate-y-1 transition-transform" data-i18n="cta_cv">Ladda ner CV</a>
                 </div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 582ad6e (Redesign growth-radar with modern 7-panel live dashboard)
                 <div class="flex flex-col gap-6 md:items-end">
                     <div>
                         <span class="block text-xs uppercase tracking-[0.2em] text-slate-500 mb-1" data-i18n="contact_email">Email</span>
@@ -278,6 +511,7 @@
     </footer>
 
     <script>
+<<<<<<< HEAD
       const state = { lang: "sv" };
 
       const elements = {
@@ -475,3 +709,233 @@
     </script>
 </body>
 </html>
+=======
+      function updateTimestamp() {
+        const el = document.getElementById("updatedAt");
+        if (el) el.textContent = new Date().toLocaleString("sv-SE", { month:"short", day:"numeric", hour:"2-digit", minute:"2-digit" });
+      }
+
+      function skeleton(n) {
+        return Array.from({ length: n }).map(() => `
+          <li class="flex items-center gap-3 p-3 rounded-xl bg-slate-50">
+            <div class="w-6 h-6 rounded skeleton-bar shrink-0"></div>
+            <div class="flex-1 space-y-2">
+              <div class="h-3 skeleton-bar w-3/4"></div>
+              <div class="h-2.5 skeleton-bar w-1/2"></div>
+            </div>
+          </li>`).join("");
+      }
+
+      function pill(tag) {
+        const m = { hot:["tag-hot","Hett"], rising:["tag-rising","Stigande"], stable:["tag-stable","Stabilt"], seasonal:["tag-seasonal","Säsong"], new:["tag-new","Nytt"] };
+        const [cls, label] = m[tag] || m.stable;
+        return `<span class="insight-pill ${cls} text-[9px] shrink-0">${label}</span>`;
+      }
+
+      function renderItems(listId, items, noteId, noteText) {
+        const listEl = document.getElementById(listId);
+        const noteEl = document.getElementById(noteId);
+        if (noteEl) noteEl.textContent = noteText || "";
+        if (!listEl) return;
+        if (!items || !items.length) {
+          listEl.innerHTML = `<li class="p-3 text-xs text-center text-slate-400 bg-slate-50 rounded-xl">Inga resultat just nu</li>`;
+          return;
+        }
+        listEl.innerHTML = items.map((item, i) => {
+          const lnk = item.url && item.url !== "#"
+            ? `<a class="shrink-0 text-[10px] font-bold text-slate-500 hover:text-slate-900 bg-white border border-slate-200 px-2.5 py-1 rounded-lg hover:shadow transition-all" href="${item.url}" target="_blank" rel="noopener">Öppna</a>`
+            : "";
+          return `
+            <li class="flex items-center gap-3 p-3 rounded-xl bg-slate-50 hover:bg-slate-100 transition-colors fade-in">
+              <span class="w-5 text-[10px] font-bold text-slate-300 shrink-0 text-right">${i+1}</span>
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center gap-1.5 flex-wrap">
+                  <p class="text-xs font-semibold text-slate-800 truncate">${item.title}</p>
+                  ${item.tag ? pill(item.tag) : ""}
+                </div>
+                <p class="text-[10px] text-slate-400 truncate mt-0.5">${item.meta || ""}</p>
+              </div>
+              ${lnk}
+            </li>`;
+        }).join("");
+      }
+
+      const PROXY = "https://api.allorigins.win/raw?url=";
+
+      async function loadTrends() {
+        document.getElementById("trendsList").innerHTML = skeleton(5);
+        try {
+          const res = await fetch(PROXY + encodeURIComponent("https://trends.google.com/trending/rss?geo=SE&hl=sv"));
+          if (!res.ok) throw new Error();
+          const xml = new DOMParser().parseFromString(await res.text(), "text/xml");
+          const items = Array.from(xml.querySelectorAll("item")).slice(0, 5).map((el, i) => {
+            const trafficEl = el.getElementsByTagNameNS("*", "approx_traffic")[0];
+            const linkEl = el.querySelector("link");
+            const url = linkEl?.nextSibling?.nodeValue?.trim() || "https://trends.google.com/trending?geo=SE";
+            return {
+              title: el.querySelector("title")?.textContent || "Okänd",
+              meta: trafficEl ? trafficEl.textContent + " sökningar idag" : "Trendar i Sverige",
+              url,
+              tag: i === 0 ? "hot" : i < 3 ? "rising" : "stable"
+            };
+          });
+          renderItems("trendsList", items, "trendsNote", "Källa: Google Trends Sverige");
+        } catch {
+          renderItems("trendsList", [
+            { title: "Källa tillfälligt otillgänglig", meta: "Klicka Uppdatera allt om några sekunder", tag: "stable" }
+          ], "trendsNote", "Kunde inte nå Google Trends");
+        }
+      }
+
+      async function loadAI() {
+        document.getElementById("aiList").innerHTML = skeleton(5);
+        try {
+          const res = await fetch(PROXY + encodeURIComponent("https://hn.algolia.com/api/v1/search?query=AI+artificial+intelligence&tags=story&hitsPerPage=8&minPoints=20"));
+          if (!res.ok) throw new Error();
+          const data = await res.json();
+          const items = (data.hits || []).slice(0, 5).map((h, i) => ({
+            title: h.title.length > 60 ? h.title.slice(0, 60) + "..." : h.title,
+            meta: (h.points || 0) + " poäng · " + (h.num_comments || 0) + " kommentarer",
+            url: h.url || "https://news.ycombinator.com/item?id=" + h.objectID,
+            tag: i === 0 ? "hot" : i < 3 ? "rising" : "stable"
+          }));
+          renderItems("aiList", items, "aiNote", "Källa: Hacker News — sorterat på relevans");
+        } catch {
+          renderItems("aiList", [
+            { title: "OpenAI releases new reasoning model", meta: "842 poäng · 312 kommentarer", url: "https://news.ycombinator.com", tag: "hot" },
+            { title: "How AI search is changing SEO in 2026", meta: "521 poäng · 188 kommentarer", url: "https://news.ycombinator.com", tag: "rising" },
+            { title: "Google Gemini vs GPT-4o for ad copywriting", meta: "390 poäng · 97 kommentarer", url: "https://news.ycombinator.com", tag: "rising" }
+          ], "aiNote", "Visar exempeldata");
+        }
+      }
+
+      async function loadEcom() {
+        document.getElementById("ecomList").innerHTML = skeleton(5);
+        try {
+          const res = await fetch(PROXY + encodeURIComponent("https://www.reddit.com/r/ecommerce/hot.json?limit=6"));
+          if (!res.ok) throw new Error();
+          const data = await res.json();
+          const items = (data?.data?.children || []).filter(c => !c.data.stickied).slice(0, 5).map((c, i) => ({
+            title: c.data.title.length > 62 ? c.data.title.slice(0, 62) + "..." : c.data.title,
+            meta: c.data.ups.toLocaleString("sv") + " röster · " + c.data.num_comments + " svar",
+            url: "https://reddit.com" + c.data.permalink,
+            tag: i === 0 ? "hot" : c.data.ups > 200 ? "rising" : "stable"
+          }));
+          renderItems("ecomList", items, "ecomNote", "Källa: r/ecommerce — hot feed");
+        } catch {
+          renderItems("ecomList", [
+            { title: "What paid channel is driving ROI for DTC in 2026?", meta: "1 420 röster · 98 svar", url: "https://reddit.com/r/ecommerce", tag: "hot" },
+            { title: "TikTok Shop affiliate vs Meta ads — 3 month comparison", meta: "874 röster · 64 svar", url: "https://reddit.com/r/ecommerce", tag: "rising" },
+            { title: "How to reduce cart abandonment below 60%", meta: "612 röster · 41 svar", url: "https://reddit.com/r/ecommerce", tag: "rising" }
+          ], "ecomNote", "Visar exempeldata");
+        }
+      }
+
+      async function loadSocial() {
+        document.getElementById("socialList").innerHTML = skeleton(5);
+        try {
+          const res = await fetch(PROXY + encodeURIComponent("https://www.reddit.com/r/marketing/hot.json?limit=6"));
+          if (!res.ok) throw new Error();
+          const data = await res.json();
+          const items = (data?.data?.children || []).filter(c => !c.data.stickied).slice(0, 5).map((c, i) => ({
+            title: c.data.title.length > 62 ? c.data.title.slice(0, 62) + "..." : c.data.title,
+            meta: c.data.ups.toLocaleString("sv") + " röster · " + c.data.num_comments + " svar",
+            url: "https://reddit.com" + c.data.permalink,
+            tag: i === 0 ? "hot" : c.data.ups > 200 ? "rising" : "stable"
+          }));
+          renderItems("socialList", items, "socialNote", "Källa: r/marketing — hot feed");
+        } catch {
+          renderItems("socialList", [
+            { title: "UGC ads are outperforming studio content across all categories", meta: "2 180 röster · 134 svar", url: "https://reddit.com/r/marketing", tag: "hot" },
+            { title: "Short-form video is cannibalising blog traffic — adapt or die", meta: "1 340 röster · 89 svar", url: "https://reddit.com/r/marketing", tag: "rising" },
+            { title: "Email open rates up, click rates down — what changed?", meta: "910 röster · 72 svar", url: "https://reddit.com/r/marketing", tag: "stable" }
+          ], "socialNote", "Visar exempeldata");
+        }
+      }
+
+      async function loadTools() {
+        document.getElementById("toolsList").innerHTML = skeleton(4);
+        try {
+          const res = await fetch(PROXY + encodeURIComponent("https://hn.algolia.com/api/v1/search_by_date?tags=show_hn&hitsPerPage=5"));
+          if (!res.ok) throw new Error();
+          const data = await res.json();
+          const items = (data.hits || []).slice(0, 5).map(h => ({
+            title: h.title.replace("Show HN: ", "").slice(0, 58),
+            meta: (h.points || 0) + " poäng · av " + h.author,
+            url: h.url || "https://news.ycombinator.com/item?id=" + h.objectID,
+            tag: (h.points || 0) > 50 ? "hot" : "new"
+          }));
+          renderItems("toolsList", items, "toolsNote", "Källa: Hacker News Show HN");
+        } catch {
+          renderItems("toolsList", [
+            { title: "AI ad copy generator for Meta & Google Ads", meta: "204 poäng · av adcopyai", url: "#", tag: "hot" },
+            { title: "Open-source alternative to Klaviyo", meta: "118 poäng · av mailflow", url: "#", tag: "new" },
+            { title: "Competitor price tracker for Shopify", meta: "77 poäng · av pricescope", url: "#", tag: "new" }
+          ], "toolsNote", "Visar exempeldata");
+        }
+      }
+
+      function loadCalendar() {
+        const now = new Date(); now.setHours(0,0,0,0);
+        const events = [
+          { date: new Date(2026, 2, 8),   name: "Internationella kvinnodagen", tip: "Empowerment — mode, beauty, hälsa" },
+          { date: new Date(2026, 2, 22),  name: "Påskhelgen börjar",           tip: "Sport, resor, familj" },
+          { date: new Date(2026, 3, 3),   name: "Långfredagen",                tip: "Topp för livsmedel & presenter" },
+          { date: new Date(2026, 3, 30),  name: "Valborg",                     tip: "Fest & uteliv — yngre målgrupper" },
+          { date: new Date(2026, 4, 31),  name: "Mors dag",                    tip: "Starta 3 veckor före" },
+          { date: new Date(2026, 5, 6),   name: "Nationaldagen",               tip: "Swedish pride & lokal produktion" },
+          { date: new Date(2026, 5, 20),  name: "Midsommar",                   tip: "Mat, mode, uteaktiviteter" },
+          { date: new Date(2026, 7, 15),  name: "Back to school",              tip: "Starta kampanj mid-juli" },
+          { date: new Date(2026, 9, 31),  name: "Halloween",                   tip: "Växande trend i Sverige" },
+          { date: new Date(2026, 10, 27), name: "Black Friday",                tip: "Planera från september" },
+          { date: new Date(2026, 11, 1),  name: "Cyber Monday",                tip: "Digitala produkter & prenumerationer" },
+          { date: new Date(2026, 11, 24), name: "Julafton",                    tip: "Sista leveransdag viktigaste datumet" },
+        ].filter(e => e.date >= now).slice(0, 5);
+
+        document.getElementById("calendarList").innerHTML = events.map(e => {
+          const diff = Math.ceil((e.date - now) / 86400000);
+          const urgency = diff < 21 ? "text-red-500 font-bold" : diff < 42 ? "text-amber-500 font-semibold" : "text-slate-400";
+          return `
+            <li class="flex items-start gap-3 p-3 rounded-xl bg-slate-50 hover:bg-slate-100 transition-colors">
+              <div class="text-center w-9 shrink-0">
+                <span class="block text-[9px] font-bold text-slate-400 uppercase">${e.date.toLocaleString("sv-SE",{month:"short"})}</span>
+                <span class="block text-base font-bold text-slate-800 leading-tight">${e.date.getDate()}</span>
+              </div>
+              <div class="flex-1 min-w-0">
+                <div class="flex justify-between items-start gap-1">
+                  <p class="text-xs font-semibold text-slate-800">${e.name}</p>
+                  <span class="text-[10px] ${urgency} shrink-0">${diff}d</span>
+                </div>
+                <p class="text-[10px] text-slate-400 mt-0.5">${e.tip}</p>
+              </div>
+            </li>`;
+        }).join("");
+      }
+
+      function loadInsights() {
+        renderItems("insightsList", [
+          { title: "Meta Advantage+ Shopping", meta: "AI-optimerat — 15-30% lägre CPA vs. manuellt", tag: "hot" },
+          { title: "TikTok Search Ads", meta: "Sökintention i TikTok — låg konkurrens nu", tag: "new" },
+          { title: "UGC + Spark Ads", meta: "Lägre CPM, högre CTR än studiomaterial", tag: "hot" },
+          { title: "Google PMax med produktfeed", meta: "Bra ROAS med egna tillgångar + feed", tag: "rising" },
+          { title: "E-post med AI-personalisering", meta: "Klaviyo + AI ökar konvertering 20-40%", tag: "rising" },
+        ], "insightsNote", "");
+      }
+
+      function fetchAll() {
+        updateTimestamp();
+        loadTrends();
+        loadAI();
+        loadEcom();
+        loadSocial();
+        loadTools();
+        loadCalendar();
+        loadInsights();
+      }
+
+      document.getElementById("refreshBtn")?.addEventListener("click", fetchAll);
+      fetchAll();
+    </script>
+</body>
+</html>
+>>>>>>> 582ad6e (Redesign growth-radar with modern 7-panel live dashboard)
