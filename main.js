@@ -312,6 +312,7 @@ const dict = {
     contact_linkedin: "LinkedIn",
     back_to_cases: "← Tillbaka till cases",
     back_to_cases_btn: "← Se alla projekt",
+    cv_back: "← Tillbaka till start",
     c3_tba_desc: "Det här caset publiceras snart. Håll utkik!",
 
     // Case Fotografiska
@@ -966,6 +967,7 @@ const dict = {
     contact_linkedin: "LinkedIn",
     back_to_cases: "← Back to cases",
     back_to_cases_btn: "← See all projects",
+    cv_back: "← Back to start",
     c3_tba_desc: "This case will be published soon. Stay tuned!",
 
     // Case Fotografiska
