@@ -10,8 +10,8 @@
   --line-strong: rgba(0, 0, 0, 0.1);
   --header-height: 76px;
 
-  --max: 1180px;
-  --pad: 32px;
+  --max: 1400px;
+  --pad: clamp(20px, 3.5vw, 52px);
   --radius-sm: 6px;
   --radius-md: 12px;
   --radius-lg: 20px;

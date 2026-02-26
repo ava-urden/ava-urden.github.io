@@ -29,17 +29,8 @@
     <link rel="stylesheet" href="./style.css" />
 
     <style>
-      /* ── WIDER SECTIONS ───────────────────────── */
-      #cases.section-block > .container,
-      #mini.section-block > .container {
-        max-width: 1440px;
-        padding: 0 clamp(20px, 3.5vw, 56px);
-      }
-
-      #cases .grid.grid--3 {
-        max-width: none;
-      }
-
+      /* ── REMOVE INNER MAX-WIDTH ON GRIDS ─────── */
+      #cases .grid.grid--3,
       #mini .mini-grid {
         max-width: none;
       }
