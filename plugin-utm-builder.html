@@ -72,249 +72,172 @@
         <div class="container">
           <a href="index.html#mini" class="back-link" data-i18n="back_to_mini">← Tillbaka till små projekt</a>
 
-          <div class="case-hero">
-            <div class="case-hero__content reveal">
-              <h1 class="h-display" data-i18n="mini1_hero_title">TABMANAGER</h1>
-              <p class="hero__p" data-i18n="mini1_hero_body">
-                Jag har byggt ett plugin som låter dig spara och organisera öppna flikar i snygga samlingar så att du enkelt hittar dem senare.
-              </p>
-              <p class="hero__p" data-i18n="mini1_hero_extra">
-                Om du är som jag och gillar ordning och reda kommer du trivas med mitt plugin! Helt gratis att ladda ner.
-              </p>
-              <div class="case-meta">
-                <span class="pill" data-i18n="mini1_pill_1">Plugin</span>
-                <span class="pill" data-i18n="mini1_pill_2">Growth Tech</span>
-                <span class="pill" data-i18n="mini1_pill_3">Gratis</span>
+          <!-- PAGE HERO -->
+          <div class="plg-hero reveal">
+            <p class="plg-eyebrow">Chrome-plugins</p>
+            <h1 class="h-display plg-title">Plugins för ordning<br>och reda</h1>
+            <p class="plg-intro">Om du är som jag och älskar struktur, system och att alltid ha koll – det här är det jag faktiskt byggt och använder.</p>
+            <div class="case-meta">
+              <span class="pill">2 plugins</span>
+              <span class="pill">Chrome</span>
+              <span class="pill">Gratis</span>
+            </div>
+          </div>
+
+          <!-- PLUGIN LIST -->
+          <div class="plg-list">
+
+            <!-- [01] TABMANAGER -->
+            <div class="plg-row reveal">
+              <div class="plg-row__left">
+                <span class="plg-num">01</span>
+                <span class="plg-status">Live</span>
               </div>
-              <div class="mini-detail__cta">
-                <a
-                  class="btn btn--dark"
-                  href="./downloads/TabManager.zip"
-                  download
-                  data-i18n="mini1_download"
-                  >Ladda ner gratis</a
-                >
+              <div class="plg-row__body">
+                <div class="plg-row__main">
+                  <div class="plg-row__info">
+                    <h2 class="plg-row__title" data-i18n="mini1_hero_title">TABMANAGER</h2>
+                    <p class="plg-row__desc" data-i18n="mini1_hero_body">
+                      Spara och organisera öppna flikar i snygga samlingar. Återställ med ett klick – aldrig mer förlora den där fliken.
+                    </p>
+                    <div class="plg-chips">
+                      <span>Spara samlingar</span>
+                      <span>Taggar & struktur</span>
+                      <span>Återställ med ett klick</span>
+                      <span>Chrome Extension API</span>
+                    </div>
+                    <div class="plg-row__cta">
+                      <a class="btn btn--dark" href="./downloads/TabManager.zip" download data-i18n="mini1_download">Ladda ner gratis</a>
+                      <button class="mini-detail__link" type="button" data-modal-open="privacy-modal" data-i18n="mini1_privacy_link">Integritetspolicy →</button>
+                    </div>
+                  </div>
+                  <div class="plg-row__mock">
+                    <img src="./downloads/moccctabmanager.png" alt="TabManager preview" loading="lazy" />
+                  </div>
+                </div>
+                <div class="plg-install">
+                  <p class="plg-install__label" data-i18n="mini1_install_title">Installera i Chrome</p>
+                  <ol class="mini-steps" data-i18n-html="mini1_install_list">
+                    <li>Ladda ner zipfilen och packa upp den.</li>
+                    <li>Öppna <strong>chrome://extensions</strong> i Chrome.</li>
+                    <li>Slå på <strong>Developer mode</strong>.</li>
+                    <li>Klicka <strong>Load unpacked</strong> och välj mappen.</li>
+                  </ol>
+                </div>
               </div>
-              <button
-                class="mini-detail__link"
-                type="button"
-                data-modal-open="privacy-modal"
-                data-i18n="mini1_privacy_link"
-              >
-                Integritetspolicy →
-              </button>
             </div>
-            <div class="mini-detail__media reveal" style="--delay: 0.1s;">
-              <img
-                class="mini-detail__image"
-                src="./downloads/moccctabmanager.png"
-                alt="TabManager preview"
-                loading="lazy"
-              />
-            </div>
-          </div>
 
-          <div class="grid grid--3">
-            <div class="card-skill reveal">
-              <h3 data-i18n="mini1_overview_title">Översikt</h3>
-              <ul class="bullet-list" data-i18n-html="mini1_overview_list">
-                <li><strong>Typ:</strong> Chrome-plugin</li>
-                <li><strong>Syfte:</strong> Snabbare taggning & enhetlig spårning</li>
-                <li><strong>Status:</strong> Klar för nedladdning</li>
-              </ul>
-            </div>
-            <div class="card-skill reveal" style="--delay: 0.05s;">
-              <h3 data-i18n="mini1_features_title">Funktioner</h3>
-              <ul class="bullet-list" data-i18n-html="mini1_features_list">
-                <li>Preset-mallar för kampanjer</li>
-                <li>Validering av UTM-strängar</li>
-                <li>Export till CSV/Sheets</li>
-              </ul>
-            </div>
-            <div class="card-skill reveal" style="--delay: 0.1s;">
-              <h3 data-i18n="mini1_stack_title">Stack</h3>
-              <ul class="bullet-list" data-i18n-html="mini1_stack_list">
-                <li>JavaScript</li>
-                <li>Chrome Extension API</li>
-                <li>Google Sheets-export</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="intro-text reveal mini-install">
-            <div class="mini-install__head">
-              <h2 class="h-display" data-i18n="mini1_install_title">Installera i Chrome</h2>
-            </div>
-            <ol class="mini-steps" data-i18n-html="mini1_install_list">
-              <li>Ladda ner zipfilen och packa upp den.</li>
-              <li>Öppna <strong>chrome://extensions</strong> i Chrome.</li>
-              <li>Slå på <strong>Developer mode</strong>.</li>
-              <li>Klicka <strong>Load unpacked</strong> och välj mappen.</li>
-            </ol>
-          </div>
-
-          <!-- Plugin 02 – locked -->
-          <div class="plugin-next reveal" id="pluginNext">
-            <div class="plugin-next__top">
-              <span class="plugin-next__num">02</span>
-              <span class="plugin-next__badge">Exklusivt</span>
-            </div>
-            <h2 class="plugin-next__title">Todo v2</h2>
-            <p class="plugin-next__desc">
-              En smartare todo-plugin för Chrome – byggt för att hålla koll på det som faktiskt spelar roll. Prioritera, organisera och bocka av utan distraktioner.
-            </p>
-
-            <!-- Gate: locked -->
-            <div class="plugin-next__gate" id="pluginGateForm">
-              <p class="plugin-next__gate-label">Skriv in ditt LinkedIn-namn för att låsa upp</p>
-              <div class="plugin-next__input-row">
-                <span class="plugin-next__li-prefix">linkedin.com/in/</span>
-                <input
-                  id="linkedinInput"
-                  class="plugin-next__input"
-                  type="text"
-                  placeholder="ditt-namn"
-                  autocomplete="off"
-                />
-                <button class="plugin-next__btn" id="pluginUnlockBtn" type="button">Lås upp →</button>
+            <!-- [02] TODO V2 – locked -->
+            <div class="plg-row reveal" id="pluginNext">
+              <div class="plg-row__left">
+                <span class="plg-num">02</span>
+                <span class="plg-badge">Exklusivt</span>
               </div>
-              <p class="plugin-next__note">Ingen spam. Ingen inloggning. Bara ett litet handslag.</p>
+              <div class="plg-row__body">
+                <div class="plg-row__main">
+                  <div class="plg-row__info">
+                    <h2 class="plg-row__title">TODO V2</h2>
+                    <p class="plg-row__desc">
+                      En smartare todo-plugin för Chrome – byggt för att hålla koll på det som faktiskt spelar roll. Prioritera, organisera och bocka av utan distraktioner.
+                    </p>
+                  </div>
+                  <div class="plg-row__mock plg-row__mock--icon">
+                    <img src="./img/tasklist.png" alt="Todo v2 ikon" loading="lazy" />
+                  </div>
+                </div>
+
+                <!-- Gate: locked -->
+                <div class="plugin-next__gate" id="pluginGateForm">
+                  <p class="plugin-next__gate-label">Skriv in ditt LinkedIn-namn för att låsa upp</p>
+                  <div class="plugin-next__input-row">
+                    <span class="plugin-next__li-prefix">linkedin.com/in/</span>
+                    <input id="linkedinInput" class="plugin-next__input" type="text" placeholder="ditt-namn" autocomplete="off" />
+                    <button class="plugin-next__btn" id="pluginUnlockBtn" type="button">Lås upp →</button>
+                  </div>
+                  <p class="plugin-next__note">Ingen spam. Ingen inloggning. Bara ett litet handslag.</p>
+                </div>
+
+                <!-- Success: unlocked -->
+                <div class="plugin-next__success" id="pluginGateSuccess">
+                  <p class="plugin-next__welcome">Välkommen, <strong id="linkedinName"></strong>! Här är plugin 02:</p>
+                  <a class="btn btn--dark plugin-next__dl" href="./downloads/todov.2" download="TodoV2-plugin.zip">↓ Ladda ner Todo v2</a>
+                  <p class="plugin-next__install-hint">Installera precis som TabManager – packa upp och ladda in i chrome://extensions.</p>
+                </div>
+              </div>
             </div>
 
-            <!-- Success: unlocked -->
-            <div class="plugin-next__success" id="pluginGateSuccess">
-              <p class="plugin-next__welcome">Välkommen, <strong id="linkedinName"></strong>! Här är plugin 02:</p>
-              <a class="btn btn--dark plugin-next__dl" href="./downloads/todov.2" download="TodoV2-plugin.zip">
-                ↓ Ladda ner Todo v2
-              </a>
-              <p class="plugin-next__install-hint">Installera precis som TabManager – packa upp och ladda in i chrome://extensions.</p>
-            </div>
-          </div>
-
+          </div><!-- /plg-list -->
         </div>
       </section>
 
       <style>
-        .plugin-next {
-          margin-top: 80px;
-          padding: 48px;
-          background: rgba(255,255,255,0.04);
-          border: 1px solid rgba(255,255,255,0.10);
-          border-radius: var(--radius-lg);
+        /* ── Page hero ── */
+        .plg-hero { padding: 56px 0 64px; border-bottom: 1px solid var(--line); margin-bottom: 0; }
+        .plg-eyebrow { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--muted); margin-bottom: 20px; }
+        .plg-title { margin-bottom: 18px; }
+        .plg-intro { font-size: 1.05rem; color: var(--muted); max-width: 480px; line-height: 1.65; margin-bottom: 24px; }
+
+        /* ── Plugin list ── */
+        .plg-list { border-top: 1px solid var(--line); }
+
+        .plg-row {
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: 24px;
+          padding: 56px 0;
+          border-bottom: 1px solid var(--line);
         }
-        .plugin-next__top {
-          display: flex;
-          align-items: center;
-          gap: 14px;
-          margin-bottom: 16px;
+        @media (min-width: 700px) {
+          .plg-row { grid-template-columns: 90px 1fr; gap: 0 48px; }
         }
-        .plugin-next__num {
-          font-family: var(--font-head);
-          font-size: 0.85rem;
-          font-weight: 400;
-          color: rgba(240,237,232,0.35);
-          letter-spacing: 0.05em;
-        }
-        .plugin-next__num::before { content: "["; }
-        .plugin-next__num::after  { content: "]"; }
-        .plugin-next__badge {
-          font-size: 0.7rem;
-          font-weight: 700;
-          letter-spacing: 0.14em;
-          text-transform: uppercase;
-          color: var(--accent);
-          background: rgba(167,196,0,0.12);
-          padding: 3px 10px;
-          border-radius: 999px;
-          border: 1px solid rgba(167,196,0,0.25);
-        }
-        .plugin-next__title {
-          font-family: var(--font-display);
-          font-size: clamp(1.8rem, 4vw, 2.8rem);
-          font-weight: 900;
-          letter-spacing: 0.08em;
-          text-transform: uppercase;
-          color: rgba(240,237,232,0.9);
-          margin: 0 0 14px;
-        }
-        .plugin-next__desc {
-          font-size: 1rem;
-          color: rgba(240,237,232,0.55);
-          max-width: 520px;
-          line-height: 1.65;
-          margin-bottom: 36px;
-        }
-        .plugin-next__gate-label {
-          font-size: 0.78rem;
-          font-weight: 700;
-          letter-spacing: 0.1em;
-          text-transform: uppercase;
-          color: rgba(240,237,232,0.45);
-          margin-bottom: 14px;
-        }
-        .plugin-next__input-row {
-          display: flex;
-          align-items: center;
-          gap: 0;
-          max-width: 480px;
-          background: rgba(255,255,255,0.06);
-          border: 1px solid rgba(255,255,255,0.14);
-          border-radius: 8px;
-          overflow: hidden;
-          margin-bottom: 12px;
-        }
-        .plugin-next__li-prefix {
-          font-size: 0.82rem;
-          color: rgba(240,237,232,0.35);
-          padding: 0 10px 0 14px;
-          white-space: nowrap;
-          user-select: none;
-        }
-        .plugin-next__input {
-          flex: 1;
-          background: transparent;
-          border: none;
-          outline: none;
-          color: rgba(240,237,232,0.9);
-          font-size: 0.95rem;
-          padding: 13px 10px 13px 0;
-          font-family: var(--font-body);
-        }
-        .plugin-next__input::placeholder { color: rgba(240,237,232,0.25); }
-        .plugin-next__btn {
-          background: #fff;
-          color: #0d0d0d;
-          font-size: 0.82rem;
-          font-weight: 700;
-          letter-spacing: 0.06em;
-          padding: 13px 20px;
-          border: none;
-          cursor: pointer;
-          white-space: nowrap;
-          transition: opacity 0.2s;
-        }
-        .plugin-next__btn:hover { opacity: 0.85; }
-        .plugin-next__note {
-          font-size: 0.78rem;
-          color: rgba(240,237,232,0.28);
-        }
+
+        /* Left col: number + status */
+        .plg-row__left { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; padding-top: 4px; }
+        .plg-num { font-family: var(--font-head); font-size: 0.9rem; font-weight: 400; color: var(--muted); letter-spacing: 0.05em; }
+        .plg-num::before { content: "["; }
+        .plg-num::after  { content: "]"; }
+        .plg-status { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #6a9a00; }
+        .plg-badge { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #5a7f00; background: rgba(100,150,0,0.08); padding: 3px 10px; border-radius: 999px; border: 1px solid rgba(100,150,0,0.2); }
+
+        /* Right col: content */
+        .plg-row__title { font-family: var(--font-display); font-size: clamp(1.6rem, 3.5vw, 2.4rem); font-weight: 900; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink); margin: 0 0 12px; }
+        .plg-row__desc { font-size: 1rem; color: var(--muted); max-width: 500px; line-height: 1.65; margin-bottom: 24px; }
+
+        /* Feature chips */
+        .plg-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 28px; }
+        .plg-chips span { font-size: 0.78rem; color: var(--muted); background: #f0efed; border: 1px solid var(--line); border-radius: 999px; padding: 5px 12px; }
+
+        /* CTA row */
+        .plg-row__cta { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; margin-bottom: 40px; }
+
+        /* Mockup image */
+        .plg-row__main { display: flex; gap: 40px; align-items: flex-start; flex-wrap: wrap; }
+        .plg-row__info { flex: 1; min-width: 260px; }
+        .plg-row__mock { flex: 0 0 auto; max-width: 280px; }
+        .plg-row__mock img { width: 100%; border-radius: 12px; opacity: 0.95; }
+        .plg-row__mock--icon { max-width: 120px; display: flex; align-items: flex-start; }
+        .plg-row__mock--icon img { border-radius: 20px; }
+
+        /* Install */
+        .plg-install { border-top: 1px solid var(--line); padding-top: 28px; }
+        .plg-install__label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); margin-bottom: 14px; }
+
+        /* Gate */
+        .plugin-next__gate-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 14px; }
+        .plugin-next__input-row { display: flex; align-items: center; max-width: 480px; background: #fff; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; margin-bottom: 12px; box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
+        .plugin-next__li-prefix { font-size: 0.82rem; color: var(--muted); padding: 0 10px 0 14px; white-space: nowrap; user-select: none; }
+        .plugin-next__input { flex: 1; background: transparent; border: none; outline: none; color: var(--ink); font-size: 0.95rem; padding: 13px 10px 13px 0; font-family: var(--font-body); }
+        .plugin-next__input::placeholder { color: #b0aba4; }
+        .plugin-next__btn { background: var(--ink); color: #fff; font-size: 0.82rem; font-weight: 700; letter-spacing: 0.06em; padding: 13px 20px; border: none; cursor: pointer; white-space: nowrap; transition: opacity 0.2s; }
+        .plugin-next__btn:hover { opacity: 0.82; }
+        .plugin-next__note { font-size: 0.78rem; color: var(--muted); }
         .plugin-next__success { display: none; }
         .plugin-next__success.is-visible { display: block; }
         .plugin-next__gate.is-hidden { display: none; }
-        .plugin-next__welcome {
-          font-size: 1rem;
-          color: rgba(240,237,232,0.7);
-          margin-bottom: 20px;
-        }
-        .plugin-next__welcome strong { color: rgba(240,237,232,0.95); }
-        .plugin-next__dl {
-          display: inline-flex;
-          margin-bottom: 16px;
-        }
-        .plugin-next__install-hint {
-          font-size: 0.82rem;
-          color: rgba(240,237,232,0.35);
-        }
+        .plugin-next__welcome { font-size: 1rem; color: var(--ink); margin-bottom: 20px; }
+        .plugin-next__welcome strong { color: var(--ink); }
+        .plugin-next__dl { display: inline-flex; margin-bottom: 16px; }
+        .plugin-next__install-hint { font-size: 0.82rem; color: var(--muted); margin-top: 12px; }
       </style>
 
       <footer id="contact" class="footer section-block">
