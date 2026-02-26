@@ -2835,7 +2835,7 @@ body.modal-open {
   }
 
   .about__frame {
-    padding: 28px 20px;
+    padding: 28px 0;
   }
 
   .about__grid {
@@ -2854,7 +2854,7 @@ body.modal-open {
   }
 
   .about__image img {
-    max-width: 260px;
+    max-width: 100%;
   }
 
   /* Mini-cards: 2 col on mobile, shorter image */
