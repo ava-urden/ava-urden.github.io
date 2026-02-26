@@ -87,25 +87,36 @@
             padding: 4px 10px; border-radius: 9999px;
             font-size: 11px; font-weight: 600;
         }
+
+        /* Override style.css lang__btn (designed for dark header) */
+        header .lang__btn,
+        header .lang__btn.is-active {
+            color: #0f172a;
+        }
+        header .lang__btn:not(.is-active) {
+            color: #64748b;
+        }
     </style>
 </head>
 <body class="bg-background-light text-slate-900 antialiased flex flex-col min-h-screen">
 
-    <header class="h-20 flex items-center justify-between px-6 md:px-12 bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-slate-200">
-        <a href="index.html#top" class="font-bold text-lg tracking-[0.2em] uppercase" data-i18n="logo_text">A.U. Portfolio</a>
+    <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-slate-200">
+        <div class="h-20 flex items-center justify-between max-w-7xl mx-auto px-6 md:px-12">
+            <a href="index.html#top" class="font-bold text-lg tracking-[0.2em] uppercase" data-i18n="logo_text">A.U. Portfolio</a>
 
-        <nav class="hidden md:flex gap-8 text-xs font-bold uppercase tracking-[0.2em] text-slate-500">
-            <a href="index.html#about" class="hover:text-slate-900 transition-colors" data-i18n="nav_about">Om mig</a>
-            <a href="index.html#cases" class="hover:text-slate-900 transition-colors" data-i18n="nav_cases">Utvalda projekt</a>
-            <a href="index.html#skills" class="hover:text-slate-900 transition-colors" data-i18n="nav_skills">Färdigheter</a>
-            <a href="cv.html" class="hover:text-slate-900 transition-colors" data-i18n="nav_cv">CV</a>
-            <a href="index.html#contact" class="hover:text-slate-900 transition-colors" data-i18n="nav_contact">Kontakt</a>
-        </nav>
+            <nav class="hidden md:flex gap-8 text-xs font-bold uppercase tracking-[0.2em] text-slate-500">
+                <a href="index.html#about" class="hover:text-slate-900 transition-colors" data-i18n="nav_about">Om mig</a>
+                <a href="index.html#cases" class="hover:text-slate-900 transition-colors" data-i18n="nav_cases">Utvalda projekt</a>
+                <a href="index.html#skills" class="hover:text-slate-900 transition-colors" data-i18n="nav_skills">Färdigheter</a>
+                <a href="cv.html" class="hover:text-slate-900 transition-colors" data-i18n="nav_cv">CV</a>
+                <a href="index.html#contact" class="hover:text-slate-900 transition-colors" data-i18n="nav_contact">Kontakt</a>
+            </nav>
 
-        <div class="flex items-center gap-4">
-            <div class="flex items-center bg-slate-100 p-1 rounded-full border border-slate-200">
-                <button class="lang__btn px-3 py-1 text-xs font-bold rounded-full transition-colors bg-white shadow-sm text-slate-900" data-lang="sv">SV</button>
-                <button class="lang__btn px-3 py-1 text-xs font-bold rounded-full transition-colors text-slate-500 hover:text-slate-900" data-lang="en">EN</button>
+            <div class="flex items-center gap-4">
+                <div class="flex items-center bg-slate-100 p-1 rounded-full border border-slate-200">
+                    <button class="lang__btn px-3 py-1 text-xs font-bold rounded-full transition-colors bg-white shadow-sm text-slate-900" data-lang="sv">SV</button>
+                    <button class="lang__btn px-3 py-1 text-xs font-bold rounded-full transition-colors text-slate-500 hover:text-slate-900" data-lang="en">EN</button>
+                </div>
             </div>
         </div>
     </header>
