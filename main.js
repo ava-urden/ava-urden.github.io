@@ -123,7 +123,7 @@ const dict = {
       "Experternas boktips: koncept & contentplan med SEO‑text, profilerade boktips och tydliga köplänkar.",
     case6_image_note: "Akademibokhandeln",
 
-    mini_title: "Experiment & prototyper",
+    mini_title: "Prototyper, id\u00e9er och insikter",
     mini_intro:
       "Mina sidoprojekt jag gjort för att lära, testa och förbättra.",
     mini_item_1_media: "Plugin",
@@ -779,7 +779,7 @@ const dict = {
       "Expert Book Picks: concept & content plan with SEO copy, expert picks, and direct buy links.",
     case6_image_note: "Akademibokhandeln",
 
-    mini_title: "Experiments & prototypes",
+    mini_title: "Prototypes, ideas & insights",
     mini_intro:
       "Side projects I've made to learn, test, and improve.",
     mini_item_1_media: "Plugin",
