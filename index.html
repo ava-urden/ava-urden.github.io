@@ -35,6 +35,14 @@
         max-width: none;
       }
 
+      /* ── LEFT-ALIGN SECTION HEADERS ──────────── */
+      #cases .section-header-group,
+      #mini .section-header-group {
+        max-width: none;
+        margin-left: 0;
+        text-align: left;
+      }
+
       /* ── PORTRAIT MINI-CARDS ──────────────────── */
       .mini-card {
         border-radius: 10px;
@@ -72,24 +80,7 @@
         transform: scale(1.04);
       }
 
-      /* Always show type label as badge */
-      .mini-card__media-label,
-      .mini-card__media--tabless .mini-card__media-label {
-        display: inline-flex !important;
-        position: absolute;
-        top: 12px;
-        left: 12px;
-        font-size: 0.62rem;
-        font-weight: 700;
-        letter-spacing: 0.14em;
-        text-transform: uppercase;
-        color: #333;
-        background: rgba(255,255,255,0.92);
-        padding: 0.22rem 0.6rem;
-        border-radius: 3px;
-      }
-
-      .mini-card__body {
+.mini-card__body {
         padding: 1.1rem 1.25rem 1.3rem;
         position: static;
       }
