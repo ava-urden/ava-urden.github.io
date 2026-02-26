@@ -282,6 +282,8 @@ const dict = {
     contact_email: "Email",
     contact_linkedin: "LinkedIn",
     back_to_cases: "← Tillbaka till cases",
+    back_to_cases_btn: "← Se alla projekt",
+    c3_tba_desc: "Det här caset publiceras snart. Håll utkik!",
 
     // Case 1
     c1_hero_title: "Under Your Skin: Optimering av kundresan",
@@ -877,6 +879,8 @@ const dict = {
     contact_email: "Email",
     contact_linkedin: "LinkedIn",
     back_to_cases: "← Back to cases",
+    back_to_cases_btn: "← See all projects",
+    c3_tba_desc: "This case will be published soon. Stay tuned!",
 
     // Case 1
     c1_hero_title: "Under Your Skin: Customer journey optimization",
