@@ -32,25 +32,47 @@
 
       body.cv-page { background: #f6f2ec; }
 
+      /* ── TOP CONTACT BAR ─────────────────────── */
+      .cv-topbar {
+        background: #fff;
+        border-bottom: 1px solid #ede9e2;
+        padding: 0.6rem 0;
+      }
+      .cv-topbar__inner {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 2rem;
+        flex-wrap: wrap;
+      }
+      .cv-topbar__item {
+        font-size: 0.75rem;
+        color: #888;
+        text-decoration: none;
+        letter-spacing: 0.01em;
+        transition: color 0.15s;
+      }
+      .cv-topbar__item:hover { color: #0b0b0b; }
+
       /* ── HERO (light) ─────────────────────────── */
       .cv-hero {
         background: #fff;
         border-bottom: 1px solid #ede9e2;
-        padding: 5rem 0 4rem;
+        padding: 3.5rem 0 3.5rem;
       }
 
       .cv-hero__grid {
         display: grid;
-        grid-template-columns: 1fr 260px;
-        gap: 4rem;
-        align-items: center;
+        grid-template-columns: 1fr 220px;
+        gap: 3.5rem;
+        align-items: start;
       }
 
       .cv-hero__top {
         display: flex;
         align-items: center;
-        gap: 1rem;
-        margin-bottom: 1.25rem;
+        gap: 0.75rem;
+        margin-bottom: 1rem;
         flex-wrap: wrap;
       }
 
@@ -91,40 +113,47 @@
       }
 
       .cv-hero__name {
-        font-size: clamp(3.5rem, 7.5vw, 6rem);
+        font-size: clamp(3rem, 6.5vw, 5rem);
         font-weight: 900;
         line-height: 0.95;
         letter-spacing: -0.04em;
         color: #0b0b0b;
-        margin-bottom: 1rem;
+        margin-bottom: 0.6rem;
       }
 
-      .cv-hero__role {
-        font-size: 1.05rem;
-        font-weight: 300;
+      .cv-hero__title {
+        font-size: 1rem;
+        font-weight: 700;
+        color: #555;
+        letter-spacing: 0.01em;
+        margin-bottom: 1.1rem;
+      }
+
+      .cv-hero__intro {
+        font-size: 0.9rem;
         color: #666;
-        line-height: 1.55;
-        max-width: 440px;
-        margin-bottom: 2rem;
+        line-height: 1.75;
+        max-width: 520px;
+        margin-bottom: 1.75rem;
       }
 
       .cv-chips {
         display: flex;
         flex-wrap: wrap;
-        gap: 0.45rem;
-        margin-bottom: 2rem;
+        gap: 0.4rem;
+        margin-bottom: 1.75rem;
       }
 
       .cv-chip {
         display: inline-flex;
         align-items: center;
-        gap: 0.35rem;
-        font-size: 0.78rem;
-        color: #444;
+        gap: 0.3rem;
+        font-size: 0.76rem;
+        color: #555;
         background: #f4f2ef;
         border: 1px solid #e4e0da;
         border-radius: 100px;
-        padding: 0.35rem 0.85rem;
+        padding: 0.3rem 0.75rem;
         text-decoration: none;
         transition: background 0.15s, border-color 0.15s;
       }
@@ -135,8 +164,8 @@
       }
 
       .cv-chip svg {
-        width: 12px;
-        height: 12px;
+        width: 11px;
+        height: 11px;
         opacity: 0.45;
         flex-shrink: 0;
       }
@@ -146,42 +175,17 @@
       /* Photo */
       .cv-photo-wrap {
         position: relative;
+        padding-top: 2.8rem; /* align with name */
       }
 
       .cv-photo-wrap img {
         width: 100%;
-        height: 320px;
+        height: 280px;
         object-fit: cover;
         object-position: top center;
-        border-radius: 12px;
+        border-radius: 6px;
         display: block;
-        filter: grayscale(8%);
-      }
-
-      .cv-photo-badge {
-        position: absolute;
-        bottom: 1rem;
-        left: 1rem;
-        background: #fff;
-        border: 1px solid #ede9e2;
-        border-radius: 8px;
-        padding: 0.6rem 0.85rem;
-        box-shadow: 0 2px 12px rgba(0,0,0,0.07);
-      }
-
-      .cv-photo-badge__label {
-        font-size: 0.65rem;
-        font-weight: 700;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-        color: #bbb;
-        margin-bottom: 0.15rem;
-      }
-
-      .cv-photo-badge__value {
-        font-size: 0.78rem;
-        font-weight: 700;
-        color: #0b0b0b;
+        filter: grayscale(5%);
       }
 
       /* ── BODY ─────────────────────────────────── */
@@ -189,18 +193,18 @@
 
       .cv-row {
         display: grid;
-        grid-template-columns: 160px 1fr;
-        gap: 3rem;
-        padding: 3rem 0;
+        grid-template-columns: 150px 1fr;
+        gap: 2.5rem;
+        padding: 2.5rem 0;
         border-top: 1px solid #ede9e2;
       }
 
       .cv-row:first-child { border-top: none; }
 
       .cv-row__label {
-        font-size: 0.68rem;
+        font-size: 0.66rem;
         font-weight: 700;
-        letter-spacing: 0.18em;
+        letter-spacing: 0.2em;
         text-transform: uppercase;
         color: #bbb;
         padding-top: 0.1rem;
@@ -227,7 +231,7 @@
 
       .cv-tl-entry {
         position: relative;
-        padding-bottom: 1.5rem;
+        padding-bottom: 1.25rem;
       }
 
       .cv-tl-entry:last-child { padding-bottom: 0; }
@@ -254,14 +258,14 @@
       .cv-tl-card {
         background: #fff;
         border: 1px solid #ede9e2;
-        border-radius: 10px;
-        padding: 1.4rem 1.6rem;
+        border-radius: 8px;
+        padding: 1.2rem 1.5rem;
         transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.22s;
       }
 
       .cv-tl-entry:hover .cv-tl-card {
-        transform: translateX(6px);
-        box-shadow: 0 4px 22px rgba(0,0,0,0.06);
+        transform: translateX(5px);
+        box-shadow: 0 4px 18px rgba(0,0,0,0.06);
         border-color: #ccc;
       }
 
@@ -269,36 +273,36 @@
         display: flex;
         align-items: center;
         gap: 0.5rem;
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.4rem;
         flex-wrap: wrap;
       }
 
       .cv-tl-period {
-        font-size: 0.72rem;
+        font-size: 0.7rem;
         font-weight: 700;
         color: #fff;
         background: #0b0b0b;
-        border-radius: 4px;
-        padding: 0.15rem 0.5rem;
+        border-radius: 3px;
+        padding: 0.12rem 0.45rem;
         letter-spacing: 0.02em;
       }
 
       .cv-tl-org {
-        font-size: 0.78rem;
+        font-size: 0.76rem;
         color: #999;
       }
 
       .cv-tl-title {
-        font-size: 0.97rem;
+        font-size: 0.95rem;
         font-weight: 700;
         color: #0b0b0b;
-        margin: 0 0 0.45rem;
+        margin: 0 0 0.4rem;
         line-height: 1.3;
       }
 
       .cv-tl-desc {
-        font-size: 0.87rem;
-        line-height: 1.7;
+        font-size: 0.85rem;
+        line-height: 1.72;
         color: #666;
         margin: 0;
       }
@@ -307,21 +311,15 @@
         display: flex;
         flex-wrap: wrap;
         gap: 0.3rem;
-        margin-top: 0.8rem;
+        margin-top: 0.7rem;
       }
 
       .cv-tag {
-        font-size: 0.7rem;
+        font-size: 0.68rem;
         color: #777;
         background: #f4f2ef;
-        border-radius: 4px;
-        padding: 0.18rem 0.55rem;
-      }
-
-      /* dashed placeholder entries */
-      .cv-tl-card--dashed {
-        border-style: dashed;
-        background: #faf8f5;
+        border-radius: 3px;
+        padding: 0.15rem 0.5rem;
       }
 
       /* ── SKILLS ──────────────────────────────── */
@@ -332,8 +330,8 @@
       }
 
       .cv-skill-card {
-        border-radius: 10px;
-        padding: 1.5rem;
+        border-radius: 8px;
+        padding: 1.4rem;
         border: 1px solid #ede9e2;
         background: #faf8f5;
         transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -345,58 +343,99 @@
       }
 
       .cv-skill-card:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 8px 28px rgba(0,0,0,0.07);
+        transform: translateY(-3px);
+        box-shadow: 0 6px 22px rgba(0,0,0,0.07);
       }
 
       .cv-skill-card__num {
-        font-size: 0.65rem;
+        font-size: 0.63rem;
         font-weight: 700;
         letter-spacing: 0.14em;
         text-transform: uppercase;
         color: #bbb;
-        margin-bottom: 0.4rem;
+        margin-bottom: 0.35rem;
       }
 
       .cv-skill-card:last-child .cv-skill-card__num { color: rgba(255,255,255,0.3); }
 
       .cv-skill-card__title {
-        font-size: 0.95rem;
+        font-size: 0.9rem;
         font-weight: 700;
         color: #0b0b0b;
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.45rem;
       }
 
       .cv-skill-card:last-child .cv-skill-card__title { color: rgba(255,255,255,0.9); }
 
       .cv-skill-card__desc {
-        font-size: 0.8rem;
-        line-height: 1.6;
+        font-size: 0.78rem;
+        line-height: 1.65;
         color: #777;
-        margin-bottom: 1rem;
+        margin-bottom: 0.9rem;
       }
 
       .cv-skill-card:last-child .cv-skill-card__desc { color: rgba(255,255,255,0.5); }
 
-      .cv-tool-chips {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.3rem;
-      }
+      .cv-tool-chips { display: flex; flex-wrap: wrap; gap: 0.3rem; }
 
       .cv-tool-chip {
-        font-size: 0.7rem;
+        font-size: 0.68rem;
         color: #666;
         background: #edeae4;
         border: 1px solid #e0dbd2;
-        border-radius: 4px;
-        padding: 0.2rem 0.55rem;
+        border-radius: 3px;
+        padding: 0.18rem 0.5rem;
       }
 
       .cv-skill-card:last-child .cv-tool-chip {
         background: rgba(255,255,255,0.08);
         border-color: rgba(255,255,255,0.14);
         color: rgba(255,255,255,0.6);
+      }
+
+      /* ── COMPETENCY TAGS ─────────────────────── */
+      .cv-comp-wrap { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+      .cv-comp-tag {
+        font-size: 0.78rem;
+        color: #444;
+        background: #f4f2ef;
+        border: 1px solid #e4e0da;
+        border-radius: 100px;
+        padding: 0.3rem 0.85rem;
+      }
+
+      /* ── MISC ROW (merits, languages) ────────── */
+      .cv-misc-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .cv-misc-list li {
+        font-size: 0.88rem;
+        color: #555;
+        line-height: 1.7;
+        padding-bottom: 0.6rem;
+        padding-left: 1rem;
+        position: relative;
+      }
+      .cv-misc-list li::before {
+        content: '—';
+        position: absolute;
+        left: 0;
+        color: #ccc;
+        font-size: 0.8rem;
+      }
+      .cv-misc-sub {
+        font-size: 0.82rem;
+        color: #aaa;
+        margin-top: 0.1rem;
+      }
+      .cv-lang-line {
+        font-size: 0.88rem;
+        color: #555;
+        margin-top: 1.25rem;
+        border-top: 1px solid #ede9e2;
+        padding-top: 1.25rem;
       }
 
       /* ── PROJECTS ───────────────────────────── */
@@ -410,8 +449,8 @@
         display: block;
         background: #faf8f5;
         border: 1px solid #ede9e2;
-        border-radius: 10px;
-        padding: 1.25rem 1.4rem;
+        border-radius: 8px;
+        padding: 1.2rem 1.35rem;
         text-decoration: none;
         transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s;
       }
@@ -423,32 +462,32 @@
       }
 
       .cv-proj-card__type {
-        font-size: 0.65rem;
+        font-size: 0.63rem;
         font-weight: 700;
         letter-spacing: 0.12em;
         text-transform: uppercase;
         color: #bbb;
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.45rem;
       }
 
       .cv-proj-card__title {
         font-size: 0.9rem;
         font-weight: 700;
         color: #0b0b0b;
-        margin-bottom: 0.35rem;
+        margin-bottom: 0.3rem;
         line-height: 1.3;
       }
 
       .cv-proj-card__desc {
-        font-size: 0.78rem;
+        font-size: 0.76rem;
         color: #888;
-        line-height: 1.5;
+        line-height: 1.55;
       }
 
       .cv-proj-card__arrow {
         display: inline-block;
-        margin-top: 0.7rem;
-        font-size: 0.75rem;
+        margin-top: 0.65rem;
+        font-size: 0.73rem;
         color: #ccc;
         transition: transform 0.18s, color 0.18s;
       }
@@ -461,26 +500,28 @@
       /* ── SCROLL REVEAL ───────────────────────── */
       .cv-reveal {
         opacity: 0;
-        transform: translateY(16px);
-        transition: opacity 0.45s ease, transform 0.45s ease;
+        transform: translateY(14px);
+        transition: opacity 0.4s ease, transform 0.4s ease;
       }
       .cv-reveal.is-visible { opacity: 1; transform: none; }
-      .cv-reveal:nth-child(2) { transition-delay: 0.08s; }
-      .cv-reveal:nth-child(3) { transition-delay: 0.16s; }
-      .cv-reveal:nth-child(4) { transition-delay: 0.24s; }
+      .cv-reveal:nth-child(2) { transition-delay: 0.07s; }
+      .cv-reveal:nth-child(3) { transition-delay: 0.14s; }
+      .cv-reveal:nth-child(4) { transition-delay: 0.21s; }
+      .cv-reveal:nth-child(5) { transition-delay: 0.28s; }
 
       /* ── PRINT ───────────────────────────────── */
       @media print {
-        .header, .cv-hero__actions, footer { display: none !important; }
+        .header, .cv-hero__actions, .cv-topbar, footer { display: none !important; }
         .cv-hero { padding: 1rem 0; }
       }
 
       /* ── MOBILE ──────────────────────────────── */
       @media (max-width: 800px) {
+        .cv-topbar__inner { justify-content: flex-start; gap: 1rem; }
         .cv-hero__grid { grid-template-columns: 1fr; gap: 2rem; }
-        .cv-photo-wrap { order: -1; }
-        .cv-photo-wrap img { height: 220px; }
-        .cv-row { grid-template-columns: 1fr; gap: 0.75rem; }
+        .cv-photo-wrap { order: -1; padding-top: 0; }
+        .cv-photo-wrap img { height: 200px; }
+        .cv-row { grid-template-columns: 1fr; gap: 0.5rem; }
         .cv-row__label { position: static; margin-bottom: 0.25rem; }
         .cv-skills-grid, .cv-proj-grid { grid-template-columns: 1fr; }
       }
@@ -516,6 +557,16 @@
 
     <main id="top">
 
+      <!-- TOP CONTACT BAR -->
+      <div class="cv-topbar">
+        <div class="container cv-topbar__inner">
+          <a class="cv-topbar__item" href="mailto:ava.urden@gmail.com">ava.urden@gmail.com</a>
+          <a class="cv-topbar__item" href="tel:+46723111441">+46 72 311 14 41</a>
+          <a class="cv-topbar__item" href="https://linkedin.com/in/avaurden" target="_blank" rel="noopener">linkedin.com/in/avaurden</a>
+          <span class="cv-topbar__item" data-i18n="cv_location">Stockholm, Sverige</span>
+        </div>
+      </div>
+
       <!-- ══════════════════════════════════════════
            HERO
       ══════════════════════════════════════════ -->
@@ -533,32 +584,13 @@
               </div>
 
               <h1 class="cv-hero__name">Ava<br>Urdén</h1>
+              <p class="cv-hero__title" data-i18n="cv_eyebrow">Growth Marketing</p>
 
-              <p class="cv-hero__role" data-i18n="cv_hero_role">
-                Growth Marketer med fokus på content, strategi och data –<br>
-                driven av att skapa saker som faktiskt fungerar.
+              <p class="cv-hero__intro cv-reveal" data-i18n="cv_intro">
+                Jag är driven och målinriktad med ett kreativt tänk och stort intresse för design – men trivs lika mycket med data, mätning och analys. Jag gillar att förstå vad som faktiskt driver resultat och att omsätta insikter till kreativa leveranser med strategisk grund.
               </p>
 
-              <div class="cv-chips">
-                <a class="cv-chip" href="mailto:ava.urden@gmail.com">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
-                  ava.urden@gmail.com
-                </a>
-                <a class="cv-chip" href="tel:+46723111441">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.15 9.81a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.06 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16z"/></svg>
-                  +46 72 311 14 41
-                </a>
-                <a class="cv-chip" href="https://linkedin.com/in/avaurden" target="_blank" rel="noopener">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-                  linkedin.com/in/avaurden
-                </a>
-                <span class="cv-chip">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-                  <span data-i18n="cv_location">Stockholm, Sverige</span>
-                </span>
-              </div>
-
-              <div class="cv-hero__actions">
+              <div class="cv-hero__actions cv-reveal">
                 <a
                   href="./cv/ava-urden-cv-sv.pdf"
                   download
@@ -575,12 +607,8 @@
             </div>
 
             <!-- Photo -->
-            <div class="cv-photo-wrap">
+            <div class="cv-photo-wrap cv-reveal">
               <img src="./img/ava-urden-900.jpg" alt="Ava Urdén" />
-              <div class="cv-photo-badge">
-                <p class="cv-photo-badge__label" data-i18n="cv_badge_prog_label">Program</p>
-                <p class="cv-photo-badge__value">Growth Marketing<br>Berghs, 2024–2026</p>
-              </div>
             </div>
 
           </div>
@@ -588,12 +616,12 @@
       </section>
 
       <!-- ══════════════════════════════════════════
-           CONTENT BODY
+           BODY
       ══════════════════════════════════════════ -->
       <div class="cv-body">
         <div class="container" style="padding-top:1px;">
 
-          <!-- EXPERIENCE -->
+          <!-- ── EXPERIENCE ── -->
           <div class="cv-row">
             <p class="cv-row__label" data-i18n="cv_exp_label">Erfarenhet</p>
 
@@ -607,16 +635,33 @@
                   </div>
                   <h3 class="cv-tl-title" data-i18n="cv_exp1_title">Marknadskoordinator</h3>
                   <p class="cv-tl-desc" data-i18n="cv_exp1_desc">
-                    Koordinerade och genomförde marknadsinsatser för en av Sveriges ledande advokatbyråer.
-                    Ansvarade för innehållsproduktion, digitala kanaler, kampanjplanering och intern kommunikation.
-                    Jobbade datanära med uppföljning och optimering av insatser.
+                    Jobbade brett med marknad som stöttar affärsutveckling – från produktion till uppföljning. Koordinerade event, producerade nyhetsbrev, tog fram pitchmaterial och mallar, drev Instagram-strategi med fokus på employer branding, genomförde B2B-kampanj på LinkedIn och följde upp KPI:er kopplade till affärsutveckling.
                   </p>
                   <div class="cv-tl-tags">
                     <span class="cv-tag">Content</span>
-                    <span class="cv-tag">Kampanjplanering</span>
-                    <span class="cv-tag">Digital marknadsföring</span>
-                    <span class="cv-tag">Analys & rapportering</span>
-                    <span class="cv-tag">Projektledning</span>
+                    <span class="cv-tag">Event</span>
+                    <span class="cv-tag">Nyhetsbrev</span>
+                    <span class="cv-tag">LinkedIn B2B</span>
+                    <span class="cv-tag">Instagram</span>
+                    <span class="cv-tag">KPI-uppföljning</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="cv-tl-entry cv-reveal">
+                <div class="cv-tl-card">
+                  <div class="cv-tl-meta">
+                    <span class="cv-tl-period" data-i18n="cv_exp_sse_period">Aug 2023 – Feb 2024</span>
+                    <span class="cv-tl-org" data-i18n="cv_exp_sse_org">Stockholm School of Economics</span>
+                  </div>
+                  <h3 class="cv-tl-title" data-i18n="cv_exp_sse_title">Avdelningskoordinator</h3>
+                  <p class="cv-tl-desc" data-i18n="cv_exp_sse_desc">
+                    Kursadministration för 12 parallella kurser och 500+ studenter: antagning, schemaläggning och betygsregistrering. Stöttade kursansvariga och avdelningen i löpande administration och assisterade rektorskansliet vid möten och events.
+                  </p>
+                  <div class="cv-tl-tags">
+                    <span class="cv-tag">Administration</span>
+                    <span class="cv-tag">Koordinering</span>
+                    <span class="cv-tag">Processer</span>
                   </div>
                 </div>
               </div>
@@ -625,15 +670,14 @@
                 <div class="cv-tl-card">
                   <div class="cv-tl-meta">
                     <span class="cv-tl-period" data-i18n="cv_exp2_period">Mars 2023 – Aug 2023</span>
-                    <span class="cv-tl-org" data-i18n="cv_exp2_org">Frans Bistro & Bar</span>
+                    <span class="cv-tl-org" data-i18n="cv_exp2_org">Frans Bistro &amp; Bar</span>
                   </div>
                   <h3 class="cv-tl-title" data-i18n="cv_exp2_title">Servitris</h3>
                   <p class="cv-tl-desc" data-i18n="cv_exp2_desc">
-                    Kundservice i högt tempo med fokus på upplevelse och service. Byggde vana vid att
-                    snabbt läsa av och anpassa sig efter gäster, teamarbete och att leverera under press.
+                    Serviceinriktat arbete i högt tempo med många parallella moment. Tränade upp förmågan att prioritera snabbt, arbeta självständigt och behålla hög service under press.
                   </p>
                   <div class="cv-tl-tags">
-                    <span class="cv-tag">Kundservice</span>
+                    <span class="cv-tag">Service</span>
                     <span class="cv-tag">Teamarbete</span>
                   </div>
                 </div>
@@ -645,16 +689,32 @@
                     <span class="cv-tl-period" data-i18n="cv_exp3_period">Maj 2022 – Dec 2022</span>
                     <span class="cv-tl-org" data-i18n="cv_exp3_org">Gina Tricot</span>
                   </div>
-                  <h3 class="cv-tl-title" data-i18n="cv_exp3_title">Avdelningskoordinator</h3>
+                  <h3 class="cv-tl-title" data-i18n="cv_exp3_title">Butiksmedarbetare</h3>
                   <p class="cv-tl-desc" data-i18n="cv_exp3_desc">
-                    Ansvarade för avdelningsdrift i butik – styling, exponering, lagerflöde och kundmöten.
-                    Koordinerade team och säkerställde att avdelningen mötte försäljningsmål och kundupplevelse.
+                    Försäljning och kundservice, kassaansvar samt hantering av köp och returer. Hanterade leveranser, lager och inventering samt varuexponering i butik.
                   </p>
                   <div class="cv-tl-tags">
-                    <span class="cv-tag">Koordinering</span>
                     <span class="cv-tag">Retail</span>
+                    <span class="cv-tag">Kundservice</span>
                     <span class="cv-tag">Visual merchandising</span>
-                    <span class="cv-tag">Försäljning</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="cv-tl-entry cv-reveal">
+                <div class="cv-tl-card">
+                  <div class="cv-tl-meta">
+                    <span class="cv-tl-period" data-i18n="cv_exp_triller_period">Maj 2018 – Dec 2022</span>
+                    <span class="cv-tl-org" data-i18n="cv_exp_triller_org">Triller mat &amp; bröd</span>
+                  </div>
+                  <h3 class="cv-tl-title" data-i18n="cv_exp_triller_title">Catering- och cafémedarbetare</h3>
+                  <p class="cv-tl-desc" data-i18n="cv_exp_triller_desc">
+                    Arbetade i café och med catering vid bröllop, fotbollsmatcher och julbord. Ansvarade för service och var periodvis platsansvarig i ett café.
+                  </p>
+                  <div class="cv-tl-tags">
+                    <span class="cv-tag">Service</span>
+                    <span class="cv-tag">Catering</span>
+                    <span class="cv-tag">Ansvar</span>
                   </div>
                 </div>
               </div>
@@ -662,7 +722,7 @@
             </div>
           </div>
 
-          <!-- EDUCATION -->
+          <!-- ── EDUCATION ── -->
           <div class="cv-row">
             <p class="cv-row__label" data-i18n="cv_edu_label">Utbildning</p>
 
@@ -671,35 +731,20 @@
               <div class="cv-tl-entry cv-reveal">
                 <div class="cv-tl-card">
                   <div class="cv-tl-meta">
-                    <span class="cv-tl-period" data-i18n="cv_edu1_period">2024 – 2026</span>
+                    <span class="cv-tl-period" data-i18n="cv_edu1_period">2025 – pågående</span>
                     <span class="cv-tl-org" data-i18n="cv_edu1_org">Berghs School of Communication</span>
                   </div>
                   <h3 class="cv-tl-title" data-i18n="cv_edu1_title">Growth Marketing</h3>
                   <p class="cv-tl-desc" data-i18n="cv_edu1_desc">
-                    Tvåårig yrkesutbildning med fokus på datadriven marknadsföring, konceptutveckling,
-                    content, digital annonsering, CRO och tillväxtstrategi. Praktiska projekt för verkliga klienter
-                    som Under Your Skin, SUIE och Akademibokhandeln.
+                    Yrkesutbildning med fokus på datadriven marknadsföring, konceptutveckling, content, digital annonsering, CRO och tillväxtstrategi. Praktiska projekt för verkliga klienter.
                   </p>
                   <div class="cv-tl-tags">
-                    <span class="cv-tag">Growth</span>
-                    <span class="cv-tag">CRO</span>
-                    <span class="cv-tag">Data</span>
-                    <span class="cv-tag">Performance marketing</span>
-                    <span class="cv-tag">SEO & content</span>
+                    <span class="cv-tag">Performance Marketing</span>
+                    <span class="cv-tag">SEO &amp; Content</span>
+                    <span class="cv-tag">CRO &amp; Analys</span>
+                    <span class="cv-tag">E-handel</span>
+                    <span class="cv-tag">CRM</span>
                   </div>
-                </div>
-              </div>
-
-              <div class="cv-tl-entry cv-reveal">
-                <div class="cv-tl-card">
-                  <div class="cv-tl-meta">
-                    <span class="cv-tl-period" data-i18n="cv_edu2_period">Aug 2023 – Feb 2024</span>
-                    <span class="cv-tl-org" data-i18n="cv_edu2_org">Stockholm School of Economics</span>
-                  </div>
-                  <h3 class="cv-tl-title" data-i18n="cv_edu2_title">Utvalda kurser</h3>
-                  <p class="cv-tl-desc" data-i18n="cv_edu2_desc">
-                    Kurser inom marknadsföring, business och strategi vid Handelshögskolan i Stockholm.
-                  </p>
                 </div>
               </div>
 
@@ -719,7 +764,7 @@
             </div>
           </div>
 
-          <!-- SKILLS -->
+          <!-- ── SKILLS ── -->
           <div class="cv-row">
             <p class="cv-row__label" data-i18n="cv_skills_label">Färdigheter</p>
 
@@ -727,10 +772,9 @@
 
               <div class="cv-skill-card cv-reveal">
                 <p class="cv-skill-card__num" data-i18n="cv_skill1_num">01</p>
-                <p class="cv-skill-card__title" data-i18n="cv_skill1_title">Content & Storytelling</p>
+                <p class="cv-skill-card__title" data-i18n="cv_skill1_title">Content &amp; Storytelling</p>
                 <p class="cv-skill-card__desc" data-i18n="cv_skill1_desc">
-                  Skapar innehåll som bygger varumärke och driver handling – från copy och hooks
-                  till contentplan och brand voice.
+                  Skapar innehåll som bygger varumärke och driver handling. Vad är kroken, vad ska mottagaren känna, och vad är nästa steg? Från copy och hooks till contentplan och brand voice.
                 </p>
                 <div class="cv-tool-chips">
                   <span class="cv-tool-chip">Canva</span>
@@ -739,7 +783,6 @@
                   <span class="cv-tool-chip">CapCut</span>
                   <span class="cv-tool-chip">Copy</span>
                   <span class="cv-tool-chip">Hooks</span>
-                  <span class="cv-tool-chip">Contentplan</span>
                   <span class="cv-tool-chip">Brand voice</span>
                   <span class="cv-tool-chip">UGC</span>
                 </div>
@@ -747,16 +790,14 @@
 
               <div class="cv-skill-card cv-reveal">
                 <p class="cv-skill-card__num" data-i18n="cv_skill2_num">02</p>
-                <p class="cv-skill-card__title" data-i18n="cv_skill2_title">Strategi & Koncept</p>
+                <p class="cv-skill-card__title" data-i18n="cv_skill2_title">Strategi &amp; Koncept</p>
                 <p class="cv-skill-card__desc" data-i18n="cv_skill2_desc">
-                  Omsätter idéer till tydlig struktur: målgrupp, budskap, kanalval och KPI – med
-                  en plan som faktiskt går att genomföra.
+                  Omsätter idéer till struktur som går att genomföra. Målgrupp, budskap, kanalval och KPI – en plan som teamet kan agera på. Från brief till koncept, med kundresan i åtanke.
                 </p>
                 <div class="cv-tool-chips">
                   <span class="cv-tool-chip">Shopify</span>
                   <span class="cv-tool-chip">Mailchimp</span>
                   <span class="cv-tool-chip">Notion</span>
-                  <span class="cv-tool-chip">Slack</span>
                   <span class="cv-tool-chip">CRM</span>
                   <span class="cv-tool-chip">Brief</span>
                   <span class="cv-tool-chip">Konceptutveckling</span>
@@ -766,10 +807,9 @@
 
               <div class="cv-skill-card cv-reveal">
                 <p class="cv-skill-card__num" data-i18n="cv_skill3_num">03</p>
-                <p class="cv-skill-card__title" data-i18n="cv_skill3_title">Tillväxt & Data</p>
+                <p class="cv-skill-card__title" data-i18n="cv_skill3_title">Tillväxt &amp; Data</p>
                 <p class="cv-skill-card__desc" data-i18n="cv_skill3_desc">
-                  Datadrivet arbete som hittar friktion, testar hypoteser och förbättrar
-                  konvertering, AOV och retention steg för steg.
+                  Datadrivet arbete som hittar friktion, testar hypoteser och skapar effekt. Fokus på konvertering, AOV och retention – med dashboards som gör siffror enkla att agera på.
                 </p>
                 <div class="cv-tool-chips">
                   <span class="cv-tool-chip">GA4</span>
@@ -780,14 +820,47 @@
                   <span class="cv-tool-chip">CRO</span>
                   <span class="cv-tool-chip">A/B-test</span>
                   <span class="cv-tool-chip">SEO</span>
-                  <span class="cv-tool-chip">Dashboard</span>
                 </div>
               </div>
 
             </div>
           </div>
 
-          <!-- FEATURED PROJECTS -->
+          <!-- ── COMPETENCIES ── -->
+          <div class="cv-row">
+            <p class="cv-row__label" data-i18n="cv_comp_label">Kompetenser</p>
+            <div class="cv-comp-wrap cv-reveal">
+              <span class="cv-comp-tag" data-i18n="cv_comp_1">Performance marketing</span>
+              <span class="cv-comp-tag" data-i18n="cv_comp_2">E-commerce growth</span>
+              <span class="cv-comp-tag" data-i18n="cv_comp_3">CRO &amp; A/B-test</span>
+              <span class="cv-comp-tag" data-i18n="cv_comp_4">Spårning &amp; mätplan</span>
+              <span class="cv-comp-tag" data-i18n="cv_comp_5">SEO &amp; content marketing</span>
+              <span class="cv-comp-tag" data-i18n="cv_comp_6">CRM &amp; automation</span>
+              <span class="cv-comp-tag" data-i18n="cv_comp_7">Analys &amp; rapportering</span>
+              <span class="cv-comp-tag" data-i18n="cv_comp_8">Marknadsstrategi</span>
+              <span class="cv-comp-tag" data-i18n="cv_comp_9">Projektledning</span>
+            </div>
+          </div>
+
+          <!-- ── MERITS + LANGUAGES ── -->
+          <div class="cv-row">
+            <p class="cv-row__label" data-i18n="cv_merits_label">Meriter</p>
+            <div>
+              <ul class="cv-misc-list cv-reveal">
+                <li>
+                  <span data-i18n="cv_merit1">Ung Företagsamhet som marknadschef – 2:a plats Årets UF-företag och 1:a plats Årets Tillväxtföretag i Uppsala län. Deltog i SM 2022.</span>
+                </li>
+                <li>
+                  <span data-i18n="cv_merit2">Stipendium 2022 – tilldelades efter gymnasieexamen med motiveringen kämparglöd och ihärdighet i studier och privat.</span>
+                </li>
+              </ul>
+              <p class="cv-lang-line cv-reveal" data-i18n="cv_lang_list">
+                Svenska (modersmål) &nbsp;·&nbsp; Engelska (professionell nivå) &nbsp;·&nbsp; Spanska (Moderna språk 4)
+              </p>
+            </div>
+          </div>
+
+          <!-- ── FEATURED PROJECTS ── -->
           <div class="cv-row">
             <p class="cv-row__label" data-i18n="cv_proj_label">Projekt</p>
 
@@ -797,21 +870,21 @@
                 <p class="cv-proj-card__type" data-i18n="cv_proj1_type">CRO · Kundresa</p>
                 <p class="cv-proj-card__title" data-i18n="cv_proj1_title">Under Your Skin</p>
                 <p class="cv-proj-card__desc" data-i18n="cv_proj1_desc">Strategi för att lyfta AOV från 786 → 1 000 kr utan att tappa premiumkänslan.</p>
-                <span class="cv-proj-card__arrow">Läs case →</span>
+                <span class="cv-proj-card__arrow" data-i18n="cv_proj_read">Läs case →</span>
               </a>
 
               <a class="cv-proj-card cv-reveal" href="case4.html">
                 <p class="cv-proj-card__type" data-i18n="cv_proj2_type">E-handel · A/B-test</p>
                 <p class="cv-proj-card__title" data-i18n="cv_proj2_title">E-handel: CRO</p>
                 <p class="cv-proj-card__desc" data-i18n="cv_proj2_desc">Datadriven CRO med hypoteser, testplan och uppföljning av konvertering.</p>
-                <span class="cv-proj-card__arrow">Läs case →</span>
+                <span class="cv-proj-card__arrow" data-i18n="cv_proj_read">Läs case →</span>
               </a>
 
               <a class="cv-proj-card cv-reveal" href="lonsam-tillvaxt.html">
                 <p class="cv-proj-card__type" data-i18n="cv_proj3_type">Whitepaper · Lead gen</p>
                 <p class="cv-proj-card__title" data-i18n="cv_proj3_title">Lönsam tillväxt 2026</p>
                 <p class="cv-proj-card__desc" data-i18n="cv_proj3_desc">E-handelsguide med CRM-strategi, offer stack och CAC/LTV-modeller.</p>
-                <span class="cv-proj-card__arrow">Se projekt →</span>
+                <span class="cv-proj-card__arrow" data-i18n="cv_proj_read">Se projekt →</span>
               </a>
 
             </div>
@@ -835,6 +908,7 @@
               Ladda ner CV
             </a>
           </div>
+
           <div class="footer__right">
             <div class="contact-group">
               <span class="contact-label" data-i18n="contact_email">Email</span>
@@ -860,17 +934,18 @@
     </main>
 
     <script>
+      // Scroll reveal for cv-reveal elements
       (function () {
-        var els = document.querySelectorAll('.cv-reveal');
+        var els = document.querySelectorAll(".cv-reveal");
         if (!els.length) return;
         var io = new IntersectionObserver(function (entries) {
           entries.forEach(function (e) {
             if (e.isIntersecting) {
-              e.target.classList.add('is-visible');
+              e.target.classList.add("is-visible");
               io.unobserve(e.target);
             }
           });
-        }, { threshold: 0.1 });
+        }, { threshold: 0.08 });
         els.forEach(function (el) { io.observe(el); });
       })();
     </script>
