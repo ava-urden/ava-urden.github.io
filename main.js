@@ -1676,4 +1676,38 @@ document.addEventListener("DOMContentLoaded", () => {
   initSectionObserver();
   initTracking();
   initModals();
+  initMobileNav();
 });
+
+function initMobileNav() {
+  const burger = document.querySelector(".nav-burger");
+  const mobileNav = document.getElementById("mobileNav");
+  if (!burger || !mobileNav) return;
+
+  burger.addEventListener("click", () => {
+    const isOpen = mobileNav.classList.toggle("is-open");
+    burger.classList.toggle("is-open", isOpen);
+    burger.setAttribute("aria-expanded", String(isOpen));
+    document.body.style.overflow = isOpen ? "hidden" : "";
+  });
+
+  // Close on link click
+  mobileNav.querySelectorAll("a").forEach((a) => {
+    a.addEventListener("click", () => {
+      mobileNav.classList.remove("is-open");
+      burger.classList.remove("is-open");
+      burger.setAttribute("aria-expanded", "false");
+      document.body.style.overflow = "";
+    });
+  });
+
+  // Close on resize to desktop
+  window.addEventListener("resize", () => {
+    if (window.innerWidth >= 900) {
+      mobileNav.classList.remove("is-open");
+      burger.classList.remove("is-open");
+      burger.setAttribute("aria-expanded", "false");
+      document.body.style.overflow = "";
+    }
+  });
+}

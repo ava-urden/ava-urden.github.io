@@ -236,6 +236,91 @@ main {
   }
 }
 
+/* ── MOBILE NAVIGATION ──────────────────────── */
+.nav-burger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 36px;
+  height: 36px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  flex-shrink: 0;
+}
+
+.nav-burger span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background: #f6f2ec;
+  border-radius: 2px;
+  transition: transform 0.22s ease, opacity 0.22s ease, width 0.22s ease;
+  transform-origin: center;
+}
+
+@media (max-width: 899px) {
+  .nav-burger {
+    display: flex;
+  }
+}
+
+/* Open state */
+.nav-burger.is-open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.nav-burger.is-open span:nth-child(2) {
+  opacity: 0;
+  width: 0;
+}
+.nav-burger.is-open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Mobile nav drawer */
+.mobile-nav {
+  display: none;
+  position: fixed;
+  top: var(--header-height);
+  left: 0;
+  right: 0;
+  z-index: 99;
+  background: rgba(20, 17, 14, 0.97);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  padding: 1.5rem var(--pad) 2rem;
+  flex-direction: column;
+  gap: 0;
+}
+
+.mobile-nav.is-open {
+  display: flex;
+}
+
+.mobile-nav a {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(246, 242, 236, 0.72);
+  text-decoration: none;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  transition: color 0.15s;
+}
+
+.mobile-nav a:last-child {
+  border-bottom: none;
+}
+
+.mobile-nav a:hover,
+.mobile-nav a.is-current {
+  color: #ffffff;
+}
+
 .nav a {
   font-size: 0.72rem;
   text-transform: uppercase;
@@ -2759,5 +2844,31 @@ body.modal-open {
 
   .about__image img {
     max-width: 260px;
+  }
+
+  /* Mini-cards: 2 col on mobile, shorter image */
+  .mini-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .mini-card__media {
+    aspect-ratio: 4 / 3;
+  }
+
+  /* Cases: 2 col on tablet */
+  .grid--3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  /* Single col on small phones */
+  .mini-grid,
+  .grid--3 {
+    grid-template-columns: 1fr;
+  }
+
+  .mini-card__media {
+    aspect-ratio: 3 / 2;
   }
 }
