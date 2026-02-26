@@ -51,13 +51,20 @@
 
       /* ── PORTRAIT MINI-CARDS ──────────────────── */
       .mini-card {
-        border-radius: 10px;
+        border-radius: 0;
         overflow: hidden;
         background: #fff;
         border: 1px solid #ede9e2;
         box-shadow: 0 2px 10px rgba(0,0,0,0.04);
         transform: none;
         transition: transform 0.25s ease, box-shadow 0.25s ease;
+        position: relative;
+      }
+
+      .mini-card__cover-link {
+        position: absolute;
+        inset: 0;
+        z-index: 1;
       }
 
       .mini-card:hover {
