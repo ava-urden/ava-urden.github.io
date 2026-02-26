@@ -287,36 +287,40 @@
 
     </main>
 
-    <footer id="contact" class="bg-[#0b1220] text-white py-16 mt-12">
-        <div class="max-w-7xl mx-auto px-6 md:px-12">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
-                <div>
-                    <h2 class="text-3xl md:text-4xl font-bold mb-4" data-i18n="contact_title">Kontakt</h2>
-                    <p class="text-slate-400 text-base max-w-md mb-8" data-i18n="footer_text">
-                        Nyfiken på att veta mer eller diskutera ett projekt? Hör av dig så tar vi en kaffe!
-                    </p>
-                    <a href="./cv/ava-urden-cv-sv.pdf" download class="inline-block px-8 py-3 bg-white text-slate-900 font-bold text-sm uppercase tracking-wider rounded-full hover:-translate-y-1 transition-transform" data-i18n="cta_cv">Ladda ner CV</a>
-                </div>
-                <div class="flex flex-col gap-6 md:items-end">
-                    <div>
-                        <span class="block text-xs uppercase tracking-[0.2em] text-slate-500 mb-1" data-i18n="contact_email">Email</span>
-                        <a href="mailto:ava.urden@gmail.com" class="text-xl md:text-2xl font-medium hover:text-secondary transition-colors">ava.urden@gmail.com</a>
-                    </div>
-                    <div>
-                        <span class="block text-xs uppercase tracking-[0.2em] text-slate-500 mb-1" data-i18n="contact_mobile">Mobil</span>
-                        <a href="tel:+46723111441" class="text-xl md:text-2xl font-medium hover:text-secondary transition-colors">+46 72 311 14 41</a>
-                    </div>
-                    <div>
-                        <span class="block text-xs uppercase tracking-[0.2em] text-slate-500 mb-1" data-i18n="contact_linkedin">LinkedIn</span>
-                        <a href="https://linkedin.com/in/avaurden" target="_blank" rel="noopener" class="text-xl md:text-2xl font-medium hover:text-secondary transition-colors">linkedin.com/in/avaurden</a>
-                    </div>
-                </div>
+      <footer id="contact" class="footer section-block">
+        <div class="container footer__grid">
+          <div class="footer__left">
+            <h2 data-i18n="contact_title">Kontakt</h2>
+            <p class="footer__text" data-i18n="footer_text">
+              Nyfiken på att veta mer eller diskutera ett projekt?
+              Hör av dig så tar vi en kaffe!
+            </p>
+            <a href="./cv/ava-urden-cv-sv.pdf" download class="btn btn--white track-cv_download" data-cv-link data-i18n="cta_cv">
+              Ladda ner CV
+            </a>
+          </div>
+
+          <div class="footer__right">
+            <div class="contact-group">
+              <span class="contact-label" data-i18n="contact_email">Email</span>
+              <a href="mailto:ava.urden@gmail.com" class="contact-link email-link">ava.urden@gmail.com</a>
             </div>
-            <div class="border-t border-slate-800 pt-6 text-sm text-slate-500">
-                &copy; 2026 Ava Urdén
+            <div class="contact-group">
+              <span class="contact-label" data-i18n="contact_mobile">Mobil</span>
+              <a href="tel:+46723111441" class="contact-link">+46 72 311 14 41</a>
             </div>
+            <div class="contact-group">
+              <span class="contact-label" data-i18n="contact_linkedin">LinkedIn</span>
+              <a href="https://linkedin.com/in/avaurden" target="_blank" class="contact-link">
+                linkedin.com/in/avaurden ↗
+              </a>
+            </div>
+          </div>
         </div>
-    </footer>
+        <div class="container footer__bottom">
+          <div class="footer__copy">&copy; 2026 Ava Urdén</div>
+        </div>
+      </footer>
 
     <script>
       function updateTimestamp() {
