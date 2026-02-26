@@ -135,6 +135,28 @@
 
       .cv-hero__actions { display: flex; gap: 0.7rem; flex-wrap: wrap; }
 
+      .cv-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: #555;
+        background: #f2f0ed;
+        border: 1px solid #dedad4;
+        border-radius: 3px;
+        padding: 0.7rem 1.4rem;
+        text-decoration: none;
+        transition: background 0.15s, border-color 0.15s, color 0.15s;
+      }
+      .cv-btn:hover {
+        background: #e8e4df;
+        border-color: #c8c3bb;
+        color: #111;
+      }
+
       /* Photo */
       .cv-photo-wrap {
         position: relative;
@@ -529,7 +551,7 @@
 
             <div class="cv-hero__left">
               <a href="index.html#top" class="back-link" style="display:inline-block;margin-bottom:1.5rem;" data-i18n="cv_back">← Tillbaka till start</a>
-              <h1 class="cv-hero__name">Ava<br>Urdén</h1>
+              <h1 class="cv-hero__name">Ava Urdén</h1>
               <p class="cv-hero__title" data-i18n="cv_eyebrow">Growth Marketing</p>
 
               <p class="cv-hero__intro cv-reveal" data-i18n="cv_intro">
@@ -540,13 +562,13 @@
                 <a
                   href="./cv/ava-urden-cv-sv.pdf"
                   download
-                  class="btn btn--dark track-cv_download"
+                  class="cv-btn track-cv_download"
                   data-cv-link
                   data-i18n="cv_download_btn"
                 >
                   ↓ Ladda ner CV (PDF)
                 </a>
-                <a href="index.html#cases" class="btn btn--outline" data-i18n="cv_see_work">
+                <a href="index.html#cases" class="cv-btn" data-i18n="cv_see_work">
                   Se mitt arbete →
                 </a>
               </div>
