@@ -285,6 +285,23 @@
       </footer>
     </main>
 
+    <script>
+      (function () {
+        var form = document.querySelector(".lead-form[name='whitepaper']");
+        if (!form) return;
+        form.addEventListener("submit", function () {
+          window.dataLayer = window.dataLayer || [];
+          window.dataLayer.push({
+            event: "lead_form_submit",
+            page_path: window.location.pathname,
+            page_title: document.title,
+            language: document.documentElement.lang || "sv",
+            form_id: "lead-form",
+            form_name: "automation_toolkit_gate"
+          });
+        });
+      })();
+    </script>
     <script src="./main.js"></script>
   </body>
 </html>

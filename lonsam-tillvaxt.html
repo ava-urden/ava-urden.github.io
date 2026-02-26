@@ -674,6 +674,17 @@
           return;
         }
 
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          event: "lead_form_submit",
+          page_path: window.location.pathname,
+          page_title: document.title,
+          language: document.documentElement.lang || "sv",
+          form_id: "emailGateForm",
+          form_name: "whitepaper_gate",
+          opt_in: form.elements["opt_in"] ? form.elements["opt_in"].checked : false
+        });
+
         var lang = document.documentElement.lang || "sv";
         submitBtn.textContent = lang === "en" ? "Sending…" : "Skickar…";
         submitBtn.classList.add("btn--submitting");
@@ -696,6 +707,15 @@
         gateForm.classList.add("is-hidden");
         gateSuccess.classList.add("is-visible");
         gateSuccess.scrollIntoView({ behavior: "smooth", block: "center" });
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          event: "whitepaper_download",
+          page_path: window.location.pathname,
+          page_title: document.title,
+          language: document.documentElement.lang || "sv",
+          file_name: "wp-e-commerce-in-2026.pdf",
+          form_name: "whitepaper_gate"
+        });
       }
     </script>
 

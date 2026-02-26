@@ -1538,8 +1538,11 @@ function initLenis() {
 
 // ------------------------------
 // DATA LAYER TRACKING (GTM/GA4)
-// Events: view_section, nav_click, hero_cases_click, cv_download,
-// case_click, contact_click, language_switch
+// Events: nav_click, mobile_nav_click, burger_menu_toggle,
+//         hero_cases_click, case_click, mini_card_click,
+//         back_link_click, cv_download, contact_click,
+//         language_switch
+// Conversions: lead_form_submit, whitepaper_download, cv_download
 // ------------------------------
 function pushDataLayerEvent(name, payload = {}) {
   window.dataLayer = window.dataLayer || [];
@@ -1616,6 +1619,25 @@ function initTracking() {
   bindClickTracking(".lang__btn", "language_switch", (btn) => ({
     language: btn.dataset.lang
   }));
+
+  bindClickTracking(".mini-card__media-link", "mini_card_click", (link) => {
+    const card = link.closest(".mini-card");
+    const title = card ? card.querySelector("h3") : null;
+    return {
+      label: title ? title.textContent.trim() : getEventLabel(link),
+      href: link.getAttribute("href") || undefined
+    };
+  });
+
+  bindClickTracking(".back-link", "back_link_click", (link) => ({
+    label: (link.textContent || "").trim(),
+    href: link.getAttribute("href") || undefined
+  }));
+
+  bindClickTracking(".mobile-nav a", "mobile_nav_click", (link) => ({
+    label: (link.textContent || "").trim(),
+    href: link.getAttribute("href") || undefined
+  }));
 }
 
 function initModals() {
@@ -1689,6 +1711,10 @@ function initMobileNav() {
     burger.classList.toggle("is-open", isOpen);
     burger.setAttribute("aria-expanded", String(isOpen));
     document.body.style.overflow = isOpen ? "hidden" : "";
+    pushDataLayerEvent("burger_menu_toggle", {
+      ...getBaseEventData(),
+      menu_state: isOpen ? "open" : "closed"
+    });
   });
 
   // Close on link click
