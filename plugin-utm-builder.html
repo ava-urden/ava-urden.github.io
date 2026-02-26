@@ -153,8 +153,169 @@
             </ol>
           </div>
 
+          <!-- Plugin 02 – locked -->
+          <div class="plugin-next reveal" id="pluginNext">
+            <div class="plugin-next__top">
+              <span class="plugin-next__num">02</span>
+              <span class="plugin-next__badge">Exklusivt</span>
+            </div>
+            <h2 class="plugin-next__title">Todo v2</h2>
+            <p class="plugin-next__desc">
+              En smartare todo-plugin för Chrome – byggt för att hålla koll på det som faktiskt spelar roll. Prioritera, organisera och bocka av utan distraktioner.
+            </p>
+
+            <!-- Gate: locked -->
+            <div class="plugin-next__gate" id="pluginGateForm">
+              <p class="plugin-next__gate-label">Skriv in ditt LinkedIn-namn för att låsa upp</p>
+              <div class="plugin-next__input-row">
+                <span class="plugin-next__li-prefix">linkedin.com/in/</span>
+                <input
+                  id="linkedinInput"
+                  class="plugin-next__input"
+                  type="text"
+                  placeholder="ditt-namn"
+                  autocomplete="off"
+                />
+                <button class="plugin-next__btn" id="pluginUnlockBtn" type="button">Lås upp →</button>
+              </div>
+              <p class="plugin-next__note">Ingen spam. Ingen inloggning. Bara ett litet handslag.</p>
+            </div>
+
+            <!-- Success: unlocked -->
+            <div class="plugin-next__success" id="pluginGateSuccess">
+              <p class="plugin-next__welcome">Välkommen, <strong id="linkedinName"></strong>! Här är plugin 02:</p>
+              <a class="btn btn--dark plugin-next__dl" href="./downloads/todov.2" download="TodoV2-plugin.zip">
+                ↓ Ladda ner Todo v2
+              </a>
+              <p class="plugin-next__install-hint">Installera precis som TabManager – packa upp och ladda in i chrome://extensions.</p>
+            </div>
+          </div>
+
         </div>
       </section>
+
+      <style>
+        .plugin-next {
+          margin-top: 80px;
+          padding: 48px;
+          background: rgba(255,255,255,0.04);
+          border: 1px solid rgba(255,255,255,0.10);
+          border-radius: var(--radius-lg);
+        }
+        .plugin-next__top {
+          display: flex;
+          align-items: center;
+          gap: 14px;
+          margin-bottom: 16px;
+        }
+        .plugin-next__num {
+          font-family: var(--font-head);
+          font-size: 0.85rem;
+          font-weight: 400;
+          color: rgba(240,237,232,0.35);
+          letter-spacing: 0.05em;
+        }
+        .plugin-next__num::before { content: "["; }
+        .plugin-next__num::after  { content: "]"; }
+        .plugin-next__badge {
+          font-size: 0.7rem;
+          font-weight: 700;
+          letter-spacing: 0.14em;
+          text-transform: uppercase;
+          color: var(--accent);
+          background: rgba(167,196,0,0.12);
+          padding: 3px 10px;
+          border-radius: 999px;
+          border: 1px solid rgba(167,196,0,0.25);
+        }
+        .plugin-next__title {
+          font-family: var(--font-display);
+          font-size: clamp(1.8rem, 4vw, 2.8rem);
+          font-weight: 900;
+          letter-spacing: 0.08em;
+          text-transform: uppercase;
+          color: rgba(240,237,232,0.9);
+          margin: 0 0 14px;
+        }
+        .plugin-next__desc {
+          font-size: 1rem;
+          color: rgba(240,237,232,0.55);
+          max-width: 520px;
+          line-height: 1.65;
+          margin-bottom: 36px;
+        }
+        .plugin-next__gate-label {
+          font-size: 0.78rem;
+          font-weight: 700;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+          color: rgba(240,237,232,0.45);
+          margin-bottom: 14px;
+        }
+        .plugin-next__input-row {
+          display: flex;
+          align-items: center;
+          gap: 0;
+          max-width: 480px;
+          background: rgba(255,255,255,0.06);
+          border: 1px solid rgba(255,255,255,0.14);
+          border-radius: 8px;
+          overflow: hidden;
+          margin-bottom: 12px;
+        }
+        .plugin-next__li-prefix {
+          font-size: 0.82rem;
+          color: rgba(240,237,232,0.35);
+          padding: 0 10px 0 14px;
+          white-space: nowrap;
+          user-select: none;
+        }
+        .plugin-next__input {
+          flex: 1;
+          background: transparent;
+          border: none;
+          outline: none;
+          color: rgba(240,237,232,0.9);
+          font-size: 0.95rem;
+          padding: 13px 10px 13px 0;
+          font-family: var(--font-body);
+        }
+        .plugin-next__input::placeholder { color: rgba(240,237,232,0.25); }
+        .plugin-next__btn {
+          background: #fff;
+          color: #0d0d0d;
+          font-size: 0.82rem;
+          font-weight: 700;
+          letter-spacing: 0.06em;
+          padding: 13px 20px;
+          border: none;
+          cursor: pointer;
+          white-space: nowrap;
+          transition: opacity 0.2s;
+        }
+        .plugin-next__btn:hover { opacity: 0.85; }
+        .plugin-next__note {
+          font-size: 0.78rem;
+          color: rgba(240,237,232,0.28);
+        }
+        .plugin-next__success { display: none; }
+        .plugin-next__success.is-visible { display: block; }
+        .plugin-next__gate.is-hidden { display: none; }
+        .plugin-next__welcome {
+          font-size: 1rem;
+          color: rgba(240,237,232,0.7);
+          margin-bottom: 20px;
+        }
+        .plugin-next__welcome strong { color: rgba(240,237,232,0.95); }
+        .plugin-next__dl {
+          display: inline-flex;
+          margin-bottom: 16px;
+        }
+        .plugin-next__install-hint {
+          font-size: 0.82rem;
+          color: rgba(240,237,232,0.35);
+        }
+      </style>
 
       <footer id="contact" class="footer section-block">
         <div class="container footer__grid">
@@ -241,5 +402,27 @@
     </div>
 
     <script src="./main.js"></script>
+    <script>
+      (function () {
+        const btn   = document.getElementById("pluginUnlockBtn");
+        const input = document.getElementById("linkedinInput");
+        const form  = document.getElementById("pluginGateForm");
+        const succ  = document.getElementById("pluginGateSuccess");
+        const name  = document.getElementById("linkedinName");
+
+        function unlock() {
+          const val = (input.value || "").trim();
+          if (!val) { input.focus(); return; }
+          name.textContent = val;
+          form.classList.add("is-hidden");
+          succ.classList.add("is-visible");
+        }
+
+        btn.addEventListener("click", unlock);
+        input.addEventListener("keydown", function (e) {
+          if (e.key === "Enter") unlock();
+        });
+      })();
+    </script>
   </body>
 </html>

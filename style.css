@@ -463,7 +463,7 @@ main {
   font-weight: 700;
   max-width: none;
   margin-left: 0;
-  margin-top: clamp(24px, 8vw, 96px);
+  margin-top: 28px;
   line-height: 1.1;
   white-space: nowrap;
   text-decoration: none;
@@ -2808,7 +2808,7 @@ body.modal-open {
     white-space: normal;
     transform: none;
     letter-spacing: 0.16em;
-    margin-top: clamp(40px, 12vw, 120px);
+    margin-top: 28px;
   }
 
   .feature-block.reversed {
@@ -2840,7 +2840,7 @@ body.modal-open {
 
   .hero__welcome {
     text-align: center;
-    margin-top: clamp(32px, 14vw, 96px);
+    margin-top: 28px;
   }
 
   .hero__cta {
