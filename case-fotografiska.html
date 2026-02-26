@@ -26,6 +26,284 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./style.css" />
+
+    <style>
+      /* ── Section label ── */
+      .cfot-label {
+        font-size: 0.7rem;
+        font-weight: 700;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--muted);
+        margin-bottom: 1.5rem;
+      }
+
+      /* ── Hero ── */
+      .cfot-hero {
+        padding: 5rem 0 3rem;
+      }
+      .cfot-hero__title {
+        font-size: clamp(2.8rem, 7vw, 5.5rem);
+        font-weight: 900;
+        line-height: 1.0;
+        letter-spacing: -0.03em;
+        margin: 0.5rem 0 1rem;
+      }
+      .cfot-hero__subtitle {
+        font-size: clamp(1rem, 2vw, 1.3rem);
+        font-weight: 300;
+        color: var(--muted);
+        max-width: 580px;
+        line-height: 1.5;
+        margin-bottom: 1.25rem;
+      }
+      .cfot-hero__intro {
+        max-width: 560px;
+        line-height: 1.75;
+        color: var(--ink);
+      }
+      .cfot-hero__img {
+        margin-top: 3rem;
+        border-radius: 8px;
+        overflow: hidden;
+        background: #e8e4de;
+        aspect-ratio: 16 / 7;
+      }
+      .cfot-hero__img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      /* ── Two-column section ── */
+      .cfot-split {
+        display: grid;
+        grid-template-columns: 200px 1fr;
+        gap: 3rem;
+        align-items: start;
+      }
+      @media (max-width: 700px) {
+        .cfot-split { grid-template-columns: 1fr; gap: 1.5rem; }
+      }
+      .cfot-split__label { padding-top: 0.15rem; }
+
+      /* ── Stat card ── */
+      .cfot-stat {
+        display: inline-flex;
+        flex-direction: column;
+        background: var(--accent-dark);
+        color: #fff;
+        padding: 2rem 2.5rem;
+        border-radius: 6px;
+        margin-bottom: 1.5rem;
+      }
+      .cfot-stat__value {
+        font-size: clamp(1.8rem, 4vw, 2.8rem);
+        font-weight: 900;
+        line-height: 1.1;
+        letter-spacing: -0.02em;
+      }
+      .cfot-stat__sub {
+        font-size: 0.85rem;
+        font-weight: 300;
+        opacity: 0.6;
+        margin-top: 0.25rem;
+      }
+
+      /* ── Idea punchline ── */
+      .cfot-punch {
+        font-size: clamp(1.8rem, 4vw, 3rem);
+        font-weight: 900;
+        letter-spacing: -0.025em;
+        line-height: 1.1;
+        margin-bottom: 1.25rem;
+        color: var(--ink);
+      }
+
+      /* ── How it works cards ── */
+      .cfot-how-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+        margin-top: 0;
+      }
+      @media (max-width: 800px) {
+        .cfot-how-grid { grid-template-columns: 1fr; }
+      }
+      .cfot-how-card {
+        background: #fff;
+        border: 1px solid rgba(0,0,0,0.07);
+        border-radius: 8px;
+        padding: 1.75rem;
+      }
+      .cfot-how-card__icon {
+        width: 36px;
+        height: 36px;
+        background: var(--accent-dark);
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1rem;
+      }
+      .cfot-how-card__icon svg {
+        width: 18px;
+        height: 18px;
+        fill: #fff;
+      }
+      .cfot-how-card h3 {
+        font-size: 1rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+        line-height: 1.3;
+      }
+      .cfot-how-card p {
+        font-size: 0.88rem;
+        color: var(--muted);
+        line-height: 1.65;
+      }
+
+      /* ── Image pairs ── */
+      .cfot-img-pair {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.25rem;
+        margin-top: 2.5rem;
+      }
+      @media (max-width: 700px) {
+        .cfot-img-pair { grid-template-columns: 1fr; }
+      }
+      .cfot-img-wrap {
+        border-radius: 6px;
+        overflow: hidden;
+        background: #e8e4de;
+        aspect-ratio: 4 / 3;
+      }
+      .cfot-img-wrap img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+      .cfot-img-solo {
+        border-radius: 6px;
+        overflow: hidden;
+        background: #e8e4de;
+        aspect-ratio: 16 / 7;
+        margin-top: 2.5rem;
+      }
+      .cfot-img-solo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      /* ── AI section ── */
+      .cfot-ai-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        align-items: center;
+      }
+      @media (max-width: 700px) {
+        .cfot-ai-grid { grid-template-columns: 1fr; }
+      }
+
+      /* ── Section backgrounds ── */
+      .cfot-section--tint { background: #f5f3ef; }
+      .cfot-section--dark {
+        background: var(--accent-dark);
+        color: #f0ede8;
+      }
+      .cfot-section--dark .cfot-label { color: rgba(240,237,232,0.4); }
+      .cfot-section--dark .cfot-punch { color: #fff; }
+      .cfot-section--dark p { color: rgba(240,237,232,0.7); }
+
+      /* ── Gallery grid ── */
+      .cfot-gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+      }
+      @media (max-width: 700px) {
+        .cfot-gallery-grid { grid-template-columns: repeat(2, 1fr); }
+      }
+      .cfot-gallery-item {
+        cursor: pointer;
+        border-radius: 6px;
+        overflow: hidden;
+        background: #e8e4de;
+        aspect-ratio: 4 / 3;
+        position: relative;
+      }
+      .cfot-gallery-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.3s ease;
+      }
+      .cfot-gallery-item:hover img { transform: scale(1.04); }
+      .cfot-gallery-item__cap {
+        position: absolute;
+        bottom: 0; left: 0; right: 0;
+        background: linear-gradient(transparent, rgba(0,0,0,0.55));
+        color: #fff;
+        font-size: 0.75rem;
+        padding: 1.5rem 0.75rem 0.65rem;
+        opacity: 0;
+        transition: opacity 0.2s;
+        line-height: 1.4;
+      }
+      .cfot-gallery-item:hover .cfot-gallery-item__cap { opacity: 1; }
+
+      /* ── Lightbox ── */
+      .cfot-lightbox {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,0,0.92);
+        z-index: 9999;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+      }
+      .cfot-lightbox.is-open { display: flex; }
+      .cfot-lightbox__inner {
+        position: relative;
+        max-width: 900px;
+        width: 100%;
+      }
+      .cfot-lightbox__img {
+        width: 100%;
+        max-height: 80vh;
+        object-fit: contain;
+        border-radius: 4px;
+        display: block;
+      }
+      .cfot-lightbox__cap {
+        text-align: center;
+        color: rgba(255,255,255,0.6);
+        font-size: 0.8rem;
+        margin-top: 0.75rem;
+      }
+      .cfot-lightbox__close {
+        position: absolute;
+        top: -2.5rem;
+        right: 0;
+        background: none;
+        border: none;
+        color: #fff;
+        font-size: 1.5rem;
+        cursor: pointer;
+        line-height: 1;
+        padding: 0.25rem;
+        opacity: 0.7;
+      }
+      .cfot-lightbox__close:hover { opacity: 1; }
+    </style>
   </head>
 
   <body class="case-page">
@@ -58,25 +336,247 @@
     </header>
 
     <main id="top">
-      <section class="section section-block">
+
+      <!-- ═══════════════════ HERO ═══════════════════ -->
+      <section class="section-block cfot-hero">
         <div class="container">
           <a href="index.html#cases" class="back-link" data-i18n="back_to_cases">← Tillbaka till cases</a>
 
-          <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:55vh;text-align:center;gap:1rem;">
-            <p class="eyebrow">Varumärkesaktivering</p>
-            <h1 class="h-display" style="font-size:clamp(2.5rem,6vw,4.5rem);letter-spacing:-0.03em;">Fotografiska</h1>
-            <p class="muted" style="max-width:360px;line-height:1.6;font-style:italic;">Everyone is a Photographer</p>
+          <p class="eyebrow reveal" data-i18n="cfot_eyebrow">Varumärkesaktivering</p>
+          <h1 class="cfot-hero__title reveal" data-i18n="cfot_title">Everyone is a Photographer</h1>
+          <p class="cfot-hero__subtitle reveal" data-i18n="cfot_subtitle">
+            En publik aktivering som tar nästa generation från scroll till utställning.
+          </p>
+          <p class="cfot-hero__intro reveal" data-i18n="cfot_intro">
+            I en vardag av oändligt bildflöde gjorde vi Fotografiska mer nära, mer inkluderande — och gav alla en konkret väg från skärm till utställning.
+          </p>
+
+          <div class="cfot-hero__img reveal">
             <img
               src="./img/fotografiskaom.png"
-              alt="Fotografiska – Everyone is a Photographer"
-              style="width:100%;max-width:720px;border-radius:6px;margin-top:1.5rem;box-shadow:0 16px 48px rgba(0,0,0,0.12);"
+              alt="Everyone is a Photographer – kampanjbild"
+              loading="eager"
+              decoding="async"
             />
-            <p class="muted" style="max-width:400px;line-height:1.6;margin-top:1.5rem;">Det här caset publiceras snart. Håll utkik!</p>
-            <a href="index.html#cases" class="btn btn--dark" style="margin-top:0.5rem;" data-i18n="back_to_cases_btn">← Se alla projekt</a>
           </div>
         </div>
       </section>
 
+      <!-- ═══════════════════ CHALLENGE ═══════════════════ -->
+      <section class="section-block cfot-section--tint">
+        <div class="container">
+          <div class="cfot-split reveal">
+            <div class="cfot-split__label">
+              <p class="cfot-label" data-i18n="cfot_challenge_label">Utmaning</p>
+            </div>
+            <div>
+              <p style="font-size:1.1rem;line-height:1.75;max-width:580px;" data-i18n="cfot_challenge_text">
+                För 15–25 kan fotokonst kännas distant — "inte för mig". Vi ville sänka tröskeln och göra upplevelsen relevant, direkt och personlig.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══════════════════ INSIGHT ═══════════════════ -->
+      <section class="section-block">
+        <div class="container">
+          <div class="cfot-split reveal">
+            <div class="cfot-split__label">
+              <p class="cfot-label" data-i18n="cfot_insight_label">Insikt</p>
+            </div>
+            <div>
+              <div class="cfot-stat">
+                <span class="cfot-stat__value" data-i18n="cfot_insight_stat">Miljarder foton varje dag</span>
+                <span class="cfot-stat__sub">photos uploaded globally</span>
+              </div>
+              <p style="max-width:520px;line-height:1.75;" data-i18n="cfot_insight_text">
+                Vi fotar redan hela tiden, men få ser sitt eget bildskapande som "utställningsmaterial". Potentialen finns i målgruppen — det som saknas är en inbjudan.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══════════════════ THE IDEA ═══════════════════ -->
+      <section class="section-block cfot-section--dark">
+        <div class="container">
+          <div class="cfot-split reveal">
+            <div class="cfot-split__label">
+              <p class="cfot-label" data-i18n="cfot_idea_label">Idé</p>
+            </div>
+            <div>
+              <p class="cfot-punch" data-i18n="cfot_idea_punchline">Everyone is a Photographer</p>
+              <p style="max-width:520px;line-height:1.75;" data-i18n="cfot_idea_text">
+                Ett koncept som bygger självförtroende genom inkludering och gör Fotografiska till platsen där alla perspektiv får ta plats.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══════════════════ HOW IT WORKS ═══════════════════ -->
+      <section class="section-block">
+        <div class="container">
+          <p class="cfot-label reveal" data-i18n="cfot_how_label">Genomförande</p>
+          <div class="cfot-how-grid">
+
+            <div class="cfot-how-card reveal">
+              <div class="cfot-how-card__icon">
+                <!-- cube icon -->
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                </svg>
+              </div>
+              <h3 data-i18n="cfot_how1_title">Spegelkuber i stan</h3>
+              <p data-i18n="cfot_how1_text">
+                Instagramvänliga spegelkuber placerades i Stockholm för att stoppa scrollen och skapa igenkänning: "du är också fotograf".
+              </p>
+            </div>
+
+            <div class="cfot-how-card reveal">
+              <div class="cfot-how-card__icon">
+                <!-- qr / upload icon -->
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="3" y="3" width="7" height="7" rx="1"/>
+                  <rect x="14" y="3" width="7" height="7" rx="1"/>
+                  <rect x="3" y="14" width="7" height="7" rx="1"/>
+                  <path d="M14 14h3v3h-3zM17 17h3v3h-3zM14 20h3"/>
+                </svg>
+              </div>
+              <h3 data-i18n="cfot_how2_title">QR → Ladda upp</h3>
+              <p data-i18n="cfot_how2_text">
+                OOH, digitala skärmar och social ads driver till en enkel upload. Inga hashtags, inget krav att posta — bara bidra.
+              </p>
+            </div>
+
+            <div class="cfot-how-card reveal">
+              <div class="cfot-how-card__icon">
+                <!-- clock / countdown icon -->
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="12" cy="13" r="8"/>
+                  <path d="M12 9v4l3 2M9 3h6"/>
+                </svg>
+              </div>
+              <h3 data-i18n="cfot_how3_title">Countdown + 1 bild/dag</h3>
+              <p data-i18n="cfot_how3_text">
+                En tydlig deadline och max 1 bild per dag gör valet mer medvetet och skapar en liten "missar-jag-nu?"-känsla.
+              </p>
+            </div>
+
+          </div>
+
+          <!-- Mockup images 02 + 03 -->
+          <div class="cfot-img-pair">
+            <div class="cfot-img-wrap reveal">
+              <img
+                src="./img/fotografiska/02_ooh-qr_poster.jpg"
+                alt="OOH med QR-kod och uppladdnings-CTA"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="cfot-img-wrap reveal">
+              <img
+                src="./img/fotografiska/03_mobile-landing_countdown.jpg"
+                alt="Mobilvy med countdown och uppladdningsflöde"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══════════════════ AI ═══════════════════ -->
+      <section class="section-block cfot-section--tint">
+        <div class="container">
+          <div class="cfot-ai-grid reveal">
+            <div>
+              <p class="cfot-label" data-i18n="cfot_ai_label">AI som möjliggörare</p>
+              <p style="font-size:1.05rem;line-height:1.8;max-width:460px;" data-i18n="cfot_ai_text">
+                För att kunna ta emot många bidrag används AI för moderering och tematisk sortering — så att utställningen blir trygg, strukturerad och inkluderande.
+              </p>
+            </div>
+            <div class="cfot-img-wrap" style="aspect-ratio:4/3;">
+              <img
+                src="./img/fotografiska/04_ai-curation_visual.jpg"
+                alt="Visualisering av AI-stödd bildsortering i teman"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══════════════════ EXHIBITION ═══════════════════ -->
+      <section class="section-block">
+        <div class="container">
+          <div class="cfot-split reveal">
+            <div class="cfot-split__label">
+              <p class="cfot-label" data-i18n="cfot_exhibit_label">Utställningen</p>
+            </div>
+            <div>
+              <p style="font-size:1.1rem;line-height:1.75;max-width:560px;" data-i18n="cfot_exhibit_text">
+                Kampanjen mynnar ut i en årlig utställning där spegelkuben blir centerpiece, vissa bidrag lyfts extra och ett levande galleri visar bredden av vår samtid.
+              </p>
+            </div>
+          </div>
+          <!-- Mockup 05 – full width -->
+          <div class="cfot-img-solo reveal">
+            <img
+              src="./img/fotografiska/05_exhibition_gallery_mockup.jpg"
+              alt="Galleri med projicerade bilder och besökare på Fotografiska"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══════════════════ GALLERY ═══════════════════ -->
+      <section class="section-block cfot-section--tint">
+        <div class="container">
+          <p class="cfot-label reveal" data-i18n="cfot_gallery_label">Mockups</p>
+
+          <div class="cfot-gallery-grid">
+
+            <div class="cfot-gallery-item reveal" data-src="./img/fotografiska/01_mirror-cube_hero.jpg" data-cap-sv="Spegelkub som teaser i stadsmiljö" data-cap-en="Mirror cube teaser in the city">
+              <img src="./img/fotografiska/01_mirror-cube_hero.jpg" alt="Spegelkub med texten Everyone is a Photographer i stadsmiljö" loading="lazy" decoding="async" />
+              <span class="cfot-gallery-item__cap" data-i18n="cfot_cap1">Spegelkub som teaser i stadsmiljö</span>
+            </div>
+
+            <div class="cfot-gallery-item reveal" data-src="./img/fotografiska/02_ooh-qr_poster.jpg" data-cap-sv="OOH med tydlig CTA + QR" data-cap-en="OOH with clear CTA + QR">
+              <img src="./img/fotografiska/02_ooh-qr_poster.jpg" alt="Affisch med QR-kod och uppmaning att ladda upp en bild" loading="lazy" decoding="async" />
+              <span class="cfot-gallery-item__cap" data-i18n="cfot_cap2">OOH med tydlig CTA + QR</span>
+            </div>
+
+            <div class="cfot-gallery-item reveal" data-src="./img/fotografiska/03_mobile-landing_countdown.jpg" data-cap-sv="Landningssida med countdown" data-cap-en="Landing page countdown">
+              <img src="./img/fotografiska/03_mobile-landing_countdown.jpg" alt="Mobilvy med deadline och uppladdningsflöde" loading="lazy" decoding="async" />
+              <span class="cfot-gallery-item__cap" data-i18n="cfot_cap3">Landningssida med countdown</span>
+            </div>
+
+            <div class="cfot-gallery-item reveal" data-src="./img/fotografiska/04_ai-curation_visual.jpg" data-cap-sv="AI-stöd för moderering & sortering" data-cap-en="AI-assisted moderation & sorting">
+              <img src="./img/fotografiska/04_ai-curation_visual.jpg" alt="Visualisering av bildsortering i teman" loading="lazy" decoding="async" />
+              <span class="cfot-gallery-item__cap" data-i18n="cfot_cap4">AI-stöd för moderering &amp; sortering</span>
+            </div>
+
+            <div class="cfot-gallery-item reveal" data-src="./img/fotografiska/05_exhibition_gallery_mockup.jpg" data-cap-sv="Utställningen i Fotografiska" data-cap-en="The exhibition at Fotografiska">
+              <img src="./img/fotografiska/05_exhibition_gallery_mockup.jpg" alt="Galleri med visade bilder och besökare" loading="lazy" decoding="async" />
+              <span class="cfot-gallery-item__cap" data-i18n="cfot_cap5">Utställningen i Fotografiska</span>
+            </div>
+
+            <div class="cfot-gallery-item reveal" data-src="./img/fotografiska/06_endframe_see-you.jpg" data-cap-sv="End frame: Vi ses på Fotografiska" data-cap-en="End frame: See you @ Fotografiska">
+              <img src="./img/fotografiska/06_endframe_see-you.jpg" alt="Slutbild med kampanjbudskap" loading="lazy" decoding="async" />
+              <span class="cfot-gallery-item__cap" data-i18n="cfot_cap6">End frame: "Vi ses på Fotografiska"</span>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══════════════════ FOOTER ═══════════════════ -->
       <footer id="contact" class="footer section-block">
         <div class="container footer__grid">
           <div class="footer__left">
@@ -111,7 +611,56 @@
           <div class="footer__copy">&copy; 2026 Ava Urdén</div>
         </div>
       </footer>
+
     </main>
+
+    <!-- ═══════════════════ LIGHTBOX ═══════════════════ -->
+    <div class="cfot-lightbox" id="cfotLightbox" role="dialog" aria-modal="true">
+      <div class="cfot-lightbox__inner">
+        <button class="cfot-lightbox__close" id="cfotLbClose" aria-label="Stäng">✕</button>
+        <img class="cfot-lightbox__img" id="cfotLbImg" src="" alt="" />
+        <p class="cfot-lightbox__cap" id="cfotLbCap"></p>
+      </div>
+    </div>
+
+    <script>
+      (function () {
+        var lb      = document.getElementById("cfotLightbox");
+        var lbImg   = document.getElementById("cfotLbImg");
+        var lbCap   = document.getElementById("cfotLbCap");
+        var lbClose = document.getElementById("cfotLbClose");
+
+        function getLang() {
+          return document.documentElement.lang || "sv";
+        }
+
+        document.querySelectorAll(".cfot-gallery-item").forEach(function (item) {
+          item.addEventListener("click", function () {
+            var src = item.dataset.src;
+            var cap = getLang() === "en" ? item.dataset.capEn : item.dataset.capSv;
+            lbImg.src = src;
+            lbImg.alt = cap || "";
+            lbCap.textContent = cap || "";
+            lb.classList.add("is-open");
+            document.body.style.overflow = "hidden";
+          });
+        });
+
+        function closeLb() {
+          lb.classList.remove("is-open");
+          document.body.style.overflow = "";
+          lbImg.src = "";
+        }
+
+        lbClose.addEventListener("click", closeLb);
+        lb.addEventListener("click", function (e) {
+          if (e.target === lb) closeLb();
+        });
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "Escape") closeLb();
+        });
+      })();
+    </script>
 
     <script src="./main.js"></script>
   </body>
