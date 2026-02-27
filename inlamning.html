@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="sv">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Inlämning | Ava Urdén</title>
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l !== "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-PGNG2H2P");
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+
+    <style>
+      .inl-hero {
+        padding: clamp(40px, 6vw, 72px) 0 clamp(32px, 4vw, 56px);
+        border-bottom: 1px solid rgba(0,0,0,0.08);
+        margin-bottom: clamp(40px, 5vw, 64px);
+      }
+      .inl-eyebrow {
+        font-size: 0.78rem;
+        text-transform: uppercase;
+        letter-spacing: 0.18em;
+        font-weight: 700;
+        color: var(--clr-accent, #888);
+        margin-bottom: 14px;
+      }
+      .inl-title {
+        font-family: var(--font-display);
+        font-size: clamp(2.4rem, 5vw, 4rem);
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 0.02em;
+        line-height: 1.05;
+        margin-bottom: 16px;
+      }
+      .inl-sub {
+        font-size: 1rem;
+        color: #555;
+        max-width: 520px;
+        line-height: 1.6;
+      }
+
+      /* Deliverable cards */
+      .inl-list {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        margin-bottom: clamp(56px, 8vw, 96px);
+      }
+      .inl-card {
+        display: grid;
+        grid-template-columns: 56px 1fr;
+        gap: 24px;
+        align-items: start;
+        padding: 36px;
+        border: 1px solid rgba(0,0,0,0.09);
+        border-radius: 16px;
+        background: #fafafa;
+      }
+      .inl-card__num {
+        font-family: var(--font-display);
+        font-size: 2.2rem;
+        font-weight: 900;
+        line-height: 1;
+        color: rgba(0,0,0,0.12);
+        padding-top: 4px;
+      }
+      .inl-card__label {
+        font-size: 0.72rem;
+        text-transform: uppercase;
+        letter-spacing: 0.16em;
+        font-weight: 700;
+        color: #888;
+        margin-bottom: 8px;
+      }
+      .inl-card__title {
+        font-family: var(--font-display);
+        font-size: 1.25rem;
+        font-weight: 800;
+        margin-bottom: 10px;
+        line-height: 1.2;
+      }
+      .inl-card__desc {
+        font-size: 0.9rem;
+        color: #555;
+        line-height: 1.6;
+        margin-bottom: 20px;
+      }
+      .inl-card__actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      .inl-btn {
+        display: inline-block;
+        padding: 10px 22px;
+        border-radius: 999px;
+        font-size: 0.82rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        text-decoration: none;
+        transition: opacity 0.18s;
+      }
+      .inl-btn:hover { opacity: 0.75; }
+      .inl-btn--dark {
+        background: #111;
+        color: #fff;
+      }
+      .inl-btn--outline {
+        background: transparent;
+        color: #111;
+        border: 1.5px solid #111;
+      }
+      .inl-card__embed {
+        margin-top: 20px;
+        max-width: 480px;
+      }
+      .inl-note {
+        display: inline-block;
+        font-size: 0.75rem;
+        color: #888;
+        font-style: italic;
+        margin-top: 6px;
+      }
+
+      @media (max-width: 600px) {
+        .inl-card {
+          grid-template-columns: 1fr;
+          gap: 8px;
+          padding: 24px 20px;
+        }
+        .inl-card__num {
+          font-size: 1.4rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="case-page">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-PGNG2H2P"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <header class="header">
+      <div class="container header__inner">
+        <a class="logo" href="index.html#top" data-i18n="logo_text">A.U. Portfolio</a>
+        <nav class="nav">
+          <a href="index.html#about" data-i18n="nav_about">Om mig</a>
+          <a href="index.html#cases" data-i18n="nav_cases">Utvalda projekt</a>
+          <a href="index.html#skills" data-i18n="nav_skills">Färdigheter</a>
+          <a href="cv.html" data-i18n="nav_cv">CV</a>
+          <a href="index.html#contact" data-i18n="nav_contact">Kontakt</a>
+        </nav>
+        <div class="lang">
+          <button class="lang__btn is-active" type="button" data-lang="sv">SV</button>
+          <button class="lang__btn" type="button" data-lang="en">EN</button>
+        </div>
+        <button class="nav-burger" aria-label="Meny" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+    <nav class="mobile-nav" id="mobileNav">
+      <a href="index.html#about" data-i18n="nav_about">Om mig</a>
+      <a href="index.html#cases" data-i18n="nav_cases">Utvalda projekt</a>
+      <a href="index.html#skills" data-i18n="nav_skills">Färdigheter</a>
+      <a href="cv.html" data-i18n="nav_cv">CV</a>
+      <a href="index.html#contact" data-i18n="nav_contact">Kontakt</a>
+    </nav>
+
+    <main id="top">
+      <section class="section section-block">
+        <div class="container">
+
+          <a href="index.html" class="back-link">← Tillbaka</a>
+
+          <!-- HERO -->
+          <div class="inl-hero">
+            <p class="inl-eyebrow">Berghs School of Communication</p>
+            <h1 class="inl-title">Inlämning</h1>
+            <p class="inl-sub">Ava Urdén · Growth Marketing · 2026</p>
+          </div>
+
+          <!-- DELIVERABLES -->
+          <div class="inl-list">
+
+            <!-- 1. White paper -->
+            <div class="inl-card">
+              <div class="inl-card__num">01</div>
+              <div>
+                <p class="inl-card__label">Innehåll & Distribution</p>
+                <h2 class="inl-card__title">White paper skapat + distribuerat i sociala medier</h2>
+                <p class="inl-card__desc">
+                  White paper producerat och publicerat: <em>Stop Burning Money: E-commerce in 2026</em>. Distribuerat organiskt via X/Twitter som en del av growth loopen.
+                </p>
+                <div class="inl-card__actions">
+                  <a
+                    href="https://x.com/avasophia_1/status/2027081306182397962"
+                    target="_blank"
+                    rel="noopener"
+                    class="inl-btn inl-btn--dark"
+                  >Se inlägg på X ↗</a>
+                  <a
+                    href="./downloads/wp-e-commerce-in-2026.pdf"
+                    download
+                    class="inl-btn inl-btn--outline"
+                  >Ladda ner white paper</a>
+                </div>
+                <div class="inl-card__embed">
+                  <blockquote class="twitter-tweet" data-dnt="true">
+                    <a href="https://twitter.com/avasophia_1/status/2027081306182397962"></a>
+                  </blockquote>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2. Lead magnet + growth loop -->
+            <div class="inl-card">
+              <div class="inl-card__num">02</div>
+              <div>
+                <p class="inl-card__label">Lead Magnet & Growth Loop</p>
+                <h2 class="inl-card__title">Webbplats med lead magnet + growth loop</h2>
+                <p class="inl-card__desc">
+                  Landningssida med e-postgate kopplad till white paper som lead magnet. Growth loopen aktiveras när besökaren laddar ner och delar vidare.
+                </p>
+                <div class="inl-card__actions">
+                  <a
+                    href="./lonsam-tillvaxt.html"
+                    target="_blank"
+                    class="inl-btn inl-btn--dark"
+                  >Öppna sidan ↗</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- 3. API-integration -->
+            <div class="inl-card">
+              <div class="inl-card__num">03</div>
+              <div>
+                <p class="inl-card__label">Teknisk Implementation</p>
+                <h2 class="inl-card__title">API-integration på egen webbplats</h2>
+                <p class="inl-card__desc">
+                  Hämtar och visar live-data via externt API. Byggt direkt i portfolion som ett fungerande mini-verktyg.
+                </p>
+                <div class="inl-card__actions">
+                  <a
+                    href="./growth-radar.html"
+                    target="_blank"
+                    class="inl-btn inl-btn--dark"
+                  >Öppna Growth Radar ↗</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- 4. Browser extension -->
+            <div class="inl-card">
+              <div class="inl-card__num">04</div>
+              <div>
+                <p class="inl-card__label">Browser Extension</p>
+                <h2 class="inl-card__title">Browser extension <span style="font-weight:400;font-size:0.9em;">(vid godkänt)</span></h2>
+                <p class="inl-card__desc">
+                  Chrome-extension byggd och paketerad. Installeras lokalt via Developer Mode i Chrome.
+                </p>
+                <div class="inl-card__actions">
+                  <a
+                    href="./downloads/TabManager.zip"
+                    download
+                    class="inl-btn inl-btn--dark"
+                  >Ladda ner .zip</a>
+                  <a
+                    href="./plugin-utm-builder.html"
+                    target="_blank"
+                    class="inl-btn inl-btn--outline"
+                  >Se mer om pluginen ↗</a>
+                </div>
+                <span class="inl-note">Kräver manuell installation via chrome://extensions → Developer Mode → Load unpacked</span>
+              </div>
+            </div>
+
+          </div><!-- /inl-list -->
+        </div>
+      </section>
+    </main>
+
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
