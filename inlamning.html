@@ -1,4 +1,4 @@
-<!doctype html>
+d<!doctype html>
 <html lang="sv">
   <head>
     <meta charset="utf-8" />
@@ -249,8 +249,6 @@
       <section class="section section-block">
         <div class="container">
 
-          <a href="index.html" class="back-link">← Tillbaka</a>
-
           <!-- HERO -->
           <div class="inl-hero">
             <p class="inl-eyebrow">Berghs School of Communication</p>
@@ -264,26 +262,28 @@
             <!-- 1. White paper -->
             <div class="inl-card">
               <div class="inl-card__num">01</div>
-              <div>
-                <p class="inl-card__label">Innehåll & Distribution</p>
-                <h2 class="inl-card__title">White paper skapat + distribuerat i sociala medier</h2>
-                <p class="inl-card__desc">
-                  White paper producerat och publicerat: <em>Stop Burning Money: E-commerce in 2026</em>. Distribuerat organiskt via X/Twitter som en del av growth loopen.
-                </p>
-                <div class="inl-card__actions">
-                  <a
-                    href="https://x.com/avasophia_1/status/2027081306182397962"
-                    target="_blank"
-                    rel="noopener"
-                    class="inl-btn inl-btn--dark"
-                  >Se inlägg på X ↗</a>
-                  <a
-                    href="./downloads/wp-e-commerce-in-2026.pdf"
-                    download
-                    class="inl-btn inl-btn--outline"
-                  >Ladda ner white paper</a>
+              <div style="display:flex; gap:32px; align-items:flex-start; flex-wrap:wrap;">
+                <div style="flex:1; min-width:220px;">
+                  <p class="inl-card__label">Innehåll & Distribution</p>
+                  <h2 class="inl-card__title">White paper skapat + distribuerat i sociala medier</h2>
+                  <p class="inl-card__desc">
+                    White paper producerat och publicerat: <em>Stop Burning Money: E-commerce in 2026</em>. Distribuerat organiskt via X/Twitter som en del av growth loopen.
+                  </p>
+                  <div class="inl-card__actions">
+                    <a
+                      href="https://x.com/avasophia_1/status/2027081306182397962"
+                      target="_blank"
+                      rel="noopener"
+                      class="inl-btn inl-btn--dark"
+                    >Se inlägg på X ↗</a>
+                    <a
+                      href="./downloads/wp-e-commerce-in-2026.pdf"
+                      download
+                      class="inl-btn inl-btn--outline"
+                    >Ladda ner white paper</a>
+                  </div>
                 </div>
-                <div class="inl-card__embed">
+                <div style="flex:0 0 280px; max-width:280px;">
                   <blockquote class="twitter-tweet" data-dnt="true">
                     <a href="https://twitter.com/avasophia_1/status/2027081306182397962"></a>
                   </blockquote>
@@ -296,7 +296,7 @@
               <div class="inl-card__num">02</div>
               <div>
                 <p class="inl-card__label">Plugin & Lead Magnet</p>
-                <h2 class="inl-card__title">Browser extension med lead magnet <span style="font-weight:400;font-size:0.9em;">(vid godkänt)</span></h2>
+                <h2 class="inl-card__title">Browser extension med lead magnet</h2>
                 <p class="inl-card__desc">
                   Chrome-extension byggd och paketerad. Lead magneten är kopplad direkt till pluginen – besökaren får tillgång via e-postgate och growth loopen aktiveras när de delar vidare.
                 </p>
@@ -307,34 +307,11 @@
                     class="inl-btn inl-btn--dark"
                   >Öppna lead magnet ↗</a>
                   <a
-                    href="./plugins.html"
-                    target="_blank"
+                    href="./downloads/TabManager.zip"
+                    download
                     class="inl-btn inl-btn--outline"
-                  >Se plugin ↗</a>
+                  >Ladda ner plugin</a>
                 </div>
-
-                <div class="inl-lock" id="pluginLock">
-                  <p class="inl-lock__text">Skriv in ditt LinkedIn-användarnamn för att låsa upp båda plugins</p>
-                  <div class="inl-lock__row">
-                    <input
-                      type="text"
-                      class="inl-lock__input"
-                      id="linkedinInput"
-                      placeholder="ditt-namn"
-                      autocomplete="off"
-                    />
-                    <button class="inl-lock__btn" onclick="unlockPlugin()">Lås upp →</button>
-                  </div>
-                  <p class="inl-lock__note">Ingen spam. Ingen inloggning. Bara ett litet handslag.</p>
-                </div>
-                <a
-                  href="./downloads/TabManager.zip"
-                  download
-                  class="inl-btn inl-btn--dark"
-                  id="pluginDownload"
-                  style="display:none; margin-top:16px;"
-                >Ladda ner .zip</a>
-                <span class="inl-note" style="display:block; margin-top:6px;">Kräver manuell installation via chrome://extensions → Developer Mode → Load unpacked</span>
               </div>
             </div>
 
@@ -364,21 +341,5 @@
 
     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     <script src="./main.js"></script>
-    <script>
-      function unlockPlugin() {
-        const val = document.getElementById('linkedinInput').value.trim();
-        if (!val) {
-          document.getElementById('linkedinInput').focus();
-          return;
-        }
-        document.getElementById('pluginLock').style.display = 'none';
-        const dl = document.getElementById('pluginDownload');
-        dl.style.display = 'inline-block';
-        dl.click();
-      }
-      document.getElementById('linkedinInput').addEventListener('keydown', function(e) {
-        if (e.key === 'Enter') unlockPlugin();
-      });
-    </script>
   </body>
 </html>
