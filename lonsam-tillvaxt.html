@@ -68,7 +68,6 @@
 
       /* ── Hero ── */
       .lt-hero {
-        min-height: 100vh;
         display: flex;
         align-items: flex-start;
         padding: clamp(6rem, 12vh, 9rem) 0 5rem;
@@ -204,19 +203,42 @@
         margin-bottom: 1.5rem;
       }
       .lt-dl-btn {
+        position: relative;
+        overflow: hidden;
         display: inline-flex;
         align-items: center;
-        gap: 0.5rem;
+        justify-content: center;
+        height: 3rem;
+        padding: 0 2rem;
+        border-radius: 1.5rem;
         background: #fff;
         color: #0d0d0d;
         font-weight: 900;
         font-size: 0.95rem;
-        padding: 0.85rem 1.8rem;
-        border-radius: 6px;
         text-decoration: none;
-        transition: opacity 0.2s;
+        border: none;
+        cursor: pointer;
+        transition: color 0.475s;
       }
-      .lt-dl-btn:hover { opacity: 0.88; }
+      .lt-dl-btn::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: scaleX(0);
+        transform-origin: 0 50%;
+        width: 100%;
+        height: 100%;
+        border-radius: inherit;
+        background: #6d92b2;
+        transition: transform 0.475s;
+      }
+      .lt-dl-btn:hover::before { transform: scaleX(1); }
+      .lt-dl-btn:hover { color: #fff; }
+      .lt-dl-btn__text {
+        position: relative;
+        z-index: 1;
+      }
 
       /* ── Mockup visual ── */
       .lt-mockup {
@@ -402,7 +424,7 @@
                 <span data-i18n="pg_title_sub">Stop Burning Money:</span>
                 <span data-i18n="pg_title_main" style="color:#fff;font-weight:900;font-size:1em;letter-spacing:-0.03em;">E-commerce in 2026</span>
               </h1>
-              <p class="lt-sub" data-i18n-html="pg_body">
+              <p class="lt-sub" data-i18n="pg_body">
                 De flesta e-handlare misslyckas inte för att annonserna är dåliga. De skalar innan grunden är redo.
               </p>
 
@@ -410,9 +432,8 @@
                 class="lt-dl-btn"
                 href="downloads/wp-e-commerce-in-2026.pdf"
                 download="E-commerce-in-2026-CRM-First-Product-Smart.pdf"
-                data-i18n="pg_success_download"
               >
-                ↓ Ladda ner PDF
+                <span class="lt-dl-btn__text" data-i18n="pg_success_download">Ladda ner PDF</span>
               </a>
             </div>
 
