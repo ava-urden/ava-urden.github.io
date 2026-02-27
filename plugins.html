@@ -76,8 +76,8 @@
           <div class="plg-top reveal">
             <div class="plg-hero">
               <p class="plg-eyebrow" data-i18n="plg_eyebrow">Chrome plugins</p>
-              <h1 class="h-display plg-title" data-i18n="plg_title">My plugins for focus and clarity</h1>
-              <p class="plg-intro" data-i18n="plg_intro">Love staying organised? These are the tools I actually built and use myself.</p>
+              <h1 class="h-display plg-title" data-i18n-html="plg_title">My plugins for<br>focus and clarity</h1>
+              <p class="plg-intro" data-i18n-html="plg_intro">Love staying organised?<br>These are the tools I actually built and use myself.</p>
               <div class="case-meta">
                 <span class="pill">2 plugins</span>
                 <span class="pill">Chrome</span>
@@ -92,15 +92,14 @@
                 <input id="linkedinInput" class="plugin-next__input" type="text" placeholder="your-name" data-i18n-placeholder="plg_gate_placeholder" autocomplete="off" />
                 <button class="plugin-next__btn" id="pluginUnlockBtn" type="button" data-i18n="plg_unlock_btn">Unlock →</button>
               </div>
-              <p class="plugin-next__note" data-i18n="plg_gate_note">No spam. No login. Just a small handshake.</p>
             </div>
           </div>
 
           <!-- PLUGIN OVERVIEW – both locked -->
           <div class="plg-overview reveal">
-            <div class="plg-overview__card plg-overview__card--locked">
+            <div class="plg-overview__card plg-overview__card--locked plg-overview__card--stacked">
               <div class="plg-overview__icon">
-                <img src="./downloads/moccctabmanager.png" alt="TabManager" />
+                <img src="./img/tabmanagerlogo.png" alt="TabManager" />
               </div>
               <div class="plg-overview__meta">
                 <span class="plg-overview__num">01</span>
@@ -281,6 +280,27 @@
         }
         @media (max-width: 500px) {
           .plg-overview { grid-template-columns: 1fr; }
+        }
+
+        /* Stacked card effect behind TabManager */
+        .plg-overview__card--stacked::before,
+        .plg-overview__card--stacked::after {
+          content: "";
+          position: absolute;
+          inset: 0;
+          border: 1px solid var(--line);
+          border-radius: 14px;
+          background: #f5f4f2;
+        }
+        .plg-overview__card--stacked::before {
+          transform: rotate(-2.5deg) translateY(4px);
+          z-index: -2;
+          opacity: 0.7;
+        }
+        .plg-overview__card--stacked::after {
+          transform: rotate(-1deg) translateY(2px);
+          z-index: -1;
+          opacity: 0.85;
         }
 
         /* ── Plugin list ── */
