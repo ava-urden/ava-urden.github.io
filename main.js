@@ -265,6 +265,24 @@ const dict = {
     mini1_note:
       "Det här är en kortare, lättläst projektsida. Jag fyller på med mer detaljer och resultat när nästa version är klar.",
     mini1_privacy_link: "Integritetspolicy →",
+    plg_eyebrow: "Chrome-plugins",
+    plg_title: "Mina plugins för ordning och reda",
+    plg_intro: "Är du som mig och älskar ordning och reda? Det här är verktygen jag faktiskt byggt och använder.",
+    plg_pill_free: "Gratis",
+    plg_gate_label: "Skriv in ditt LinkedIn-användarnamn för att låsa upp båda plugins",
+    plg_gate_placeholder: "ditt-namn",
+    plg_unlock_btn: "Lås upp →",
+    plg_gate_note: "Ingen spam. Ingen inloggning. Bara ett litet handslag.",
+    plg_welcome_prefix: "Välkommen,",
+    plg_welcome_suffix: "! Här är dina plugins.",
+    plg_exclusive: "Exklusivt",
+    plg_chip_1: "Spara samlingar",
+    plg_chip_2: "Taggar & struktur",
+    plg_chip_3: "Återställ med ett klick",
+    plg_tasklist_desc: "A smarter task plugin for Chrome – built to keep track of what actually matters. Prioritise, organise and check off without distractions.",
+    plg_tasklist_desc_sv: "Ett smartare sätt att hålla koll på uppgifter i Chrome – prioritera, organisera och bocka av utan distraktioner.",
+    plg_tasklist_download: "↓ Ladda ner Tasklist",
+    plg_tasklist_install_hint: "Installera precis som TabManager – packa upp och ladda in i chrome://extensions.",
     modal_close: "Stäng",
     privacy_tabless_title: "Integritetspolicy – TabManager",
     privacy_tabless_intro:
@@ -920,6 +938,24 @@ const dict = {
     mini1_note:
       "This is a short, easy-to-read project page. I’ll add more details and results as the next version ships.",
     mini1_privacy_link: "Privacy policy →",
+    plg_eyebrow: "Chrome plugins",
+    plg_title: "My plugins for focus and clarity",
+    plg_intro: "Love staying organised? These are the tools I actually built and use myself.",
+    plg_pill_free: "Free",
+    plg_gate_label: "Enter your LinkedIn username to unlock both plugins",
+    plg_gate_placeholder: "your-name",
+    plg_unlock_btn: "Unlock →",
+    plg_gate_note: "No spam. No login. Just a small handshake.",
+    plg_welcome_prefix: "Welcome,",
+    plg_welcome_suffix: "! Here are your plugins.",
+    plg_exclusive: "Exclusive",
+    plg_chip_1: "Save collections",
+    plg_chip_2: "Tags & structure",
+    plg_chip_3: "Restore with one click",
+    plg_tasklist_desc: "A smarter task plugin for Chrome – built to keep track of what actually matters. Prioritise, organise and check off without distractions.",
+    plg_tasklist_desc_sv: "Ett smartare sätt att hålla koll på uppgifter i Chrome – prioritera, organisera och bocka av utan distraktioner.",
+    plg_tasklist_download: "↓ Download Tasklist",
+    plg_tasklist_install_hint: "Install just like TabManager – unpack and load into chrome://extensions.",
     modal_close: "Close",
     privacy_tabless_title: "Privacy Policy – TabManager",
     privacy_tabless_intro:
@@ -1333,6 +1369,11 @@ function applyLang(lang) {
   document.querySelectorAll("[data-i18n-aria]").forEach((el) => {
     const key = el.getAttribute("data-i18n-aria");
     if (d[key] !== undefined) el.setAttribute("aria-label", d[key]);
+  });
+
+  document.querySelectorAll("[data-i18n-placeholder]").forEach((el) => {
+    const key = el.getAttribute("data-i18n-placeholder");
+    if (d[key] !== undefined) el.setAttribute("placeholder", d[key]);
   });
 
   document.querySelectorAll("[data-cv-link]").forEach((link) => {

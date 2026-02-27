@@ -75,24 +75,24 @@
           <!-- HERO + GATE – 2-col layout -->
           <div class="plg-top reveal">
             <div class="plg-hero">
-              <p class="plg-eyebrow">Chrome plugins</p>
-              <h1 class="h-display plg-title">My plugins for focus and clarity</h1>
-              <p class="plg-intro">Love staying organised? These are the tools I actually built and use myself.</p>
+              <p class="plg-eyebrow" data-i18n="plg_eyebrow">Chrome plugins</p>
+              <h1 class="h-display plg-title" data-i18n="plg_title">My plugins for focus and clarity</h1>
+              <p class="plg-intro" data-i18n="plg_intro">Love staying organised? These are the tools I actually built and use myself.</p>
               <div class="case-meta">
                 <span class="pill">2 plugins</span>
                 <span class="pill">Chrome</span>
-                <span class="pill">Free</span>
+                <span class="pill" data-i18n="plg_pill_free">Free</span>
               </div>
             </div>
 
             <div class="plugin-next__gate" id="pluginGateForm">
-              <p class="plugin-next__gate-label">Enter your LinkedIn username to unlock both plugins</p>
+              <p class="plugin-next__gate-label" data-i18n="plg_gate_label">Enter your LinkedIn username to unlock both plugins</p>
               <div class="plugin-next__input-row">
                 <span class="plugin-next__li-prefix">linkedin.com/in/</span>
-                <input id="linkedinInput" class="plugin-next__input" type="text" placeholder="your-name" autocomplete="off" />
-                <button class="plugin-next__btn" id="pluginUnlockBtn" type="button">Unlock →</button>
+                <input id="linkedinInput" class="plugin-next__input" type="text" placeholder="your-name" data-i18n-placeholder="plg_gate_placeholder" autocomplete="off" />
+                <button class="plugin-next__btn" id="pluginUnlockBtn" type="button" data-i18n="plg_unlock_btn">Unlock →</button>
               </div>
-              <p class="plugin-next__note">No spam. No login. Just a small handshake.</p>
+              <p class="plugin-next__note" data-i18n="plg_gate_note">No spam. No login. Just a small handshake.</p>
             </div>
           </div>
 
@@ -124,7 +124,7 @@
           <div class="plg-list" id="pluginList" style="display:none;">
 
             <div class="plugin-next__welcome-bar" id="pluginWelcomeBar">
-              Welcome, <strong id="linkedinName"></strong>! Here are your plugins.
+              <span data-i18n="plg_welcome_prefix">Welcome,</span> <strong id="linkedinName"></strong><span data-i18n="plg_welcome_suffix">! Here are your plugins.</span>
             </div>
 
             <!-- [01] TABMANAGER -->
@@ -141,9 +141,9 @@
                       I built a plugin that lets you save and organise open tabs into neat collections so you can easily find them later.
                     </p>
                     <div class="plg-chips">
-                      <span>Save collections</span>
-                      <span>Tags & structure</span>
-                      <span>Restore with one click</span>
+                      <span data-i18n="plg_chip_1">Save collections</span>
+                      <span data-i18n="plg_chip_2">Tags & structure</span>
+                      <span data-i18n="plg_chip_3">Restore with one click</span>
                       <span>Chrome Extension API</span>
                     </div>
                     <div class="plg-row__cta">
@@ -171,22 +171,22 @@
             <div class="plg-row">
               <div class="plg-row__left">
                 <span class="plg-num">02</span>
-                <span class="plg-badge">Exclusive</span>
+                <span class="plg-badge" data-i18n="plg_exclusive">Exclusive</span>
               </div>
               <div class="plg-row__body">
                 <div class="plg-row__main">
                   <div class="plg-row__info">
                     <h2 class="plg-row__title">TASKLIST</h2>
                     <p class="plg-row__desc">
-                      A smarter task plugin for Chrome – built to keep track of what actually matters. Prioritise, organise and check off without distractions.
+                      <span data-i18n="plg_tasklist_desc">A smarter task plugin for Chrome – built to keep track of what actually matters. Prioritise, organise and check off without distractions.</span>
                     </p>
-                    <p class="plg-row__desc" style="color: var(--muted); font-size:0.9rem; margin-top:-12px;">
+                    <p class="plg-row__desc" style="color: var(--muted); font-size:0.9rem; margin-top:-12px;" data-i18n="plg_tasklist_desc_sv">
                       Ett smartare sätt att hålla koll på uppgifter i Chrome – prioritera, organisera och bocka av utan distraktioner.
                     </p>
                     <div class="plg-row__cta">
-                      <a class="btn btn--dark plugin-next__dl" href="./downloads/tasklist-extension.zip" download="tasklist-extension.zip">↓ Download Tasklist</a>
+                      <a class="btn btn--dark plugin-next__dl" href="./downloads/tasklist-extension.zip" download="tasklist-extension.zip" data-i18n="plg_tasklist_download">↓ Download Tasklist</a>
                     </div>
-                    <p class="plugin-next__install-hint">Install just like TabManager – unpack and load into chrome://extensions.</p>
+                    <p class="plugin-next__install-hint" data-i18n="plg_tasklist_install_hint">Install just like TabManager – unpack and load into chrome://extensions.</p>
                   </div>
                   <div class="plg-row__mock plg-row__mock--icon">
                     <img src="./img/tasklist.png" alt="Todo v2 ikon" loading="lazy" />
