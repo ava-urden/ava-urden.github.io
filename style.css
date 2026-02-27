@@ -2171,7 +2171,7 @@ body.modal-open {
 
 .footer__grid,
 .footer__bottom {
-  max-width: 1060px;
+  max-width: var(--max);
   margin: 0 auto;
 }
 
