@@ -85,6 +85,31 @@
             </div>
           </div>
 
+          <!-- PLUGIN OVERVIEW -->
+          <div class="plg-overview reveal">
+            <div class="plg-overview__card">
+              <div class="plg-overview__icon">
+                <img src="./downloads/moccctabmanager.png" alt="TabManager" />
+              </div>
+              <div class="plg-overview__meta">
+                <span class="plg-overview__num">01</span>
+                <span class="plg-overview__name">TABMANAGER</span>
+                <span class="plg-status">Live</span>
+              </div>
+            </div>
+            <div class="plg-overview__card plg-overview__card--locked">
+              <div class="plg-overview__icon">
+                <img src="./img/tasklist.png" alt="Todo V2" />
+              </div>
+              <div class="plg-overview__meta">
+                <span class="plg-overview__num">02</span>
+                <span class="plg-overview__name">TODO V2</span>
+                <span class="plg-badge">Exklusivt</span>
+              </div>
+              <span class="plg-overview__lock">🔒</span>
+            </div>
+          </div>
+
           <!-- PLUGIN LIST -->
           <div class="plg-list">
 
@@ -99,7 +124,7 @@
                   <div class="plg-row__info">
                     <h2 class="plg-row__title" data-i18n="mini1_hero_title">TABMANAGER</h2>
                     <p class="plg-row__desc" data-i18n="mini1_hero_body">
-                      Spara och organisera dina öppna flikar i snygga samlingar så att du hittar dem senare.
+                      Jag har byggt ett plugin som låter dig spara och organisera öppna flikar i snygga samlingar så att du enkelt hittar dem senare.
                     </p>
                     <div class="plg-chips">
                       <span>Spara samlingar</span>
@@ -178,6 +203,68 @@
         .plg-title { margin-bottom: 18px; font-size: clamp(2.2rem, 5.5vw, 5.2rem); white-space: normal; }
         .plg-banner-img { width: 100%; max-height: 420px; object-fit: cover; border-radius: 16px; margin-bottom: 40px; display: block; }
         .plg-intro { font-size: 1.05rem; color: var(--muted); max-width: 480px; line-height: 1.65; margin-bottom: 24px; }
+
+        /* ── Plugin overview ── */
+        .plg-overview {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 16px;
+          margin: 0 0 56px;
+        }
+        .plg-overview__card {
+          display: flex;
+          align-items: center;
+          gap: 18px;
+          padding: 20px 24px;
+          border: 1px solid var(--line);
+          border-radius: 14px;
+          background: #fafafa;
+          position: relative;
+        }
+        .plg-overview__card--locked {
+          opacity: 0.55;
+        }
+        .plg-overview__icon {
+          flex: 0 0 52px;
+          height: 52px;
+          border-radius: 12px;
+          overflow: hidden;
+          background: #f0efed;
+        }
+        .plg-overview__icon img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+        .plg-overview__meta {
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+        }
+        .plg-overview__num {
+          font-size: 0.68rem;
+          color: var(--muted);
+          font-weight: 400;
+          letter-spacing: 0.06em;
+        }
+        .plg-overview__name {
+          font-family: var(--font-display);
+          font-size: 0.95rem;
+          font-weight: 900;
+          letter-spacing: 0.06em;
+          text-transform: uppercase;
+          color: var(--ink);
+        }
+        .plg-overview__lock {
+          position: absolute;
+          top: 14px;
+          right: 16px;
+          font-size: 0.9rem;
+          opacity: 0.5;
+        }
+        @media (max-width: 500px) {
+          .plg-overview { grid-template-columns: 1fr; }
+        }
 
         /* ── Plugin list ── */
         .plg-list { border-top: 1px solid var(--line); }
