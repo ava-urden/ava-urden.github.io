@@ -129,9 +129,9 @@ const dict = {
     mini_item_1_media: "Plugin",
     mini_item_1_tag: "Plugin",
     mini_item_1_status: "Gratis",
-    mini_item_1_title: "TABMANAGER",
+    mini_item_1_title: "Plugins för ordning och reda",
     mini_item_1_desc:
-      "Spara och organisera dina öppna flikar i snygga samlingar så att du hittar dem senare.",
+      "Är du som mig och älskar ordning och reda? Det här är verktygen jag faktiskt byggt och använder.",
     mini_item_1_cta: "Ladda ner gratis",
     mini_item_1_more: "Läs mer",
     mini_item_2_media: "API",
@@ -785,9 +785,9 @@ const dict = {
     mini_item_1_media: "Plugin",
     mini_item_1_tag: "Plugin",
     mini_item_1_status: "Free",
-    mini_item_1_title: "TABMANAGER",
+    mini_item_1_title: "Plugins for order and clarity",
     mini_item_1_desc:
-      "Save and organize your open tabs into neat collections so you can find them later.",
+      "Are you like me and love order and structure? These are the tools I actually built and use.",
     mini_item_1_cta: "Download for free",
     mini_item_1_more: "Read more",
     mini_item_2_media: "API",
