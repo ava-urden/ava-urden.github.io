@@ -262,11 +262,14 @@
       .lt-features__grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 2px;
+        gap: 12px;
       }
       .lt-feat {
         padding: 1.75rem 2rem;
         border-right: 1px solid rgba(255,255,255,0.06);
+        background: rgba(109, 146, 178, 0.12);
+        border-radius: 12px;
+        margin: 1px;
       }
       .lt-feat:last-child { border-right: none; }
       .lt-feat__tag {
@@ -274,7 +277,7 @@
         font-weight: 900;
         letter-spacing: 0.2em;
         text-transform: uppercase;
-        color: rgba(240,237,232,0.35);
+        color: #a8c4d8;
         margin-bottom: 0.6rem;
       }
       .lt-feat__title {
@@ -286,7 +289,7 @@
       }
       .lt-feat__body {
         font-size: 0.85rem;
-        color: rgba(240,237,232,0.5);
+        color: rgba(240,237,232,0.6);
         line-height: 1.6;
       }
 
@@ -304,7 +307,7 @@
         margin-bottom: 1.5rem;
       }
       .lt-faq__list {
-        max-width: 680px;
+        max-width: 100%;
       }
       .lt-faq__item {
         border-bottom: 1px solid rgba(255,255,255,0.06);
