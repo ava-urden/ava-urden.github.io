@@ -70,7 +70,7 @@
       .lt-hero {
         display: flex;
         align-items: flex-start;
-        padding: clamp(6rem, 12vh, 9rem) 0 5rem;
+        padding: clamp(2.5rem, 5vh, 4rem) 0 3.5rem;
       }
       .lt-hero__grid {
         display: grid;
@@ -182,6 +182,57 @@
         display: none;
       }
 
+      /* ── LinkedIn gate ── */
+      .lt-li-gate {
+        display: flex;
+        align-items: center;
+        background: rgba(255,255,255,0.06);
+        border: 1px solid rgba(255,255,255,0.14);
+        border-radius: 8px;
+        overflow: hidden;
+        max-width: 400px;
+      }
+      .lt-li-prefix {
+        padding: 0 0.65rem;
+        font-size: 0.78rem;
+        color: rgba(240,237,232,0.35);
+        white-space: nowrap;
+        border-right: 1px solid rgba(255,255,255,0.1);
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        flex-shrink: 0;
+      }
+      .lt-li-input {
+        flex: 1;
+        background: transparent;
+        border: none;
+        color: #fff;
+        font-size: 0.95rem;
+        padding: 0 0.75rem;
+        outline: none;
+        height: 3rem;
+        font-family: inherit;
+        min-width: 0;
+      }
+      .lt-li-input::placeholder { color: rgba(255,255,255,0.25); }
+      .lt-li-submit {
+        background: #fff;
+        color: #0d0d0d;
+        border: none;
+        font-weight: 900;
+        font-size: 0.9rem;
+        padding: 0 1.25rem;
+        height: 3rem;
+        cursor: pointer;
+        white-space: nowrap;
+        transition: opacity 0.2s;
+        font-family: inherit;
+        flex-shrink: 0;
+      }
+      .lt-li-submit:hover { opacity: 0.82; }
+      .lt-li-submit.is-loading { opacity: 0.45; pointer-events: none; }
+
       /* ── Success state ── */
       .gate-form-state.is-hidden { display: none; }
       .gate-success-state { display: none; }
@@ -267,7 +318,7 @@
       .lt-feat {
         padding: 1.75rem 2rem;
         border-right: 1px solid rgba(255,255,255,0.06);
-        background: rgba(109, 146, 178, 0.12);
+        background: #1b2f41;
         border-radius: 12px;
         margin: 1px;
       }
@@ -360,7 +411,7 @@
           gap: 2.5rem;
         }
         .lt-hero {
-          padding: 6rem 0 3rem;
+          padding: 3rem 0 2.5rem;
           min-height: auto;
         }
         .lt-mockup { order: -1; }
@@ -430,13 +481,37 @@
                 De flesta e-handlare misslyckas inte för att annonserna är dåliga. De skalar innan grunden är redo.
               </p>
 
-              <a
-                class="lt-dl-btn"
-                href="downloads/wp-e-commerce-in-2026.pdf"
-                download="E-commerce-in-2026-CRM-First-Product-Smart.pdf"
-              >
-                <span class="lt-dl-btn__text" data-i18n="pg_success_download">Ladda ner PDF</span>
-              </a>
+              <!-- Gate: LinkedIn -->
+              <div id="gateForm" class="gate-form-state">
+                <form id="linkedinGateForm" autocomplete="off">
+                  <input type="text" name="company_website" style="display:none" tabindex="-1" autocomplete="off" />
+                  <div class="lt-li-gate">
+                    <span class="lt-li-prefix">linkedin.com/in/</span>
+                    <input
+                      class="lt-li-input"
+                      id="liInput"
+                      name="linkedin"
+                      type="text"
+                      placeholder="ditt-namn"
+                      autocomplete="off"
+                      spellcheck="false"
+                    />
+                    <button class="lt-li-submit" id="submitBtn" type="submit" data-i18n="pg_gate_btn">Lås upp →</button>
+                  </div>
+                  <p id="formError" style="font-size:0.82rem;color:#ff6b6b;margin-top:0.5rem;display:none;" data-i18n="pg_gate_error">Fyll i ditt LinkedIn-användarnamn</p>
+                </form>
+              </div>
+
+              <!-- Success: download revealed -->
+              <div id="gateSuccess" class="gate-success-state">
+                <a
+                  class="lt-dl-btn"
+                  href="downloads/wp-e-commerce-in-2026.pdf"
+                  download="E-commerce-in-2026-CRM-First-Product-Smart.pdf"
+                >
+                  <span class="lt-dl-btn__text" data-i18n="pg_success_download">Ladda ner PDF</span>
+                </a>
+              </div>
             </div>
 
             <!-- Right: mockup -->
@@ -557,52 +632,28 @@
     function doPost(e) {
       const sheet = SpreadsheetApp.openById(SHEET_ID).getSheetByName(SHEET_NAME);
 
-      const email        = (e.parameter.email        || "").trim().toLowerCase();
-      const name         = (e.parameter.name         || "").trim();
+      const linkedin     = (e.parameter.linkedin     || "").trim();
       const source       = (e.parameter.source       || "").trim();
       const page         = (e.parameter.page         || "").trim();
       const referrer     = (e.parameter.referrer     || "").trim();
       const utm_source   = (e.parameter.utm_source   || "").trim();
       const utm_medium   = (e.parameter.utm_medium   || "").trim();
       const utm_campaign = (e.parameter.utm_campaign || "").trim();
-      const consent      = (e.parameter.consent      || "").trim();
       const honeypot     = (e.parameter.company_website || "").trim();
 
-      if (honeypot)          return okHtml_();
-      if (!isValidEmail_(email)) return errorHtml_("invalid_email");
-      if (consent !== "yes") return errorHtml_("no_consent");
+      if (honeypot)   return okHtml_();
+      if (!linkedin)  return errorHtml_("no_linkedin");
 
       const now = new Date();
-      const existingRow = findEmailRow_(sheet, email);
-      if (existingRow) {
-        sheet.getRange(existingRow, 1, 1, 10).setValues([[
-          now, email, name, source, page, referrer,
-          utm_source, utm_medium, utm_campaign, "updated"
-        ]]);
-      } else {
-        sheet.appendRow([
-          now, email, name, source, page, referrer,
-          utm_source, utm_medium, utm_campaign, "new"
-        ]);
-      }
+      sheet.appendRow([
+        now, linkedin, source, page, referrer,
+        utm_source, utm_medium, utm_campaign, "new"
+      ]);
       return okHtml_();
     }
 
     function doGet() {
       return HtmlService.createHtmlOutput("OK");
-    }
-
-    function isValidEmail_(email) {
-      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-    }
-
-    function findEmailRow_(sheet, email) {
-      const lastRow = sheet.getLastRow();
-      if (lastRow < 2) return null;
-      const emails = sheet.getRange(2, 2, lastRow - 1, 1).getValues()
-        .flat().map(String);
-      const idx = emails.findIndex(v => v.trim().toLowerCase() === email);
-      return idx === -1 ? null : idx + 2;
     }
 
     function okHtml_() {
@@ -619,28 +670,18 @@
     ─────────────────────────────────────────────────────────────────
 
     Kolumnordning i Sheets (Whitepaper):
-    Datum | Email | Name | Source | Page | Referrer | utm_source | utm_medium | utm_campaign | Status
+    Datum | LinkedIn | Source | Page | Referrer | utm_source | utm_medium | utm_campaign | Status
     ══════════════════════════════════════════════════════════════════
     -->
 
     <script>
-      // ── Klistra in din Web App URL här efter deploy ──
       var APPS_SCRIPT_URL = "https://script.google.com/a/macros/student.berghs.se/s/AKfycbw7QkJqxXQ7rhAe2KRZXZCxdDbkigTtUew03OmMxvyfQ58iEppZS20XEyfocfXbEGVM9Q/exec";
 
-      var form        = document.getElementById("emailGateForm");
+      var form        = document.getElementById("linkedinGateForm");
       var submitBtn   = document.getElementById("submitBtn");
       var gateForm    = document.getElementById("gateForm");
       var gateSuccess = document.getElementById("gateSuccess");
       var formError   = document.getElementById("formError");
-
-      // Fill UTM params + referrer on load
-      (function () {
-        var p = new URLSearchParams(window.location.search);
-        document.getElementById("referrerField").value  = document.referrer || "";
-        document.getElementById("utmSource").value     = p.get("utm_source")   || "";
-        document.getElementById("utmMedium").value     = p.get("utm_medium")   || "";
-        document.getElementById("utmCampaign").value   = p.get("utm_campaign") || "";
-      })();
 
       form.addEventListener("submit", function (e) {
         e.preventDefault();
@@ -649,53 +690,50 @@
         // Honeypot
         if (form.elements["company_website"].value) return;
 
-        var email = document.getElementById("emailInput").value.trim();
-        if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        var linkedin = document.getElementById("liInput").value.trim().replace(/^\/+|\/+$/g, "");
+        if (!linkedin) {
           formError.style.display = "block";
           return;
         }
 
+        var lang = document.documentElement.lang || "sv";
+        submitBtn.textContent = lang === "en" ? "Opening…" : "Öppnar…";
+        submitBtn.classList.add("is-loading");
+
         window.dataLayer = window.dataLayer || [];
         window.dataLayer.push({
-          event: "lead_form_submit",
+          event: "linkedin_gate_submit",
+          linkedin_handle: linkedin,
           page_path: window.location.pathname,
           page_title: document.title,
-          language: document.documentElement.lang || "sv",
-          form_id: "emailGateForm",
-          form_name: "whitepaper_gate",
-          opt_in: form.elements["opt_in"] ? form.elements["opt_in"].checked : false
+          language: lang
         });
 
-        var lang = document.documentElement.lang || "sv";
-        submitBtn.textContent = lang === "en" ? "Sending…" : "Skickar…";
-        submitBtn.classList.add("btn--submitting");
-
-        // Best-effort send to Apps Script (fire-and-forget, no CORS needed)
+        // Fire-and-forget to Apps Script → Google Sheets
         if (APPS_SCRIPT_URL !== "APPS_SCRIPT_URL_HERE") {
-          var fd = new FormData(form);
-          fetch(APPS_SCRIPT_URL, {
-            method: "POST",
-            mode: "no-cors",
-            body: fd
-          }).catch(function () {});
+          var p = new URLSearchParams(window.location.search);
+          var fd = new FormData();
+          fd.append("linkedin",     linkedin);
+          fd.append("source",       "linkedin-gate");
+          fd.append("page",         window.location.pathname);
+          fd.append("referrer",     document.referrer || "");
+          fd.append("utm_source",   p.get("utm_source")   || "");
+          fd.append("utm_medium",   p.get("utm_medium")   || "");
+          fd.append("utm_campaign", p.get("utm_campaign") || "");
+          fetch(APPS_SCRIPT_URL, { method: "POST", mode: "no-cors", body: fd }).catch(function () {});
         }
 
-        // Always reveal the download after 800 ms regardless of script response
-        setTimeout(revealDownload, 800);
+        setTimeout(revealDownload, 700);
       });
 
       function revealDownload() {
         gateForm.classList.add("is-hidden");
         gateSuccess.classList.add("is-visible");
-        gateSuccess.scrollIntoView({ behavior: "smooth", block: "center" });
         window.dataLayer = window.dataLayer || [];
         window.dataLayer.push({
           event: "whitepaper_download",
           page_path: window.location.pathname,
-          page_title: document.title,
-          language: document.documentElement.lang || "sv",
-          file_name: "wp-e-commerce-in-2026.pdf",
-          form_name: "whitepaper_gate"
+          file_name: "wp-e-commerce-in-2026.pdf"
         });
       }
     </script>
