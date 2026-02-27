@@ -29,6 +29,7 @@
       /* ── Page-level overrides ── */
       body.lt-page {
         background: #0d0d0d;
+        background-image: radial-gradient(ellipse 80% 55% at 55% 30%, rgba(110, 185, 225, 0.11) 0%, transparent 68%);
         color: #f0ede8;
       }
       body.lt-page .header {
@@ -46,15 +47,31 @@
         border-color: #f0ede8;
         color: #f0ede8;
       }
-      body.lt-page .back-link { color: rgba(240,237,232,0.5); }
-      body.lt-page .back-link:hover { color: #f0ede8; }
+      body.lt-page .back-link {
+        background: transparent;
+        color: rgba(240,237,232,0.5);
+        border: none;
+        box-shadow: none;
+        padding: 0;
+        min-width: 0;
+        height: auto;
+        font-size: 0.85rem;
+        letter-spacing: 0.12em;
+        margin-bottom: 40px;
+        display: inline-block;
+      }
+      body.lt-page .back-link:hover {
+        color: #f0ede8;
+        box-shadow: none;
+        transform: none;
+      }
 
       /* ── Hero ── */
       .lt-hero {
         min-height: 100vh;
         display: flex;
-        align-items: center;
-        padding: 7rem 0 4rem;
+        align-items: flex-start;
+        padding: clamp(6rem, 12vh, 9rem) 0 5rem;
       }
       .lt-hero__grid {
         display: grid;
@@ -370,14 +387,12 @@
     </nav>
 
     <main id="top">
-      <div class="container" style="padding-top: 24px;">
-        <a href="index.html#mini" class="back-link" data-i18n="back_to_cases">← Tillbaka till cases</a>
-      </div>
       <!-- ═══════════════════════════════════════════
            HERO + GATE
       ═══════════════════════════════════════════ -->
       <section class="lt-hero">
         <div class="container">
+          <a href="index.html#mini" class="back-link" data-i18n="back_to_cases">← Tillbaka till cases</a>
           <div class="lt-hero__grid">
 
             <!-- Left: copy + form -->
