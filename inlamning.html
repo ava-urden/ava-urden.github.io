@@ -141,6 +141,58 @@
         margin-top: 6px;
       }
 
+      /* Lock widget */
+      .inl-lock {
+        margin-top: 16px;
+        padding: 20px;
+        border: 1.5px solid rgba(0,0,0,0.12);
+        border-radius: 12px;
+        background: #fff;
+        max-width: 420px;
+      }
+      .inl-lock__text {
+        font-size: 0.85rem;
+        color: #333;
+        margin-bottom: 12px;
+        line-height: 1.5;
+      }
+      .inl-lock__row {
+        display: flex;
+        gap: 8px;
+      }
+      .inl-lock__input {
+        flex: 1;
+        padding: 9px 14px;
+        border: 1.5px solid rgba(0,0,0,0.18);
+        border-radius: 999px;
+        font-size: 0.85rem;
+        font-family: inherit;
+        outline: none;
+        transition: border-color 0.15s;
+      }
+      .inl-lock__input:focus { border-color: #111; }
+      .inl-lock__btn {
+        padding: 9px 18px;
+        border-radius: 999px;
+        background: #111;
+        color: #fff;
+        font-size: 0.82rem;
+        font-weight: 700;
+        font-family: inherit;
+        letter-spacing: 0.06em;
+        border: none;
+        cursor: pointer;
+        white-space: nowrap;
+        transition: opacity 0.15s;
+      }
+      .inl-lock__btn:hover { opacity: 0.75; }
+      .inl-lock__note {
+        font-size: 0.72rem;
+        color: #999;
+        margin-top: 10px;
+        font-style: italic;
+      }
+
       @media (max-width: 600px) {
         .inl-card {
           grid-template-columns: 1fr;
@@ -239,22 +291,50 @@
               </div>
             </div>
 
-            <!-- 2. Lead magnet + growth loop -->
+            <!-- 2. Plugin + lead magnet -->
             <div class="inl-card">
               <div class="inl-card__num">02</div>
               <div>
-                <p class="inl-card__label">Lead Magnet & Growth Loop</p>
-                <h2 class="inl-card__title">Webbplats med lead magnet + growth loop</h2>
+                <p class="inl-card__label">Plugin & Lead Magnet</p>
+                <h2 class="inl-card__title">Browser extension med lead magnet <span style="font-weight:400;font-size:0.9em;">(vid godkänt)</span></h2>
                 <p class="inl-card__desc">
-                  Landningssida med e-postgate kopplad till white paper som lead magnet. Growth loopen aktiveras när besökaren laddar ner och delar vidare.
+                  Chrome-extension byggd och paketerad. Lead magneten är kopplad direkt till pluginen – besökaren får tillgång via e-postgate och growth loopen aktiveras när de delar vidare.
                 </p>
                 <div class="inl-card__actions">
                   <a
                     href="./lonsam-tillvaxt.html"
                     target="_blank"
                     class="inl-btn inl-btn--dark"
-                  >Öppna sidan ↗</a>
+                  >Öppna lead magnet ↗</a>
+                  <a
+                    href="./plugins.html"
+                    target="_blank"
+                    class="inl-btn inl-btn--outline"
+                  >Se plugin ↗</a>
                 </div>
+
+                <div class="inl-lock" id="pluginLock">
+                  <p class="inl-lock__text">Skriv in ditt LinkedIn-användarnamn för att låsa upp båda plugins</p>
+                  <div class="inl-lock__row">
+                    <input
+                      type="text"
+                      class="inl-lock__input"
+                      id="linkedinInput"
+                      placeholder="ditt-namn"
+                      autocomplete="off"
+                    />
+                    <button class="inl-lock__btn" onclick="unlockPlugin()">Lås upp →</button>
+                  </div>
+                  <p class="inl-lock__note">Ingen spam. Ingen inloggning. Bara ett litet handslag.</p>
+                </div>
+                <a
+                  href="./downloads/TabManager.zip"
+                  download
+                  class="inl-btn inl-btn--dark"
+                  id="pluginDownload"
+                  style="display:none; margin-top:16px;"
+                >Ladda ner .zip</a>
+                <span class="inl-note" style="display:block; margin-top:6px;">Kräver manuell installation via chrome://extensions → Developer Mode → Load unpacked</span>
               </div>
             </div>
 
@@ -277,31 +357,6 @@
               </div>
             </div>
 
-            <!-- 4. Browser extension -->
-            <div class="inl-card">
-              <div class="inl-card__num">04</div>
-              <div>
-                <p class="inl-card__label">Browser Extension</p>
-                <h2 class="inl-card__title">Browser extension <span style="font-weight:400;font-size:0.9em;">(vid godkänt)</span></h2>
-                <p class="inl-card__desc">
-                  Chrome-extension byggd och paketerad. Installeras lokalt via Developer Mode i Chrome.
-                </p>
-                <div class="inl-card__actions">
-                  <a
-                    href="./downloads/TabManager.zip"
-                    download
-                    class="inl-btn inl-btn--dark"
-                  >Ladda ner .zip</a>
-                  <a
-                    href="./plugin-utm-builder.html"
-                    target="_blank"
-                    class="inl-btn inl-btn--outline"
-                  >Se mer om pluginen ↗</a>
-                </div>
-                <span class="inl-note">Kräver manuell installation via chrome://extensions → Developer Mode → Load unpacked</span>
-              </div>
-            </div>
-
           </div><!-- /inl-list -->
         </div>
       </section>
@@ -309,5 +364,21 @@
 
     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     <script src="./main.js"></script>
+    <script>
+      function unlockPlugin() {
+        const val = document.getElementById('linkedinInput').value.trim();
+        if (!val) {
+          document.getElementById('linkedinInput').focus();
+          return;
+        }
+        document.getElementById('pluginLock').style.display = 'none';
+        const dl = document.getElementById('pluginDownload');
+        dl.style.display = 'inline-block';
+        dl.click();
+      }
+      document.getElementById('linkedinInput').addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') unlockPlugin();
+      });
+    </script>
   </body>
 </html>

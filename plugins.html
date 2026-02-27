@@ -84,9 +84,9 @@
             </div>
           </div>
 
-          <!-- PLUGIN OVERVIEW -->
+          <!-- PLUGIN OVERVIEW – both locked -->
           <div class="plg-overview reveal">
-            <div class="plg-overview__card">
+            <div class="plg-overview__card plg-overview__card--locked">
               <div class="plg-overview__icon">
                 <img src="./downloads/moccctabmanager.png" alt="TabManager" />
               </div>
@@ -95,6 +95,7 @@
                 <span class="plg-overview__name">TABMANAGER</span>
                 <span class="plg-status">Live</span>
               </div>
+              <span class="plg-overview__lock">🔒</span>
             </div>
             <div class="plg-overview__card plg-overview__card--locked">
               <div class="plg-overview__icon">
@@ -109,11 +110,26 @@
             </div>
           </div>
 
-          <!-- PLUGIN LIST -->
-          <div class="plg-list">
+          <!-- GATE -->
+          <div class="plugin-next__gate" id="pluginGateForm">
+            <p class="plugin-next__gate-label">Skriv in ditt LinkedIn-användarnamn för att låsa upp båda plugins</p>
+            <div class="plugin-next__input-row">
+              <span class="plugin-next__li-prefix">linkedin.com/in/</span>
+              <input id="linkedinInput" class="plugin-next__input" type="text" placeholder="ditt-namn" autocomplete="off" />
+              <button class="plugin-next__btn" id="pluginUnlockBtn" type="button">Lås upp →</button>
+            </div>
+            <p class="plugin-next__note">Ingen spam. Ingen inloggning. Bara ett litet handslag.</p>
+          </div>
+
+          <!-- PLUGIN LIST – hidden until unlocked -->
+          <div class="plg-list" id="pluginList" style="display:none;">
+
+            <div class="plugin-next__welcome-bar" id="pluginWelcomeBar">
+              Välkommen, <strong id="linkedinName"></strong>! Här är dina plugins.
+            </div>
 
             <!-- [01] TABMANAGER -->
-            <div class="plg-row reveal">
+            <div class="plg-row">
               <div class="plg-row__left">
                 <span class="plg-num">01</span>
                 <span class="plg-status">Live</span>
@@ -152,8 +168,8 @@
               </div>
             </div>
 
-            <!-- [02] TODO V2 – locked -->
-            <div class="plg-row reveal" id="pluginNext">
+            <!-- [02] TODO V2 -->
+            <div class="plg-row">
               <div class="plg-row__left">
                 <span class="plg-num">02</span>
                 <span class="plg-badge">Exklusivt</span>
@@ -165,28 +181,14 @@
                     <p class="plg-row__desc">
                       En smartare todo-plugin för Chrome – byggt för att hålla koll på det som faktiskt spelar roll. Prioritera, organisera och bocka av utan distraktioner.
                     </p>
+                    <div class="plg-row__cta">
+                      <a class="btn btn--dark plugin-next__dl" href="./downloads/todov.2" download="TodoV2-plugin.zip">↓ Ladda ner Todo v2</a>
+                    </div>
+                    <p class="plugin-next__install-hint">Installera precis som TabManager – packa upp och ladda in i chrome://extensions.</p>
                   </div>
                   <div class="plg-row__mock plg-row__mock--icon">
                     <img src="./img/tasklist.png" alt="Todo v2 ikon" loading="lazy" />
                   </div>
-                </div>
-
-                <!-- Gate: locked -->
-                <div class="plugin-next__gate" id="pluginGateForm">
-                  <p class="plugin-next__gate-label">Skriv in ditt LinkedIn-namn för att låsa upp</p>
-                  <div class="plugin-next__input-row">
-                    <span class="plugin-next__li-prefix">linkedin.com/in/</span>
-                    <input id="linkedinInput" class="plugin-next__input" type="text" placeholder="ditt-namn" autocomplete="off" />
-                    <button class="plugin-next__btn" id="pluginUnlockBtn" type="button">Lås upp →</button>
-                  </div>
-                  <p class="plugin-next__note">Ingen spam. Ingen inloggning. Bara ett litet handslag.</p>
-                </div>
-
-                <!-- Success: unlocked -->
-                <div class="plugin-next__success" id="pluginGateSuccess">
-                  <p class="plugin-next__welcome">Välkommen, <strong id="linkedinName"></strong>! Här är plugin 02:</p>
-                  <a class="btn btn--dark plugin-next__dl" href="./downloads/todov.2" download="TodoV2-plugin.zip">↓ Ladda ner Todo v2</a>
-                  <p class="plugin-next__install-hint">Installera precis som TabManager – packa upp och ladda in i chrome://extensions.</p>
                 </div>
               </div>
             </div>
@@ -311,6 +313,7 @@
         .plg-install__label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); margin-bottom: 14px; }
 
         /* Gate */
+        .plugin-next__gate { padding: 36px 0 48px; border-bottom: 1px solid var(--line); }
         .plugin-next__gate-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 14px; }
         .plugin-next__input-row { display: flex; align-items: center; max-width: 480px; background: #fff; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; margin-bottom: 12px; box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
         .plugin-next__li-prefix { font-size: 0.82rem; color: var(--muted); padding: 0 10px 0 14px; white-space: nowrap; user-select: none; }
@@ -319,11 +322,9 @@
         .plugin-next__btn { background: var(--ink); color: #fff; font-size: 0.82rem; font-weight: 700; letter-spacing: 0.06em; padding: 13px 20px; border: none; cursor: pointer; white-space: nowrap; transition: opacity 0.2s; }
         .plugin-next__btn:hover { opacity: 0.82; }
         .plugin-next__note { font-size: 0.78rem; color: var(--muted); }
-        .plugin-next__success { display: none; }
-        .plugin-next__success.is-visible { display: block; }
         .plugin-next__gate.is-hidden { display: none; }
-        .plugin-next__welcome { font-size: 1rem; color: var(--ink); margin-bottom: 20px; }
-        .plugin-next__welcome strong { color: var(--ink); }
+        .plugin-next__welcome-bar { font-size: 0.9rem; color: var(--muted); padding: 20px 0; border-bottom: 1px solid var(--line); margin-bottom: 0; }
+        .plugin-next__welcome-bar strong { color: var(--ink); }
         .plugin-next__dl { display: inline-flex; margin-bottom: 16px; }
         .plugin-next__install-hint { font-size: 0.82rem; color: var(--muted); margin-top: 12px; }
       </style>
@@ -417,16 +418,17 @@
       (function () {
         const btn   = document.getElementById("pluginUnlockBtn");
         const input = document.getElementById("linkedinInput");
-        const form  = document.getElementById("pluginGateForm");
-        const succ  = document.getElementById("pluginGateSuccess");
+        const gate  = document.getElementById("pluginGateForm");
+        const list  = document.getElementById("pluginList");
         const name  = document.getElementById("linkedinName");
 
         function unlock() {
           const val = (input.value || "").trim();
           if (!val) { input.focus(); return; }
           name.textContent = val;
-          form.classList.add("is-hidden");
-          succ.classList.add("is-visible");
+          gate.classList.add("is-hidden");
+          list.style.display = "block";
+          list.scrollIntoView({ behavior: "smooth", block: "start" });
         }
 
         btn.addEventListener("click", unlock);
