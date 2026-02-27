@@ -391,73 +391,14 @@
                 De flesta e-handlare misslyckas inte för att annonserna är dåliga. De skalar innan grunden är redo.
               </p>
 
-              <!-- Gate wrap keeps existing JS hooks -->
-              <div class="gate-wrap">
-
-                <!-- Form state -->
-                <div class="gate-form-state" id="gateForm">
-                  <div class="lt-form-wrap">
-                    <label class="lt-form-label" data-i18n="pg_form_label">Din mejladress</label>
-                    <form id="emailGateForm" novalidate>
-                      <input type="hidden" name="source" value="lead-magnet" />
-                      <input type="hidden" name="page" value="Lönsam tillväxt 2026" />
-                      <input type="hidden" name="consent" value="yes" />
-                      <input type="hidden" name="referrer" id="referrerField" value="" />
-                      <input type="hidden" name="utm_source" id="utmSource" value="" />
-                      <input type="hidden" name="utm_medium" id="utmMedium" value="" />
-                      <input type="hidden" name="utm_campaign" id="utmCampaign" value="" />
-                      <input class="lead-honey" type="text" name="company_website" tabindex="-1" autocomplete="off" />
-
-                      <div class="lt-input-row">
-                        <input
-                          type="email"
-                          name="email"
-                          id="emailInput"
-                          required
-                          placeholder="namn@foretag.com"
-                          data-i18n-placeholder="pg_form_placeholder"
-                        />
-                        <button class="lt-submit" type="submit" id="submitBtn" data-i18n="pg_form_button">
-                          Hämta guiden
-                        </button>
-                      </div>
-
-                      <label class="lt-check">
-                        <input type="checkbox" name="updates" id="updatesCheck" checked />
-                        <span data-i18n="pg_form_optin">Skicka gärna korta uppdateringar (max 1/månad).</span>
-                      </label>
-                      <p id="formError" data-i18n="pg_form_error" style="color:#ff6b6b;font-size:0.82rem;margin-top:0.4rem;display:none;">
-                        Något gick fel – försök igen eller mejla mig direkt.
-                      </p>
-                      <p class="lt-note" data-i18n="pg_form_note">
-                        Ingen spam. Bara konkreta tillväxtinsikter.
-                      </p>
-                    </form>
-                  </div>
-                </div>
-
-                <!-- Success / download state -->
-                <div class="gate-success-state" id="gateSuccess">
-                  <div class="lt-form-wrap lt-success">
-                    <h3 class="lt-success__title" data-i18n="pg_success_title">Tack! Guiden är din.</h3>
-                    <p class="lt-success__body" data-i18n-html="pg_success_body">
-                      Klicka nedan för att ladda ner <em>E-commerce in 2026</em>.
-                    </p>
-                    <a
-                      class="lt-dl-btn"
-                      href="downloads/wp-e-commerce-in-2026.pdf"
-                      download="E-commerce-in-2026-CRM-First-Product-Smart.pdf"
-                      data-i18n="pg_success_download"
-                    >
-                      ↓ Ladda ner PDF
-                    </a>
-                    <p class="lt-note" style="margin-top:1rem;" data-i18n="pg_success_note">
-                      Filen öppnas i en ny flik om din webbläsare inte sparar den direkt.
-                    </p>
-                  </div>
-                </div>
-
-              </div><!-- /gate-wrap -->
+              <a
+                class="lt-dl-btn"
+                href="downloads/wp-e-commerce-in-2026.pdf"
+                download="E-commerce-in-2026-CRM-First-Product-Smart.pdf"
+                data-i18n="pg_success_download"
+              >
+                ↓ Ladda ner PDF
+              </a>
             </div>
 
             <!-- Right: mockup -->
