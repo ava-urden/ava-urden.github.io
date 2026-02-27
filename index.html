@@ -135,14 +135,14 @@
     ></noscript>
     <header class="header">
       <div class="container header__inner">
-        <a class="logo" href="#top" data-i18n="logo_text">A.U. Portfolio</a>
+        <a class="logo" id="nav-logo" href="#top" data-i18n="logo_text">A.U. Portfolio</a>
 
         <nav class="nav">
-          <a href="#about" data-i18n="nav_about">Om mig</a>
-          <a href="#cases" data-i18n="nav_cases">Utvalda projekt</a>
-          <a href="#skills" data-i18n="nav_skills">Färdigheter</a>
-          <a href="cv.html" data-i18n="nav_cv">CV</a>
-          <a href="#contact" data-i18n="nav_contact">Kontakt</a>
+          <a id="nav-about" href="#about" data-i18n="nav_about">Om mig</a>
+          <a id="nav-cases" href="#cases" data-i18n="nav_cases">Utvalda projekt</a>
+          <a id="nav-skills" href="#skills" data-i18n="nav_skills">Färdigheter</a>
+          <a id="nav-cv" href="cv.html" data-i18n="nav_cv">CV</a>
+          <a id="nav-contact" href="#contact" data-i18n="nav_contact">Kontakt</a>
         </nav>
 
         <div class="lang">
@@ -155,11 +155,11 @@
       </div>
     </header>
     <nav class="mobile-nav" id="mobileNav">
-      <a href="index.html#about" data-i18n="nav_about">Om mig</a>
-      <a href="index.html#cases" data-i18n="nav_cases">Utvalda projekt</a>
-      <a href="index.html#skills" data-i18n="nav_skills">Färdigheter</a>
-      <a href="cv.html" data-i18n="nav_cv">CV</a>
-      <a href="index.html#contact" data-i18n="nav_contact">Kontakt</a>
+      <a id="mobile-nav-about" href="index.html#about" data-i18n="nav_about">Om mig</a>
+      <a id="mobile-nav-cases" href="index.html#cases" data-i18n="nav_cases">Utvalda projekt</a>
+      <a id="mobile-nav-skills" href="index.html#skills" data-i18n="nav_skills">Färdigheter</a>
+      <a id="mobile-nav-cv" href="cv.html" data-i18n="nav_cv">CV</a>
+      <a id="mobile-nav-contact" href="index.html#contact" data-i18n="nav_contact">Kontakt</a>
     </nav>
 
     <main id="top">
@@ -176,6 +176,7 @@
 
             <div class="hero__cta">
               <a
+                id="hero-cta-cases"
                 class="btn btn--outline track-hero_cases_click"
                 href="#cases"
                 data-i18n="cta_cases"
@@ -192,10 +193,9 @@
                 Ladda ner mitt CV
               </a>
             </div>
-
-            <a href="#about" class="hero__welcome" data-i18n="hero_welcome">Välkommen till min portfolio</a>
           </div>
         </div>
+        <a href="#about" class="hero__welcome" data-i18n="hero_welcome">Välkommen till min portfolio</a>
       </section>
 
       <section id="about" class="section-block about">

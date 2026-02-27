@@ -454,6 +454,11 @@ main {
 }
 
 .hero__welcome {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
   font-family: var(--font-body);
   font-size: 0.92rem;
   text-transform: uppercase;
@@ -461,13 +466,12 @@ main {
   color: #fff;
   letter-spacing: 0.2em;
   font-weight: 700;
-  max-width: none;
-  margin-left: 0;
-  margin-top: 28px;
   line-height: 1.1;
   white-space: nowrap;
   text-decoration: none;
   cursor: pointer;
+  padding: 22px var(--pad);
+  display: block;
 }
 
 .hero__left.reveal,
@@ -508,11 +512,15 @@ main {
 
 .hero__role,
 .hero__school,
-.hero__cta,
-.hero__welcome {
+.hero__cta {
   opacity: 0;
   transform: translate3d(0, 16px, 0);
   will-change: transform, opacity;
+}
+
+.hero__welcome {
+  opacity: 0;
+  will-change: opacity;
 }
 
 .hero__left.is-visible .hero__role {
@@ -529,6 +537,15 @@ main {
 
 .hero__left.is-visible .hero__welcome {
   animation: hero-fade-up 1.65s ease 1.3s both;
+}
+
+.hero .hero__welcome {
+  animation: hero-fade-in 1.4s ease 1.5s both;
+}
+
+@keyframes hero-fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 
 @keyframes hero-fade-up {
@@ -2803,14 +2820,6 @@ body.modal-open {
     transform: none;
   }
 
-  .hero__welcome {
-    text-align: center;
-    white-space: normal;
-    transform: none;
-    letter-spacing: 0.16em;
-    margin-top: 28px;
-  }
-
   .feature-block.reversed {
     direction: ltr;
   }
@@ -2836,11 +2845,6 @@ body.modal-open {
 
   .hero__left {
     margin-top: 0;
-  }
-
-  .hero__welcome {
-    text-align: center;
-    margin-top: 28px;
   }
 
   .hero__cta {

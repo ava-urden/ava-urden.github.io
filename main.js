@@ -1589,16 +1589,19 @@ function initTracking() {
   };
 
   bindClickTracking(".track-hero_cases_click", "hero_cases_click", (el) => ({
+    link_id: el.id || undefined,
     label: getEventLabel(el),
     href: el.getAttribute("href") || undefined
   }));
 
   bindClickTracking(".nav a", "nav_click", (link) => ({
+    link_id: link.id || undefined,
     label: (link.textContent || "").trim(),
     href: link.getAttribute("href") || undefined
   }));
 
   bindClickTracking(".track-cv_download", "cv_download", (link) => ({
+    link_id: link.id || undefined,
     label: getEventLabel(link),
     href: link.getAttribute("href") || undefined
   }));
@@ -1606,12 +1609,14 @@ function initTracking() {
   bindClickTracking(".case__link", "case_click", (link) => {
     const title = link.querySelector("h3");
     return {
+      link_id: link.id || undefined,
       label: title ? title.textContent.trim() : getEventLabel(link),
       href: link.getAttribute("href") || undefined
     };
   });
 
   bindClickTracking(".contact-link", "contact_click", (link) => ({
+    link_id: link.id || undefined,
     label: (link.textContent || "").trim(),
     href: link.getAttribute("href") || undefined
   }));
@@ -1624,17 +1629,20 @@ function initTracking() {
     const card = link.closest(".mini-card");
     const title = card ? card.querySelector("h3") : null;
     return {
+      link_id: link.id || undefined,
       label: title ? title.textContent.trim() : getEventLabel(link),
       href: link.getAttribute("href") || undefined
     };
   });
 
   bindClickTracking(".back-link", "back_link_click", (link) => ({
+    link_id: link.id || undefined,
     label: (link.textContent || "").trim(),
     href: link.getAttribute("href") || undefined
   }));
 
   bindClickTracking(".mobile-nav a", "mobile_nav_click", (link) => ({
+    link_id: link.id || undefined,
     label: (link.textContent || "").trim(),
     href: link.getAttribute("href") || undefined
   }));
