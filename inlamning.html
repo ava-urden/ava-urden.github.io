@@ -193,6 +193,56 @@ d<!doctype html>
         font-style: italic;
       }
 
+      /* Thank-you popup */
+      .tack-popup {
+        position: fixed;
+        bottom: 28px;
+        right: 28px;
+        z-index: 9999;
+        background: #fff;
+        border: 1.5px solid rgba(0,0,0,0.1);
+        border-radius: 18px;
+        padding: 22px 26px;
+        max-width: 320px;
+        box-shadow: 0 8px 40px rgba(0,0,0,0.12);
+        transform: translateY(20px);
+        opacity: 0;
+        transition: opacity 0.4s ease, transform 0.4s ease;
+        pointer-events: none;
+      }
+      .tack-popup.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+      }
+      .tack-popup__close {
+        position: absolute;
+        top: 10px;
+        right: 14px;
+        background: none;
+        border: none;
+        font-size: 1rem;
+        color: #aaa;
+        cursor: pointer;
+        line-height: 1;
+        padding: 2px 4px;
+      }
+      .tack-popup__close:hover { color: #111; }
+      .tack-popup__emoji {
+        font-size: 1.6rem;
+        margin-bottom: 8px;
+      }
+      .tack-popup__text {
+        font-size: 0.88rem;
+        line-height: 1.55;
+        color: #222;
+      }
+      .tack-popup__text strong {
+        display: block;
+        font-size: 0.95rem;
+        margin-bottom: 4px;
+      }
+
       @media (max-width: 600px) {
         .inl-card {
           grid-template-columns: 1fr;
@@ -326,6 +376,25 @@ d<!doctype html>
         </div>
       </section>
     </main>
+
+    <!-- Tack-popup -->
+    <div class="tack-popup" id="tackPopup" role="status" aria-live="polite">
+      <button class="tack-popup__close" id="tackClose" aria-label="Stäng">✕</button>
+      <div class="tack-popup__emoji">🙏</div>
+      <p class="tack-popup__text">
+        <strong>Tack Jesper!</strong>
+        För allt du lärt mig! Jag har haft svårt att förstå till och från — men lärt mig SÅ MYCKET. Stort tack! ✨
+      </p>
+    </div>
+
+    <script>
+      (function () {
+        var popup = document.getElementById('tackPopup');
+        var close = document.getElementById('tackClose');
+        setTimeout(function () { popup.classList.add('is-visible'); }, 800);
+        close.addEventListener('click', function () { popup.classList.remove('is-visible'); });
+      })();
+    </script>
 
     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     <script src="./main.js"></script>
