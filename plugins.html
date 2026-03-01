@@ -77,7 +77,7 @@
             <div class="plg-hero">
               <p class="plg-eyebrow" data-i18n="plg_eyebrow">Chrome plugins</p>
               <h1 class="h-display plg-title" data-i18n-html="plg_title">My plugins for<br>focus and clarity</h1>
-              <p class="plg-intro" data-i18n-html="plg_intro">Love staying organised?<br>These are the tools I actually built and use myself.</p>
+              <p class="plg-intro" data-i18n-html="plg_intro">Do you love staying organised at work and go crazy when tabs pile up and to-dos get forgotten? I've built two plugins I use every day: one that saves tabs into folders and keeps everything tidy, and one that reminds you when a task is about to run over time. Enter your LinkedIn and download for free – hope you love them!</p>
               <div class="case-meta">
                 <span class="pill">2 plugins</span>
                 <span class="pill">Chrome</span>
@@ -139,59 +139,51 @@
                     <p class="plg-row__desc" data-i18n="mini1_hero_body">
                       I built a plugin that lets you save and organise open tabs into neat collections so you can easily find them later.
                     </p>
-                    <div class="plg-chips">
-                      <span data-i18n="plg_chip_1">Save collections</span>
-                      <span data-i18n="plg_chip_2">Tags & structure</span>
-                      <span data-i18n="plg_chip_3">Restore with one click</span>
-                      <span>Chrome Extension API</span>
-                    </div>
                     <div class="plg-row__cta">
-                      <a class="btn btn--dark" href="./downloads/TabManager.zip" download>Download for free</a>
-                      <button class="mini-detail__link" type="button" data-modal-open="privacy-modal">Privacy policy →</button>
+                      <a class="btn btn--dark" href="./downloads/TabManager.zip" download data-i18n="plg_tabmanager_download">↓ Download TabManager</a>
                     </div>
                   </div>
                   <div class="plg-row__mock plg-row__mock--icon">
                     <img src="./img/tabmanagerlogo.png" alt="TabManager ikon" loading="lazy" />
                   </div>
                 </div>
-                <div class="plg-install">
-                  <p class="plg-install__label">Install in Chrome</p>
-                  <ol class="mini-steps">
-                    <li>Download the zip file and unpack it.</li>
-                    <li>Open <strong>chrome://extensions</strong> in Chrome.</li>
-                    <li>Enable <strong>Developer mode</strong>.</li>
-                    <li>Click <strong>Load unpacked</strong> and select the folder.</li>
-                  </ol>
-                </div>
               </div>
             </div>
 
-            <!-- [02] TODO V2 -->
+            <!-- [02] TASKLIST -->
             <div class="plg-row">
               <div class="plg-row__left">
                 <span class="plg-num">02</span>
-                <span class="plg-badge" data-i18n="plg_exclusive">Exclusive</span>
+                <span class="plg-status">Live</span>
               </div>
               <div class="plg-row__body">
                 <div class="plg-row__main">
                   <div class="plg-row__info">
                     <h2 class="plg-row__title">TASKLIST</h2>
-                    <p class="plg-row__desc">
-                      <span data-i18n="plg_tasklist_desc">A smarter task plugin for Chrome – built to keep track of what actually matters. Prioritise, organise and check off without distractions.</span>
-                    </p>
-                    <p class="plg-row__desc" style="color: var(--muted); font-size:0.9rem; margin-top:-12px;" data-i18n="plg_tasklist_desc_sv">
-                      Ett smartare sätt att hålla koll på uppgifter i Chrome – prioritera, organisera och bocka av utan distraktioner.
+                    <p class="plg-row__desc" data-i18n="plg_tasklist_desc">
+                      A smarter task plugin for Chrome – built to keep track of what actually matters. Prioritise, organise and check off without distractions.
                     </p>
                     <div class="plg-row__cta">
-                      <a class="btn btn--dark plugin-next__dl" href="./downloads/tasklist-extension.zip" download="tasklist-extension.zip" data-i18n="plg_tasklist_download">↓ Download Tasklist</a>
+                      <a class="btn btn--dark" href="./downloads/tasklist-extension.zip" download="tasklist-extension.zip" data-i18n="plg_tasklist_download">↓ Download Tasklist</a>
                     </div>
-                    <p class="plugin-next__install-hint" data-i18n="plg_tasklist_install_hint">Install just like TabManager – unpack and load into chrome://extensions.</p>
                   </div>
                   <div class="plg-row__mock plg-row__mock--icon">
-                    <img src="./img/tasklist.png" alt="Todo v2 ikon" loading="lazy" />
+                    <img src="./img/tasklist.png" alt="Tasklist ikon" loading="lazy" />
                   </div>
                 </div>
               </div>
+            </div>
+
+            <!-- Shared install instructions -->
+            <div class="plg-install plg-install--shared">
+              <p class="plg-install__label" data-i18n="mini1_install_title">Install in Chrome</p>
+              <ol class="mini-steps" data-i18n-html="mini1_install_list">
+                <li>Download the zip file and unzip it.</li>
+                <li>Open <strong>chrome://extensions</strong> in Chrome.</li>
+                <li>Enable <strong>Developer mode</strong>.</li>
+                <li>Click <strong>Load unpacked</strong> and select the folder.</li>
+              </ol>
+              <button class="mini-detail__link" type="button" data-modal-open="privacy-modal" style="margin-top: 16px;">Privacy policy →</button>
             </div>
 
           </div><!-- /plg-list -->
@@ -347,6 +339,7 @@
         /* Install */
         .plg-install { border-top: 1px solid var(--line); padding-top: 28px; }
         .plg-install__label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); margin-bottom: 14px; }
+        .plg-install--shared { padding: 40px 0 56px; margin-top: 0; }
 
         /* Gate */
         .plugin-next__gate { padding: 0; border-bottom: none; }
