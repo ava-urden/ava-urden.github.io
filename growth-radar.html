@@ -101,6 +101,8 @@
             font-size: 11px; font-weight: 600;
         }
 
+        .tag-live { background: #eff6ff; color: #2563eb; border: 1px solid #bfdbfe; }
+
 </style>
 </head>
 <body class="flex flex-col min-h-screen">
@@ -150,8 +152,8 @@
             <div class="flex-1 min-w-0">
                 <p class="section-label mb-3">Performance &amp; Growth Marketing</p>
                 <h1 class="text-4xl md:text-5xl font-bold mb-3 tracking-tight">Growth Radar</h1>
-                <p class="text-slate-500 text-sm leading-relaxed">
-                    Automatisk trendspaning för growth-team och content creators. Fångar upp vad som rör sig inom e-handel, sociala medier och tech i realtid – direkt från Google Trends, Reddit och Hacker News.
+                <p class="text-slate-500 text-sm leading-relaxed" data-i18n-html="gr_desc">
+                    Jag har byggt en Growth Radar som plockar upp vad som rör sig just nu inom e-handel, sociala medier och tech i realtid. Den drar insikter direkt från Google Trends, Reddit och Hacker News. Om du fastnat och behöver inspiration, vill se vad folk faktiskt pratar om, eller snabbt få koll på senaste inom Meta och AI så kan du kika här!
                 </p>
             </div>
             <div class="flex flex-col items-start md:items-end gap-3 shrink-0 pt-1">
@@ -175,13 +177,13 @@
                 <div class="px-6 pt-6 pb-4 border-b border-slate-100">
                     <div class="flex items-center justify-between">
                         <div class="flex items-center gap-3">
-                            <div class="w-9 h-9 rounded-xl bg-[#a7c400]/20 flex items-center justify-center font-bold text-xs text-slate-700">TR</div>
+                            <div class="w-9 h-9 rounded-xl bg-slate-900 flex items-center justify-center text-white"><span class="material-symbols-outlined text-[18px]">trending_up</span></div>
                             <div>
                                 <h2 class="text-sm font-bold">Trending i Sverige</h2>
                                 <p class="text-xs text-slate-400">Google Trends &mdash; just nu</p>
                             </div>
                         </div>
-                        <span class="insight-pill tag-rising text-[10px]">Live</span>
+                        <span class="insight-pill tag-live text-[10px]">Live</span>
                     </div>
                 </div>
                 <div class="px-6 py-4">
@@ -195,13 +197,13 @@
                 <div class="px-6 pt-6 pb-4 border-b border-slate-100">
                     <div class="flex items-center justify-between">
                         <div class="flex items-center gap-3">
-                            <div class="w-9 h-9 rounded-xl bg-[#a5f3fc]/40 flex items-center justify-center font-bold text-xs text-slate-700">AI</div>
+                            <div class="w-9 h-9 rounded-xl bg-slate-900 flex items-center justify-center text-white"><span class="material-symbols-outlined text-[18px]">smart_toy</span></div>
                             <div>
                                 <h2 class="text-sm font-bold">AI &amp; tech-nyheter</h2>
                                 <p class="text-xs text-slate-400">Hacker News &mdash; mest diskuterat idag</p>
                             </div>
                         </div>
-                        <span class="insight-pill tag-new text-[10px]">Live</span>
+                        <span class="insight-pill tag-live text-[10px]">Live</span>
                     </div>
                 </div>
                 <div class="px-6 py-4">
@@ -220,13 +222,13 @@
                 <div class="px-6 pt-6 pb-4 border-b border-slate-100">
                     <div class="flex items-center justify-between">
                         <div class="flex items-center gap-3">
-                            <div class="w-9 h-9 rounded-xl bg-orange-100 flex items-center justify-center font-bold text-xs text-orange-700">EC</div>
+                            <div class="w-9 h-9 rounded-xl bg-slate-900 flex items-center justify-center text-white"><span class="material-symbols-outlined text-[18px]">storefront</span></div>
                             <div>
                                 <h2 class="text-sm font-bold">E-handel &amp; produkttrender</h2>
                                 <p class="text-xs text-slate-400">Reddit r/ecommerce &mdash; hetast just nu</p>
                             </div>
                         </div>
-                        <span class="insight-pill tag-hot text-[10px]">Live</span>
+                        <span class="insight-pill tag-live text-[10px]">Live</span>
                     </div>
                 </div>
                 <div class="px-6 py-4">
@@ -240,13 +242,13 @@
                 <div class="px-6 pt-6 pb-4 border-b border-slate-100">
                     <div class="flex items-center justify-between">
                         <div class="flex items-center gap-3">
-                            <div class="w-9 h-9 rounded-xl bg-purple-100 flex items-center justify-center font-bold text-xs text-purple-700">CS</div>
+                            <div class="w-9 h-9 rounded-xl bg-slate-900 flex items-center justify-center text-white"><span class="material-symbols-outlined text-[18px]">campaign</span></div>
                             <div>
                                 <h2 class="text-sm font-bold">Content &amp; social media</h2>
                                 <p class="text-xs text-slate-400">Reddit r/marketing &mdash; hetast just nu</p>
                             </div>
                         </div>
-                        <span class="insight-pill tag-rising text-[10px]">Live</span>
+                        <span class="insight-pill tag-live text-[10px]">Live</span>
                     </div>
                 </div>
                 <div class="px-6 py-4">
@@ -264,7 +266,7 @@
             <div class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden card-hover">
                 <div class="px-6 pt-6 pb-4 border-b border-slate-100">
                     <div class="flex items-center gap-3">
-                        <div class="w-9 h-9 rounded-xl bg-green-100 flex items-center justify-center font-bold text-xs text-green-700">NY</div>
+                        <div class="w-9 h-9 rounded-xl bg-slate-900 flex items-center justify-center text-white"><span class="material-symbols-outlined text-[18px]">rocket_launch</span></div>
                         <div>
                             <h2 class="text-sm font-bold">Nya verktyg &amp; produkter</h2>
                             <p class="text-xs text-slate-400">HN Show HN &mdash; precis lanserat</p>
@@ -281,7 +283,7 @@
             <div class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden card-hover">
                 <div class="px-6 pt-6 pb-4 border-b border-slate-100">
                     <div class="flex items-center gap-3">
-                        <div class="w-9 h-9 rounded-xl bg-amber-100 flex items-center justify-center font-bold text-xs text-amber-700">KAL</div>
+                        <div class="w-9 h-9 rounded-xl bg-slate-900 flex items-center justify-center text-white"><span class="material-symbols-outlined text-[18px]">calendar_month</span></div>
                         <div>
                             <h2 class="text-sm font-bold">Kampanjkalender</h2>
                             <p class="text-xs text-slate-400">Nästa tillfällen att planera kring</p>
@@ -297,7 +299,7 @@
             <div class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden card-hover">
                 <div class="px-6 pt-6 pb-4 border-b border-slate-100">
                     <div class="flex items-center gap-3">
-                        <div class="w-9 h-9 rounded-xl bg-slate-100 flex items-center justify-center font-bold text-xs text-slate-600">PI</div>
+                        <div class="w-9 h-9 rounded-xl bg-slate-900 flex items-center justify-center text-white"><span class="material-symbols-outlined text-[18px]">insights</span></div>
                         <div>
                             <h2 class="text-sm font-bold">Performance-insikter</h2>
                             <p class="text-xs text-slate-400">Taktiker med hög potential just nu</p>

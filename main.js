@@ -139,8 +139,10 @@ const dict = {
     mini_item_2_status: "Pågående",
     mini_item_2_title: "Growth Signals API",
     mini_item_2_desc:
-      "Ett live-dashboard som hämtar aktuella tillväxtsignaler från Google Trends, Hacker News och Reddit – presenterat i realtid.",
+      "Realtidsdashboard med live-trender från Google Trends, Reddit och Hacker News.",
     mini_item_2_cta: "Läs mer",
+    gr_desc:
+      "Jag har byggt en Growth Radar som plockar upp vad som rör sig just nu inom e-handel, sociala medier och tech i realtid. Den drar insikter direkt från Google Trends, Reddit och Hacker News. Om du fastnat och behöver inspiration, vill se vad folk faktiskt pratar om, eller snabbt få koll på senaste inom Meta och AI så kan du kika här!",
     mini_item_3_media: "Whitepaper",
     mini_item_3_tag: "Whitepaper",
     mini_item_3_status: "Klar",
@@ -813,8 +815,10 @@ const dict = {
     mini_item_2_status: "In progress",
     mini_item_2_title: "Growth Signals API",
     mini_item_2_desc:
-      "A live dashboard pulling current growth signals from Google Trends, Hacker News and Reddit – displayed in real time.",
+      "Real-time dashboard with live trends from Google Trends, Reddit and Hacker News.",
     mini_item_2_cta: "Read more",
+    gr_desc:
+      "I've built a Growth Radar that picks up what's moving right now in e-commerce, social media and tech – in real time. It pulls insights directly from Google Trends, Reddit and Hacker News.<br><br>Stuck for inspiration? Want to see what people are actually talking about, or quickly get up to speed on the latest in Meta and AI – take a look here.",
     mini_item_3_media: "Whitepaper",
     mini_item_3_tag: "Whitepaper",
     mini_item_3_status: "Live",
