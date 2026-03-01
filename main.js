@@ -518,7 +518,7 @@ const dict = {
       "Identiteten används idag löpande i nätverkets kommunikation och gör det enklare att planera framtida aktiviteter med en tydlig visuell ram.",
 
     // Case 3
-    c3_hero_title: "SEO: Content-struktur & koncept",
+    c3_hero_title: "Ökad försäljning online",
     c3_hero_body:
       "Hur vi genom en datadriven strategi skapade en ny destination för bokinspiration hos Akademibokhandeln, med målet att vinna den organiska trafiken från konkurrenterna.",
     c3_pill_1: "SEO & sökordsanalys",
@@ -1201,7 +1201,7 @@ const dict = {
       "The identity is now used continuously in network communications and makes future initiatives easier to plan within a clear visual framework.",
 
     // Case 3
-    c3_hero_title: "SEO: Content structure & concept",
+    c3_hero_title: "Increased online sales",
     c3_hero_body:
       "How a data-driven strategy created a new destination for book inspiration at Akademibokhandeln, with the goal of winning organic traffic from competitors.",
     c3_pill_1: "SEO & keyword analysis",

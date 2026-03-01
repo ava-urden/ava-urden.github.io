@@ -33,25 +33,73 @@
         --brand-light-gray: #f5f3ef;
       }
 
+      .ak-tint { background: var(--brand-light-gray); }
+
       .content-columns {
         column-count: 2;
         column-gap: 3rem;
-        margin-top: 2rem;
+        margin-top: 1.5rem;
       }
-
-      .content-showcase {
-        background: var(--brand-light-gray);
-      }
-
       @media (max-width: 800px) {
-        .content-columns {
-          column-count: 1;
-        }
+        .content-columns { column-count: 1; }
       }
+
+      .ak-split {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        align-items: start;
+      }
+      @media (max-width: 700px) {
+        .ak-split { grid-template-columns: 1fr; }
+      }
+
+      .ak-img {
+        border-radius: 8px;
+        overflow: hidden;
+        background: #e8e4de;
+      }
+      .ak-img img {
+        width: 100%;
+        display: block;
+      }
+
+      .ak-detail {
+        margin-top: 1.25rem;
+        padding-top: 1.25rem;
+        border-top: 1px solid rgba(0,0,0,0.08);
+        font-size: 0.95rem;
+        line-height: 1.7;
+      }
+      .ak-detail strong { color: var(--ink); }
+
+      .ak-list {
+        margin-top: 1rem;
+        padding-left: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+      .ak-list li {
+        padding-left: 1.25rem;
+        position: relative;
+        font-size: 0.95rem;
+        line-height: 1.65;
+        color: var(--muted);
+      }
+      .ak-list li::before {
+        content: "→";
+        position: absolute;
+        left: 0;
+        color: var(--brand-red);
+        font-weight: 700;
+      }
+      .ak-list li strong { color: var(--ink); }
     </style>
   </head>
 
-  <body class="case-page">
+  <body class="case-page case-page--ak">
     <!-- Google Tag Manager (noscript) -->
     <noscript
       ><iframe
@@ -77,7 +125,7 @@
           <button class="lang__btn is-active" type="button" data-lang="sv">SV</button>
           <button class="lang__btn" type="button" data-lang="en">EN</button>
         </div>
-              <button class="nav-burger" aria-label="Meny" aria-expanded="false">
+        <button class="nav-burger" aria-label="Meny" aria-expanded="false">
           <span></span><span></span><span></span>
         </button>
       </div>
@@ -91,19 +139,178 @@
     </nav>
 
     <main id="top">
+
+      <!-- ═══ HERO ═══ -->
       <section class="section section-block">
         <div class="container">
           <a href="index#cases" class="back-link" data-i18n="back_to_cases">← Tillbaka till cases</a>
 
-          <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:55vh;text-align:center;gap:1rem;">
-            <p class="eyebrow" data-i18n="c3_pill_1">SEO: Content-struktur</p>
-            <h1 class="h-display" style="font-size:clamp(2.5rem,6vw,4.5rem);letter-spacing:-0.03em;">TBA</h1>
-            <p class="muted" style="max-width:360px;line-height:1.6;" data-i18n="c3_tba_desc">Det här caset publiceras snart. Håll utkik!</p>
-            <a href="index#cases" class="btn btn--dark" style="margin-top:1rem;" data-i18n="back_to_cases_btn">← Se alla projekt</a>
+          <div class="case-hero">
+            <div class="case-hero__content reveal">
+              <h1 class="h-display" data-i18n="c3_hero_title">Ökad försäljning online</h1>
+              <p class="hero__p" data-i18n="c3_hero_body">
+                Hur vi genom en datadriven strategi skapade en ny destination för bokinspiration hos Akademibokhandeln, med målet att vinna den organiska trafiken från konkurrenterna.
+              </p>
+              <div class="case-meta">
+                <span class="pill" data-i18n="c3_pill_1">SEO & sökordsanalys</span>
+                <span class="pill" data-i18n="c3_pill_2">Content strategy</span>
+                <span class="pill" data-i18n="c3_pill_3">Målgruppsinsikter</span>
+              </div>
+            </div>
+            <div class="case-hero__img reveal" style="--delay: 0.1s;">
+              <img
+                src="./img/akademibokhandelbanneroms.png"
+                alt="Akademibokhandeln – Experternas boktips"
+                fetchpriority="high"
+                decoding="async"
+              />
+            </div>
+          </div>
+
+          <!-- 3 kort -->
+          <div class="grid grid--3">
+            <div class="card-skill reveal">
+              <h3 data-i18n="c3_card1_title">Utmaning & analys</h3>
+              <p data-i18n="c3_card1_body">
+                Arbetet inleddes med en djupgående omvärlds- och konkurrentanalys för att identifiera gap i marknaden. Genom att studera kundresan tog vi fram tre specifika personas.
+              </p>
+            </div>
+            <div class="card-skill reveal" style="--delay: 0.05s;">
+              <h3 data-i18n="c3_card2_title">Datadriven metod</h3>
+              <p data-i18n="c3_card2_body">
+                Med stöd i Bokbarometern och Google Trends kartlade vi cykliska mönster i bokbranschen. Tydliga toppar inför jul och sommar dikterade vår timing för innehållsproduktion.
+              </p>
+            </div>
+            <div class="card-skill reveal" style="--delay: 0.1s;">
+              <h3 data-i18n="c3_card3_title">Strategiskt mål</h3>
+              <p data-i18n="c3_card3_body">
+                Målet var att bygga en brygga mellan ren inspiration och snabb konvertering. Organisk synlighet skapar en hållbar tillväxtmodell för Akademibokhandelns e-handel.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
+      <!-- ═══ INSIKT ═══ -->
+      <section class="section-block ak-tint">
+        <div class="container">
+          <div class="ak-split reveal">
+            <div>
+              <p class="eyebrow" data-i18n="c3_insight_title">Insikt: Från sök till köp</p>
+              <p style="font-size:1.05rem;line-height:1.8;" data-i18n="c3_insight_body">
+                Genom en sökordsanalys identifierade vi ett tydligt beteende: användare söker aktivt efter specifik bokinspiration snarare än bara titlar. Genom att matcha detta med SEO-anpassat innehåll möter vi kunden i sökögonblicket.
+              </p>
+              <div class="ak-detail" data-i18n-html="c3_insight_timing">
+                <p><strong>Timing:</strong> Strategin fokuserar på att maximera synlighet under årets viktigaste försäljningsperioder.</p>
+              </div>
+              <div class="ak-detail" data-i18n-html="c3_insight_relevance">
+                <p><strong>Relevans:</strong> Varje rekommendation vilar på verklig efterfrågan och aktuella trender i Google-söket.</p>
+              </div>
+            </div>
+            <div class="ak-img">
+              <img
+                src="./img/case-akademibokhandeln/ak-trends.png"
+                alt="Google Trends – söktrender böcker"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ LÖSNINGEN ═══ -->
+      <section class="section-block">
+        <div class="container">
+          <div class="ak-split reveal">
+            <div class="ak-img">
+              <img
+                src="./img/case-akademibokhandeln/ak-concept.png"
+                alt="Konceptet Experternas boktips"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div>
+              <h2 class="h-display" data-i18n="c3_solution_title">Lösningen: Experternas boktips</h2>
+              <p style="line-height:1.75;margin-top:1rem;" data-i18n="c3_solution_body">
+                Vi lanserade en ny sektion på webbplatsen – en hubb för trovärdiga rekommendationer. Genom att kurera innehåll från kända profiler skapade vi en exklusiv känsla som skiljer Akademibokhandeln från de prispressande konkurrenterna.
+              </p>
+              <ul class="ak-list" data-i18n-html="c3_solution_list">
+                <li><strong>Kurerat urval:</strong> Fyra noggrant utvalda böcker per profil.</li>
+                <li><strong>SEO-optimering:</strong> Texterna är skrivna med sökordsfokus.</li>
+                <li><strong>Friktionsfri köpresa:</strong> Varje tips kopplat till direktlänk för köp.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ KANALER ═══ -->
+      <section class="section-block ak-tint">
+        <div class="container">
+          <div class="ak-split reveal">
+            <div>
+              <h2 class="h-display" data-i18n="c3_channels_title">Uttag i digitala kanaler</h2>
+              <p style="line-height:1.75;margin-top:1rem;" data-i18n="c3_channels_body">
+                För att maximera räckvidden översatte vi hubbens innehåll till kanalunika format. Igenkänningsfaktorn från experterna skapade ett enhetligt uttryck från första scroll till konvertering.
+              </p>
+              <ul class="ak-list" style="margin-top:1.5rem;" data-i18n-html="c3_channels_list">
+                <li><strong>Instagram:</strong> Interaktiva format som driver trafik till hubben.</li>
+                <li><strong>Nyhetsbrev:</strong> Personliga tips baserade på expertens nisch.</li>
+                <li><strong>Paid Social:</strong> Riktade annonser mot specifika intresseområden.</li>
+              </ul>
+            </div>
+            <div class="ak-img">
+              <img
+                src="./img/case-akademibokhandeln/ak-hero-mockup.png"
+                alt="Digitala kanaler – Akademibokhandeln"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ DISTRIBUTION ═══ -->
+      <section class="section-block">
+        <div class="container reveal">
+          <h2 class="h-display" data-i18n="c3_distribution_title">Distribution & aktivering</h2>
+          <div class="content-columns">
+            <p style="line-height:1.75;" data-i18n="c3_distribution_body_1">
+              För att säkerställa trafik till den nya sektionen tog vi fram en omfattande aktiveringsplan. Detta inkluderade format för Instagram och nyhetsbrev, där vi genom A/B-testning optimerade resultatet.
+            </p>
+            <p style="line-height:1.75;" data-i18n="c3_distribution_body_2">
+              Konceptet fungerar som en långsiktig investering i varumärkets digitala närvaro, där inspiration och expertis driver en ökad försäljning online.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ NYCKELTAL + SUMMERING ═══ -->
+      <section class="section-block ak-tint">
+        <div class="container">
+          <div class="highlight-section reveal">
+            <h2 class="h-display" style="margin-bottom:1rem;" data-i18n="c3_stats_title">Nyckeltal i fokus</h2>
+            <ul class="ak-list" data-i18n-html="c3_stats_list">
+              <li>Organisk trafik & sökordsranking</li>
+              <li>Klickfrekvens (CTR) på expert-rekommendationer</li>
+              <li>Konverteringsgrad per prioriterad titel</li>
+              <li>Engagemang i nyhetsbrev & Instagram</li>
+            </ul>
+          </div>
+
+          <div style="margin-top:3rem;" class="reveal">
+            <h2 class="h-display" data-i18n="c3_summary_title">Summering av effekt</h2>
+            <p style="max-width:700px;line-height:1.75;margin-top:1rem;" data-i18n="c3_summary_body">
+              Genom att kombinera mänsklig expertis med teknisk SEO-insikt transformerade vi bokinspiration från en statisk upplevelse till en drivande kraft för e-handeln. Resultatet är en skalbar modell som Akademibokhandeln kan använda säsong efter säsong.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ FOOTER ═══ -->
       <footer id="contact" class="footer section-block">
         <div class="container footer__grid">
           <div class="footer__left">
@@ -138,6 +345,7 @@
           <div class="footer__copy">&copy; 2026 Ava Urdén</div>
         </div>
       </footer>
+
     </main>
 
     <script src="./main.js"></script>
