@@ -45,6 +45,43 @@
           order: -1;
         }
       }
+
+      /* Table */
+      .highlight-table { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+
+      .case-page--uys .data-table th {
+        font-size: 0.7rem;
+        letter-spacing: 0.09em;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: var(--muted);
+        padding: 0 0 12px;
+        border-bottom: 2px solid rgba(31, 27, 22, 0.12);
+        opacity: 1;
+      }
+
+      .case-page--uys .data-table th + th,
+      .case-page--uys .data-table td + td {
+        text-align: right;
+      }
+
+      .case-page--uys .data-table td {
+        padding: 13px 0;
+        border-bottom: 1px solid rgba(31, 27, 22, 0.06);
+        color: var(--ink);
+      }
+
+      .case-page--uys .data-table tbody tr:hover td {
+        background: rgba(245, 218, 122, 0.1);
+      }
+
+      .case-page--uys .data-table tr:last-child td {
+        border-top: 2px solid rgba(31, 27, 22, 0.12);
+        border-bottom: none;
+        padding-top: 14px;
+        background: rgba(245, 218, 122, 0.14);
+        font-weight: 700;
+      }
     </style>
   </head>
 
