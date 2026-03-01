@@ -391,7 +391,7 @@ const dict = {
     c1_results_list: "<li>Konkret CRO-plan</li><li>Designförslag checkout</li><li>Strategi för bundles</li>",
     c1_highlight_title: "Små förändringar, stor effekt",
     c1_highlight_body:
-      "Genom analys av data från 2025 identifierade vi en tydlig potential. Nästan hälften av alla ordrar bestod av en enda produkt och låg under gränsen för fri frakt.",
+      "<p>Genom analys av orderdata (2025) såg vi en tydlig potential: drygt 4 av 10 köp bestod av en enda produkt och landade ofta strax under fraktfri-gränsen (runt 600 kr).</p><p>Det betyder: kunderna var nära att köpa mer, men saknade en tydlig anledning.</p><p>Cirka hälften av alla ordrar låg under ~600 kr – precis under fraktfri-gränsen. <strong>En nudge räcker.</strong></p><p>Så fort kunden lägger till en andra produkt ökar ordervärdet med ungefär <strong>+30%</strong>. Det blev casets kärna: få fler att ta steg 2.</p>",
     c1_highlight_list:
       "<li><strong>43% av ordrarna var en ensam produkt</strong> – och många hamnade precis under fri frakt. Det betyder: kunderna var nära att köpa mer, men saknade en tydlig anledning.</li><li>Hälften av ordrarna låg under <strong>599 kr</strong> – precis under frifrakt-gränsen. En nudge räcker.</li><li><strong>Så fort kunden lägger till en andra produkt ökar ordervärdet med +32%.</strong> Det blev casets kärna: få fler att ta steg 2.</li>",
     c1_gallery_title: "Visuella skisser",
@@ -438,8 +438,8 @@ const dict = {
     c1_mechanics_body_3:
       "Det driver inte bara högre varukorgsvärde, utan stärker känslan av exklusivitet.",
     c1_table_head_products: "Antal produkter",
-    c1_table_head_orders: "Antal köp",
-    c1_table_head_aov: "Snittvärde (AOV)",
+    c1_table_head_orders: "Antal köp (≈)",
+    c1_table_head_aov: "Snittvärde (AOV ≈)",
     c1_table_total: "Totalt",
     c1_feature1_title: "1. Visualisera målet (Goal Gradient)",
     c1_feature1_body:
@@ -1074,7 +1074,7 @@ const dict = {
     c1_results_list: "<li>Concrete CRO plan</li><li>Checkout design proposals</li><li>Bundling strategy</li>",
     c1_highlight_title: "Small changes, big impact",
     c1_highlight_body:
-      "Analyzing 2025 data revealed clear potential. Nearly half of all orders contained a single product and were below the free-shipping threshold.",
+      "<p>Analyzing order data (2025) revealed clear potential: over 4 in 10 purchases consisted of a single product and often landed just below the free shipping threshold (around 600 SEK).</p><p>That means: customers were close to buying more, but lacked a clear reason.</p><p>About half of all orders were below ~600 SEK – just under the free-shipping threshold. <strong>A nudge is enough.</strong></p><p>As soon as a customer adds a second product, order value increases by roughly <strong>+30%</strong>. That became the case's core: get more people to take step two.</p>",
     c1_highlight_list:
       "<li><strong>43% of orders contained a single product</strong> – and many landed just below the free shipping threshold. Customers were close to buying more, but lacked a clear reason.</li><li>Half of orders were below <strong>599 SEK</strong> – just under the free-shipping threshold. A nudge is enough.</li><li><strong>As soon as a customer adds a second product, order value increases by +32%.</strong> That became the case's core: get more people to take step two.</li>",
     c1_gallery_title: "Visual sketches",
@@ -1121,8 +1121,8 @@ const dict = {
     c1_mechanics_body_3:
       "This not only increases basket value, it strengthens the feeling of exclusivity.",
     c1_table_head_products: "Number of products",
-    c1_table_head_orders: "Orders",
-    c1_table_head_aov: "Average value (AOV)",
+    c1_table_head_orders: "Orders (≈)",
+    c1_table_head_aov: "Avg. order value (AOV ≈)",
     c1_table_total: "Total",
     c1_feature1_title: "1. Visualize the goal (Goal Gradient)",
     c1_feature1_body:
