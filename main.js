@@ -294,7 +294,12 @@ const dict = {
     plg_tasklist_download: "↓ Ladda ner Tasklist",
     plg_tasklist_install_hint: "Installera precis som TabManager – packa upp och ladda in i chrome://extensions.",
     modal_close: "Stäng",
+    privacy_both_title: "Integritetspolicy – TabManager & Tasklist",
+    privacy_both_intro:
+      "Båda plugins lagrar data lokalt i webbläsaren. Ingen data skickas till externa servrar.",
+    privacy_both_updated: "Senast uppdaterad: 1 mars 2026.",
     privacy_tabless_title: "Integritetspolicy – TabManager",
+    privacy_tabless_heading: "TabManager",
     privacy_tabless_intro:
       "TabManager lagrar dina samlingar lokalt i webbläsaren. Ingen data skickas till externa servrar.",
     privacy_tabless_updated: "Senast uppdaterad: 20 februari 2026.",
@@ -309,6 +314,13 @@ const dict = {
       "Ingen data delas eller säljs. Ingen analytics eller spårning används.",
     privacy_tabless_contact_title: "Kontakt",
     privacy_tabless_contact_body: "Frågor om integritet? Mejla ava.urden@gmail.com.",
+    privacy_tasklist_heading: "Tasklist",
+    privacy_tasklist_data_title: "Data som lagras",
+    privacy_tasklist_data_list:
+      "<li>Uppgifter: titel, prioritet och status</li><li>Inställningar och preferenser</li>",
+    privacy_tasklist_permissions_title: "Behörigheter",
+    privacy_tasklist_permissions_list:
+      "<li><strong>storage:</strong> spara uppgifter lokalt i webbläsaren</li>",
 
     skills_main_title: "Färdigheter & verktyg",
     skills_intro: "Där strategi möter genomförande – från idé till mätbar effekt.",
@@ -977,7 +989,12 @@ const dict = {
     plg_tasklist_download: "↓ Download Tasklist",
     plg_tasklist_install_hint: "Install just like TabManager – unpack and load into chrome://extensions.",
     modal_close: "Close",
+    privacy_both_title: "Privacy Policy – TabManager & Tasklist",
+    privacy_both_intro:
+      "Both plugins store data locally in the browser. No data is sent to external servers.",
+    privacy_both_updated: "Last updated: March 1, 2026.",
     privacy_tabless_title: "Privacy Policy – TabManager",
+    privacy_tabless_heading: "TabManager",
     privacy_tabless_intro:
       "TabManager stores your collections locally in the browser. No data is sent to external servers.",
     privacy_tabless_updated: "Last updated: February 20, 2026.",
@@ -992,6 +1009,13 @@ const dict = {
       "No data is shared or sold. No analytics or tracking is used.",
     privacy_tabless_contact_title: "Contact",
     privacy_tabless_contact_body: "Questions about privacy? Email ava.urden@gmail.com.",
+    privacy_tasklist_heading: "Tasklist",
+    privacy_tasklist_data_title: "Data stored",
+    privacy_tasklist_data_list:
+      "<li>Tasks: title, priority and status</li><li>Settings and preferences</li>",
+    privacy_tasklist_permissions_title: "Permissions",
+    privacy_tasklist_permissions_list:
+      "<li><strong>storage:</strong> save tasks locally in the browser</li>",
 
     skills_main_title: "Skills & tools",
     skills_intro: "Where strategy meets execution – from idea to measurable impact.",
