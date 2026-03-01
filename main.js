@@ -378,7 +378,7 @@ const dict = {
     // Case 1
     c1_hero_title: "Under Your Skin: Optimering av kundresan",
     c1_hero_body:
-      "Strategi för att öka snittordervärdet (AOV) från 786 kr till 1000 kr genom beteendedesign, utan att kompromissa med varumärkets premiumkänsla.",
+      "Hur höjer man snittordern med +27% utan att röra rabatter, och utan att förstöra premiumkänslan? I det här caset byggde jag en CRO-plan som flyttar kunder från 1 till 2 produkter genom beteendedesign i varukorg och checkout.",
     c1_pill_1: "Tillväxt",
     c1_pill_2: "CRO",
     c1_pill_3: "Dataanalys",
@@ -393,7 +393,7 @@ const dict = {
     c1_highlight_body:
       "Genom analys av data från 2025 identifierade vi en tydlig potential. Nästan hälften av alla ordrar bestod av en enda produkt och låg under gränsen för fri frakt.",
     c1_highlight_list:
-      "<li><strong>43%</strong> av alla ordrar var 1 produkt.</li><li>Hälften av ordrarna låg under <strong>599 kr</strong>.</li><li>Köp med 2 produkter hade <strong>+32% högre värde</strong>.</li>",
+      "<li><strong>43% av ordrarna var en ensam produkt</strong> – och många hamnade precis under fri frakt. Det betyder: kunderna var nära att köpa mer, men saknade en tydlig anledning.</li><li>Hälften av ordrarna låg under <strong>599 kr</strong> – precis under frifrakt-gränsen. En nudge räcker.</li><li><strong>Så fort kunden lägger till en andra produkt ökar ordervärdet med +32%.</strong> Det blev casets kärna: få fler att ta steg 2.</li>",
     c1_gallery_title: "Visuella skisser",
     c1_gallery_body:
       "Mockups och skärmar som visar hur vi visualiserade målet, rekommendationer och checkout-flöde.",
@@ -434,7 +434,7 @@ const dict = {
     c1_mechanics_body_2:
       "Därför föreslogs ett tydligt incitament: “Exklusiv gåva vid köp över 1 000 kr.”",
     c1_mechanics_list:
-      "<li>Goal Gradient – motivationen ökar när vi närmar oss målet</li><li>Loss Aversion – vi vill inte förlora något vi nästan har fått</li><li>Anchoring – en “gåva värd 200 kr” höjer upplevt värde</li><li>Reciprocity – vi vill ge tillbaka när vi fått något</li>",
+      "<li><strong>Goal Gradient</strong> – progress bar i varukorgen som visar hur nära gåvan du är + klickbara add-ons i 100–300 kr-klassen.</li><li><strong>Loss Aversion</strong> – copy som aktiverar nästan-känslan: Lås upp din gåva när kunden är nära 1 000 kr.</li><li><strong>Anchoring</strong> – en gåva värd 200 kr höjer upplevt värde på hela ordern.</li><li><strong>Reciprocity</strong> – kunden vill inte bara ha gåvan – de vill förtjäna den.</li>",
     c1_mechanics_body_3:
       "Det driver inte bara högre varukorgsvärde, utan stärker känslan av exklusivitet.",
     c1_table_head_products: "Antal produkter",
@@ -486,7 +486,7 @@ const dict = {
       "<li><strong>Progress bar för fri frakt/gåva:</strong> gör målet visuellt och triggar Goal Gradient.</li><li><strong>“Köps ofta tillsammans med” högt upp:</strong> rekommenderade tillägg i intervallet 100–300 kr sänker tröskeln.</li><li><strong>Förvalt betalningsalternativ:</strong> standard för det vanligaste valet minskar mental kostnad.</li>",
     c1_summary_title: "Sammanfattning",
     c1_summary_body:
-      "Strategin bygger på tre lager: positionering (premium först, pris senare), beteendedesign (progress bar, gåva vid 1 000 kr, smarta rekommendationer) och checkout-optimering (friktionsfria tillägg och betalning). Det är så AOV kan gå från 786 kr till 1 000 kr utan att kompromissa med varumärket.",
+      "Resultaten kom av att kombinera tre lager: premiumpositionering som håller varumärket intakt, beteendedesign som nudgar kunden mot nästa köp och checkout-optimering som sänker friktionen. Slutresultatet: +27% AOV, utan en enda rabatt.",
 
     // Case 2
     c2_hero_title: "Ny visuell identitet & koncept",
@@ -1061,7 +1061,7 @@ const dict = {
     // Case 1
     c1_hero_title: "Under Your Skin: Customer journey optimization",
     c1_hero_body:
-      "Strategy to raise average order value (AOV) from 786 SEK to 1,000 SEK through behavioral design, without compromising the premium brand feel.",
+      "How do you raise average order value by +27% without touching discounts, and without damaging the premium feel? In this case I built a CRO plan that moves customers from 1 to 2 products through behavioral design in the cart and checkout.",
     c1_pill_1: "Growth",
     c1_pill_2: "CRO",
     c1_pill_3: "Data analysis",
@@ -1076,7 +1076,7 @@ const dict = {
     c1_highlight_body:
       "Analyzing 2025 data revealed clear potential. Nearly half of all orders contained a single product and were below the free-shipping threshold.",
     c1_highlight_list:
-      "<li><strong>43%</strong> of all orders contained 1 product.</li><li>Half of orders were below <strong>599 SEK</strong>.</li><li>Orders with 2 products had <strong>+32% higher value</strong>.</li>",
+      "<li><strong>43% of orders contained a single product</strong> – and many landed just below the free shipping threshold. Customers were close to buying more, but lacked a clear reason.</li><li>Half of orders were below <strong>599 SEK</strong> – just under the free-shipping threshold. A nudge is enough.</li><li><strong>As soon as a customer adds a second product, order value increases by +32%.</strong> That became the case's core: get more people to take step two.</li>",
     c1_gallery_title: "Visual sketches",
     c1_gallery_body:
       "Mockups and screens showing how we visualized the goal, recommendations, and checkout flow.",
@@ -1117,7 +1117,7 @@ const dict = {
     c1_mechanics_body_2:
       "That opens for a clear incentive: “Exclusive gift for orders over 1,000 SEK.”",
     c1_mechanics_list:
-      "<li>Goal Gradient — motivation increases as we get closer to the goal</li><li>Loss Aversion — we avoid losing something we almost have</li><li>Anchoring — a “gift worth 200 SEK” raises perceived value</li><li>Reciprocity — we want to give back when we receive something</li>",
+      "<li><strong>Goal Gradient</strong> – progress bar in the cart showing exactly how close you are to the gift + clickable add-ons in the 100–300 SEK range.</li><li><strong>Loss Aversion</strong> – copy that triggers the almost-there feeling: Unlock your gift when the customer is near 1,000 SEK.</li><li><strong>Anchoring</strong> – a gift worth 200 SEK raises the perceived value of the entire order.</li><li><strong>Reciprocity</strong> – the exclusivity makes the customer want to earn the gift, not just have it.</li>",
     c1_mechanics_body_3:
       "This not only increases basket value, it strengthens the feeling of exclusivity.",
     c1_table_head_products: "Number of products",
@@ -1169,7 +1169,7 @@ const dict = {
       "<li><strong>Progress bar for free shipping/gift:</strong> visualizes the goal and triggers Goal Gradient.</li><li><strong>“Frequently bought together” higher up:</strong> add-ons in the 100–300 SEK range lower the threshold.</li><li><strong>Default payment option:</strong> preselecting the most common choice reduces mental cost.</li>",
     c1_summary_title: "Summary",
     c1_summary_body:
-      "The strategy rests on three layers: positioning (premium first, price later), behavioral design (progress bar, gift at 1,000 SEK, smart recommendations), and checkout optimization (low-friction add-ons and payment). This is how AOV can move from 786 SEK to 1,000 SEK without compromising the brand.",
+      "The results came from combining three layers: premium positioning that keeps the brand intact, behavioral design that nudges the customer toward the next purchase, and checkout optimization that reduces friction. The end result: +27% AOV, without a single discount.",
 
     // Case 2
     c2_hero_title: "New visual identity & concept",
