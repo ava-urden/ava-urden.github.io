@@ -452,6 +452,8 @@
     <script src="./main.js"></script>
     <script>
       (function () {
+        var APPS_SCRIPT_URL = "https://script.google.com/a/macros/student.berghs.se/s/AKfycbw7QkJqxXQ7rhAe2KRZXZCxdDbkigTtUew03OmMxvyfQ58iEppZS20XEyfocfXbEGVM9Q/exec";
+
         const btn   = document.getElementById("pluginUnlockBtn");
         const input = document.getElementById("linkedinInput");
         const gate  = document.getElementById("pluginGateForm");
@@ -459,8 +461,32 @@
         const name  = document.getElementById("linkedinName");
 
         function unlock() {
-          const val = (input.value || "").trim();
+          const val = (input.value || "").trim().replace(/^\/+|\/+$/g, "");
           if (!val) { input.focus(); return; }
+
+          // dataLayer event
+          window.dataLayer = window.dataLayer || [];
+          window.dataLayer.push({
+            event: "linkedin_gate_submit",
+            linkedin_handle: val,
+            page_path: window.location.pathname,
+            page_title: document.title,
+            language: document.documentElement.lang || "sv"
+          });
+
+          // Spara till Google Sheets via Apps Script
+          var p = new URLSearchParams(window.location.search);
+          var fd = new FormData();
+          fd.append("linkedin",      val);
+          fd.append("source",        "plugins-gate");
+          fd.append("page",          window.location.pathname);
+          fd.append("referrer",      document.referrer || "");
+          fd.append("utm_source",    p.get("utm_source")   || "");
+          fd.append("utm_medium",    p.get("utm_medium")   || "");
+          fd.append("utm_campaign",  p.get("utm_campaign") || "");
+          fetch(APPS_SCRIPT_URL, { method: "POST", body: fd }).catch(function () {});
+
+          // Lås upp UI direkt utan att vänta på svar
           name.textContent = val;
           gate.classList.add("is-hidden");
           list.style.display = "block";
