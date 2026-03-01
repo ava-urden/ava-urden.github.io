@@ -386,7 +386,7 @@ const dict = {
     c1_overview_list:
       "<li><strong>Uppdrag:</strong> Höja AOV & stärka premiumposition.</li><li><strong>Roll:</strong> Growth Marketing.</li><li><strong>Mål 2026:</strong> Snittorder på 1000 kr.</li>",
     c1_tools_title: "Verktyg",
-    c1_tools_list: "<li>GA4 & Orderdata</li><li>Figma (Prototyping)</li><li>Beteendepsykologi</li>",
+    c1_tools_list: "<li>GA4 & Orderdata</li><li>Heatmaps & screen recordings</li><li>Beteendepsykologi</li>",
     c1_results_title: "Resultat",
     c1_results_list: "<li>Konkret CRO-plan</li><li>Designförslag checkout</li><li>Strategi för bundles</li>",
     c1_highlight_title: "Små förändringar, stor effekt",
@@ -1069,7 +1069,7 @@ const dict = {
     c1_overview_list:
       "<li><strong>Brief:</strong> Increase AOV and reinforce the premium position.</li><li><strong>Role:</strong> Growth marketing.</li><li><strong>2026 target:</strong> Average order of 1,000 SEK.</li>",
     c1_tools_title: "Tools",
-    c1_tools_list: "<li>GA4 and order data</li><li>Figma (prototyping)</li><li>Behavioral psychology</li>",
+    c1_tools_list: "<li>GA4 & order data</li><li>Heatmaps & screen recordings</li><li>Behavioral psychology</li>",
     c1_results_title: "Outcome",
     c1_results_list: "<li>Concrete CRO plan</li><li>Checkout design proposals</li><li>Bundling strategy</li>",
     c1_highlight_title: "Small changes, big impact",
