@@ -28,6 +28,8 @@
     <link rel="stylesheet" href="./style.css" />
 
     <style>
+      :root { --accent-dark: #3737e6; }
+
       /* ── Section label ── */
       .cfot-label {
         font-size: 0.7rem;
@@ -400,6 +402,14 @@
                 <span class="cfot-stat__value" data-i18n="cfot_insight_stat">Miljarder foton varje dag</span>
                 <span class="cfot-stat__sub">photos uploaded globally</span>
               </div>
+              <div class="cfot-img-wrap" style="aspect-ratio:16/7;margin:1.25rem 0;">
+                <img
+                  src="./img/fotografiska/5,3 billion pictures_day.png"
+                  alt="5,3 miljarder foton laddas upp varje dag"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
               <p style="max-width:520px;line-height:1.75;" data-i18n="cfot_insight_text">
                 Vi fotar redan hela tiden, men få ser sitt eget bildskapande som "utställningsmaterial". Potentialen finns i målgruppen — det som saknas är en inbjudan.
               </p>
@@ -480,7 +490,7 @@
           <div class="cfot-img-pair">
             <div class="cfot-img-wrap reveal">
               <img
-                src="./img/fotografiska/02_ooh-qr_poster.jpg"
+                src="./img/fotografiska/02_ooh-qr_poster.png"
                 alt="OOH med QR-kod och uppladdnings-CTA"
                 loading="lazy"
                 decoding="async"
@@ -488,7 +498,7 @@
             </div>
             <div class="cfot-img-wrap reveal">
               <img
-                src="./img/fotografiska/03_mobile-landing_countdown.jpg"
+                src="./img/fotografiska/03_mobile-landing_countdown.png"
                 alt="Mobilvy med countdown och uppladdningsflöde"
                 loading="lazy"
                 decoding="async"
@@ -501,20 +511,14 @@
       <!-- ═══════════════════ AI ═══════════════════ -->
       <section class="section-block cfot-section--tint">
         <div class="container">
-          <div class="cfot-ai-grid reveal">
-            <div>
+          <div class="cfot-split reveal">
+            <div class="cfot-split__label">
               <p class="cfot-label" data-i18n="cfot_ai_label">AI som möjliggörare</p>
-              <p style="font-size:1.05rem;line-height:1.8;max-width:460px;" data-i18n="cfot_ai_text">
+            </div>
+            <div>
+              <p style="font-size:1.1rem;line-height:1.75;max-width:580px;" data-i18n="cfot_ai_text">
                 För att kunna ta emot många bidrag används AI för moderering och tematisk sortering — så att utställningen blir trygg, strukturerad och inkluderande.
               </p>
-            </div>
-            <div class="cfot-img-wrap" style="aspect-ratio:4/3;">
-              <img
-                src="./img/fotografiska/04_ai-curation_visual.jpg"
-                alt="Visualisering av AI-stödd bildsortering i teman"
-                loading="lazy"
-                decoding="async"
-              />
             </div>
           </div>
         </div>
@@ -533,15 +537,6 @@
               </p>
             </div>
           </div>
-          <!-- Mockup 05 – full width -->
-          <div class="cfot-img-solo reveal">
-            <img
-              src="./img/fotografiska/05_exhibition_gallery_mockup.jpg"
-              alt="Galleri med projicerade bilder och besökare på Fotografiska"
-              loading="lazy"
-              decoding="async"
-            />
-          </div>
         </div>
       </section>
 
@@ -552,33 +547,23 @@
 
           <div class="cfot-gallery-grid">
 
-            <div class="cfot-gallery-item reveal" data-src="./img/fotografiska/01_mirror-cube_hero.jpg" data-cap-sv="Spegelkub som teaser i stadsmiljö" data-cap-en="Mirror cube teaser in the city">
-              <img src="./img/fotografiska/01_mirror-cube_hero.jpg" alt="Spegelkub med texten Everyone is a Photographer i stadsmiljö" loading="lazy" decoding="async" />
+            <div class="cfot-gallery-item reveal" data-src="./img/fotografiska/01_mirror-cube_hero.png" data-cap-sv="Spegelkub som teaser i stadsmiljö" data-cap-en="Mirror cube teaser in the city">
+              <img src="./img/fotografiska/01_mirror-cube_hero.png" alt="Spegelkub med texten Everyone is a Photographer i stadsmiljö" loading="lazy" decoding="async" />
               <span class="cfot-gallery-item__cap" data-i18n="cfot_cap1">Spegelkub som teaser i stadsmiljö</span>
             </div>
 
-            <div class="cfot-gallery-item reveal" data-src="./img/fotografiska/02_ooh-qr_poster.jpg" data-cap-sv="OOH med tydlig CTA + QR" data-cap-en="OOH with clear CTA + QR">
-              <img src="./img/fotografiska/02_ooh-qr_poster.jpg" alt="Affisch med QR-kod och uppmaning att ladda upp en bild" loading="lazy" decoding="async" />
+            <div class="cfot-gallery-item reveal" data-src="./img/fotografiska/02_ooh-qr_poster.png" data-cap-sv="OOH med tydlig CTA + QR" data-cap-en="OOH with clear CTA + QR">
+              <img src="./img/fotografiska/02_ooh-qr_poster.png" alt="Affisch med QR-kod och uppmaning att ladda upp en bild" loading="lazy" decoding="async" />
               <span class="cfot-gallery-item__cap" data-i18n="cfot_cap2">OOH med tydlig CTA + QR</span>
             </div>
 
-            <div class="cfot-gallery-item reveal" data-src="./img/fotografiska/03_mobile-landing_countdown.jpg" data-cap-sv="Landningssida med countdown" data-cap-en="Landing page countdown">
-              <img src="./img/fotografiska/03_mobile-landing_countdown.jpg" alt="Mobilvy med deadline och uppladdningsflöde" loading="lazy" decoding="async" />
+            <div class="cfot-gallery-item reveal" data-src="./img/fotografiska/03_mobile-landing_countdown.png" data-cap-sv="Landningssida med countdown" data-cap-en="Landing page countdown">
+              <img src="./img/fotografiska/03_mobile-landing_countdown.png" alt="Mobilvy med deadline och uppladdningsflöde" loading="lazy" decoding="async" />
               <span class="cfot-gallery-item__cap" data-i18n="cfot_cap3">Landningssida med countdown</span>
             </div>
 
-            <div class="cfot-gallery-item reveal" data-src="./img/fotografiska/04_ai-curation_visual.jpg" data-cap-sv="AI-stöd för moderering & sortering" data-cap-en="AI-assisted moderation & sorting">
-              <img src="./img/fotografiska/04_ai-curation_visual.jpg" alt="Visualisering av bildsortering i teman" loading="lazy" decoding="async" />
-              <span class="cfot-gallery-item__cap" data-i18n="cfot_cap4">AI-stöd för moderering &amp; sortering</span>
-            </div>
-
-            <div class="cfot-gallery-item reveal" data-src="./img/fotografiska/05_exhibition_gallery_mockup.jpg" data-cap-sv="Utställningen i Fotografiska" data-cap-en="The exhibition at Fotografiska">
-              <img src="./img/fotografiska/05_exhibition_gallery_mockup.jpg" alt="Galleri med visade bilder och besökare" loading="lazy" decoding="async" />
-              <span class="cfot-gallery-item__cap" data-i18n="cfot_cap5">Utställningen i Fotografiska</span>
-            </div>
-
-            <div class="cfot-gallery-item reveal" data-src="./img/fotografiska/06_endframe_see-you.jpg" data-cap-sv="End frame: Vi ses på Fotografiska" data-cap-en="End frame: See you @ Fotografiska">
-              <img src="./img/fotografiska/06_endframe_see-you.jpg" alt="Slutbild med kampanjbudskap" loading="lazy" decoding="async" />
+            <div class="cfot-gallery-item reveal" data-src="./img/fotografiska/06_endframe_see-you.png" data-cap-sv="End frame: Vi ses på Fotografiska" data-cap-en="End frame: See you @ Fotografiska">
+              <img src="./img/fotografiska/06_endframe_see-you.png" alt="Slutbild med kampanjbudskap" loading="lazy" decoding="async" />
               <span class="cfot-gallery-item__cap" data-i18n="cfot_cap6">End frame: "Vi ses på Fotografiska"</span>
             </div>
 
