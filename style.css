@@ -437,6 +437,10 @@ main {
   will-change: transform, opacity;
 }
 
+.hero__name--last {
+  margin-top: 0.18em;
+}
+
 .hero__role,
 .hero__school {
   font-size: 0.92rem;

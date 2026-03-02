@@ -86,11 +86,11 @@
             </div>
 
             <div class="plugin-next__gate" id="pluginGateForm">
-              <p class="plugin-next__gate-label" data-i18n="plg_gate_label">Enter your LinkedIn username to unlock both plugins</p>
+              <p class="plugin-next__gate-heading" data-i18n="plg_gate_heading">SKRIV IN DITT LINKEDIN-ANVÄNDARNAMN FÖR ATT KUNNA LADDA NER MINA PLUGINS, CONNECTAR GÄRNA MED DIG!</p>
               <div class="plugin-next__input-row">
                 <span class="plugin-next__li-prefix">linkedin.com/in/</span>
-                <input id="linkedinInput" class="plugin-next__input" type="text" placeholder="your-name" data-i18n-placeholder="plg_gate_placeholder" autocomplete="off" />
-                <button class="plugin-next__btn" id="pluginUnlockBtn" type="button" data-i18n="plg_unlock_btn">Unlock →</button>
+                <input id="linkedinInput" class="plugin-next__input" type="text" placeholder="ditt-namn" data-i18n-placeholder="plg_gate_placeholder" autocomplete="off" />
+                <button class="plugin-next__btn" id="pluginUnlockBtn" type="button" data-i18n="plg_unlock_btn">LADDA NER</button>
               </div>
             </div>
           </div>
@@ -342,14 +342,34 @@
         .plg-install--shared { padding: 40px 0 56px; margin-top: 0; }
 
         /* Gate */
-        .plugin-next__gate { padding: 0; border-bottom: none; }
-        .plugin-next__gate-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 14px; }
-        .plugin-next__input-row { display: flex; align-items: center; max-width: 480px; background: #fff; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; margin-bottom: 12px; box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
-        .plugin-next__li-prefix { font-size: 0.82rem; color: var(--muted); padding: 0 10px 0 14px; white-space: nowrap; user-select: none; }
-        .plugin-next__input { flex: 1; background: transparent; border: none; outline: none; color: var(--ink); font-size: 0.95rem; padding: 13px 10px 13px 0; font-family: var(--font-body); }
-        .plugin-next__input::placeholder { color: #b0aba4; }
-        .plugin-next__btn { background: var(--ink); color: #fff; font-size: 0.82rem; font-weight: 700; letter-spacing: 0.06em; padding: 13px 20px; border: none; cursor: pointer; white-space: nowrap; transition: opacity 0.2s; }
-        .plugin-next__btn:hover { opacity: 0.82; }
+        .plugin-next__gate {
+          background: #0d1b2e;
+          border-radius: 0;
+          padding: 40px 36px;
+          border-bottom: none;
+        }
+        .plugin-next__gate-heading {
+          font-size: 0.88rem;
+          font-weight: 600;
+          letter-spacing: 0.12em;
+          text-transform: uppercase;
+          color: rgba(255,255,255,0.7);
+          line-height: 1.55;
+          margin-bottom: 20px;
+        }
+        .plugin-next__input-row {
+          display: flex;
+          align-items: stretch;
+          background: #fff;
+          border-radius: 0;
+          overflow: hidden;
+          margin-bottom: 12px;
+        }
+        .plugin-next__li-prefix { font-size: 0.88rem; color: #888; padding: 0 10px 0 16px; white-space: nowrap; user-select: none; display: flex; align-items: center; }
+        .plugin-next__input { flex: 1; background: transparent; border: none; outline: none; color: #111; font-size: 0.95rem; padding: 14px 10px 14px 0; font-family: var(--font-body); }
+        .plugin-next__input::placeholder { color: #bbb; }
+        .plugin-next__btn { background: #5b6eb5; color: #fff; font-size: 0.82rem; font-weight: 900; letter-spacing: 0.12em; text-transform: uppercase; padding: 14px 22px; border: none; cursor: pointer; white-space: nowrap; transition: opacity 0.2s; }
+        .plugin-next__btn:hover { opacity: 0.85; }
         .plugin-next__note { font-size: 0.78rem; color: var(--muted); }
         .plugin-next__gate.is-hidden { display: none; }
         .plugin-next__welcome-bar { font-size: 0.9rem; color: var(--muted); padding: 20px 0; border-bottom: 1px solid var(--line); margin-bottom: 0; }
