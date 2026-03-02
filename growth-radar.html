@@ -18,11 +18,12 @@
       })(window, document, "script", "dataLayer", "GTM-PGNG2H2P");
     </script>
     <!-- End Google Tag Manager -->
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin/>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="./style.css" />
 
     <script id="tailwind-config">
@@ -103,6 +104,15 @@
 
         .tag-live { background: #eff6ff; color: #2563eb; border: 1px solid #bfdbfe; }
 
+        .back-link {
+            background: none; box-shadow: none; border: none; padding: 0;
+            height: auto; min-width: 0; border-radius: 0;
+            font-size: 0.82rem; font-weight: 500; color: #94a3b8;
+            letter-spacing: 0.06em; margin-bottom: 0; text-decoration: none;
+            display: inline-block;
+        }
+        .back-link:hover { box-shadow: none; transform: none; color: #0f172a; }
+
 </style>
 </head>
 <body class="flex flex-col min-h-screen">
@@ -138,35 +148,35 @@
       <a href="index#contact" data-i18n="nav_contact">Kontakt</a>
     </nav>
 
-    <main class="flex-1 space-y-8" style="max-width: var(--max); margin: 0 auto; padding: calc(var(--header-height) + 2rem) var(--pad) 2rem;">
+    <main class="flex-1 space-y-8" style="max-width: var(--max); margin: 0 auto; width: 100%; padding: calc(var(--header-height) + 2rem) var(--pad) 3rem;">
 
         <!-- BACK -->
         <div>
-            <a href="index#mini" class="inline-flex items-center gap-2 px-4 py-2 bg-white border border-slate-200 rounded-lg shadow-sm hover:shadow-md transition-all text-sm font-bold text-slate-700">
-                <span data-i18n="back_to_mini">← Tillbaka till små projekt</span>
-            </a>
+            <a href="index#top" class="back-link" data-i18n="back_to_mini">← Tillbaka till start</a>
         </div>
 
         <!-- HERO -->
-        <div class="flex flex-col md:flex-row justify-between items-start gap-6 pb-2 border-b border-slate-200">
-            <div class="flex-1 min-w-0">
-                <p class="section-label mb-3">Performance &amp; Growth Marketing</p>
-                <h1 class="text-4xl md:text-5xl font-bold mb-3 tracking-tight">Growth Radar</h1>
-                <p class="text-slate-500 text-sm leading-relaxed" data-i18n-html="gr_desc">
-                    Jag har byggt en Growth Radar som plockar upp vad som rör sig just nu inom e-handel, sociala medier och tech i realtid. Den drar insikter direkt från Google Trends, Reddit och Hacker News. Om du fastnat och behöver inspiration, vill se vad folk faktiskt pratar om, eller snabbt få koll på senaste inom Meta och AI så kan du kika här!
-                </p>
-            </div>
-            <div class="flex flex-col items-start md:items-end gap-3 shrink-0 pt-1">
-                <div class="flex items-center gap-2">
-                    <div class="pulse-dot"></div>
-                    <span class="text-xs text-slate-400">Live &middot;</span>
-                    <span id="updatedAt" class="text-slate-700 text-xs font-bold">--</span>
+        <div class="pb-6 border-b border-slate-200">
+            <div class="flex justify-between items-start gap-6 mb-4">
+                <div>
+                    <p class="section-label mb-3">Performance &amp; Growth Marketing</p>
+                    <h1 class="text-4xl md:text-5xl font-bold tracking-tight">Growth Radar</h1>
                 </div>
-                <button id="refreshBtn" class="flex items-center gap-2 px-5 py-2.5 bg-slate-900 text-white text-xs font-bold rounded-full hover:bg-slate-800 transition-all">
-                    <span class="material-symbols-outlined text-sm">refresh</span>
-                    <span data-i18n="gr_refresh">Uppdatera allt</span>
-                </button>
+                <div class="flex flex-col items-end gap-3 shrink-0 pt-1">
+                    <div class="flex items-center gap-2">
+                        <div class="pulse-dot"></div>
+                        <span class="text-xs text-slate-400">Live &middot;</span>
+                        <span id="updatedAt" class="text-slate-700 text-xs font-bold">--</span>
+                    </div>
+                    <button id="refreshBtn" class="flex items-center gap-2 px-5 py-2.5 bg-slate-900 text-white text-xs font-bold rounded-full hover:bg-slate-800 transition-all">
+                        <span class="material-symbols-outlined text-sm">refresh</span>
+                        <span data-i18n="gr_refresh">Uppdatera allt</span>
+                    </button>
+                </div>
             </div>
+            <p class="text-slate-500 text-sm leading-relaxed" data-i18n-html="gr_desc">
+                Jag har byggt en Growth Radar som plockar upp vad som rör sig just nu inom e-handel, sociala medier och tech i realtid. Den drar insikter direkt från Google Trends, Reddit och Hacker News. Om du fastnat och behöver inspiration, vill se vad folk faktiskt pratar om, eller snabbt få koll på senaste inom Meta och AI så kan du kika här!
+            </p>
         </div>
 
         <!-- ROW 1: Trends + AI-nyheter -->
