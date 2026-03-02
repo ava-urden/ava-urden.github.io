@@ -259,6 +259,7 @@ const dict = {
     mini1_pill_2: "Growth Tech",
     mini1_pill_3: "Gratis",
     mini1_download: "Ladda ner gratis",
+    plg_privacy_note: "Ingen data skickas till externa servrar,<br>läs gärna <strong>Integritetspolicy →</strong>",
     mini1_install_note: "Manuell installation krävs (Developer mode i Chrome).",
     mini1_install_title: "Installera i Chrome",
     mini1_install_list:
@@ -295,6 +296,7 @@ const dict = {
     plg_tasklist_install_hint: "Installera precis som TabManager – packa upp och ladda in i chrome://extensions.",
     modal_close: "Stäng",
     privacy_both_title: "Integritetspolicy – TabManager & Tasklist",
+    privacy_plugins_title: "Integritetspolicy – Plugins",
     privacy_both_intro:
       "Båda plugins lagrar data lokalt i webbläsaren. Ingen data skickas till externa servrar.",
     privacy_both_updated: "Senast uppdaterad: 1 mars 2026.",
@@ -955,6 +957,7 @@ const dict = {
     mini1_pill_2: "Growth Tech",
     mini1_pill_3: "Free",
     mini1_download: "Download for free",
+    plg_privacy_note: "No data is sent to external servers,<br>feel free to read the <strong>Privacy policy →</strong>",
     mini1_install_note: "Manual installation required (Developer mode in Chrome).",
     mini1_install_title: "Install in Chrome",
     mini1_install_list:
@@ -990,6 +993,7 @@ const dict = {
     plg_tasklist_install_hint: "Install just like TabManager – unpack and load into chrome://extensions.",
     modal_close: "Close",
     privacy_both_title: "Privacy Policy – TabManager & Tasklist",
+    privacy_plugins_title: "Privacy Policy – Plugins",
     privacy_both_intro:
       "Both plugins store data locally in the browser. No data is sent to external servers.",
     privacy_both_updated: "Last updated: March 1, 2026.",

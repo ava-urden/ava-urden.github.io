@@ -174,16 +174,20 @@
               </div>
             </div>
 
-            <!-- Shared install instructions -->
-            <div class="plg-install plg-install--shared">
-              <p class="plg-install__label" data-i18n="mini1_install_title">Install in Chrome</p>
-              <ol class="mini-steps" data-i18n-html="mini1_install_list">
-                <li>Download the zip file and unzip it.</li>
-                <li>Open <strong>chrome://extensions</strong> in Chrome.</li>
-                <li>Enable <strong>Developer mode</strong>.</li>
-                <li>Click <strong>Load unpacked</strong> and select the folder.</li>
-              </ol>
-              <button class="mini-detail__link" type="button" data-modal-open="privacy-modal" style="margin-top: 16px;">Privacy policy →</button>
+            <!-- Shared install + privacy banner -->
+            <div class="plg-install-banner">
+              <div class="plg-install-banner__steps">
+                <p class="plg-install__label" data-i18n="mini1_install_title">Installera i Chrome</p>
+                <ol class="mini-steps" data-i18n-html="mini1_install_list">
+                  <li>Ladda ner zipfilen och packa upp den.</li>
+                  <li>Öppna chrome://extensions i Chrome.</li>
+                  <li>Slå på Developer mode.</li>
+                  <li>Klicka Load unpacked och välj mappen.</li>
+                </ol>
+              </div>
+              <button class="plg-install-banner__privacy" type="button" data-modal-open="privacy-modal">
+                <span data-i18n-html="plg_privacy_note">Ingen data skickas till externa servrar,<br>läs gärna <strong>Privacy policy →</strong></span>
+              </button>
             </div>
 
           </div><!-- /plg-list -->
@@ -191,18 +195,39 @@
       </section>
 
       <style>
+        /* Strip button styling from back-link on this page */
+        .back-link {
+          background: none;
+          box-shadow: none;
+          border: none;
+          padding: 0;
+          height: auto;
+          min-width: 0;
+          border-radius: 0;
+          font-size: 0.82rem;
+          font-weight: 500;
+          color: var(--muted);
+          letter-spacing: 0.06em;
+          margin-bottom: 16px;
+        }
+        .back-link:hover {
+          box-shadow: none;
+          transform: none;
+          color: var(--ink);
+        }
+
         /* ── Hero + gate 2-col layout ── */
         .plg-top {
           display: grid;
           grid-template-columns: 1fr 1fr;
           gap: 48px;
           align-items: center;
-          padding: 56px 0 64px;
+          padding: 28px 0 64px;
           border-bottom: 1px solid var(--line);
           margin-bottom: 0;
         }
         @media (max-width: 700px) {
-          .plg-top { grid-template-columns: 1fr; gap: 32px; padding: 40px 0 48px; }
+          .plg-top { grid-template-columns: 1fr; gap: 32px; padding: 20px 0 48px; }
         }
 
         /* ── Page hero (left col) ── */
@@ -336,6 +361,43 @@
         .plg-row__mock--icon { max-width: 120px; display: flex; align-items: flex-start; }
         .plg-row__mock--icon img { border-radius: 20px; }
 
+        /* Install banner */
+        .plg-install-banner {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          margin-top: 0;
+          border-top: 1px solid var(--line);
+        }
+        .plg-install-banner__steps {
+          background: #0d1b2e;
+          padding: 40px 44px;
+        }
+        .plg-install-banner__steps .plg-install__label {
+          color: rgba(255,255,255,0.55);
+        }
+        .plg-install-banner__steps .mini-steps {
+          color: #fff;
+        }
+        .plg-install-banner__privacy {
+          background: linear-gradient(135deg, #4a5fa8 0%, #6b7fc4 100%);
+          border: none;
+          cursor: pointer;
+          padding: 40px 44px;
+          text-align: left;
+          font-size: 0.88rem;
+          font-weight: 600;
+          letter-spacing: 0.08em;
+          text-transform: uppercase;
+          color: #fff;
+          line-height: 1.5;
+          transition: opacity 0.2s;
+        }
+        .plg-install-banner__privacy:hover { opacity: 0.88; }
+        .plg-install-banner__privacy strong { font-weight: 900; }
+        @media (max-width: 700px) {
+          .plg-install-banner { grid-template-columns: 1fr; }
+        }
+
         /* Install */
         .plg-install { border-top: 1px solid var(--line); padding-top: 28px; }
         .plg-install__label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); margin-bottom: 14px; }
@@ -427,20 +489,20 @@
           <span class="privacy-modal__close-icon" aria-hidden="true">&times;</span>
           <span class="sr-only" data-i18n="modal_close">Stäng</span>
         </button>
-        <h3 id="privacy-modal-title" data-i18n="privacy_tabless_title">Integritetspolicy – TabManager</h3>
-        <p data-i18n="privacy_tabless_intro">
-          TabManager lagrar dina samlingar lokalt i webbläsaren. Ingen data skickas till externa servrar.
+        <h3 id="privacy-modal-title" data-i18n="privacy_plugins_title">Integritetspolicy – Plugins</h3>
+        <p data-i18n="privacy_both_intro">
+          Båda plugins lagrar data lokalt i webbläsaren. Ingen data skickas till externa servrar.
         </p>
+
         <div class="privacy-modal__section">
-          <h4 data-i18n="privacy_tabless_data_title">Data som lagras</h4>
+          <h4 data-i18n="privacy_tabless_heading">TabManager</h4>
+          <p style="font-size:0.82rem;color:var(--muted);margin-bottom:10px;" data-i18n="privacy_tabless_data_title">Data som lagras</p>
           <ul class="bullet-list" data-i18n-html="privacy_tabless_data_list">
             <li>Sparade flikar: URL, titel och ev. bild/metadata</li>
             <li>Samlingar/mappar och inställningar</li>
             <li>Widget-position per webbplats</li>
           </ul>
-        </div>
-        <div class="privacy-modal__section">
-          <h4 data-i18n="privacy_tabless_permissions_title">Behörigheter</h4>
+          <p style="font-size:0.82rem;color:var(--muted);margin:14px 0 10px;" data-i18n="privacy_tabless_permissions_title">Behörigheter</p>
           <ul class="bullet-list" data-i18n-html="privacy_tabless_permissions_list">
             <li><strong>tabs:</strong> läsa titel/URL och öppna sparade flikar</li>
             <li><strong>storage:</strong> spara samlingar lokalt</li>
@@ -449,6 +511,20 @@
             <li><strong>host permissions (http/https):</strong> visa pin-widget och läsa sidans metadata när du sparar</li>
           </ul>
         </div>
+
+        <div class="privacy-modal__section">
+          <h4 data-i18n="privacy_tasklist_heading">Tasklist</h4>
+          <p style="font-size:0.82rem;color:var(--muted);margin-bottom:10px;" data-i18n="privacy_tasklist_data_title">Data som lagras</p>
+          <ul class="bullet-list" data-i18n-html="privacy_tasklist_data_list">
+            <li>Uppgifter: titel, prioritet och status</li>
+            <li>Inställningar och preferenser</li>
+          </ul>
+          <p style="font-size:0.82rem;color:var(--muted);margin:14px 0 10px;" data-i18n="privacy_tasklist_permissions_title">Behörigheter</p>
+          <ul class="bullet-list" data-i18n-html="privacy_tasklist_permissions_list">
+            <li><strong>storage:</strong> spara uppgifter lokalt i webbläsaren</li>
+          </ul>
+        </div>
+
         <div class="privacy-modal__section">
           <h4 data-i18n="privacy_tabless_sharing_title">Delning & analys</h4>
           <p data-i18n="privacy_tabless_sharing_body">
