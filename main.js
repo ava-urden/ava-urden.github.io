@@ -699,7 +699,102 @@ const dict = {
     c6_gallery_title: "Grafiskt material",
     c6_gallery_body: "Mockups och slides från konceptet.",
     c6_gallery_cap_1: "Experternas boktips – vy",
-    c6_gallery_cap_2: "Målbild"
+    c6_gallery_cap_2: "Målbild",
+
+    // Case ADM – A Day's March
+    caseadm_title: "A Day's March",
+    caseadm_sum: "Performance Marketing Expansion.",
+    cadm_hero_title: "A Day's March – Performance i nya storstäder",
+    cadm_hero_body:
+      "Strategi för att bygga awareness i nya marknader och driva en funnel som kan optimeras hela vägen mot köp. Performance-strategi, kanalplan, creative direction och measurement.",
+    cadm_overview_title: "Översikt",
+    cadm_overview_list:
+      "<li><strong>Mål:</strong> Awareness i nya storstäder + köpfunnel.</li><li><strong>Roll:</strong> Performance-strategi, kanalplan, creative direction, testplan, measurement.</li>",
+    cadm_channels_title: "Kanalmix",
+    cadm_channels_list:
+      "<li>Meta (awareness + retargeting)</li><li>Google (intent)</li><li>CRM (nurture / retention)</li>",
+    cadm_deliverables_title: "Leverabler",
+    cadm_deliverables_list:
+      "<li>Creative system (3 pelare)</li><li>Funnel-upplägg</li><li>4-veckors testplan</li><li>Measurement-ramverk</li>",
+    cadm_challenge_title: "Utmaning",
+    cadm_challenge_body:
+      "<p>Nya marknader kräver att vi snabbt skapar kännedom och relevans utan att bli \u201Cför säljiga\u201D. Kunder som aldrig hört talas om varumärket behöver möta det i rätt kontext, med rätt budskap – i rätt ordning.</p><p>Samtidigt måste vi bygga ett system där awareness-content faktiskt leder vidare till consideration och konvertering. Varje kreativt uttag behöver fylla en funktion i funneln.</p>",
+    cadm_system_title: "Lösning: Creative system",
+    cadm_system_intro:
+      "Jag byggde ett enkelt men tydligt creative-system med 3 pelare som matchar en performance-funnel. Varje pelare har ett tydligt syfte: stoppkraft, förtroende eller identifikation.",
+    cadm_pillar_label_1: "Pelare 01",
+    cadm_pillar_1_title: "Outfit utility",
+    cadm_pillar_1_body:
+      "Värde först. Ger direkt nytta (\u201Cså kan du styla den\u201D) vilket driver högre attention och engagemang.",
+    cadm_pillar_label_2: "Pelare 02",
+    cadm_pillar_2_title: "Product proof",
+    cadm_pillar_2_body:
+      "Minskar osäkerhet. Visar kvalitet visuellt (detaljer, material), bygger förtroende tidigt så fler vågar klicka vidare.",
+    cadm_pillar_label_3: "Pelare 03",
+    cadm_pillar_3_title: "City lifestyle",
+    cadm_pillar_3_body:
+      "Identitet + kontext. Kopplar plagget till en tydlig situation (pendling / office / weekend) och säljer en livsstil, inte bara en produkt.",
+    cadm_p1_why_title: "1) Outfit utility = stoppkraft + sparvärde",
+    cadm_p1_why_body:
+      "Det funkar för awareness eftersom det ger direkt nytta – \u201Cså kan du styla den\u201D. Det driver högre attention och engagemang redan vid första exponeringen, och ger kunden en anledning att spara eller dela annonsen.",
+    cadm_cap_1: "Uttag #1 – Carousel: 1 plagg, 3 outfits",
+    cadm_cap_2: "Uttag #2 – Detaljerna som bygger förtroende",
+    cadm_cap_3: "Uttag #3 – Kontor till middag, samma outfit",
+    cadm_placeholder_1: "UTTAG #1 – Carousel \"1 jacka, 3 looks\"\nBild / Mockup läggs in här",
+    cadm_p2_why_title: "2) Product proof = premium blir synligt",
+    cadm_p2_why_body:
+      "Det funkar eftersom det visar kvalitet visuellt – detaljer, material, finish. Det bygger förtroende tidigt i funneln och gör att fler vågar klicka vidare, även hos den som aldrig hört talas om varumärket.",
+    cadm_placeholder_2: "UTTAG #2 – \"Product proof / Detaljerna\"\nBild / Mockup läggs in här",
+    cadm_p3_why_title: "3) City lifestyle = \u201Cdet där är jag\u201D",
+    cadm_p3_why_body:
+      "Det funkar för awareness eftersom det kopplar plagget till en tydlig situation – pendling, office, weekend. Det säljer en identitet, inte bara en produkt, och skapar den igenkänning som driver nästa steg i funneln.",
+    cadm_placeholder_3: "UTTAG #3 – \"City uniform / Pendlar-looken\"\nBild / Mockup läggs in här",
+    cadm_funnel_title: "Funnel-upplägg",
+    cadm_funnel_intro:
+      "Så här är kanalerna kopplade till varandra – från första kontakt till köp och återköp.",
+    cadm_funnel_step_1: "Prospecting\nUtility + Lifestyle",
+    cadm_funnel_step_2: "Retargeting\nProduct proof + Bestsellers",
+    cadm_funnel_step_3: "Google Search\nFångar intent",
+    cadm_funnel_step_4: "LP → PDP → ATC\nCheckout",
+    cadm_funnel_step_5: "Purchase",
+    cadm_funnel_loop: "↩ CRM driver tillbaka till köp (nurture / retention)",
+    cadm_funnel_diagram: "Funnel-diagram: Ad → LP → PDP → ATC → Checkout → Purchase (+ CRM loop)\nIllustration läggs in här",
+    cadm_measurement_title: "Measurement",
+    cadm_measurement_body: "KPI:er strukturerade efter funnelsteg – från awareness till köp.",
+    cadm_metric_1_title: "Awareness",
+    cadm_metric_1_body: "Reach, CPM, CTR / swipe-through rate",
+    cadm_metric_2_title: "Consideration",
+    cadm_metric_2_body: "LPV, PDP views, Add to Cart",
+    cadm_metric_3_title: "Conversion",
+    cadm_metric_3_body: "CPA, ROAS / MER, CVR, AOV",
+    cadm_metric_4_title: "Retention",
+    cadm_metric_4_body: "CRM open rate, repeat purchase rate",
+    cadm_dashboard_placeholder: "Mini-dashboard / mätplan-bild läggs in här",
+    cadm_test_title: "Testplan – 4 veckor",
+    cadm_test_intro: "Varje vecka har ett tydligt fokus och ett beslut som tas baserat på data.",
+    cadm_test_principle: "Princip",
+    cadm_test_principle_list:
+      "<li><strong>Primär KPI:</strong> CTR / swipe-through (v1–2), CPA (v3–4)</li><li><strong>Beslut:</strong> tas varje vecka</li><li><strong>Budget:</strong> flyttas till vinnande stad + pelare</li>",
+    cadm_test_col_week: "Vecka",
+    cadm_test_col_hypothesis: "Hypotes",
+    cadm_test_col_creative: "Uttag",
+    cadm_test_col_kpi: "KPI",
+    cadm_test_col_decision: "Beslut",
+    cadm_test_w1_h: "Utility driver mer engagement än lifestyle i cold prospecting",
+    cadm_test_w1_c: "Utility vs Lifestyle",
+    cadm_test_w1_d: "Välj vinnande hook",
+    cadm_test_w2_h: "Vinnande hook + ny overlay ökar CTR ytterligare",
+    cadm_test_w2_c: "Vinnande pelare × 2 overlay-varianter",
+    cadm_test_w2_d: "Låsning av bästa creative",
+    cadm_test_w3_h: "Product proof driver fler ATC än fit/trygghet i retargeting",
+    cadm_test_w3_c: "Proof vs Fit/trygghet",
+    cadm_test_w3_d: "Välj retargeting-pelare",
+    cadm_test_w4_h: "Vinnande stad + pelare ger lägst CPA",
+    cadm_test_w4_c: "Full funnel i vinnande stad",
+    cadm_test_w4_d: "Flytta budget dit",
+    cadm_summary_title: "Sammanfattning",
+    cadm_summary_body:
+      "Systemet är designat för att vara enkelt att förstå men kraftfullt att optimera. Tre kreativa pelare täcker hela funneln – från stoppkraft och förtroende till identifikation. Kombinerat med en tydlig testplan och ett mätramverk gör det att varje investerad krona kan spåras och optimeras, vecka för vecka."
   },
 
   en: {
@@ -1396,7 +1491,102 @@ const dict = {
     c6_gallery_title: "Visuals",
     c6_gallery_body: "Mockups and slides from the concept.",
     c6_gallery_cap_1: "Expert Book Picks – view",
-    c6_gallery_cap_2: "Goal"
+    c6_gallery_cap_2: "Goal",
+
+    // Case ADM – A Day's March
+    caseadm_title: "A Day's March",
+    caseadm_sum: "Performance Marketing Expansion.",
+    cadm_hero_title: "A Day's March – Performance in New Cities",
+    cadm_hero_body:
+      "Strategy to build awareness in new markets and drive a funnel optimizable all the way to purchase. Performance strategy, channel plan, creative direction, and measurement.",
+    cadm_overview_title: "Overview",
+    cadm_overview_list:
+      "<li><strong>Goal:</strong> Awareness in new cities + purchase funnel.</li><li><strong>Role:</strong> Performance strategy, channel plan, creative direction, test plan, measurement.</li>",
+    cadm_channels_title: "Channel mix",
+    cadm_channels_list:
+      "<li>Meta (awareness + retargeting)</li><li>Google (intent)</li><li>CRM (nurture / retention)</li>",
+    cadm_deliverables_title: "Deliverables",
+    cadm_deliverables_list:
+      "<li>Creative system (3 pillars)</li><li>Funnel structure</li><li>4-week test plan</li><li>Measurement framework</li>",
+    cadm_challenge_title: "Challenge",
+    cadm_challenge_body:
+      "<p>New markets require us to quickly build recognition and relevance without feeling \u201Ctoo salesy\u201D. Customers who have never heard of the brand need to encounter it in the right context, with the right message \u2013 in the right order.</p><p>At the same time, we need to build a system where awareness content actually leads further into consideration and conversion. Every creative execution needs to serve a purpose in the funnel.</p>",
+    cadm_system_title: "Solution: Creative system",
+    cadm_system_intro:
+      "I built a simple but clear creative system with 3 pillars that match a performance funnel. Each pillar has a clear purpose: stopping power, trust, or identity.",
+    cadm_pillar_label_1: "Pillar 01",
+    cadm_pillar_1_title: "Outfit utility",
+    cadm_pillar_1_body:
+      "Value first. Gives immediate benefit (\u201Chow to style it\u201D), driving higher attention and engagement.",
+    cadm_pillar_label_2: "Pillar 02",
+    cadm_pillar_2_title: "Product proof",
+    cadm_pillar_2_body:
+      "Reduces uncertainty. Shows quality visually (details, materials), builds trust early so more people dare to click through.",
+    cadm_pillar_label_3: "Pillar 03",
+    cadm_pillar_3_title: "City lifestyle",
+    cadm_pillar_3_body:
+      "Identity + context. Connects the garment to a clear situation (commute / office / weekend) and sells a lifestyle, not just a product.",
+    cadm_p1_why_title: "1) Outfit utility = stopping power + save value",
+    cadm_p1_why_body:
+      "It works for awareness because it gives immediate value \u2013 \u201Chow to style it\u201D. It drives higher attention and engagement from the first impression, and gives customers a reason to save or share the ad.",
+    cadm_cap_1: "Execution #1 – Carousel: 1 garment, 3 outfits",
+    cadm_cap_2: "Execution #2 – The details that build trust",
+    cadm_cap_3: "Execution #3 – Office to dinner, same outfit",
+    cadm_placeholder_1: "EXECUTION #1 – Carousel \"1 jacket, 3 looks\"\nImage / Mockup added here",
+    cadm_p2_why_title: "2) Product proof = premium becomes visible",
+    cadm_p2_why_body:
+      "It works because it shows quality visually \u2013 details, materials, finish. It builds trust early in the funnel and makes more people willing to click through, even those who have never heard of the brand.",
+    cadm_placeholder_2: "EXECUTION #2 – \"Product proof / The details\"\nImage / Mockup added here",
+    cadm_p3_why_title: "3) City lifestyle = \u201Cthat\u2019s me\u201D",
+    cadm_p3_why_body:
+      "It works for awareness because it connects the garment to a clear situation \u2013 commute, office, weekend. It sells an identity, not just a product, and creates the recognition that drives the next step in the funnel.",
+    cadm_placeholder_3: "EXECUTION #3 – \"City uniform / The commuter look\"\nImage / Mockup added here",
+    cadm_funnel_title: "Funnel structure",
+    cadm_funnel_intro:
+      "How the channels connect \u2013 from first touch to purchase and retention.",
+    cadm_funnel_step_1: "Prospecting\nUtility + Lifestyle",
+    cadm_funnel_step_2: "Retargeting\nProduct proof + Bestsellers",
+    cadm_funnel_step_3: "Google Search\nCaptures intent",
+    cadm_funnel_step_4: "LP \u2192 PDP \u2192 ATC\nCheckout",
+    cadm_funnel_step_5: "Purchase",
+    cadm_funnel_loop: "↩ CRM drives back to purchase (nurture / retention)",
+    cadm_funnel_diagram: "Funnel diagram: Ad → LP → PDP → ATC → Checkout → Purchase (+ CRM loop)\nIllustration added here",
+    cadm_measurement_title: "Measurement",
+    cadm_measurement_body: "KPIs structured by funnel stage \u2013 from awareness to purchase.",
+    cadm_metric_1_title: "Awareness",
+    cadm_metric_1_body: "Reach, CPM, CTR / swipe-through rate",
+    cadm_metric_2_title: "Consideration",
+    cadm_metric_2_body: "LPV, PDP views, Add to Cart",
+    cadm_metric_3_title: "Conversion",
+    cadm_metric_3_body: "CPA, ROAS / MER, CVR, AOV",
+    cadm_metric_4_title: "Retention",
+    cadm_metric_4_body: "CRM open rate, repeat purchase rate",
+    cadm_dashboard_placeholder: "Mini-dashboard / measurement plan image added here",
+    cadm_test_title: "Test plan \u2013 4 weeks",
+    cadm_test_intro: "Each week has a clear focus and a data-driven decision.",
+    cadm_test_principle: "Principle",
+    cadm_test_principle_list:
+      "<li><strong>Primary KPI:</strong> CTR / swipe-through (wk 1\u20132), CPA (wk 3\u20134)</li><li><strong>Decision:</strong> made each week</li><li><strong>Budget:</strong> moved to winning city + pillar</li>",
+    cadm_test_col_week: "Week",
+    cadm_test_col_hypothesis: "Hypothesis",
+    cadm_test_col_creative: "Execution",
+    cadm_test_col_kpi: "KPI",
+    cadm_test_col_decision: "Decision",
+    cadm_test_w1_h: "Utility drives more engagement than lifestyle in cold prospecting",
+    cadm_test_w1_c: "Utility vs Lifestyle",
+    cadm_test_w1_d: "Choose winning hook",
+    cadm_test_w2_h: "Winning hook + new overlay increases CTR further",
+    cadm_test_w2_c: "Winning pillar \u00d7 2 overlay variants",
+    cadm_test_w2_d: "Lock in best creative",
+    cadm_test_w3_h: "Product proof drives more ATC than fit/trust in retargeting",
+    cadm_test_w3_c: "Proof vs Fit/trust",
+    cadm_test_w3_d: "Choose retargeting pillar",
+    cadm_test_w4_h: "Winning city + pillar gives lowest CPA",
+    cadm_test_w4_c: "Full funnel in winning city",
+    cadm_test_w4_d: "Move budget there",
+    cadm_summary_title: "Summary",
+    cadm_summary_body:
+      "The system is designed to be simple to understand but powerful to optimize. Three creative pillars cover the entire funnel \u2013 from stopping power and trust to identity. Combined with a clear test plan and measurement framework, every invested krona can be tracked and optimized, week by week."
   }
 };
 

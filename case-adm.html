@@ -1,0 +1,569 @@
+<!doctype html>
+<html lang="sv">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Case: A Day's March | Ava Urdén</title>
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l !== "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-PGNG2H2P");
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+
+    <style>
+      .case-page--adm {
+        --accent: #2d4a3e;
+        --accent-light: rgba(45, 74, 62, 0.08);
+      }
+
+      .case-page--adm .highlight-section {
+        background: var(--accent-light);
+        border-left: 3px solid var(--accent);
+      }
+
+      .case-page--adm .metric-card {
+        border-top: 2px solid var(--accent);
+      }
+
+      .case-page--adm .case-hero__img img {
+        border-radius: 0;
+      }
+
+      .case-page--adm .grid {
+        max-width: none;
+      }
+
+      .case-page--adm .card-skill {
+        background: #2e3f4e;
+        border: none;
+        border-radius: 0;
+        color: #ffffff;
+      }
+
+      .case-page--adm .highlight-section {
+        border-radius: 0;
+      }
+
+      .case-page--adm .content-showcase {
+        border-radius: 0;
+      }
+
+      .cadm-challenge-cols {
+        columns: 2;
+        column-gap: 32px;
+      }
+
+      @media (max-width: 700px) {
+        .cadm-challenge-cols {
+          columns: 1;
+        }
+      }
+
+      .case-page--adm .card-skill h3 {
+        color: #ffffff;
+      }
+
+      .case-page--adm .card-skill .bullet-list {
+        columns: 1;
+      }
+
+      .case-page--adm .card-skill .bullet-list li {
+        color: rgba(255, 255, 255, 0.85);
+      }
+
+      .case-page--adm .card-skill .bullet-list li::before {
+        background: rgba(255, 255, 255, 0.5);
+      }
+
+      .feature-img--sm img {
+        max-width: 60%;
+        margin: 0 auto;
+        display: block;
+      }
+
+      .intro-text {
+        max-width: 720px;
+        margin: 0 auto 3rem auto;
+      }
+
+      .pillar-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+        margin: 2rem 0;
+      }
+
+      @media (max-width: 700px) {
+        .pillar-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .pillar-card {
+        background: var(--accent-light, rgba(45,74,62,0.06));
+        border: 1px solid rgba(45,74,62,0.15);
+        border-radius: 0;
+        padding: 24px;
+      }
+
+      .pillar-card__number {
+        font-size: 0.65rem;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--accent, #2d4a3e);
+        margin-bottom: 10px;
+      }
+
+      .pillar-card h3 {
+        margin: 0 0 10px;
+        font-size: 1.05rem;
+      }
+
+      .placeholder-block {
+        background: #f0ede8;
+        border: 1.5px dashed #c4bdb5;
+        border-radius: 8px;
+        padding: 36px 24px;
+        text-align: center;
+        color: #a09890;
+        font-size: 0.85rem;
+        letter-spacing: 0.06em;
+        margin: 1.5rem 0;
+      }
+
+      .funnel-row {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        flex-wrap: wrap;
+        margin: 1.5rem 0;
+        font-size: 0.9rem;
+      }
+
+      .funnel-step {
+        background: var(--accent-light, rgba(45,74,62,0.08));
+        border: 1px solid rgba(45,74,62,0.2);
+        border-radius: 0;
+        padding: 8px 14px;
+        font-weight: 700;
+        white-space: nowrap;
+      }
+
+      .funnel-arrow {
+        color: #b0a99f;
+        font-size: 1rem;
+      }
+
+      .funnel-loop {
+        font-size: 0.75rem;
+        color: var(--muted);
+        font-style: italic;
+        margin-top: 8px;
+        width: 100%;
+      }
+
+      .test-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.9rem;
+        margin: 1.5rem 0;
+      }
+
+      .test-table th {
+        font-size: 0.68rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--muted);
+        padding: 0 12px 12px 0;
+        border-bottom: 2px solid rgba(31,27,22,0.12);
+        text-align: left;
+      }
+
+      .test-table td {
+        padding: 12px 12px 12px 0;
+        border-bottom: 1px solid rgba(31,27,22,0.06);
+        vertical-align: top;
+      }
+
+      .test-table tr:last-child td {
+        border-bottom: none;
+      }
+
+      .highlight-table { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+
+      @media (max-width: 800px) {
+        .feature-block.reversed {
+          direction: ltr;
+        }
+        .feature-block .feature-img {
+          order: -1;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="case-page case-page--adm">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-PGNG2H2P"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <header class="header">
+      <div class="container header__inner">
+        <a class="logo" href="index#top" data-i18n="logo_text">A.U. Portfolio</a>
+        <nav class="nav">
+          <a href="index#about" data-i18n="nav_about">Om mig</a>
+          <a href="index#cases" data-i18n="nav_cases">Utvalda projekt</a>
+          <a href="index#skills" data-i18n="nav_skills">Färdigheter</a>
+          <a href="cv" data-i18n="nav_cv">CV</a>
+          <a href="index#contact" data-i18n="nav_contact">Kontakt</a>
+        </nav>
+        <div class="lang">
+          <button class="lang__btn is-active" type="button" data-lang="sv">SV</button>
+          <button class="lang__btn" type="button" data-lang="en">EN</button>
+        </div>
+        <button class="nav-burger" aria-label="Meny" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+    <nav class="mobile-nav" id="mobileNav">
+      <a href="index#about" data-i18n="nav_about">Om mig</a>
+      <a href="index#cases" data-i18n="nav_cases">Utvalda projekt</a>
+      <a href="index#skills" data-i18n="nav_skills">Färdigheter</a>
+      <a href="cv" data-i18n="nav_cv">CV</a>
+      <a href="index#contact" data-i18n="nav_contact">Kontakt</a>
+    </nav>
+
+    <main id="top">
+      <section class="section section-block">
+        <div class="container">
+          <a href="index#top" class="back-link" data-i18n="back_to_cases">← Tillbaka till cases</a>
+
+          <!-- HERO -->
+          <div class="case-hero">
+            <div class="case-hero__content reveal">
+              <h1 class="h-display" data-i18n="cadm_hero_title">A Day's March – Performance i nya storstäder</h1>
+              <p class="hero__p" data-i18n="cadm_hero_body">
+                Strategi för att bygga awareness i nya marknader och driva en funnel som kan optimeras hela vägen mot köp. Performance-strategi, kanalplan, creative direction och measurement.
+              </p>
+            </div>
+            <div class="case-hero__img reveal" style="--delay: 0.1s;">
+              <img
+                src="./img/admbanners.svg"
+                alt="A Day's March – Performance Marketing"
+                decoding="async"
+                fetchpriority="high"
+              />
+            </div>
+          </div>
+
+          <!-- OVERVIEW CARDS -->
+          <div class="grid grid--3">
+            <div class="card-skill reveal">
+              <h3 data-i18n="cadm_overview_title">Översikt</h3>
+              <ul class="bullet-list" data-i18n-html="cadm_overview_list">
+                <li><strong>Mål:</strong> Awareness i nya storstäder + köpfunnel.</li>
+                <li><strong>Roll:</strong> Performance-strategi, kanalplan, creative direction, testplan, measurement.</li>
+              </ul>
+            </div>
+            <div class="card-skill reveal" style="--delay: 0.05s;">
+              <h3 data-i18n="cadm_channels_title">Kanalmix</h3>
+              <ul class="bullet-list" data-i18n-html="cadm_channels_list">
+                <li>Meta (awareness + retargeting)</li>
+                <li>Google (intent)</li>
+                <li>CRM (nurture / retention)</li>
+              </ul>
+            </div>
+            <div class="card-skill reveal" style="--delay: 0.1s;">
+              <h3 data-i18n="cadm_deliverables_title">Leverabler</h3>
+              <ul class="bullet-list" data-i18n-html="cadm_deliverables_list">
+                <li>Creative system (3 pelare)</li>
+                <li>Funnel-upplägg</li>
+                <li>4-veckors testplan</li>
+                <li>Measurement-ramverk</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- CHALLENGE -->
+          <div class="highlight-section reveal">
+            <div class="big-stat" data-i18n="cadm_challenge_title">Utmaning</div>
+            <div class="cadm-challenge-cols" data-i18n-html="cadm_challenge_body">
+              <p>Nya marknader kräver att vi snabbt skapar kännedom och relevans utan att bli "för säljiga". Kunder som aldrig hört talas om varumärket behöver möta det i rätt kontext, med rätt budskap – i rätt ordning.</p>
+              <p>Samtidigt måste vi bygga ett system där awareness-content faktiskt leder vidare till consideration och konvertering. Varje kreativt uttag behöver fylla en funktion i funneln.</p>
+            </div>
+          </div>
+
+          <!-- CREATIVE SYSTEM -->
+          <div class="case-stack">
+            <div class="intro-text reveal">
+              <h2 class="h-display" data-i18n="cadm_system_title">Lösning: Creative system</h2>
+              <p data-i18n="cadm_system_intro">
+                Jag byggde ett enkelt men tydligt creative-system med 3 pelare som matchar en performance-funnel. Varje pelare har ett tydligt syfte: stoppkraft, förtroende eller identifikation.
+              </p>
+            </div>
+
+            <div class="pillar-grid reveal">
+              <div class="pillar-card">
+                <div class="pillar-card__number" data-i18n="cadm_pillar_label_1">Pelare 01</div>
+                <h3 data-i18n="cadm_pillar_1_title">Outfit utility</h3>
+                <p data-i18n="cadm_pillar_1_body">Värde först. Ger direkt nytta ("så kan du styla den") vilket driver högre attention och engagemang.</p>
+              </div>
+              <div class="pillar-card">
+                <div class="pillar-card__number" data-i18n="cadm_pillar_label_2">Pelare 02</div>
+                <h3 data-i18n="cadm_pillar_2_title">Product proof</h3>
+                <p data-i18n="cadm_pillar_2_body">Minskar osäkerhet. Visar kvalitet visuellt (detaljer, material), bygger förtroende tidigt så fler vågar klicka vidare.</p>
+              </div>
+              <div class="pillar-card">
+                <div class="pillar-card__number" data-i18n="cadm_pillar_label_3">Pelare 03</div>
+                <h3 data-i18n="cadm_pillar_3_title">City lifestyle</h3>
+                <p data-i18n="cadm_pillar_3_body">Identitet + kontext. Kopplar plagget till en tydlig situation (pendling / office / weekend) och säljer en livsstil, inte bara en produkt.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- PILLAR 1 FEATURE -->
+          <div class="feature-block reveal">
+            <div class="text-content-side">
+              <h3 data-i18n="cadm_p1_why_title">1) Outfit utility = stoppkraft + sparvärde</h3>
+              <p data-i18n="cadm_p1_why_body">
+                Det funkar för awareness eftersom det ger direkt nytta – "så kan du styla den". Det driver högre attention och engagemang redan vid första exponeringen, och ger kunden en anledning att spara eller dela annonsen.
+              </p>
+            </div>
+            <div class="feature-img">
+              <img
+                src="./img/outfit-utility.png"
+                alt="Carousel: 1 jacka stylad på 3 olika sätt – visar plaggets mångsidighet för kontor, helg och kväll"
+                loading="lazy"
+                decoding="async"
+              />
+              <p class="muted" style="font-size: 0.85rem; margin-top: 8px; text-align: center;" data-i18n="cadm_cap_1">Uttag #1 – Carousel: 1 plagg, 3 outfits</p>
+            </div>
+          </div>
+
+          <!-- PILLAR 2 FEATURE -->
+          <div class="feature-block reversed reveal">
+            <div class="text-content-side">
+              <h3 data-i18n="cadm_p2_why_title">2) Product proof = premium blir synligt</h3>
+              <p data-i18n="cadm_p2_why_body">
+                Det funkar eftersom det visar kvalitet visuellt – detaljer, material, finish. Det bygger förtroende tidigt i funneln och gör att fler vågar klicka vidare, även hos den som aldrig hört talas om varumärket.
+              </p>
+            </div>
+            <div class="feature-img feature-img--sm">
+              <img
+                src="./img/productproof.png"
+                alt="Närbild på plaggets detaljer: sömmar, knappar och material – visar hantverk och premiumkvalitet"
+                loading="lazy"
+                decoding="async"
+              />
+              <p class="muted" style="font-size: 0.85rem; margin-top: 8px; text-align: center;" data-i18n="cadm_cap_2">Uttag #2 – Detaljerna som bygger förtroende</p>
+            </div>
+          </div>
+
+          <!-- PILLAR 3 FEATURE -->
+          <div class="feature-block reveal">
+            <div class="text-content-side">
+              <h3 data-i18n="cadm_p3_why_title">3) City lifestyle = "det där är jag"</h3>
+              <p data-i18n="cadm_p3_why_body">
+                Det funkar för awareness eftersom det kopplar plagget till en tydlig situation – pendling, office, weekend. Det säljer en identitet, inte bara en produkt, och skapar den igenkänning som driver nästa steg i funneln.
+              </p>
+            </div>
+            <div class="feature-img feature-img--sm">
+              <img
+                src="./img/kontor-middag.png"
+                alt="Samma outfit på kontoret och middagsbordet – visar hur plagget bär en hel dag utan att byta"
+                loading="lazy"
+                decoding="async"
+              />
+              <p class="muted" style="font-size: 0.85rem; margin-top: 8px; text-align: center;" data-i18n="cadm_cap_3">Uttag #3 – Kontor till middag, samma outfit</p>
+            </div>
+          </div>
+
+          <!-- FUNNEL -->
+          <div class="case-wide-block reveal">
+            <h2 class="h-display" data-i18n="cadm_funnel_title">Funnel-upplägg</h2>
+            <p data-i18n="cadm_funnel_intro">Så här är kanalerna kopplade till varandra – från första kontakt till köp och återköp.</p>
+
+            <div class="funnel-row">
+              <div class="funnel-step" data-i18n="cadm_funnel_step_1">Prospecting<br><small>Utility + Lifestyle</small></div>
+              <span class="funnel-arrow">→</span>
+              <div class="funnel-step" data-i18n="cadm_funnel_step_2">Retargeting<br><small>Product proof + Bestsellers</small></div>
+              <span class="funnel-arrow">→</span>
+              <div class="funnel-step" data-i18n="cadm_funnel_step_3">Google Search<br><small>Fångar intent</small></div>
+              <span class="funnel-arrow">→</span>
+              <div class="funnel-step" data-i18n="cadm_funnel_step_4">LP → PDP → ATC<br><small>Checkout</small></div>
+              <span class="funnel-arrow">→</span>
+              <div class="funnel-step" data-i18n="cadm_funnel_step_5">Purchase</div>
+              <div class="funnel-loop" data-i18n="cadm_funnel_loop">↩ CRM driver tillbaka till köp (nurture / retention)</div>
+            </div>
+
+          </div>
+
+          <!-- MEASUREMENT -->
+          <div class="case-metrics reveal">
+            <div class="metrics-header">
+              <h2 class="h-display" data-i18n="cadm_measurement_title">Measurement</h2>
+              <p data-i18n="cadm_measurement_body">
+                KPI:er strukturerade efter funnelsteg – från awareness till köp.
+              </p>
+            </div>
+            <div class="metrics-grid">
+              <div class="metric-card">
+                <h4 data-i18n="cadm_metric_1_title">Awareness</h4>
+                <p data-i18n="cadm_metric_1_body">Reach, CPM, CTR / swipe-through rate</p>
+              </div>
+              <div class="metric-card">
+                <h4 data-i18n="cadm_metric_2_title">Consideration</h4>
+                <p data-i18n="cadm_metric_2_body">LPV, PDP views, Add to Cart</p>
+              </div>
+              <div class="metric-card">
+                <h4 data-i18n="cadm_metric_3_title">Conversion</h4>
+                <p data-i18n="cadm_metric_3_body">CPA, ROAS / MER, CVR, AOV</p>
+              </div>
+              <div class="metric-card">
+                <h4 data-i18n="cadm_metric_4_title">Retention</h4>
+                <p data-i18n="cadm_metric_4_body">CRM open rate, repeat purchase rate</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- TEST PLAN -->
+          <div class="content-showcase reveal case-showcase">
+            <div class="content-grid">
+              <div class="text-content-side">
+                <h2 class="h-display" data-i18n="cadm_test_title">Testplan – 4 veckor</h2>
+                <p data-i18n="cadm_test_intro">
+                  Varje vecka har ett tydligt fokus och ett beslut som tas baserat på data.
+                </p>
+              </div>
+              <div class="stat-box">
+                <h3 data-i18n="cadm_test_principle">Princip</h3>
+                <ul class="bullet-list" data-i18n-html="cadm_test_principle_list">
+                  <li><strong>Primär KPI:</strong> CTR / swipe-through (v1–2), CPA (v3–4)</li>
+                  <li><strong>Beslut:</strong> tas varje vecka</li>
+                  <li><strong>Budget:</strong> flyttas till vinnande stad + pelare</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="highlight-table" style="margin-top: 2rem;">
+              <table class="test-table">
+                <thead>
+                  <tr>
+                    <th data-i18n="cadm_test_col_week">Vecka</th>
+                    <th data-i18n="cadm_test_col_hypothesis">Hypotes</th>
+                    <th data-i18n="cadm_test_col_creative">Uttag</th>
+                    <th data-i18n="cadm_test_col_kpi">KPI</th>
+                    <th data-i18n="cadm_test_col_decision">Beslut</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>1</strong></td>
+                    <td data-i18n="cadm_test_w1_h">Utility driver mer engagement än lifestyle i cold prospecting</td>
+                    <td data-i18n="cadm_test_w1_c">Utility vs Lifestyle</td>
+                    <td>CTR / swipe-through</td>
+                    <td data-i18n="cadm_test_w1_d">Välj vinnande hook</td>
+                  </tr>
+                  <tr>
+                    <td><strong>2</strong></td>
+                    <td data-i18n="cadm_test_w2_h">Vinnande hook + ny overlay ökar CTR ytterligare</td>
+                    <td data-i18n="cadm_test_w2_c">Vinnande pelare × 2 overlay-varianter</td>
+                    <td>CTR</td>
+                    <td data-i18n="cadm_test_w2_d">Låsning av bästa creative</td>
+                  </tr>
+                  <tr>
+                    <td><strong>3</strong></td>
+                    <td data-i18n="cadm_test_w3_h">Product proof driver fler ATC än fit/trygghet i retargeting</td>
+                    <td data-i18n="cadm_test_w3_c">Proof vs Fit/trygghet</td>
+                    <td>ATC / CPA</td>
+                    <td data-i18n="cadm_test_w3_d">Välj retargeting-pelare</td>
+                  </tr>
+                  <tr>
+                    <td><strong>4</strong></td>
+                    <td data-i18n="cadm_test_w4_h">Vinnande stad + pelare ger lägst CPA</td>
+                    <td data-i18n="cadm_test_w4_c">Full funnel i vinnande stad</td>
+                    <td>CPA / ROAS</td>
+                    <td data-i18n="cadm_test_w4_d">Flytta budget dit</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- SUMMARY -->
+          <div class="intro-text reveal">
+            <h2 class="h-display" data-i18n="cadm_summary_title">Sammanfattning</h2>
+            <p data-i18n="cadm_summary_body">
+              Systemet är designat för att vara enkelt att förstå men kraftfullt att optimera. Tre kreativa pelare täcker hela funneln – från stoppkraft och förtroende till identifikation. Kombinerat med en tydlig testplan och ett mätramverk gör det att varje investerad krona kan spåras och optimeras, vecka för vecka.
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+      <footer id="contact" class="footer section-block">
+        <div class="container footer__grid">
+          <div class="footer__left">
+            <h2 data-i18n="contact_title">Kontakt</h2>
+            <p class="footer__text" data-i18n="footer_text">
+              Nyfiken på att veta mer eller diskutera ett projekt?
+              Hör av dig så tar vi en kaffe!
+            </p>
+            <a href="./cv/ava-urden-cv-sv.pdf" download class="btn btn--white track-cv_download" data-cv-link data-i18n="cta_cv">
+              Ladda ner CV
+            </a>
+          </div>
+
+          <div class="footer__right">
+            <div class="contact-group">
+              <span class="contact-label" data-i18n="contact_email">Email</span>
+              <a href="mailto:ava.urden@gmail.com" class="contact-link email-link">ava.urden@gmail.com</a>
+            </div>
+            <div class="contact-group">
+              <span class="contact-label" data-i18n="contact_mobile">Mobil</span>
+              <a href="tel:+46723111441" class="contact-link">+46 72 311 14 41</a>
+            </div>
+            <div class="contact-group">
+              <span class="contact-label" data-i18n="contact_linkedin">LinkedIn</span>
+              <a href="https://linkedin.com/in/avaurden" target="_blank" class="contact-link">
+                linkedin.com/in/avaurden ↗
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="container footer__bottom">
+          <div class="footer__copy">&copy; 2026 Ava Urdén</div>
+        </div>
+      </footer>
+    </main>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
