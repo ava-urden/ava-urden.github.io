@@ -1359,6 +1359,14 @@ main {
   margin-bottom: 40px;
 }
 
+.skills-intro-text {
+  max-width: 680px;
+  margin-top: 20px;
+  font-size: clamp(1.5rem, 1.8vw, 1.7rem);
+  line-height: 1.6;
+  color: var(--text-muted, #666);
+}
+
 .skills-list {
   max-width: 1060px;
   margin: 0 auto;

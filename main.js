@@ -324,28 +324,34 @@ const dict = {
     privacy_tasklist_permissions_list:
       "<li><strong>storage:</strong> spara uppgifter lokalt i webbläsaren</li>",
 
-    skills_main_title: "Färdigheter & verktyg",
-    skills_intro: "Där strategi möter genomförande – från idé till mätbar effekt.",
+    skills_main_title: "Kompetens",
+    skills_intro: "Arbetar i skärningspunkten mellan content, strategi och tillväxt, med fokus på att skapa kommunikation och lösningar som både stärker varumärket och driver resultat. Med ett strukturerat och nyfiket arbetssätt omsätts idéer till koncept, innehåll och förbättringar som går att genomföra, följa upp och utveckla över tid.",
     tools_label: "Verktyg:",
     skills_list_label: "Jag jobbar med:",
 
     cat1_title: "Content & Storytelling",
     cat1_desc:
-      "Skapar innehåll som både bygger varumärke och driver handling. Jag tar fram koncept, tonalitet och format som passar kanal, och säkerställer att content kan produceras effektivt och återanvändas smart över tid.",
+      "Skapar innehåll som både bygger varumärke och driver handling. Arbetar med koncept, tonalitet och format anpassade efter kanal, målgrupp och syfte, med fokus på att innehåll ska vara relevant, effektivt att producera och möjligt att återanvända över tid.",
     cat1_list:
-      "<li>Copy, hooks och tydliga budskap för sociala medier (organiskt + paid)</li><li>Contentplanering: publiceringskalender, teman, format och produktionstakt</li><li>Tonalitet, guideliner och brand voice så allt hänger ihop</li><li>Foto/video för kortformat (Reels/TikTok) + enklare redigering och anpassning</li><li>UGC-tänk: content som känns äkta men ändå konverterar</li>",
+      "<li>Copy, hooks och tydliga budskap för sociala medier, både organiskt och paid</li><li>Contentplanering med publiceringskalender, teman, format och produktionstakt</li><li>Tonalitet, guideliner och brand voice för ett enhetligt uttryck</li><li>Foto och video för kortformat som Reels och TikTok, samt enklare redigering och anpassning</li><li>UGC-inspirerat content som känns autentiskt, engagerande och konverteringsdrivet</li><li>Innehåll som balanserar kreativ höjd med tydligt syfte och kanalanpassning</li>",
 
     cat2_title: "Strategi & Koncept",
     cat2_desc:
-      "Omsätter idéer till struktur som går att genomföra. Jag gillar när strategi blir konkret: tydliga val (målgrupp, budskap, kanal, KPI) och en plan som gör det lätt att producera, testa och följa upp.",
+      "Omsätter idéer till tydlig struktur som går att genomföra i praktiken. Strategi blir som starkast när den är konkret, med genomtänkta val kring målgrupp, budskap, kanal och KPI:er, och en plan som gör det enkelt att producera, testa och följa upp.",
     cat2_list:
-      "<li>Konceptutveckling för kampanjer, erbjudanden och medlemskommunikation</li><li>Briefs: mål, målgrupp/segment, budskap, kanalval och KPI:er</li><li>Kundresa och CRM-tänk: vad behöver kunden nu och vilket nästa steg vill vi skapa?</li><li>Presentationer/pitchdecks som säljer idéer med logik, data och tydlig payoff</li><li>Samarbete och projektstruktur så det faktiskt blir gjort</li>",
+      "<li>Konceptutveckling för kampanjer, erbjudanden och medlemskommunikation</li><li>Briefs med mål, målgrupp, segment, budskap, kanalval och KPI:er</li><li>Kundresa och CRM-tänk utifrån vad kunden behöver i olika steg</li><li>Presentationer och pitch decks som förankrar idéer genom logik, data och tydlig payoff</li><li>Strukturer som gör det lättare att prioritera, genomföra och följa upp aktiviteter</li><li>Strategiskt arbete där kreativitet kopplas till affärsmål och faktisk genomförbarhet</li>",
 
     cat3_title: "Tillväxt & Data",
     cat3_desc:
-      "Datadrivet arbete som hittar friktion, testar hypoteser och skapar effekt. Jag använder data för att förstå beteenden, prioritera rätt och förbättra kundresan stegvis - med fokus på konvertering, AOV och retention.",
+      "Arbetar datadrivet för att förstå beteenden, identifiera friktion och prioritera rätt insatser. Med fokus på konvertering, AOV och retention används data för att utveckla kundresan stegvis och skapa effekt som går att följa upp över tid.",
     cat3_list:
-      "<li>GA4-analys: funnels, drop-offs, beteenden och segment</li><li>CRO: hypoteser, prioritering, testplan och uppföljning av resultat och lärdomar</li><li>Performance marketing-grunder: setup, spårning och iterering på kreativet</li><li>Dashboards och uppföljning: göra siffror enkla att agera på</li><li>SEO och teknik på en praktisk nivå: vad som påverkar synlighet + mätplan/spårning</li>",
+      "<li>GA4-analys med fokus på funnels, drop-offs, beteenden och segment</li><li>CRO genom hypotesarbete, prioritering, testplaner och uppföljning av resultat</li><li>Performance marketing-grunder som setup, spårning och iterering av kreativt material</li><li>Dashboards och rapportering som gör data enklare att förstå och agera på</li><li>Praktisk SEO och teknik, med fokus på synlighet, mätplan och spårning</li><li>Analys som hjälper till att identifiera möjligheter inom kundresa, innehåll och konvertering</li>",
+
+    cat4_title: "Projektledning & Samarbete",
+    cat4_desc:
+      "Arbetar strukturerat i team och projekt med fokus på framdrift, tydlighet och genomförande. Trivs i samarbeten där idéer behöver konkretiseras, prioriteras och omsättas till leveranser som håller ihop både strategiskt och kreativt.",
+    cat4_list:
+      "<li>Planering och koordinering av innehåll, aktiviteter och leveranser</li><li>Samarbete mellan kreativa, strategiska och kommersiella delar i projekt</li><li>Briefing, feedback och struktur i arbetsprocesser</li><li>Presentation av idéer, rekommendationer och nästa steg på ett tydligt sätt</li><li>Projektflöden som skapar tydlighet, ansvar och momentum</li><li>Arbetsmetoder som gör det lättare att hålla ihop kvalitet, tempo och riktning</li>",
 
     contact_title: "Kontakt",
     footer_text: "Nyfiken på att veta mer eller diskutera ett projekt? Hör av dig så tar vi en kaffe!",
@@ -1116,28 +1122,34 @@ const dict = {
     privacy_tasklist_permissions_list:
       "<li><strong>storage:</strong> save tasks locally in the browser</li>",
 
-    skills_main_title: "Skills & tools",
-    skills_intro: "Where strategy meets execution – from idea to measurable impact.",
+    skills_main_title: "Competencies",
+    skills_intro: "Works at the intersection of content, strategy and growth, with a focus on creating communication and solutions that both strengthen the brand and drive results. With a structured and curious approach, ideas are translated into concepts, content and improvements that can be executed, measured and developed over time.",
     tools_label: "Tools:",
     skills_list_label: "I work with:",
 
-    cat1_title: "Content & storytelling",
+    cat1_title: "Content & Storytelling",
     cat1_desc:
-      "Creates content that builds brand and drives action. I shape concepts, tone, and formats per channel, and make sure content can be produced efficiently and repurposed over time.",
+      "Creates content that both builds brand and drives action. Works with concepts, tone of voice and formats tailored to channel, audience and purpose — with a focus on making content relevant, efficient to produce and possible to repurpose over time.",
     cat1_list:
-      "<li>Copy, hooks, and clear messaging for social media (organic + paid)</li><li>Content planning: calendars, themes, formats, and production cadence</li><li>Tone of voice, guidelines, and brand voice consistency</li><li>Short-form photo/video (Reels/TikTok) with light editing and adaptations</li><li>UGC thinking: content that feels authentic but still converts</li>",
+      "<li>Copy, hooks and clear messaging for social media, both organic and paid</li><li>Content planning with editorial calendar, themes, formats and production cadence</li><li>Tone of voice, guidelines and brand voice for a consistent expression</li><li>Photo and video for short-form content like Reels and TikTok, including light editing and adaptation</li><li>UGC-inspired content that feels authentic, engaging and conversion-driven</li><li>Content that balances creative quality with clear purpose and channel fit</li>",
 
-    cat2_title: "Strategy & concept",
+    cat2_title: "Strategy & Concept",
     cat2_desc:
-      "Turns ideas into structure you can execute. I like strategy that becomes concrete: clear choices (audience, message, channel, KPIs) and a plan that makes it easy to produce, test, and follow up.",
+      "Turns ideas into clear structure that can be executed in practice. Strategy is at its strongest when it is concrete — with considered choices around audience, message, channel and KPIs, and a plan that makes it easy to produce, test and follow up.",
     cat2_list:
-      "<li>Concept development for campaigns, offers, and member communication</li><li>Briefs: goals, audience/segments, message, channel selection, and KPIs</li><li>Customer journey + CRM thinking: what the customer needs now and the next step we want to create</li><li>Presentations/pitch decks that sell ideas with logic, data, and clear payoff</li><li>Collaboration and project structure so it actually gets done</li>",
+      "<li>Concept development for campaigns, offers and member communication</li><li>Briefs with goals, audience, segments, messaging, channel selection and KPIs</li><li>Customer journey and CRM thinking based on what the customer needs at each stage</li><li>Presentations and pitch decks that anchor ideas through logic, data and clear payoff</li><li>Structures that make it easier to prioritize, execute and follow up on activities</li><li>Strategic work where creativity is connected to business goals and real feasibility</li>",
 
-    cat3_title: "Growth & data",
+    cat3_title: "Growth & Data",
     cat3_desc:
-      "Data-driven work that finds friction, tests hypotheses, and creates impact. I use data to understand behavior, prioritize, and improve the journey step by step - with focus on conversion, AOV, and retention.",
+      "Works data-driven to understand behaviors, identify friction and prioritize the right actions. With a focus on conversion, AOV and retention, data is used to develop the customer journey step by step and create measurable impact.",
     cat3_list:
-      "<li>GA4 analysis: funnels, drop-offs, behavior, and segments</li><li>CRO: hypotheses, prioritization, test plan, and results learnings</li><li>Performance marketing basics: setup, tracking, and creative iteration</li><li>Dashboards and follow-up: making numbers easy to act on</li><li>SEO and tech at a practical level: what affects visibility + measurement plan/tracking</li>",
+      "<li>GA4 analysis focusing on funnels, drop-offs, behaviors and segments</li><li>CRO through hypothesis work, prioritization, test plans and results follow-up</li><li>Performance marketing fundamentals including setup, tracking and creative iteration</li><li>Dashboards and reporting that make data easier to understand and act on</li><li>Practical SEO and tech, with a focus on visibility, measurement plan and tracking</li><li>Analysis that helps identify opportunities within the customer journey, content and conversion</li>",
+
+    cat4_title: "Project Management & Collaboration",
+    cat4_desc:
+      "Works in a structured way within teams and projects with a focus on progress, clarity and delivery. Thrives in collaborations where ideas need to be concretized, prioritized and turned into deliverables that hold together both strategically and creatively.",
+    cat4_list:
+      "<li>Planning and coordination of content, activities and deliverables</li><li>Collaboration between creative, strategic and commercial parts of projects</li><li>Briefing, feedback and structure in work processes</li><li>Presenting ideas, recommendations and next steps in a clear way</li><li>Project flows that create clarity, accountability and momentum</li><li>Working methods that make it easier to maintain quality, pace and direction</li>",
 
     contact_title: "Contact",
     footer_text: "Curious to know more or discuss a project? Get in touch and let's have a coffee!",
