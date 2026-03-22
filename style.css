@@ -438,7 +438,7 @@ main {
 }
 
 .hero__name--last {
-  margin-top: 0.18em;
+  margin-top: 0;
 }
 
 .hero__role,
