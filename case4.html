@@ -48,7 +48,8 @@
         color: #ffffff;
       }
 
-      .case-page--suie .card-skill h3 {
+      .case-page--suie .card-skill h3,
+      .case-page--suie .card-skill p {
         color: #ffffff;
       }
 
@@ -70,71 +71,33 @@
         border-radius: 0;
       }
 
-      .phase-grid {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 1rem;
-        margin-top: 2rem;
+      /* Konvertering: stacked layout with small image */
+      .suie-feature {
+        padding: 52px 0;
+        border-top: 1px solid var(--line);
       }
 
-      @media (max-width: 900px) {
-        .phase-grid {
-          grid-template-columns: 1fr 1fr;
-        }
+      .suie-feature__img {
+        margin-bottom: 32px;
       }
 
-      @media (max-width: 600px) {
-        .phase-grid {
-          grid-template-columns: 1fr;
-        }
-      }
-
-      .phase-card {
-        background: white;
-        padding: 1.5rem;
-        border-radius: 0;
-        border-top: 4px solid var(--accent);
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-      }
-
-      .phase-card h4 {
-        margin-top: 0;
-        color: var(--accent);
-      }
-
-      .phase-card .budget {
-        font-size: 0.9rem;
-        color: #666;
-        margin-bottom: 0.5rem;
+      .suie-feature__img img {
+        width: 100%;
+        max-width: 380px;
+        height: auto;
         display: block;
-        font-weight: 600;
       }
 
-      .tech-stack {
-        display: flex;
-        gap: 1rem;
-        flex-wrap: wrap;
-        margin-top: 1.5rem;
+      /* Summary full-width */
+      .suie-summary {
+        max-width: none;
+        margin: 0;
+        padding: 52px 0 0;
+        border-top: 1px solid var(--line);
       }
 
-      .tech-badge {
-        background: var(--accent-light);
-        color: var(--accent);
-        padding: 6px 12px;
-        border-radius: 0;
-        font-size: 0.8rem;
-        font-weight: 600;
-        border: 1px solid rgba(45, 76, 124, 0.25);
-      }
-
-      .stat-box {
-        padding: 2rem;
-        border-radius: 0;
-      }
-
-      .stat-box h4 {
-        color: var(--accent);
-        margin-top: 0;
+      .suie-summary h2 {
+        margin-bottom: 1rem;
       }
     </style>
   </head>
@@ -209,7 +172,7 @@
             <div class="card-skill reveal">
               <h3 data-i18n="c4_card1_title">Insikt & Data</h3>
               <p data-i18n="c4_card1_body">
-                Google Trends visade en ökning på 174% för "scarf". Samtidigt saknade marknaden en dedikerad aktör i mellanprisklassen. Målgruppen (kvinnor 50-70) efterfrågade kvalitet och delaktighet.
+                Google Trends visade en ökning på 174% för "scarf". Samtidigt saknade marknaden en dedikerad aktör i mellanprisklassen. Målgruppen (kvinnor 50–70) efterfrågade kvalitet och delaktighet.
               </p>
             </div>
             <div class="card-skill reveal" style="--delay: 0.05s;">
@@ -226,59 +189,9 @@
             </div>
           </div>
 
-          <!-- FRAMEWORK -->
-          <div class="highlight-section reveal">
-            <div class="big-stat" data-i18n="c4_framework_title">Ramverket: SEE-THINK-DO-CARE</div>
-            <p data-i18n="c4_framework_body" style="max-width: 700px; margin-bottom: 2rem;">
-              För att maximera effekten av budgeten fördelades insatserna över hela kundresan. Strategin var att inte bara köpa trafik, utan att bygga ett ekosystem för återkommande kunder.
-            </p>
-
-            <div class="phase-grid">
-              <div class="phase-card">
-                <h4>SEE</h4>
-                <span class="budget" data-i18n="c4_phase_see_budget">35% av budget</span>
-                <p data-i18n-html="c4_phase_see_goal"><strong>Mål:</strong> Räckvidd & Igenkänning.</p>
-                <p data-i18n-html="c4_phase_see_channels"><strong>Kanaler:</strong> Partnerskap, PR, Organiskt content.</p>
-                <p data-i18n-html="c4_phase_see_kpi"><strong>KPI:</strong> Impressions, Nya användare.</p>
-              </div>
-              <div class="phase-card">
-                <h4>THINK</h4>
-                <span class="budget" data-i18n="c4_phase_think_budget">30% av budget</span>
-                <p data-i18n-html="c4_phase_think_goal"><strong>Mål:</strong> Inspirera & Utbilda.</p>
-                <p data-i18n-html="c4_phase_think_channels"><strong>Kanaler:</strong> SEO, Styling-guider, Retargeting.</p>
-                <p data-i18n-html="c4_phase_think_kpi"><strong>KPI:</strong> Produktguide start, Add to cart.</p>
-              </div>
-              <div class="phase-card">
-                <h4>DO</h4>
-                <span class="budget" data-i18n="c4_phase_do_budget">25% av budget</span>
-                <p data-i18n-html="c4_phase_do_goal"><strong>Mål:</strong> Friktionsfri konvertering.</p>
-                <p data-i18n-html="c4_phase_do_channels"><strong>Fokus:</strong> Checkout-optimering, Trust signals.</p>
-                <p data-i18n-html="c4_phase_do_kpi"><strong>KPI:</strong> Konverteringsgrad (CR).</p>
-              </div>
-              <div class="phase-card">
-                <h4>CARE</h4>
-                <span class="budget" data-i18n="c4_phase_care_budget">10% av budget</span>
-                <p data-i18n-html="c4_phase_care_goal"><strong>Mål:</strong> Lojalitet & Retention.</p>
-                <p data-i18n-html="c4_phase_care_channels"><strong>Kanaler:</strong> Email, SMS, Co-creation.</p>
-                <p data-i18n-html="c4_phase_care_kpi"><strong>KPI:</strong> Repeat Purchase Rate, LTV.</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- KONVERTERING -->
-          <div class="feature-block reveal">
-            <div class="text-content-side">
-              <h3 data-i18n="c4_feature1_title">Konvertering & Beslutsstöd</h3>
-              <p data-i18n-html="c4_feature1_body">
-                En av de största utmaningarna vi identifierade var <strong>beslutsångest</strong>. För att lösa detta implementerade vi en interaktiv produktguide ("Hitta din produkt").
-              </p>
-              <ul class="bullet-list" data-i18n-html="c4_feature1_list">
-                <li><strong>Minskad friktion:</strong> Guiden leder kunden från osäkerhet till ett kurerat urval baserat på stilpreferenser.</li>
-                <li><strong>Smart Data:</strong> Svaren används inte bara för rekommendationer utan sparas (via Klaviyo) för att segmentera framtida utskick.</li>
-                <li><strong>Trygghet i kassan:</strong> Vi motverkar checkout-avhopp genom tydliga leveranslöften och betalalternativ som målgruppen litar på (Klarna, Apple Pay).</li>
-              </ul>
-            </div>
-            <div class="feature-img">
+          <!-- KONVERTERING: stacked -->
+          <div class="suie-feature reveal">
+            <div class="suie-feature__img">
               <img
                 src="./img/case-suie/mobilersuie-1200.jpg"
                 alt="SUIE Produktguide och Checkout"
@@ -286,71 +199,25 @@
                 decoding="async"
               />
             </div>
+            <h3 data-i18n="c4_feature1_title">Konvertering & Beslutsstöd</h3>
+            <p data-i18n-html="c4_feature1_body">
+              En av de största utmaningarna vi identifierade var <strong>beslutsångest</strong>. För att lösa detta implementerade vi en interaktiv produktguide ("Hitta din produkt").
+            </p>
+            <ul class="bullet-list" data-i18n-html="c4_feature1_list">
+              <li><strong>Minskad friktion:</strong> Guiden leder kunden från osäkerhet till ett kurerat urval baserat på stilpreferenser.</li>
+              <li><strong>Smart data:</strong> Svaren används inte bara för rekommendationer utan sparas (via Klaviyo) för att segmentera framtida utskick.</li>
+              <li><strong>Trygghet i kassan:</strong> Vi motverkar checkout-avhopp genom tydliga leveranslöften och betalalternativ som målgruppen litar på (Klarna, Apple Pay).</li>
+            </ul>
           </div>
 
-          <!-- TEKNIK -->
-          <div class="content-showcase reveal">
-            <div class="content-grid">
-              <div class="text-content-side">
-                <h2 class="h-display" data-i18n="c4_tech_title" style="font-size: 2.2rem;">Teknik & Mätning</h2>
-                <p data-i18n="c4_tech_body">
-                  SUIE är byggt för att vara datadrivet från dag ett. Genom att integrera systemen kan vi följa användaren från första annonsklicket (SEE) till återköp och lojalitet (CARE).
-                </p>
-                <div class="tech-stack">
-                  <span class="tech-badge">Shopify</span>
-                  <span class="tech-badge">GA4</span>
-                  <span class="tech-badge">Google Tag Manager</span>
-                  <span class="tech-badge">Klaviyo (CRM)</span>
-                  <span class="tech-badge">Looker Studio</span>
-                  <span class="tech-badge">Trustpilot</span>
-                </div>
-                <p data-i18n-html="c4_tech_data" style="margin-top: 2rem; font-size: 0.95rem;">
-                  <strong>Datakvalitet:</strong> Vi använder en strikt eventstruktur i GA4 (view_item, begin_checkout, purchase) och validerar data mot Shopify för att säkerställa att beslut fattas på korrekta siffror.
-                </p>
-              </div>
-              <div class="device-mockup">
-                <img
-                  src="./img/case-suie/rev-1600.jpg"
-                  alt="SUIE Systemkarta och Dashboards"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </div>
-            </div>
-          </div>
-
-          <!-- COMMUNITY -->
-          <div class="feature-block reversed reveal">
-            <div class="text-content-side">
-              <h3 data-i18n="c4_community_title">Community: Team SUIE</h3>
-              <p data-i18n-html="c4_community_body_1">
-                Istället för dyra annonskostnader (CAC) satsar vi på <strong>retention</strong>. Genom lojalitetsprogrammet "Team SUIE" involveras kunderna i produktutvecklingen.
-              </p>
-              <p data-i18n-html="c4_community_body_2">
-                Medlemmar får rösta på kommande kollektioner, vilket ger oss två fördelar:
-                1) Vi producerar bara det som efterfrågas (minskat svinn).
-                2) Kunderna känner ägandeskap för produkten, vilket ökar sannolikheten för köp när den lanseras.
-              </p>
-            </div>
-            <div class="feature-img">
-              <div class="stat-box" style="background: var(--accent-light); border: 1px solid rgba(45,76,124,0.2);">
-                <h4 data-i18n="c4_challenges_title">Vanliga utmaningar vi löste</h4>
-                <ul class="bullet-list" data-i18n-html="c4_challenges_list" style="font-size: 0.9rem; margin-top: 1rem;">
-                  <li><strong>Beslutsångest:</strong> Löstes med Produktguide & få filter.</li>
-                  <li><strong>Priskänslighet:</strong> Löstes med 10% välkomstrabatt vid rätt timing (nära köpbeslut).</li>
-                  <li><strong>Checkout-friktion:</strong> Löstes med förutsägbar frakt och färre steg i kassan.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <!-- SUMMARY -->
-          <div class="intro-text reveal">
+          <!-- SUMMARY: full-width -->
+          <div class="suie-summary reveal">
             <h2 class="h-display" data-i18n="c4_summary_title">Sammanfattning</h2>
             <p data-i18n="c4_summary_body">
               Projektet resulterade i en komplett prototyp för en e-handel som balanserar varumärkesbyggande med hård konverteringsdata. Genom att förstå målgruppens behov av trygghet och delaktighet har vi skapat en modell för hållbar tillväxt utan beroende av stora mediebudgetar.
             </p>
           </div>
+
         </div>
       </section>
 
