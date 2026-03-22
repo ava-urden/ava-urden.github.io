@@ -1360,11 +1360,46 @@ main {
 }
 
 .skills-intro-text {
-  max-width: 680px;
+  max-width: none;
   margin-top: 20px;
   font-size: clamp(1.5rem, 1.8vw, 1.7rem);
   line-height: 1.6;
   color: var(--text-muted, #666);
+}
+
+.skills-tools {
+  max-width: 1060px;
+  margin: 0 auto;
+  padding-top: 48px;
+  border-top: 1px solid var(--line);
+}
+
+.skills-tools__intro {
+  font-size: clamp(1.4rem, 1.6vw, 1.6rem);
+  line-height: 1.6;
+  color: var(--text-muted, #666);
+  margin-bottom: 36px;
+  max-width: 640px;
+}
+
+.tools-groups {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 28px;
+}
+
+.tools-group__label {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+
+.tools-group .tool-chips {
+  gap: 6px;
 }
 
 .skills-list {
