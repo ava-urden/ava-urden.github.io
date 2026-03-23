@@ -138,21 +138,30 @@
         margin-top: 0;
       }
 
-      /* Konvertering: stacked with small image */
+      /* Konvertering: text beside image */
       .suie-feature {
         padding: 52px 0;
         border-top: 1px solid var(--line);
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 32px;
       }
 
-      .suie-feature__img {
-        margin-bottom: 32px;
+      @media (min-width: 900px) {
+        .suie-feature {
+          grid-template-columns: 1fr 1fr;
+          align-items: start;
+        }
       }
 
       .suie-feature__img img {
         width: 100%;
-        max-width: 360px;
         height: auto;
         display: block;
+      }
+
+      .suie-feature__text h3 {
+        margin-top: 0;
       }
 
       /* Summary full-width */
@@ -294,7 +303,7 @@
             </div>
           </div>
 
-          <!-- KONVERTERING: stacked with small image -->
+          <!-- KONVERTERING: text beside image -->
           <div class="suie-feature reveal">
             <div class="suie-feature__img">
               <img
@@ -304,15 +313,17 @@
                 decoding="async"
               />
             </div>
-            <h3 data-i18n="c4_feature1_title">Konvertering & Beslutsstöd</h3>
-            <p data-i18n-html="c4_feature1_body">
-              En av de största utmaningarna vi identifierade var <strong>beslutsångest</strong>. För att lösa detta implementerade vi en interaktiv produktguide ("Hitta din produkt").
-            </p>
-            <ul class="bullet-list" data-i18n-html="c4_feature1_list">
-              <li><strong>Minskad friktion:</strong> Guiden leder kunden från osäkerhet till ett kurerat urval baserat på stilpreferenser.</li>
-              <li><strong>Smart data:</strong> Svaren används inte bara för rekommendationer utan sparas (via Klaviyo) för att segmentera framtida utskick.</li>
-              <li><strong>Trygghet i kassan:</strong> Vi motverkar checkout-avhopp genom tydliga leveranslöften och betalalternativ som målgruppen litar på (Klarna, Apple Pay).</li>
-            </ul>
+            <div class="suie-feature__text">
+              <h3 data-i18n="c4_feature1_title">Konvertering & Beslutsstöd</h3>
+              <p data-i18n-html="c4_feature1_body">
+                En av de största utmaningarna vi identifierade var <strong>beslutsångest</strong>. För att lösa detta implementerade vi en interaktiv produktguide ("Hitta din produkt").
+              </p>
+              <ul class="bullet-list" data-i18n-html="c4_feature1_list">
+                <li><strong>Minskad friktion:</strong> Guiden leder kunden från osäkerhet till ett kurerat urval baserat på stilpreferenser.</li>
+                <li><strong>Smart data:</strong> Svaren används inte bara för rekommendationer utan sparas (via Klaviyo) för att segmentera framtida utskick.</li>
+                <li><strong>Trygghet i kassan:</strong> Vi motverkar checkout-avhopp genom tydliga leveranslöften och betalalternativ som målgruppen litar på (Klarna, Apple Pay).</li>
+              </ul>
+            </div>
           </div>
 
           <!-- TEKNIK -->
