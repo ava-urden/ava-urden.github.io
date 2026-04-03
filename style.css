@@ -1361,8 +1361,8 @@ main {
 
 .skills-intro-text {
   max-width: none;
-  margin-top: 20px;
-  font-size: clamp(1.5rem, 1.8vw, 1.7rem);
+  margin-top: 16px;
+  font-size: clamp(1rem, 1.2vw, 1.15rem);
   line-height: 1.6;
   color: var(--text-muted, #666);
 }
