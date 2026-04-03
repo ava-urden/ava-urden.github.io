@@ -1623,7 +1623,7 @@ function applyLang(lang) {
   document.querySelectorAll("[data-cv-link]").forEach((link) => {
     link.setAttribute(
       "href",
-      lang === "en" ? "./cv/ava-urden-cv-en.pdf" : "./cv/ava-urden-cv-sv.pdf"
+      lang === "en" ? "./cv/ava-urdén-cv-eng.pdf" : "./cv/ava-urdén-cv-sve.pdf"
     );
     link.setAttribute("download", "");
   });

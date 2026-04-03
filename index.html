@@ -43,20 +43,10 @@
       }
 
       /* ── SKILLS: full-width alignment ─────────── */
-      #skills .section__top,
-      #skills .skills-list {
+      #skills .skills-intro {
         max-width: none;
         margin-left: 0;
         margin-right: 0;
-      }
-      #skills .bullet-list {
-        columns: 1;
-      }
-
-      @media (min-width: 900px) {
-        #skills .bullet-list li {
-          white-space: nowrap;
-        }
       }
 
       #cases .section-header-group,
@@ -201,7 +191,7 @@
                 class="btn btn--outline track-cv_download"
                 id="cv-download-hero"
                 data-cv-link
-                href="./cv/ava-urden-cv-sv.pdf"
+                href="./cv/ava-urdén-cv-sve.pdf"
                 download
                 data-i18n="cta_cv"
               >
@@ -465,99 +455,43 @@
 
       <section id="skills" class="section-block skills-section">
         <div class="container">
-          <div class="section__top skills-intro reveal">
-            <div class="section-header-group">
-              <h2 class="h-display" data-i18n="skills_main_title">Kompetens</h2>
-              <p class="skills-intro-text" data-i18n="skills_intro">Jag gillar att ta en idé hela vägen från tanke till färdig leverans. Ofta arbetar jag i skärningspunkten mellan det kreativa och det analytiska, där innehåll, struktur och data tillsammans skapar tydligare kommunikation och bättre resultat.</p>
-            </div>
+          <div class="skills-intro reveal">
+            <h2 class="h-display" data-i18n="skills_main_title">Kompetens</h2>
+            <p class="skills-intro-text" data-i18n="skills_intro">Jag gillar att ta en idé hela vägen från tanke till färdig leverans. Ofta arbetar jag i skärningspunkten mellan det kreativa och det analytiska, där innehåll, struktur och data tillsammans skapar tydligare kommunikation och bättre resultat.</p>
+            <p class="skills-intro-text skills-intro-text--tools" data-i18n="tools_intro">Jag har erfarenhet av flera olika verktyg och är van att kombinera plattformar utifrån syfte, kanal och arbetsflöde.</p>
           </div>
 
-          <div class="skills-list">
-            <div class="skill-item reveal">
-              <div class="skill-header">
-                <span class="skill-num">01</span>
-              </div>
-              <div class="skill-body">
-                <h3 data-i18n="cat1_title">Content & Storytelling</h3>
-                <p class="skill-desc" data-i18n="cat1_desc">Innehåll som bygger varumärke, väcker intresse och skapar engagemang.</p>
-                <ul class="bullet-list" data-i18n-html="cat1_list" id="list1">
-                  <li>Copy, hooks och content för organiska och betalda sociala medier</li>
-                  <li>Contentplanering med teman, format och publiceringsplan</li>
-                  <li>Tonalitet och riktlinjer för en konsekvent kommunikation</li>
-                  <li>Produktion och redigering av foto och video för olika kanaler och format</li>
-                  <li>Innehåll med tydligt syfte och mottagaranpassning</li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="skill-item reveal">
-              <div class="skill-header">
-                <span class="skill-num">02</span>
-              </div>
-              <div class="skill-body">
-                <h3 data-i18n="cat2_title">Strategi, koncept & kommunikation</h3>
-                <p class="skill-desc" data-i18n="cat2_desc">Idéer och struktur som gör kommunikation tydlig, relevant och genomförbar, med fokus på varumärke, kundresa och e-handel.</p>
-                <ul class="bullet-list" data-i18n-html="cat2_list" id="list2">
-                  <li>Konceptutveckling för kampanjer, erbjudanden, content och kommunikation</li>
-                  <li>Briefs med målgrupp, budskap, kanalval, KPI:er och nästa steg</li>
-                  <li>Paketering av erbjudanden och positionering</li>
-                  <li>Kommunikation anpassad för e-handel, kundupplevelse och konvertering</li>
-                  <li>Kundresa, CRM-tänk och kommunikationsflöden</li>
-                  <li>Presentationer och pitch decks med tydlig struktur, copy och design</li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="skill-item reveal">
-              <div class="skill-header">
-                <span class="skill-num">03</span>
-              </div>
-              <div class="skill-body">
-                <h3 data-i18n="cat3_title">Tillväxt & optimering</h3>
-                <p class="skill-desc" data-i18n="cat3_desc">Datadrivet arbete med fokus på analys, optimering och utveckling.</p>
-                <ul class="bullet-list" data-i18n-html="cat3_list" id="list3">
-                  <li>Performance marketing med struktur, mål och uppföljning</li>
-                  <li>GA4-analys av trafik, beteenden, funnels och konvertering</li>
-                  <li>CRO från hypotes och test till utvärdering och nästa steg</li>
-                  <li>Spårning i GTM och arbete med mätplan</li>
-                  <li>SEO och innehållsstrategi för synlighet</li>
-                  <li>Analys av webb och e-handel med fokus på kundresa och konvertering</li>
-                  <li>Rapportering och analys som stöd för prioritering och beslut</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div class="skills-tools reveal">
-            <p class="skills-tools__intro" data-i18n="tools_intro">Jag har erfarenhet av flera olika verktyg och är van att kombinera plattformar utifrån syfte, kanal och arbetsflöde.</p>
-            <div class="tools-groups">
-              <div class="tools-group">
-                <span class="tools-group__label" data-i18n="tools_group1_label">Design & innehåll</span>
-                <div class="tool-chips">
+          <div class="tools-boxes reveal">
+            <div class="tools-row tools-row--2">
+              <div class="tools-box">
+                <span class="tools-box__label" data-i18n="tools_group1_label">Design & innehåll</span>
+                <div class="tools-box__items">
                   <span>Canva</span><span>Figma</span><span>Adobe Creative Cloud</span><span>Photoshop</span><span>Illustrator</span><span>CapCut</span><span>PowerPoint</span><span>Keynote</span>
                 </div>
               </div>
-              <div class="tools-group">
-                <span class="tools-group__label" data-i18n="tools_group2_label">Webb, e-handel & CRM</span>
-                <div class="tool-chips">
+              <div class="tools-box">
+                <span class="tools-box__label" data-i18n="tools_group2_label">Webb, e-handel & CRM</span>
+                <div class="tools-box__items">
                   <span>Shopify</span><span>Klaviyo</span><span>Typeform</span><span>WordPress</span>
                 </div>
               </div>
-              <div class="tools-group">
-                <span class="tools-group__label" data-i18n="tools_group3_label">Analys, tracking & CRO</span>
-                <div class="tool-chips">
+            </div>
+            <div class="tools-row tools-row--3">
+              <div class="tools-box">
+                <span class="tools-box__label" data-i18n="tools_group3_label">Analys, tracking & CRO</span>
+                <div class="tools-box__items">
                   <span>GA4</span><span>GTM</span><span>Looker Studio</span><span>Hotjar</span><span>Google Search Console</span>
                 </div>
               </div>
-              <div class="tools-group">
-                <span class="tools-group__label" data-i18n="tools_group4_label">Annonsering</span>
-                <div class="tool-chips">
+              <div class="tools-box">
+                <span class="tools-box__label" data-i18n="tools_group4_label">Annonsering</span>
+                <div class="tools-box__items">
                   <span>Meta Ads Manager</span><span>TikTok Ads Manager</span><span>Google Ads</span>
                 </div>
               </div>
-              <div class="tools-group">
-                <span class="tools-group__label" data-i18n="tools_group5_label">Produktivitet & struktur</span>
-                <div class="tool-chips">
+              <div class="tools-box">
+                <span class="tools-box__label" data-i18n="tools_group5_label">Produktivitet & struktur</span>
+                <div class="tools-box__items">
                   <span>Notion</span><span>Excel</span><span>Google Sheets</span><span>Asana</span><span>Trello</span>
                 </div>
               </div>
@@ -575,7 +509,7 @@
               Hör av dig så tar vi en kaffe!
             </p>
             <a
-              href="./cv/ava-urden-cv-sv.pdf"
+              href="./cv/ava-urdén-cv-sve.pdf"
               download
               class="btn btn--white track-cv_download"
               id="cv-download-footer"

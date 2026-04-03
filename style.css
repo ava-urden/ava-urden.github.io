@@ -1367,6 +1367,80 @@ main {
   color: var(--text-muted, #666);
 }
 
+.skills-intro-text--tools {
+  margin-top: 12px;
+  color: var(--ink);
+}
+
+.tools-boxes {
+  margin-top: 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.tools-row {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 600px) {
+  .tools-row--2 {
+    grid-template-columns: 1fr 1fr;
+  }
+  .tools-row--3 {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 599px) {
+  .tools-row--3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.tools-box {
+  border: 1px solid var(--line, #ede9e2);
+  padding: 28px 28px 24px;
+  background: #fff;
+  border-radius: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.tools-box__label {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.tools-box__items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+}
+
+.tools-box__items span {
+  font-size: 0.9rem;
+  color: var(--ink);
+  line-height: 1.5;
+}
+
+.tools-box__items span::after {
+  content: ",";
+  margin-right: 2px;
+}
+
+.tools-box__items span:last-child::after {
+  content: "";
+}
+
+/* Legacy – kept for case pages that still use tool-chips */
 .skills-tools {
   max-width: 1060px;
   margin: 0 auto;
