@@ -43,10 +43,20 @@
       }
 
       /* ── SKILLS: full-width alignment ─────────── */
-      #skills .skills-intro {
+      #skills .skills-intro,
+      #skills .skills-list {
         max-width: none;
         margin-left: 0;
         margin-right: 0;
+      }
+      #skills .bullet-list {
+        columns: 1;
+      }
+
+      @media (min-width: 900px) {
+        #skills .bullet-list li {
+          white-space: nowrap;
+        }
       }
 
       #cases .section-header-group,
@@ -459,6 +469,62 @@
             <h2 class="h-display" data-i18n="skills_main_title">Kompetens</h2>
             <p class="skills-intro-text" data-i18n="skills_intro">Jag gillar att ta en idé hela vägen från tanke till färdig leverans. Ofta arbetar jag i skärningspunkten mellan det kreativa och det analytiska, där innehåll, struktur och data tillsammans skapar tydligare kommunikation och bättre resultat.</p>
             <p class="skills-intro-text skills-intro-text--tools" data-i18n="tools_intro">Jag har erfarenhet av flera olika verktyg och är van att kombinera plattformar utifrån syfte, kanal och arbetsflöde.</p>
+          </div>
+
+          <div class="skills-list">
+            <div class="skill-item reveal">
+              <div class="skill-header">
+                <span class="skill-num">01</span>
+              </div>
+              <div class="skill-body">
+                <h3 data-i18n="cat1_title">Content & Storytelling</h3>
+                <p class="skill-desc" data-i18n="cat1_desc">Innehåll som bygger varumärke, väcker intresse och skapar engagemang.</p>
+                <ul class="bullet-list" data-i18n-html="cat1_list" id="list1">
+                  <li>Copy, hooks och content för organiska och betalda sociala medier</li>
+                  <li>Contentplanering med teman, format och publiceringsplan</li>
+                  <li>Tonalitet och riktlinjer för en konsekvent kommunikation</li>
+                  <li>Produktion och redigering av foto och video för olika kanaler och format</li>
+                  <li>Innehåll med tydligt syfte och mottagaranpassning</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="skill-item reveal">
+              <div class="skill-header">
+                <span class="skill-num">02</span>
+              </div>
+              <div class="skill-body">
+                <h3 data-i18n="cat2_title">Strategi, koncept & kommunikation</h3>
+                <p class="skill-desc" data-i18n="cat2_desc">Idéer och struktur som gör kommunikation tydlig, relevant och genomförbar, med fokus på varumärke, kundresa och e-handel.</p>
+                <ul class="bullet-list" data-i18n-html="cat2_list" id="list2">
+                  <li>Konceptutveckling för kampanjer, erbjudanden, content och kommunikation</li>
+                  <li>Briefs med målgrupp, budskap, kanalval, KPI:er och nästa steg</li>
+                  <li>Paketering av erbjudanden och positionering</li>
+                  <li>Kommunikation anpassad för e-handel, kundupplevelse och konvertering</li>
+                  <li>Kundresa, CRM-tänk och kommunikationsflöden</li>
+                  <li>Presentationer och pitch decks med tydlig struktur, copy och design</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="skill-item reveal">
+              <div class="skill-header">
+                <span class="skill-num">03</span>
+              </div>
+              <div class="skill-body">
+                <h3 data-i18n="cat3_title">Tillväxt & optimering</h3>
+                <p class="skill-desc" data-i18n="cat3_desc">Datadrivet arbete med fokus på analys, optimering och utveckling.</p>
+                <ul class="bullet-list" data-i18n-html="cat3_list" id="list3">
+                  <li>Performance marketing med struktur, mål och uppföljning</li>
+                  <li>GA4-analys av trafik, beteenden, funnels och konvertering</li>
+                  <li>CRO från hypotes och test till utvärdering och nästa steg</li>
+                  <li>Spårning i GTM och arbete med mätplan</li>
+                  <li>SEO och innehållsstrategi för synlighet</li>
+                  <li>Analys av webb och e-handel med fokus på kundresa och konvertering</li>
+                  <li>Rapportering och analys som stöd för prioritering och beslut</li>
+                </ul>
+              </div>
+            </div>
           </div>
 
           <div class="tools-boxes reveal">
